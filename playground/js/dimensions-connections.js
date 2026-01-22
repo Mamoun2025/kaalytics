@@ -472,11 +472,17 @@ const DimensionsConnections = (function() {
         visiblePath.setAttribute('data-connection-visible', connection.id);
         group.appendChild(visiblePath);
 
-        // Flow animation path
+        // Flow animation path (direction indicator)
         const flow = createSVGPath('connection-flow');
         flow.setAttribute('data-connection-flow', connection.id);
         flow.setAttribute('d', pathD);
         group.appendChild(flow);
+
+        // Flow particles (enhanced direction indicator)
+        const particles = createSVGPath('connection-flow-particles');
+        particles.setAttribute('data-connection-particles', connection.id);
+        particles.setAttribute('d', pathD);
+        group.appendChild(particles);
 
         // Hit area (invisible, for clicks) - added last (top, to receive events)
         const hitArea = createSVGPath('connection-hit-area');

@@ -209,7 +209,7 @@ const SemanticTests = (function() {
         failed = 0;
         results = [];
 
-        console.log('%c🧪 SEMANTIC TESTS', 'font-size: 16px; font-weight: bold; color: #EDA906;');
+        console.log('%c🧪 SEMANTIC TESTS', 'font-size: 16px; font-weight: bold; color: #10b981;');
         console.log('─'.repeat(50));
 
         // Run all test suites
@@ -229,8 +229,8 @@ const SemanticTests = (function() {
         if (failed === 0) {
             console.log(`%c✅ ALL TESTS PASSED: ${passed}/${total} (100%)`, 'color: #10b981; font-weight: bold;');
         } else {
-            console.log(`%c⚠️ TESTS: ${passed}/${total} passed (${percentage}%)`, 'color: #f59e0b; font-weight: bold;');
-            console.log(`%c❌ ${failed} test(s) failed`, 'color: #ef4444;');
+            console.log(`%c⚠️ TESTS: ${passed}/${total} passed (${percentage}%)`, 'color: #10b981; font-weight: bold;');
+            console.log(`%c❌ ${failed} test(s) failed`, 'color: #065f46;');
         }
 
         return {

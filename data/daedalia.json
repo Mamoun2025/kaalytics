@@ -57,8 +57,8 @@
             "response": "Le filtre a huile reference FIL-349D-OIL est a 245 EUR HT. 12 en stock."
         },
         {
-            "query": "Cree un devis pour BEKS avec 3 trains de chaines D8R",
-            "response": "Devis #QO-2026-0142 cree pour BEKS. Total: 18,750 EUR HT. Lien: [Voir le devis]"
+            "query": "Cree un devis pour TerraFleet avec 3 trains de chaines D8R",
+            "response": "Devis #QO-2026-0142 cree pour TerraFleet. Total: 18,750 EUR HT. Lien: [Voir le devis]"
         },
         {
             "query": "Quelles sont les ventes du mois dernier par categorie?",

@@ -103,7 +103,7 @@
 .minimap-viewport {
     position: absolute;
     border: 2px solid var(--brand-yellow);
-    background: rgba(237, 169, 6, 0.1);
+    background: rgba(16, 185, 129, 0.1);
     pointer-events: none;
 }
 
@@ -125,7 +125,7 @@
 
 .zoom-btn.view-toggle.active {
     color: var(--brand-yellow);
-    background: rgba(237, 169, 6, 0.15);
+    background: rgba(16, 185, 129, 0.15);
 }
 
 /* === PANEL VISIBILITY STATES === */

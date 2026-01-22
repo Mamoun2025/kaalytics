@@ -5,11 +5,11 @@
 
 /* === CSS VARIABLES === */
 :root {
-    --sc-primary: #eda906;
-    --sc-primary-dark: #d4990a;
+    --sc-primary: #10b981;
+    --sc-primary-dark: #059669;
     --sc-success: #10b981;
-    --sc-warning: #f59e0b;
-    --sc-error: #ef4444;
+    --sc-warning: #10b981;
+    --sc-error: #065f46;
     --sc-bg-dark: #1a3d2e;
     --sc-bg-darker: #0f2a1f;
     --sc-text: rgba(255,255,255,0.9);
@@ -25,7 +25,7 @@
     gap: 8px;
     padding: 10px 18px;
     background: linear-gradient(135deg, var(--sc-primary) 0%, var(--sc-primary-dark) 100%);
-    border: 1px solid rgba(237, 169, 6, 0.5);
+    border: 1px solid rgba(16, 185, 129, 0.5);
     border-radius: 10px;
     color: var(--sc-bg-dark);
     font-size: 14px;
@@ -38,7 +38,7 @@
 
 .btn-smart-connect:hover:not(.processing) {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(237, 169, 6, 0.4);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
 }
 
 .btn-smart-connect:active:not(.processing) {
@@ -363,7 +363,7 @@
 
 .sc-ghost-module {
     position: absolute;
-    background: rgba(237, 169, 6, 0.2);
+    background: rgba(16, 185, 129, 0.2);
     border: 2px dashed var(--sc-primary);
     border-radius: 12px;
     pointer-events: none;
@@ -430,7 +430,7 @@
     justify-content: center;
     width: 24px;
     height: 24px;
-    background: rgba(237, 169, 6, 0.2);
+    background: rgba(16, 185, 129, 0.2);
     border-radius: 50%;
     font-size: 11px;
     font-weight: 700;

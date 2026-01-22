@@ -12,7 +12,7 @@ Contact: mbenmoussa@kaalytics.com
 /* THANKS */
 Claude AI - Anthropic (Development Partner)
 Odoo Community (ERP Integration)
-Our amazing clients: BEKS, TransMaroc, MineralCo
+Our amazing clients: TerraFleet, TransMaroc, MineralCo
 
 /* SITE */
 Last update: 2026-01-22

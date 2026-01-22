@@ -55,6 +55,34 @@ const DimensionsWorkspace = (function() {
         DimensionsData.on('moduleAdded', onModuleAdded);
         DimensionsData.on('moduleRemoved', onModuleRemoved);
         DimensionsData.on('stateChanged', updateUI);
+        DimensionsData.on('restored', onDataRestored);
+    }
+
+    // === RESTORE MODULES FROM STORAGE ===
+    function onDataRestored(data) {
+        console.log('[Workspace] Restoring modules from storage...', data);
+
+        // Clear any existing module elements first
+        const existingModules = canvas.querySelectorAll('.placed-module');
+        existingModules.forEach(el => el.remove());
+
+        // Recreate each module visually
+        if (data.modules && data.modules.length > 0) {
+            data.modules.forEach(module => {
+                const element = createModuleElement(module);
+                canvas.appendChild(element);
+            });
+
+            console.log(`[Workspace] Restored ${data.modules.length} modules`);
+        }
+
+        // Redraw connections after modules are placed
+        setTimeout(() => {
+            if (typeof DimensionsConnections !== 'undefined') {
+                DimensionsConnections.redraw();
+            }
+            updateUI();
+        }, 100);
     }
 
     // === DRAG OVER (from sidebar) ===
@@ -94,9 +122,13 @@ const DimensionsWorkspace = (function() {
         const rawX = Math.max(20, canvasPos.x - 100);
         const rawY = Math.max(20, canvasPos.y - 60);
 
+        // Snap to grid
+        const snappedPos = snapPositionToGrid(rawX, rawY);
+
         // Find valid position without collision
-        const validPos = findValidPosition(rawX, rawY);
-        createModule(data.moduleId, validPos.x, validPos.y);
+        const validPos = findValidPosition(snappedPos.x, snappedPos.y);
+        const finalPos = snapPositionToGrid(validPos.x, validPos.y);
+        createModule(data.moduleId, finalPos.x, finalPos.y);
 
         // Clear preset flag - user is modifying the workspace
         if (typeof DimensionsPresets !== 'undefined' && DimensionsPresets.clearPresetFlag) {
@@ -108,6 +140,24 @@ const DimensionsWorkspace = (function() {
     const MODULE_WIDTH = 200;
     const MODULE_HEIGHT = 95;
     const MODULE_PADDING = 20; // Minimum space between modules
+
+    // === SNAP-TO-GRID CONFIG ===
+    const GRID_SIZE = 20; // Grid cell size in pixels
+    const SNAP_ENABLED = true;
+
+    // Snap coordinate to grid
+    function snapToGrid(value) {
+        if (!SNAP_ENABLED) return value;
+        return Math.round(value / GRID_SIZE) * GRID_SIZE;
+    }
+
+    // Snap position to grid
+    function snapPositionToGrid(x, y) {
+        return {
+            x: snapToGrid(x),
+            y: snapToGrid(y)
+        };
+    }
 
     // === COLLISION DETECTION ===
     function checkCollision(x, y, excludeModuleId = null) {
@@ -183,9 +233,13 @@ const DimensionsWorkspace = (function() {
         const rawX = Math.max(20, canvasPos.x - 100);
         const rawY = Math.max(20, canvasPos.y - 60);
 
+        // Snap to grid
+        const snappedPos = snapPositionToGrid(rawX, rawY);
+
         // Find valid position without collision
-        const validPos = findValidPosition(rawX, rawY);
-        createModule(data.moduleId, validPos.x, validPos.y);
+        const validPos = findValidPosition(snappedPos.x, snappedPos.y);
+        const finalPos = snapPositionToGrid(validPos.x, validPos.y);
+        createModule(data.moduleId, finalPos.x, finalPos.y);
     }
 
     // === SET DRAGGING STATE (called from sidebar) ===
@@ -224,18 +278,24 @@ const DimensionsWorkspace = (function() {
         el.style.setProperty('--dimension-color', module.dimension.color);
         el.dataset.moduleId = module.id;
 
+        // ARIA attributes for accessibility
+        el.setAttribute('role', 'listitem');
+        el.setAttribute('tabindex', '0');
+        el.setAttribute('aria-label', `Module ${module.name} de la dimension ${module.dimension.title}. ${module.desc}`);
+        el.setAttribute('aria-grabbed', 'false');
+
         // Use HeroIcons if available, fallback to emoji
         const iconHtml = typeof HeroIcons !== 'undefined'
             ? HeroIcons.getDimensionIcon(module.dimension.id, { size: 18, strokeWidth: 2, className: 'module-icon' })
             : module.dimension.emoji;
 
         el.innerHTML = `
-            <div class="port port-top" data-port="top" data-module="${module.id}"></div>
-            <div class="port port-bottom" data-port="bottom" data-module="${module.id}"></div>
-            <div class="port port-left" data-port="left" data-module="${module.id}"></div>
-            <div class="port port-right" data-port="right" data-module="${module.id}"></div>
+            <div class="port port-top" data-port="top" data-module="${module.id}" role="button" tabindex="-1" aria-label="Port haut pour connexion"></div>
+            <div class="port port-bottom" data-port="bottom" data-module="${module.id}" role="button" tabindex="-1" aria-label="Port bas pour connexion"></div>
+            <div class="port port-left" data-port="left" data-module="${module.id}" role="button" tabindex="-1" aria-label="Port gauche pour connexion"></div>
+            <div class="port port-right" data-port="right" data-module="${module.id}" role="button" tabindex="-1" aria-label="Port droit pour connexion"></div>
             <div class="placed-module-header">
-                <span class="placed-module-emoji">${iconHtml}</span>
+                <span class="placed-module-emoji" aria-hidden="true">${iconHtml}</span>
                 <span class="placed-module-title">${module.name}</span>
             </div>
             <div class="placed-module-desc">${module.desc}</div>
@@ -310,13 +370,19 @@ const DimensionsWorkspace = (function() {
                 const currentX = parseFloat(element.style.left) || 0;
                 const currentY = parseFloat(element.style.top) || 0;
 
-                // Find valid position if there's collision
-                const validPos = findValidPosition(currentX, currentY, module.id);
+                // Snap to grid first
+                const snapped = snapPositionToGrid(currentX, currentY);
 
-                // Snap to valid position
-                element.style.left = `${validPos.x}px`;
-                element.style.top = `${validPos.y}px`;
-                DimensionsData.updateModulePosition(module.id, validPos.x, validPos.y);
+                // Find valid position if there's collision
+                const validPos = findValidPosition(snapped.x, snapped.y, module.id);
+
+                // Final snap to grid
+                const finalPos = snapPositionToGrid(validPos.x, validPos.y);
+
+                // Apply snapped position
+                element.style.left = `${finalPos.x}px`;
+                element.style.top = `${finalPos.y}px`;
+                DimensionsData.updateModulePosition(module.id, finalPos.x, finalPos.y);
 
                 // Redraw connections at final position
                 if (typeof DimensionsConnections !== 'undefined') {
@@ -414,6 +480,65 @@ const DimensionsWorkspace = (function() {
                 DimensionsConnections.cancelConnection();
             }
         }
+
+        // Arrow keys to move selected module
+        if (selected && ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+            e.preventDefault();
+
+            const module = DimensionsData.getPlacedModule(selected);
+            if (!module) return;
+
+            const step = e.shiftKey ? 50 : 10; // Shift for bigger steps
+            let newX = module.x;
+            let newY = module.y;
+
+            switch (e.key) {
+                case 'ArrowUp':    newY = Math.max(0, module.y - step); break;
+                case 'ArrowDown':  newY = module.y + step; break;
+                case 'ArrowLeft':  newX = Math.max(0, module.x - step); break;
+                case 'ArrowRight': newX = module.x + step; break;
+            }
+
+            // Update position
+            DimensionsData.updateModulePosition(selected, newX, newY);
+
+            // Update visual
+            const element = document.getElementById(selected);
+            if (element) {
+                element.style.left = `${newX}px`;
+                element.style.top = `${newY}px`;
+            }
+
+            // Redraw connections
+            if (typeof DimensionsConnections !== 'undefined') {
+                DimensionsConnections.redraw();
+            }
+        }
+
+        // Tab navigation between placed modules
+        if (e.key === 'Tab' && !e.target.closest('.sidebar')) {
+            const modules = [...canvas.querySelectorAll('.placed-module')];
+            if (modules.length === 0) return;
+
+            const currentIndex = modules.findIndex(m => m.id === selected);
+
+            if (e.shiftKey) {
+                // Previous module
+                const prevIndex = currentIndex <= 0 ? modules.length - 1 : currentIndex - 1;
+                e.preventDefault();
+                DimensionsData.selectModule(modules[prevIndex].id);
+                modules[prevIndex].focus();
+                updateSelection();
+            } else if (currentIndex !== -1) {
+                // Next module
+                const nextIndex = (currentIndex + 1) % modules.length;
+                e.preventDefault();
+                DimensionsData.selectModule(modules[nextIndex].id);
+                modules[nextIndex].focus();
+                updateSelection();
+            }
+        }
     }
 
     // === UPDATE SELECTION VISUALS ===
@@ -507,19 +632,19 @@ const DimensionsWorkspace = (function() {
     }
 
     // === FIND FREE POSITION (public) ===
-    // Find a position that doesn't overlap with existing modules
+    // Find a position that doesn't overlap with existing modules (grid-aligned)
     function findFreePosition() {
         const modules = DimensionsData.getPlacedModules();
-        const baseX = 100;
-        const baseY = 100;
-        const gridSpacingX = 240;
-        const gridSpacingY = 160;
+        const baseX = snapToGrid(100);
+        const baseY = snapToGrid(100);
+        const gridSpacingX = snapToGrid(240);
+        const gridSpacingY = snapToGrid(160);
 
         // Try grid positions
         for (let row = 0; row < 10; row++) {
             for (let col = 0; col < 6; col++) {
-                const x = baseX + col * gridSpacingX;
-                const y = baseY + row * gridSpacingY;
+                const x = snapToGrid(baseX + col * gridSpacingX);
+                const y = snapToGrid(baseY + row * gridSpacingY);
 
                 if (!checkCollision(x, y)) {
                     return { x, y };
@@ -533,7 +658,7 @@ const DimensionsWorkspace = (function() {
             maxY = Math.max(maxY, m.y + MODULE_HEIGHT + MODULE_PADDING);
         });
 
-        return { x: baseX, y: maxY + 20 };
+        return { x: baseX, y: snapToGrid(maxY + 20) };
     }
 
     // === ADD MODULE AT FREE POSITION (public) ===

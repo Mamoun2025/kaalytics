@@ -7,41 +7,41 @@
     /* Brand */
     --brand-green: #1a3d2e;
     --brand-green-light: #2d5a45;
-    --brand-yellow: #eda906;
-    --brand-yellow-light: #ffc107;
+    --brand-yellow: #10b981;
+    --brand-yellow-light: #34d399;
 
     /* Theme */
-    --bg: #f8fafc;
-    --bg-dots: #e2e8f0;
+    --bg: #ecfdf5;
+    --bg-dots: #a7f3d0;
     --surface: #ffffff;
-    --border: #e2e8f0;
-    --border-hover: #cbd5e1;
+    --border: #a7f3d0;
+    --border-hover: #6ee7b7;
 
     /* Text */
-    --text-primary: #1e293b;
-    --text-secondary: #64748b;
-    --text-muted: #94a3b8;
+    --text-primary: #0f1c1a;
+    --text-secondary: #5f9e8a;
+    --text-muted: #5f9e8a;
 
     /* Module Colors */
-    --yellow: #fef3c7;
-    --yellow-border: #f59e0b;
-    --orange: #ffedd5;
-    --orange-border: #f97316;
-    --green: #dcfce7;
-    --green-border: #22c55e;
-    --blue: #dbeafe;
-    --blue-border: #3b82f6;
-    --purple: #f3e8ff;
-    --purple-border: #a855f7;
-    --pink: #fce7f3;
-    --pink-border: #ec4899;
-    --teal: #ccfbf1;
+    --yellow: #064e3b;
+    --yellow-border: #10b981;
+    --orange: #065f46;
+    --orange-border: #10b981;
+    --green: #064e3b;
+    --green-border: #10b981;
+    --blue: #0a1412;
+    --blue-border: #0d9488;
+    --purple: #0a1412;
+    --purple-border: #34d399;
+    --pink: #0a1412;
+    --pink-border: #10b981;
+    --teal: #065f46;
     --teal-border: #14b8a6;
-    --red: #fee2e2;
-    --red-border: #ef4444;
+    --red: #0a1412;
+    --red-border: #065f46;
 
     /* Connection */
-    --connection: #6366f1;
+    --connection: #0d9488;
     --connection-glow: rgba(99, 102, 241, 0.25);
 
     /* Shadows */

@@ -51,7 +51,7 @@
   "hero": {
     "badge": "In Production",
     "usedBy": "Used by",
-    "clients": "BEKS & TransMaroc & MineralCo",
+    "clients": "TerraFleet & TransMaroc & MineralCo",
     "title": {
       "line1": "Your fleet costs you",
       "highlight": "30% too much",
@@ -409,7 +409,7 @@
       "agriculture": "Agriculture",
       "guides": "Guides (12)",
       "blog": "Blog",
-      "caseStudy": "BEKS Case Study",
+      "caseStudy": "TerraFleet Case Study",
       "guideRoi": "ROI Guide",
       "faq": "FAQ",
       "email": "contact@kaalytics.com",
@@ -538,8 +538,8 @@
   },
   "caseStudy": {
     "badge": "Case Study",
-    "title": "How BEKS reduced costs by <span>-45%</span> in 6 months",
-    "description": "BEKS managed 120+ vehicles with Excel and phone calls. Unexpected breakdowns, zero visibility, 3h/day lost on admin. <strong>FleetOps Pro changed everything.</strong>",
+    "title": "How TerraFleet reduced costs by <span>-45%</span> in 6 months",
+    "description": "TerraFleet managed 120+ vehicles with Excel and phone calls. Unexpected breakdowns, zero visibility, 3h/day lost on admin. <strong>FleetOps Pro changed everything.</strong>",
     "metrics": {
       "maintenance": { "value": "-45%", "label": "Maintenance Costs" },
       "admin": { "value": "-60%", "label": "Admin Time" },
@@ -549,12 +549,12 @@
     "quote": "Before FleetOps Pro, I spent my mornings calling drivers to find out where our equipment was. Now I open the app and I know exactly who is where, what needs maintenance, and how much each project costs us.",
     "author": {
       "name": "Youssef Bennani",
-      "role": "Operations Director, BEKS"
+      "role": "Operations Director, TerraFleet"
     },
     "cta": "Read full case study",
     "roiNote": "ROI achieved in 4 months",
     "company": {
-      "name": "BEKS",
+      "name": "TerraFleet",
       "sector": "Construction & Rental - Casablanca"
     },
     "statsBar": {

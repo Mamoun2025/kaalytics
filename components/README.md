@@ -207,7 +207,7 @@ window.TESTIMONIALS_CONFIG = {
         {
             name: 'Mohammed Benali',
             role: 'Directeur Operations',
-            company: 'BEKS Logistics',
+            company: 'TerraFleet Logistics',
             initials: 'MB',
             rating: 5,
             content: 'FleetOps Pro a completement transforme...',

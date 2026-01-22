@@ -26,14 +26,14 @@ const DimensionsEvolution = (function() {
 
     // === LEVELS ===
     const LEVELS = [
-        { level: 0, name: 'Démarrage', xpRequired: 0, color: '#6b7280' },
-        { level: 1, name: 'Fondation', xpRequired: 10, color: '#3b82f6' },
+        { level: 0, name: 'Démarrage', xpRequired: 0, color: '#5f9e8a' },
+        { level: 1, name: 'Fondation', xpRequired: 10, color: '#0d9488' },
         { level: 2, name: 'Émergent', xpRequired: 35, color: '#10b981' },
-        { level: 3, name: 'Consolidé', xpRequired: 80, color: '#f59e0b' },
-        { level: 4, name: 'Intégré', xpRequired: 150, color: '#ec4899' },
-        { level: 5, name: 'Avancé', xpRequired: 250, color: '#8b5cf6' },
-        { level: 6, name: 'Expert', xpRequired: 400, color: '#ef4444' },
-        { level: 7, name: 'Enterprise', xpRequired: 600, color: '#eda906' }
+        { level: 3, name: 'Consolidé', xpRequired: 80, color: '#10b981' },
+        { level: 4, name: 'Intégré', xpRequired: 150, color: '#059669' },
+        { level: 5, name: 'Avancé', xpRequired: 250, color: '#14b8a6' },
+        { level: 6, name: 'Expert', xpRequired: 400, color: '#065f46' },
+        { level: 7, name: 'Enterprise', xpRequired: 600, color: '#10b981' }
     ];
 
     // === ACHIEVEMENTS ===

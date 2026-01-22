@@ -5,8 +5,8 @@
 
 /* === CSS VARIABLES === */
 :root {
-    --tuto-primary: #eda906;
-    --tuto-primary-dark: #d4990a;
+    --tuto-primary: #10b981;
+    --tuto-primary-dark: #059669;
     --tuto-success: #10b981;
     --tuto-bg-dark: #1a3d2e;
     --tuto-bg-darker: #0f2a1f;
@@ -216,7 +216,7 @@
 .tuto-progress-bar {
     height: 100%;
     width: 0%;
-    background: linear-gradient(90deg, var(--tuto-primary), #f59e0b, var(--tuto-success));
+    background: linear-gradient(90deg, var(--tuto-primary), #10b981, var(--tuto-success));
     transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 0 10px rgba(237,169,6,0.5);
 }
@@ -1072,7 +1072,7 @@
    ============================================ */
 @media (prefers-color-scheme: light) {
     .tuto-bubble {
-        background: linear-gradient(165deg, #ffffff 0%, #f8fafc 100%);
+        background: linear-gradient(165deg, #ffffff 0%, #ecfdf5 100%);
         border-color: var(--tuto-primary);
         box-shadow:
             0 20px 60px rgba(0,0,0,0.15),
@@ -1123,7 +1123,7 @@
     }
 
     .tuto-welcome-content {
-        background: linear-gradient(165deg, #ffffff 0%, #f8fafc 100%);
+        background: linear-gradient(165deg, #ffffff 0%, #ecfdf5 100%);
     }
 
     .tuto-welcome-title {
@@ -1131,7 +1131,7 @@
     }
 
     .tuto-welcome-text {
-        color: #64748b;
+        color: #5f9e8a;
     }
 
     .tuto-welcome-feature {
@@ -1139,6 +1139,6 @@
     }
 
     .tuto-welcome-feature span:last-child {
-        color: #64748b;
+        color: #5f9e8a;
     }
 }

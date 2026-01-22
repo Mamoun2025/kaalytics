@@ -1,9 +1,14 @@
 /* ============================================
    DIMENSIONS DATA - State Management
+   With LocalStorage Persistence
    ============================================ */
 
 const DimensionsData = (function() {
     'use strict';
+
+    // LocalStorage key
+    const STORAGE_KEY = 'kaalytics_playground_config';
+    const STORAGE_VERSION = 1;
 
     // Dimensions data (loaded from JSON or inline)
     let dimensions = [];
@@ -29,8 +34,74 @@ const DimensionsData = (function() {
         connectionRemoved: [],
         selectionChanged: [],
         stateChanged: [],
-        cleared: []
+        cleared: [],
+        restored: []
     };
+
+    // Debounce save to avoid too many writes
+    let saveTimeout = null;
+    function debouncedSave() {
+        if (saveTimeout) clearTimeout(saveTimeout);
+        saveTimeout = setTimeout(() => saveToStorage(), 500);
+    }
+
+    // Save to LocalStorage
+    function saveToStorage() {
+        try {
+            const config = {
+                version: STORAGE_VERSION,
+                timestamp: Date.now(),
+                moduleIdCounter: state.moduleIdCounter,
+                modules: state.placedModules.map(m => ({
+                    id: m.id,
+                    templateId: m.templateId,
+                    name: m.name,
+                    desc: m.desc,
+                    dimension: m.dimension,
+                    x: m.x,
+                    y: m.y,
+                    ports: m.ports
+                })),
+                connections: state.connections
+            };
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(config));
+            console.log('[Storage] Configuration saved', { modules: config.modules.length, connections: config.connections.length });
+        } catch (e) {
+            console.warn('[Storage] Failed to save:', e);
+        }
+    }
+
+    // Restore from LocalStorage
+    function restoreFromStorage() {
+        try {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (!saved) return false;
+
+            const config = JSON.parse(saved);
+            if (config.version !== STORAGE_VERSION) {
+                console.log('[Storage] Version mismatch, clearing old data');
+                localStorage.removeItem(STORAGE_KEY);
+                return false;
+            }
+
+            // Restore state
+            state.moduleIdCounter = config.moduleIdCounter || 0;
+            state.placedModules = config.modules || [];
+            state.connections = config.connections || [];
+
+            console.log('[Storage] Configuration restored', {
+                modules: state.placedModules.length,
+                connections: state.connections.length,
+                savedAt: new Date(config.timestamp).toLocaleString()
+            });
+
+            emit('restored', { modules: state.placedModules, connections: state.connections });
+            return true;
+        } catch (e) {
+            console.warn('[Storage] Failed to restore:', e);
+            return false;
+        }
+    }
 
     // Initialize with data
     async function init() {
@@ -38,12 +109,17 @@ const DimensionsData = (function() {
             const response = await fetch('data/dimensions.json');
             const data = await response.json();
             dimensions = data.dimensions;
-            emit('stateChanged', { type: 'init', dimensions });
+
+            // Try to restore saved configuration
+            const restored = restoreFromStorage();
+
+            emit('stateChanged', { type: 'init', dimensions, restored });
             return dimensions;
         } catch (error) {
             console.error('Failed to load dimensions:', error);
             // Fallback to inline data
             dimensions = getDefaultDimensions();
+            restoreFromStorage();
             emit('stateChanged', { type: 'init', dimensions });
             return dimensions;
         }
@@ -100,6 +176,7 @@ const DimensionsData = (function() {
 
         emit('moduleAdded', placed);
         emit('stateChanged', { type: 'moduleAdded', module: placed });
+        debouncedSave(); // Auto-save
         return placed;
     }
 
@@ -125,6 +202,7 @@ const DimensionsData = (function() {
 
         emit('moduleRemoved', module);
         emit('stateChanged', { type: 'moduleRemoved', module });
+        debouncedSave(); // Auto-save
         return true;
     }
 
@@ -136,6 +214,7 @@ const DimensionsData = (function() {
         module.x = x;
         module.y = y;
         emit('moduleMoved', module);
+        debouncedSave(); // Auto-save
         return true;
     }
 
@@ -192,6 +271,7 @@ const DimensionsData = (function() {
 
         emit('connectionAdded', connection);
         emit('stateChanged', { type: 'connectionAdded', connection });
+        debouncedSave(); // Auto-save
         return connection;
     }
 
@@ -218,6 +298,7 @@ const DimensionsData = (function() {
         state.connections.splice(index, 1);
         emit('connectionRemoved', connection);
         emit('stateChanged', { type: 'connectionRemoved', connection });
+        debouncedSave(); // Auto-save
         return true;
     }
 
@@ -241,6 +322,13 @@ const DimensionsData = (function() {
         state.moduleIdCounter = 0;
         emit('cleared');
         emit('stateChanged', { type: 'clear' });
+        // Clear localStorage too
+        try {
+            localStorage.removeItem(STORAGE_KEY);
+            console.log('[Storage] Configuration cleared');
+        } catch (e) {
+            console.warn('[Storage] Failed to clear:', e);
+        }
     }
 
     // Get stats
@@ -296,7 +384,7 @@ const DimensionsData = (function() {
                 id: "operations",
                 title: "Operations Excellence",
                 emoji: "🏗️",
-                color: "#3b82f6",
+                color: "#0d9488",
                 modules: [
                     { id: "ops-fleet", name: "Smart Fleet", desc: "Real-time GPS tracking" },
                     { id: "ops-planning", name: "AI Planning", desc: "Resource allocation" },

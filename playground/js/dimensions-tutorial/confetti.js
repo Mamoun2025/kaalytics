@@ -6,7 +6,7 @@ const TutorialConfetti = (function() {
     'use strict';
 
     // Default colors (brand)
-    const defaultColors = ['#eda906', '#10b981', '#3b82f6', '#ec4899', '#8b5cf6', '#f59e0b'];
+    const defaultColors = ['#10b981', '#10b981', '#0d9488', '#059669', '#14b8a6', '#10b981'];
 
     // Create a single confetti piece
     function createPiece(container, colors, index) {
@@ -126,7 +126,7 @@ const TutorialConfetti = (function() {
     function sparkle(element, options = {}) {
         const {
             count = 12,
-            color = '#eda906'
+            color = '#10b981'
         } = options;
 
         const rect = element.getBoundingClientRect();

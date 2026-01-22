@@ -66,11 +66,11 @@ const DimensionsReport = (function() {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --brand-yellow: #EDA906;
-            --bg-dark: #0f0f1a;
-            --bg-card: #1a1a2e;
+            --brand-yellow: #10b981;
+            --bg-dark: #040a08;
+            --bg-card: #0a1412;
             --text-primary: #ffffff;
-            --text-secondary: #a0a0b0;
+            --text-secondary: #5f9e8a;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -171,7 +171,7 @@ const DimensionsReport = (function() {
             margin-bottom: 16px;
         }
         .module-story {
-            background: rgba(237, 169, 6, 0.1);
+            background: rgba(16, 185, 129, 0.1);
             padding: 16px;
             border-radius: 8px;
             margin-bottom: 12px;

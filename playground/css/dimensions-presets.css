@@ -15,7 +15,7 @@
     align-items: center;
     gap: 8px;
     padding: 8px 14px;
-    background: linear-gradient(135deg, var(--brand-yellow) 0%, #f5b800 100%);
+    background: linear-gradient(135deg, var(--brand-yellow) 0%, #34d399 100%);
     border: none;
     border-radius: 8px;
     color: var(--brand-green);
@@ -23,12 +23,12 @@
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
-    box-shadow: 0 2px 8px rgba(237, 169, 6, 0.3);
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
 }
 
 .preset-trigger:hover {
     transform: translateY(-1px);
-    box-shadow: 0 4px 16px rgba(237, 169, 6, 0.5);
+    box-shadow: 0 4px 16px rgba(16, 185, 129, 0.5);
 }
 
 .preset-trigger:active {
@@ -63,7 +63,7 @@
     border-radius: 14px;
     box-shadow:
         0 20px 60px rgba(0, 0, 0, 0.7),
-        0 0 40px rgba(237, 169, 6, 0.15),
+        0 0 40px rgba(16, 185, 129, 0.15),
         inset 0 1px 0 rgba(255, 255, 255, 0.05);
     opacity: 0;
     visibility: hidden;
@@ -82,7 +82,7 @@
 .preset-dropdown-header {
     padding: 18px 20px;
     background: linear-gradient(135deg, #1a3d2e 0%, #0d231a 100%);
-    border-bottom: 2px solid rgba(237, 169, 6, 0.3);
+    border-bottom: 2px solid rgba(16, 185, 129, 0.3);
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -122,8 +122,8 @@
     gap: 8px;
     padding: 12px 16px;
     background: #0a1a14;
-    border-top: 1px solid rgba(237, 169, 6, 0.2);
-    border-bottom: 1px solid rgba(237, 169, 6, 0.2);
+    border-top: 1px solid rgba(16, 185, 129, 0.2);
+    border-bottom: 1px solid rgba(16, 185, 129, 0.2);
     position: sticky;
     top: 0;
     z-index: 10;
@@ -147,7 +147,7 @@
 .preset-level-badge {
     font-size: 0.65rem;
     padding: 3px 8px;
-    background: linear-gradient(135deg, var(--brand-yellow) 0%, #f5b800 100%);
+    background: linear-gradient(135deg, var(--brand-yellow) 0%, #34d399 100%);
     color: var(--brand-green);
     border-radius: 12px;
     font-weight: 700;
@@ -157,20 +157,20 @@
 
 /* Level 1 specific */
 .preset-level-section[data-level="1"] .preset-level-badge {
-    background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
     color: #052e16;
 }
 
 /* Level 2 specific */
 .preset-level-section[data-level="2"] .preset-level-badge {
-    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
-    color: #172554;
+    background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+    color: #040a08;
 }
 
 /* Level 3 specific */
 .preset-level-section[data-level="3"] .preset-level-badge {
-    background: linear-gradient(135deg, #c084fc 0%, #a855f7 100%);
-    color: #3b0764;
+    background: linear-gradient(135deg, #6ee7b7 0%, #34d399 100%);
+    color: #040a08;
 }
 
 .preset-level-items {
@@ -279,17 +279,17 @@
 /* Level-specific item styling */
 .preset-item[data-level="1"]:hover {
     background: #0f2a1a;
-    border-left-color: #4ade80;
+    border-left-color: #34d399;
 }
 
 .preset-item[data-level="2"]:hover {
-    background: #0f1a2a;
-    border-left-color: #60a5fa;
+    background: #040a08;
+    border-left-color: #14b8a6;
 }
 
 .preset-item[data-level="3"]:hover {
-    background: #1a0f2a;
-    border-left-color: #c084fc;
+    background: #040a08;
+    border-left-color: #6ee7b7;
 }
 
 /* === LOADING STATE === */

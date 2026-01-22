@@ -51,22 +51,39 @@
     50% { filter: drop-shadow(0 0 10px var(--brand-yellow)); }
 }
 
-/* === FLOW ANIMATION === */
+/* === FLOW ANIMATION (Direction Indicator) === */
 .connection-flow {
     fill: none;
-    stroke: rgba(255, 255, 255, 0.8);
-    stroke-width: 2;
-    stroke-dasharray: 6 14;
+    stroke: rgba(255, 255, 255, 0.9);
+    stroke-width: 3;
+    stroke-dasharray: 4 12;
     stroke-linecap: round;
-    animation: flow-animation 1s linear infinite;
+    animation: flow-animation 0.8s linear infinite;
     pointer-events: none;
-    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.6));
     transition: opacity 0.2s ease;
 }
 
 @keyframes flow-animation {
     from { stroke-dashoffset: 0; }
-    to { stroke-dashoffset: -20; }
+    to { stroke-dashoffset: -16; }
+}
+
+/* === FLOW PARTICLES (enhanced direction) === */
+.connection-flow-particles {
+    fill: none;
+    stroke: var(--emerald-bright, #34d399);
+    stroke-width: 6;
+    stroke-dasharray: 2 30;
+    stroke-linecap: round;
+    animation: flow-particles 1.2s linear infinite;
+    pointer-events: none;
+    filter: drop-shadow(0 0 4px var(--emerald, #10b981));
+}
+
+@keyframes flow-particles {
+    from { stroke-dashoffset: 0; }
+    to { stroke-dashoffset: -32; }
 }
 
 /* === REDUCED MOTION SUPPORT === */
@@ -98,7 +115,7 @@
 /* === TEMP CONNECTION (during drag) === */
 .temp-connection {
     fill: none;
-    stroke: rgba(237, 169, 6, 0.5);
+    stroke: rgba(16, 185, 129, 0.5);
     stroke-width: 3;
     stroke-dasharray: 10 8;
     stroke-linecap: round;

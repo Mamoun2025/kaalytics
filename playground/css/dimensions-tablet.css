@@ -559,6 +559,11 @@ body.is-panning * {
         max-width: 280px;
     }
 
+    /* Hide keyboard hints on touch devices */
+    .empty-state-hint {
+        display: none;
+    }
+
 
     /* ───────────────────────────────────────
        TABLET UI COMPONENTS (from ui.js)
@@ -711,7 +716,7 @@ body.is-panning * {
     }
 
     .tablet-context-menu-item.danger {
-        color: #ef4444;
+        color: #065f46;
     }
 
     .tablet-context-menu-item svg {

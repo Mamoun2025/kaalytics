@@ -167,12 +167,12 @@
     "foundation": {
       "name": "Fondation",
       "description": "Premiers pas de la transformation",
-      "color": "#6b7280"
+      "color": "#5f9e8a"
     },
     "synergy": {
       "name": "Synergie",
       "description": "Connexions et flux d'information",
-      "color": "#3b82f6"
+      "color": "#0d9488"
     },
     "diversity": {
       "name": "Diversité",
@@ -182,12 +182,12 @@
     "scale": {
       "name": "Échelle",
       "description": "Croissance de l'infrastructure",
-      "color": "#f59e0b"
+      "color": "#10b981"
     },
     "mastery": {
       "name": "Maîtrise",
       "description": "Excellence et expertise",
-      "color": "#8b5cf6"
+      "color": "#14b8a6"
     }
   }
 }

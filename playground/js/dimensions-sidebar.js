@@ -88,16 +88,16 @@ const DimensionsSidebar = (function() {
 
         const html = `
             <div class="sidebar-header">
-                <div class="sidebar-title"><i data-lucide="boxes" class="icon-sm"></i> Dimensions</div>
-                <div class="sidebar-subtitle">Glissez les modules sur le canvas</div>
-                <button class="sidebar-toggle-btn" id="sidebarToggleBtn">
-                    <i data-lucide="chevron-down" class="sidebar-toggle-icon icon-xs"></i>
+                <div class="sidebar-title"><i data-lucide="boxes" class="icon-sm" aria-hidden="true"></i> Dimensions</div>
+                <div class="sidebar-subtitle" id="sidebarInstructions">Glissez les modules sur le canvas ou cliquez pour ajouter</div>
+                <button class="sidebar-toggle-btn" id="sidebarToggleBtn" aria-expanded="true" aria-label="Réduire ou développer toutes les dimensions">
+                    <i data-lucide="chevron-down" class="sidebar-toggle-icon icon-xs" aria-hidden="true"></i>
                     <span class="sidebar-toggle-text">Réduire tout</span>
                 </button>
             </div>
-            <div class="dimensions-list">
+            <nav class="dimensions-list" role="navigation" aria-label="Liste des dimensions disponibles" aria-describedby="sidebarInstructions">
                 ${dimensions.map(renderDimension).join('')}
-            </div>
+            </nav>
         `;
 
         container.innerHTML = html;
@@ -139,21 +139,24 @@ const DimensionsSidebar = (function() {
             ? HeroIcons.getDimensionIcon(dimension.id, { size: 22, strokeWidth: 2, className: 'dimension-icon' })
             : dimension.emoji;
 
+        const groupId = `dimension-group-${dimension.id}`;
+        const listId = `modules-list-${dimension.id}`;
+
         return `
-            <div class="dimension-group" data-dimension="${dimension.id}">
-                <div class="dimension-header">
-                    <div class="dimension-emoji">${iconHtml}</div>
+            <div class="dimension-group" data-dimension="${dimension.id}" role="region" aria-labelledby="${groupId}">
+                <button class="dimension-header" id="${groupId}" aria-expanded="true" aria-controls="${listId}" aria-label="${dimension.title}, ${dimension.modules.length} modules">
+                    <div class="dimension-emoji" aria-hidden="true">${iconHtml}</div>
                     <div class="dimension-info">
                         <div class="dimension-title">${dimension.title}</div>
                         <div class="dimension-count">${dimension.modules.length} modules</div>
                     </div>
-                    <div class="dimension-toggle">
+                    <div class="dimension-toggle" aria-hidden="true">
                         <i data-lucide="chevron-down" class="icon-sm"></i>
                     </div>
-                </div>
-                <div class="modules-list">
+                </button>
+                <ul class="modules-list" id="${listId}" role="list" aria-label="Modules de ${dimension.title}">
                     ${dimension.modules.map(m => renderModule(m, dimension)).join('')}
-                </div>
+                </ul>
             </div>
         `;
     }
@@ -161,18 +164,26 @@ const DimensionsSidebar = (function() {
     // Render a single module item
     function renderModule(module, dimension) {
         const placed = isModulePlaced(module.id);
+        const ariaLabel = placed
+            ? `${module.name} - déjà placé sur le canvas`
+            : `${module.name} - ${module.desc}. Cliquez ou glissez pour ajouter au canvas`;
+
         return `
-            <div class="module-item${placed ? ' placed' : ''}"
+            <li class="module-item${placed ? ' placed' : ''}"
                  draggable="${placed ? 'false' : 'true'}"
                  data-module-id="${module.id}"
-                 data-dimension-id="${dimension.id}">
-                <div class="module-color" style="background: ${dimension.color}"></div>
+                 data-dimension-id="${dimension.id}"
+                 role="button"
+                 tabindex="0"
+                 aria-label="${ariaLabel}"
+                 aria-disabled="${placed}">
+                <div class="module-color" style="background: ${dimension.color}" aria-hidden="true"></div>
                 <div class="module-content">
                     <div class="module-name">${module.name}</div>
                     <div class="module-desc">${module.desc}</div>
                 </div>
-                ${placed ? '<div class="module-placed-badge"><i data-lucide="check" class="icon-xs"></i></div>' : ''}
-            </div>
+                ${placed ? '<div class="module-placed-badge" aria-hidden="true"><i data-lucide="check" class="icon-xs"></i></div>' : ''}
+            </li>
         `;
     }
 
@@ -186,7 +197,8 @@ const DimensionsSidebar = (function() {
             if (header) {
                 const group = header.closest('.dimension-group');
                 if (group) {
-                    group.classList.toggle('collapsed');
+                    const isCollapsed = group.classList.toggle('collapsed');
+                    header.setAttribute('aria-expanded', !isCollapsed);
                 }
                 return;
             }
@@ -197,6 +209,49 @@ const DimensionsSidebar = (function() {
                 const moduleId = moduleItem.dataset.moduleId;
                 if (moduleId && typeof DimensionsWorkspace !== 'undefined') {
                     DimensionsWorkspace.addModuleAtFreePosition(moduleId);
+                }
+            }
+        });
+
+        // Keyboard navigation
+        container.addEventListener('keydown', (e) => {
+            const target = e.target;
+
+            // Enter/Space on module item
+            if ((e.key === 'Enter' || e.key === ' ') && target.classList.contains('module-item')) {
+                e.preventDefault();
+                if (!target.classList.contains('placed')) {
+                    const moduleId = target.dataset.moduleId;
+                    if (moduleId && typeof DimensionsWorkspace !== 'undefined') {
+                        DimensionsWorkspace.addModuleAtFreePosition(moduleId);
+                    }
+                }
+            }
+
+            // Enter/Space on dimension header
+            if ((e.key === 'Enter' || e.key === ' ') && target.classList.contains('dimension-header')) {
+                e.preventDefault();
+                const group = target.closest('.dimension-group');
+                if (group) {
+                    const isCollapsed = group.classList.toggle('collapsed');
+                    target.setAttribute('aria-expanded', !isCollapsed);
+                }
+            }
+
+            // Arrow navigation between modules
+            if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+                const modules = [...container.querySelectorAll('.module-item:not(.placed)')];
+                const currentIndex = modules.indexOf(target);
+
+                if (currentIndex !== -1) {
+                    e.preventDefault();
+                    let nextIndex;
+                    if (e.key === 'ArrowDown') {
+                        nextIndex = (currentIndex + 1) % modules.length;
+                    } else {
+                        nextIndex = (currentIndex - 1 + modules.length) % modules.length;
+                    }
+                    modules[nextIndex].focus();
                 }
             }
         });

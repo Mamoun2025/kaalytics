@@ -11,7 +11,7 @@
       "description": "Le début de votre transformation digitale",
       "threshold": 0,
       "icon": "🌱",
-      "color": "#6b7280",
+      "color": "#5f9e8a",
       "headline": "Votre transformation digitale commence ici",
       "subtext": "Chaque entreprise qui domine son marché a un secret : une architecture digitale cohérente. Construisez la vôtre.",
       "cta": "Placez votre premier module"
@@ -22,7 +22,7 @@
       "description": "Les premières briques sont posées",
       "threshold": 1,
       "icon": "🧱",
-      "color": "#3b82f6",
+      "color": "#0d9488",
       "headline": "Chapitre 1 : Fondation",
       "subtext": "Les premières briques de votre infrastructure digitale sont posées.",
       "narrative_templates": [
@@ -50,7 +50,7 @@
       "description": "Les connexions se multiplient",
       "threshold": 6,
       "icon": "🔗",
-      "color": "#f59e0b",
+      "color": "#10b981",
       "headline": "Chapitre 3 : Intégration",
       "subtext": "{count} modules actifs. L'heure est aux connexions stratégiques.",
       "narrative_templates": [
@@ -64,7 +64,7 @@
       "description": "L'effet réseau s'active",
       "threshold": 10,
       "icon": "🚀",
-      "color": "#ec4899",
+      "color": "#059669",
       "headline": "Chapitre 4 : Accélération",
       "subtext": "Écosystème de {count} capacités. La synergie génère de la valeur.",
       "narrative_templates": [
@@ -78,7 +78,7 @@
       "description": "La transformation est accomplie",
       "threshold": 15,
       "icon": "✨",
-      "color": "#8b5cf6",
+      "color": "#14b8a6",
       "headline": "Chapitre 5 : Transformation complète",
       "subtext": "Transformation digitale accomplie. Votre entreprise opère au niveau supérieur.",
       "narrative_templates": [
@@ -120,12 +120,12 @@
     "focused": {
       "name": "Fondation",
       "description": "Concentration sur une dimension",
-      "badge_color": "#6b7280"
+      "badge_color": "#5f9e8a"
     },
     "specialized": {
       "name": "Spécialiste",
       "description": "Excellence dans une dimension (4+ modules)",
-      "badge_color": "#3b82f6"
+      "badge_color": "#0d9488"
     },
     "diversified": {
       "name": "Multi-axes",
@@ -135,12 +135,12 @@
     "integrated": {
       "name": "Intégré",
       "description": "Connexions cross-dimension actives",
-      "badge_color": "#f59e0b"
+      "badge_color": "#10b981"
     },
     "ecosystem": {
       "name": "Écosystème",
       "description": "4+ dimensions avec 5+ connexions",
-      "badge_color": "#8b5cf6"
+      "badge_color": "#14b8a6"
     }
   }
 }

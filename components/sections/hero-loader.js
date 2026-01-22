@@ -35,7 +35,7 @@
         },
         rotatingTexts: ['30% de trop', 'trop cher', 'des soucis'],
         subtitle: 'FleetOps Pro : 8 modules IA qui transforment vos vehicules en actifs rentables. <strong>-40% couts. +35% productivite. Garanti.</strong>',
-        trustNames: 'BEKS • TransMaroc • MineralCo',
+        trustNames: 'TerraFleet • TransMaroc • MineralCo',
         metrics: [
             { value: '95%', label: 'Precision IA' },
             { value: '-70%', label: 'Temps admin' },

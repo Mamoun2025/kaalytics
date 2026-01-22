@@ -4,7 +4,7 @@
       "id": "operations",
       "title": "Opérations Terrain",
       "emoji": "🏗️",
-      "color": "#3b82f6",
+      "color": "#10b981",
       "description": "Transformez le chaos en précision horlogère",
       "modules": [
         { "id": "ops-map", "name": "Carte Intelligente", "desc": "Tous vos véhicules et actifs sur une carte interactive" },
@@ -25,7 +25,7 @@
       "id": "growth",
       "title": "Croissance Commerciale",
       "emoji": "🚀",
-      "color": "#f59e0b",
+      "color": "#0d9488",
       "description": "Transformez votre équipe commerciale en machine à closer",
       "modules": [
         { "id": "growth-crm", "name": "CRM Intelligent", "desc": "L'IA vous dit qui appeler maintenant" },
@@ -42,7 +42,7 @@
       "id": "engagement",
       "title": "Marketing Automation",
       "emoji": "🎯",
-      "color": "#ec4899",
+      "color": "#059669",
       "description": "Un marketing qui tourne tout seul",
       "modules": [
         { "id": "engage-campaigns", "name": "Campagnes IA", "desc": "Des campagnes qui apprennent et s'améliorent" },
@@ -59,7 +59,7 @@
       "id": "brand",
       "title": "Identité & Design",
       "emoji": "🎨",
-      "color": "#8b5cf6",
+      "color": "#14b8a6",
       "description": "Votre marque mérite de briller comme un million",
       "modules": [
         { "id": "brand-identity", "name": "Identité Visuelle", "desc": "Logo, couleurs, typographie" },
@@ -76,7 +76,7 @@
       "id": "integration",
       "title": "Connectivité",
       "emoji": "🔌",
-      "color": "#06b6d4",
+      "color": "#0d9488",
       "description": "Tous vos systèmes qui communiquent enfin",
       "modules": [
         { "id": "integ-universal", "name": "Connecteur Universel", "desc": "Connectez tout à tout" },
@@ -93,7 +93,7 @@
       "id": "enterprise",
       "title": "Gestion d'Entreprise",
       "emoji": "🏢",
-      "color": "#6366f1",
+      "color": "#047857",
       "description": "Le système d'exploitation business que vous méritiez",
       "modules": [
         { "id": "ent-erp", "name": "ERP Complet", "desc": "Tous les processus en harmonie" },
@@ -127,7 +127,7 @@
       "id": "security",
       "title": "Sécurité & Conformité",
       "emoji": "🛡️",
-      "color": "#ef4444",
+      "color": "#065f46",
       "description": "Dormez tranquille avec des gardiens IA",
       "modules": [
         { "id": "sec-detect", "name": "Détection Menaces", "desc": "L'IA repère les menaces instantanément" },
@@ -144,7 +144,7 @@
       "id": "construction",
       "title": "BTP & Construction",
       "emoji": "🏗️",
-      "color": "#d97706",
+      "color": "#10b981",
       "description": "Maîtrisez vos chantiers de A à Z",
       "modules": [
         { "id": "btp-tenders", "name": "Appels d'Offres", "desc": "Gagnez plus de marchés" },
@@ -161,7 +161,7 @@
       "id": "logistics",
       "title": "Logistique & Distribution",
       "emoji": "📦",
-      "color": "#0891b2",
+      "color": "#0d9488",
       "description": "Du stock au client en toute fluidité",
       "modules": [
         { "id": "log-wms", "name": "Gestion Entrepôt", "desc": "Chaque article à sa place" },
@@ -178,7 +178,7 @@
       "id": "mining",
       "title": "Mines & Carrières",
       "emoji": "⛏️",
-      "color": "#78716c",
+      "color": "#064e3b",
       "description": "Extraction optimisée et responsable",
       "modules": [
         { "id": "mine-deposits", "name": "Gestion Gisements", "desc": "Réserves modélisées" },
@@ -195,7 +195,7 @@
       "id": "manufacturing",
       "title": "Industrie & Production",
       "emoji": "🏭",
-      "color": "#64748b",
+      "color": "#047857",
       "description": "L'usine 4.0 à portée de main",
       "modules": [
         { "id": "mfg-mes", "name": "Pilotage Atelier", "desc": "Production temps réel" },

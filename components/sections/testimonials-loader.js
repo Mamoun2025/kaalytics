@@ -44,7 +44,7 @@
             {
                 name: 'Mohammed Benali',
                 role: 'Directeur Operations',
-                company: 'BEKS Logistics',
+                company: 'TerraFleet Logistics',
                 avatar: null,
                 initials: 'MB',
                 rating: 5,

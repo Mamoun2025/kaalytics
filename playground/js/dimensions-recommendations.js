@@ -354,14 +354,14 @@ const DimensionsRecommendations = (function() {
     function getDimensionForModule(moduleId) {
         const prefix = moduleId.split('-')[0];
         const mapping = {
-            ops: { id: 'operations', color: '#3b82f6', emoji: '🏗️' },
+            ops: { id: 'operations', color: '#0d9488', emoji: '🏗️' },
             intel: { id: 'intelligence', color: '#10b981', emoji: '💰' },
-            growth: { id: 'growth', color: '#f59e0b', emoji: '🚀' },
-            engage: { id: 'engagement', color: '#ec4899', emoji: '✨' },
-            brand: { id: 'brand', color: '#8b5cf6', emoji: '🎨' },
-            integ: { id: 'integration', color: '#06b6d4', emoji: '🔌' },
-            sec: { id: 'security', color: '#ef4444', emoji: '🛡️' },
-            ent: { id: 'enterprise', color: '#6366f1', emoji: '📦' }
+            growth: { id: 'growth', color: '#10b981', emoji: '🚀' },
+            engage: { id: 'engagement', color: '#059669', emoji: '✨' },
+            brand: { id: 'brand', color: '#14b8a6', emoji: '🎨' },
+            integ: { id: 'integration', color: '#0d9488', emoji: '🔌' },
+            sec: { id: 'security', color: '#065f46', emoji: '🛡️' },
+            ent: { id: 'enterprise', color: '#0d9488', emoji: '📦' }
         };
         return mapping[prefix] || { id: 'unknown', color: '#888', emoji: '📦' };
     }

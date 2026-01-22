@@ -9,7 +9,7 @@
       "id": "visibility",
       "name": "Visibilité & Transparence",
       "icon": "👁️",
-      "color": "#3b82f6",
+      "color": "#0d9488",
       "description": "Voir clairement pour décider juste",
       "keywords": ["voir", "visualiser", "temps réel", "tableau de bord", "carte", "monitoring", "tracking"],
       "modules": [
@@ -43,7 +43,7 @@
       "id": "efficiency",
       "name": "Efficacité & Optimisation",
       "icon": "⚡",
-      "color": "#f59e0b",
+      "color": "#10b981",
       "description": "Faire plus avec moins, faire mieux plus vite",
       "keywords": ["optimiser", "automatiser", "réduire", "accélérer", "fluidifier", "rationaliser"],
       "modules": [
@@ -77,7 +77,7 @@
       "id": "intelligence",
       "name": "Intelligence & Prédiction",
       "icon": "🧠",
-      "color": "#8b5cf6",
+      "color": "#14b8a6",
       "description": "Anticiper demain grâce aux données d'aujourd'hui",
       "keywords": ["prédire", "anticiper", "IA", "machine learning", "analyse", "forecast", "détection"],
       "modules": [
@@ -112,7 +112,7 @@
       "id": "integration",
       "name": "Intégration & Synergie",
       "icon": "🔗",
-      "color": "#06b6d4",
+      "color": "#0d9488",
       "description": "Unifier pour amplifier",
       "keywords": ["connecter", "unifier", "intégrer", "synchroniser", "centraliser", "harmoniser"],
       "modules": [
@@ -145,7 +145,7 @@
       "id": "security",
       "name": "Sécurité & Conformité",
       "icon": "🛡️",
-      "color": "#ef4444",
+      "color": "#065f46",
       "description": "Protéger pour pérenniser",
       "keywords": ["protéger", "sécuriser", "conformité", "audit", "chiffrer", "contrôler"],
       "modules": [
@@ -210,7 +210,7 @@
       "id": "quality",
       "name": "Qualité & Excellence",
       "icon": "✨",
-      "color": "#ec4899",
+      "color": "#059669",
       "description": "L'excellence comme standard",
       "keywords": ["qualité", "contrôle", "excellence", "conformité", "standard", "certification"],
       "modules": [
@@ -244,7 +244,7 @@
       "id": "agility",
       "name": "Agilité & Réactivité",
       "icon": "🚀",
-      "color": "#f97316",
+      "color": "#10b981",
       "description": "S'adapter plus vite que le changement",
       "keywords": ["réactivité", "adaptation", "temps réel", "instantané", "automatique", "rapide"],
       "modules": [
