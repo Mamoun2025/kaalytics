@@ -1,0 +1,360 @@
+<!--
+KAALYTICS - Image Reveal Effect
+=================================
+Effet de revelation d'image avec rideau anime
+-->
+
+<div class="reveal-demo">
+    <h2>Image Reveal Effects</h2>
+    <p>Differents effets de revelation au scroll</p>
+
+    <!-- Curtain reveal -->
+    <div class="reveal-section">
+        <h3>Rideau Horizontal</h3>
+        <div class="reveal-grid">
+            <div class="reveal-item" data-reveal="left">
+                <div class="reveal-item__curtain"></div>
+                <div class="reveal-item__content">
+                    <div class="reveal-placeholder">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <path d="M21 15l-5-5L5 21"/>
+                        </svg>
+                        <span>Dashboard Analytics</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal-item" data-reveal="right">
+                <div class="reveal-item__curtain"></div>
+                <div class="reveal-item__content">
+                    <div class="reveal-placeholder">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                        <span>Fleet Overview</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vertical reveal -->
+    <div class="reveal-section">
+        <h3>Rideau Vertical</h3>
+        <div class="reveal-grid">
+            <div class="reveal-item reveal-item--tall" data-reveal="up">
+                <div class="reveal-item__curtain"></div>
+                <div class="reveal-item__content">
+                    <div class="reveal-placeholder">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                        </svg>
+                        <span>3D Vehicle</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal-item reveal-item--tall" data-reveal="down">
+                <div class="reveal-item__curtain"></div>
+                <div class="reveal-item__content">
+                    <div class="reveal-placeholder">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M18 20V10"/>
+                            <path d="M12 20V4"/>
+                            <path d="M6 20v-6"/>
+                        </svg>
+                        <span>Performance Chart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Split reveal -->
+    <div class="reveal-section">
+        <h3>Ouverture Split</h3>
+        <div class="reveal-item reveal-item--wide" data-reveal="split">
+            <div class="reveal-item__curtain reveal-item__curtain--left"></div>
+            <div class="reveal-item__curtain reveal-item__curtain--right"></div>
+            <div class="reveal-item__content">
+                <div class="reveal-placeholder reveal-placeholder--large">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polygon points="10 8 16 12 10 16 10 8"/>
+                    </svg>
+                    <span>Video Demo</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Diagonal reveal -->
+    <div class="reveal-section">
+        <h3>Revelation Diagonale</h3>
+        <div class="reveal-grid reveal-grid--3">
+            <div class="reveal-item" data-reveal="diagonal">
+                <div class="reveal-item__curtain"></div>
+                <div class="reveal-item__content">
+                    <div class="reveal-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                        <span>Security</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal-item" data-reveal="diagonal" style="--delay: 0.1s">
+                <div class="reveal-item__curtain"></div>
+                <div class="reveal-item__content">
+                    <div class="reveal-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <span>Real-time</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal-item" data-reveal="diagonal" style="--delay: 0.2s">
+                <div class="reveal-item__curtain"></div>
+                <div class="reveal-item__content">
+                    <div class="reveal-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                        <span>Fast</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+:root {
+    --emerald: #10b981;
+    --emerald-dim: #047857;
+    --teal: #0d9488;
+    --bg-void: #040a08;
+    --bg-card: #0d1f1a;
+    --bg-tertiary: #1a312d;
+    --text-primary: #f0fdf4;
+    --text-muted: #86efac;
+    --border: rgba(16, 185, 129, 0.2);
+}
+
+.reveal-demo {
+    min-height: 100vh;
+    background: var(--bg-void);
+    padding: 4rem 2rem;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.reveal-demo > h2 {
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.reveal-demo > p {
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.reveal-section {
+    max-width: 900px;
+    margin: 0 auto 4rem;
+}
+
+.reveal-section h3 {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--emerald);
+}
+
+/* Grid */
+.reveal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.reveal-grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Reveal item */
+.reveal-item {
+    position: relative;
+    height: 250px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+}
+
+.reveal-item--tall {
+    height: 350px;
+}
+
+.reveal-item--wide {
+    height: 300px;
+}
+
+.reveal-item__content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-card) 100%);
+}
+
+.reveal-item__curtain {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--emerald-dim) 0%, var(--emerald) 100%);
+    z-index: 10;
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    transition-delay: var(--delay, 0s);
+}
+
+/* Reveal animations */
+[data-reveal="left"] .reveal-item__curtain {
+    transform-origin: left;
+}
+
+[data-reveal="left"].revealed .reveal-item__curtain {
+    transform: scaleX(0);
+}
+
+[data-reveal="right"] .reveal-item__curtain {
+    transform-origin: right;
+}
+
+[data-reveal="right"].revealed .reveal-item__curtain {
+    transform: scaleX(0);
+}
+
+[data-reveal="up"] .reveal-item__curtain {
+    transform-origin: bottom;
+}
+
+[data-reveal="up"].revealed .reveal-item__curtain {
+    transform: scaleY(0);
+}
+
+[data-reveal="down"] .reveal-item__curtain {
+    transform-origin: top;
+}
+
+[data-reveal="down"].revealed .reveal-item__curtain {
+    transform: scaleY(0);
+}
+
+/* Split reveal */
+[data-reveal="split"] .reveal-item__curtain--left {
+    right: 50%;
+    transform-origin: left;
+}
+
+[data-reveal="split"] .reveal-item__curtain--right {
+    left: 50%;
+    transform-origin: right;
+}
+
+[data-reveal="split"].revealed .reveal-item__curtain--left,
+[data-reveal="split"].revealed .reveal-item__curtain--right {
+    transform: scaleX(0);
+}
+
+/* Diagonal reveal */
+[data-reveal="diagonal"] .reveal-item__curtain {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+[data-reveal="diagonal"].revealed .reveal-item__curtain {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+/* Placeholder content */
+.reveal-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-muted);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease 0.4s;
+}
+
+.revealed .reveal-placeholder {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-placeholder svg {
+    color: var(--emerald);
+}
+
+.reveal-placeholder span {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.reveal-placeholder--large svg {
+    width: 80px;
+    height: 80px;
+}
+
+.reveal-placeholder--large span {
+    font-size: 1.25rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .reveal-grid,
+    .reveal-grid--3 {
+        grid-template-columns: 1fr;
+    }
+
+    .reveal-item {
+        height: 200px;
+    }
+
+    .reveal-item--tall {
+        height: 250px;
+    }
+}
+</style>
+
+<script>
+(function() {
+    const revealItems = document.querySelectorAll('[data-reveal]');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.3,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealItems.forEach(item => observer.observe(item));
+})();
+</script>

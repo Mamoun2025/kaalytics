@@ -1,0 +1,105 @@
+{
+  "_meta": {
+    "version": "3.0",
+    "dimension": "manufacturing",
+    "description": "Contenu sémantique ULTRA-RICHE pour la dimension Industrie & Production"
+  },
+
+  "modules": {
+    "mfg-mes": {
+      "name": "Pilotage Atelier",
+      "tagline": "Chaque poste en temps réel",
+      "description_short": "Suivi temps réel de la production avec ordres de fabrication et temps machine.",
+      "description_full": "Le module Pilotage Atelier (MES) donne une visibilité temps réel sur votre production. Lancement et suivi des ordres de fabrication, déclarations de production par les opérateurs, suivi des temps machine et des arrêts, traçabilité des lots produits. Les responsables de production voient l'état de l'atelier en temps réel. Les écarts sont détectés immédiatement. Les décisions sont prises sur des données fraîches, pas sur des estimations de la veille.",
+      "transformation_story": {
+        "intro": "Votre atelier devient transparent. Chaque machine, chaque opérateur, chaque OF est visible en temps réel. Les problèmes sont détectés dès qu'ils apparaissent.",
+        "deep_narrative": "Le Pilotage Atelier transforme la gestion de production. Le papier disparaît de l'atelier. Les déclarations sont instantanées. Les temps réels remplacent les temps théoriques. Les causes d'arrêt sont documentées. L'amélioration continue s'appuie sur des faits.",
+        "business_impact": "L'impact sur la productivité est majeur : augmentation de 15% du TRS, réduction de 50% du temps de saisie administrative, et détection immédiate des dérives de production."
+      }
+    },
+
+    "mfg-planning": {
+      "name": "Ordonnancement",
+      "tagline": "La bonne séquence de production",
+      "description_short": "Planification optimisée des ordres de fabrication sur les ressources.",
+      "description_full": "Le module Ordonnancement optimise la séquence de production sur vos ressources. Planification des OF sur les machines et les équipes, respect des contraintes de précédence et de capacité, optimisation des temps de changement de série, simulation et re-planification rapide. Les ordres sont lancés dans l'ordre optimal. Les goulots sont identifiés et gérés. La promesse client est respectée car le planning est réaliste.",
+      "transformation_story": {
+        "intro": "Vos ordres de fabrication sont séquencés de manière optimale. Les changements de série sont minimisés. Les délais clients sont respectés.",
+        "deep_narrative": "L'Ordonnancement transforme la planification de production. Le planning est optimisé automatiquement. Les contraintes sont respectées. Les simulations permettent d'anticiper. Les urgences sont intégrées sans tout perturber. L'atelier produit dans l'ordre le plus efficace.",
+        "business_impact": "L'impact sur l'efficacité est significatif : réduction de 30% des temps de changement, amélioration de 25% du taux de service, et optimisation de la charge des ressources critiques."
+      }
+    },
+
+    "mfg-mrp": {
+      "name": "Calcul des Besoins",
+      "tagline": "Les composants au bon moment",
+      "description_short": "MRP pour le calcul automatique des besoins en composants et matières.",
+      "description_full": "Le module Calcul des Besoins (MRP) détermine automatiquement ce qu'il faut approvisionner et quand. Explosion des nomenclatures, prise en compte des stocks et des en-cours, génération des propositions d'approvisionnement et de fabrication, respect des délais et des quantités économiques. Plus de rupture par oubli, plus de sur-stock par excès de prudence. Les achats et la production sont synchronisés avec la demande.",
+      "transformation_story": {
+        "intro": "Vos besoins en composants sont calculés automatiquement. Les approvisionnements sont déclenchés au bon moment. Le stock est juste.",
+        "deep_narrative": "Le Calcul des Besoins transforme votre supply chain interne. Les besoins sont anticipés précisément. Les propositions sont générées automatiquement. Les acheteurs valident plutôt que de calculer. Les ruptures en production disparaissent. Le stock est optimisé.",
+        "business_impact": "L'impact sur le cash est direct : réduction de 25% du stock de composants, élimination des arrêts de production pour rupture, et automatisation de 80% des propositions d'approvisionnement."
+      }
+    },
+
+    "mfg-quality": {
+      "name": "Qualité Production",
+      "tagline": "Zéro défaut en sortie",
+      "description_short": "Contrôles qualité en ligne et gestion des non-conformités.",
+      "description_full": "Le module Qualité Production intègre les contrôles qualité dans le flux de production. Plans de contrôle par produit et par opération, saisie des mesures par les opérateurs, alertes automatiques en cas de dérive, gestion des non-conformités et des rebuts, analyse statistique SPC. La qualité est produite, pas seulement contrôlée. Les défauts sont détectés au plus tôt. Les causes racines sont identifiées et éliminées.",
+      "transformation_story": {
+        "intro": "La qualité est intégrée à chaque étape de production. Les contrôles sont systématiques. Les dérives sont détectées instantanément.",
+        "deep_narrative": "La Qualité Production transforme votre assurance qualité. Les contrôles sont guidés par les plans. Les mesures sont analysées statistiquement. Les dérives sont détectées avant le défaut. Les non-conformités sont tracées jusqu'à leur résolution. La qualité s'améliore structurellement.",
+        "business_impact": "L'impact sur la qualité est majeur : réduction de 60% des non-conformités, diminution de 80% des rebuts par détection précoce, et conformité aux exigences ISO 9001."
+      }
+    },
+
+    "mfg-traceability": {
+      "name": "Traçabilité Lots",
+      "tagline": "Du composant au produit fini",
+      "description_short": "Traçabilité complète des lots avec généalogie montante et descendante.",
+      "description_full": "Le module Traçabilité Lots assure une traçabilité complète de votre production. Identification des lots de matières premières et de produits finis, généalogie des lots (quels composants dans quel produit), traçabilité des opérations et des opérateurs. En cas de problème qualité, vous savez exactement quels produits finis sont concernés. En cas de réclamation client, vous remontez jusqu'aux composants utilisés.",
+      "transformation_story": {
+        "intro": "Chaque lot produit a son histoire traçable. Des matières premières au client, vous savez tout ce qui s'est passé.",
+        "deep_narrative": "La Traçabilité Lots transforme votre capacité de réaction. Les rappels sont ciblés précisément. Les réclamations sont analysées avec les données. La conformité réglementaire est assurée. La responsabilité est documentée. La confiance client est renforcée.",
+        "business_impact": "L'impact sur la gestion des risques est majeur : réduction de 90% du périmètre des rappels potentiels, conformité aux exigences de traçabilité sectorielles, et résolution accélérée des réclamations."
+      }
+    },
+
+    "mfg-maintenance": {
+      "name": "GMAO",
+      "tagline": "Équipements toujours disponibles",
+      "description_short": "Maintenance préventive et curative des équipements de production.",
+      "description_full": "Le module GMAO (Gestion de Maintenance Assistée par Ordinateur) maximise la disponibilité de vos équipements. Planification des maintenances préventives basées sur le temps ou l'utilisation, gestion des interventions curatives, stock de pièces détachées, historique complet par équipement, analyse des pannes récurrentes. Vos machines sont maintenues optimalement pour produire sans interruption imprévue.",
+      "transformation_story": {
+        "intro": "Vos équipements sont maintenus proactivement. Les pannes sont anticipées. La disponibilité est maximale.",
+        "deep_narrative": "La GMAO transforme votre maintenance industrielle. Les préventifs sont planifiés intelligemment. Les interventions sont documentées. Les pannes récurrentes sont éliminées. Le stock de pièces est optimisé. La disponibilité des équipements augmente significativement.",
+        "business_impact": "L'impact sur la disponibilité est direct : augmentation de 20% de la disponibilité machine, réduction de 30% des coûts de maintenance, et élimination des arrêts de production imprévus."
+      }
+    },
+
+    "mfg-bom": {
+      "name": "Nomenclatures",
+      "tagline": "La recette de chaque produit",
+      "description_short": "Gestion des nomenclatures produits et des gammes de fabrication.",
+      "description_full": "Le module Nomenclatures structure la définition de vos produits. Nomenclatures multi-niveaux avec composants et quantités, variantes et options, gammes de fabrication avec opérations et temps, liens avec les postes de charge et les ressources. La nomenclature est la base de toute l'industrie : coûts, planification, production, qualité. Une nomenclature juste garantit des calculs justes partout.",
+      "transformation_story": {
+        "intro": "Vos produits sont parfaitement définis. Nomenclatures et gammes sont à jour. Les calculs qui en découlent sont fiables.",
+        "deep_narrative": "Les Nomenclatures transforment la maîtrise de vos produits. Les définitions sont centralisées et versionées. Les modifications sont tracées. Les calculs de coûts sont précis. Le MRP fonctionne sur des données justes. L'industrie repose sur des fondations solides.",
+        "business_impact": "L'impact sur la fiabilité est fondamental : calculs de coûts précis à 99%, MRP fiable, et gestion des modifications maîtrisée."
+      }
+    },
+
+    "mfg-costing": {
+      "name": "Prix de Revient",
+      "tagline": "Le vrai coût de chaque produit",
+      "description_short": "Calcul des coûts de production standard et réels.",
+      "description_full": "Le module Prix de Revient calcule le coût réel de vos produits. Coûts standard basés sur les nomenclatures et les temps théoriques, coûts réels issus des consommations et temps déclarés, analyse des écarts entre standard et réel, ventilation par composante (matière, main d'œuvre, machine). Vous savez exactement ce que coûte chaque produit. Les marges sont connues. Les décisions de prix et de make-or-buy sont éclairées.",
+      "transformation_story": {
+        "intro": "Vous connaissez le vrai coût de chaque produit. Les marges ne sont plus des estimations mais des mesures.",
+        "deep_narrative": "Le Prix de Revient transforme votre pilotage économique. Les coûts standard sont calculés automatiquement. Les coûts réels sont mesurés en production. Les écarts sont analysés. Les produits non rentables sont identifiés. Les décisions de prix sont fondées sur des faits.",
+        "business_impact": "L'impact sur la rentabilité est direct : identification des produits non rentables, optimisation des prix de vente, et réduction des coûts par analyse des écarts."
+      }
+    }
+  }
+}

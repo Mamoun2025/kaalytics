@@ -1,0 +1,68 @@
+{
+    "id": "operations-fleet",
+    "name": "Operations & Fleet",
+    "version": "1.0",
+    "description": "Architecture complète pour la gestion de flotte avec suivi GPS, optimisation des routes et maintenance prédictive",
+    "modules": [
+        {
+            "templateId": "ops-fleet",
+            "x": 100,
+            "y": 100
+        },
+        {
+            "templateId": "ops-map",
+            "x": 350,
+            "y": 100
+        },
+        {
+            "templateId": "ops-routes",
+            "x": 600,
+            "y": 100
+        },
+        {
+            "templateId": "ops-maintenance",
+            "x": 100,
+            "y": 280
+        },
+        {
+            "templateId": "integ-iot",
+            "x": 350,
+            "y": 280
+        },
+        {
+            "templateId": "intel-dashboards",
+            "x": 600,
+            "y": 280
+        }
+    ],
+    "connections": [
+        {
+            "from": { "index": 0, "port": "right" },
+            "to": { "index": 1, "port": "left" }
+        },
+        {
+            "from": { "index": 1, "port": "right" },
+            "to": { "index": 2, "port": "left" }
+        },
+        {
+            "from": { "index": 0, "port": "bottom" },
+            "to": { "index": 3, "port": "top" }
+        },
+        {
+            "from": { "index": 3, "port": "right" },
+            "to": { "index": 4, "port": "left" }
+        },
+        {
+            "from": { "index": 4, "port": "top" },
+            "to": { "index": 1, "port": "bottom" }
+        },
+        {
+            "from": { "index": 4, "port": "right" },
+            "to": { "index": 5, "port": "left" }
+        },
+        {
+            "from": { "index": 2, "port": "bottom" },
+            "to": { "index": 5, "port": "top" }
+        }
+    ]
+}

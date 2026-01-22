@@ -1,0 +1,114 @@
+[
+    {
+        "id": "parc",
+        "name": "Parc",
+        "number": "01",
+        "description": "Suivi temps reel de tous vos vehicules et equipements sur une carte interactive",
+        "video": "assets/videos/industrial/industrial-1.mp4",
+        "features": [
+            "Localisation GPS temps reel",
+            "Historique des trajets",
+            "Alertes geofencing",
+            "Statut des vehicules"
+        ],
+        "benefit": "-60% temps de localisation"
+    },
+    {
+        "id": "planning",
+        "name": "Planning",
+        "number": "02",
+        "description": "Timeline visuelle drag & drop pour planifier vos ressources",
+        "video": "assets/videos/industrial/industrial-2.mp4",
+        "features": [
+            "Vue Gantt interactive",
+            "Detection des conflits",
+            "Allocation automatique",
+            "Notifications equipes"
+        ],
+        "benefit": "+35% productivite"
+    },
+    {
+        "id": "maintenance",
+        "name": "Maintenance",
+        "number": "03",
+        "description": "Maintenance preventive intelligente basee sur l'usage reel",
+        "video": "assets/videos/industrial/industrial-3.mp4",
+        "features": [
+            "Alertes predictives",
+            "Historique interventions",
+            "Gestion pieces detachees",
+            "Couts par vehicule"
+        ],
+        "benefit": "-40% couts maintenance"
+    },
+    {
+        "id": "supply",
+        "name": "Supply Chain",
+        "number": "04",
+        "description": "Workflow automatise des achats et gestion des stocks",
+        "video": "assets/videos/industrial/industrial-4.mp4",
+        "features": [
+            "Demandes d'achat auto",
+            "Comparaison fournisseurs",
+            "Suivi commandes",
+            "Inventaire temps reel"
+        ],
+        "benefit": "-30% couts achat"
+    },
+    {
+        "id": "chantiers",
+        "name": "Chantiers",
+        "number": "05",
+        "description": "Suivi projets, budgets et ressources par chantier",
+        "video": "assets/videos/industrial/industrial-5.mp4",
+        "features": [
+            "Budget vs realise",
+            "Avancement physique",
+            "Documents projet",
+            "Reporting client"
+        ],
+        "benefit": "ROI visible par projet"
+    },
+    {
+        "id": "effectif",
+        "name": "Effectif",
+        "number": "06",
+        "description": "Allocation des competences et suivi productivite",
+        "video": "assets/videos/industrial/industrial-6.mp4",
+        "features": [
+            "Matrice competences",
+            "Affectations chantiers",
+            "Certifications",
+            "Planning horaires"
+        ],
+        "benefit": "Meilleure allocation RH"
+    },
+    {
+        "id": "produits",
+        "name": "Produits",
+        "number": "07",
+        "description": "Catalogue pieces detachees et compatibilites machines",
+        "video": "assets/videos/industrial/industrial-7.mp4",
+        "features": [
+            "6000+ references",
+            "Compatibilites auto",
+            "Prix fournisseurs",
+            "Stock minimum"
+        ],
+        "benefit": "Achats optimises"
+    },
+    {
+        "id": "dashboard",
+        "name": "Dashboard",
+        "number": "08",
+        "description": "KPIs en temps reel et rapports automatises",
+        "video": "assets/videos/finance/finance-1.mp4",
+        "features": [
+            "Tableaux de bord",
+            "Alertes seuils",
+            "Export Excel/PDF",
+            "Comparatifs periodes"
+        ],
+        "benefit": "Decisions eclairees"
+    }
+]

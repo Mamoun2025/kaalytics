@@ -1,0 +1,160 @@
+/* ============================================
+   DIMENSIONS RESPONSIVE
+   Media Queries & Mobile Adaptations
+   ============================================ */
+
+/* ---------- Large Tablets / Small Laptops ---------- */
+@media (max-width: 1200px) {
+    :root {
+        --sidebar-width: 300px;
+    }
+}
+
+/* ---------- Tablets ---------- */
+@media (max-width: 1024px) {
+    :root {
+        --sidebar-width: 280px;
+    }
+}
+
+/* ---------- Mobile / Small Tablets ---------- */
+@media (max-width: 768px) {
+    :root {
+        --sidebar-width: 100%;
+        --header-height: 50px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 40vh;
+        top: auto;
+        bottom: 0;
+        border-right: none;
+        border-top: 1px solid var(--border-subtle);
+    }
+
+    .workspace {
+        left: 0;
+        bottom: 40vh;
+    }
+
+    .dimensions-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .dimension-group {
+        flex: 1 1 calc(50% - 4px);
+        min-width: 140px;
+    }
+
+    .zoom-controls {
+        left: 20px;
+        bottom: calc(40vh + 20px);
+    }
+
+    .shortcut-hint {
+        display: none;
+    }
+
+    /* Right panel hidden on mobile (handled in right-panel.css) */
+
+    .info-panel {
+        bottom: calc(40vh + 20px);
+        left: auto;
+        right: 10px;
+    }
+
+    .header-actions {
+        gap: 8px;
+    }
+
+    .btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+/* ---------- Small Phones ---------- */
+@media (max-width: 480px) {
+    .header {
+        padding: 0 12px;
+    }
+
+    .logo-text {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 8px 10px;
+    }
+
+    .btn svg {
+        display: none;
+    }
+
+    .dimension-group {
+        flex: 1 1 100%;
+    }
+}
+
+/* ---------- Landscape Mobile ---------- */
+@media (max-height: 500px) and (orientation: landscape) {
+    .sidebar {
+        height: 100vh;
+        width: 250px;
+        top: var(--header-height);
+        bottom: 0;
+        border-top: none;
+        border-right: 1px solid var(--border-subtle);
+    }
+
+    .workspace {
+        left: 250px;
+        bottom: 0;
+    }
+
+    .zoom-controls {
+        left: 270px;
+        bottom: 20px;
+    }
+}
+
+/* ---------- High DPI Displays ---------- */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .workspace-grid {
+        background-size: 80px 80px;
+    }
+}
+
+/* ---------- Reduced Motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ---------- Print Styles ---------- */
+@media print {
+    .sidebar,
+    .header,
+    .zoom-controls,
+    .shortcut-hint,
+    .info-panel,
+    .right-panel {
+        display: none !important;
+    }
+
+    .workspace {
+        position: static;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+    }
+}

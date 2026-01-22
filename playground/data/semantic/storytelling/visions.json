@@ -1,0 +1,204 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Strategic visions and orientations for recommendations"
+  },
+
+  "visions": {
+    "terrain": {
+      "id": "terrain",
+      "name": "Vision Terrain",
+      "icon": "🗺️",
+      "color": "#3b82f6",
+      "description": "Maîtrise des opérations physiques",
+      "tagline": "Chaque actif visible, chaque mouvement optimisé",
+      "core_modules": ["ops-map", "ops-fleet", "ops-routes", "ops-maintenance", "integ-iot"],
+      "expansion_modules": ["ops-sites", "ops-machines", "ops-field", "ops-weather", "ops-scheduling"],
+      "key_benefits": [
+        "Visibilité temps réel sur 100% des actifs",
+        "Réduction de 40% des temps de recherche",
+        "Maintenance prédictive activée"
+      ],
+      "ideal_for": ["Transport", "Logistique", "BTP", "Services terrain"]
+    },
+    "revenue": {
+      "id": "revenue",
+      "name": "Vision Revenue",
+      "icon": "💰",
+      "color": "#10b981",
+      "description": "Maximisation du chiffre d'affaires",
+      "tagline": "Chaque opportunité captée, chaque euro optimisé",
+      "core_modules": ["growth-crm", "growth-pipeline", "growth-scoring", "intel-forecast", "intel-margins"],
+      "expansion_modules": ["growth-quotes", "intel-cashflow", "intel-banks", "engage-campaigns"],
+      "key_benefits": [
+        "Pipeline commercial transparent",
+        "Prévisions à 95% de fiabilité",
+        "Rentabilité par client visible"
+      ],
+      "ideal_for": ["Commerce B2B", "Services", "Conseil", "Industrie"]
+    },
+    "client": {
+      "id": "client",
+      "name": "Vision Client",
+      "icon": "👥",
+      "color": "#f59e0b",
+      "description": "Excellence de l'expérience client",
+      "tagline": "Chaque client compris, chaque interaction personnalisée",
+      "core_modules": ["growth-insights", "growth-whatsapp", "engage-campaigns", "growth-churn", "brand-web"],
+      "expansion_modules": ["growth-crm", "engage-email", "engage-social", "growth-followup"],
+      "key_benefits": [
+        "Vue 360° sur chaque client",
+        "Disponibilité 24/7 via WhatsApp",
+        "Prédiction du churn 30 jours avant"
+      ],
+      "ideal_for": ["Retail", "E-commerce", "Services B2C", "Hôtellerie"]
+    },
+    "efficiency": {
+      "id": "efficiency",
+      "name": "Vision Efficacité",
+      "icon": "⚡",
+      "color": "#ec4899",
+      "description": "Optimisation des processus internes",
+      "tagline": "Chaque processus fluide, chaque ressource optimisée",
+      "core_modules": ["ops-scheduling", "intel-reports", "ent-erp", "integ-sync", "ops-kpi"],
+      "expansion_modules": ["ent-hr", "ent-project", "ent-docs", "integ-universal"],
+      "key_benefits": [
+        "Automatisation des tâches répétitives",
+        "Reporting automatique",
+        "Coordination équipes fluide"
+      ],
+      "ideal_for": ["PME en croissance", "Entreprises multi-sites", "Industries"]
+    },
+    "security": {
+      "id": "security",
+      "name": "Vision Sécurité",
+      "icon": "🛡️",
+      "color": "#ef4444",
+      "description": "Protection des actifs numériques",
+      "tagline": "Chaque donnée protégée, chaque accès contrôlé",
+      "core_modules": ["sec-detect", "sec-response", "sec-backup", "sec-encrypt", "sec-compliance"],
+      "expansion_modules": ["sec-audit", "sec-access", "sec-pentest", "integ-monitor"],
+      "key_benefits": [
+        "Détection des menaces en temps réel",
+        "Conformité RGPD assurée",
+        "Récupération garantie en cas de sinistre"
+      ],
+      "ideal_for": ["Finance", "Santé", "Juridique", "Données sensibles"]
+    },
+    "data": {
+      "id": "data",
+      "name": "Vision Data",
+      "icon": "📊",
+      "color": "#8b5cf6",
+      "description": "Intelligence par les données",
+      "tagline": "Chaque donnée analysée, chaque décision éclairée",
+      "core_modules": ["intel-ml", "intel-dashboards", "intel-alerts", "integ-etl", "engage-analytics"],
+      "expansion_modules": ["intel-forecast", "intel-reports", "intel-margins", "engage-ab"],
+      "key_benefits": [
+        "Prédictions IA opérationnelles",
+        "Dashboards temps réel",
+        "Anomalies détectées automatiquement"
+      ],
+      "ideal_for": ["Tech", "Finance", "Marketing", "Entreprises data-driven"]
+    },
+    "chantiers": {
+      "id": "chantiers",
+      "name": "Vision Chantiers",
+      "icon": "🏗️",
+      "color": "#78716c",
+      "description": "Maîtrise complète des chantiers",
+      "tagline": "Chaque chantier sous contrôle, chaque machine optimisée",
+      "core_modules": ["ops-sites", "ops-machines", "ops-field", "ops-weather", "ops-scheduling"],
+      "expansion_modules": ["ops-maintenance", "ent-project", "sec-compliance", "ops-alerts"],
+      "key_benefits": [
+        "Visibilité 100% sur tous les chantiers",
+        "Planning machines optimisé",
+        "Traçabilité terrain complète"
+      ],
+      "ideal_for": ["BTP", "Travaux publics", "Génie civil", "Construction"]
+    }
+  },
+
+  "vision_detection_rules": {
+    "min_modules_for_detection": 2,
+    "scoring": {
+      "core_module_weight": 2,
+      "expansion_module_weight": 1
+    }
+  },
+
+  "recommendation_reasons": {
+    "ops-fleet": {
+      "ops-map": "Visualisez chaque véhicule sur carte en temps réel",
+      "ops-routes": "Optimisez les trajets selon positions réelles",
+      "ops-maintenance": "Planifiez la maintenance selon l'usage réel"
+    },
+    "ops-map": {
+      "ops-fleet": "Suivez votre flotte sur la carte interactive",
+      "integ-iot": "Connectez capteurs et équipements terrain",
+      "ops-routes": "Visualisez et optimisez les itinéraires"
+    },
+    "ops-sites": {
+      "ops-machines": "Affectez les machines à chaque chantier",
+      "ops-field": "Rapports terrain liés aux chantiers",
+      "ops-scheduling": "Planifiez les équipes par site",
+      "ent-project": "Gérez les chantiers comme des projets"
+    },
+    "ops-machines": {
+      "ops-maintenance": "Maintenance préventive des engins",
+      "ops-sites": "Machines déployées par chantier",
+      "integ-iot": "Télémétrie en temps réel",
+      "ops-fleet": "Vision unifiée véhicules + machines"
+    },
+    "ops-field": {
+      "ops-sites": "Documentez l'avancement des chantiers",
+      "ops-alerts": "Alertes basées sur les observations terrain",
+      "sec-compliance": "Preuves de conformité depuis le terrain"
+    },
+    "ops-weather": {
+      "ops-sites": "Anticipez l'impact météo sur les chantiers",
+      "ops-scheduling": "Ajustez le planning selon les prévisions",
+      "ops-routes": "Adaptez les trajets aux conditions"
+    },
+    "growth-crm": {
+      "growth-scoring": "Priorisez automatiquement vos prospects",
+      "growth-pipeline": "Suivez chaque opportunité jusqu'à signature",
+      "growth-insights": "Connaissance client à 360°"
+    },
+    "growth-pipeline": {
+      "growth-crm": "Alimentez le pipeline depuis le CRM",
+      "growth-quotes": "Devis rapides pour accélérer les deals",
+      "intel-forecast": "Prévisions basées sur pipeline réel"
+    },
+    "intel-banks": {
+      "intel-cashflow": "Suivez les flux en temps réel",
+      "intel-forecast": "Prévisions trésorerie précises",
+      "ent-erp": "Réconciliation automatique"
+    },
+    "intel-ml": {
+      "intel-forecast": "Prédictions alimentées par l'IA",
+      "intel-alerts": "Détection d'anomalies intelligente",
+      "growth-scoring": "Scoring leads par machine learning"
+    },
+    "sec-detect": {
+      "sec-response": "Réponse automatique aux menaces détectées",
+      "sec-audit": "Traçabilité complète des incidents",
+      "intel-alerts": "Alertes unifiées sécurité + business"
+    },
+    "ent-erp": {
+      "intel-reports": "Rapports automatiques depuis l'ERP",
+      "integ-universal": "Connectez tous vos outils",
+      "ent-hr": "Gestion RH intégrée"
+    },
+    "brand-identity": {
+      "brand-web": "Site cohérent avec votre identité",
+      "brand-docs": "Documents à votre image",
+      "brand-system": "Cohérence sur tous les supports"
+    },
+    "engage-campaigns": {
+      "engage-budget": "Optimisez l'allocation automatiquement",
+      "engage-analytics": "Mesurez chaque campagne",
+      "engage-ab": "Testez et améliorez continuellement"
+    }
+  }
+}

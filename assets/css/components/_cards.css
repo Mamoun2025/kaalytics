@@ -1,0 +1,503 @@
+/**
+ * Kaalytics Card Components
+ */
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    transition: all var(--transition-base);
+}
+
+.card:hover {
+    border-color: var(--border-accent);
+    box-shadow: var(--shadow-md);
+}
+
+/* Card with glow effect */
+.card--glow:hover {
+    box-shadow: var(--shadow-glow-emerald);
+}
+
+/* Card header */
+.card__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.card__icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-elevated);
+    border-radius: var(--radius-lg);
+    color: var(--emerald);
+}
+
+.card__icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.card__title {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.card__subtitle {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
+
+/* Card body */
+.card__body {
+    color: var(--text-secondary);
+}
+
+/* Card footer */
+.card__footer {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--border-subtle);
+}
+
+/* Service Card (for homepage grid) */
+.service-card {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+}
+
+.service-card__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity var(--transition-slow);
+}
+
+.service-card:hover .service-card__video {
+    opacity: 1;
+}
+
+.service-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--bg-void) 0%, transparent 60%);
+    z-index: 1;
+}
+
+.service-card__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--space-xl);
+    z-index: 2;
+}
+
+.service-card__icon {
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+}
+
+.service-card__title {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+}
+
+.service-card__description {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
+
+/* Module Card (for FleetOps) */
+.module-card {
+    position: relative;
+    padding: var(--space-lg);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.module-card:hover,
+.module-card.active {
+    background: var(--bg-card);
+    border-color: var(--emerald);
+    transform: translateY(-4px);
+}
+
+.module-card.active {
+    box-shadow: var(--shadow-glow-emerald);
+}
+
+.module-card__icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-elevated);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+    color: var(--emerald);
+}
+
+.module-card__name {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+}
+
+.module-card__description {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    display: none;
+}
+
+.module-card:hover .module-card__description,
+.module-card.active .module-card__description {
+    display: block;
+}
+
+/* Stats Card */
+.stat-card {
+    text-align: center;
+    padding: var(--space-lg);
+}
+
+.stat-card__value {
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    color: var(--emerald);
+    line-height: 1;
+}
+
+.stat-card__label {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    margin-top: var(--space-xs);
+}
+
+/* ========================================
+   ENHANCED CARD VARIANTS
+   ======================================== */
+
+/* Glass Card Effect */
+.card--glass {
+    background: rgba(30, 30, 30, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card--glass:hover {
+    background: rgba(30, 30, 30, 0.8);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Gradient Border Card */
+.card--gradient-border {
+    position: relative;
+    background: var(--bg-card);
+    border: none;
+}
+
+.card--gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, var(--emerald), var(--teal));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card--gradient-border:hover::before {
+    opacity: 1;
+}
+
+/* Color-themed cards */
+.card--emerald .card__icon {
+    color: var(--emerald);
+    background: rgba(16, 185, 129, 0.15);
+}
+
+.card--orange .card__icon {
+    color: var(--orange);
+    background: rgba(249, 115, 22, 0.15);
+}
+
+.card--purple .card__icon {
+    color: var(--purple);
+    background: rgba(139, 92, 246, 0.15);
+}
+
+.card--blue .card__icon {
+    color: var(--blue);
+    background: rgba(59, 130, 246, 0.15);
+}
+
+.card--pink .card__icon {
+    color: var(--pink);
+    background: rgba(236, 72, 153, 0.15);
+}
+
+.card--teal .card__icon {
+    color: var(--teal);
+    background: rgba(13, 148, 136, 0.15);
+}
+
+/* Hover glow variants */
+.card--emerald:hover {
+    box-shadow: 0 20px 40px -15px rgba(16, 185, 129, 0.3);
+    border-color: var(--emerald);
+}
+
+.card--orange:hover {
+    box-shadow: 0 20px 40px -15px rgba(249, 115, 22, 0.3);
+    border-color: var(--orange);
+}
+
+.card--purple:hover {
+    box-shadow: 0 20px 40px -15px rgba(139, 92, 246, 0.3);
+    border-color: var(--purple);
+}
+
+.card--blue:hover {
+    box-shadow: 0 20px 40px -15px rgba(59, 130, 246, 0.3);
+    border-color: var(--blue);
+}
+
+.card--pink:hover {
+    box-shadow: 0 20px 40px -15px rgba(236, 72, 153, 0.3);
+    border-color: var(--pink);
+}
+
+.card--teal:hover {
+    box-shadow: 0 20px 40px -15px rgba(13, 148, 136, 0.3);
+    border-color: var(--teal);
+}
+
+/* ========================================
+   PRICING CARDS
+   ======================================== */
+
+.pricing-card {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-2xl);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+}
+
+.pricing-card--featured {
+    border-color: var(--emerald);
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, var(--bg-card) 100%);
+}
+
+.pricing-card--featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background: var(--gradient-brand);
+}
+
+.pricing-card__badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: var(--space-xs) var(--space-md);
+    background: var(--gradient-brand);
+    border-radius: var(--radius-full);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    color: var(--bg-void);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.pricing-card__name {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: var(--space-sm);
+}
+
+.pricing-card__price {
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+}
+
+.pricing-card__price span {
+    font-size: var(--text-base);
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.pricing-card__description {
+    color: var(--text-muted);
+    margin: var(--space-md) 0 var(--space-xl);
+}
+
+.pricing-card__features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+}
+
+.pricing-card__feature {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+.pricing-card__feature::before {
+    content: '✓';
+    color: var(--emerald);
+    font-weight: 700;
+}
+
+/* ========================================
+   TESTIMONIAL CARDS
+   ======================================== */
+
+.testimonial-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: var(--space-md);
+    left: var(--space-lg);
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--emerald);
+    opacity: 0.3;
+    font-family: Georgia, serif;
+}
+
+.testimonial-card__quote {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-lg);
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-card__author {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.testimonial-card__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-full);
+    object-fit: cover;
+}
+
+.testimonial-card__name {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.testimonial-card__role {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
+
+/* ========================================
+   FEATURE CARDS
+   ======================================== */
+
+.feature-card {
+    position: relative;
+    padding: var(--space-xl);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: var(--gradient-brand);
+    transition: height 0.3s ease;
+}
+
+.feature-card:hover::before {
+    height: 100%;
+}
+
+.feature-card:hover {
+    background: var(--bg-card);
+    border-color: var(--border-accent);
+    transform: translateX(4px);
+}
+
+.feature-card__number {
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    color: var(--emerald);
+    opacity: 0.3;
+    line-height: 1;
+    margin-bottom: var(--space-md);
+}
+
+.feature-card__title {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.feature-card__description {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    line-height: var(--leading-relaxed);
+}

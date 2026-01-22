@@ -1,0 +1,146 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Story chapters for transformation narrative progression"
+  },
+
+  "chapters": {
+    "genesis": {
+      "id": "genesis",
+      "name": "Genèse",
+      "description": "Le début de votre transformation digitale",
+      "threshold": 0,
+      "icon": "🌱",
+      "color": "#6b7280",
+      "headline": "Votre transformation digitale commence ici",
+      "subtext": "Chaque entreprise qui domine son marché a un secret : une architecture digitale cohérente. Construisez la vôtre.",
+      "cta": "Placez votre premier module"
+    },
+    "foundation": {
+      "id": "foundation",
+      "name": "Fondation",
+      "description": "Les premières briques sont posées",
+      "threshold": 1,
+      "icon": "🧱",
+      "color": "#3b82f6",
+      "headline": "Chapitre 1 : Fondation",
+      "subtext": "Les premières briques de votre infrastructure digitale sont posées.",
+      "narrative_templates": [
+        "Premier pilier posé. {module} — le début d'une transformation mesurable.",
+        "Vous avez choisi de commencer par {dimension}. Un choix stratégique."
+      ]
+    },
+    "expansion": {
+      "id": "expansion",
+      "name": "Expansion",
+      "description": "L'architecture prend forme",
+      "threshold": 3,
+      "icon": "📈",
+      "color": "#10b981",
+      "headline": "Chapitre 2 : Expansion",
+      "subtext": "Votre vision s'élargit. Les capacités se multiplient.",
+      "narrative_templates": [
+        "L'architecture prend forme. {count} capacités actives couvrant {dimensions} axes.",
+        "De la fondation à l'expansion. Votre écosystème digital grandit."
+      ]
+    },
+    "integration": {
+      "id": "integration",
+      "name": "Intégration",
+      "description": "Les connexions se multiplient",
+      "threshold": 6,
+      "icon": "🔗",
+      "color": "#f59e0b",
+      "headline": "Chapitre 3 : Intégration",
+      "subtext": "{count} modules actifs. L'heure est aux connexions stratégiques.",
+      "narrative_templates": [
+        "Les modules communiquent. L'information circule librement.",
+        "Synergies activées. Chaque connexion multiplie la valeur."
+      ]
+    },
+    "acceleration": {
+      "id": "acceleration",
+      "name": "Accélération",
+      "description": "L'effet réseau s'active",
+      "threshold": 10,
+      "icon": "🚀",
+      "color": "#ec4899",
+      "headline": "Chapitre 4 : Accélération",
+      "subtext": "Écosystème de {count} capacités. La synergie génère de la valeur.",
+      "narrative_templates": [
+        "L'effet réseau s'active. Chaque ajout amplifie l'ensemble.",
+        "Accélération digitale. Votre entreprise opère à un autre niveau."
+      ]
+    },
+    "transformation": {
+      "id": "transformation",
+      "name": "Transformation",
+      "description": "La transformation est accomplie",
+      "threshold": 15,
+      "icon": "✨",
+      "color": "#8b5cf6",
+      "headline": "Chapitre 5 : Transformation complète",
+      "subtext": "Transformation digitale accomplie. Votre entreprise opère au niveau supérieur.",
+      "narrative_templates": [
+        "Transformation achevée. Votre entreprise est véritablement digitale.",
+        "Du chaos à l'excellence. Votre architecture digitale est mature."
+      ]
+    }
+  },
+
+  "chapter_transitions": {
+    "genesis_to_foundation": {
+      "trigger": "first_module",
+      "celebration": "🎉 Premier pas accompli !",
+      "message": "Vous venez d'initier votre transformation digitale."
+    },
+    "foundation_to_expansion": {
+      "trigger": "module_count_3",
+      "celebration": "📈 Expansion en cours !",
+      "message": "Votre vision s'élargit au-delà d'un seul module."
+    },
+    "expansion_to_integration": {
+      "trigger": "module_count_6",
+      "celebration": "🔗 Phase d'intégration !",
+      "message": "Il est temps de connecter vos modules pour créer de vraies synergies."
+    },
+    "integration_to_acceleration": {
+      "trigger": "module_count_10",
+      "celebration": "🚀 Accélération activée !",
+      "message": "Votre écosystème atteint une masse critique. L'effet réseau commence."
+    },
+    "acceleration_to_transformation": {
+      "trigger": "module_count_15",
+      "celebration": "✨ Transformation complète !",
+      "message": "Félicitations ! Votre entreprise a accompli sa transformation digitale."
+    }
+  },
+
+  "architecture_types": {
+    "focused": {
+      "name": "Fondation",
+      "description": "Concentration sur une dimension",
+      "badge_color": "#6b7280"
+    },
+    "specialized": {
+      "name": "Spécialiste",
+      "description": "Excellence dans une dimension (4+ modules)",
+      "badge_color": "#3b82f6"
+    },
+    "diversified": {
+      "name": "Multi-axes",
+      "description": "Présence dans 3+ dimensions",
+      "badge_color": "#10b981"
+    },
+    "integrated": {
+      "name": "Intégré",
+      "description": "Connexions cross-dimension actives",
+      "badge_color": "#f59e0b"
+    },
+    "ecosystem": {
+      "name": "Écosystème",
+      "description": "4+ dimensions avec 5+ connexions",
+      "badge_color": "#8b5cf6"
+    }
+  }
+}

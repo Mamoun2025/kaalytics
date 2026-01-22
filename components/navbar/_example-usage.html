@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple - Navbar Modulaire | Kaalytics</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles - Chemin depuis components/navbar/ -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<body>
+    <!-- =============================================
+         NAVBAR MODULAIRE
+         Options:
+         - data-navbar="full" ou "simple"
+         - data-navbar-style="transparent" ou "solid"
+         ============================================= -->
+    <div id="navbar-container" data-navbar="full" data-navbar-style="transparent"></div>
+
+    <!-- =============================================
+         CONTENU PAGE
+         ============================================= -->
+    <main style="padding-top: 80px;">
+        <section style="max-width: 800px; margin: 0 auto; padding: 4rem 2rem;">
+            <h1 style="color: var(--text-primary); font-size: 2.5rem; margin-bottom: 1rem;">
+                Exemple d'utilisation Navbar Modulaire
+            </h1>
+
+            <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; margin-bottom: 2rem;">
+                <h2 style="color: var(--emerald); font-size: 1.25rem; margin-bottom: 1rem;">Configuration Actuelle</h2>
+                <pre style="color: var(--text-secondary); font-family: monospace; background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; overflow-x: auto;">
+&lt;div id="navbar-container"
+     data-navbar="full"
+     data-navbar-style="transparent"&gt;
+&lt;/div&gt;
+
+&lt;script src="navbar-loader.js"&gt;&lt;/script&gt;
+                </pre>
+            </div>
+
+            <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; margin-bottom: 2rem;">
+                <h2 style="color: var(--emerald); font-size: 1.25rem; margin-bottom: 1rem;">Variantes Disponibles</h2>
+
+                <h3 style="color: var(--text-primary); margin: 1rem 0 0.5rem;">data-navbar</h3>
+                <ul style="color: var(--text-secondary); line-height: 1.8;">
+                    <li><code style="color: var(--emerald);">full</code> - Navigation complete avec tous les dropdowns</li>
+                    <li><code style="color: var(--emerald);">simple</code> - Navigation simplifiee (liens directs seulement)</li>
+                </ul>
+
+                <h3 style="color: var(--text-primary); margin: 1rem 0 0.5rem;">data-navbar-style</h3>
+                <ul style="color: var(--text-secondary); line-height: 1.8;">
+                    <li><code style="color: var(--emerald);">transparent</code> - Fond transparent, devient solide au scroll</li>
+                    <li><code style="color: var(--emerald);">solid</code> - Fond solide des le depart</li>
+                </ul>
+            </div>
+
+            <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+                <h2 style="color: var(--emerald); font-size: 1.25rem; margin-bottom: 1rem;">Chemins selon niveau page</h2>
+
+                <table style="width: 100%; color: var(--text-secondary); border-collapse: collapse;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <th style="text-align: left; padding: 0.75rem; color: var(--text-primary);">Page</th>
+                            <th style="text-align: left; padding: 0.75rem; color: var(--text-primary);">Chemin script</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--border-subtle);">
+                            <td style="padding: 0.75rem;"><code>index.html</code> (racine)</td>
+                            <td style="padding: 0.75rem;"><code style="color: var(--emerald);">components/navbar/navbar-loader.js</code></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-subtle);">
+                            <td style="padding: 0.75rem;"><code>blog/index.html</code></td>
+                            <td style="padding: 0.75rem;"><code style="color: var(--emerald);">../components/navbar/navbar-loader.js</code></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-subtle);">
+                            <td style="padding: 0.75rem;"><code>products/fleetops.html</code></td>
+                            <td style="padding: 0.75rem;"><code style="color: var(--emerald);">../components/navbar/navbar-loader.js</code></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem;"><code>industries/btp.html</code></td>
+                            <td style="padding: 0.75rem;"><code style="color: var(--emerald);">../components/navbar/navbar-loader.js</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Spacer pour tester le scroll -->
+            <div style="height: 100vh; display: flex; align-items: center; justify-content: center;">
+                <p style="color: var(--text-muted);">Scrollez pour voir la navbar changer</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- =============================================
+         SCRIPTS
+         ============================================= -->
+    <!-- i18n (optionnel mais recommande) -->
+    <script src="../../assets/js/i18n/i18n.js"></script>
+
+    <!-- Navbar Loader - Chemin depuis components/navbar/ -->
+    <script src="navbar-loader.js"></script>
+
+    <!-- Event listener exemple -->
+    <script>
+        window.addEventListener('navbarLoaded', (e) => {
+            console.log('Navbar chargee:', e.detail);
+        });
+    </script>
+</body>
+</html>

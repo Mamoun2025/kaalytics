@@ -1,0 +1,251 @@
+{
+  "dimension": "brand",
+  "dimension_name": "Identité & Design",
+  "version": "1.0",
+  "total_connections": 28,
+  "connections": {
+    "brand-identity+brand-web": {
+      "name": "Présence Digitale Cohérente",
+      "tagline": "L'identité prend vie en ligne",
+      "description": "L'identité visuelle se déploie parfaitement sur le site web. Chaque pixel porte votre marque.",
+      "impact": "Cohérence identité-web 100%, reconnaissance immédiate",
+      "narrative_short": "Votre site web respire votre identité de marque à chaque page.",
+      "narrative_full": "Le logo trône en haut de page, les couleurs guident le regard, la typographie porte le message. Le site n'est pas une entité séparée : c'est l'incarnation digitale de votre identité. Les visiteurs reconnaissent votre marque avant même de lire un mot."
+    },
+    "brand-identity+brand-docs": {
+      "name": "Documents de Marque",
+      "tagline": "Chaque page porte votre signature",
+      "description": "L'identité visuelle se décline dans tous vos documents. Cohérence parfaite du logo à la facture.",
+      "impact": "Professionnalisme perçu +60%",
+      "narrative_short": "Vos factures, devis et rapports portent fièrement votre identité.",
+      "narrative_full": "La facture n'est plus un papier administratif froid. Elle porte votre logo, vos couleurs, votre typographie. La proposition commerciale impressionne avant d'être lue. Chaque document devient un rappel de votre professionnalisme et de votre attention aux détails."
+    },
+    "brand-identity+brand-system": {
+      "name": "Identité Systématisée",
+      "tagline": "De l'ADN au manuel",
+      "description": "L'identité visuelle structure le design system complet. Règles et composants alignés.",
+      "impact": "Cohérence garantie par la documentation",
+      "narrative_short": "Votre identité devient un système complet avec règles et composants.",
+      "narrative_full": "Le logo a ses zones de protection documentées. Les couleurs ont leurs codes exacts et usages définis. La typographie a ses hiérarchies établies. L'identité n'est plus une inspiration floue : c'est un système précis que n'importe qui peut appliquer correctement."
+    },
+    "brand-identity+brand-ui": {
+      "name": "Interfaces de Marque",
+      "tagline": "L'identité dans chaque écran",
+      "description": "L'identité visuelle guide le design des interfaces. UX et branding unifiés.",
+      "impact": "Expérience de marque cohérente sur toutes les interfaces",
+      "narrative_short": "Vos applications et interfaces portent votre identité de marque.",
+      "narrative_full": "Les boutons ont vos couleurs. Les icônes suivent votre style. Les transitions reflètent votre personnalité de marque. L'utilisateur reconnaît votre application parmi toutes les autres. L'interface n'est pas générique : elle est vôtre."
+    },
+    "brand-identity+brand-motion": {
+      "name": "Identité Animée",
+      "tagline": "Votre marque en mouvement",
+      "description": "L'identité visuelle prend vie en motion design. Logo animé, transitions de marque.",
+      "impact": "Mémorabilité +80% grâce à l'animation",
+      "narrative_short": "Votre logo s'anime, vos couleurs dansent, votre marque vit.",
+      "narrative_full": "Le logo ne reste plus figé. Il s'anime avec élégance pour captiver. Les couleurs transitionnent en douceur. La personnalité de marque s'exprime en mouvement. L'identité statique devient une expérience dynamique mémorable."
+    },
+    "brand-identity+brand-print": {
+      "name": "Identité Tangible",
+      "tagline": "Votre marque se touche",
+      "description": "L'identité visuelle se déploie sur les supports physiques. Cohérence du digital au tangible.",
+      "impact": "Expérience de marque multicanale unifiée",
+      "narrative_short": "Vos cartes de visite, brochures et signalétique portent votre identité.",
+      "narrative_full": "La carte de visite est premium : papier de qualité, logo en relief, couleurs fidèles. La brochure raconte votre histoire avec vos visuels. La signalétique guide avec vos codes. Le monde physique devient une extension de votre marque digitale."
+    },
+    "brand-identity+brand-social": {
+      "name": "Identité Sociale",
+      "tagline": "Reconnaissable sur chaque feed",
+      "description": "L'identité visuelle s'adapte à chaque réseau social. Cohérence et optimisation.",
+      "impact": "Reconnaissance de marque +70% sur les réseaux",
+      "narrative_short": "Votre identité s'adapte parfaitement à chaque plateforme sociale.",
+      "narrative_full": "Le profil LinkedIn est professionnel mais reste vous. Le feed Instagram respire vos couleurs. Les stories ont votre style. Chaque plateforme a ses codes, mais votre marque reste reconnaissable au premier coup d'œil sur toutes."
+    },
+    "brand-web+brand-docs": {
+      "name": "Digital Cohérent",
+      "tagline": "Site et documents alignés",
+      "description": "Le site web et les documents partagent le même langage visuel. Expérience unifiée.",
+      "impact": "Cohérence digitale complète",
+      "narrative_short": "Votre site et vos documents partagent le même ADN visuel.",
+      "narrative_full": "Le prospect visite votre site, puis reçoit une proposition. Mêmes couleurs, même qualité, même impression. Il n'y a pas de rupture d'expérience. Le professionnalisme du site se prolonge dans chaque document qu'il reçoit."
+    },
+    "brand-web+brand-system": {
+      "name": "Site Systématisé",
+      "tagline": "Composants web documentés",
+      "description": "Le site utilise les composants du design system. Maintenance et évolution simplifiées.",
+      "impact": "Maintenance web -50%, évolutions 2x plus rapides",
+      "narrative_short": "Votre site utilise les composants standards du design system.",
+      "narrative_full": "Besoin d'une nouvelle page ? Les composants sont prêts. Un bouton ? Standardisé. Un formulaire ? Documenté. Le site n'est plus une œuvre d'art unique et fragile : c'est un assemblage de composants réutilisables. L'évolution devient simple."
+    },
+    "brand-web+brand-ui": {
+      "name": "Site User-Centric",
+      "tagline": "Beauté et usabilité",
+      "description": "Le site bénéficie d'un design UI/UX professionnel. Conversion et satisfaction maximales.",
+      "impact": "Conversion site +45%, satisfaction +60%",
+      "narrative_short": "Votre site marie beauté visuelle et expérience utilisateur optimale.",
+      "narrative_full": "Le site n'est pas juste beau : il fonctionne. Les parcours sont fluides, les actions sont claires, les formulaires sont simples. L'utilisateur accomplit ses objectifs avec plaisir. La beauté et l'usabilité ne sont plus en opposition."
+    },
+    "brand-web+brand-motion": {
+      "name": "Site Animé",
+      "tagline": "Une expérience vivante",
+      "description": "Le site intègre des animations et interactions dynamiques. Engagement et mémorabilité.",
+      "impact": "Temps sur site +60%, taux de rebond -30%",
+      "narrative_short": "Votre site s'anime subtilement pour une expérience mémorable.",
+      "narrative_full": "Les éléments apparaissent en douceur au scroll. Les hover révèlent des détails. Les transitions guident le regard. Le site n'est plus une page statique : c'est une expérience interactive qui retient l'attention et marque les esprits."
+    },
+    "brand-web+brand-print": {
+      "name": "Présence Complète",
+      "tagline": "Digital et physique alignés",
+      "description": "Le site web et les supports print partagent le même langage. Omnicanalité visuelle.",
+      "impact": "Cohérence de marque online/offline",
+      "narrative_short": "Votre site et vos supports imprimés parlent le même langage.",
+      "narrative_full": "Le visiteur du salon scanne votre carte de visite et arrive sur le site. Mêmes couleurs, même style, même qualité. Il n'y a pas de déconnexion entre le tangible et le digital. L'expérience de marque est fluide du papier à l'écran."
+    },
+    "brand-web+brand-social": {
+      "name": "Écosystème Digital",
+      "tagline": "Site et réseaux connectés",
+      "description": "Le site web et les réseaux sociaux forment un écosystème cohérent. Trafic bidirectionnel.",
+      "impact": "Trafic social vers site +80%",
+      "narrative_short": "Votre site et vos réseaux sociaux forment un écosystème unifié.",
+      "narrative_full": "Les posts sociaux renvoient vers le site. Le site invite à suivre sur les réseaux. Les visuels sont cohérents, le ton est aligné. L'utilisateur navigue de l'un à l'autre sans friction, dans une expérience de marque continue."
+    },
+    "brand-docs+brand-system": {
+      "name": "Documents Standards",
+      "tagline": "Templates documentés",
+      "description": "Les documents utilisent les composants du design system. Création rapide et cohérente.",
+      "impact": "Création de documents -60%, cohérence 100%",
+      "narrative_short": "Vos documents utilisent les templates standardisés du design system.",
+      "narrative_full": "Besoin d'un nouveau type de document ? Les composants sont là : en-tête, pieds de page, tableaux, graphiques. Assembler un document devient un jeu de construction. La cohérence est automatique, la création est rapide."
+    },
+    "brand-docs+brand-ui": {
+      "name": "Documents Ergonomiques",
+      "tagline": "Des documents qui se lisent bien",
+      "description": "Les documents bénéficient des principes UX. Lisibilité et clarté optimales.",
+      "impact": "Compréhension des documents +40%",
+      "narrative_short": "Vos documents sont conçus pour être lus et compris facilement.",
+      "narrative_full": "Les principes UX s'appliquent aussi aux documents. Hiérarchie visuelle claire, espaces de respiration, call-to-action évidents. Le rapport de 50 pages se lit sans effort. La proposition commerciale guide vers l'action."
+    },
+    "brand-docs+brand-print": {
+      "name": "Documents Imprimables",
+      "tagline": "Du screen au papier, parfait",
+      "description": "Les documents sont optimisés pour l'impression. Rendu parfait sur papier.",
+      "impact": "Qualité d'impression garantie",
+      "narrative_short": "Vos documents s'impriment aussi bien qu'ils s'affichent.",
+      "narrative_full": "Le document conçu à l'écran s'imprime parfaitement. Les couleurs sont en CMJN, les marges sont adaptées, la résolution est optimale. Le client qui imprime la proposition voit la même qualité que sur écran."
+    },
+    "brand-docs+brand-social": {
+      "name": "Contenu Cross-Format",
+      "tagline": "Du document au post",
+      "description": "Les documents se déclinent en contenus sociaux. Réutilisation intelligente.",
+      "impact": "Production de contenu simplifiée",
+      "narrative_short": "Vos documents se transforment en contenus sociaux partageables.",
+      "narrative_full": "Le rapport devient une infographie LinkedIn. L'étude de cas devient un carousel Instagram. Les chiffres clés deviennent des posts impactants. Chaque document produit alimente aussi la présence sociale."
+    },
+    "brand-system+brand-ui": {
+      "name": "UI Systématisée",
+      "tagline": "Composants UI standards",
+      "description": "Le design system fournit les composants UI. Rapidité et cohérence de développement.",
+      "impact": "Développement UI -70%, bugs design éliminés",
+      "narrative_short": "Votre design system fournit tous les composants UI standardisés.",
+      "narrative_full": "Le développeur a besoin d'un bouton ? Il est dans le system, avec ses états, ses variantes, son code. Un modal ? Documenté. Un formulaire ? Prêt à l'emploi. L'UI se construit comme un Lego, rapidement et sans erreurs."
+    },
+    "brand-system+brand-motion": {
+      "name": "Motion Guidelines",
+      "tagline": "Animations standardisées",
+      "description": "Le design system inclut les règles d'animation. Cohérence du mouvement.",
+      "impact": "Animations cohérentes sur tous les supports",
+      "narrative_short": "Votre design system définit les règles d'animation.",
+      "narrative_full": "La vitesse des transitions est définie. Les courbes d'easing sont standardisées. Les micro-interactions ont leurs patterns. L'animation n'est plus subjective : elle suit des règles qui garantissent la cohérence partout."
+    },
+    "brand-system+brand-print": {
+      "name": "Print Guidelines",
+      "tagline": "Règles d'impression",
+      "description": "Le design system couvre les spécifications print. Qualité garantie sur papier.",
+      "impact": "Qualité print constante",
+      "narrative_short": "Votre design system inclut les règles pour l'impression.",
+      "narrative_full": "Les couleurs ont leurs équivalents CMJN. Les zones de sécurité sont définies. Les formats standards sont documentés. L'imprimeur reçoit des fichiers conformes. La qualité est constante d'un tirage à l'autre."
+    },
+    "brand-system+brand-social": {
+      "name": "Social Guidelines",
+      "tagline": "Templates sociaux standards",
+      "description": "Le design system fournit les templates pour chaque réseau. Production sociale rapide.",
+      "impact": "Production sociale -60%, cohérence garantie",
+      "narrative_short": "Votre design system fournit les templates pour chaque plateforme sociale.",
+      "narrative_full": "Template LinkedIn : format, zones de texte, placement du logo définis. Template Instagram : grille respectée, filtres autorisés listés. Le community manager n'invente pas : il applique. La cohérence est automatique."
+    },
+    "brand-ui+brand-motion": {
+      "name": "UI Animée",
+      "tagline": "Des interfaces qui vivent",
+      "description": "L'UI intègre des animations fonctionnelles. Feedback et guidage par le mouvement.",
+      "impact": "Satisfaction UI +50%, compréhension +35%",
+      "narrative_short": "Vos interfaces utilisent les animations pour guider et confirmer.",
+      "narrative_full": "Le bouton réagit au clic avec un feedback subtil. Le chargement a une animation élégante. La transition entre écrans guide le regard. Le mouvement n'est pas décoratif : il améliore l'UX en donnant du feedback et du contexte."
+    },
+    "brand-ui+brand-print": {
+      "name": "Design Cross-Média",
+      "tagline": "UX du screen au papier",
+      "description": "Les principes UI/UX s'appliquent aux supports print. Lisibilité universelle.",
+      "impact": "Expérience utilisateur cohérente tous supports",
+      "narrative_short": "Les principes UX s'appliquent aussi à vos supports imprimés.",
+      "narrative_full": "La hiérarchie visuelle qui fonctionne à l'écran fonctionne sur papier. L'espacement qui améliore la lisibilité digitale améliore la lisibilité print. Les mêmes principes, adaptés au médium. L'expérience est bonne partout."
+    },
+    "brand-ui+brand-social": {
+      "name": "Social User-Friendly",
+      "tagline": "Des posts qui engagent",
+      "description": "Les contenus sociaux bénéficient des principes UX. Clarté et call-to-action optimisés.",
+      "impact": "Engagement social +45%",
+      "narrative_short": "Vos posts sociaux sont conçus avec les principes UX pour maximiser l'engagement.",
+      "narrative_full": "Le post n'est pas juste beau : il est efficace. Le texte est lisible sur mobile. Le CTA est visible. L'information essentielle est immédiate. Les principes UX font la différence entre un post scrollé et un post engagé."
+    },
+    "brand-motion+brand-print": {
+      "name": "Print Augmenté",
+      "tagline": "Le papier prend vie",
+      "description": "Les supports print intègrent des éléments animés via QR codes et AR. Bridge print-digital.",
+      "impact": "Engagement print +80%",
+      "narrative_short": "Vos supports imprimés renvoient vers du contenu animé.",
+      "narrative_full": "La brochure a un QR code qui lance une vidéo. La carte de visite en AR révèle une animation. Le catalogue papier renvoie vers des démos produit. Le print n'est plus statique : c'est une porte vers l'expérience digitale."
+    },
+    "brand-motion+brand-social": {
+      "name": "Social Animé",
+      "tagline": "Des posts qui captent l'œil",
+      "description": "Les contenus sociaux sont animés pour se démarquer dans les feeds. Engagement maximal.",
+      "impact": "Visibilité dans les feeds +150%",
+      "narrative_short": "Vos posts animés se démarquent dans les feeds saturés.",
+      "narrative_full": "Dans un feed de posts statiques, le vôtre bouge. L'œil est attiré, le scroll s'arrête. L'animation raconte en 3 secondes ce qu'un texte mettrait 30 secondes à expliquer. Le motion est l'arme de l'attention sociale."
+    },
+    "brand-print+brand-social": {
+      "name": "Présence Omnicanale",
+      "tagline": "Physique et social unis",
+      "description": "Les supports print et les réseaux sociaux se renforcent mutuellement. Présence complète.",
+      "impact": "Portée de marque démultipliée",
+      "narrative_short": "Vos supports print et sociaux se complètent et se renforcent.",
+      "narrative_full": "La brochure invite à suivre sur Instagram. Le post montre la dernière PLV en situation. Les visuels sont cohérents du kakémono au story. La marque est présente partout, avec le même impact, le même message."
+    }
+  },
+  "multi_connections": {
+    "brand-identity+brand-system+brand-web": {
+      "name": "Marque Digitale Complète",
+      "description": "Identité + System + Web = présence digitale parfaitement cohérente et scalable.",
+      "impact": "Marque digitale professionnelle et maintenable"
+    },
+    "brand-ui+brand-motion+brand-web": {
+      "name": "Expérience Web Premium",
+      "description": "UX + Motion + Web = site d'exception qui convertit et enchante.",
+      "impact": "Site web de niveau agence premium"
+    },
+    "brand-identity+brand-print+brand-social": {
+      "name": "Omniprésence de Marque",
+      "description": "Identité déclinée en print et social = présence de marque partout.",
+      "impact": "Reconnaissance de marque maximale sur tous points de contact"
+    },
+    "brand-system+brand-docs+brand-print": {
+      "name": "Production Cohérente",
+      "description": "System + Docs + Print = production de supports rapide et cohérente.",
+      "impact": "Tout support produit rapidement et parfaitement aligné"
+    },
+    "brand-identity+brand-motion+brand-social": {
+      "name": "Marque Vivante",
+      "description": "Identité + Motion + Social = marque dynamique et engageante sur les réseaux.",
+      "impact": "Présence sociale distinctive et mémorable"
+    }
+  }
+}

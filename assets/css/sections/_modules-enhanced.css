@@ -1,0 +1,276 @@
+/**
+ * Enhanced Modules IA Styles
+ * Couleurs variees par module pour un look plus dynamique
+ */
+
+/* Module color accents by category */
+.module-ia-card[data-title="Operations Excellence"] .module-ia-card__number,
+.module-ia-card[data-title="Operations Excellence"] .module-ia-card__title {
+    color: var(--emerald);
+}
+
+.module-ia-card[data-title="Operations Excellence"]:hover {
+    border-color: var(--emerald);
+    box-shadow: 0 20px 40px -15px rgba(16, 185, 129, 0.3);
+}
+
+.module-ia-card[data-title="Operations Excellence"] .module-ia-card__tag {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--emerald-light);
+}
+
+/* Business Intelligence - Purple */
+.module-ia-card[data-title="Business Intelligence"] .module-ia-card__number,
+.module-ia-card[data-title="Business Intelligence"] .module-ia-card__title {
+    color: var(--purple);
+}
+
+.module-ia-card[data-title="Business Intelligence"]:hover {
+    border-color: var(--purple);
+    box-shadow: 0 20px 40px -15px rgba(139, 92, 246, 0.3);
+}
+
+.module-ia-card[data-title="Business Intelligence"] .module-ia-card__tag {
+    background: rgba(139, 92, 246, 0.15);
+    color: var(--purple-light);
+}
+
+.module-ia-card[data-title="Business Intelligence"] .module-ia-card__desc strong {
+    color: var(--purple) !important;
+}
+
+/* Growth Engine - Orange */
+.module-ia-card[data-title="Growth Engine"] .module-ia-card__number,
+.module-ia-card[data-title="Growth Engine"] .module-ia-card__title {
+    color: var(--orange);
+}
+
+.module-ia-card[data-title="Growth Engine"]:hover {
+    border-color: var(--orange);
+    box-shadow: 0 20px 40px -15px rgba(249, 115, 22, 0.3);
+}
+
+.module-ia-card[data-title="Growth Engine"] .module-ia-card__tag {
+    background: rgba(249, 115, 22, 0.15);
+    color: var(--orange-light);
+}
+
+.module-ia-card[data-title="Growth Engine"] .module-ia-card__desc strong {
+    color: var(--orange) !important;
+}
+
+/* Marketing Automation - Pink */
+.module-ia-card[data-title="Marketing Automation"] .module-ia-card__number,
+.module-ia-card[data-title="Marketing Automation"] .module-ia-card__title {
+    color: var(--pink);
+}
+
+.module-ia-card[data-title="Marketing Automation"]:hover {
+    border-color: var(--pink);
+    box-shadow: 0 20px 40px -15px rgba(236, 72, 153, 0.3);
+}
+
+.module-ia-card[data-title="Marketing Automation"] .module-ia-card__tag {
+    background: rgba(236, 72, 153, 0.15);
+    color: var(--pink-light);
+}
+
+.module-ia-card[data-title="Marketing Automation"] .module-ia-card__desc strong {
+    color: var(--pink) !important;
+}
+
+/* Brand & Experience - Blue */
+.module-ia-card[data-title="Brand & Experience"] .module-ia-card__number,
+.module-ia-card[data-title="Brand & Experience"] .module-ia-card__title {
+    color: var(--blue);
+}
+
+.module-ia-card[data-title="Brand & Experience"]:hover {
+    border-color: var(--blue);
+    box-shadow: 0 20px 40px -15px rgba(59, 130, 246, 0.3);
+}
+
+.module-ia-card[data-title="Brand & Experience"] .module-ia-card__tag {
+    background: rgba(59, 130, 246, 0.15);
+    color: var(--blue-light);
+}
+
+.module-ia-card[data-title="Brand & Experience"] .module-ia-card__desc strong {
+    color: var(--blue) !important;
+}
+
+/* System Integration - Teal */
+.module-ia-card[data-title="System Integration"] .module-ia-card__number,
+.module-ia-card[data-title="System Integration"] .module-ia-card__title {
+    color: var(--teal);
+}
+
+.module-ia-card[data-title="System Integration"]:hover {
+    border-color: var(--teal);
+    box-shadow: 0 20px 40px -15px rgba(13, 148, 136, 0.3);
+}
+
+.module-ia-card[data-title="System Integration"] .module-ia-card__tag {
+    background: rgba(13, 148, 136, 0.15);
+    color: var(--teal-light);
+}
+
+.module-ia-card[data-title="System Integration"] .module-ia-card__desc strong {
+    color: var(--teal) !important;
+}
+
+/* Digital Defense - Red accent */
+.module-ia-card[data-title="Digital Defense"] .module-ia-card__number,
+.module-ia-card[data-title="Digital Defense"] .module-ia-card__title {
+    color: #ef4444;
+}
+
+.module-ia-card[data-title="Digital Defense"]:hover {
+    border-color: #ef4444;
+    box-shadow: 0 20px 40px -15px rgba(239, 68, 68, 0.3);
+}
+
+.module-ia-card[data-title="Digital Defense"] .module-ia-card__tag {
+    background: rgba(239, 68, 68, 0.15);
+    color: #fca5a5;
+}
+
+.module-ia-card[data-title="Digital Defense"] .module-ia-card__desc strong {
+    color: #ef4444 !important;
+}
+
+/* Enterprise Platform - Gold */
+.module-ia-card[data-title="Enterprise Platform"] .module-ia-card__number,
+.module-ia-card[data-title="Enterprise Platform"] .module-ia-card__title {
+    color: #fbbf24;
+}
+
+.module-ia-card[data-title="Enterprise Platform"]:hover {
+    border-color: #fbbf24;
+    box-shadow: 0 20px 40px -15px rgba(251, 191, 36, 0.3);
+}
+
+.module-ia-card[data-title="Enterprise Platform"] .module-ia-card__tag {
+    background: rgba(251, 191, 36, 0.15);
+    color: #fde68a;
+}
+
+.module-ia-card[data-title="Enterprise Platform"] .module-ia-card__desc strong {
+    color: #fbbf24 !important;
+}
+
+/* Enhanced play button per module */
+.module-ia-card[data-title="Operations Excellence"] .module-ia-card__play:hover {
+    background: var(--emerald);
+}
+
+.module-ia-card[data-title="Business Intelligence"] .module-ia-card__play:hover {
+    background: var(--purple);
+}
+
+.module-ia-card[data-title="Growth Engine"] .module-ia-card__play:hover {
+    background: var(--orange);
+}
+
+.module-ia-card[data-title="Marketing Automation"] .module-ia-card__play:hover {
+    background: var(--pink);
+}
+
+.module-ia-card[data-title="Brand & Experience"] .module-ia-card__play:hover {
+    background: var(--blue);
+}
+
+.module-ia-card[data-title="System Integration"] .module-ia-card__play:hover {
+    background: var(--teal);
+}
+
+.module-ia-card[data-title="Digital Defense"] .module-ia-card__play:hover {
+    background: #ef4444;
+}
+
+.module-ia-card[data-title="Enterprise Platform"] .module-ia-card__play:hover {
+    background: #fbbf24;
+}
+
+/* Enhanced hover animations */
+.module-ia-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.module-ia-card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+.module-ia-card:hover .module-ia-card__number {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.module-ia-card__number {
+    transition: all 0.3s ease;
+}
+
+/* Stagger animation on scroll */
+.module-ia-card:nth-child(1) { transition-delay: 0s; }
+.module-ia-card:nth-child(2) { transition-delay: 0.05s; }
+.module-ia-card:nth-child(3) { transition-delay: 0.1s; }
+.module-ia-card:nth-child(4) { transition-delay: 0.15s; }
+.module-ia-card:nth-child(5) { transition-delay: 0.2s; }
+.module-ia-card:nth-child(6) { transition-delay: 0.25s; }
+.module-ia-card:nth-child(7) { transition-delay: 0.3s; }
+.module-ia-card:nth-child(8) { transition-delay: 0.35s; }
+
+/* Gradient border effect on hover */
+.module-ia-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, transparent, transparent);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.module-ia-card[data-title="Operations Excellence"]:hover::before {
+    background: linear-gradient(135deg, var(--emerald), var(--teal));
+    opacity: 1;
+}
+
+.module-ia-card[data-title="Business Intelligence"]:hover::before {
+    background: linear-gradient(135deg, var(--purple), var(--blue));
+    opacity: 1;
+}
+
+.module-ia-card[data-title="Growth Engine"]:hover::before {
+    background: linear-gradient(135deg, var(--orange), #fbbf24);
+    opacity: 1;
+}
+
+.module-ia-card[data-title="Marketing Automation"]:hover::before {
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    opacity: 1;
+}
+
+.module-ia-card[data-title="Brand & Experience"]:hover::before {
+    background: linear-gradient(135deg, var(--blue), var(--teal));
+    opacity: 1;
+}
+
+.module-ia-card[data-title="System Integration"]:hover::before {
+    background: linear-gradient(135deg, var(--teal), var(--emerald));
+    opacity: 1;
+}
+
+.module-ia-card[data-title="Digital Defense"]:hover::before {
+    background: linear-gradient(135deg, #ef4444, var(--orange));
+    opacity: 1;
+}
+
+.module-ia-card[data-title="Enterprise Platform"]:hover::before {
+    background: linear-gradient(135deg, #fbbf24, var(--orange));
+    opacity: 1;
+}

@@ -1,0 +1,424 @@
+<!--
+KAALYTICS - Pricing Section Component
+=======================================
+Section pricing modulaire avec toggle mensuel/annuel
+Usage: Inclure via pricing-loader.js
+-->
+
+<section class="section-pricing" id="pricingSection">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="section-pricing__header">
+            <span class="section-pricing__badge" data-i18n="pricing.badge">{{BADGE}}</span>
+            <h2 class="section-pricing__title" data-i18n="pricing.title">{{TITLE}}</h2>
+            <p class="section-pricing__subtitle" data-i18n="pricing.subtitle">{{SUBTITLE}}</p>
+
+            <!-- Billing Toggle -->
+            <div class="section-pricing__toggle">
+                <span class="section-pricing__toggle-label" data-active="true" data-i18n="pricing.monthly">Mensuel</span>
+                <button class="section-pricing__toggle-switch" id="pricingToggle" aria-label="Toggle billing period">
+                    <span class="section-pricing__toggle-slider"></span>
+                </button>
+                <span class="section-pricing__toggle-label" data-i18n="pricing.yearly">Annuel</span>
+                <span class="section-pricing__toggle-badge" data-i18n="pricing.save">-20%</span>
+            </div>
+        </div>
+
+        <!-- Pricing Grid -->
+        <div class="section-pricing__grid" id="pricingGrid">
+            <!-- Plans inserted dynamically -->
+        </div>
+
+        <!-- Enterprise CTA -->
+        <div class="section-pricing__enterprise" data-pricing-full>
+            <div class="section-pricing__enterprise-content">
+                <h3 data-i18n="pricing.enterprise.title">{{ENTERPRISE_TITLE}}</h3>
+                <p data-i18n="pricing.enterprise.desc">{{ENTERPRISE_DESC}}</p>
+            </div>
+            <a href="{{ENTERPRISE_HREF}}" class="btn btn--ghost">
+                <span data-i18n="pricing.enterprise.cta">{{ENTERPRISE_CTA}}</span>
+            </a>
+        </div>
+
+        <!-- Trust Indicators -->
+        <div class="section-pricing__trust" data-pricing-full>
+            <div class="section-pricing__trust-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22,4 12,14.01 9,11.01"/>
+                </svg>
+                <span data-i18n="pricing.trust.trial">{{TRUST_1}}</span>
+            </div>
+            <div class="section-pricing__trust-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+                <span data-i18n="pricing.trust.secure">{{TRUST_2}}</span>
+            </div>
+            <div class="section-pricing__trust-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+                <span data-i18n="pricing.trust.support">{{TRUST_3}}</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CSS Styles -->
+<style>
+.section-pricing {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #0a0f1a 0%, #0f172a 50%, #0a0f1a 100%);
+    position: relative;
+}
+
+.section-pricing__header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+}
+
+.section-pricing__badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 100px;
+    color: #10b981;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.section-pricing__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.section-pricing__subtitle {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Toggle */
+.section-pricing__toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 100px;
+}
+
+.section-pricing__toggle-label {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s ease;
+}
+
+.section-pricing__toggle-label[data-active="true"] {
+    color: #fff;
+    font-weight: 500;
+}
+
+.section-pricing__toggle-switch {
+    width: 48px;
+    height: 26px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+.section-pricing__toggle-switch:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.section-pricing__toggle-slider {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: #10b981;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.section-pricing__toggle-switch.is-yearly .section-pricing__toggle-slider {
+    transform: translateX(22px);
+}
+
+.section-pricing__toggle-badge {
+    padding: 0.25rem 0.5rem;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-radius: 100px;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Grid */
+.section-pricing__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 1024px) {
+    .section-pricing__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Pricing Card */
+.pricing-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-4px);
+}
+
+.pricing-card--featured {
+    background: linear-gradient(180deg, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0.02) 100%);
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.pricing-card--featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #10b981, #06b6d4);
+    border-radius: 20px 20px 0 0;
+}
+
+.pricing-card__badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.375rem 1rem;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-radius: 100px;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.pricing-card__header {
+    text-align: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+.pricing-card__name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-card__description {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 1rem;
+}
+
+.pricing-card__price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.pricing-card__currency {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.pricing-card__amount {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+}
+
+.pricing-card__period {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.pricing-card__features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.pricing-card__feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.625rem 0;
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.pricing-card__feature-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    color: #10b981;
+}
+
+.pricing-card__feature--disabled {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.pricing-card__feature--disabled .pricing-card__feature-icon {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.pricing-card__cta {
+    display: block;
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.pricing-card__cta--primary {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+}
+
+.pricing-card__cta--primary:hover {
+    box-shadow: 0 6px 30px rgba(16, 185, 129, 0.4);
+    transform: translateY(-2px);
+}
+
+.pricing-card__cta--secondary {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.pricing-card__cta--secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Enterprise CTA */
+.section-pricing__enterprise {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 640px) {
+    .section-pricing__enterprise {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.section-pricing__enterprise h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.section-pricing__enterprise p {
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.section-pricing__enterprise .btn {
+    flex-shrink: 0;
+    padding: 0.75rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.section-pricing__enterprise .btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Trust */
+.section-pricing__trust {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.section-pricing__trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.section-pricing__trust-item svg {
+    color: #10b981;
+}
+
+/* Variant: Compact */
+.section-pricing--compact .section-pricing__enterprise,
+.section-pricing--compact .section-pricing__trust {
+    display: none;
+}
+
+/* Variant: Minimal */
+.section-pricing--minimal .section-pricing__toggle,
+.section-pricing--minimal .section-pricing__enterprise,
+.section-pricing--minimal .section-pricing__trust {
+    display: none;
+}
+</style>

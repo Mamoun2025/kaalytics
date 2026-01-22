@@ -1,0 +1,105 @@
+{
+  "_meta": {
+    "version": "3.0",
+    "dimension": "intelligence",
+    "description": "Contenu sémantique ULTRA-RICHE pour la dimension Intelligence Décisionnelle"
+  },
+
+  "modules": {
+    "intel-banks": {
+      "name": "Multi-Banques",
+      "tagline": "Toutes vos banques, une seule vue",
+      "description_short": "Consolidez tous vos comptes bancaires dans un tableau de bord unique et temps réel.",
+      "description_full": "Multi-Banques révolutionne la gestion de votre trésorerie en connectant automatiquement tous vos comptes bancaires — quelle que soit la banque — dans une interface unifiée. Soldes en temps réel, transactions récentes, mouvements prévisionnels : tout est visible d'un coup d'œil. Fini les connexions multiples aux portails bancaires, les exports Excel à réconcilier, les surprises de fin de mois. Vous pilotez votre cash avec la clarté et la réactivité que votre entreprise mérite. Les rapprochements bancaires deviennent automatiques, les anomalies sont détectées instantanément.",
+      "transformation_story": {
+        "intro": "Vous venez de centraliser la vision de toute votre trésorerie. Plus besoin de jongler entre les portails bancaires ou de consolider manuellement des fichiers. Un seul écran vous montre exactement où vous en êtes financièrement, en temps réel, pour toutes vos banques.",
+        "deep_narrative": "Cette consolidation bancaire transforme votre gestion de trésorerie. Les décisions d'allocation de cash se prennent en connaissance de cause. Les découverts évitables disparaissent car vous voyez venir les pics de besoin. Les opportunités de placement court terme émergent car vous identifiez les excédents. La relation avec vos banquiers s'améliore car vous maîtrisez vos positions.",
+        "business_impact": "L'impact sur votre efficacité financière est immédiat : économie de 4 heures par semaine sur les tâches de réconciliation, réduction de 90% des erreurs de saisie, et visibilité temps réel qui permet d'optimiser le coût de votre dette et le rendement de vos placements."
+      }
+    },
+
+    "intel-ml": {
+      "name": "Prédictions IA",
+      "tagline": "Détectez les opportunités avant les autres",
+      "description_short": "L'intelligence artificielle analyse vos données pour prédire tendances et opportunités.",
+      "description_full": "Les Prédictions IA mettent la puissance du machine learning au service de votre stratégie. Les algorithmes analysent vos données historiques — ventes, comportements clients, patterns saisonniers, corrélations cachées — pour générer des prédictions actionnables. Quels produits vont performer le mois prochain ? Quels clients risquent de partir ? Où sont les gisements de croissance inexploités ? L'IA détecte des patterns invisibles à l'analyse humaine et vous donne des semaines d'avance sur vos concurrents.",
+      "transformation_story": {
+        "intro": "L'intelligence artificielle devient votre avantage compétitif. Elle analyse des volumes de données impossibles à traiter humainement et en extrait des insights prédictifs qui éclairent vos décisions stratégiques. Vous ne réagissez plus aux événements, vous les anticipez.",
+        "deep_narrative": "Les Prédictions IA transforment votre approche décisionnelle. Les tendances de marché sont détectées plus tôt. Les anomalies sont signalées avant de devenir des problèmes. Les opportunités cachées dans vos données sont révélées. Chaque décision importante bénéficie d'un éclairage prédictif basé sur l'analyse de patterns historiques.",
+        "business_impact": "Les résultats sont mesurables : détection des opportunités 3 semaines avant la concurrence, amélioration de 40% de la précision des décisions stratégiques, et identification de gisements de valeur inexploités dans vos données existantes."
+      }
+    },
+
+    "intel-reports": {
+      "name": "Rapports Auto",
+      "tagline": "Des rapports qui s'écrivent tout seuls",
+      "description_short": "Génération automatique de rapports d'activité, financiers et de performance.",
+      "description_full": "Les Rapports Auto éliminent le fardeau de la création de reportings. Rapports d'activité hebdomadaires, états financiers mensuels, analyses de performance trimestrielles : tout est généré automatiquement à partir de vos données, formaté professionnellement, et distribué aux bonnes personnes au bon moment. Les commentaires sont pré-rédigés par l'IA, les anomalies sont mises en évidence, les comparatifs avec les périodes précédentes sont automatiques. Vos équipes cessent de produire des rapports pour se concentrer sur leur analyse et leur exploitation.",
+      "transformation_story": {
+        "intro": "La production de rapports cesse d'être une corvée chronophage pour devenir un processus automatisé et fiable. Les rapports arrivent à temps, sont toujours à jour, et ne contiennent plus d'erreurs de copier-coller ou de formule Excel cassée.",
+        "deep_narrative": "Cette automatisation du reporting libère un temps considérable pour l'analyse et l'action. Les managers cessent de passer leur lundi à produire des états pour se concentrer sur leur exploitation. La qualité des rapports s'améliore car ils sont générés de manière cohérente. Les décisions se prennent plus vite car l'information est disponible sans délai.",
+        "business_impact": "Les gains de productivité sont substantiels : économie de 8 heures par semaine par équipe sur la production de rapports, élimination des erreurs de reporting, et accélération du cycle décisionnel grâce à une information toujours fraîche."
+      }
+    },
+
+    "intel-dashboards": {
+      "name": "Tableaux de Bord",
+      "tagline": "Visuels clairs pour décisions rapides",
+      "description_short": "Dashboards interactifs pour direction, managers et investisseurs.",
+      "description_full": "Les Tableaux de Bord transforment vos données en visuels impactants et interactifs. Chaque audience — direction générale, managers opérationnels, investisseurs — dispose de vues adaptées à ses besoins. Les KPIs critiques sont mis en avant, les tendances sont visualisées clairement, les alertes attirent l'attention sur les points d'action. Le drill-down permet d'explorer les détails derrière chaque chiffre. Les dashboards se mettent à jour en temps réel et sont accessibles sur tous les appareils.",
+      "transformation_story": {
+        "intro": "Vos données deviennent enfin lisibles et actionnables. Des visuels clairs remplacent les tableaux indigestes. Chaque décideur accède à l'information dont il a besoin, au niveau de détail approprié, sans perdre de temps à fouiller dans des fichiers.",
+        "deep_narrative": "Les Tableaux de Bord changent la culture de la décision dans votre organisation. Les réunions deviennent plus productives car tout le monde partage la même vision des données. Les problèmes sont identifiés plus vite car les anomalies sont visibles. Les succès sont célébrés car les progrès sont mesurables. La donnée devient un langage commun.",
+        "business_impact": "L'impact sur la prise de décision est majeur : réduction de 60% du temps passé à chercher de l'information, amélioration de la qualité des décisions grâce à une meilleure visibilité, et alignement des équipes autour de métriques partagées."
+      }
+    },
+
+    "intel-cashflow": {
+      "name": "Flux de Trésorerie",
+      "tagline": "Voyez votre cash en mouvement",
+      "description_short": "Suivi temps réel des entrées et sorties de trésorerie avec projections.",
+      "description_full": "Le module Flux de Trésorerie vous donne une visibilité complète sur les mouvements de cash de votre entreprise. Encaissements prévus, décaissements planifiés, position quotidienne projetée : tout est modélisé et visualisé. Les retards de paiement clients sont trackés et leur impact sur le cash est calculé. Les échéances fournisseurs sont planifiées pour optimiser le besoin en fonds de roulement. Vous pilotez votre trésorerie avec la précision d'un horloger, anticipant les pics de besoin et les excédents à placer.",
+      "transformation_story": {
+        "intro": "Le cash-flow de votre entreprise devient prévisible et maîtrisable. Vous savez exactement combien vous aurez sur vos comptes demain, la semaine prochaine, le mois prochain. Les surprises de trésorerie appartiennent au passé.",
+        "deep_narrative": "Cette maîtrise du cash-flow transforme votre agilité financière. Les décisions d'investissement se prennent en connaissance de la capacité réelle. Les négociations fournisseurs s'appuient sur une connaissance précise des échéances. Le recours au découvert devient un choix stratégique, pas une nécessité subie. La croissance peut être financée sereinement.",
+        "business_impact": "Les bénéfices financiers sont concrets : réduction de 50% du besoin en fonds de roulement grâce à une meilleure gestion des échéances, économie sur les frais financiers grâce à l'anticipation, et capacité à saisir les opportunités d'investissement au bon moment."
+      }
+    },
+
+    "intel-margins": {
+      "name": "Analyse Marges",
+      "tagline": "Sachez ce qui rapporte vraiment",
+      "description_short": "Rentabilité détaillée par produit, client, projet et canal.",
+      "description_full": "L'Analyse Marges décompose votre rentabilité avec une granularité inédite. Pour chaque produit, chaque client, chaque projet, chaque canal de vente, vous connaissez la marge réelle — pas la marge théorique du catalogue mais la marge effective après tous les coûts directs et indirects. Les produits ou clients déficitaires sont identifiés. Les gisements de rentabilité inexploités sont révélés. Les décisions de pricing, de mix produit, de sélection client deviennent data-driven et optimisées pour la profitabilité.",
+      "transformation_story": {
+        "intro": "Vous découvrez enfin ce qui rapporte vraiment dans votre activité. Les certitudes intuitives sont confirmées ou infirmées par les données. Les clients que vous pensiez rentables se révèlent parfois déficitaires, et inversement.",
+        "deep_narrative": "Cette analyse de la marge transforme vos décisions stratégiques. Le mix produit évolue vers les références les plus rentables. Les clients à faible marge sont renégociés ou abandonnés. Les canaux performants reçoivent plus de ressources. Chaque décision commerciale intègre désormais la dimension rentabilité.",
+        "business_impact": "L'impact sur votre bottom line est significatif : amélioration de 5 à 15 points de marge globale grâce à l'optimisation du mix, identification et traitement des sources de pertes, et pilotage de la croissance par la rentabilité plutôt que par le volume seul."
+      }
+    },
+
+    "intel-forecast": {
+      "name": "Prévisions",
+      "tagline": "Projections fiables à 95%",
+      "description_short": "Prévisions financières et commerciales basées sur l'IA et les données historiques.",
+      "description_full": "Le module Prévisions génère des projections financières et commerciales d'une fiabilité remarquable. L'IA analyse vos historiques, identifie les patterns saisonniers, intègre les tendances de marché et produit des forecasts à court, moyen et long terme avec intervalles de confiance. Chiffre d'affaires, trésorerie, charges : tout est modélisé. Les scénarios multiples permettent de tester la sensibilité aux hypothèses. Le budget devient un outil de pilotage vivant plutôt qu'un exercice annuel figé.",
+      "transformation_story": {
+        "intro": "Vos prévisions cessent d'être des exercices de fiction pour devenir des projections fiables sur lesquelles bâtir vos décisions. L'incertitude n'est pas éliminée mais elle est quantifiée et encadrée.",
+        "deep_narrative": "Ces prévisions fiables transforment votre planification. Les investissements sont dimensionnés sur des projections crédibles. Les recrutements anticipent les besoins réels. Les négociations avec les partenaires financiers s'appuient sur des données convaincantes. L'entreprise gagne en crédibilité et en sérénité.",
+        "business_impact": "Les gains sont multiples : fiabilité des prévisions supérieure à 95% dans les intervalles de confiance, réduction des écarts budget/réel, et capacité à ajuster la stratégie en continu grâce à des projections actualisées."
+      }
+    },
+
+    "intel-alerts": {
+      "name": "Détection Anomalies",
+      "tagline": "L'IA repère ce qui cloche",
+      "description_short": "Alertes automatiques sur les patterns inhabituels et les écarts significatifs.",
+      "description_full": "La Détection Anomalies met l'intelligence artificielle au service de votre vigilance. Le système apprend les patterns normaux de votre activité et vous alerte instantanément quand quelque chose dévie : transaction inhabituellement élevée, baisse soudaine d'activité sur un segment, écart de marge inexpliqué, comportement client atypique. Chaque alerte est contextualisée avec les données pertinentes pour une analyse rapide. Vous ne découvrez plus les problèmes lors du reporting mensuel mais en temps réel, quand l'intervention est encore possible.",
+      "transformation_story": {
+        "intro": "Un garde du corps algorithmique surveille en permanence vos données et vous alerte dès qu'une anomalie apparaît. Les problèmes ne peuvent plus se cacher dans la masse de données jusqu'au prochain reporting.",
+        "deep_narrative": "Cette vigilance automatisée change votre réactivité. Les fraudes sont détectées plus tôt. Les erreurs sont corrigées avant de se propager. Les opportunités inhabituelles sont saisies plus vite. L'organisation devient proactive plutôt que réactive face aux événements significatifs.",
+        "business_impact": "L'impact sur la maîtrise des risques est considérable : détection des anomalies en temps réel au lieu de semaines après, réduction des pertes liées aux fraudes et erreurs, et amélioration continue des processus grâce à l'identification des dysfonctionnements."
+      }
+    }
+  }
+}

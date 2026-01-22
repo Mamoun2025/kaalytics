@@ -1,0 +1,110 @@
+{
+    "nav": {
+        "services": "Services",
+        "playground": "Playground",
+        "industries": "Industries",
+        "resources": "Resources",
+        "demo": "Free demo"
+    },
+    "hero": {
+        "badge": "In production - 50+ companies transformed",
+        "title1": "AI that transforms",
+        "title2": "African businesses",
+        "description": "From operational chaos to connected excellence. Our AI platform centralizes your data, automates your processes and accelerates your decisions.",
+        "cta1": "Discover",
+        "cta2": "Free demo",
+        "metrics": {
+            "precision": "Accuracy",
+            "time": "Time saved",
+            "response": "Response",
+            "uptime": "Uptime"
+        }
+    },
+    "fleetops": {
+        "badge": "Flagship Product",
+        "title": "FleetOps Pro",
+        "subtitle": "The nervous system of your fleet",
+        "cta": "Request a FleetOps Pro demo",
+        "pricing": "Starting at",
+        "modules": {
+            "parc": {
+                "name": "Fleet",
+                "description": "Real-time tracking of all your vehicles"
+            },
+            "planning": {
+                "name": "Planning",
+                "description": "Visual drag & drop timeline"
+            },
+            "maintenance": {
+                "name": "Maintenance",
+                "description": "Smart preventive maintenance"
+            },
+            "supply": {
+                "name": "Supply Chain",
+                "description": "Purchasing and inventory management"
+            },
+            "chantiers": {
+                "name": "Projects",
+                "description": "Project and budget tracking"
+            },
+            "effectif": {
+                "name": "Staff",
+                "description": "Skills allocation"
+            },
+            "produits": {
+                "name": "Products",
+                "description": "Spare parts catalog"
+            },
+            "dashboard": {
+                "name": "Dashboard",
+                "description": "Real-time KPIs"
+            }
+        }
+    },
+    "playground": {
+        "label": "Interactive Tool",
+        "title": "Build your Digital Architecture",
+        "description": "Visually assemble the AI modules your business needs. Drag & drop, connect, export.",
+        "cta": "Open Playground",
+        "stats": {
+            "dimensions": "Dimensions",
+            "modules": "Modules",
+            "connections": "Connections"
+        }
+    },
+    "services": {
+        "label": "Our Solutions",
+        "title": "AI at the service of your growth"
+    },
+    "socialProof": {
+        "stats": {
+            "companies": "Companies transformed",
+            "satisfaction": "Client satisfaction",
+            "support": "Support available"
+        },
+        "clients": "They trust us"
+    },
+    "cta": {
+        "title": "Free 48H Audit",
+        "description": "Discover the hidden potential of your business. No commitment.",
+        "steps": {
+            "1": "We connect",
+            "2": "We analyze",
+            "3": "You get a report"
+        },
+        "email": "Request my free audit",
+        "whatsapp": "WhatsApp - Instant response"
+    },
+    "footer": {
+        "tagline": "AI that transforms African businesses. Fleet management, automation and business intelligence solutions.",
+        "services": "Services",
+        "industries": "Industries",
+        "company": "Company",
+        "about": "About",
+        "contact": "Contact",
+        "resources": "Resources",
+        "privacy": "Privacy",
+        "terms": "Terms",
+        "copyright": "All rights reserved"
+    }
+}

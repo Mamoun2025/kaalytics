@@ -1,0 +1,259 @@
+{
+  "dimension": "engagement",
+  "dimension_name": "Marketing Automation",
+  "version": "1.0",
+  "total_connections": 28,
+  "connections": {
+    "engage-campaigns+engage-content": {
+      "name": "Campagnes Créatives Infinies",
+      "tagline": "L'IA crée, l'IA diffuse",
+      "description": "Le contenu généré alimente les campagnes IA. Des centaines de variantes testées automatiquement.",
+      "impact": "Nombre de créas testées x50, performance +35%",
+      "narrative_short": "L'IA génère le contenu, l'IA optimise les campagnes. Boucle créative autonome.",
+      "narrative_full": "Le contenu IA produit des dizaines de variantes de titres, de visuels, d'accroches. Les campagnes IA les testent toutes simultanément. Les meilleures émergent naturellement, sont amplifiées, inspirent de nouvelles variantes. Le cycle créatif devient perpétuel et auto-améliorant."
+    },
+    "engage-campaigns+engage-budget": {
+      "name": "Campagnes Auto-Optimisées",
+      "tagline": "Performance et budget en harmonie",
+      "description": "Les campagnes IA et le budget optimisé collaborent. Le budget suit la performance en temps réel.",
+      "impact": "ROI campagnes +60%, gaspillage -80%",
+      "narrative_short": "Les campagnes performantes reçoivent plus de budget automatiquement.",
+      "narrative_full": "Les campagnes IA analysent la performance en temps réel. Le Budget Optimisé réagit instantanément. Une campagne performe ? Son budget augmente. Une autre stagne ? Le budget se réalloue. L'arbitrage est continu, automatique, optimal."
+    },
+    "engage-campaigns+engage-attribution": {
+      "name": "Campagnes Attribuées",
+      "tagline": "Chaque conversion tracée",
+      "description": "L'attribution révèle la vraie contribution de chaque campagne. Évaluation sur la valeur réelle.",
+      "impact": "Fin du last-click, vraie valeur des campagnes révélée",
+      "narrative_short": "Chaque campagne est évaluée sur sa vraie contribution aux conversions.",
+      "narrative_full": "L'attribution multi-touch analyse le parcours complet. Cette campagne awareness a-t-elle généré des conversions ? Oui, elle a initié 40% des parcours qui ont converti. L'évaluation dépasse le simple clic final pour révéler la vraie valeur de chaque action."
+    },
+    "engage-campaigns+engage-email": {
+      "name": "Campagnes Omnicanales",
+      "tagline": "Pub et email synchronisés",
+      "description": "Les campagnes publicitaires et les emails travaillent ensemble. Remarketing coordonné.",
+      "impact": "Taux de conversion +40% via coordination",
+      "narrative_short": "Publicité et email se coordonnent pour maximiser les conversions.",
+      "narrative_full": "Un prospect clique sur une pub mais ne convertit pas ? L'email de relance part automatiquement. Un email non ouvert ? Le prospect voit une pub de rappel. Les deux canaux se renforcent mutuellement dans une chorégraphie parfaite."
+    },
+    "engage-campaigns+engage-social": {
+      "name": "Amplification Sociale",
+      "tagline": "Pub + Social = viralité",
+      "description": "Les campagnes pub et les réseaux sociaux s'amplifient mutuellement. Reach organique + payant.",
+      "impact": "Portée combinée +200%, coût par reach -40%",
+      "narrative_short": "Vos campagnes pub s'amplifient par le social et vice versa.",
+      "narrative_full": "Les campagnes publicitaires génèrent du trafic, les réseaux sociaux créent l'engagement. Un contenu pub qui performe devient un post organique amplifié. Un post viral est boosté en publicité. Les deux canaux créent un effet multiplicateur."
+    },
+    "engage-campaigns+engage-ab": {
+      "name": "Campagnes en Amélioration Continue",
+      "tagline": "Chaque campagne s'améliore",
+      "description": "Les tests A/B optimisent chaque élément de campagne. Performance croissante garantie.",
+      "impact": "Amélioration continue +5% par cycle de test",
+      "narrative_short": "Chaque élément de campagne est testé et optimisé en continu.",
+      "narrative_full": "Titre A vs titre B ? L'IA teste. Visuel X vs visuel Y ? L'IA teste. Audience alpha vs audience beta ? L'IA teste. Chaque test génère un apprentissage, chaque apprentissage améliore la campagne. La performance ne peut que monter."
+    },
+    "engage-campaigns+engage-analytics": {
+      "name": "Pilotage Campagnes Data",
+      "tagline": "Décisions basées sur les données",
+      "description": "Les analytics mesurent chaque aspect des campagnes. Pilotage et optimisation en temps réel.",
+      "impact": "Réactivité temps réel, décisions data-driven",
+      "narrative_short": "Chaque campagne est mesurée et pilotée par les données en temps réel.",
+      "narrative_full": "Le dashboard affiche la performance de chaque campagne en temps réel. Impressions, clics, conversions, ROI : tout est visible. L'anomalie est détectée en minutes, pas en jours. L'optimisation est continue, pas périodique."
+    },
+    "engage-content+engage-budget": {
+      "name": "Contenu Rentabilisé",
+      "tagline": "Le bon contenu, le bon budget",
+      "description": "Le budget s'oriente vers les contenus qui performent. Production créative guidée par le ROI.",
+      "impact": "Investissement créatif optimisé, ROI contenu +45%",
+      "narrative_short": "Le budget identifie et amplifie les contenus les plus performants.",
+      "narrative_full": "L'IA génère des dizaines de contenus. Le Budget Optimisé identifie ceux qui performent. Les gagnants reçoivent plus de diffusion, les perdants sont retirés. La production créative est enfin guidée par les résultats, pas par l'intuition."
+    },
+    "engage-content+engage-attribution": {
+      "name": "Contenu Attribué",
+      "tagline": "Quel contenu convertit vraiment",
+      "description": "L'attribution révèle quels contenus initient et closent les conversions. Création guidée par les données.",
+      "impact": "Stratégie de contenu basée sur l'attribution",
+      "narrative_short": "Vous savez exactement quels contenus génèrent vraiment des conversions.",
+      "narrative_full": "L'attribution trace le parcours complet. Ce post de blog a initié 25% des conversions. Cette vidéo explicative apparaît dans 60% des parcours de conversion. Les insights guident la stratégie de contenu : créer plus de ce qui fonctionne."
+    },
+    "engage-content+engage-email": {
+      "name": "Emails Générés",
+      "tagline": "L'IA rédige vos emails",
+      "description": "Le contenu IA génère les emails marketing. Personnalisation et volume sans effort.",
+      "impact": "Création email x10, personnalisation x100",
+      "narrative_short": "L'IA génère des emails personnalisés pour chaque segment automatiquement.",
+      "narrative_full": "Le contenu généré rédige les emails par segment, par comportement, par préférence. L'email de bienvenue du CEO n'est pas celui du stagiaire. L'email de l'acheteur régulier n'est pas celui du prospect froid. Personnalisation de masse, sans effort."
+    },
+    "engage-content+engage-social": {
+      "name": "Social Content Factory",
+      "tagline": "Des posts à l'infini",
+      "description": "Le contenu IA génère les posts sociaux adaptés à chaque plateforme. Volume et cohérence.",
+      "impact": "Production sociale x20, cohérence de marque garantie",
+      "narrative_short": "L'IA génère des posts optimisés pour chaque plateforme sociale.",
+      "narrative_full": "Un article de blog devient 5 posts LinkedIn, 3 tweets, 2 stories Instagram, 1 TikTok. L'IA adapte le format, le ton, la longueur à chaque plateforme. La présence sociale devient consistante sans multiplier l'effort."
+    },
+    "engage-content+engage-ab": {
+      "name": "Contenu Optimisé",
+      "tagline": "Les meilleures variantes émergent",
+      "description": "L'IA génère les variantes, les tests A/B sélectionnent les gagnantes. Évolution darwinienne du contenu.",
+      "impact": "Qualité de contenu en amélioration continue",
+      "narrative_short": "L'IA génère des variantes, les tests A/B sélectionnent les meilleures.",
+      "narrative_full": "Le contenu IA produit 10 variantes de titre. Les tests A/B les opposent. Le gagnant est déployé. L'IA analyse ce qui a fait gagner et s'en inspire pour la prochaine génération. La qualité du contenu évolue comme une espèce qui s'adapte."
+    },
+    "engage-content+engage-analytics": {
+      "name": "Contenu Mesuré",
+      "tagline": "Chaque contenu prouve sa valeur",
+      "description": "Les analytics mesurent la performance de chaque contenu. ROI créatif quantifié.",
+      "impact": "Chaque contenu prouve son ROI",
+      "narrative_short": "Chaque contenu est mesuré sur son engagement et ses conversions.",
+      "narrative_full": "Ce post a généré 500 clics et 12 conversions. Cette vidéo a 40% de taux de complétion et 8 leads. Chaque contenu a son bilan, ses métriques, son ROI. La stratégie de contenu devient une science, plus un art."
+    },
+    "engage-budget+engage-attribution": {
+      "name": "Budget Attribué",
+      "tagline": "L'argent suit la vraie valeur",
+      "description": "Le budget s'alloue selon l'attribution réelle. Investissement sur ce qui convertit vraiment.",
+      "impact": "Allocation budgétaire basée sur la vraie contribution",
+      "narrative_short": "Le budget s'oriente vers les canaux qui contribuent vraiment aux conversions.",
+      "narrative_full": "L'attribution révèle que le canal A initie 40% des parcours mais reçoit 10% du budget. Le canal B a 50% du budget mais ne contribue qu'au last-click. Le Budget Optimisé rééquilibre : l'argent va vers la vraie valeur."
+    },
+    "engage-budget+engage-email": {
+      "name": "Email Rentabilisé",
+      "tagline": "Investir sur l'email qui rapporte",
+      "description": "Le budget identifie les séquences email les plus rentables. Investissement ciblé.",
+      "impact": "ROI email maximisé par séquence",
+      "narrative_short": "Les séquences email les plus rentables reçoivent plus de ressources.",
+      "narrative_full": "La séquence de bienvenue convertit à 15%, la réactivation à 5%. Le Budget Optimisé recommande : investir dans l'amélioration de la réactivation, amplifier les templates de bienvenue. L'email devient un canal optimisé comme les autres."
+    },
+    "engage-budget+engage-social": {
+      "name": "Social Rentabilisé",
+      "tagline": "Budget social optimisé",
+      "description": "Le budget identifie les réseaux et contenus sociaux les plus performants. Investissement ciblé.",
+      "impact": "ROI social optimisé par plateforme",
+      "narrative_short": "Le budget s'oriente vers les plateformes et contenus sociaux qui performent.",
+      "narrative_full": "LinkedIn génère un ROI de 300%, Instagram de 150%, TikTok de 80%. Le Budget Optimisé réalloue. Mais un contenu viral sur TikTok peut changer la donne en temps réel. L'arbitrage est dynamique, pas figé."
+    },
+    "engage-budget+engage-ab": {
+      "name": "Tests Budgétés",
+      "tagline": "Investir dans l'expérimentation",
+      "description": "Le budget alloue des ressources aux tests A/B. L'apprentissage a son financement.",
+      "impact": "Budget dédié à l'optimisation continue",
+      "narrative_short": "Une partie du budget est dédiée aux expérimentations A/B.",
+      "narrative_full": "10% du budget marketing va aux tests. Pas pour générer du revenu immédiat, mais pour apprendre. Chaque test génère des insights qui améliorent les 90% restants. L'expérimentation devient un investissement, pas un coût."
+    },
+    "engage-budget+engage-analytics": {
+      "name": "Budget Data-Driven",
+      "tagline": "L'argent suit les chiffres",
+      "description": "Les analytics alimentent les décisions budgétaires. Allocation basée sur les métriques.",
+      "impact": "Décisions budgétaires 100% basées sur les données",
+      "narrative_short": "Chaque décision budgétaire est appuyée par des données analytics.",
+      "narrative_full": "Les analytics montrent : le canal X a un CPA de 50€, le canal Y de 120€. Le Budget Optimisé réagit. Mais les analytics montrent aussi que Y a un LTV client 3x supérieur. La décision intègre toutes les dimensions."
+    },
+    "engage-attribution+engage-email": {
+      "name": "Email Attribué",
+      "tagline": "La vraie valeur de l'email",
+      "description": "L'attribution révèle la contribution réelle de l'email dans le parcours de conversion.",
+      "impact": "Contribution email enfin mesurée correctement",
+      "narrative_short": "Vous savez exactement comment l'email contribue aux conversions.",
+      "narrative_full": "L'email n'est jamais le last-click. Mais il apparaît dans 80% des parcours de conversion. L'attribution multi-touch révèle cette contribution cachée. L'email reprend sa place de canal stratégique."
+    },
+    "engage-attribution+engage-social": {
+      "name": "Social Attribué",
+      "tagline": "La vraie valeur du social",
+      "description": "L'attribution mesure la contribution réelle des réseaux sociaux aux conversions.",
+      "impact": "ROI social enfin mesurable au-delà de l'engagement",
+      "narrative_short": "La vraie contribution des réseaux sociaux aux ventes est révélée.",
+      "narrative_full": "Les likes et les shares, c'est bien. Mais combien de conversions ? L'attribution trace le parcours : 30% des acheteurs ont interagi avec le contenu social avant de convertir. Le social n'est plus un centre de coût mais un contributeur prouvé."
+    },
+    "engage-attribution+engage-ab": {
+      "name": "Tests Attribués",
+      "tagline": "Impact réel des tests",
+      "description": "L'attribution mesure l'impact des variantes gagnantes sur les conversions finales.",
+      "impact": "Tests évalués sur leur contribution réelle aux ventes",
+      "narrative_short": "L'impact des tests A/B est mesuré jusqu'à la conversion finale.",
+      "narrative_full": "Le titre B a gagné le test avec +20% de clics. Mais a-t-il généré plus de conversions ? L'attribution révèle que oui : +15% de ventes. Le test est validé non sur la métrique intermédiaire mais sur le résultat final."
+    },
+    "engage-attribution+engage-analytics": {
+      "name": "Analytics Attribués",
+      "tagline": "La vérité complète",
+      "description": "Analytics et attribution fusionnent pour une vision complète du parcours client.",
+      "impact": "Compréhension totale du funnel marketing",
+      "narrative_short": "Analytics et attribution révèlent ensemble le parcours client complet.",
+      "narrative_full": "Les analytics montrent le volume, l'attribution montre le chemin. Ensemble, ils révèlent : combien de personnes, par quel chemin, avec quelle contribution de chaque étape. Le funnel marketing n'a plus de zones d'ombre."
+    },
+    "engage-email+engage-social": {
+      "name": "Email + Social",
+      "tagline": "Deux canaux, une stratégie",
+      "description": "Email et réseaux sociaux se renforcent mutuellement. Cross-promotion intelligente.",
+      "impact": "Portée combinée +150%, engagement cross-canal",
+      "narrative_short": "Email et social se renforcent mutuellement pour maximiser la portée.",
+      "narrative_full": "L'email invite à suivre sur les réseaux. Les réseaux capturent des emails. Les contenus sont adaptés à chaque canal mais alignés stratégiquement. L'audience se construit des deux côtés simultanément."
+    },
+    "engage-email+engage-ab": {
+      "name": "Emails Testés",
+      "tagline": "Chaque email optimisé",
+      "description": "Les tests A/B optimisent chaque aspect des emails. Amélioration continue.",
+      "impact": "Performance email en amélioration constante",
+      "narrative_short": "Chaque email est testé et optimisé en continu.",
+      "narrative_full": "Objet A vs objet B : +15% d'ouverture. CTA rouge vs CTA vert : +8% de clics. Horaire 9h vs 14h : +12% de réponse. Chaque élément est testé, chaque test améliore. Les emails s'optimisent sans cesse."
+    },
+    "engage-email+engage-analytics": {
+      "name": "Email Mesuré",
+      "tagline": "Chaque email prouve sa valeur",
+      "description": "Les analytics mesurent la performance détaillée de chaque email et séquence.",
+      "impact": "ROI email quantifié précisément",
+      "narrative_short": "Chaque email et séquence est mesuré sur son impact réel.",
+      "narrative_full": "La séquence de bienvenue : 45% d'ouverture, 12% de clics, 3% de conversion, 150€ de CA moyen. Le ROI de chaque email est calculé, comparé, optimisé. L'email marketing devient une science exacte."
+    },
+    "engage-social+engage-ab": {
+      "name": "Social Testé",
+      "tagline": "Posts optimisés par les données",
+      "description": "Les tests A/B optimisent les contenus sociaux. Les meilleurs formats émergent.",
+      "impact": "Engagement social en amélioration continue",
+      "narrative_short": "Chaque type de post est testé pour identifier ce qui engage le plus.",
+      "narrative_full": "Vidéo vs image : +40% d'engagement pour la vidéo. Carousel vs post simple : +25% pour le carousel. Question vs affirmation : +60% de commentaires pour la question. Chaque insight guide la production de contenu."
+    },
+    "engage-social+engage-analytics": {
+      "name": "Social Mesuré",
+      "tagline": "Au-delà des likes",
+      "description": "Les analytics mesurent l'impact réel des réseaux sociaux au-delà de l'engagement.",
+      "impact": "ROI social quantifié jusqu'aux ventes",
+      "narrative_short": "L'impact des réseaux sociaux est mesuré jusqu'aux conversions.",
+      "narrative_full": "10K followers, c'est bien. Mais combien de leads ? Combien de ventes ? Les analytics tracent le chemin du like à l'achat. Le social media marketing prouve enfin sa contribution au chiffre d'affaires."
+    },
+    "engage-ab+engage-analytics": {
+      "name": "Tests Analytics",
+      "tagline": "Décisions par les données",
+      "description": "Les analytics fournissent les données, les tests A/B les exploitent. Optimisation scientifique.",
+      "impact": "Chaque décision marketing est testée et validée",
+      "narrative_short": "Les analytics identifient les opportunités, les tests A/B les valident.",
+      "narrative_full": "Les analytics révèlent : le taux de conversion de la page X est faible. Un test A/B est lancé. La variante B améliore de 20%. Déploiement. Les analytics confirment l'amélioration en conditions réelles. La boucle data-test-data est bouclée."
+    }
+  },
+  "multi_connections": {
+    "engage-campaigns+engage-content+engage-ab": {
+      "name": "Machine Créative Autonome",
+      "description": "L'IA génère le contenu, les campagnes le diffusent, les tests l'optimisent. Créativité auto-améliorante.",
+      "impact": "Production et optimisation créative 100% automatisées"
+    },
+    "engage-budget+engage-attribution+engage-analytics": {
+      "name": "Allocation Parfaite",
+      "description": "Les analytics mesurent, l'attribution attribue, le budget alloue. Décision budgétaire optimale.",
+      "impact": "Chaque euro marketing est investi de façon optimale"
+    },
+    "engage-email+engage-content+engage-ab": {
+      "name": "Email Factory",
+      "description": "Le contenu rédige, les tests optimisent, les emails envoient. Production email automatisée et optimisée.",
+      "impact": "Emails personnalisés, testés et optimisés sans effort"
+    },
+    "engage-social+engage-content+engage-analytics": {
+      "name": "Social Média Machine",
+      "description": "Le contenu produit, le social diffuse, les analytics mesurent. Présence sociale data-driven.",
+      "impact": "Présence sociale consistante et mesurée"
+    },
+    "engage-campaigns+engage-budget+engage-analytics": {
+      "name": "Marketing Autonome",
+      "description": "Campagnes IA + Budget Optimisé + Analytics = marketing qui s'auto-pilote par les données.",
+      "impact": "Marketing digital en pilotage automatique"
+    }
+  }
+}

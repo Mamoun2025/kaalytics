@@ -1,0 +1,325 @@
+<!--
+KAALYTICS - Glow Buttons Collection
+====================================
+Boutons avec effets de lueur modernes
+Source: ui.aceternity.com, codepen.io
+-->
+
+<div class="glow-demo">
+    <h2 class="glow-demo__title">Glow Buttons</h2>
+
+    <div class="glow-grid">
+        <!-- Bouton Pulse Glow -->
+        <div class="glow-item">
+            <button class="glow-btn glow-btn--pulse">
+                <span>Pulse Glow</span>
+            </button>
+            <p class="glow-label">Effet pulse</p>
+        </div>
+
+        <!-- Bouton Border Glow -->
+        <div class="glow-item">
+            <button class="glow-btn glow-btn--border">
+                <span>Border Glow</span>
+            </button>
+            <p class="glow-label">Bordure animee</p>
+        </div>
+
+        <!-- Bouton Neon -->
+        <div class="glow-item">
+            <button class="glow-btn glow-btn--neon">
+                <span>Neon Effect</span>
+            </button>
+            <p class="glow-label">Style neon</p>
+        </div>
+
+        <!-- Bouton Gradient Shine -->
+        <div class="glow-item">
+            <button class="glow-btn glow-btn--shine">
+                <span>Gradient Shine</span>
+            </button>
+            <p class="glow-label">Reflet brillant</p>
+        </div>
+
+        <!-- Bouton Aurora -->
+        <div class="glow-item">
+            <button class="glow-btn glow-btn--aurora">
+                <span>Aurora</span>
+            </button>
+            <p class="glow-label">Effet aurora</p>
+        </div>
+
+        <!-- Bouton Halo -->
+        <div class="glow-item">
+            <button class="glow-btn glow-btn--halo">
+                <span>Halo Ring</span>
+            </button>
+            <p class="glow-label">Anneau lumineux</p>
+        </div>
+    </div>
+</div>
+
+<style>
+:root {
+    --emerald: #10b981;
+    --emerald-dim: rgba(16, 185, 129, 0.3);
+    --emerald-glow: rgba(16, 185, 129, 0.5);
+    --teal: #0d9488;
+    --cyan: #06b6d4;
+    --purple: #8b5cf6;
+    --bg-void: #030a08;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.glow-demo {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg-void);
+    padding: 4rem 2rem;
+}
+
+.glow-demo__title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 4rem;
+}
+
+.glow-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.glow-item {
+    text-align: center;
+}
+
+.glow-label {
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.875rem;
+}
+
+/* Base Button */
+.glow-btn {
+    position: relative;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.glow-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+/* 1. Pulse Glow */
+.glow-btn--pulse {
+    background: linear-gradient(135deg, var(--emerald), var(--teal));
+    color: white;
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px var(--emerald-dim), 0 0 40px transparent;
+    }
+    50% {
+        box-shadow: 0 0 30px var(--emerald-glow), 0 0 60px var(--emerald-dim);
+    }
+}
+
+.glow-btn--pulse:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 40px var(--emerald-glow), 0 0 80px var(--emerald-dim);
+}
+
+/* 2. Border Glow */
+.glow-btn--border {
+    background: transparent;
+    color: var(--emerald);
+    border: 2px solid var(--emerald);
+}
+
+.glow-btn--border::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(90deg, var(--emerald), var(--cyan), var(--purple), var(--emerald));
+    background-size: 300% 100%;
+    border-radius: 14px;
+    z-index: -1;
+    opacity: 0;
+    animation: borderRotate 3s linear infinite;
+    transition: opacity 0.3s;
+}
+
+.glow-btn--border::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: var(--bg-void);
+    border-radius: 10px;
+    z-index: 0;
+}
+
+@keyframes borderRotate {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 300% 50%; }
+}
+
+.glow-btn--border:hover::before {
+    opacity: 1;
+}
+
+.glow-btn--border:hover {
+    color: white;
+    text-shadow: 0 0 10px var(--emerald);
+}
+
+/* 3. Neon Effect */
+.glow-btn--neon {
+    background: transparent;
+    color: var(--emerald);
+    border: 2px solid var(--emerald);
+    text-shadow: 0 0 10px var(--emerald);
+    box-shadow:
+        0 0 10px var(--emerald-dim),
+        inset 0 0 10px var(--emerald-dim);
+}
+
+.glow-btn--neon:hover {
+    background: var(--emerald);
+    color: var(--bg-void);
+    text-shadow: none;
+    box-shadow:
+        0 0 20px var(--emerald),
+        0 0 40px var(--emerald-dim),
+        0 0 60px var(--emerald-dim);
+}
+
+/* 4. Gradient Shine */
+.glow-btn--shine {
+    background: linear-gradient(135deg, var(--emerald), var(--teal));
+    color: white;
+}
+
+.glow-btn--shine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transition: left 0.5s ease;
+}
+
+.glow-btn--shine:hover::before {
+    left: 100%;
+}
+
+.glow-btn--shine:hover {
+    box-shadow: 0 10px 30px var(--emerald-dim);
+}
+
+/* 5. Aurora */
+.glow-btn--aurora {
+    background: var(--bg-void);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glow-btn--aurora::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    background: conic-gradient(
+        from 0deg,
+        var(--emerald),
+        var(--cyan),
+        var(--purple),
+        var(--teal),
+        var(--emerald)
+    );
+    border-radius: 14px;
+    z-index: -1;
+    animation: auroraRotate 4s linear infinite;
+    filter: blur(8px);
+    opacity: 0.7;
+}
+
+@keyframes auroraRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.glow-btn--aurora:hover::before {
+    filter: blur(15px);
+    opacity: 1;
+}
+
+/* 6. Halo Ring */
+.glow-btn--halo {
+    background: linear-gradient(135deg, var(--emerald), var(--teal));
+    color: white;
+}
+
+.glow-btn--halo::before,
+.glow-btn--halo::after {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    border: 2px solid var(--emerald);
+    border-radius: 20px;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.glow-btn--halo::after {
+    inset: -20px;
+    border-radius: 25px;
+    transition-delay: 0.1s;
+}
+
+.glow-btn--halo:hover::before {
+    opacity: 0.5;
+    inset: -15px;
+}
+
+.glow-btn--halo:hover::after {
+    opacity: 0.25;
+    inset: -25px;
+}
+
+.glow-btn--halo:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .glow-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+</style>

@@ -1,0 +1,395 @@
+<!--
+KAALYTICS - Testimonials Section Component
+============================================
+Section temoignages modulaire avec carousel
+Usage: Inclure via testimonials-loader.js
+-->
+
+<section class="section-testimonials" id="testimonialsSection">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="section-testimonials__header">
+            <span class="section-testimonials__badge" data-i18n="testimonials.badge">{{BADGE}}</span>
+            <h2 class="section-testimonials__title" data-i18n="testimonials.title">{{TITLE}}</h2>
+            <p class="section-testimonials__subtitle" data-i18n="testimonials.subtitle">{{SUBTITLE}}</p>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="section-testimonials__stats" data-testimonials-full>
+            <div class="section-testimonials__stat">
+                <span class="section-testimonials__stat-value" data-count="{{STAT1_VALUE}}">{{STAT1_VALUE}}</span>
+                <span class="section-testimonials__stat-label" data-i18n="testimonials.stat1">{{STAT1_LABEL}}</span>
+            </div>
+            <div class="section-testimonials__stat">
+                <span class="section-testimonials__stat-value">{{STAT2_VALUE}}</span>
+                <span class="section-testimonials__stat-label" data-i18n="testimonials.stat2">{{STAT2_LABEL}}</span>
+            </div>
+            <div class="section-testimonials__stat">
+                <span class="section-testimonials__stat-value">{{STAT3_VALUE}}</span>
+                <span class="section-testimonials__stat-label" data-i18n="testimonials.stat3">{{STAT3_LABEL}}</span>
+            </div>
+        </div>
+
+        <!-- Testimonials Grid/Carousel -->
+        <div class="section-testimonials__container">
+            <div class="section-testimonials__track" id="testimonialsTrack">
+                <!-- Testimonials inserted dynamically -->
+            </div>
+
+            <!-- Navigation -->
+            <div class="section-testimonials__nav" data-testimonials-full>
+                <button class="section-testimonials__nav-btn section-testimonials__nav-btn--prev" id="testimonialsPrev" aria-label="Previous">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                <div class="section-testimonials__dots" id="testimonialsDots">
+                    <!-- Dots inserted dynamically -->
+                </div>
+                <button class="section-testimonials__nav-btn section-testimonials__nav-btn--next" id="testimonialsNext" aria-label="Next">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="section-testimonials__cta" data-testimonials-full>
+            <a href="{{CTA_HREF}}" class="btn btn--primary">
+                <span data-i18n="testimonials.cta">{{CTA_TEXT}}</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CSS Styles -->
+<style>
+.section-testimonials {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #0f172a 0%, #0a0f1a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.section-testimonials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 800px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.3), transparent);
+}
+
+.section-testimonials__header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+}
+
+.section-testimonials__badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 100px;
+    color: #10b981;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.section-testimonials__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.section-testimonials__subtitle {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+}
+
+/* Stats */
+.section-testimonials__stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.section-testimonials__stat {
+    text-align: center;
+}
+
+.section-testimonials__stat-value {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #10b981;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.section-testimonials__stat-label {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Carousel Container */
+.section-testimonials__container {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.section-testimonials__track {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 1rem 0;
+    scrollbar-width: none;
+}
+
+.section-testimonials__track::-webkit-scrollbar {
+    display: none;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    flex: 0 0 auto;
+    width: calc(100% - 2rem);
+    max-width: 400px;
+    scroll-snap-align: start;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .testimonial-card {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media (min-width: 1024px) {
+    .testimonial-card {
+        width: calc(33.333% - 1rem);
+    }
+}
+
+.testimonial-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-4px);
+}
+
+.testimonial-card__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-card__avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(135deg, #10b981 0%, #0d9488 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.testimonial-card__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-card__info {
+    flex: 1;
+}
+
+.testimonial-card__name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.25rem;
+}
+
+.testimonial-card__role {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.testimonial-card__company {
+    color: #10b981;
+    font-weight: 500;
+}
+
+.testimonial-card__rating {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card__star {
+    width: 18px;
+    height: 18px;
+    color: #fbbf24;
+}
+
+.testimonial-card__star--empty {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.testimonial-card__content {
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-card__content::before {
+    content: '"';
+    color: #10b981;
+    font-size: 1.5rem;
+    margin-right: 0.25rem;
+}
+
+.testimonial-card__metrics {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.testimonial-card__metric {
+    flex: 1;
+    text-align: center;
+}
+
+.testimonial-card__metric-value {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #10b981;
+}
+
+.testimonial-card__metric-label {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Navigation */
+.section-testimonials__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.section-testimonials__nav-btn {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.section-testimonials__nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.section-testimonials__nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.section-testimonials__dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.section-testimonials__dot {
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.section-testimonials__dot.is-active {
+    background: #10b981;
+    width: 24px;
+    border-radius: 4px;
+}
+
+/* CTA */
+.section-testimonials__cta {
+    text-align: center;
+}
+
+.section-testimonials__cta .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+}
+
+.section-testimonials__cta .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 30px rgba(16, 185, 129, 0.4);
+}
+
+/* Variant: Compact */
+.section-testimonials--compact .section-testimonials__stats,
+.section-testimonials--compact .section-testimonials__nav,
+.section-testimonials--compact .section-testimonials__cta {
+    display: none;
+}
+
+/* Variant: Minimal */
+.section-testimonials--minimal .section-testimonials__stats,
+.section-testimonials--minimal .section-testimonials__nav,
+.section-testimonials--minimal .section-testimonials__cta,
+.section-testimonials--minimal .testimonial-card__metrics {
+    display: none;
+}
+</style>

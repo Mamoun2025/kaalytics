@@ -1,0 +1,59 @@
+{
+    "id": "security-compliance",
+    "name": "Security & Compliance",
+    "version": "1.0",
+    "description": "Architecture sécurité complète avec détection, réponse automatique et conformité RGPD",
+    "modules": [
+        {
+            "templateId": "sec-detect",
+            "x": 100,
+            "y": 180
+        },
+        {
+            "templateId": "sec-response",
+            "x": 350,
+            "y": 100
+        },
+        {
+            "templateId": "sec-audit",
+            "x": 350,
+            "y": 280
+        },
+        {
+            "templateId": "sec-compliance",
+            "x": 600,
+            "y": 180
+        },
+        {
+            "templateId": "sec-backup",
+            "x": 600,
+            "y": 360
+        }
+    ],
+    "connections": [
+        {
+            "from": { "index": 0, "port": "right" },
+            "to": { "index": 1, "port": "left" }
+        },
+        {
+            "from": { "index": 0, "port": "right" },
+            "to": { "index": 2, "port": "left" }
+        },
+        {
+            "from": { "index": 1, "port": "right" },
+            "to": { "index": 3, "port": "left" }
+        },
+        {
+            "from": { "index": 2, "port": "right" },
+            "to": { "index": 3, "port": "left" }
+        },
+        {
+            "from": { "index": 2, "port": "bottom" },
+            "to": { "index": 4, "port": "top" }
+        },
+        {
+            "from": { "index": 3, "port": "bottom" },
+            "to": { "index": 4, "port": "top" }
+        }
+    ]
+}

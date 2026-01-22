@@ -1,0 +1,204 @@
+<!--
+KAALYTICS - Liquid Button Effect
+=================================
+Bouton avec effet liquide/blob au survol
+-->
+
+<div class="liquid-demo">
+    <h2>Liquid Button Effect</h2>
+    <p>Survolez les boutons pour voir l'effet liquide</p>
+
+    <div class="liquid-buttons">
+        <button class="liquid-btn">
+            <span class="liquid-btn__text">Decouvrir</span>
+            <div class="liquid-btn__blob"></div>
+        </button>
+
+        <button class="liquid-btn liquid-btn--outline">
+            <span class="liquid-btn__text">En savoir plus</span>
+            <div class="liquid-btn__blob"></div>
+        </button>
+
+        <button class="liquid-btn liquid-btn--large">
+            <span class="liquid-btn__text">Commencer maintenant</span>
+            <div class="liquid-btn__blob"></div>
+        </button>
+    </div>
+</div>
+
+<style>
+:root {
+    --emerald: #10b981;
+    --emerald-dim: #047857;
+    --teal: #0d9488;
+    --bg-void: #040a08;
+    --bg-card: #0d1f1a;
+    --text-primary: #f0fdf4;
+    --text-muted: #86efac;
+}
+
+.liquid-demo {
+    min-height: 100vh;
+    background: var(--bg-void);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.liquid-demo h2 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.liquid-demo p {
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+}
+
+.liquid-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Liquid Button */
+.liquid-btn {
+    position: relative;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: transparent;
+    border: 2px solid var(--emerald);
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+}
+
+.liquid-btn__text {
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.liquid-btn__blob {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: linear-gradient(135deg, var(--emerald) 0%, var(--teal) 100%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+}
+
+.liquid-btn:hover .liquid-btn__blob {
+    width: 300%;
+    height: 300%;
+}
+
+.liquid-btn:hover {
+    border-color: transparent;
+    box-shadow: 0 10px 40px -10px rgba(16, 185, 129, 0.5);
+    transform: translateY(-2px);
+}
+
+.liquid-btn:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Outline variant */
+.liquid-btn--outline {
+    background: var(--bg-card);
+}
+
+.liquid-btn--outline .liquid-btn__blob {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--emerald-dim) 100%);
+}
+
+/* Large variant */
+.liquid-btn--large {
+    padding: 1.25rem 3rem;
+    font-size: 1.125rem;
+}
+
+/* Ripple effect on click */
+.liquid-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 0.5s, opacity 0.5s;
+    z-index: 3;
+}
+
+.liquid-btn:active::after {
+    transform: scale(2);
+    opacity: 1;
+    transition: 0s;
+}
+
+/* Glow effect */
+.liquid-btn::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg, var(--emerald), var(--teal), var(--emerald));
+    border-radius: 52px;
+    opacity: 0;
+    filter: blur(10px);
+    transition: opacity 0.3s;
+    z-index: -1;
+}
+
+.liquid-btn:hover::before {
+    opacity: 0.5;
+}
+
+@media (max-width: 640px) {
+    .liquid-buttons {
+        flex-direction: column;
+    }
+
+    .liquid-btn--large {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+}
+</style>
+
+<script>
+(function() {
+    // Add mouse tracking for more dynamic blob movement
+    const buttons = document.querySelectorAll('.liquid-btn');
+
+    buttons.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const blob = btn.querySelector('.liquid-btn__blob');
+
+            blob.style.left = x + 'px';
+            blob.style.top = y + 'px';
+        });
+
+        btn.addEventListener('mouseleave', () => {
+            const blob = btn.querySelector('.liquid-btn__blob');
+            blob.style.left = '50%';
+            blob.style.top = '50%';
+        });
+    });
+})();
+</script>

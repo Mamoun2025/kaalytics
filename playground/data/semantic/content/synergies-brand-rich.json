@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "version": "3.0",
+    "dimension": "brand",
+    "description": "Synergies ULTRA-RICHES pour la dimension Identité & Design"
+  },
+
+  "connections": {
+    "brand-identity+brand-web": {
+      "name": "Présence Digitale Cohérente",
+      "tagline": "L'identité incarnée sur le web",
+      "story_paragraph": "L'intégration de l'Identité Visuelle avec le Site Web garantit une traduction parfaite de votre marque dans l'espace digital. Les couleurs, typographies et éléments graphiques de votre identité sont déclinés sur chaque page du site. Les visiteurs retrouvent instantanément l'univers de votre marque. La navigation reflète les valeurs de clarté ou d'audace que vous portez. Le site devient l'incarnation digitale de votre identité, pas une interprétation approximative.",
+      "impact_narrative": "Cette synergie crée une cohérence parfaite entre l'identité théorique et son application pratique principale. Les visiteurs perçoivent une marque professionnelle et maîtrisée. La reconnaissance de marque se renforce à chaque visite. La confiance se construit visuellement dès les premières secondes."
+    },
+
+    "brand-identity+brand-docs": {
+      "name": "Communication Unifiée",
+      "tagline": "Chaque document porte votre ADN",
+      "story_paragraph": "Quand l'Identité Visuelle se décline dans les Documents Pro, chaque communication sortante devient un ambassadeur de votre marque. Les factures ne sont plus des formulaires administratifs mais des supports de branding. Les présentations impressionnent avant même que le contenu soit lu. Les propositions commerciales se distinguent visuellement de la concurrence. L'identité n'est plus un concept abstrait mais une réalité quotidienne dans chaque document.",
+      "impact_narrative": "Cette combinaison maximise les points de contact de marque. Chaque échange documentaire renforce la perception. La professionnalisation est perçue à chaque interaction. La différenciation se fait même sur les documents les plus banals. Le branding travaille en continu."
+    },
+
+    "brand-system+brand-web": {
+      "name": "Site Systémique",
+      "tagline": "Composants réutilisables, cohérence garantie",
+      "story_paragraph": "L'alliance du Design System avec le Site Web crée un site construit sur des fondations solides et cohérentes. Chaque élément du site — boutons, formulaires, cartes, navigation — provient de la bibliothèque de composants. Les modifications d'identité se propagent automatiquement. Les nouvelles pages sont créées rapidement en assemblant des composants existants. Le site reste cohérent même quand il grandit et évolue.",
+      "impact_narrative": "Cette synergie assure la maintenabilité de votre présence web. Les évolutions de marque sont répercutées instantanément. Les nouvelles fonctionnalités s'intègrent visuellement sans effort. La cohérence est garantie dans le temps. Le site vieillit bien."
+    },
+
+    "brand-ui+brand-web": {
+      "name": "Expérience Web Optimale",
+      "tagline": "Beau et facile à utiliser",
+      "story_paragraph": "L'intégration de l'UI/UX Design avec le Site Web garantit que la beauté ne sacrifie pas l'utilisabilité. Chaque page est à la fois esthétique et fonctionnelle. Les parcours utilisateur sont optimisés pour la conversion. L'accessibilité est intégrée dans la conception. Le site ne fait pas que séduire visuellement : il guide efficacement les visiteurs vers leurs objectifs et les vôtres.",
+      "impact_narrative": "Cette combinaison crée des sites qui performent. Le design attire, l'UX convertit. Les visiteurs trouvent ce qu'ils cherchent intuitivement. Les frictions sont éliminées. Le taux de conversion s'améliore significativement grâce à la qualité de l'expérience."
+    },
+
+    "brand-motion+brand-social": {
+      "name": "Social Animé",
+      "tagline": "Le mouvement qui capte le scroll",
+      "story_paragraph": "Quand le Motion Design s'applique aux Assets Sociaux, votre présence sociale gagne en impact. Les vidéos courtes attirent l'attention dans les feeds saturés. Les animations donnent vie à vos messages. Les Stories deviennent dynamiques. Dans un océan de contenu statique, vos posts animés se distinguent et captent l'attention. L'engagement augmente mécaniquement car le mouvement attire l'œil.",
+      "impact_narrative": "Cette synergie démultiplie l'engagement social. Le temps de vue augmente sur les contenus animés. Le partage se fait plus naturellement. L'algorithme favorise les contenus qui retiennent l'attention. Votre marque se positionne comme innovante et dynamique."
+    },
+
+    "brand-print+brand-identity": {
+      "name": "Cohérence Physique",
+      "tagline": "L'identité tangible",
+      "story_paragraph": "L'alliance des Supports Print avec l'Identité Visuelle assure que votre présence physique est aussi cohérente que votre présence digitale. Les cartes de visite portent exactement les mêmes couleurs et typographies que votre site. La signalétique reflète fidèlement votre identité. Les brochures sont immédiatement identifiables comme venant de votre marque. La cohérence cross-support renforce la reconnaissance et la mémorisation.",
+      "impact_narrative": "Cette combinaison crée une expérience de marque omnicanale. Les clients retrouvent la même identité partout. La reconnaissance de marque s'améliore. La confiance se construit par la cohérence. Chaque touchpoint renforce les autres."
+    },
+
+    "brand-system+brand-ui": {
+      "name": "Design Scalable",
+      "tagline": "Composants conçus pour l'utilisateur",
+      "story_paragraph": "L'intégration du Design System avec l'UI/UX Design crée une bibliothèque de composants pensés pour l'utilisabilité. Chaque composant n'est pas seulement beau mais testé pour l'ergonomie. Les patterns d'interaction sont cohérents à travers toutes les interfaces. L'expérience utilisateur devient prévisible et confortable. Le système permet de créer de nouvelles interfaces rapidement tout en garantissant une qualité UX constante.",
+      "impact_narrative": "Cette synergie industrialise la qualité UX. Les nouvelles fonctionnalités héritent automatiquement de bonnes pratiques ergonomiques. La dette UX est évitée dès la conception. Les utilisateurs bénéficient d'une expérience cohérente. La satisfaction s'améliore globalement."
+    },
+
+    "brand-docs+brand-motion": {
+      "name": "Présentations Vivantes",
+      "tagline": "Documents qui marquent les esprits",
+      "story_paragraph": "Quand les Documents Pro intègrent le Motion Design, vos présentations deviennent mémorables. Les slides s'animent pour guider l'attention. Les données complexes sont illustrées par des visualisations dynamiques. Les transitions maintiennent l'engagement. Vos présentations ne ressemblent à celles de personne d'autre. L'impact est maximal, la rétention du message est optimale.",
+      "impact_narrative": "Cette combinaison transforme vos présentations en expériences. Les audiences restent attentives. Les messages sont mieux retenus. La perception de professionnalisme atteint un niveau supérieur. Les pitchs et soutenances deviennent des moments de différenciation."
+    }
+  },
+
+  "multi_connections": {
+    "brand-identity+brand-system+brand-web": {
+      "name": "Écosystème Digital Cohérent",
+      "tagline": "De l'identité au pixel, parfaitement aligné",
+      "story_paragraph": "La triple alliance Identité Visuelle, Design System et Site Web crée un écosystème digital parfaitement cohérent et scalable. L'identité définit les fondamentaux. Le design system les traduit en composants réutilisables. Le site web les assemble en expérience utilisateur. Chaque évolution de l'identité se propage automatiquement à travers le système jusqu'au site. La cohérence est structurelle, pas accidentelle.",
+      "cumulative_impact": "Ensemble, ces trois modules créent une présence digitale professionnelle et maintenable. L'identité est parfaitement traduite. Les évolutions sont faciles. La cohérence est garantie dans le temps. Votre marque digitale est bâtie sur des fondations solides."
+    },
+
+    "brand-ui+brand-web+brand-motion": {
+      "name": "Expérience Web Premium",
+      "tagline": "Beauté, usabilité, dynamisme",
+      "story_paragraph": "Quand UI/UX Design, Site Web et Motion Design fonctionnent ensemble, vous obtenez une présence web d'exception. L'UX garantit l'utilisabilité. Le site applique ces principes avec cohérence. Les animations ajoutent la couche de polish qui impressionne. Chaque interaction est fluide, chaque transition est soignée. Les visiteurs perçoivent immédiatement la qualité et le professionnalisme.",
+      "cumulative_impact": "Cette combinaison triple crée des sites qui marquent les esprits. L'impression premium est immédiate. La conversion est optimisée. La différenciation par l'expérience est maximale. Votre site devient une référence dans votre secteur."
+    },
+
+    "brand-social+brand-motion+brand-identity": {
+      "name": "Social Branding Complet",
+      "tagline": "Identité animée sur tous les réseaux",
+      "story_paragraph": "L'intégration des Assets Sociaux, du Motion Design et de l'Identité Visuelle crée une présence sociale puissante et cohérente. L'identité guide tous les visuels. Le motion ajoute le dynamisme qui capte l'attention. Les assets sont déclinés pour chaque plateforme. Votre marque est immédiatement reconnaissable sur tous les réseaux, se distingue par la qualité de ses contenus, et engage son audience efficacement.",
+      "cumulative_impact": "Cette orchestration triple professionnalise votre présence sociale. L'engagement augmente significativement. La croissance de l'audience s'accélère. La perception de marque s'améliore. Les réseaux sociaux deviennent un vrai canal de branding."
+    }
+  }
+}

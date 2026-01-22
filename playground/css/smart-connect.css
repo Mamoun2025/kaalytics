@@ -1,0 +1,495 @@
+/* ============================================
+   SMART CONNECT - Styles
+   Version 2.0 - Complete UI overhaul
+   ============================================ */
+
+/* === CSS VARIABLES === */
+:root {
+    --sc-primary: #eda906;
+    --sc-primary-dark: #d4990a;
+    --sc-success: #10b981;
+    --sc-warning: #f59e0b;
+    --sc-error: #ef4444;
+    --sc-bg-dark: #1a3d2e;
+    --sc-bg-darker: #0f2a1f;
+    --sc-text: rgba(255,255,255,0.9);
+    --sc-text-muted: rgba(255,255,255,0.6);
+}
+
+/* ============================================
+   MAIN BUTTON
+   ============================================ */
+.btn-smart-connect {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: linear-gradient(135deg, var(--sc-primary) 0%, var(--sc-primary-dark) 100%);
+    border: 1px solid rgba(237, 169, 6, 0.5);
+    border-radius: 10px;
+    color: var(--sc-bg-dark);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-smart-connect:hover:not(.processing) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(237, 169, 6, 0.4);
+}
+
+.btn-smart-connect:active:not(.processing) {
+    transform: translateY(0);
+}
+
+.btn-smart-connect.processing {
+    pointer-events: none;
+}
+
+.btn-smart-connect.processing .smart-connect-text {
+    opacity: 0;
+}
+
+.btn-smart-connect.processing .smart-connect-icon {
+    opacity: 0;
+}
+
+.smart-connect-icon {
+    font-size: 16px;
+    transition: opacity 0.2s;
+}
+
+.smart-connect-text {
+    transition: opacity 0.2s;
+}
+
+/* === SPINNER === */
+.smart-connect-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(26, 61, 46, 0.3);
+    border-top-color: var(--sc-bg-dark);
+    border-radius: 50%;
+    animation: scSpinner 0.8s linear infinite;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.btn-smart-connect.processing .smart-connect-spinner {
+    opacity: 1;
+}
+
+@keyframes scSpinner {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ============================================
+   TOAST NOTIFICATIONS
+   ============================================ */
+.sc-toast {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 24px;
+    background: linear-gradient(135deg, var(--sc-bg-dark) 0%, var(--sc-bg-darker) 100%);
+    border: 2px solid var(--sc-primary);
+    border-radius: 14px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 3000;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+.sc-toast.visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.sc-toast.hiding {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+}
+
+.sc-toast-icon {
+    font-size: 20px;
+}
+
+.sc-toast-message {
+    flex: 1;
+}
+
+.sc-toast-undo {
+    padding: 6px 14px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    color: var(--sc-primary);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sc-toast-undo:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Toast variants */
+.sc-toast.success {
+    border-color: var(--sc-success);
+}
+
+.sc-toast.warning {
+    border-color: var(--sc-warning);
+}
+
+.sc-toast.error {
+    border-color: var(--sc-error);
+}
+
+/* ============================================
+   PREVIEW OVERLAY
+   ============================================ */
+.sc-preview-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+    z-index: 2500;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.sc-preview-overlay.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ============================================
+   PREVIEW PANEL
+   ============================================ */
+.sc-preview-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, var(--sc-bg-dark) 0%, var(--sc-bg-darker) 100%);
+    border-top: 2px solid var(--sc-primary);
+    padding: 20px 30px;
+    z-index: 2600;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 -10px 40px rgba(0,0,0,0.4);
+}
+
+.sc-preview-panel.visible {
+    transform: translateY(0);
+}
+
+.sc-preview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.sc-preview-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--sc-primary);
+}
+
+.sc-preview-title-icon {
+    font-size: 24px;
+}
+
+.sc-preview-close {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    border-radius: 10px;
+    color: var(--sc-text-muted);
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sc-preview-close:hover {
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+.sc-preview-stats {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 20px;
+}
+
+.sc-preview-stat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+}
+
+.sc-preview-stat-icon {
+    font-size: 20px;
+}
+
+.sc-preview-stat-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--sc-primary);
+}
+
+.sc-preview-stat-label {
+    font-size: 12px;
+    color: var(--sc-text-muted);
+}
+
+.sc-preview-stat.improved .sc-preview-stat-value {
+    color: var(--sc-success);
+}
+
+.sc-preview-stat.worse .sc-preview-stat-value {
+    color: var(--sc-error);
+}
+
+.sc-preview-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.sc-preview-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sc-preview-btn-cancel {
+    background: rgba(255,255,255,0.1);
+    color: var(--sc-text-muted);
+}
+
+.sc-preview-btn-cancel:hover {
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+.sc-preview-btn-apply {
+    background: linear-gradient(135deg, var(--sc-success), #059669);
+    color: white;
+}
+
+.sc-preview-btn-apply:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+/* ============================================
+   PROGRESS BAR (for multi-step operations)
+   ============================================ */
+.sc-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: rgba(255,255,255,0.1);
+    z-index: 3001;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.sc-progress.visible {
+    opacity: 1;
+}
+
+.sc-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--sc-primary), var(--sc-success));
+    transition: width 0.3s ease-out;
+    box-shadow: 0 0 10px var(--sc-primary);
+}
+
+/* ============================================
+   MODULE HIGHLIGHTS (during preview)
+   ============================================ */
+.placed-module.sc-will-move {
+    outline: 2px dashed var(--sc-warning);
+    outline-offset: 4px;
+}
+
+.placed-module.sc-ghost {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.sc-ghost-module {
+    position: absolute;
+    background: rgba(237, 169, 6, 0.2);
+    border: 2px dashed var(--sc-primary);
+    border-radius: 12px;
+    pointer-events: none;
+    z-index: 100;
+}
+
+/* ============================================
+   CONNECTION PREVIEW
+   ============================================ */
+.sc-preview-connection {
+    stroke: var(--sc-success);
+    stroke-width: 2;
+    stroke-dasharray: 8 4;
+    animation: scDashFlow 1s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes scDashFlow {
+    to { stroke-dashoffset: -12; }
+}
+
+/* ============================================
+   UNDO FLOATING BUTTON
+   ============================================ */
+.sc-undo-btn {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, var(--sc-bg-dark), var(--sc-bg-darker));
+    border: 2px solid var(--sc-primary);
+    border-radius: 12px;
+    color: var(--sc-primary);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.3s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.sc-undo-btn.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.sc-undo-btn:hover {
+    background: var(--sc-bg-dark);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+}
+
+.sc-undo-icon {
+    font-size: 16px;
+}
+
+.sc-undo-timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: rgba(237, 169, 6, 0.2);
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .btn-smart-connect {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    .btn-smart-connect .smart-connect-text {
+        display: none;
+    }
+
+    .sc-toast {
+        left: 16px;
+        right: 16px;
+        transform: translateX(0) translateY(20px);
+        bottom: 80px;
+    }
+
+    .sc-toast.visible {
+        transform: translateX(0) translateY(0);
+    }
+
+    .sc-toast.hiding {
+        transform: translateX(0) translateY(-20px);
+    }
+
+    .sc-preview-panel {
+        padding: 16px 20px;
+    }
+
+    .sc-preview-stats {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .sc-preview-stat {
+        flex: 1;
+        min-width: 120px;
+    }
+
+    .sc-preview-actions {
+        flex-direction: column;
+    }
+
+    .sc-preview-btn {
+        justify-content: center;
+    }
+
+    .sc-undo-btn {
+        left: 16px;
+        bottom: 80px;
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,260 @@
+<!--
+KAALYTICS - Glassmorphism Cards
+================================
+Cartes avec effet verre depoli moderne
+Source: ui.glass, github.com/itsjavi/glasscn-ui
+-->
+
+<div class="glass-demo">
+    <div class="glass-bg">
+        <div class="glass-orb glass-orb--1"></div>
+        <div class="glass-orb glass-orb--2"></div>
+        <div class="glass-orb glass-orb--3"></div>
+    </div>
+
+    <div class="glass-cards">
+        <div class="glass-card">
+            <div class="glass-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+            </div>
+            <h3 class="glass-card__title">Analytics</h3>
+            <p class="glass-card__text">Tableaux de bord en temps reel avec visualisations interactives</p>
+            <div class="glass-card__stats">
+                <span class="glass-card__stat">+45%</span>
+                <span class="glass-card__label">ce mois</span>
+            </div>
+        </div>
+
+        <div class="glass-card glass-card--featured">
+            <div class="glass-card__badge">Premium</div>
+            <div class="glass-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 6v6l4 2"/>
+                </svg>
+            </div>
+            <h3 class="glass-card__title">Performance</h3>
+            <p class="glass-card__text">Optimisation automatique basee sur l'IA predictive</p>
+            <div class="glass-card__stats">
+                <span class="glass-card__stat">99.9%</span>
+                <span class="glass-card__label">uptime</span>
+            </div>
+        </div>
+
+        <div class="glass-card">
+            <div class="glass-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                </svg>
+            </div>
+            <h3 class="glass-card__title">Integration</h3>
+            <p class="glass-card__text">Connexion transparente avec vos outils existants</p>
+            <div class="glass-card__stats">
+                <span class="glass-card__stat">50+</span>
+                <span class="glass-card__label">connecteurs</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+:root {
+    --emerald: #10b981;
+    --emerald-dim: rgba(16, 185, 129, 0.2);
+    --teal: #0d9488;
+    --bg-void: #030a08;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.glass-demo {
+    position: relative;
+    min-height: 100vh;
+    background: var(--bg-void);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.glass-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.glass-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+}
+
+.glass-orb--1 {
+    width: 400px;
+    height: 400px;
+    background: var(--emerald);
+    top: -100px;
+    left: -100px;
+    opacity: 0.3;
+    animation: float1 8s ease-in-out infinite;
+}
+
+.glass-orb--2 {
+    width: 300px;
+    height: 300px;
+    background: var(--teal);
+    bottom: -50px;
+    right: -50px;
+    opacity: 0.25;
+    animation: float2 10s ease-in-out infinite;
+}
+
+.glass-orb--3 {
+    width: 200px;
+    height: 200px;
+    background: #8b5cf6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.2;
+    animation: float3 6s ease-in-out infinite;
+}
+
+@keyframes float1 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(50px, 30px); }
+}
+
+@keyframes float2 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-40px, -20px); }
+}
+
+@keyframes float3 {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.2); }
+}
+
+.glass-cards {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.glass-card {
+    position: relative;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.glass-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--emerald);
+    box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.5),
+        0 0 30px var(--emerald-dim);
+}
+
+.glass-card--featured {
+    background: linear-gradient(135deg, var(--emerald-dim) 0%, rgba(13, 148, 136, 0.1) 100%);
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.glass-card__badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--emerald);
+    color: var(--bg-void);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.glass-card__icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--emerald), var(--teal));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.glass-card__icon svg {
+    width: 28px;
+    height: 28px;
+    color: white;
+}
+
+.glass-card__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+.glass-card__text {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.glass-card__stats {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+.glass-card__stat {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--emerald);
+}
+
+.glass-card__label {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .glass-cards {
+        grid-template-columns: 1fr;
+    }
+    .glass-orb--1 { width: 250px; height: 250px; }
+    .glass-orb--2 { width: 200px; height: 200px; }
+}
+</style>

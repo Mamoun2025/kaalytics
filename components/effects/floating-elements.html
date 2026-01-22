@@ -1,0 +1,357 @@
+<!--
+KAALYTICS - Floating Elements
+==============================
+Elements flottants animes en arriere-plan
+Source: dribbble.com, awwwards.com
+-->
+
+<div class="floating-demo">
+    <div class="floating-container">
+        <!-- Formes geometriques flottantes -->
+        <div class="floating-shape floating-shape--circle floating-shape--1"></div>
+        <div class="floating-shape floating-shape--square floating-shape--2"></div>
+        <div class="floating-shape floating-shape--triangle floating-shape--3"></div>
+        <div class="floating-shape floating-shape--circle floating-shape--4"></div>
+        <div class="floating-shape floating-shape--hexagon floating-shape--5"></div>
+        <div class="floating-shape floating-shape--ring floating-shape--6"></div>
+        <div class="floating-shape floating-shape--dot floating-shape--7"></div>
+        <div class="floating-shape floating-shape--dot floating-shape--8"></div>
+        <div class="floating-shape floating-shape--cross floating-shape--9"></div>
+
+        <!-- Icones tech flottantes -->
+        <div class="floating-icon floating-icon--1">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="floating-icon floating-icon--2">
+            <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        </div>
+        <div class="floating-icon floating-icon--3">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+    </div>
+
+    <div class="floating-content">
+        <h1>Floating Elements</h1>
+        <p>Des elements qui dansent subtilement en arriere-plan</p>
+        <button class="floating-btn">Explorer</button>
+    </div>
+</div>
+
+<style>
+:root {
+    --emerald: #10b981;
+    --emerald-dim: rgba(16, 185, 129, 0.15);
+    --teal: #0d9488;
+    --teal-dim: rgba(13, 148, 136, 0.15);
+    --cyan: #06b6d4;
+    --purple: #8b5cf6;
+    --bg-void: #030a08;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.floating-demo {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg-void);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.floating-container {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* Formes de base */
+.floating-shape {
+    position: absolute;
+    opacity: 0.6;
+}
+
+.floating-shape--circle {
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--emerald-dim), var(--teal-dim));
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.floating-shape--square {
+    background: var(--emerald-dim);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 8px;
+}
+
+.floating-shape--triangle {
+    width: 0 !important;
+    height: 0 !important;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 50px solid var(--emerald-dim);
+}
+
+.floating-shape--hexagon {
+    background: var(--teal-dim);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.floating-shape--ring {
+    border-radius: 50%;
+    border: 3px solid var(--emerald-dim);
+    background: transparent;
+}
+
+.floating-shape--dot {
+    width: 8px !important;
+    height: 8px !important;
+    background: var(--emerald);
+    border-radius: 50%;
+}
+
+.floating-shape--cross {
+    background: transparent;
+}
+
+.floating-shape--cross::before,
+.floating-shape--cross::after {
+    content: '';
+    position: absolute;
+    background: var(--emerald-dim);
+}
+
+.floating-shape--cross::before {
+    width: 20px;
+    height: 3px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.floating-shape--cross::after {
+    width: 3px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Positions et animations specifiques */
+.floating-shape--1 {
+    width: 120px;
+    height: 120px;
+    top: 10%;
+    left: 5%;
+    animation: float1 12s ease-in-out infinite;
+}
+
+.floating-shape--2 {
+    width: 60px;
+    height: 60px;
+    top: 20%;
+    right: 15%;
+    animation: float2 10s ease-in-out infinite;
+}
+
+.floating-shape--3 {
+    top: 60%;
+    left: 10%;
+    animation: float3 14s ease-in-out infinite;
+}
+
+.floating-shape--4 {
+    width: 40px;
+    height: 40px;
+    bottom: 20%;
+    right: 20%;
+    animation: float4 8s ease-in-out infinite;
+}
+
+.floating-shape--5 {
+    width: 80px;
+    height: 80px;
+    top: 40%;
+    right: 5%;
+    animation: float5 16s ease-in-out infinite;
+}
+
+.floating-shape--6 {
+    width: 100px;
+    height: 100px;
+    bottom: 30%;
+    left: 20%;
+    animation: float6 11s ease-in-out infinite;
+}
+
+.floating-shape--7 {
+    top: 15%;
+    left: 40%;
+    animation: float7 6s ease-in-out infinite;
+}
+
+.floating-shape--8 {
+    bottom: 40%;
+    right: 35%;
+    animation: float8 7s ease-in-out infinite;
+}
+
+.floating-shape--9 {
+    width: 30px;
+    height: 30px;
+    top: 70%;
+    right: 10%;
+    animation: float9 9s ease-in-out infinite;
+}
+
+/* Icones flottantes */
+.floating-icon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--emerald-dim);
+    border-radius: 12px;
+    color: var(--emerald);
+    opacity: 0.5;
+}
+
+.floating-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.floating-icon--1 {
+    top: 25%;
+    left: 25%;
+    animation: floatIcon1 15s ease-in-out infinite;
+}
+
+.floating-icon--2 {
+    bottom: 25%;
+    right: 25%;
+    animation: floatIcon2 13s ease-in-out infinite;
+}
+
+.floating-icon--3 {
+    top: 55%;
+    left: 60%;
+    animation: floatIcon3 11s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes float1 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(20px, 30px) rotate(5deg); }
+    50% { transform: translate(-10px, 50px) rotate(-5deg); }
+    75% { transform: translate(30px, 20px) rotate(3deg); }
+}
+
+@keyframes float2 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-30px, 40px) rotate(45deg); }
+}
+
+@keyframes float3 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(40px, -20px) rotate(10deg); }
+    66% { transform: translate(20px, 30px) rotate(-10deg); }
+}
+
+@keyframes float4 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-20px, -30px) scale(1.2); }
+}
+
+@keyframes float5 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-40px, 20px) rotate(30deg); }
+}
+
+@keyframes float6 {
+    0%, 100% { transform: translate(0, 0); opacity: 0.6; }
+    50% { transform: translate(30px, -20px); opacity: 0.3; }
+}
+
+@keyframes float7 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(15px, 25px); }
+}
+
+@keyframes float8 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-20px, 15px); }
+}
+
+@keyframes float9 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-15px, -25px) rotate(90deg); }
+}
+
+@keyframes floatIcon1 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(30px, 40px) rotate(10deg); }
+}
+
+@keyframes floatIcon2 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-40px, -30px) rotate(-15deg); }
+}
+
+@keyframes floatIcon3 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(20px, 30px) scale(1.1); }
+}
+
+/* Contenu */
+.floating-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 2rem;
+}
+
+.floating-content h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.floating-content p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 2rem;
+}
+
+.floating-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--bg-void);
+    background: linear-gradient(135deg, var(--emerald), var(--teal));
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.floating-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px var(--emerald-dim);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .floating-shape {
+        transform: scale(0.6);
+    }
+}
+</style>

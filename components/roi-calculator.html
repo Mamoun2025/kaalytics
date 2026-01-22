@@ -1,0 +1,417 @@
+<!--
+KAALYTICS - ROI Calculator Component
+=====================================
+Interactive ROI calculator with sliders
+Ready to integrate in index.html #pricing section
+-->
+
+<div class="roi-calculator" id="roiCalculator">
+    <div class="roi-calculator__header">
+        <div class="roi-calculator__badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+            Calculateur ROI
+        </div>
+        <h3 class="roi-calculator__title">Estimez vos economies</h3>
+        <p class="roi-calculator__subtitle">Ajustez les parametres pour voir votre retour sur investissement</p>
+    </div>
+
+    <div class="roi-calculator__inputs">
+        <!-- Nombre de vehicules -->
+        <div class="roi-input">
+            <div class="roi-input__header">
+                <label class="roi-input__label">Nombre de vehicules</label>
+                <span class="roi-input__value" id="vehiclesValue">25</span>
+            </div>
+            <input type="range" class="roi-slider" id="vehiclesSlider" min="5" max="200" value="25" step="5">
+            <div class="roi-input__range">
+                <span>5</span>
+                <span>200+</span>
+            </div>
+        </div>
+
+        <!-- Cout maintenance mensuel -->
+        <div class="roi-input">
+            <div class="roi-input__header">
+                <label class="roi-input__label">Cout maintenance mensuel</label>
+                <span class="roi-input__value" id="maintenanceValue">15 000 EUR</span>
+            </div>
+            <input type="range" class="roi-slider" id="maintenanceSlider" min="2000" max="100000" value="15000" step="1000">
+            <div class="roi-input__range">
+                <span>2K EUR</span>
+                <span>100K EUR</span>
+            </div>
+        </div>
+
+        <!-- Km parcourus par mois -->
+        <div class="roi-input">
+            <div class="roi-input__header">
+                <label class="roi-input__label">Km parcourus / mois</label>
+                <span class="roi-input__value" id="kmValue">50 000 km</span>
+            </div>
+            <input type="range" class="roi-slider" id="kmSlider" min="10000" max="500000" value="50000" step="5000">
+            <div class="roi-input__range">
+                <span>10K km</span>
+                <span>500K km</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="roi-calculator__divider"></div>
+
+    <div class="roi-calculator__results">
+        <div class="roi-result roi-result--highlight">
+            <div class="roi-result__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+            </div>
+            <div class="roi-result__content">
+                <span class="roi-result__value" id="savingsValue">54 000</span>
+                <span class="roi-result__unit">EUR/an</span>
+            </div>
+            <span class="roi-result__label">Economies estimees</span>
+        </div>
+
+        <div class="roi-result">
+            <div class="roi-result__icon roi-result__icon--blue">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                </svg>
+            </div>
+            <div class="roi-result__content">
+                <span class="roi-result__value" id="roiMonthsValue">4</span>
+                <span class="roi-result__unit">mois</span>
+            </div>
+            <span class="roi-result__label">Retour sur investissement</span>
+        </div>
+
+        <div class="roi-result">
+            <div class="roi-result__icon roi-result__icon--teal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                    <path d="M12 6v6l4 2"/>
+                    <path d="M7 12h.01M17 12h.01M12 17h.01"/>
+                </svg>
+            </div>
+            <div class="roi-result__content">
+                <span class="roi-result__value" id="co2Value">12</span>
+                <span class="roi-result__unit">tonnes CO2</span>
+            </div>
+            <span class="roi-result__label">Reduction empreinte carbone</span>
+        </div>
+    </div>
+
+    <div class="roi-calculator__cta">
+        <a href="#contact" class="btn btn-primary btn-lg roi-calculator__btn">
+            Obtenir mon rapport ROI detaille
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+        </a>
+        <p class="roi-calculator__note">Analyse personnalisee gratuite en 48h</p>
+    </div>
+</div>
+
+<style>
+.roi-calculator {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-2xl);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.roi-calculator__header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.roi-calculator__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-xs) var(--space-md);
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(13, 148, 136, 0.15) 100%);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--emerald-bright);
+    margin-bottom: var(--space-md);
+}
+
+.roi-calculator__title {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.roi-calculator__subtitle {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
+
+.roi-calculator__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.roi-input {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.roi-input__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.roi-input__label {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.roi-input__value {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--emerald-bright);
+    font-family: var(--font-mono);
+}
+
+.roi-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-full);
+    outline: none;
+    cursor: pointer;
+}
+
+.roi-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: var(--gradient-brand);
+    border-radius: 50%;
+    cursor: grab;
+    box-shadow: 0 0 15px var(--emerald-glow);
+    transition: transform var(--transition-fast);
+}
+
+.roi-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+.roi-slider::-webkit-slider-thumb:active {
+    cursor: grabbing;
+    transform: scale(1.1);
+}
+
+.roi-slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background: var(--gradient-brand);
+    border-radius: 50%;
+    cursor: grab;
+    border: none;
+    box-shadow: 0 0 15px var(--emerald-glow);
+}
+
+.roi-input__range {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--text-xs);
+    color: var(--text-dim);
+}
+
+.roi-calculator__divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-accent), transparent);
+    margin: var(--space-2xl) 0;
+}
+
+.roi-calculator__results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+}
+
+@media (max-width: 640px) {
+    .roi-calculator__results {
+        grid-template-columns: 1fr;
+    }
+}
+
+.roi-result {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    padding: var(--space-lg);
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+.roi-result:hover {
+    border-color: var(--border-accent);
+    transform: translateY(-2px);
+}
+
+.roi-result--highlight {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(13, 148, 136, 0.1) 100%);
+    border-color: var(--border-accent);
+}
+
+.roi-result__icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-brand);
+    border-radius: var(--radius-lg);
+    margin: 0 auto var(--space-md);
+    color: white;
+}
+
+.roi-result__icon--blue {
+    background: var(--gradient-blue);
+}
+
+.roi-result__icon--teal {
+    background: linear-gradient(135deg, var(--teal-dim) 0%, var(--teal-bright) 100%);
+}
+
+.roi-result__content {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-xs);
+}
+
+.roi-result__value {
+    font-size: var(--text-3xl);
+    font-weight: 800;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    transition: all var(--transition-base);
+}
+
+.roi-result__value.updating {
+    transform: scale(1.1);
+    color: var(--emerald-bright);
+}
+
+.roi-result__unit {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.roi-result__label {
+    font-size: var(--text-xs);
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.roi-calculator__cta {
+    margin-top: var(--space-2xl);
+    text-align: center;
+}
+
+.roi-calculator__btn {
+    width: 100%;
+    justify-content: center;
+    gap: var(--space-sm);
+}
+
+.roi-calculator__note {
+    font-size: var(--text-xs);
+    color: var(--text-dim);
+    margin-top: var(--space-sm);
+}
+</style>
+
+<script>
+(function() {
+    const vehiclesSlider = document.getElementById('vehiclesSlider');
+    const maintenanceSlider = document.getElementById('maintenanceSlider');
+    const kmSlider = document.getElementById('kmSlider');
+
+    const vehiclesValue = document.getElementById('vehiclesValue');
+    const maintenanceValue = document.getElementById('maintenanceValue');
+    const kmValue = document.getElementById('kmValue');
+
+    const savingsValue = document.getElementById('savingsValue');
+    const roiMonthsValue = document.getElementById('roiMonthsValue');
+    const co2Value = document.getElementById('co2Value');
+
+    function formatNumber(num) {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    }
+
+    function animateValue(element, newValue) {
+        element.classList.add('updating');
+        element.textContent = newValue;
+        setTimeout(() => element.classList.remove('updating'), 300);
+    }
+
+    function calculateROI() {
+        const vehicles = parseInt(vehiclesSlider.value);
+        const maintenance = parseInt(maintenanceSlider.value);
+        const km = parseInt(kmSlider.value);
+
+        // Update display values
+        vehiclesValue.textContent = vehicles;
+        maintenanceValue.textContent = formatNumber(maintenance) + ' EUR';
+        kmValue.textContent = formatNumber(km) + ' km';
+
+        // Calculate savings (30% reduction on maintenance + 15% on fuel based on km)
+        const maintenanceSavings = maintenance * 0.30 * 12; // 30% yearly
+        const fuelSavingsPerKm = 0.02; // EUR per km saved through optimization
+        const fuelSavings = km * fuelSavingsPerKm * 12;
+        const totalSavings = Math.round(maintenanceSavings + fuelSavings);
+
+        // Calculate ROI (based on FleetOps subscription cost)
+        let subscriptionCost;
+        if (vehicles <= 20) {
+            subscriptionCost = 500 * 12;
+        } else if (vehicles <= 100) {
+            subscriptionCost = 1500 * 12;
+        } else {
+            subscriptionCost = 3000 * 12;
+        }
+        const roiMonths = Math.max(1, Math.round(subscriptionCost / (totalSavings / 12)));
+
+        // Calculate CO2 reduction (based on km optimization ~15%)
+        const co2PerKm = 0.00021; // tonnes CO2 per km (average commercial vehicle)
+        const co2Reduction = Math.round(km * 12 * 0.15 * co2PerKm);
+
+        // Animate results
+        animateValue(savingsValue, formatNumber(totalSavings));
+        animateValue(roiMonthsValue, roiMonths);
+        animateValue(co2Value, co2Reduction);
+    }
+
+    // Add event listeners
+    vehiclesSlider.addEventListener('input', calculateROI);
+    maintenanceSlider.addEventListener('input', calculateROI);
+    kmSlider.addEventListener('input', calculateROI);
+
+    // Initial calculation
+    calculateROI();
+})();
+</script>

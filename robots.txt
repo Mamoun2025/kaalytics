@@ -1,0 +1,164 @@
+# ==============================================
+# Kaalytics - robots.txt
+# https://kaalytics.com/robots.txt
+# Last updated: 2026-01-22
+# ==============================================
+
+# Default rules for all crawlers
+User-agent: *
+Allow: /
+Allow: /products/
+Allow: /industries/
+Allow: /case-studies/
+Allow: /blog/
+Allow: /guides/
+
+# Disallow admin, components, and private areas
+Disallow: /components/
+Disallow: /TRASH/
+Disallow: /data/
+Disallow: /assets/js/
+Disallow: /*.json$
+Disallow: /*?*preview=
+Disallow: /*?*debug=
+
+# Sitemaps
+Sitemap: https://kaalytics.com/sitemap.xml
+
+# ==============================================
+# Major Search Engine Bots - Full Access
+# ==============================================
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /assets/images/
+
+User-agent: Googlebot-Video
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 3
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+# ==============================================
+# Social Media Bots - Full Access for Rich Previews
+# ==============================================
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+# ==============================================
+# AI Training Bots - BLOCKED
+# ==============================================
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# ==============================================
+# SEO & Analytics Bots - Allowed
+# ==============================================
+
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: MJ12bot
+Allow: /
+Crawl-delay: 10
+
+User-agent: DotBot
+Allow: /
+Crawl-delay: 10
+
+# ==============================================
+# Bad Bots - BLOCKED
+# ==============================================
+
+User-agent: MegaIndex.ru
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /wp-admin/
+
+User-agent: SemrushBot
+Disallow: /wp-admin/
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+# ==============================================
+# Host directive (for Yandex)
+# ==============================================
+
+Host: https://kaalytics.com

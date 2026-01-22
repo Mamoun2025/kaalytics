@@ -1,0 +1,136 @@
+{
+    "id": "level-3-enterprise",
+    "name": "Enterprise",
+    "level": 3,
+    "version": "2.0",
+    "description": "Architecture Enterprise complète - Structure hexagonale avec toutes les dimensions interconnectées",
+    "modules": [
+        {
+            "templateId": "ent-erp",
+            "x": 500,
+            "y": 300
+        },
+        {
+            "templateId": "intel-ml",
+            "x": 500,
+            "y": 50
+        },
+        {
+            "templateId": "growth-crm",
+            "x": 750,
+            "y": 175
+        },
+        {
+            "templateId": "ops-fleet",
+            "x": 750,
+            "y": 425
+        },
+        {
+            "templateId": "sec-detect",
+            "x": 500,
+            "y": 550
+        },
+        {
+            "templateId": "integ-universal",
+            "x": 250,
+            "y": 425
+        },
+        {
+            "templateId": "engage-campaigns",
+            "x": 250,
+            "y": 175
+        },
+        {
+            "templateId": "intel-dashboards",
+            "x": 500,
+            "y": -130
+        },
+        {
+            "templateId": "growth-pipeline",
+            "x": 1000,
+            "y": 175
+        },
+        {
+            "templateId": "ops-map",
+            "x": 1000,
+            "y": 425
+        },
+        {
+            "templateId": "sec-compliance",
+            "x": 750,
+            "y": 670
+        },
+        {
+            "templateId": "integ-sync",
+            "x": 250,
+            "y": 670
+        },
+        {
+            "templateId": "brand-web",
+            "x": 0,
+            "y": 425
+        },
+        {
+            "templateId": "engage-analytics",
+            "x": 0,
+            "y": 175
+        },
+        {
+            "templateId": "intel-forecast",
+            "x": 500,
+            "y": 800
+        },
+        {
+            "templateId": "ent-hr",
+            "x": 250,
+            "y": -50
+        },
+        {
+            "templateId": "ent-project",
+            "x": 750,
+            "y": -50
+        }
+    ],
+    "connections": [
+        { "from": { "index": 0, "port": "top" }, "to": { "index": 1, "port": "bottom" } },
+        { "from": { "index": 0, "port": "right" }, "to": { "index": 2, "port": "left" } },
+        { "from": { "index": 0, "port": "right" }, "to": { "index": 3, "port": "left" } },
+        { "from": { "index": 0, "port": "bottom" }, "to": { "index": 4, "port": "top" } },
+        { "from": { "index": 0, "port": "left" }, "to": { "index": 5, "port": "right" } },
+        { "from": { "index": 0, "port": "left" }, "to": { "index": 6, "port": "right" } },
+
+        { "from": { "index": 1, "port": "top" }, "to": { "index": 7, "port": "bottom" } },
+        { "from": { "index": 1, "port": "right" }, "to": { "index": 2, "port": "top" } },
+        { "from": { "index": 1, "port": "left" }, "to": { "index": 6, "port": "top" } },
+
+        { "from": { "index": 2, "port": "right" }, "to": { "index": 8, "port": "left" } },
+        { "from": { "index": 2, "port": "bottom" }, "to": { "index": 3, "port": "top" } },
+
+        { "from": { "index": 3, "port": "right" }, "to": { "index": 9, "port": "left" } },
+        { "from": { "index": 3, "port": "bottom" }, "to": { "index": 10, "port": "top" } },
+
+        { "from": { "index": 4, "port": "right" }, "to": { "index": 10, "port": "left" } },
+        { "from": { "index": 4, "port": "bottom" }, "to": { "index": 14, "port": "top" } },
+        { "from": { "index": 4, "port": "left" }, "to": { "index": 11, "port": "right" } },
+
+        { "from": { "index": 5, "port": "bottom" }, "to": { "index": 11, "port": "top" } },
+        { "from": { "index": 5, "port": "left" }, "to": { "index": 12, "port": "right" } },
+        { "from": { "index": 5, "port": "top" }, "to": { "index": 6, "port": "bottom" } },
+
+        { "from": { "index": 6, "port": "left" }, "to": { "index": 13, "port": "right" } },
+
+        { "from": { "index": 7, "port": "left" }, "to": { "index": 15, "port": "right" } },
+        { "from": { "index": 7, "port": "right" }, "to": { "index": 16, "port": "left" } },
+
+        { "from": { "index": 8, "port": "bottom" }, "to": { "index": 9, "port": "top" } },
+        { "from": { "index": 9, "port": "bottom" }, "to": { "index": 10, "port": "right" } },
+
+        { "from": { "index": 11, "port": "bottom" }, "to": { "index": 14, "port": "left" } },
+        { "from": { "index": 10, "port": "bottom" }, "to": { "index": 14, "port": "right" } },
+
+        { "from": { "index": 12, "port": "top" }, "to": { "index": 13, "port": "bottom" } },
+
+        { "from": { "index": 15, "port": "bottom" }, "to": { "index": 6, "port": "top" } },
+        { "from": { "index": 16, "port": "bottom" }, "to": { "index": 2, "port": "top" } }
+    ]
+}

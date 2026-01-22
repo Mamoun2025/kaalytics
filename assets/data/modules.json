@@ -1,0 +1,404 @@
+{
+  "modules": [
+    {
+      "id": "operations-excellence",
+      "number": "01",
+      "color": "emerald",
+      "video": "assets/videos/industrial/industrial-1.mp4",
+      "icon": "cog",
+      "fr": {
+        "title": "Operations Excellence",
+        "headline": "-40% temps d'arrêt",
+        "description": "Transformez le chaos opérationnel en précision horlogère. Consolidez 5-10 systèmes disparates en une plateforme unifiée alimentée par l'IA.",
+        "longDescription": "Notre module Operations Excellence utilise l'IA prédictive pour anticiper les pannes, optimiser les plannings et maximiser l'utilisation de vos ressources. Résultats mesurables dès le premier mois.",
+        "tags": ["Smart Fleet", "AI Planning", "+35% utilisation"],
+        "benefits": [
+          "Maintenance prédictive avec 95% de précision",
+          "Planification automatique des ressources",
+          "Tableaux de bord temps réel",
+          "Alertes intelligentes contextuelles"
+        ],
+        "metrics": {
+          "primary": "-40%",
+          "primaryLabel": "temps d'arrêt",
+          "secondary": "+35%",
+          "secondaryLabel": "utilisation flotte"
+        },
+        "cta": "Optimiser mes opérations"
+      },
+      "en": {
+        "title": "Operations Excellence",
+        "headline": "-40% downtime",
+        "description": "Transform operational chaos into clockwork precision. Consolidate 5-10 disparate systems into one AI-powered unified platform.",
+        "longDescription": "Our Operations Excellence module uses predictive AI to anticipate failures, optimize schedules, and maximize resource utilization. Measurable results from the first month.",
+        "tags": ["Smart Fleet", "AI Planning", "+35% utilization"],
+        "benefits": [
+          "Predictive maintenance with 95% accuracy",
+          "Automated resource scheduling",
+          "Real-time dashboards",
+          "Contextual smart alerts"
+        ],
+        "metrics": {
+          "primary": "-40%",
+          "primaryLabel": "downtime",
+          "secondary": "+35%",
+          "secondaryLabel": "fleet utilization"
+        },
+        "cta": "Optimize my operations"
+      }
+    },
+    {
+      "id": "business-intelligence",
+      "number": "02",
+      "color": "purple",
+      "video": "assets/videos/industrial/industrial-2.mp4",
+      "icon": "chart-bar",
+      "fr": {
+        "title": "Business Intelligence",
+        "headline": "ROI visible en 30 jours",
+        "description": "Vos KPIs en temps réel, pas en fin de mois. Transformez vos données en décisions actionnables instantanément.",
+        "longDescription": "Fini les tableurs Excel et les rapports qui arrivent trop tard. Notre BI alimentée par l'IA analyse vos données en continu et génère des insights prédictifs pour une prise de décision éclairée.",
+        "tags": ["Smart Analytics", "Auto Reports", "Predictions"],
+        "benefits": [
+          "Rapports automatisés personnalisés",
+          "Analyses prédictives ML",
+          "Visualisations interactives",
+          "Alertes anomalies en temps réel"
+        ],
+        "metrics": {
+          "primary": "30j",
+          "primaryLabel": "ROI visible",
+          "secondary": "10x",
+          "secondaryLabel": "plus rapide"
+        },
+        "cta": "Activer mes insights"
+      },
+      "en": {
+        "title": "Business Intelligence",
+        "headline": "ROI visible in 30 days",
+        "description": "Your KPIs in real-time, not at month-end. Transform your data into actionable decisions instantly.",
+        "longDescription": "No more Excel spreadsheets and reports that arrive too late. Our AI-powered BI continuously analyzes your data and generates predictive insights for informed decision-making.",
+        "tags": ["Smart Analytics", "Auto Reports", "Predictions"],
+        "benefits": [
+          "Customized automated reports",
+          "ML predictive analytics",
+          "Interactive visualizations",
+          "Real-time anomaly alerts"
+        ],
+        "metrics": {
+          "primary": "30d",
+          "primaryLabel": "visible ROI",
+          "secondary": "10x",
+          "secondaryLabel": "faster"
+        },
+        "cta": "Activate my insights"
+      }
+    },
+    {
+      "id": "growth-engine",
+      "number": "03",
+      "color": "orange",
+      "video": "assets/videos/sales/sales-1.mp4",
+      "icon": "trending-up",
+      "fr": {
+        "title": "Growth Engine",
+        "headline": "+40% conversion leads",
+        "description": "Bot WhatsApp intelligent qui qualifie vos prospects 24/7 pendant que vous vous concentrez sur la clôture.",
+        "longDescription": "Automatisez l'acquisition et la qualification des leads avec notre moteur de croissance alimenté par l'IA. Scoring intelligent, nurturing personnalisé et intégration CRM native.",
+        "tags": ["Smart CRM", "WhatsApp Bot", "Lead Scoring"],
+        "benefits": [
+          "Qualification automatique des leads",
+          "Nurturing multi-canal personnalisé",
+          "Score prédictif de conversion",
+          "Attribution marketing précise"
+        ],
+        "metrics": {
+          "primary": "+40%",
+          "primaryLabel": "conversion",
+          "secondary": "24/7",
+          "secondaryLabel": "qualification auto"
+        },
+        "cta": "Booster ma croissance"
+      },
+      "en": {
+        "title": "Growth Engine",
+        "headline": "+40% lead conversion",
+        "description": "Intelligent WhatsApp bot that qualifies your prospects 24/7 while you focus on closing deals.",
+        "longDescription": "Automate lead acquisition and qualification with our AI-powered growth engine. Intelligent scoring, personalized nurturing, and native CRM integration.",
+        "tags": ["Smart CRM", "WhatsApp Bot", "Lead Scoring"],
+        "benefits": [
+          "Automated lead qualification",
+          "Personalized multi-channel nurturing",
+          "Predictive conversion score",
+          "Precise marketing attribution"
+        ],
+        "metrics": {
+          "primary": "+40%",
+          "primaryLabel": "conversion",
+          "secondary": "24/7",
+          "secondaryLabel": "auto qualification"
+        },
+        "cta": "Boost my growth"
+      }
+    },
+    {
+      "id": "marketing-automation",
+      "number": "04",
+      "color": "pink",
+      "video": "assets/videos/marketing/marketing-1.mp4",
+      "icon": "megaphone",
+      "fr": {
+        "title": "Marketing Automation",
+        "headline": "3x plus de leads qualifiés",
+        "description": "Campagnes qui s'optimisent automatiquement. Contenu hyper-personnalisé généré par IA à l'échelle.",
+        "longDescription": "Créez des campagnes marketing qui apprennent et s'améliorent en continu. Notre IA génère du contenu personnalisé, optimise les envois et maximise l'engagement sur tous vos canaux.",
+        "tags": ["Auto Campaigns", "AI Content", "Real ROI"],
+        "benefits": [
+          "Génération de contenu IA",
+          "A/B testing automatisé",
+          "Segmentation dynamique",
+          "Attribution multi-touch"
+        ],
+        "metrics": {
+          "primary": "3x",
+          "primaryLabel": "plus de leads",
+          "secondary": "-60%",
+          "secondaryLabel": "coût acquisition"
+        },
+        "cta": "Automatiser mon marketing"
+      },
+      "en": {
+        "title": "Marketing Automation",
+        "headline": "3x more qualified leads",
+        "description": "Self-optimizing campaigns. Hyper-personalized AI-generated content at scale.",
+        "longDescription": "Create marketing campaigns that learn and improve continuously. Our AI generates personalized content, optimizes sends, and maximizes engagement across all your channels.",
+        "tags": ["Auto Campaigns", "AI Content", "Real ROI"],
+        "benefits": [
+          "AI content generation",
+          "Automated A/B testing",
+          "Dynamic segmentation",
+          "Multi-touch attribution"
+        ],
+        "metrics": {
+          "primary": "3x",
+          "primaryLabel": "more leads",
+          "secondary": "-60%",
+          "secondaryLabel": "acquisition cost"
+        },
+        "cta": "Automate my marketing"
+      }
+    },
+    {
+      "id": "brand-experience",
+      "number": "05",
+      "color": "blue",
+      "video": "assets/videos/connectivity/connectivity-1.mp4",
+      "icon": "palette",
+      "fr": {
+        "title": "Brand & Experience",
+        "headline": "Site en 2 semaines",
+        "description": "Identité visuelle complète, sites web performants et design system cohérent pour une présence digitale impactante.",
+        "longDescription": "De la stratégie de marque au déploiement digital complet. Nous créons des expériences utilisateur mémorables avec un design system évolutif et des sites web optimisés pour la conversion.",
+        "tags": ["Brand Design", "Web Creation", "Design System"],
+        "benefits": [
+          "Identité de marque complète",
+          "Sites web haute conversion",
+          "Design system documenté",
+          "Optimisation UX/UI continue"
+        ],
+        "metrics": {
+          "primary": "2 sem",
+          "primaryLabel": "mise en ligne",
+          "secondary": "+85%",
+          "secondaryLabel": "satisfaction UX"
+        },
+        "cta": "Créer mon identité"
+      },
+      "en": {
+        "title": "Brand & Experience",
+        "headline": "Website in 2 weeks",
+        "description": "Complete visual identity, high-performing websites, and cohesive design system for an impactful digital presence.",
+        "longDescription": "From brand strategy to complete digital deployment. We create memorable user experiences with a scalable design system and conversion-optimized websites.",
+        "tags": ["Brand Design", "Web Creation", "Design System"],
+        "benefits": [
+          "Complete brand identity",
+          "High-conversion websites",
+          "Documented design system",
+          "Continuous UX/UI optimization"
+        ],
+        "metrics": {
+          "primary": "2 wks",
+          "primaryLabel": "go-live",
+          "secondary": "+85%",
+          "secondaryLabel": "UX satisfaction"
+        },
+        "cta": "Create my identity"
+      }
+    },
+    {
+      "id": "system-integration",
+      "number": "06",
+      "color": "teal",
+      "video": "assets/videos/connectivity/connectivity-3.mp4",
+      "icon": "link",
+      "fr": {
+        "title": "System Integration",
+        "headline": "50+ connecteurs natifs",
+        "description": "Odoo, SAP, Salesforce, Microsoft 365... Tous vos systèmes qui communiquent enfin en temps réel.",
+        "longDescription": "Éliminez les silos de données avec notre plateforme d'intégration universelle. Synchronisation bidirectionnelle en temps réel, mapping intelligent et monitoring centralisé de tous vos flux.",
+        "tags": ["API Magic", "Real-time Sync", "Universal"],
+        "benefits": [
+          "Connecteurs pré-construits",
+          "Synchronisation temps réel",
+          "Transformation de données IA",
+          "Monitoring et alertes"
+        ],
+        "metrics": {
+          "primary": "50+",
+          "primaryLabel": "connecteurs",
+          "secondary": "<1s",
+          "secondaryLabel": "latence sync"
+        },
+        "cta": "Connecter mes systèmes"
+      },
+      "en": {
+        "title": "System Integration",
+        "headline": "50+ native connectors",
+        "description": "Odoo, SAP, Salesforce, Microsoft 365... All your systems finally communicating in real-time.",
+        "longDescription": "Eliminate data silos with our universal integration platform. Real-time bidirectional sync, intelligent mapping, and centralized monitoring of all your data flows.",
+        "tags": ["API Magic", "Real-time Sync", "Universal"],
+        "benefits": [
+          "Pre-built connectors",
+          "Real-time synchronization",
+          "AI data transformation",
+          "Monitoring and alerts"
+        ],
+        "metrics": {
+          "primary": "50+",
+          "primaryLabel": "connectors",
+          "secondary": "<1s",
+          "secondaryLabel": "sync latency"
+        },
+        "cta": "Connect my systems"
+      }
+    },
+    {
+      "id": "digital-defense",
+      "number": "07",
+      "color": "red",
+      "video": "assets/videos/cyber/cyber-1.mp4",
+      "icon": "shield",
+      "fr": {
+        "title": "Digital Defense",
+        "headline": "99.9% uptime garanti",
+        "description": "Protection IA 24/7, détection de menaces en temps réel et conformité RGPD automatisée.",
+        "longDescription": "Sécurisez votre infrastructure avec notre bouclier IA. Détection proactive des menaces, réponse automatisée aux incidents et conformité réglementaire continue sans effort manuel.",
+        "tags": ["AI Security", "Compliance", "24/7 Watch"],
+        "benefits": [
+          "Détection menaces temps réel",
+          "Réponse automatisée incidents",
+          "Audit conformité continu",
+          "Backup et recovery"
+        ],
+        "metrics": {
+          "primary": "99.9%",
+          "primaryLabel": "uptime",
+          "secondary": "<5min",
+          "secondaryLabel": "réponse incident"
+        },
+        "cta": "Sécuriser mon entreprise"
+      },
+      "en": {
+        "title": "Digital Defense",
+        "headline": "99.9% uptime guaranteed",
+        "description": "24/7 AI protection, real-time threat detection, and automated GDPR compliance.",
+        "longDescription": "Secure your infrastructure with our AI shield. Proactive threat detection, automated incident response, and continuous regulatory compliance without manual effort.",
+        "tags": ["AI Security", "Compliance", "24/7 Watch"],
+        "benefits": [
+          "Real-time threat detection",
+          "Automated incident response",
+          "Continuous compliance audit",
+          "Backup and recovery"
+        ],
+        "metrics": {
+          "primary": "99.9%",
+          "primaryLabel": "uptime",
+          "secondary": "<5min",
+          "secondaryLabel": "incident response"
+        },
+        "cta": "Secure my business"
+      }
+    },
+    {
+      "id": "enterprise-platform",
+      "number": "08",
+      "color": "gold",
+      "video": "assets/videos/industrial/industrial-3.mp4",
+      "icon": "building",
+      "fr": {
+        "title": "Enterprise Platform",
+        "headline": "Go-live en 6 semaines",
+        "description": "ERP complet sur-mesure, modules personnalisés et migration de données incluse. Votre système central unifié.",
+        "longDescription": "Déployez un ERP enterprise-grade adapté à vos processus métier. Architecture modulaire, personnalisation illimitée et accompagnement expert de la conception au go-live.",
+        "tags": ["Full Stack", "Custom Built", "Rapid Deploy"],
+        "benefits": [
+          "ERP modulaire complet",
+          "Personnalisation illimitée",
+          "Migration données incluse",
+          "Support dédié 24/7"
+        ],
+        "metrics": {
+          "primary": "6 sem",
+          "primaryLabel": "go-live",
+          "secondary": "100%",
+          "secondaryLabel": "sur-mesure"
+        },
+        "cta": "Déployer mon ERP"
+      },
+      "en": {
+        "title": "Enterprise Platform",
+        "headline": "Go-live in 6 weeks",
+        "description": "Complete custom ERP, personalized modules, and data migration included. Your unified central system.",
+        "longDescription": "Deploy an enterprise-grade ERP tailored to your business processes. Modular architecture, unlimited customization, and expert support from design to go-live.",
+        "tags": ["Full Stack", "Custom Built", "Rapid Deploy"],
+        "benefits": [
+          "Complete modular ERP",
+          "Unlimited customization",
+          "Data migration included",
+          "Dedicated 24/7 support"
+        ],
+        "metrics": {
+          "primary": "6 wks",
+          "primaryLabel": "go-live",
+          "secondary": "100%",
+          "secondaryLabel": "custom-built"
+        },
+        "cta": "Deploy my ERP"
+      }
+    }
+  ],
+  "vocabulary": {
+    "fr": {
+      "sectionTitle": "8 Modules IA Sur-Mesure",
+      "sectionSubtitle": "Architecture modulaire qui s'adapte à vos besoins. Activez uniquement ce dont vous avez besoin.",
+      "playgroundCta": "Construisez votre architecture idéale",
+      "playgroundDesc": "Utilisez notre Playground interactif pour assembler visuellement les modules dont vous avez besoin.",
+      "openPlayground": "Ouvrir le Playground",
+      "learnMore": "En savoir plus",
+      "watchDemo": "Voir la démo",
+      "industriesLabel": "Industries ciblées",
+      "industries": ["Transport", "BTP", "Mines", "Agriculture", "Industrie", "Services"]
+    },
+    "en": {
+      "sectionTitle": "8 Custom AI Modules",
+      "sectionSubtitle": "Modular architecture that adapts to your needs. Activate only what you need.",
+      "playgroundCta": "Build your ideal architecture",
+      "playgroundDesc": "Use our interactive Playground to visually assemble the modules you need.",
+      "openPlayground": "Open Playground",
+      "learnMore": "Learn more",
+      "watchDemo": "Watch demo",
+      "industriesLabel": "Target industries",
+      "industries": ["Transport", "Construction", "Mining", "Agriculture", "Manufacturing", "Services"]
+    }
+  }
+}

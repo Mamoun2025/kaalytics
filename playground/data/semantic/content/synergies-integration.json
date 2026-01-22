@@ -1,0 +1,259 @@
+{
+  "dimension": "integration",
+  "dimension_name": "Connectivité",
+  "version": "1.0",
+  "total_connections": 28,
+  "connections": {
+    "integ-universal+integ-sync": {
+      "name": "Intégration Temps Réel",
+      "tagline": "Connecté et synchronisé",
+      "description": "Le connecteur relie les systèmes, le sync assure la fraîcheur. Données unifiées et instantanées.",
+      "impact": "Intégrations temps réel sans code custom",
+      "narrative_short": "Vos systèmes sont connectés ET synchronisés en temps réel.",
+      "narrative_full": "Le Connecteur Universel établit les ponts entre vos applications. Le Sync Temps Réel fait circuler les données instantanément. Résultat : une commande e-commerce se retrouve dans l'ERP en secondes, pas en heures. L'intégration n'est plus un processus batch nocturne."
+    },
+    "integ-universal+integ-api": {
+      "name": "Plateforme d'Intégration",
+      "tagline": "Connectez et exposez",
+      "description": "Le connecteur intègre, le hub API expose. Vos données sont connectées et accessibles.",
+      "impact": "Plateforme d'intégration complète",
+      "narrative_short": "Vos systèmes sont intégrés et leurs données exposées via APIs.",
+      "narrative_full": "Le Connecteur Universel relie vos systèmes entre eux. Le Hub API expose ces données unifiées vers l'extérieur. Vos partenaires, vos développeurs ont accès à une vue cohérente de vos données via des APIs standardisées."
+    },
+    "integ-universal+integ-etl": {
+      "name": "Intégration Qualitative",
+      "tagline": "Connecté et transformé",
+      "description": "Le connecteur extrait, l'ETL transforme. Les données arrivent propres et formatées.",
+      "impact": "Données intégrées et de qualité",
+      "narrative_short": "Les données sont connectées ET nettoyées automatiquement.",
+      "narrative_full": "Le Connecteur Universel sait parler à tous vos systèmes. Le Pipeline ETL sait transformer les données. Ensemble, ils créent un flux où les données brutes de la source arrivent propres, enrichies et formatées dans la destination."
+    },
+    "integ-universal+integ-iot": {
+      "name": "IoT Intégré",
+      "tagline": "Capteurs dans le SI",
+      "description": "L'IoT capture les données terrain, le connecteur les intègre au SI. Monde physique unifié.",
+      "impact": "Données terrain intégrées au SI central",
+      "narrative_short": "Les données de vos capteurs s'intègrent à tous vos systèmes.",
+      "narrative_full": "La Passerelle IoT collecte les données du monde physique : température, position, consommation. Le Connecteur Universel les route vers l'ERP, le CRM, le BI. Les données terrain ne restent plus isolées dans un système dédié."
+    },
+    "integ-universal+integ-legacy": {
+      "name": "Modernisation Totale",
+      "tagline": "Tout communique avec tout",
+      "description": "Le legacy s'ouvre, le connecteur relie. Du mainframe au cloud, tout s'intègre.",
+      "impact": "Aucun système exclu de l'intégration",
+      "narrative_short": "Vos anciens et nouveaux systèmes communiquent enfin ensemble.",
+      "narrative_full": "Le Pont Legacy fait parler l'AS400, l'Access, le vieux logiciel métier. Le Connecteur Universel les relie aux systèmes modernes. Le ERP cloud dialogue avec le mainframe. La transformation digitale n'exclut personne."
+    },
+    "integ-universal+integ-queue": {
+      "name": "Intégration Résiliente",
+      "tagline": "Connecté et garanti",
+      "description": "Le connecteur relie, la file garantit. Intégrations robustes aux pannes.",
+      "impact": "Zéro perte de données même en cas de problème",
+      "narrative_short": "Vos intégrations résistent aux pannes et aux pics de charge.",
+      "narrative_full": "Le Connecteur Universel sait parler à tous les systèmes. La File de Messages garantit que chaque échange arrive à destination, même si le destinataire est temporairement indisponible. L'intégration devient antifragile."
+    },
+    "integ-universal+integ-monitor": {
+      "name": "Intégration Observable",
+      "tagline": "Connecté et visible",
+      "description": "Le connecteur intègre, le monitoring surveille. Visibilité totale sur les flux.",
+      "impact": "Chaque intégration mesurée et surveillée",
+      "narrative_short": "Chaque flux d'intégration est visible et surveillé en temps réel.",
+      "narrative_full": "Le Connecteur Universel crée les ponts entre systèmes. Le Monitoring Flux donne une visibilité complète sur chaque échange. Volumes, latences, erreurs : tout est visible. Les problèmes sont détectés avant d'impacter le métier."
+    },
+    "integ-sync+integ-api": {
+      "name": "APIs Temps Réel",
+      "tagline": "APIs toujours fraîches",
+      "description": "Le sync maintient les données fraîches, les APIs les exposent. Temps réel accessible.",
+      "impact": "APIs avec données toujours à jour",
+      "narrative_short": "Vos APIs exposent des données synchronisées en temps réel.",
+      "narrative_full": "Le Sync Temps Réel assure que les données sont toujours fraîches. Le Hub API expose ces données via des interfaces standardisées. Les consommateurs d'API obtiennent toujours la dernière version des données, pas une copie de la veille."
+    },
+    "integ-sync+integ-etl": {
+      "name": "Sync Qualité",
+      "tagline": "Temps réel et propre",
+      "description": "L'ETL transforme, le sync propage. Données de qualité en temps réel.",
+      "impact": "Données transformées ET synchronisées instantanément",
+      "narrative_short": "Les données sont nettoyées ET synchronisées en temps réel.",
+      "narrative_full": "Le compromis habituel : temps réel OU qualité. Plus maintenant. L'ETL transforme les données à la volée, le Sync les propage instantanément. Les systèmes cibles reçoivent des données propres en temps réel."
+    },
+    "integ-sync+integ-iot": {
+      "name": "IoT Temps Réel",
+      "tagline": "Le terrain en direct",
+      "description": "L'IoT capture, le sync propage. Données terrain disponibles instantanément partout.",
+      "impact": "Données capteurs en temps réel dans tous les systèmes",
+      "narrative_short": "Les données de vos capteurs arrivent en temps réel dans tous vos systèmes.",
+      "narrative_full": "Un capteur de température signale une anomalie. En moins d'une seconde, l'alerte est dans le système de maintenance, le dashboard direction, et le téléphone du technicien. Le Sync Temps Réel fait du terrain un flux continu de données exploitables."
+    },
+    "integ-sync+integ-legacy": {
+      "name": "Legacy Temps Réel",
+      "tagline": "L'ancien à jour",
+      "description": "Le legacy s'ouvre, le sync le maintient à jour. Vieux systèmes, données fraîches.",
+      "impact": "Systèmes legacy avec données temps réel",
+      "narrative_short": "Vos anciens systèmes reçoivent les données en temps réel.",
+      "narrative_full": "L'AS400 n'était pas conçu pour le temps réel. Mais avec le Pont Legacy qui l'expose et le Sync qui l'alimente, il reçoit les commandes e-commerce aussi vite que le système moderne. Le legacy rattrape son retard."
+    },
+    "integ-sync+integ-queue": {
+      "name": "Sync Garanti",
+      "tagline": "Temps réel ET fiable",
+      "description": "Le sync pousse en temps réel, la file garantit la livraison. Vitesse et fiabilité.",
+      "impact": "Synchronisation temps réel sans perte",
+      "narrative_short": "La synchronisation temps réel est garantie même en cas de problème.",
+      "narrative_full": "Le Sync Temps Réel pousse les données instantanément. Mais si le destinataire est indisponible ? La File de Messages prend le relais, stocke, et livre dès que possible. Le temps réel n'est plus incompatible avec la fiabilité."
+    },
+    "integ-sync+integ-monitor": {
+      "name": "Sync Observable",
+      "tagline": "Temps réel visible",
+      "description": "Le sync propage, le monitoring mesure. Performance de synchronisation visible.",
+      "impact": "Latence de sync mesurée et optimisée",
+      "narrative_short": "La performance de synchronisation est visible et mesurée en temps réel.",
+      "narrative_full": "Le dashboard affiche la latence de chaque flux de sync. 50ms vers le CRM, 120ms vers le ERP, 2s vers le legacy. Les goulots d'étranglement sont visibles, les optimisations sont ciblées, les SLA sont mesurables."
+    },
+    "integ-api+integ-etl": {
+      "name": "APIs Transformées",
+      "tagline": "Données API prêtes à l'emploi",
+      "description": "L'ETL transforme, les APIs exposent. Données consommables par les développeurs.",
+      "impact": "APIs avec données de qualité garantie",
+      "narrative_short": "Les données exposées par vos APIs sont automatiquement nettoyées et formatées.",
+      "narrative_full": "Les données brutes sont rarement idéales pour les APIs. L'ETL les transforme : nettoyage, enrichissement, agrégation. Les APIs exposent ensuite des données prêtes à l'emploi. Les développeurs consomment des données de qualité sans effort."
+    },
+    "integ-api+integ-iot": {
+      "name": "APIs IoT",
+      "tagline": "Capteurs accessibles par API",
+      "description": "L'IoT capture, les APIs exposent. Données terrain accessibles par programmation.",
+      "impact": "Données capteurs accessibles via API standards",
+      "narrative_short": "Les données de vos capteurs sont accessibles via des APIs standards.",
+      "narrative_full": "La Passerelle IoT parle le langage des capteurs : MQTT, Modbus, OPC-UA. Le Hub API traduit en REST standard. N'importe quel développeur peut consommer les données terrain sans connaître les protocoles industriels."
+    },
+    "integ-api+integ-legacy": {
+      "name": "Legacy APIfiée",
+      "tagline": "L'ancien devient moderne",
+      "description": "Le legacy s'expose, les APIs standardisent. Vieux systèmes, interfaces modernes.",
+      "impact": "Systèmes legacy accessibles via APIs modernes",
+      "narrative_short": "Vos anciens systèmes exposent des APIs REST modernes.",
+      "narrative_full": "L'AS400 expose maintenant une API REST. La base Access est accessible en JSON. Le vieux logiciel métier a des webhooks. Le Pont Legacy extrait, le Hub API normalise. L'ancien parle le langage du nouveau."
+    },
+    "integ-api+integ-queue": {
+      "name": "APIs Asynchrones",
+      "tagline": "APIs qui ne bloquent pas",
+      "description": "Les APIs reçoivent, la file traite. Appels API non-bloquants.",
+      "impact": "APIs rapides avec traitement garanti",
+      "narrative_short": "Vos APIs répondent vite et le traitement lourd se fait en arrière-plan.",
+      "narrative_full": "L'API reçoit la commande et répond en 50ms : 'Reçu'. La File de Messages garantit le traitement en arrière-plan : validation, routing, notification. L'appelant n'attend pas, le traitement est quand même garanti."
+    },
+    "integ-api+integ-monitor": {
+      "name": "APIs Surveillées",
+      "tagline": "Performance API visible",
+      "description": "Les APIs exposent, le monitoring mesure. Usage et performance API visibles.",
+      "impact": "Performance et usage des APIs mesurés",
+      "narrative_short": "L'usage et la performance de chaque API sont surveillés en temps réel.",
+      "narrative_full": "Le dashboard montre : 10,000 appels/heure sur l'API clients, 95ms de latence moyenne, 0.1% d'erreurs. Le monitoring détecte la dégradation avant que les utilisateurs ne la ressentent. Les quotas sont suivis, les abus détectés."
+    },
+    "integ-etl+integ-iot": {
+      "name": "IoT Nettoyé",
+      "tagline": "Données capteurs propres",
+      "description": "L'IoT capture brut, l'ETL nettoie. Données terrain exploitables.",
+      "impact": "Données IoT de qualité analytique",
+      "narrative_short": "Les données brutes de vos capteurs sont nettoyées et enrichies automatiquement.",
+      "narrative_full": "Les capteurs envoient des données brutes : valeurs manquantes, pics aberrants, formats variables. L'ETL filtre le bruit, interpole les trous, normalise les unités. Les données qui arrivent dans le BI sont prêtes pour l'analyse."
+    },
+    "integ-etl+integ-legacy": {
+      "name": "Legacy Modernisé",
+      "tagline": "Données anciennes, format moderne",
+      "description": "Le legacy extrait, l'ETL transforme. Données legacy dans formats modernes.",
+      "impact": "Données legacy exploitables par outils modernes",
+      "narrative_short": "Les données de vos anciens systèmes sont transformées en formats modernes.",
+      "narrative_full": "Le legacy stocke les dates en AAAAMMJJ, les montants en centimes, les codes en cryptique. L'ETL transforme en ISO8601, en décimaux, en labels clairs. Les outils modernes peuvent enfin exploiter les trésors enfouis dans le legacy."
+    },
+    "integ-etl+integ-queue": {
+      "name": "ETL Résilient",
+      "tagline": "Transformation garantie",
+      "description": "L'ETL transforme, la file garantit. Chaque donnée est traitée même en cas de problème.",
+      "impact": "Zéro donnée perdue pendant la transformation",
+      "narrative_short": "Chaque donnée à transformer est garantie d'être traitée.",
+      "narrative_full": "L'ETL traite des milliers de lignes par seconde. Mais si le serveur redémarre ? La File de Messages a tout gardé. À la reprise, le traitement reprend exactement où il s'était arrêté. Aucune donnée n'est perdue."
+    },
+    "integ-etl+integ-monitor": {
+      "name": "ETL Visible",
+      "tagline": "Transformations surveillées",
+      "description": "L'ETL transforme, le monitoring trace. Chaque transformation visible et mesurée.",
+      "impact": "Qualité data prouvée et traçable",
+      "narrative_short": "Chaque transformation de données est visible et traçable.",
+      "narrative_full": "Le dashboard montre : 1M de lignes traitées ce jour, 2,000 rejetées pour qualité insuffisante, 50 enrichies depuis sources externes. L'auditeur voit exactement ce qui est arrivé à chaque donnée. La qualité est prouvée, pas déclarée."
+    },
+    "integ-iot+integ-legacy": {
+      "name": "IoT vers Legacy",
+      "tagline": "Capteurs parlent au mainframe",
+      "description": "L'IoT capture, le legacy consomme. Données terrain dans les vieux systèmes.",
+      "impact": "Systèmes legacy enrichis de données temps réel",
+      "narrative_short": "Les données de vos capteurs alimentent vos anciens systèmes.",
+      "narrative_full": "Le capteur sur la machine envoie ses données. Elles arrivent non seulement dans le dashboard moderne, mais aussi dans l'AS400 qui gère la production. Le legacy reçoit les données IoT comme s'il avait été conçu pour."
+    },
+    "integ-iot+integ-queue": {
+      "name": "IoT Fiable",
+      "tagline": "Aucune donnée capteur perdue",
+      "description": "L'IoT capture, la file stocke. Données terrain garanties même en pic.",
+      "impact": "100% des données capteurs préservées",
+      "narrative_short": "Aucune donnée de vos capteurs n'est perdue même en cas de pic.",
+      "narrative_full": "100 capteurs qui envoient 10 mesures par seconde = 1000 messages/seconde. La File de Messages absorbe le volume, stocke, délivre à la vitesse que le consommateur peut supporter. Pic de charge ou panne : zéro donnée perdue."
+    },
+    "integ-iot+integ-monitor": {
+      "name": "IoT Surveillé",
+      "tagline": "Capteurs sous contrôle",
+      "description": "L'IoT capture, le monitoring surveille. Santé et performance des capteurs visibles.",
+      "impact": "Disponibilité capteurs suivie et alertée",
+      "narrative_short": "La santé et la performance de tous vos capteurs sont surveillées.",
+      "narrative_full": "Le capteur de la zone 3 n'a plus envoyé depuis 10 minutes. Alerte. La latence des capteurs usine a augmenté de 50%. Alerte. Le monitoring surveille non seulement les données mais la santé des sources de données."
+    },
+    "integ-legacy+integ-queue": {
+      "name": "Legacy Découplé",
+      "tagline": "L'ancien sans le contraindre",
+      "description": "Le legacy s'ouvre, la file tamponne. Intégration qui respecte les limites du legacy.",
+      "impact": "Legacy intégré sans risque de surcharge",
+      "narrative_short": "Vos anciens systèmes sont intégrés sans risque de les surcharger.",
+      "narrative_full": "Le legacy ne supporte que 10 transactions par seconde. Le monde moderne en envoie 100. La File de Messages tamponne, régule, délivre au rythme que le legacy peut supporter. Intégration sans risque de planter l'ancien."
+    },
+    "integ-legacy+integ-monitor": {
+      "name": "Legacy Visible",
+      "tagline": "L'ancien sous surveillance",
+      "description": "Le legacy s'intègre, le monitoring surveille. Santé des intégrations legacy visible.",
+      "impact": "Performance des ponts legacy mesurée",
+      "narrative_short": "Les intégrations avec vos anciens systèmes sont surveillées en temps réel.",
+      "narrative_full": "Le dashboard montre la santé du pont vers l'AS400 : 99.5% de disponibilité, 200ms de latence moyenne, 2 timeouts ce mois. Les problèmes d'intégration legacy ne sont plus des surprises. Ils sont anticipés et gérés."
+    },
+    "integ-queue+integ-monitor": {
+      "name": "Messaging Surveillé",
+      "tagline": "Files sous contrôle",
+      "description": "Les files stockent, le monitoring surveille. Santé du messaging visible.",
+      "impact": "Files de messages toujours sous contrôle",
+      "narrative_short": "L'état de toutes vos files de messages est visible en temps réel.",
+      "narrative_full": "Le dashboard affiche : file commandes = 150 messages en attente, traitement = 50/seconde, vide dans 3 secondes. File notifications = 10,000 messages, alerte congestion. Le monitoring permet d'anticiper avant que la file ne déborde."
+    }
+  },
+  "multi_connections": {
+    "integ-universal+integ-sync+integ-monitor": {
+      "name": "Plateforme d'Intégration Complète",
+      "description": "Connexion + Synchronisation + Monitoring = plateforme d'intégration de niveau enterprise.",
+      "impact": "Tous les systèmes connectés, synchronisés et surveillés"
+    },
+    "integ-api+integ-etl+integ-monitor": {
+      "name": "APIs de Qualité",
+      "description": "Exposition + Transformation + Monitoring = APIs avec données de qualité surveillée.",
+      "impact": "APIs fiables avec SLA mesurés"
+    },
+    "integ-iot+integ-etl+integ-sync": {
+      "name": "IoT Temps Réel Qualité",
+      "description": "Capture + Transformation + Synchronisation = données terrain temps réel et propres.",
+      "impact": "Données capteurs exploitables en temps réel"
+    },
+    "integ-legacy+integ-universal+integ-api": {
+      "name": "Modernisation Legacy",
+      "description": "Pont + Connecteur + APIs = legacy entièrement intégré et exposé.",
+      "impact": "Anciens systèmes parfaitement intégrés"
+    },
+    "integ-queue+integ-monitor+integ-sync": {
+      "name": "Messaging Enterprise",
+      "description": "Files + Monitoring + Sync = messaging temps réel, fiable et observable.",
+      "impact": "Communication inter-systèmes de niveau enterprise"
+    }
+  }
+}

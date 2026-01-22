@@ -1,0 +1,671 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Unified module relationships and affinities",
+    "affinity_scale": "0-100 (0=incompatible, 50=neutral, 100=perfect synergy)"
+  },
+
+  "dimension_affinities": {
+    "operations": {
+      "operations": 80,
+      "intelligence": 85,
+      "integration": 90,
+      "security": 70,
+      "enterprise": 75,
+      "growth": 50,
+      "engagement": 40,
+      "brand": 30
+    },
+    "intelligence": {
+      "operations": 85,
+      "intelligence": 75,
+      "integration": 80,
+      "security": 75,
+      "enterprise": 85,
+      "growth": 90,
+      "engagement": 70,
+      "brand": 50
+    },
+    "growth": {
+      "operations": 50,
+      "intelligence": 90,
+      "integration": 65,
+      "security": 60,
+      "enterprise": 80,
+      "growth": 85,
+      "engagement": 95,
+      "brand": 85
+    },
+    "engagement": {
+      "operations": 40,
+      "intelligence": 70,
+      "integration": 60,
+      "security": 55,
+      "enterprise": 60,
+      "growth": 95,
+      "engagement": 80,
+      "brand": 90
+    },
+    "brand": {
+      "operations": 30,
+      "intelligence": 50,
+      "integration": 55,
+      "security": 45,
+      "enterprise": 65,
+      "growth": 85,
+      "engagement": 90,
+      "brand": 70
+    },
+    "integration": {
+      "operations": 90,
+      "intelligence": 80,
+      "integration": 75,
+      "security": 85,
+      "enterprise": 95,
+      "growth": 65,
+      "engagement": 60,
+      "brand": 55
+    },
+    "security": {
+      "operations": 70,
+      "intelligence": 75,
+      "integration": 85,
+      "security": 80,
+      "enterprise": 90,
+      "growth": 60,
+      "engagement": 55,
+      "brand": 45
+    },
+    "enterprise": {
+      "operations": 75,
+      "intelligence": 85,
+      "integration": 95,
+      "security": 90,
+      "enterprise": 80,
+      "growth": 80,
+      "engagement": 60,
+      "brand": 65
+    }
+  },
+
+  "module_pairs": {
+    "ops-fleet+ops-map": {
+      "affinity": 98,
+      "flow": "bidirectional",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Visualisation flotte sur carte en temps réel"
+    },
+    "ops-fleet+ops-routes": {
+      "affinity": 95,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Trajets optimisés selon positions réelles"
+    },
+    "ops-fleet+ops-maintenance": {
+      "affinity": 92,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Maintenance planifiée selon usage réel"
+    },
+    "ops-map+ops-routes": {
+      "affinity": 90,
+      "flow": "bidirectional",
+      "priority": 2,
+      "synergy_type": "natural",
+      "reason": "Itinéraires visualisés et optimisés"
+    },
+    "ops-maintenance+integ-iot": {
+      "affinity": 95,
+      "flow": "to-from",
+      "priority": 1,
+      "synergy_type": "enabling",
+      "reason": "Capteurs qui prédisent les pannes"
+    },
+    "ops-inventory+intel-forecast": {
+      "affinity": 88,
+      "flow": "to-from",
+      "priority": 2,
+      "synergy_type": "enabling",
+      "reason": "Stocks ajustés selon prévisions demande"
+    },
+    "ops-scheduling+ent-hr": {
+      "affinity": 90,
+      "flow": "bidirectional",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Affectations selon compétences et disponibilités"
+    },
+    "ops-kpi+intel-dashboards": {
+      "affinity": 92,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "KPIs opérationnels dans dashboards unifiés"
+    },
+    "ops-alerts+sec-detect": {
+      "affinity": 85,
+      "flow": "bidirectional",
+      "priority": 2,
+      "synergy_type": "complementary",
+      "reason": "Alertes opérationnelles et sécuritaires unifiées"
+    },
+
+    "ops-sites+ops-machines": {
+      "affinity": 96,
+      "flow": "bidirectional",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Machines affectées aux chantiers"
+    },
+    "ops-sites+ops-field": {
+      "affinity": 94,
+      "flow": "bidirectional",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Rapports terrain liés aux chantiers"
+    },
+    "ops-sites+ops-scheduling": {
+      "affinity": 92,
+      "flow": "bidirectional",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Équipes planifiées par chantier"
+    },
+    "ops-sites+ent-project": {
+      "affinity": 90,
+      "flow": "bidirectional",
+      "priority": 1,
+      "synergy_type": "enabling",
+      "reason": "Chantiers gérés comme projets"
+    },
+    "ops-sites+ops-weather": {
+      "affinity": 88,
+      "flow": "to-from",
+      "priority": 2,
+      "synergy_type": "enabling",
+      "reason": "Impact météo sur planning chantier"
+    },
+    "ops-machines+ops-maintenance": {
+      "affinity": 94,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Maintenance préventive des engins"
+    },
+    "ops-machines+integ-iot": {
+      "affinity": 90,
+      "flow": "to-from",
+      "priority": 1,
+      "synergy_type": "enabling",
+      "reason": "Télémétrie machines en temps réel"
+    },
+    "ops-machines+ops-fleet": {
+      "affinity": 85,
+      "flow": "bidirectional",
+      "priority": 2,
+      "synergy_type": "complementary",
+      "reason": "Flotte véhicules + parc machines"
+    },
+    "ops-field+ops-alerts": {
+      "affinity": 88,
+      "flow": "from-to",
+      "priority": 2,
+      "synergy_type": "natural",
+      "reason": "Alertes basées sur rapports terrain"
+    },
+    "ops-field+sec-compliance": {
+      "affinity": 85,
+      "flow": "from-to",
+      "priority": 2,
+      "synergy_type": "enabling",
+      "reason": "Preuves conformité depuis le terrain"
+    },
+    "ops-weather+ops-routes": {
+      "affinity": 86,
+      "flow": "to-from",
+      "priority": 2,
+      "synergy_type": "enabling",
+      "reason": "Routes adaptées aux conditions météo"
+    },
+    "ops-weather+ops-scheduling": {
+      "affinity": 84,
+      "flow": "to-from",
+      "priority": 2,
+      "synergy_type": "enabling",
+      "reason": "Planning ajusté selon prévisions"
+    },
+
+    "intel-banks+intel-cashflow": {
+      "affinity": 98,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Flux trésorerie depuis toutes les banques"
+    },
+    "intel-ml+intel-forecast": {
+      "affinity": 95,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "enabling",
+      "reason": "Prévisions boostées par IA"
+    },
+    "intel-ml+growth-scoring": {
+      "affinity": 92,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "enabling",
+      "reason": "Scoring leads par machine learning"
+    },
+    "intel-ml+growth-churn": {
+      "affinity": 90,
+      "flow": "from-to",
+      "priority": 2,
+      "synergy_type": "enabling",
+      "reason": "Prédiction attrition par IA"
+    },
+    "intel-reports+ent-erp": {
+      "affinity": 88,
+      "flow": "to-from",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Rapports générés depuis données ERP"
+    },
+    "intel-margins+growth-insights": {
+      "affinity": 85,
+      "flow": "bidirectional",
+      "priority": 2,
+      "synergy_type": "complementary",
+      "reason": "Rentabilité croisée avec profils clients"
+    },
+    "intel-cashflow+ent-purchase": {
+      "affinity": 87,
+      "flow": "bidirectional",
+      "priority": 2,
+      "synergy_type": "natural",
+      "reason": "Achats calés sur trésorerie"
+    },
+    "intel-dashboards+ops-kpi": {
+      "affinity": 92,
+      "flow": "to-from",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "KPIs ops dans dashboards exécutifs"
+    },
+    "intel-alerts+sec-detect": {
+      "affinity": 88,
+      "flow": "bidirectional",
+      "priority": 2,
+      "synergy_type": "complementary",
+      "reason": "Alertes business et sécurité unifiées"
+    },
+
+    "growth-crm+growth-scoring": {
+      "affinity": 98,
+      "flow": "bidirectional",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Leads scorés automatiquement dans CRM"
+    },
+    "growth-crm+growth-pipeline": {
+      "affinity": 96,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Pipeline alimenté depuis CRM"
+    },
+    "growth-crm+growth-insights": {
+      "affinity": 94,
+      "flow": "bidirectional",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Vue 360° enrichit le CRM"
+    },
+    "growth-crm+engage-campaigns": {
+      "affinity": 90,
+      "flow": "bidirectional",
+      "priority": 1,
+      "synergy_type": "enabling",
+      "reason": "Campagnes ciblées par données CRM"
+    },
+    "growth-whatsapp+growth-followup": {
+      "affinity": 92,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Relances via WhatsApp automatisées"
+    },
+    "growth-whatsapp+engage-campaigns": {
+      "affinity": 85,
+      "flow": "bidirectional",
+      "priority": 2,
+      "synergy_type": "enabling",
+      "reason": "Campagnes multicanal incluant WhatsApp"
+    },
+    "growth-pipeline+intel-forecast": {
+      "affinity": 88,
+      "flow": "from-to",
+      "priority": 2,
+      "synergy_type": "enabling",
+      "reason": "Prévisions basées sur pipeline réel"
+    },
+    "growth-quotes+brand-docs": {
+      "affinity": 85,
+      "flow": "to-from",
+      "priority": 2,
+      "synergy_type": "enabling",
+      "reason": "Devis avec templates professionnels"
+    },
+    "growth-quotes+ent-erp": {
+      "affinity": 90,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Devis liés à la facturation ERP"
+    },
+    "growth-churn+growth-followup": {
+      "affinity": 88,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "enabling",
+      "reason": "Relances déclenchées par risque churn"
+    },
+
+    "engage-campaigns+engage-budget": {
+      "affinity": 95,
+      "flow": "bidirectional",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Budget optimisé par performance campagnes"
+    },
+    "engage-campaigns+engage-analytics": {
+      "affinity": 92,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Analytics des campagnes en temps réel"
+    },
+    "engage-campaigns+growth-crm": {
+      "affinity": 90,
+      "flow": "to-from",
+      "priority": 1,
+      "synergy_type": "enabling",
+      "reason": "Segmentation CRM pour ciblage"
+    },
+    "engage-content+brand-social": {
+      "affinity": 88,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Contenu généré pour réseaux sociaux"
+    },
+    "engage-content+engage-email": {
+      "affinity": 90,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Contenu personnalisé pour emails"
+    },
+    "engage-email+growth-crm": {
+      "affinity": 85,
+      "flow": "to-from",
+      "priority": 2,
+      "synergy_type": "enabling",
+      "reason": "Emails segmentés par données CRM"
+    },
+    "engage-attribution+engage-budget": {
+      "affinity": 92,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "enabling",
+      "reason": "Budget alloué selon attribution"
+    },
+    "engage-ab+intel-ml": {
+      "affinity": 80,
+      "flow": "to-from",
+      "priority": 2,
+      "synergy_type": "enabling",
+      "reason": "Tests A/B analysés par IA"
+    },
+
+    "brand-identity+brand-web": {
+      "affinity": 98,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Site web aligné sur identité"
+    },
+    "brand-identity+brand-system": {
+      "affinity": 95,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Design system basé sur identité"
+    },
+    "brand-web+engage-analytics": {
+      "affinity": 85,
+      "flow": "from-to",
+      "priority": 2,
+      "synergy_type": "enabling",
+      "reason": "Analytics web pour conversion"
+    },
+    "brand-web+growth-crm": {
+      "affinity": 82,
+      "flow": "from-to",
+      "priority": 2,
+      "synergy_type": "enabling",
+      "reason": "Leads web vers CRM"
+    },
+    "brand-motion+brand-social": {
+      "affinity": 90,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Motion design pour réseaux"
+    },
+    "brand-ui+ent-custom": {
+      "affinity": 88,
+      "flow": "to-from",
+      "priority": 1,
+      "synergy_type": "enabling",
+      "reason": "UI design pour modules custom"
+    },
+    "brand-docs+ent-erp": {
+      "affinity": 85,
+      "flow": "to-from",
+      "priority": 2,
+      "synergy_type": "natural",
+      "reason": "Documents ERP brandés"
+    },
+
+    "integ-universal+ent-erp": {
+      "affinity": 95,
+      "flow": "bidirectional",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "ERP connecté à tout l'écosystème"
+    },
+    "integ-sync+intel-banks": {
+      "affinity": 92,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "enabling",
+      "reason": "Sync temps réel des banques"
+    },
+    "integ-api+ent-custom": {
+      "affinity": 90,
+      "flow": "to-from",
+      "priority": 1,
+      "synergy_type": "enabling",
+      "reason": "APIs pour développements custom"
+    },
+    "integ-iot+ops-fleet": {
+      "affinity": 95,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Télémétrie flotte via IoT"
+    },
+    "integ-iot+ops-maintenance": {
+      "affinity": 93,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "enabling",
+      "reason": "Capteurs pour maintenance prédictive"
+    },
+    "integ-etl+intel-ml": {
+      "affinity": 88,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "enabling",
+      "reason": "Données nettoyées pour IA"
+    },
+    "integ-legacy+integ-universal": {
+      "affinity": 85,
+      "flow": "from-to",
+      "priority": 2,
+      "synergy_type": "natural",
+      "reason": "Legacy intégré via connecteur universel"
+    },
+    "integ-monitor+sec-detect": {
+      "affinity": 82,
+      "flow": "from-to",
+      "priority": 2,
+      "synergy_type": "complementary",
+      "reason": "Monitoring flux + détection anomalies"
+    },
+
+    "sec-detect+sec-response": {
+      "affinity": 98,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Détection déclenche réponse auto"
+    },
+    "sec-compliance+sec-audit": {
+      "affinity": 95,
+      "flow": "bidirectional",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Audit trail pour conformité"
+    },
+    "sec-access+ent-hr": {
+      "affinity": 90,
+      "flow": "to-from",
+      "priority": 1,
+      "synergy_type": "enabling",
+      "reason": "Droits alignés sur org RH"
+    },
+    "sec-encrypt+integ-sync": {
+      "affinity": 88,
+      "flow": "to-from",
+      "priority": 2,
+      "synergy_type": "enabling",
+      "reason": "Sync chiffrée de bout en bout"
+    },
+    "sec-backup+ent-erp": {
+      "affinity": 85,
+      "flow": "to-from",
+      "priority": 2,
+      "synergy_type": "enabling",
+      "reason": "Backup automatique données ERP"
+    },
+    "sec-pentest+integ-api": {
+      "affinity": 82,
+      "flow": "from-to",
+      "priority": 2,
+      "synergy_type": "enabling",
+      "reason": "Tests sécurité des APIs"
+    },
+
+    "ent-erp+intel-reports": {
+      "affinity": 92,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Rapports depuis données ERP"
+    },
+    "ent-erp+ent-hr": {
+      "affinity": 95,
+      "flow": "bidirectional",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "RH intégré dans ERP central"
+    },
+    "ent-erp+ent-purchase": {
+      "affinity": 93,
+      "flow": "bidirectional",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Achats gérés dans ERP"
+    },
+    "ent-custom+brand-ui": {
+      "affinity": 88,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "enabling",
+      "reason": "Modules custom avec belle UI"
+    },
+    "ent-deploy+ent-support": {
+      "affinity": 90,
+      "flow": "from-to",
+      "priority": 1,
+      "synergy_type": "natural",
+      "reason": "Déploiement suivi par support"
+    },
+    "ent-project+ent-hr": {
+      "affinity": 85,
+      "flow": "bidirectional",
+      "priority": 2,
+      "synergy_type": "natural",
+      "reason": "Ressources projets depuis RH"
+    },
+    "ent-docs+sec-access": {
+      "affinity": 82,
+      "flow": "to-from",
+      "priority": 2,
+      "synergy_type": "enabling",
+      "reason": "Docs sécurisés par droits"
+    }
+  },
+
+  "synergy_types": {
+    "natural": {
+      "description": "Synergie naturelle entre modules complémentaires",
+      "weight_boost": 10
+    },
+    "enabling": {
+      "description": "Un module enrichit les capacités de l'autre",
+      "weight_boost": 5
+    },
+    "complementary": {
+      "description": "Modules qui couvrent des aspects différents d'un même besoin",
+      "weight_boost": 3
+    }
+  },
+
+  "flow_patterns": {
+    "data_pipeline": {
+      "description": "Flux de données de la collecte à l'analyse",
+      "layers": ["data_sources", "data_processors", "data_outputs"],
+      "example_flow": ["integ-iot", "intel-ml", "intel-dashboards"]
+    },
+    "customer_journey": {
+      "description": "Parcours client de l'acquisition à la fidélisation",
+      "sequence": ["brand-web", "growth-crm", "growth-pipeline", "engage-campaigns", "growth-followup", "growth-churn"],
+      "example_flow": ["brand-web", "growth-crm", "growth-pipeline"]
+    },
+    "security_perimeter": {
+      "description": "Couche de sécurité entourant les systèmes",
+      "core": ["sec-detect", "sec-response"],
+      "extends_to": ["sec-access", "sec-audit", "sec-compliance", "sec-encrypt"]
+    },
+    "field_operations": {
+      "description": "Opérations terrain de la planification à l'exécution",
+      "sequence": ["ops-scheduling", "ops-sites", "ops-machines", "ops-field", "ops-alerts", "ops-kpi"],
+      "example_flow": ["ops-sites", "ops-machines", "ops-field"]
+    }
+  }
+}

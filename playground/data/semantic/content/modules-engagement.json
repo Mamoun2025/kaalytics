@@ -1,0 +1,191 @@
+{
+  "dimension": "engagement",
+  "dimension_name": "Marketing Automation",
+  "version": "1.0",
+  "modules": {
+    "engage-campaigns": {
+      "name": "Campagnes IA",
+      "tagline": "Des campagnes qui apprennent",
+      "description_short": "Campagnes marketing optimisées par l'intelligence artificielle. L'IA teste, apprend et améliore en continu.",
+      "description_full": "Les Campagnes IA révolutionnent le marketing digital. L'intelligence artificielle ne se contente pas d'exécuter : elle apprend. Chaque campagne génère des données, chaque donnée affine le modèle. Les audiences se segmentent automatiquement, les messages s'optimisent en temps réel, les budgets se réallouent vers ce qui fonctionne. Votre marketing devient plus intelligent chaque jour.",
+      "impact_business": {
+        "primary": "ROI campagnes amélioré de 45%",
+        "secondary": "Coût d'acquisition réduit de 30%",
+        "tertiary": "Temps de gestion campagnes divisé par 3"
+      },
+      "use_cases": [
+        "Campagnes publicitaires multi-plateformes",
+        "Optimisation automatique des audiences",
+        "A/B testing intelligent et continu",
+        "Réallocation budgétaire en temps réel"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos campagnes deviennent intelligentes. L'IA teste, apprend, optimise sans repos.",
+        "with_budget": "Campagnes IA + Budget Optimisé = chaque euro va où il rapporte le plus.",
+        "with_analytics": "Les analytics nourrissent l'IA. La boucle d'amélioration est bouclée.",
+        "with_attribution": "Vous savez d'où viennent les conversions. L'IA optimise vers ces sources."
+      }
+    },
+    "engage-content": {
+      "name": "Contenu Généré",
+      "tagline": "L'IA qui écrit pour vous",
+      "description_short": "Génération de contenu marketing par IA. Des textes, visuels et messages qui convertissent.",
+      "description_full": "Le Contenu Généré libère votre créativité des tâches répétitives. L'IA génère des variantes de titres, rédige des descriptions produits, crée des posts sociaux, adapte les messages par segment. Le ton est cohérent, la production illimitée, la qualité constante. Vos équipes créatives se concentrent sur la stratégie, l'IA gère le volume.",
+      "impact_business": {
+        "primary": "Production de contenu x10 sans embaucher",
+        "secondary": "Temps de création réduit de 80%",
+        "tertiary": "Cohérence de ton garantie sur tous les canaux"
+      },
+      "use_cases": [
+        "Génération de variantes publicitaires",
+        "Descriptions produits automatisées",
+        "Posts sociaux personnalisés par plateforme",
+        "Emails marketing adaptés par segment"
+      ],
+      "transformation_narrative": {
+        "alone": "L'IA devient votre rédacteur infatigable. Des centaines de contenus, un seul clic.",
+        "with_campaigns": "Le contenu nourrit les campagnes. Variantes infinies pour tests infinis.",
+        "with_social": "Posts sociaux générés et programmés automatiquement sur chaque plateforme.",
+        "with_email": "Chaque email est rédigé pour son destinataire. Personnalisation à l'échelle."
+      }
+    },
+    "engage-budget": {
+      "name": "Budget Optimisé",
+      "tagline": "L'argent va où il rapporte",
+      "description_short": "Allocation budgétaire intelligente. L'IA répartit les dépenses vers les canaux les plus performants.",
+      "description_full": "Le Budget Optimisé met fin aux allocations arbitraires. L'IA analyse la performance de chaque euro dépensé sur chaque canal, chaque campagne, chaque audience. Elle réalloue en temps réel vers ce qui fonctionne, retire de ce qui ne fonctionne pas. Votre budget marketing travaille enfin à son plein potentiel.",
+      "impact_business": {
+        "primary": "ROI marketing global +50%",
+        "secondary": "Élimination du gaspillage publicitaire",
+        "tertiary": "Décisions budgétaires basées sur les données"
+      },
+      "use_cases": [
+        "Réallocation automatique entre canaux",
+        "Optimisation du coût par acquisition",
+        "Arbitrage entre campagnes en temps réel",
+        "Reporting ROI par euro dépensé"
+      ],
+      "transformation_narrative": {
+        "alone": "Chaque euro trouve sa place optimale. Le gaspillage publicitaire disparaît.",
+        "with_campaigns": "Les campagnes IA + Budget Optimisé = machine marketing autonome.",
+        "with_analytics": "Les analytics révèlent, le budget réagit. Allocation data-driven.",
+        "with_attribution": "Vous savez ce qui convertit. Le budget suit."
+      }
+    },
+    "engage-attribution": {
+      "name": "Attribution",
+      "tagline": "Sachez d'où viennent vos clients",
+      "description_short": "Modèle d'attribution multi-touch qui révèle le vrai parcours de conversion de vos clients.",
+      "description_full": "L'Attribution met fin au mystère des conversions. Chaque point de contact du parcours client est tracé, pondéré, analysé. Vous savez quel canal a initié la relation, lequel a convaincu, lequel a converti. Les modèles multi-touch révèlent la vraie contribution de chaque action marketing. Investissez enfin sur ce qui fonctionne réellement.",
+      "impact_business": {
+        "primary": "Compréhension réelle du parcours client",
+        "secondary": "Fin des budgets mal alloués par manque de visibilité",
+        "tertiary": "Optimisation des points de contact clés"
+      },
+      "use_cases": [
+        "Suivi du parcours client complet",
+        "Attribution multi-touch pondérée",
+        "Analyse de la contribution de chaque canal",
+        "Identification des points de contact critiques"
+      ],
+      "transformation_narrative": {
+        "alone": "Le brouillard se lève. Vous voyez enfin le chemin que prennent vos clients.",
+        "with_campaigns": "Les campagnes sont évaluées à leur vraie valeur. Exit le last-click.",
+        "with_budget": "Le budget s'alloue selon l'attribution réelle. Efficacité maximale.",
+        "with_analytics": "Attribution + Analytics = compréhension totale du funnel marketing."
+      }
+    },
+    "engage-email": {
+      "name": "Emails Auto",
+      "tagline": "Des emails qui tombent juste",
+      "description_short": "Séquences email automatisées et personnalisées. Le bon message, au bon moment, à la bonne personne.",
+      "description_full": "Les Emails Auto transforment l'email marketing en conversation personnalisée à l'échelle. Chaque destinataire reçoit le message adapté à son profil, son comportement, son timing. Les séquences de nurturing, de bienvenue, de réactivation fonctionnent en autopilote. L'email devient un canal de conversion automatique.",
+      "impact_business": {
+        "primary": "Taux d'ouverture +40% grâce à la personnalisation",
+        "secondary": "Conversion email +60%",
+        "tertiary": "Temps passé sur l'email marketing divisé par 5"
+      },
+      "use_cases": [
+        "Séquences de bienvenue automatisées",
+        "Nurturing des leads sur plusieurs semaines",
+        "Emails de réactivation des inactifs",
+        "Emails transactionnels personnalisés"
+      ],
+      "transformation_narrative": {
+        "alone": "L'email devient autopilote. Chaque contact reçoit la bonne séquence au bon moment.",
+        "with_content": "Le contenu IA rédige, les emails auto envoient. Personnalisation infinie.",
+        "with_ab": "Chaque email est testé, optimisé, amélioré. Performance croissante.",
+        "with_analytics": "L'impact de chaque email est mesuré. Optimisation continue."
+      }
+    },
+    "engage-social": {
+      "name": "Réseaux Sociaux",
+      "tagline": "Présent partout, sans effort",
+      "description_short": "Gestion multi-plateformes automatisée. Planification, publication et engagement sur tous les réseaux.",
+      "description_full": "Les Réseaux Sociaux unifient votre présence sociale. Une seule interface pour gérer tous les réseaux : planification, publication, modération, engagement. Le contenu s'adapte automatiquement à chaque plateforme. L'IA suggère les meilleurs horaires, répond aux commentaires courants, détecte les crises potentielles.",
+      "impact_business": {
+        "primary": "Temps de gestion social -70%",
+        "secondary": "Présence cohérente sur toutes les plateformes",
+        "tertiary": "Engagement communautaire optimisé"
+      },
+      "use_cases": [
+        "Planification multi-plateformes unifiée",
+        "Adaptation automatique du format par réseau",
+        "Modération et réponses automatisées",
+        "Analyse des performances par plateforme"
+      ],
+      "transformation_narrative": {
+        "alone": "Tous vos réseaux dans un seul outil. Une action, toutes les plateformes.",
+        "with_content": "Le contenu IA génère, les réseaux sociaux diffusent. Machine à posts.",
+        "with_campaigns": "Campagnes sociales coordonnées avec le reste du marketing.",
+        "with_analytics": "Performance sociale mesurée, optimisée, améliorée."
+      }
+    },
+    "engage-ab": {
+      "name": "Tests A/B",
+      "tagline": "Testez tout, tout le temps",
+      "description_short": "Expérimentations automatisées sur tous vos contenus et campagnes. L'amélioration continue par les données.",
+      "description_full": "Les Tests A/B transforment votre marketing en laboratoire d'optimisation permanent. Chaque titre, chaque visuel, chaque CTA est testé contre des variantes. L'IA détermine le gagnant avec signification statistique et le déploie automatiquement. Vos performances s'améliorent de façon continue et mesurable.",
+      "impact_business": {
+        "primary": "Amélioration continue de +3-5% par mois",
+        "secondary": "Décisions basées sur les données, pas sur l'intuition",
+        "tertiary": "Apprentissages cumulatifs sur ce qui fonctionne"
+      },
+      "use_cases": [
+        "Tests de titres et accroches",
+        "Comparaison de visuels",
+        "Optimisation des CTA et boutons",
+        "Expérimentations de landing pages"
+      ],
+      "transformation_narrative": {
+        "alone": "Chaque élément est testé. L'intuition cède la place aux données.",
+        "with_campaigns": "Campagnes en amélioration constante. Les tests affinent en continu.",
+        "with_email": "Chaque email testé. Objets, contenus, timing optimisés.",
+        "with_content": "Le contenu IA génère les variantes, les tests A/B sélectionnent les gagnantes."
+      }
+    },
+    "engage-analytics": {
+      "name": "Analytics Marketing",
+      "tagline": "Mesurez tout, comprenez tout",
+      "description_short": "Analyse de performance marketing en temps réel. KPIs, funnel, ROI sur tous les canaux.",
+      "description_full": "L'Analytics Marketing est le centre nerveux de votre marketing digital. Chaque canal, chaque campagne, chaque contenu est mesuré en temps réel. Les KPIs s'affichent dans des tableaux de bord interactifs, le funnel de conversion se visualise étape par étape. Vous savez exactement ce qui fonctionne, ce qui ne fonctionne pas, et pourquoi.",
+      "impact_business": {
+        "primary": "Visibilité totale sur la performance marketing",
+        "secondary": "Décisions marketing data-driven",
+        "tertiary": "ROI marketing mesurable et optimisable"
+      },
+      "use_cases": [
+        "Dashboards de performance temps réel",
+        "Analyse de funnel de conversion",
+        "ROI par canal et par campagne",
+        "Segmentation et cohortes"
+      ],
+      "transformation_narrative": {
+        "alone": "Tout est mesuré. Chaque euro, chaque clic, chaque conversion tracé.",
+        "with_campaigns": "Les campagnes sont analysées en temps réel. Réaction immédiate.",
+        "with_attribution": "Analytics + Attribution = vérité totale sur le parcours client.",
+        "with_budget": "Les analytics guident le budget. L'argent suit la performance."
+      }
+    }
+  }
+}

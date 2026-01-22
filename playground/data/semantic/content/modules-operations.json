@@ -1,0 +1,297 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "dimension": "operations",
+    "description": "Contenu sémantique riche pour la dimension Opérations Terrain"
+  },
+
+  "modules": {
+    "ops-map": {
+      "name": "Carte Intelligente",
+      "tagline": "Le terrain, enfin visible",
+      "description_short": "Visualisez en temps réel la position de tous vos actifs sur une carte interactive.",
+      "description_full": "La Carte Intelligente transforme votre vision du terrain. Chaque véhicule, chaque équipement, chaque intervention apparaît en temps réel sur une interface cartographique intuitive. Fini les appels pour savoir \"où en est la camionnette\" — un coup d'œil suffit. Les zones de chaleur révèlent les patterns d'activité, les trajets historiques permettent d'analyser les déplacements, et les géo-clôtures vous alertent automatiquement des entrées/sorties de zones sensibles.",
+      "impact_business": {
+        "primary": "Réduction de 40% du temps passé à localiser les ressources",
+        "secondary": "Élimination des appels de coordination terrain",
+        "tertiary": "Preuve géolocalisée de chaque intervention"
+      },
+      "use_cases": [
+        "Dispatch intelligent basé sur la proximité réelle",
+        "Suivi des tournées de livraison en direct",
+        "Contrôle des zones d'intervention autorisées",
+        "Analyse des temps de trajet réels vs estimés"
+      ],
+      "transformation_narrative": {
+        "alone": "Vous venez d'ouvrir une fenêtre sur votre terrain. Pour la première fois, chaque actif est visible, localisable, traçable. La carte n'est plus un outil passif — elle devient le centre de commandement de vos opérations.",
+        "with_fleet": "La carte s'anime. Chaque point représente maintenant un véhicule identifié, avec son statut, son conducteur, sa mission. Le dispatch devient visuel, instinctif, efficace.",
+        "with_routes": "Les trajets optimisés s'affichent directement sur la carte. Vous voyez non seulement où sont vos véhicules, mais où ils devraient être et par où ils devraient passer.",
+        "with_sites": "Chaque chantier devient une zone sur votre carte. Vous visualisez les ressources présentes sur site, les mouvements entrants et sortants, l'activité en temps réel."
+      }
+    },
+
+    "ops-fleet": {
+      "name": "Suivi de Flotte",
+      "tagline": "Chaque véhicule compte",
+      "description_short": "GPS temps réel et télémétrie complète pour chaque véhicule de votre flotte.",
+      "description_full": "Le Suivi de Flotte va bien au-delà du simple point GPS. Chaque véhicule transmet en continu sa position, sa vitesse, son état moteur, sa consommation. Vous savez non seulement où il est, mais comment il est conduit. Les comportements à risque sont détectés automatiquement : excès de vitesse, freinages brusques, temps moteur au ralenti. Le tout alimentant des tableaux de bord de performance conducteur et des rapports de TCO (Total Cost of Ownership) précis.",
+      "impact_business": {
+        "primary": "Amélioration de 28% du taux d'utilisation des véhicules",
+        "secondary": "Réduction de 15% de la consommation carburant",
+        "tertiary": "Baisse de 35% des comportements de conduite à risque"
+      },
+      "use_cases": [
+        "Optimisation de la taille de flotte nécessaire",
+        "Programme d'éco-conduite basé sur données réelles",
+        "Facturation au kilomètre pour clients",
+        "Preuve de passage et de ponctualité"
+      ],
+      "transformation_narrative": {
+        "alone": "Votre flotte n'est plus une masse anonyme de véhicules. Chacun a maintenant une identité, un historique, des métriques. Vous passez de la gestion réactive à la gestion proactive.",
+        "with_map": "Flotte + Carte = Centre de contrôle. Chaque véhicule visible, chaque mouvement tracé, chaque anomalie détectée. Vos opérations terrain deviennent transparentes.",
+        "with_maintenance": "Les données de télémétrie alimentent la maintenance prédictive. Chaque kilomètre, chaque heure moteur, chaque alerte technique contribue à anticiper les pannes avant qu'elles ne surviennent.",
+        "with_routes": "La position temps réel de vos véhicules permet de recalculer les itinéraires en continu. Un embouteillage ? Une urgence ? Les trajets s'adaptent automatiquement."
+      }
+    },
+
+    "ops-routes": {
+      "name": "Optimisation Trajets",
+      "tagline": "Le chemin le plus intelligent",
+      "description_short": "Algorithmes d'optimisation qui calculent les meilleurs itinéraires en temps réel.",
+      "description_full": "L'Optimisation des Trajets utilise des algorithmes avancés pour calculer non pas le chemin le plus court, mais le plus efficace. En intégrant le trafic temps réel, les fenêtres horaires de livraison, les capacités véhicules, les compétences requises et même la consommation carburant estimée, le système génère des tournées optimales qui maximisent les interventions tout en minimisant les coûts. Les recalculs en cours de journée permettent d'absorber les imprévus sans compromettre le reste du planning.",
+      "impact_business": {
+        "primary": "Économie de 23% sur les coûts carburant",
+        "secondary": "Augmentation de 18% du nombre d'interventions par jour",
+        "tertiary": "Réduction de 30% des retards clients"
+      },
+      "use_cases": [
+        "Tournées de livraison multi-points optimisées",
+        "Planning d'interventions techniques avec contraintes horaires",
+        "Réaffectation dynamique en cas d'urgence",
+        "Estimation précise des heures d'arrivée (ETA)"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos trajets ne sont plus le fruit du hasard ou de l'habitude. Chaque itinéraire est calculé, optimisé, intelligent. Les kilomètres inutiles disparaissent.",
+        "with_fleet": "L'optimisation devient dynamique. Connaissant la position exacte de chaque véhicule, le système réaffecte les missions en temps réel pour minimiser les trajets à vide.",
+        "with_map": "Visualisez les tournées optimisées avant le départ. Chaque point de passage, chaque estimation horaire, directement sur la carte.",
+        "with_weather": "Les conditions météo influencent les calculs de trajets. Neige prévue ? Les routes de montagne sont évitées. Forte pluie ? Les temps de trajet sont ajustés."
+      }
+    },
+
+    "ops-maintenance": {
+      "name": "Maintenance Prédictive",
+      "tagline": "Anticiper plutôt que subir",
+      "description_short": "Anticipez les pannes 72h avant qu'elles ne surviennent grâce à l'analyse prédictive.",
+      "description_full": "La Maintenance Prédictive transforme votre approche de l'entretien. En analysant les données de télémétrie (températures, vibrations, consommations), les historiques de pannes, et les recommandations constructeur, le système prédit les défaillances potentielles avec 72h d'avance. Les interventions sont planifiées aux moments optimaux — ni trop tôt (gaspillage), ni trop tard (panne). Chaque actif dispose d'un carnet de santé numérique complet, accessible en un clic.",
+      "impact_business": {
+        "primary": "Réduction de 67% des pannes non planifiées",
+        "secondary": "Allongement de 25% de la durée de vie des équipements",
+        "tertiary": "Baisse de 40% des coûts de maintenance d'urgence"
+      },
+      "use_cases": [
+        "Planning de maintenance basé sur l'usage réel, pas le calendrier",
+        "Alertes précoces sur les signes de fatigue mécanique",
+        "Optimisation des stocks de pièces détachées",
+        "Historique complet pour revente ou audit"
+      ],
+      "transformation_narrative": {
+        "alone": "La maintenance n'est plus une corvée subie mais une stratégie maîtrisée. Chaque alerte est une panne évitée, chaque intervention planifiée est une urgence de moins.",
+        "with_fleet": "Les données de conduite alimentent la prédiction. Un véhicule maltraité sera surveillé de plus près. La maintenance s'adapte à l'usage réel.",
+        "with_iot": "Les capteurs IoT décuplent la précision. Température moteur, pression des pneus, niveau des fluides — tout est mesuré, tout est analysé, tout est anticipé.",
+        "with_machines": "Flotte de véhicules ET parc de machines sous le même système prédictif. Une vision unifiée de tous vos actifs mobiles et fixes."
+      }
+    },
+
+    "ops-sites": {
+      "name": "Gestion Chantiers",
+      "tagline": "Chaque site sous contrôle",
+      "description_short": "Suivi temps réel de tous vos chantiers : avancement, ressources, coûts.",
+      "description_full": "La Gestion Chantiers centralise tout ce qui se passe sur vos sites d'intervention. Chaque chantier a sa fiche : localisation, planning, équipes affectées, matériels présents, budget consommé, avancement physique. Les photos géolocalisées documentent la progression. Les pointages terrain capturent les heures réelles. Les alertes remontent les retards ou les écarts de coût. En un coup d'œil, vous savez où en est chaque projet, quels sites demandent attention, lesquels sont en avance.",
+      "impact_business": {
+        "primary": "Visibilité 100% sur l'état de tous les chantiers",
+        "secondary": "Réduction de 25% des dépassements de budget",
+        "tertiary": "Amélioration de 30% du respect des délais"
+      },
+      "use_cases": [
+        "Tableau de bord multi-chantiers pour direction",
+        "Suivi d'avancement par lot ou phase",
+        "Gestion des ressources partagées entre sites",
+        "Reporting client automatisé avec preuves photo"
+      ],
+      "transformation_narrative": {
+        "alone": "Chaque chantier sort de l'ombre. Vous ne découvrez plus les problèmes au dernier moment — vous les voyez émerger et pouvez agir.",
+        "with_machines": "Les engins sont affectés aux chantiers. Vous visualisez quelle machine est sur quel site, son taux d'utilisation, ses prochaines interventions prévues.",
+        "with_field": "Les rapports d'intervention alimentent automatiquement l'avancement du chantier. Chaque tâche complétée, chaque anomalie signalée, en temps réel.",
+        "with_scheduling": "Le planning des équipes s'intègre à la vue chantier. Qui est prévu demain sur quel site ? Les compétences requises sont-elles couvertes ?"
+      }
+    },
+
+    "ops-machines": {
+      "name": "Planning Machines",
+      "tagline": "Chaque engin au bon endroit",
+      "description_short": "Planifiez et suivez vos engins lourds : disponibilité, affectation, utilisation.",
+      "description_full": "Le Planning Machines gère votre parc d'équipements lourds comme un asset stratégique. Chaque machine — pelleteuse, grue, nacelle, compresseur — est tracée : où elle est, qui l'utilise, jusqu'à quand. Le planning visuel permet d'affecter les engins aux chantiers en évitant les conflits. Les taux d'utilisation révèlent les machines sous-employées (à mutualiser) ou sur-sollicitées (à renforcer). La réservation en ligne permet aux chefs de chantier de demander des équipements sans téléphoner.",
+      "impact_business": {
+        "primary": "Amélioration de 35% du taux d'utilisation machines",
+        "secondary": "Réduction de 50% des conflits d'affectation",
+        "tertiary": "Économie de 20% sur la location externe"
+      },
+      "use_cases": [
+        "Planning visuel type Gantt des affectations machines",
+        "Réservation en ligne par les chefs de chantier",
+        "Calcul du coût horaire réel par machine",
+        "Optimisation du mix propriété vs location"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos machines ne sont plus éparpillées dans l'inconnu. Chaque engin est localisé, planifié, optimisé. Le parc devient un levier de rentabilité.",
+        "with_sites": "Les machines sont vues dans leur contexte : le chantier. Vous planifiez les affectations en fonction des besoins de chaque site, phase par phase.",
+        "with_maintenance": "L'utilisation réelle alimente la maintenance. Une machine qui tourne intensément sera contrôlée plus fréquemment. Les pannes sur chantier se raréfient.",
+        "with_fleet": "Vision unifiée des actifs mobiles. Véhicules ET machines dans le même système. La logistique terrain devient globale."
+      }
+    },
+
+    "ops-field": {
+      "name": "Suivi Interventions",
+      "tagline": "Le terrain connecté",
+      "description_short": "Rapports d'intervention géolocalisés avec photos, signatures et horodatage.",
+      "description_full": "Le Suivi Interventions digitalise le travail de terrain. Les techniciens disposent d'une application mobile intuitive pour documenter chaque intervention : photos avant/après, check-lists complétées, pièces utilisées, temps passé, signature client. Tout est géolocalisé et horodaté automatiquement. Les rapports sont disponibles instantanément au bureau — plus de paperasse à récupérer, saisir, classer. La traçabilité est totale et juridiquement valide.",
+      "impact_business": {
+        "primary": "Preuve documentée de 100% des interventions",
+        "secondary": "Élimination de 8h/semaine de saisie administrative",
+        "tertiary": "Réduction de 70% des litiges clients"
+      },
+      "use_cases": [
+        "Rapports d'intervention avec photos géolocalisées",
+        "Check-lists qualité et sécurité obligatoires",
+        "Signature électronique client sur tablette",
+        "Suivi des temps par intervention/technicien"
+      ],
+      "transformation_narrative": {
+        "alone": "Le terrain parle. Chaque intervention est documentée, prouvée, archivée. La qualité devient mesurable, la traçabilité totale.",
+        "with_sites": "Les rapports alimentent l'avancement des chantiers. Chaque tâche complétée sur le terrain met à jour le suivi global automatiquement.",
+        "with_alerts": "Les anomalies signalées sur le terrain déclenchent des alertes au bureau. Un problème détecté le matin est traité l'après-midi.",
+        "with_scheduling": "Le planning et le terrain se synchronisent. L'intervention terminée libère le technicien pour sa prochaine mission, visible en temps réel."
+      }
+    },
+
+    "ops-weather": {
+      "name": "Météo & Conditions",
+      "tagline": "Anticiper les éléments",
+      "description_short": "Prévisions météo intégrées au planning avec alertes et recommandations.",
+      "description_full": "Météo & Conditions intègre les prévisions météorologiques directement dans votre planification opérationnelle. Pour chaque chantier, chaque tournée, vous voyez les conditions attendues : température, précipitations, vent, visibilité. Le système génère des alertes en cas de conditions incompatibles avec certains travaux (coulage béton, travaux en hauteur, peinture extérieure). Les plannings s'ajustent automatiquement ou sur recommandation, évitant les journées perdues découvertes au dernier moment.",
+      "impact_business": {
+        "primary": "Réduction de 60% des arrêts météo non anticipés",
+        "secondary": "Économie de 15% sur les coûts de reprogrammation",
+        "tertiary": "Amélioration de la sécurité terrain"
+      },
+      "use_cases": [
+        "Prévisions à 10 jours par site géographique",
+        "Alertes automatiques pour conditions dangereuses",
+        "Recommandations d'ajustement de planning",
+        "Historique météo pour analyse des retards"
+      ],
+      "transformation_narrative": {
+        "alone": "Les éléments ne sont plus une surprise. Vous planifiez avec la météo, pas contre elle. Chaque décision est informée.",
+        "with_sites": "Chaque chantier affiche ses prévisions météo. Vous décalez les travaux sensibles avant d'envoyer les équipes, pas après.",
+        "with_scheduling": "Le planning intègre les contraintes météo. Les tâches extérieures sont automatiquement repositionnées en cas de mauvais temps prévu.",
+        "with_routes": "Les conditions de route sont anticipées. Verglas, brouillard, fortes pluies — les trajets s'adaptent aux éléments."
+      }
+    },
+
+    "ops-inventory": {
+      "name": "Gestion des Stocks",
+      "tagline": "Le bon stock, au bon moment",
+      "description_short": "Optimisez vos stocks avec réapprovisionnement automatique et prévision de besoins.",
+      "description_full": "La Gestion des Stocks transforme votre approche de l'approvisionnement. Chaque article est suivi en temps réel : quantité disponible, localisation, mouvements. Les seuils de réapprovisionnement déclenchent des commandes automatiques. L'analyse prédictive anticipe les besoins selon l'historique et le planning de production/interventions. Le capital immobilisé en stock diminue tandis que les ruptures disparaissent. Multi-sites ? Le système optimise les transferts entre dépôts.",
+      "impact_business": {
+        "primary": "Réduction de 35% du capital immobilisé en stock",
+        "secondary": "Élimination de 95% des ruptures critiques",
+        "tertiary": "Baisse de 20% des coûts d'approvisionnement"
+      },
+      "use_cases": [
+        "Inventaire temps réel multi-dépôts",
+        "Réapprovisionnement automatique sur seuil",
+        "Prévision des besoins selon planning",
+        "Traçabilité des lots et péremptions"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos stocks deviennent intelligents. Plus de ruptures surprise, plus de sur-stockage coûteux. L'équilibre parfait.",
+        "with_maintenance": "Les pièces détachées sont liées à la maintenance prédictive. Une intervention planifiée déclenche la réservation des pièces nécessaires.",
+        "with_sites": "Chaque chantier connaît ses besoins matériaux. Les approvisionnements sont planifiés en fonction de l'avancement réel.",
+        "with_field": "Les pièces utilisées lors des interventions sont automatiquement décomptées du stock. L'inventaire est toujours à jour."
+      }
+    },
+
+    "ops-scheduling": {
+      "name": "Planning Équipes",
+      "tagline": "La bonne personne, au bon endroit",
+      "description_short": "Affectation intelligente des équipes selon compétences, disponibilités et proximité.",
+      "description_full": "Le Planning Équipes orchestre vos ressources humaines terrain. Chaque collaborateur a son profil : compétences, certifications, habilitations, préférences. Le système affecte automatiquement les bonnes personnes aux bonnes missions, en tenant compte de la charge de travail, des temps de trajet, des contraintes réglementaires (temps de repos, travail isolé). Les chefs d'équipe visualisent leur planning sur mobile. Les remplacements d'urgence trouvent le meilleur candidat disponible en secondes.",
+      "impact_business": {
+        "primary": "Gain de 12h/semaine en coordination",
+        "secondary": "Amélioration de 25% de l'adéquation compétences/missions",
+        "tertiary": "Réduction de 40% des heures supplémentaires non planifiées"
+      },
+      "use_cases": [
+        "Affectation automatique selon compétences requises",
+        "Planning visuel type calendrier par équipe/individu",
+        "Gestion des absences et remplacements",
+        "Conformité réglementaire temps de travail"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos équipes trouvent leur rythme. Chaque mission est attribuée à la bonne personne, disponible, compétente, proche.",
+        "with_sites": "Le planning se projette sur les chantiers. Vous visualisez qui est prévu où, quand, avec quelles compétences.",
+        "with_field": "Le planning et le terrain se synchronisent. Les interventions terminées libèrent les ressources pour les missions suivantes.",
+        "with_routes": "Les affectations intègrent les temps de trajet réels. Un technicien proche est privilégié, réduisant les kilomètres à vide."
+      }
+    },
+
+    "ops-alerts": {
+      "name": "Alertes Terrain",
+      "tagline": "L'information qui compte, quand ça compte",
+      "description_short": "Notifications instantanées sur les événements critiques terrain.",
+      "description_full": "Les Alertes Terrain sont votre filet de sécurité opérationnel. Chaque événement significatif génère une notification ciblée : retard sur intervention, entrée en zone interdite, dépassement de vitesse, anomalie détectée, météo dégradée. Les alertes sont hiérarchisées (information, attention, critique) et routées vers les bonnes personnes. Les escalades automatiques garantissent qu'aucune alerte critique ne reste sans réponse. L'historique permet d'analyser les patterns et d'améliorer les processus.",
+      "impact_business": {
+        "primary": "Temps de réaction divisé par 5",
+        "secondary": "Réduction de 50% des incidents escaladés",
+        "tertiary": "Amélioration de 35% de la satisfaction client"
+      },
+      "use_cases": [
+        "Alerte retard client avec notification proactive",
+        "Détection des comportements de conduite dangereux",
+        "Géo-alertes sur entrée/sortie de zones",
+        "Escalade automatique des problèmes non traités"
+      ],
+      "transformation_narrative": {
+        "alone": "L'information remonte. Les problèmes ne restent plus cachés jusqu'à l'explosion — ils sont détectés, signalés, traités.",
+        "with_fleet": "Chaque anomalie véhicule génère une alerte. Excès de vitesse, temps moteur excessif, sortie de zone — tout est surveillé.",
+        "with_field": "Les observations terrain deviennent des alertes. Un technicien signale un danger ? L'information circule instantanément.",
+        "with_maintenance": "Les signes avant-coureurs de panne déclenchent des alertes préventives. Agissez avant la casse."
+      }
+    },
+
+    "ops-kpi": {
+      "name": "KPIs Opérationnels",
+      "tagline": "Mesurer pour progresser",
+      "description_short": "Tableaux de bord de performance opérationnelle en temps réel.",
+      "description_full": "Les KPIs Opérationnels transforment vos données terrain en indicateurs actionnables. Taux d'utilisation des véhicules, respect des délais d'intervention, coût au kilomètre, productivité par technicien — chaque métrique clé est calculée automatiquement et présentée dans des tableaux de bord visuels. Les tendances révèlent les améliorations ou dégradations. Les comparaisons (entre équipes, entre périodes, vs objectifs) stimulent la performance. L'export vers vos outils de BI est natif.",
+      "impact_business": {
+        "primary": "Décisions 3x plus rapides avec données fiables",
+        "secondary": "Identification des leviers d'amélioration",
+        "tertiary": "Alignement des équipes sur les objectifs"
+      },
+      "use_cases": [
+        "Dashboard direction avec KPIs synthétiques",
+        "Tableaux de bord opérationnels par équipe",
+        "Suivi des objectifs et écarts",
+        "Analyse des tendances long terme"
+      ],
+      "transformation_narrative": {
+        "alone": "Ce qui se mesure s'améliore. Vos opérations ont maintenant leurs métriques. La performance devient objective.",
+        "with_fleet": "Les KPIs flotte sont automatiques. Utilisation, consommation, coûts — tout est calculé et présenté.",
+        "with_sites": "Chaque chantier a ses indicateurs. Avancement, budget, productivité — la performance projet se visualise.",
+        "with_scheduling": "L'efficacité des équipes se mesure. Qui performe ? Où sont les gains possibles ? Les données répondent."
+      }
+    }
+  }
+}

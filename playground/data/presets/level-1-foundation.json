@@ -1,0 +1,42 @@
+{
+    "id": "level-1-foundation",
+    "name": "Foundation",
+    "level": 1,
+    "version": "2.0",
+    "description": "Les bases solides - ERP central avec piliers essentiels",
+    "modules": [
+        {
+            "templateId": "ent-erp",
+            "x": 400,
+            "y": 250
+        },
+        {
+            "templateId": "growth-crm",
+            "x": 150,
+            "y": 250
+        },
+        {
+            "templateId": "intel-dashboards",
+            "x": 400,
+            "y": 50
+        },
+        {
+            "templateId": "integ-universal",
+            "x": 650,
+            "y": 250
+        },
+        {
+            "templateId": "sec-backup",
+            "x": 400,
+            "y": 450
+        }
+    ],
+    "connections": [
+        { "from": { "index": 0, "port": "left" }, "to": { "index": 1, "port": "right" } },
+        { "from": { "index": 0, "port": "top" }, "to": { "index": 2, "port": "bottom" } },
+        { "from": { "index": 0, "port": "right" }, "to": { "index": 3, "port": "left" } },
+        { "from": { "index": 0, "port": "bottom" }, "to": { "index": 4, "port": "top" } },
+        { "from": { "index": 1, "port": "top" }, "to": { "index": 2, "port": "left" } },
+        { "from": { "index": 3, "port": "top" }, "to": { "index": 2, "port": "right" } }
+    ]
+}

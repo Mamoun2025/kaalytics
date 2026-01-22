@@ -1,0 +1,209 @@
+/* ============================================
+   DIMENSIONS CURSORS - PREMIUM EDITION
+   Elegant custom cursors for enhanced UX
+   ============================================ */
+
+:root {
+    /* === PREMIUM CURSOR COLLECTION === */
+
+    /* Default pointer - Elegant arrow with accent */
+    --cursor-default: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cfilter id='s'%3E%3CfeDropShadow dx='1' dy='1' stdDeviation='1' flood-opacity='0.3'/%3E%3C/filter%3E%3Cpath d='M8 4l16 12-8 2-4 10-4-24z' fill='%23ffffff' stroke='%231a3d2e' stroke-width='2' filter='url(%23s)'/%3E%3C/svg%3E") 8 4, default;
+
+    /* Pointer/Click - Golden accent pointer */
+    --cursor-pointer: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cfilter id='g'%3E%3CfeDropShadow dx='0' dy='2' stdDeviation='2' flood-color='%23eda906' flood-opacity='0.5'/%3E%3C/filter%3E%3Cpath d='M10 5l14 11-7 1.5-3.5 9.5L10 5z' fill='%23eda906' stroke='%231a3d2e' stroke-width='1.5' filter='url(%23g)'/%3E%3Ccircle cx='17' cy='12' r='2' fill='%231a3d2e'/%3E%3C/svg%3E") 10 5, pointer;
+
+    /* Grab - Elegant open hand */
+    --cursor-grab: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cfilter id='gs'%3E%3CfeDropShadow dx='0' dy='2' stdDeviation='1.5' flood-opacity='0.25'/%3E%3C/filter%3E%3Cg filter='url(%23gs)'%3E%3Crect x='11' y='8' width='3' height='10' rx='1.5' fill='%23fff' stroke='%231a3d2e' stroke-width='1'/%3E%3Crect x='15' y='6' width='3' height='12' rx='1.5' fill='%23fff' stroke='%231a3d2e' stroke-width='1'/%3E%3Crect x='19' y='8' width='3' height='10' rx='1.5' fill='%23fff' stroke='%231a3d2e' stroke-width='1'/%3E%3Crect x='23' y='10' width='3' height='8' rx='1.5' fill='%23fff' stroke='%231a3d2e' stroke-width='1'/%3E%3Cpath d='M8 16c0-2 1-4 3-4v8c0 4 3 7 8 7s8-3 8-7v-6h-3v6c0 2.5-2 4.5-5 4.5s-5-2-5-4.5v-8' fill='%23fff' stroke='%231a3d2e' stroke-width='1'/%3E%3C/g%3E%3Ccircle cx='16' cy='14' r='1' fill='%23eda906'/%3E%3C/svg%3E") 16 16, grab;
+
+    /* Grabbing - Closed fist */
+    --cursor-grabbing: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cfilter id='gbs'%3E%3CfeDropShadow dx='0' dy='2' stdDeviation='1.5' flood-opacity='0.25'/%3E%3C/filter%3E%3Cg filter='url(%23gbs)'%3E%3Cpath d='M10 14c0-1.5.5-3 2-3h12c1.5 0 2.5 1 2.5 2.5v1.5c0 5-3 9-8.5 9s-8-4-8-8v-2z' fill='%23fff' stroke='%231a3d2e' stroke-width='1'/%3E%3Cpath d='M12 14v-2c0-1 .5-1.5 1.5-1.5s1.5.5 1.5 1.5M15 12v-3c0-1 .5-1.5 1.5-1.5s1.5.5 1.5 1.5M18 12v-2c0-1 .5-1.5 1.5-1.5s1.5.5 1.5 1.5M21 14v-1.5c0-1 .5-1.5 1.5-1.5s1.5.5 1.5 1.5' stroke='%231a3d2e' stroke-width='1' fill='none'/%3E%3C/g%3E%3Ccircle cx='16' cy='17' r='1.5' fill='%23eda906'/%3E%3C/svg%3E") 16 16, grabbing;
+
+    /* Connect - Premium crosshair with glow */
+    --cursor-connect: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cfilter id='glow'%3E%3CfeGaussianBlur stdDeviation='1.5' result='blur'/%3E%3CfeMerge%3E%3CfeMergeNode in='blur'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23glow)'%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%23eda906' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23eda906'/%3E%3Cpath d='M16 4v6M16 22v6M4 16h6M22 16h6' stroke='%23eda906' stroke-width='2' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E") 16 16, crosshair;
+
+    /* Delete - Elegant X in circle */
+    --cursor-delete: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cfilter id='ds'%3E%3CfeDropShadow dx='0' dy='1' stdDeviation='1' flood-color='%23ef4444' flood-opacity='0.4'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23ds)'%3E%3Ccircle cx='16' cy='16' r='10' fill='%231a3d2e' stroke='%23ef4444' stroke-width='2'/%3E%3Cpath d='M11 11l10 10M21 11l-10 10' stroke='%23ef4444' stroke-width='2.5' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E") 16 16, not-allowed;
+
+    /* Pan/Move - 4-way elegant arrows */
+    --cursor-pan: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cfilter id='ps'%3E%3CfeDropShadow dx='0' dy='1' stdDeviation='1' flood-opacity='0.2'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23ps)'%3E%3Ccircle cx='16' cy='16' r='4' fill='%231a3d2e' stroke='%23eda906' stroke-width='1.5'/%3E%3Cpath d='M16 4l4 6h-8zM16 28l4-6h-8zM4 16l6-4v8zM28 16l-6-4v8z' fill='%23eda906' stroke='%231a3d2e' stroke-width='0.5'/%3E%3Cpath d='M16 10v-2M16 24v-2M10 16h-2M24 16h-2' stroke='%23eda906' stroke-width='2' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E") 16 16, move;
+
+    /* Text/Edit cursor */
+    --cursor-text: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M12 8h8M12 24h8M16 8v16' stroke='%23eda906' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") 16 16, text;
+
+    /* Resize cursors */
+    --cursor-resize-ns: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M16 4l5 7h-10zM16 28l5-7h-10z' fill='%23eda906' stroke='%231a3d2e' stroke-width='0.5'/%3E%3Cpath d='M16 11v10' stroke='%23eda906' stroke-width='2'/%3E%3C/svg%3E") 16 16, ns-resize;
+
+    --cursor-resize-ew: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M4 16l7-5v10zM28 16l-7-5v10z' fill='%23eda906' stroke='%231a3d2e' stroke-width='0.5'/%3E%3Cpath d='M11 16h10' stroke='%23eda906' stroke-width='2'/%3E%3C/svg%3E") 16 16, ew-resize;
+
+    /* Loading/Wait */
+    --cursor-wait: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='%231a3d2e' stroke-width='2'/%3E%3Cpath d='M16 16l6-6' stroke='%23eda906' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M16 16v-8' stroke='%231a3d2e' stroke-width='2' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23eda906'/%3E%3C/svg%3E") 16 16, wait;
+
+    /* Zoom In */
+    --cursor-zoom-in: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cfilter id='zs'%3E%3CfeDropShadow dx='0' dy='1' stdDeviation='1' flood-opacity='0.2'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23zs)'%3E%3Ccircle cx='13' cy='13' r='8' fill='%231a3d2e' stroke='%23eda906' stroke-width='2'/%3E%3Cpath d='M13 9v8M9 13h8' stroke='%23eda906' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M19 19l8 8' stroke='%23eda906' stroke-width='3' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E") 13 13, zoom-in;
+
+    /* Zoom Out */
+    --cursor-zoom-out: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cfilter id='zos'%3E%3CfeDropShadow dx='0' dy='1' stdDeviation='1' flood-opacity='0.2'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23zos)'%3E%3Ccircle cx='13' cy='13' r='8' fill='%231a3d2e' stroke='%23eda906' stroke-width='2'/%3E%3Cpath d='M9 13h8' stroke='%23eda906' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M19 19l8 8' stroke='%23eda906' stroke-width='3' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E") 13 13, zoom-out;
+
+    /* Help */
+    --cursor-help: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='10' fill='%231a3d2e' stroke='%23eda906' stroke-width='2'/%3E%3Cpath d='M13 12c0-2 1.5-3 3-3s3 1 3 3c0 1.5-1 2-2 2.5-.5.3-1 .8-1 1.5' stroke='%23eda906' stroke-width='2' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='16' cy='22' r='1.5' fill='%23eda906'/%3E%3C/svg%3E") 16 16, help;
+}
+
+/* ============================================
+   CURSOR APPLICATIONS
+   ============================================ */
+
+/* === WORKSPACE === */
+.workspace {
+    cursor: default;
+}
+
+.workspace.pan-mode {
+    cursor: var(--cursor-grab);
+}
+
+.workspace.panning,
+.workspace.panning * {
+    cursor: var(--cursor-grabbing) !important;
+}
+
+/* === MODULES === */
+.placed-module {
+    cursor: var(--cursor-grab);
+    transition: transform 0.1s ease;
+}
+
+.placed-module:hover {
+    cursor: var(--cursor-grab);
+}
+
+.placed-module.selected {
+    cursor: var(--cursor-grab);
+}
+
+.placed-module.dragging,
+.placed-module:active:not(.selected) {
+    cursor: var(--cursor-grabbing) !important;
+}
+
+/* === PORTS === */
+.port {
+    cursor: var(--cursor-connect);
+}
+
+.port:hover,
+.port.active,
+.port.snap-target {
+    cursor: var(--cursor-connect);
+}
+
+/* === CONNECTIONS === */
+.connection-hit-area {
+    cursor: var(--cursor-delete);
+}
+
+.connection-group.hover .connection-hit-area {
+    cursor: var(--cursor-delete);
+}
+
+/* === SIDEBAR === */
+.module-item {
+    cursor: var(--cursor-grab);
+}
+
+.module-item:hover {
+    cursor: var(--cursor-grab);
+}
+
+.module-item:active {
+    cursor: var(--cursor-grabbing);
+}
+
+.module-item.placed {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* === BUTTONS & INTERACTIVE ELEMENTS === */
+button,
+.btn,
+.zoom-btn,
+.preset-btn,
+.header-btn,
+.preset-selector,
+[role="button"],
+a {
+    cursor: var(--cursor-pointer);
+}
+
+/* === INPUTS === */
+input[type="text"],
+input[type="search"],
+textarea {
+    cursor: var(--cursor-text);
+}
+
+/* === CONNECTING STATE === */
+body.connecting {
+    cursor: var(--cursor-connect) !important;
+}
+
+body.connecting .workspace,
+body.connecting .placed-module,
+body.connecting .canvas-container {
+    cursor: var(--cursor-connect) !important;
+}
+
+body.connecting .port {
+    cursor: var(--cursor-connect) !important;
+}
+
+/* === DISABLED === */
+[disabled],
+.disabled,
+button:disabled {
+    cursor: not-allowed !important;
+    opacity: 0.5;
+}
+
+/* === LOADING STATE === */
+body.loading,
+body.loading * {
+    cursor: var(--cursor-wait) !important;
+}
+
+/* === ZOOM CONTROLS === */
+.zoom-btn[data-action="in"]:hover {
+    cursor: var(--cursor-zoom-in);
+}
+
+.zoom-btn[data-action="out"]:hover {
+    cursor: var(--cursor-zoom-out);
+}
+
+/* === COLLAPSIBLE HEADERS === */
+.dimension-header {
+    cursor: var(--cursor-pointer);
+}
+
+/* === SCROLLBARS (WebKit) === */
+::-webkit-scrollbar-thumb {
+    cursor: var(--cursor-grab);
+}
+
+::-webkit-scrollbar-thumb:active {
+    cursor: var(--cursor-grabbing);
+}
+
+/* === RESPONSIVE - Touch Devices === */
+@media (hover: none) and (pointer: coarse) {
+    /* Reset to system cursors on touch devices */
+    *,
+    .workspace,
+    .placed-module,
+    .port,
+    .module-item,
+    button,
+    .connection-hit-area {
+        cursor: default !important;
+    }
+}

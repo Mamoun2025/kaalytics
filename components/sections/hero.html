@@ -1,0 +1,545 @@
+<!--
+KAALYTICS - Hero Section Component
+===================================
+Section hero modulaire avec effets premium
+Usage: Inclure via hero-loader.js
+-->
+
+<section class="hero section-hero" id="heroSection">
+    <!-- Background Effects -->
+    <div class="hero__bg"></div>
+    <div class="hero__grid"></div>
+
+    <!-- Glowing orbs -->
+    <div class="hero__orb hero__orb--1"></div>
+    <div class="hero__orb hero__orb--2"></div>
+    <div class="hero__orb hero__orb--3"></div>
+
+    <!-- Floating particles -->
+    <div class="hero__particles" aria-hidden="true">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="hero__content container">
+        <!-- Trust indicator -->
+        <div class="hero__trust-bar" data-hero-full>
+            <div class="hero__badge badge badge--live">
+                <span class="hero__badge-pulse"></span>
+                <span data-i18n="hero.badge">En production</span>
+            </div>
+            <div class="hero__trust-logos">
+                <span class="hero__trust-text" data-i18n="hero.usedBy">Utilise par</span>
+                <div class="hero__trust-names">{{TRUST_NAMES}}</div>
+            </div>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="hero__title">
+            <span class="hero__title-line hero__title-line--1" data-i18n="hero.title.line1">{{TITLE_LINE1}}</span>
+            <span class="hero__title-line hero__title-line--2">
+                <span class="hero__title-highlight" id="rotating-problem" data-rotate="{{ROTATING_TEXTS}}">{{TITLE_HIGHLIGHT}}</span>
+            </span>
+            <span class="hero__title-line hero__title-line--3 text-gradient" data-i18n="hero.title.line3">{{TITLE_LINE3}}</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="hero__subtitle" data-i18n="hero.subtitle">{{SUBTITLE}}</p>
+
+        <!-- Metrics -->
+        <div class="hero__metrics" data-hero-full>
+            <div class="hero__metric" data-animate="fade-up">
+                <div class="hero__metric-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                        <polyline points="22,4 12,14.01 9,11.01"/>
+                    </svg>
+                </div>
+                <div class="hero__metric-value" data-count="{{METRIC1_VALUE}}">{{METRIC1_VALUE}}</div>
+                <div class="hero__metric-label" data-i18n="hero.metric1">{{METRIC1_LABEL}}</div>
+            </div>
+            <div class="hero__metric" data-animate="fade-up" data-delay="100">
+                <div class="hero__metric-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12,6 12,12 16,14"/>
+                    </svg>
+                </div>
+                <div class="hero__metric-value" data-count="{{METRIC2_VALUE}}">{{METRIC2_VALUE}}</div>
+                <div class="hero__metric-label" data-i18n="hero.metric2">{{METRIC2_LABEL}}</div>
+            </div>
+            <div class="hero__metric" data-animate="fade-up" data-delay="200">
+                <div class="hero__metric-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="1" x2="12" y2="23"/>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                    </svg>
+                </div>
+                <div class="hero__metric-value" data-count="{{METRIC3_VALUE}}">{{METRIC3_VALUE}}</div>
+                <div class="hero__metric-label" data-i18n="hero.metric3">{{METRIC3_LABEL}}</div>
+            </div>
+            <div class="hero__metric" data-animate="fade-up" data-delay="300">
+                <div class="hero__metric-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 20V10"/>
+                        <path d="M12 20V4"/>
+                        <path d="M6 20v-6"/>
+                    </svg>
+                </div>
+                <div class="hero__metric-value">{{METRIC4_VALUE}}</div>
+                <div class="hero__metric-label" data-i18n="hero.metric4">{{METRIC4_LABEL}}</div>
+            </div>
+        </div>
+
+        <!-- CTAs -->
+        <div class="hero__cta-group">
+            <a href="{{CTA_PRIMARY_HREF}}" class="hero__cta-main btn btn--primary btn--lg">
+                <span data-i18n="hero.cta.primary">{{CTA_PRIMARY_TEXT}}</span>
+                <span class="btn__badge" data-hero-urgency>{{CTA_BADGE}}</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+            <a href="{{CTA_SECONDARY_HREF}}" class="hero__cta-secondary btn btn--ghost">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+                <span data-i18n="hero.cta.secondary">{{CTA_SECONDARY_TEXT}}</span>
+            </a>
+        </div>
+
+        <!-- Social proof -->
+        <div class="hero__social-proof" data-hero-full>
+            <div class="hero__avatars" id="heroAvatars">
+                <!-- Generated dynamically -->
+            </div>
+            <div class="hero__proof-text">
+                <div class="hero__proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <span data-i18n="hero.proof">{{SOCIAL_PROOF}}</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <a href="{{SCROLL_TARGET}}" class="hero__scroll-indicator" aria-label="Scroll down">
+        <span data-i18n="hero.discover">Decouvrir</span>
+        <div class="hero__scroll-mouse">
+            <div class="hero__scroll-wheel"></div>
+        </div>
+    </a>
+</section>
+
+<!-- CSS Styles -->
+<style>
+.section-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 120px 0 80px;
+    background: linear-gradient(180deg, #0a0f1a 0%, #0f172a 100%);
+}
+
+.hero__bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse 60% 40% at 80% 60%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+    z-index: 0;
+}
+
+.hero__grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 0;
+}
+
+.hero__orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.6;
+    animation: float 8s ease-in-out infinite;
+    z-index: 0;
+}
+
+.hero__orb--1 {
+    width: 400px;
+    height: 400px;
+    top: 10%;
+    left: -10%;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.3) 0%, transparent 70%);
+}
+
+.hero__orb--2 {
+    width: 300px;
+    height: 300px;
+    top: 60%;
+    right: -5%;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.25) 0%, transparent 70%);
+    animation-delay: -3s;
+}
+
+.hero__orb--3 {
+    width: 250px;
+    height: 250px;
+    bottom: 20%;
+    left: 30%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+    animation-delay: -5s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-30px) scale(1.05); }
+}
+
+.hero__particles {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(16, 185, 129, 0.6);
+    border-radius: 50%;
+    animation: particleFloat 15s linear infinite;
+}
+
+.particle:nth-child(1) { left: 10%; animation-duration: 12s; animation-delay: 0s; }
+.particle:nth-child(2) { left: 20%; animation-duration: 14s; animation-delay: -2s; }
+.particle:nth-child(3) { left: 35%; animation-duration: 11s; animation-delay: -4s; }
+.particle:nth-child(4) { left: 50%; animation-duration: 16s; animation-delay: -6s; }
+.particle:nth-child(5) { left: 65%; animation-duration: 13s; animation-delay: -8s; }
+.particle:nth-child(6) { left: 75%; animation-duration: 15s; animation-delay: -3s; }
+.particle:nth-child(7) { left: 85%; animation-duration: 12s; animation-delay: -5s; }
+.particle:nth-child(8) { left: 95%; animation-duration: 14s; animation-delay: -7s; }
+
+@keyframes particleFloat {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+}
+
+.hero__content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.hero__trust-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 100px;
+    font-size: 0.875rem;
+    color: #10b981;
+}
+
+.hero__badge-pulse {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
+    50% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+}
+
+.hero__trust-logos {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+}
+
+.hero__trust-names {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.hero__title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.hero__title-line {
+    display: block;
+}
+
+.hero__title-highlight {
+    position: relative;
+    color: #10b981;
+    background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, #10b981 0%, #06b6d4 50%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero__subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.6;
+}
+
+.hero__subtitle strong {
+    color: #fff;
+}
+
+.hero__metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+    .hero__metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.hero__metric {
+    text-align: center;
+}
+
+.hero__metric-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    color: #10b981;
+}
+
+.hero__metric-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.25rem;
+}
+
+.hero__metric-label {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.hero__cta-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.hero__cta-main {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+}
+
+.hero__cta-main:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 30px rgba(16, 185, 129, 0.4);
+}
+
+.btn__badge {
+    padding: 0.25rem 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    font-size: 0.75rem;
+}
+
+.hero__cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.hero__cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero__social-proof {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero__avatars {
+    display: flex;
+}
+
+.hero__avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #fff;
+    margin-left: -8px;
+}
+
+.hero__avatar:first-child {
+    margin-left: 0;
+}
+
+.hero__avatar--count {
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 0.7rem;
+}
+
+.hero__proof-text {
+    text-align: left;
+}
+
+.hero__proof-stars {
+    color: #fbbf24;
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+}
+
+.hero__proof-text span {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.hero__scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.75rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.hero__scroll-indicator:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hero__scroll-mouse {
+    width: 24px;
+    height: 36px;
+    border: 2px solid currentColor;
+    border-radius: 12px;
+    position: relative;
+}
+
+.hero__scroll-wheel {
+    width: 4px;
+    height: 8px;
+    background: currentColor;
+    border-radius: 2px;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollWheel 2s ease-in-out infinite;
+}
+
+@keyframes scrollWheel {
+    0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+    50% { transform: translateX(-50%) translateY(8px); opacity: 0.3; }
+}
+
+/* Variant: Simple */
+.section-hero--simple .hero__trust-bar,
+.section-hero--simple .hero__metrics,
+.section-hero--simple .hero__social-proof {
+    display: none;
+}
+
+/* Variant: Minimal */
+.section-hero--minimal .hero__trust-bar,
+.section-hero--minimal .hero__metrics,
+.section-hero--minimal .hero__social-proof,
+.section-hero--minimal .hero__scroll-indicator,
+.section-hero--minimal .hero__particles {
+    display: none;
+}
+
+.section-hero--minimal {
+    min-height: 60vh;
+}
+</style>

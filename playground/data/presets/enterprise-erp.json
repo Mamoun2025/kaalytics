@@ -1,0 +1,68 @@
+{
+    "id": "enterprise-erp",
+    "name": "Enterprise ERP",
+    "version": "1.0",
+    "description": "Suite ERP complète avec gestion RH, achats, projets et intégrations universelles",
+    "modules": [
+        {
+            "templateId": "ent-erp",
+            "x": 350,
+            "y": 100
+        },
+        {
+            "templateId": "ent-hr",
+            "x": 100,
+            "y": 280
+        },
+        {
+            "templateId": "ent-purchase",
+            "x": 350,
+            "y": 280
+        },
+        {
+            "templateId": "ent-project",
+            "x": 600,
+            "y": 280
+        },
+        {
+            "templateId": "integ-universal",
+            "x": 100,
+            "y": 100
+        },
+        {
+            "templateId": "intel-reports",
+            "x": 600,
+            "y": 100
+        }
+    ],
+    "connections": [
+        {
+            "from": { "index": 4, "port": "right" },
+            "to": { "index": 0, "port": "left" }
+        },
+        {
+            "from": { "index": 0, "port": "right" },
+            "to": { "index": 5, "port": "left" }
+        },
+        {
+            "from": { "index": 0, "port": "bottom" },
+            "to": { "index": 1, "port": "top" }
+        },
+        {
+            "from": { "index": 0, "port": "bottom" },
+            "to": { "index": 2, "port": "top" }
+        },
+        {
+            "from": { "index": 0, "port": "bottom" },
+            "to": { "index": 3, "port": "top" }
+        },
+        {
+            "from": { "index": 1, "port": "right" },
+            "to": { "index": 2, "port": "left" }
+        },
+        {
+            "from": { "index": 2, "port": "right" },
+            "to": { "index": 3, "port": "left" }
+        }
+    ]
+}

@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "version": "3.0",
+    "dimension": "manufacturing",
+    "description": "Synergies ULTRA-RICHES pour la dimension Industrie & Production"
+  },
+
+  "connections": {
+    "mfg-mes+mfg-planning": {
+      "name": "Production Pilotée",
+      "tagline": "Planifié et suivi en temps réel",
+      "story_paragraph": "L'intégration du Pilotage Atelier avec l'Ordonnancement crée une boucle de pilotage complète. Le planning ordonne les OF. Le MES remonte l'avancement en temps réel. Les retards sont visibles immédiatement. La re-planification intègre la situation réelle. Le planning n'est plus un idéal déconnecté mais un outil de pilotage vivant. L'atelier produit ce qui est prévu, ou le planning s'adapte à la réalité.",
+      "impact_narrative": "Cette synergie garantit l'exécution du plan. Les écarts sont détectés immédiatement. Les ajustements sont rapides. Les promesses clients sont tenues. La production est véritablement maîtrisée."
+    },
+
+    "mfg-mrp+mfg-bom": {
+      "name": "Besoins Fiables",
+      "tagline": "Nomenclatures justes, calculs exacts",
+      "story_paragraph": "Quand le Calcul des Besoins s'appuie sur des Nomenclatures justes, les propositions d'approvisionnement sont fiables. Chaque composant nécessaire est identifié. Les quantités sont exactes. Les délais sont calculés précisément. Plus de composant oublié qui manque en production. Plus de sur-approvisionnement par sécurité. Le MRP produit des résultats en lesquels on peut avoir confiance.",
+      "impact_narrative": "Cette combinaison fiabilise la supply chain interne. Les achats sont justes. Les ruptures sont évitées. Le stock est optimisé. La production peut compter sur les composants nécessaires."
+    },
+
+    "mfg-quality+mfg-traceability": {
+      "name": "Qualité Traçable",
+      "tagline": "Chaque contrôle documenté",
+      "story_paragraph": "L'alliance de la Qualité Production avec la Traçabilité Lots crée une assurance qualité complète et documentée. Chaque contrôle est lié au lot concerné. L'historique qualité de chaque lot est accessible. Les non-conformités sont traçables jusqu'aux lots impactés. En cas de problème, on sait exactement quels produits sont concernés et quels contrôles ont été faits.",
+      "impact_narrative": "Cette synergie crée une qualité prouvable. Les réclamations sont analysables en profondeur. Les rappels sont ciblés. La conformité réglementaire est documentée. La confiance client est totale."
+    },
+
+    "mfg-mes+mfg-costing": {
+      "name": "Coûts Réels",
+      "tagline": "Du temps machine au prix de revient",
+      "story_paragraph": "L'intégration du Pilotage Atelier avec le Prix de Revient calcule les coûts réels de production. Les temps machine et main d'œuvre déclarés alimentent les coûts réels. Les consommations réelles sont comptabilisées. L'écart entre coût standard et coût réel est mesuré par OF et par produit. Les dérives de coût sont identifiées et analysées.",
+      "impact_narrative": "Cette combinaison révèle la réalité économique. Les coûts ne sont plus estimés mais mesurés. Les produits rentables et non rentables sont identifiés. Les actions de réduction de coût sont ciblées. La marge est pilotée avec des faits."
+    },
+
+    "mfg-maintenance+mfg-mes": {
+      "name": "Disponibilité Productive",
+      "tagline": "Machines maintenues, production assurée",
+      "story_paragraph": "Quand la GMAO dialogue avec le Pilotage Atelier, la maintenance devient un levier de performance. Les arrêts déclarés en production alimentent l'analyse de maintenance. Les préventifs sont planifiés dans les créneaux sans production. L'impact des pannes sur la production est mesuré. Les investissements de remplacement sont justifiés par les données de disponibilité.",
+      "impact_narrative": "Cette synergie optimise la disponibilité. Les maintenances sont planifiées intelligemment. Les pannes impactantes sont priorisées. Le TRS s'améliore. La production peut compter sur des machines fiables."
+    },
+
+    "mfg-planning+mfg-mrp": {
+      "name": "Production Approvisionnée",
+      "tagline": "Ordres et composants synchronisés",
+      "story_paragraph": "L'alliance de l'Ordonnancement avec le Calcul des Besoins synchronise la production et les approvisionnements. Les OF planifiés génèrent les besoins en composants avec les bonnes dates. Les approvisionnements sont calés sur les besoins réels. Les avances ou retards de planning sont répercutés sur les besoins. La production ne manque jamais de composants car tout est synchronisé.",
+      "impact_narrative": "Cette combinaison élimine les ruptures. Les composants arrivent quand il faut. Le stock de sécurité peut être réduit. La production est fluide. Le cash immobilisé en stock diminue."
+    },
+
+    "mfg-bom+mfg-costing": {
+      "name": "Coûts Standard Fiables",
+      "tagline": "Nomenclatures justes, coûts précis",
+      "story_paragraph": "L'intégration des Nomenclatures avec le Prix de Revient garantit des coûts standard fiables. Les quantités de composants sont exactes. Les temps opératoires sont justes. Le coût standard reflète la réalité de fabrication. Les devis sont basés sur des coûts précis. Les marges prévisionnelles sont fiables.",
+      "impact_narrative": "Cette synergie fonde la rentabilité. Les coûts standard sont calculés automatiquement. Les prix de vente sont cohérents. Les marges sont prévisibles. Les décisions commerciales sont éclairées."
+    },
+
+    "mfg-quality+mfg-mes": {
+      "name": "Qualité en Ligne",
+      "tagline": "Contrôles intégrés à la production",
+      "story_paragraph": "Quand la Qualité Production s'intègre au Pilotage Atelier, les contrôles font partie du flux de production. Les opérateurs sont guidés pour les contrôles à chaque étape. Les mesures sont saisies dans le contexte de l'OF. Les alertes qualité arrêtent la production si nécessaire. La qualité n'est pas ajoutée après mais construite pendant.",
+      "impact_narrative": "Cette combinaison prévient les défauts. Les contrôles sont systématiques et non contournables. Les dérives sont détectées au plus tôt. Les rebuts sont minimisés. La qualité livrée est constante."
+    }
+  },
+
+  "multi_connections": {
+    "mfg-mes+mfg-planning+mfg-quality": {
+      "name": "Excellence Industrielle",
+      "tagline": "Produire juste, bien, et vite",
+      "story_paragraph": "La triple alliance Pilotage Atelier, Ordonnancement et Qualité Production crée une industrie performante sur tous les axes. La production est planifiée optimalement. L'exécution est suivie en temps réel. La qualité est intégrée à chaque étape. Les trois dimensions de la performance industrielle sont maîtrisées simultanément. L'usine atteint l'excellence opérationnelle.",
+      "cumulative_impact": "Ensemble, ces trois modules créent une industrie de classe mondiale. Le TRS atteint des sommets. La qualité est constante. Les délais sont respectés. Votre industrie devient une référence."
+    },
+
+    "mfg-mrp+mfg-bom+mfg-costing": {
+      "name": "Maîtrise Économique",
+      "tagline": "Besoins, nomenclatures, coûts alignés",
+      "story_paragraph": "Quand Calcul des Besoins, Nomenclatures et Prix de Revient fonctionnent ensemble, la maîtrise économique est totale. Les produits sont parfaitement définis. Les besoins sont calculés précisément. Les coûts sont connus. Du devis à la marge réelle, tout s'enchaîne de manière cohérente. Les décisions économiques s'appuient sur des données fiables.",
+      "cumulative_impact": "Cette combinaison triple donne le contrôle économique. Les marges sont prévisibles. Les coûts sont maîtrisés. Les approvisionnements sont optimisés. Votre industrie est rentable et le reste."
+    },
+
+    "mfg-quality+mfg-traceability+mfg-maintenance": {
+      "name": "Fiabilité Totale",
+      "tagline": "Qualité, traçabilité, disponibilité",
+      "story_paragraph": "L'intégration Qualité Production, Traçabilité Lots et GMAO crée une industrie fiable sous tous les angles. La qualité est construite et documentée. Chaque lot est traçable. Les équipements sont maintenus pour produire sans défaut. Les trois piliers de la fiabilité industrielle sont en place. Les clients reçoivent des produits conformes, traçables, produits sur des équipements fiables.",
+      "cumulative_impact": "Cette orchestration triple garantit la fiabilité. Les réclamations sont rares et gérables. La conformité est totale. Les équipements sont disponibles. Votre industrie inspire confiance."
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "_meta": {
+    "version": "3.0",
+    "dimension": "brand",
+    "description": "Contenu sémantique ULTRA-RICHE pour la dimension Identité & Design"
+  },
+
+  "modules": {
+    "brand-identity": {
+      "name": "Identité Visuelle",
+      "tagline": "L'ADN visuel de votre marque",
+      "description_short": "Logo, palette couleurs, typographie et guidelines qui définissent votre présence visuelle.",
+      "description_full": "L'Identité Visuelle est le fondement de toute votre communication. Un logo mémorable qui capture l'essence de votre entreprise. Une palette de couleurs qui évoque les bonnes émotions. Une typographie qui porte votre personnalité. Des guidelines précises qui garantissent la cohérence sur tous les supports. Cette identité n'est pas juste esthétique : elle construit la reconnaissance de marque, la confiance, et la différenciation face à la concurrence. Chaque élément est pensé pour raconter votre histoire et créer une impression durable.",
+      "transformation_story": {
+        "intro": "Votre marque acquiert une identité visuelle cohérente et mémorable. Du logo aux couleurs, chaque élément raconte votre histoire et vous distingue de la concurrence. Vos clients vous reconnaissent instantanément.",
+        "deep_narrative": "L'Identité Visuelle transforme la perception de votre entreprise. La professionnalisation de vos supports renforce la confiance. La cohérence visuelle crée la reconnaissance. La différenciation se construit visuellement. Votre marque cesse d'être anonyme pour devenir reconnaissable et mémorable.",
+        "business_impact": "L'impact sur la perception de marque est mesurable : amélioration de 60% de la reconnaissance de marque, augmentation de la confiance perçue, et renforcement du positionnement premium qui soutient vos prix."
+      }
+    },
+
+    "brand-web": {
+      "name": "Site Web",
+      "tagline": "Votre vitrine digitale 24/7",
+      "description_short": "Sites web magnifiques, rapides et optimisés pour convertir les visiteurs en clients.",
+      "description_full": "Le module Site Web crée des vitrines digitales qui allient esthétique et performance. Design moderne aligné sur votre identité visuelle, expérience utilisateur optimisée pour la conversion, performance technique irréprochable pour le SEO, responsive design parfait sur tous les appareils. Votre site n'est pas qu'une brochure en ligne : c'est une machine de conversion qui accueille vos visiteurs, les informe, les rassure et les guide vers l'action. Chaque page est pensée pour un objectif précis dans le parcours client.",
+      "transformation_story": {
+        "intro": "Votre présence web devient un atout commercial majeur. Un site qui impressionne dès la première seconde, guide intuitivement les visiteurs, et convertit efficacement. Votre vitrine digitale travaille pour vous 24 heures sur 24.",
+        "deep_narrative": "Le Site Web transforme votre acquisition digitale. Les visiteurs restent plus longtemps grâce à une expérience agréable. La navigation intuitive les guide vers la conversion. Le design professionnel renforce la crédibilité. Le référencement naturel attire un trafic qualifié. Votre site devient un commercial qui ne dort jamais.",
+        "business_impact": "Les résultats sont concrets : augmentation de 40% du taux de conversion, amélioration du positionnement SEO qui génère du trafic organique, et renforcement de la crédibilité qui soutient le cycle de vente."
+      }
+    },
+
+    "brand-docs": {
+      "name": "Documents Pro",
+      "tagline": "Des documents qui inspirent confiance",
+      "description_short": "Factures, devis, présentations et documents commerciaux au design premium.",
+      "description_full": "Le module Documents Pro élève la qualité de tous vos documents business au niveau de votre ambition. Factures et devis qui reflètent votre professionnalisme, présentations commerciales impactantes, propositions qui impressionnent, rapports élégants et lisibles. Chaque document qui sort de votre entreprise porte votre identité visuelle et renforce votre image. Les templates sont configurés une fois et utilisables par toute l'équipe, garantissant cohérence et efficacité.",
+      "transformation_story": {
+        "intro": "Vos documents deviennent des ambassadeurs de votre marque. Chaque facture, chaque devis, chaque présentation porte votre identité et renforce votre image professionnelle. La qualité visuelle accompagne la qualité de vos services.",
+        "deep_narrative": "Les Documents Pro transforment chaque point de contact administratif en opportunité de branding. Les clients reçoivent des documents qui inspirent confiance. Les présentations commerciales impressionnent. Les propositions se distinguent visuellement de la concurrence. La cohérence documentaire renforce l'image de rigueur.",
+        "business_impact": "L'impact sur la perception client est significatif : amélioration de la crédibilité, réduction des objections liées à la confiance, et différenciation par la qualité perçue qui justifie vos tarifs."
+      }
+    },
+
+    "brand-system": {
+      "name": "Design System",
+      "tagline": "Un langage visuel cohérent",
+      "description_short": "Bibliothèque de composants et guidelines pour une cohérence parfaite sur tous les supports.",
+      "description_full": "Le Design System est la bible visuelle de votre marque. Une bibliothèque de composants réutilisables — boutons, formulaires, cartes, icônes — qui garantit la cohérence sur toutes vos interfaces. Des guidelines détaillées sur l'usage de chaque élément. Des tokens de design qui automatisent l'application des couleurs, typographies et espacements. Ce système permet à n'importe quelle équipe de produire des supports conformes à votre identité sans supervision constante. La cohérence devient automatique, pas accidentelle.",
+      "transformation_story": {
+        "intro": "Votre marque dispose d'un système de design complet et documenté. Chaque collaborateur peut créer des supports cohérents sans être designer. La cohérence visuelle devient systémique et durable.",
+        "deep_narrative": "Le Design System industrialise la qualité visuelle. Les nouveaux supports sont produits plus vite car les composants existent. Les erreurs de branding deviennent rares car les guidelines sont claires. L'évolution de l'identité se propage automatiquement. La maintenance devient simple.",
+        "business_impact": "Les gains d'efficacité sont substantiels : réduction de 50% du temps de création de nouveaux supports, élimination des incohérences visuelles, et scalabilité de la production graphique sans perte de qualité."
+      }
+    },
+
+    "brand-ui": {
+      "name": "UI/UX Design",
+      "tagline": "Interfaces que vos utilisateurs adorent",
+      "description_short": "Conception d'interfaces utilisateur intuitives, agréables et efficaces.",
+      "description_full": "Le module UI/UX Design place l'utilisateur au centre de la conception de vos interfaces digitales. Recherche utilisateur pour comprendre les vrais besoins, wireframes pour structurer les parcours, prototypes interactifs pour valider avant de développer, design pixel-perfect pour une expérience visuelle parfaite. Chaque écran est pensé pour minimiser l'effort cognitif et maximiser l'efficacité. L'utilisateur trouve ce qu'il cherche intuitivement, accomplit ses tâches sans friction, et garde une impression positive de votre marque.",
+      "transformation_story": {
+        "intro": "Vos interfaces deviennent intuitives et agréables à utiliser. Les utilisateurs accomplissent leurs tâches sans friction, sans formation, sans frustration. L'expérience utilisateur devient un avantage compétitif.",
+        "deep_narrative": "L'UI/UX Design transforme la relation avec vos utilisateurs. L'adoption de vos outils augmente car ils sont faciles à prendre en main. Le support diminue car les interfaces sont auto-explicatives. La satisfaction utilisateur s'améliore. La rétention augmente car l'expérience est agréable.",
+        "business_impact": "L'impact sur l'adoption et la satisfaction est majeur : augmentation de 35% du taux d'adoption, réduction de 40% des demandes de support liées à l'UX, et amélioration mesurable de la satisfaction utilisateur."
+      }
+    },
+
+    "brand-motion": {
+      "name": "Motion Design",
+      "tagline": "La vidéo qui capte l'attention",
+      "description_short": "Animations, vidéos explicatives et contenu dynamique qui engage votre audience.",
+      "description_full": "Le module Motion Design apporte le mouvement à votre communication. Vidéos explicatives qui présentent vos produits en quelques secondes, animations qui dynamisent vos présentations, motion graphics pour les réseaux sociaux, intros vidéo pour votre chaîne, animations d'interface qui enrichissent l'expérience utilisateur. Dans un monde de scroll rapide, le mouvement capte l'attention et transmet les messages plus efficacement que le statique. Chaque animation porte votre identité visuelle et renforce votre branding.",
+      "transformation_story": {
+        "intro": "Votre communication s'anime et capte l'attention. Dans un flux de contenus statiques, vos vidéos et animations se distinguent et engagent votre audience. Le message passe plus vite et plus fort.",
+        "deep_narrative": "Le Motion Design transforme l'impact de votre communication. Les concepts complexes sont expliqués visuellement en quelques secondes. L'engagement sur les réseaux sociaux augmente car le mouvement attire l'œil. Les présentations deviennent mémorables. Le branding se renforce à chaque animation.",
+        "business_impact": "Les résultats sur l'engagement sont significatifs : augmentation de 80% de l'engagement sur les contenus animés, meilleure rétention des messages, et renforcement de la perception d'innovation et de modernité."
+      }
+    },
+
+    "brand-print": {
+      "name": "Supports Print",
+      "tagline": "Le digital ne fait pas tout",
+      "description_short": "Cartes de visite, brochures, signalétique et tous supports imprimés de qualité.",
+      "description_full": "Le module Supports Print assure que votre présence physique est aussi soignée que votre présence digitale. Cartes de visite premium qui marquent les esprits, brochures commerciales qui présentent votre offre, signalétique cohérente pour vos locaux, PLV pour les points de vente, goodies qui portent votre marque. Chaque support imprimé est conçu avec la même exigence que vos supports digitaux, garantissant une cohérence totale de l'expérience de marque quel que soit le point de contact.",
+      "transformation_story": {
+        "intro": "Votre présence physique rejoint la qualité de votre présence digitale. Chaque carte de visite échangée, chaque brochure remise, chaque affiche visible porte votre identité avec fierté.",
+        "deep_narrative": "Les Supports Print complètent votre arsenal de branding. Les salons et événements deviennent des vitrines cohérentes. Les commerciaux disposent de supports premium. Les locaux reflètent votre identité. Chaque touchpoint physique renforce la marque.",
+        "business_impact": "L'impact sur la perception est mesurable : amélioration de l'image lors des rencontres physiques, supports de vente qui facilitent les conversions, et cohérence totale qui renforce la crédibilité."
+      }
+    },
+
+    "brand-social": {
+      "name": "Assets Sociaux",
+      "tagline": "Contenu optimisé par plateforme",
+      "description_short": "Visuels et templates adaptés à chaque réseau social pour une présence impactante.",
+      "description_full": "Le module Assets Sociaux crée une bibliothèque de contenus visuels optimisés pour chaque plateforme sociale. Templates Instagram Stories, visuels LinkedIn au bon format, covers Facebook actualisables, vignettes YouTube qui maximisent les clics, carrousels qui racontent des histoires. Chaque format est pensé pour les spécificités de sa plateforme tout en maintenant la cohérence de marque. Votre équipe peut produire du contenu social de qualité rapidement grâce aux templates pré-configurés.",
+      "transformation_story": {
+        "intro": "Votre présence sociale devient professionnelle et cohérente. Sur chaque plateforme, votre marque est immédiatement reconnaissable grâce à des visuels de qualité adaptés aux spécificités de chaque réseau.",
+        "deep_narrative": "Les Assets Sociaux professionnalisent votre communication sociale. Le feed Instagram devient harmonieux. Les posts LinkedIn se distinguent du bruit. Les Stories captent l'attention. La production de contenu s'accélère grâce aux templates. La cohérence de marque est maintenue sans effort.",
+        "business_impact": "Les résultats sur l'engagement social sont visibles : amélioration de 50% de l'engagement moyen, croissance de l'audience grâce à une présence plus professionnelle, et gains de temps significatifs sur la production de contenu."
+      }
+    }
+  }
+}

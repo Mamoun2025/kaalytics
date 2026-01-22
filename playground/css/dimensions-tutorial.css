@@ -1,0 +1,1144 @@
+/* ============================================
+   DIMENSIONS TUTORIAL - Comprehensive Styles
+   Version 3.0 - Modular Architecture
+   ============================================ */
+
+/* === CSS VARIABLES === */
+:root {
+    --tuto-primary: #eda906;
+    --tuto-primary-dark: #d4990a;
+    --tuto-success: #10b981;
+    --tuto-bg-dark: #1a3d2e;
+    --tuto-bg-darker: #0f2a1f;
+    --tuto-text: rgba(255,255,255,0.9);
+    --tuto-text-muted: rgba(255,255,255,0.6);
+    --tuto-overlay: rgba(0,0,0,0.75);
+}
+
+/* ============================================
+   WELCOME MODAL
+   ============================================ */
+.tuto-welcome-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10005;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.tuto-welcome-modal.visible {
+    opacity: 1;
+}
+
+.tuto-welcome-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--tuto-overlay);
+    backdrop-filter: blur(8px);
+}
+
+.tuto-welcome-content {
+    position: relative;
+    width: 90%;
+    max-width: 480px;
+    background: linear-gradient(165deg, var(--tuto-bg-dark) 0%, var(--tuto-bg-darker) 100%);
+    border: 2px solid var(--tuto-primary);
+    border-radius: 24px;
+    padding: 40px;
+    text-align: center;
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.6),
+        0 0 60px rgba(237,169,6,0.2);
+    transform: scale(0.9) translateY(20px);
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.tuto-welcome-modal.visible .tuto-welcome-content {
+    transform: scale(1) translateY(0);
+}
+
+.tuto-welcome-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+    animation: welcomeIconPulse 2s ease-in-out infinite;
+}
+
+@keyframes welcomeIconPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.tuto-welcome-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--tuto-primary);
+    margin: 0 0 12px;
+    letter-spacing: 0.5px;
+}
+
+.tuto-welcome-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--tuto-text-muted);
+    margin: 0 0 24px;
+}
+
+.tuto-welcome-features {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.tuto-welcome-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 16px 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    min-width: 100px;
+}
+
+.tuto-welcome-feature span:first-child {
+    font-size: 28px;
+}
+
+.tuto-welcome-feature span:last-child {
+    font-size: 12px;
+    color: var(--tuto-text-muted);
+    white-space: nowrap;
+}
+
+.tuto-welcome-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tuto-welcome-start {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, var(--tuto-primary), var(--tuto-primary-dark));
+    border: none;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--tuto-bg-dark);
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 8px 30px rgba(237,169,6,0.4);
+}
+
+.tuto-welcome-start:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(237,169,6,0.5);
+}
+
+.tuto-welcome-start span {
+    font-size: 20px;
+}
+
+.tuto-welcome-skip {
+    background: none;
+    border: none;
+    color: var(--tuto-text-muted);
+    font-size: 13px;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.2s;
+}
+
+.tuto-welcome-skip:hover {
+    color: var(--tuto-text);
+}
+
+.tuto-welcome-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    font-size: 12px;
+    color: var(--tuto-text-muted);
+}
+
+/* ============================================
+   BUBBLE
+   ============================================ */
+.tuto-bubble {
+    position: fixed;
+    width: 380px;
+    max-width: calc(100vw - 40px);
+    background: linear-gradient(165deg, var(--tuto-bg-dark) 0%, var(--tuto-bg-darker) 100%);
+    border: 2px solid var(--tuto-primary);
+    border-radius: 20px;
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.5),
+        0 0 30px rgba(237,169,6,0.15),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: auto;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    overflow: hidden;
+}
+
+.tuto-bubble.visible {
+    opacity: 1;
+}
+
+/* === PROGRESS BAR === */
+.tuto-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: rgba(255,255,255,0.1);
+    overflow: hidden;
+}
+
+.tuto-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--tuto-primary), #f59e0b, var(--tuto-success));
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 10px rgba(237,169,6,0.5);
+}
+
+/* === HEADER === */
+.tuto-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 20px 12px;
+    border-bottom: 1px solid rgba(237,169,6,0.2);
+    background: rgba(0,0,0,0.2);
+}
+
+.tuto-icon {
+    font-size: 24px;
+    line-height: 1;
+    transition: transform 0.3s;
+}
+
+.tuto-icon.bounce {
+    animation: iconBounceOnce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes iconBounceOnce {
+    0% { transform: scale(0.5) rotate(-10deg); }
+    50% { transform: scale(1.2) rotate(5deg); }
+    100% { transform: scale(1) rotate(0); }
+}
+
+.tuto-title {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--tuto-primary);
+    letter-spacing: 0.3px;
+}
+
+.tuto-step-counter {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.1);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+/* === SOUND TOGGLE === */
+.tuto-sound-toggle {
+    position: absolute;
+    top: 14px;
+    right: 70px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tuto-sound-toggle:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.tuto-sound-toggle .sound-on,
+.tuto-sound-toggle .sound-off {
+    font-size: 14px;
+}
+
+.tuto-sound-toggle .sound-off {
+    display: none;
+}
+
+.tuto-sound-toggle.muted .sound-on {
+    display: none;
+}
+
+.tuto-sound-toggle.muted .sound-off {
+    display: block;
+}
+
+/* === MESSAGE === */
+.tuto-message {
+    padding: 18px 20px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--tuto-text);
+    transition: opacity 0.15s;
+}
+
+.tuto-message.updating {
+    opacity: 0.5;
+}
+
+.tuto-message strong {
+    color: var(--tuto-primary);
+    font-weight: 600;
+}
+
+/* === TIPS & ACTIONS === */
+.tuto-tip {
+    margin-top: 14px;
+    padding: 12px 14px;
+    background: rgba(237,169,6,0.1);
+    border-left: 3px solid var(--tuto-primary);
+    border-radius: 0 8px 8px 0;
+    font-size: 13px;
+    color: rgba(255,255,255,0.8);
+}
+
+.tuto-action {
+    margin-top: 14px;
+    padding: 14px;
+    background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(16,185,129,0.05));
+    border: 1px solid rgba(16,185,129,0.3);
+    border-radius: 10px;
+    font-size: 13px;
+    color: var(--tuto-success);
+    font-weight: 500;
+}
+
+/* === LISTS === */
+.tuto-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.tuto-list span {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.85);
+    white-space: nowrap;
+}
+
+.tuto-list span strong {
+    color: #fff;
+}
+
+/* === SHORTCUTS === */
+.tuto-shortcuts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.tuto-shortcuts span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.8);
+}
+
+.tuto-shortcuts kbd {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    padding: 4px 8px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--tuto-primary);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.2);
+}
+
+/* === SUMMARY === */
+.tuto-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 14px;
+    padding: 14px;
+    background: rgba(16,185,129,0.1);
+    border-radius: 12px;
+}
+
+.tuto-summary span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--tuto-text);
+}
+
+/* === CTA === */
+.tuto-cta {
+    margin-top: 16px;
+    padding: 14px;
+    background: linear-gradient(135deg, var(--tuto-primary), var(--tuto-primary-dark));
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--tuto-bg-dark);
+    text-align: center;
+}
+
+/* === FOOTER === */
+.tuto-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px 16px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    background: rgba(0,0,0,0.15);
+}
+
+.tuto-skip {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.35);
+    font-size: 12px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.tuto-skip:hover {
+    color: rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.05);
+}
+
+.tuto-nav {
+    display: flex;
+    gap: 8px;
+}
+
+.tuto-prev,
+.tuto-next {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tuto-prev {
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.7);
+}
+
+.tuto-prev:hover {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+}
+
+.tuto-next {
+    background: linear-gradient(135deg, var(--tuto-primary), var(--tuto-primary-dark));
+    color: var(--tuto-bg-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+.tuto-next:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(237,169,6,0.4);
+}
+
+.tuto-next.tuto-final-btn {
+    background: linear-gradient(135deg, var(--tuto-success), #059669);
+    animation: finalBtnPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes finalBtnPulse {
+    0%, 100% { box-shadow: 0 4px 15px rgba(16,185,129,0.4); }
+    50% { box-shadow: 0 8px 30px rgba(16,185,129,0.6); }
+}
+
+/* === BUBBLE POSITIONS === */
+.tuto-bubble.tuto-center {
+    text-align: center;
+}
+
+.tuto-bubble.tuto-center .tuto-header {
+    justify-content: center;
+}
+
+.tuto-bubble.tuto-center .tuto-list {
+    justify-content: center;
+}
+
+.tuto-bubble.tuto-center .tuto-footer {
+    justify-content: center;
+}
+
+.tuto-bubble.tuto-center .tuto-skip {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+/* === BUBBLE ARROWS === */
+.tuto-bubble.tuto-right::before,
+.tuto-bubble.tuto-left::before,
+.tuto-bubble.tuto-bottom::before,
+.tuto-bubble.tuto-top::before {
+    content: '';
+    position: absolute;
+    border: 12px solid transparent;
+}
+
+.tuto-bubble.tuto-right::before {
+    left: -24px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-right-color: var(--tuto-primary);
+}
+
+.tuto-bubble.tuto-left::before {
+    right: -24px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left-color: var(--tuto-primary);
+}
+
+.tuto-bubble.tuto-bottom::before {
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-color: var(--tuto-primary);
+}
+
+.tuto-bubble.tuto-top::before {
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-color: var(--tuto-primary);
+}
+
+/* === BUBBLE ENTRANCE ANIMATIONS === */
+.tuto-bubble {
+    animation: bubbleEntrance 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes bubbleEntrance {
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+    100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+.tuto-bubble.tuto-right {
+    animation: bubbleEntranceRight 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes bubbleEntranceRight {
+    0% { opacity: 0; transform: translateY(-50%) translateX(-20px); }
+    100% { opacity: 1; transform: translateY(-50%) translateX(0); }
+}
+
+.tuto-bubble.tuto-left {
+    animation: bubbleEntranceLeft 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes bubbleEntranceLeft {
+    0% { opacity: 0; transform: translateY(-50%) translateX(20px); }
+    100% { opacity: 1; transform: translateY(-50%) translateX(0); }
+}
+
+.tuto-bubble.tuto-bottom {
+    animation: bubbleEntranceBottom 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes bubbleEntranceBottom {
+    0% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+    100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.tuto-bubble.tuto-top {
+    animation: bubbleEntranceTop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes bubbleEntranceTop {
+    0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+    100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* ============================================
+   HIGHLIGHT & OVERLAY
+   ============================================ */
+.tuto-highlight {
+    position: fixed;
+    border: 3px solid var(--tuto-primary);
+    border-radius: 12px;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    transition: all 0.4s ease;
+    box-shadow:
+        0 0 0 4px rgba(237,169,6,0.15),
+        0 0 30px rgba(237,169,6,0.25),
+        inset 0 0 40px rgba(237,169,6,0.03);
+    animation: highlightPulse 2.5s ease-in-out infinite;
+}
+
+.tuto-highlight.visible {
+    opacity: 1;
+}
+
+@keyframes highlightPulse {
+    0%, 100% {
+        box-shadow:
+            0 0 0 4px rgba(237,169,6,0.15),
+            0 0 30px rgba(237,169,6,0.25);
+    }
+    50% {
+        box-shadow:
+            0 0 0 8px rgba(237,169,6,0.2),
+            0 0 50px rgba(237,169,6,0.4);
+    }
+}
+
+/* === PULSE RING === */
+.tuto-pulse-ring {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border: 3px solid var(--tuto-primary);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: opacity 0.3s;
+    animation: pulseRingExpand 2s ease-out infinite;
+}
+
+.tuto-pulse-ring.visible {
+    opacity: 1;
+}
+
+@keyframes pulseRingExpand {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+}
+
+/* === SPOTLIGHT OVERLAY (SVG) === */
+.tuto-spotlight-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9997;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.tuto-spotlight-overlay.visible {
+    opacity: 1;
+}
+
+.tuto-spotlight-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.tuto-spotlight-bg {
+    fill: rgba(0,0,0,0.7);
+}
+
+.tuto-spotlight-hole {
+    transition: all 0.4s ease;
+}
+
+/* === POINTER ARROWS === */
+.tuto-pointer {
+    position: fixed;
+    font-size: 32px;
+    z-index: 10000;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+    animation: pointerBounce 1s ease-in-out infinite;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.tuto-pointer.visible {
+    opacity: 1;
+}
+
+.tuto-pointer-down {
+    animation: pointerBounceDown 1s ease-in-out infinite;
+}
+
+.tuto-pointer-up {
+    animation: pointerBounceUp 1s ease-in-out infinite;
+}
+
+.tuto-pointer-left {
+    animation: pointerBounceLeft 1s ease-in-out infinite;
+}
+
+.tuto-pointer-right {
+    animation: pointerBounceRight 1s ease-in-out infinite;
+}
+
+@keyframes pointerBounceDown {
+    0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+    50% { transform: translate(-50%, -50%) translateY(10px); }
+}
+
+@keyframes pointerBounceUp {
+    0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+    50% { transform: translate(-50%, -50%) translateY(-10px); }
+}
+
+@keyframes pointerBounceLeft {
+    0%, 100% { transform: translate(-50%, -50%) translateX(0); }
+    50% { transform: translate(-50%, -50%) translateX(-10px); }
+}
+
+@keyframes pointerBounceRight {
+    0%, 100% { transform: translate(-50%, -50%) translateX(0); }
+    50% { transform: translate(-50%, -50%) translateX(10px); }
+}
+
+/* === ATTENTION ANIMATION === */
+.tuto-attention {
+    animation: attentionShake 0.5s ease-in-out 3;
+}
+
+@keyframes attentionShake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* ============================================
+   SUCCESS MESSAGE
+   ============================================ */
+.tuto-success {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, var(--tuto-success), #059669);
+    color: white;
+    padding: 20px 36px;
+    border-radius: 20px;
+    z-index: 10001;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow:
+        0 20px 60px rgba(16,185,129,0.5),
+        0 0 40px rgba(16,185,129,0.3);
+}
+
+.tuto-success.visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.tuto-success-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: bold;
+    animation: successIconPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes successIconPop {
+    0% { transform: scale(0) rotate(-180deg); }
+    100% { transform: scale(1) rotate(0); }
+}
+
+.tuto-success-text {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================
+   RESTART BUTTON
+   ============================================ */
+.tuto-restart {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(145deg, var(--tuto-bg-dark), var(--tuto-bg-darker));
+    border: 2px solid rgba(237,169,6,0.4);
+    border-radius: 50%;
+    color: var(--tuto-primary);
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.tuto-restart.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.tuto-restart:hover {
+    transform: scale(1.1) rotate(10deg);
+    border-color: var(--tuto-primary);
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.4),
+        0 0 20px rgba(237,169,6,0.3);
+}
+
+/* ============================================
+   CONFETTI
+   ============================================ */
+.tuto-confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10002;
+    overflow: hidden;
+}
+
+.tuto-confetti-container.fading {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.tuto-confetti-piece {
+    position: absolute;
+    top: -20px;
+    border-radius: 2px;
+    animation: confettiFall 3s ease-out forwards;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) translateX(var(--drift, 0)) rotate(var(--rotation, 720deg));
+        opacity: 0;
+    }
+}
+
+/* === CONFETTI BURST === */
+.tuto-confetti-burst {
+    position: fixed;
+    pointer-events: none;
+    z-index: 10002;
+}
+
+.tuto-confetti-burst-piece {
+    position: absolute;
+    border-radius: 50%;
+    animation: confettiBurst 0.8s ease-out forwards;
+}
+
+@keyframes confettiBurst {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--tx), var(--ty)) scale(0);
+        opacity: 0;
+    }
+}
+
+/* === SPARKLE === */
+.tuto-sparkle {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10002;
+    animation: sparkle 0.6s ease-out forwards;
+}
+
+@keyframes sparkle {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--tx), var(--ty)) scale(0);
+        opacity: 0;
+    }
+}
+
+/* === STARS === */
+.tuto-stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10002;
+    overflow: hidden;
+}
+
+.tuto-star {
+    position: absolute;
+    top: -50px;
+    animation: starFall 3s ease-out forwards;
+}
+
+@keyframes starFall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .tuto-welcome-content {
+        padding: 30px 24px;
+    }
+
+    .tuto-welcome-title {
+        font-size: 22px;
+    }
+
+    .tuto-welcome-icon {
+        font-size: 48px;
+    }
+
+    .tuto-welcome-features {
+        gap: 10px;
+    }
+
+    .tuto-welcome-feature {
+        padding: 12px 16px;
+        min-width: 80px;
+    }
+
+    .tuto-bubble {
+        width: calc(100vw - 24px);
+        max-width: 360px;
+        border-radius: 16px;
+    }
+
+    .tuto-header {
+        padding: 14px 16px 10px;
+    }
+
+    .tuto-title {
+        font-size: 15px;
+    }
+
+    .tuto-message {
+        padding: 14px 16px;
+        font-size: 13px;
+    }
+
+    .tuto-list span {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+
+    .tuto-footer {
+        padding: 12px 16px 14px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .tuto-skip {
+        order: 2;
+        width: 100%;
+        text-align: center;
+    }
+
+    .tuto-nav {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .tuto-prev,
+    .tuto-next {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .tuto-restart {
+        bottom: 16px;
+        right: 16px;
+        width: 44px;
+        height: 44px;
+        font-size: 20px;
+    }
+
+    .tuto-success {
+        padding: 16px 28px;
+    }
+
+    .tuto-success-text {
+        font-size: 18px;
+    }
+
+    .tuto-sound-toggle {
+        right: 50px;
+    }
+}
+
+/* ============================================
+   LIGHT MODE
+   ============================================ */
+@media (prefers-color-scheme: light) {
+    .tuto-bubble {
+        background: linear-gradient(165deg, #ffffff 0%, #f8fafc 100%);
+        border-color: var(--tuto-primary);
+        box-shadow:
+            0 20px 60px rgba(0,0,0,0.15),
+            0 0 30px rgba(237,169,6,0.1);
+    }
+
+    .tuto-header {
+        background: rgba(237,169,6,0.05);
+        border-color: rgba(237,169,6,0.15);
+    }
+
+    .tuto-message {
+        color: var(--tuto-bg-dark);
+    }
+
+    .tuto-tip {
+        background: rgba(237,169,6,0.08);
+        color: var(--tuto-bg-dark);
+    }
+
+    .tuto-list span {
+        background: rgba(26,61,46,0.08);
+        color: var(--tuto-bg-dark);
+    }
+
+    .tuto-shortcuts kbd {
+        background: rgba(26,61,46,0.1);
+        border-color: rgba(26,61,46,0.2);
+        color: var(--tuto-bg-dark);
+    }
+
+    .tuto-skip {
+        color: rgba(26,61,46,0.4);
+    }
+
+    .tuto-skip:hover {
+        color: rgba(26,61,46,0.7);
+        background: rgba(26,61,46,0.05);
+    }
+
+    .tuto-prev {
+        background: rgba(26,61,46,0.1);
+        color: var(--tuto-bg-dark);
+    }
+
+    .tuto-prev:hover {
+        background: rgba(26,61,46,0.15);
+    }
+
+    .tuto-welcome-content {
+        background: linear-gradient(165deg, #ffffff 0%, #f8fafc 100%);
+    }
+
+    .tuto-welcome-title {
+        color: var(--tuto-bg-dark);
+    }
+
+    .tuto-welcome-text {
+        color: #64748b;
+    }
+
+    .tuto-welcome-feature {
+        background: rgba(26,61,46,0.05);
+    }
+
+    .tuto-welcome-feature span:last-child {
+        color: #64748b;
+    }
+}

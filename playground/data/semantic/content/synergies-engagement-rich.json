@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "version": "3.0",
+    "dimension": "engagement",
+    "description": "Synergies ULTRA-RICHES pour la dimension Marketing Automation"
+  },
+
+  "connections": {
+    "engage-campaigns+engage-content": {
+      "name": "Production à la Demande",
+      "tagline": "Contenu généré pour chaque campagne",
+      "story_paragraph": "L'intégration Campagnes IA avec Contenu Généré crée un flux de production marketing ultra-réactif. Chaque nouvelle campagne déclenche la génération automatique des contenus nécessaires : variations de messages, visuels adaptés, emails de nurturing, posts sociaux. L'IA produit des dizaines de versions que les algorithmes de campagne testent et optimisent. La vitesse de mise en marché des campagnes s'accélère drastiquement car le contenu n'est plus un goulot d'étranglement.",
+      "impact_narrative": "Cette synergie démultiplie votre capacité d'expérimentation. Le nombre de variations testées explose. Les campagnes sont lancées plus vite. Les contenus sous-performants sont remplacés instantanément. Votre marketing devient véritablement agile et adaptatif."
+    },
+
+    "engage-budget+engage-attribution": {
+      "name": "Investissement Intelligent",
+      "tagline": "Budget guidé par l'attribution réelle",
+      "story_paragraph": "Quand Budget Optimisé rencontre Attribution, l'allocation marketing devient véritablement data-driven. L'attribution révèle la vraie contribution de chaque canal à la conversion. Ces insights alimentent directement l'algorithme de répartition budgétaire. Les canaux qui contribuent réellement au parcours client reçoivent plus de budget. Les canaux survalorisés par le dernier clic sont recalibrés. Chaque euro est investi là où il génère le plus de valeur réelle.",
+      "impact_narrative": "Cette combinaison transforme l'efficacité de votre investissement marketing. Le budget reflète la valeur réelle des canaux. Les décisions d'allocation sont objectives et défendables. Le ROI global s'améliore significativement. Les guerres de chapelle entre équipes canaux disparaissent face aux données."
+    },
+
+    "engage-email+engage-ab": {
+      "name": "Emails Optimisés",
+      "tagline": "Chaque élément testé et perfectionné",
+      "story_paragraph": "L'alliance Emails Auto et Tests A/B crée un système d'email marketing en amélioration continue. Chaque élément des séquences email — objet, preview, contenu, CTA, timing — fait l'objet de tests permanents. Les variations gagnantes remplacent automatiquement les perdantes. Les séquences s'optimisent au fil du temps sans intervention humaine. Votre email marketing devient plus performant de semaine en semaine.",
+      "impact_narrative": "Cette synergie génère une amélioration continue des performances email. Les taux d'ouverture progressent régulièrement. Les taux de clic s'améliorent. La contribution du canal email à la conversion augmente. L'optimisation devient automatique et permanente."
+    },
+
+    "engage-social+engage-content": {
+      "name": "Usine à Contenu Social",
+      "tagline": "Posts générés, adaptés, publiés automatiquement",
+      "story_paragraph": "L'intégration Réseaux Sociaux et Contenu Généré crée une chaîne de production sociale automatisée. L'IA génère des contenus adaptés à chaque plateforme : format carré pour Instagram, vidéo courte pour TikTok, article pour LinkedIn, thread pour Twitter. Le calendrier éditorial se remplit automatiquement. Les variations sont testées. La présence sociale devient abondante et cohérente sans mobiliser des ressources créatives importantes.",
+      "impact_narrative": "Cette combinaison résout le défi de la présence sociale continue. Le volume de contenu n'est plus limité par la capacité de production. La cohérence est assurée par les guidelines IA. L'engagement augmente grâce à la régularité. Votre marque est omniprésente sans effort proportionnel."
+    },
+
+    "engage-campaigns+engage-analytics": {
+      "name": "Performance en Boucle",
+      "tagline": "Mesure précise, optimisation continue",
+      "story_paragraph": "Quand Campagnes IA et Analytics Marketing fonctionnent ensemble, un cercle vertueux d'optimisation s'installe. Les analytics fournissent une mesure précise de chaque campagne. Ces données alimentent les algorithmes d'optimisation. Les campagnes s'ajustent en fonction des résultats mesurés. Les learnings sont capitalisés pour les campagnes futures. La performance marketing s'améliore de manière systématique et mesurable.",
+      "impact_narrative": "Cette synergie crée un système marketing qui s'améliore automatiquement. Les décisions sont basées sur des données fiables. Les succès sont répliqués. Les échecs sont identifiés et corrigés. La performance progresse de campagne en campagne."
+    },
+
+    "engage-email+engage-social": {
+      "name": "Orchestration Multi-Canal",
+      "tagline": "Email et social en harmonie",
+      "story_paragraph": "L'intégration Emails Auto et Réseaux Sociaux coordonne vos communications sur les deux canaux majeurs. Un email déclenche des retargeting ads sociaux. Un engagement social peut initier une séquence email. Les audiences sont synchronisées. Les messages sont cohérents mais adaptés au canal. Le prospect reçoit une expérience de marque unifiée quel que soit son point de contact préféré.",
+      "impact_narrative": "Cette orchestration amplifie l'impact de chaque canal. Les points de contact se renforcent mutuellement. La conversion augmente grâce aux relances cross-canal. L'engagement global s'améliore. Le coût d'acquisition diminue grâce à la synergie des canaux."
+    },
+
+    "engage-ab+engage-analytics": {
+      "name": "Expérimentation Mesurée",
+      "tagline": "Tests scientifiques, résultats prouvés",
+      "story_paragraph": "L'alliance Tests A/B et Analytics Marketing garantit que vos expérimentations sont statistiquement rigoureuses et correctement mesurées. Les analytics définissent les métriques de succès. Les tests sont conduits avec la rigueur nécessaire. Les résultats sont analysés avec les bons modèles statistiques. Les conclusions sont fiables et actionnables. L'organisation développe une culture de l'expérimentation scientifique.",
+      "impact_narrative": "Cette combinaison élimine les faux positifs et les décisions basées sur des données insuffisantes. Les tests produisent des insights fiables. Les optimisations sont durables car basées sur des données solides. La confiance dans les décisions marketing augmente."
+    },
+
+    "engage-budget+engage-campaigns": {
+      "name": "Investissement Adaptatif",
+      "tagline": "Budget qui suit la performance temps réel",
+      "story_paragraph": "Quand Budget Optimisé pilote les Campagnes IA, l'investissement devient parfaitement adaptatif. Les campagnes performantes reçoivent automatiquement plus de budget. Les campagnes sous-performantes sont réduites ou arrêtées. La réallocation est continue, pas mensuelle. Le budget total est utilisé avec une efficacité maximale car il n'y a pas de gaspillage sur des initiatives non performantes.",
+      "impact_narrative": "Cette synergie maximise le rendement de chaque euro marketing. Les opportunités émergentes sont amplifiées rapidement. Les échecs sont limités dans leur impact. Le ROI global s'améliore significativement. Le marketing devient véritablement agile financièrement."
+    }
+  },
+
+  "multi_connections": {
+    "engage-campaigns+engage-content+engage-ab": {
+      "name": "Machine à Tester",
+      "tagline": "Génération, test, optimisation automatisés",
+      "story_paragraph": "La triple alliance Campagnes IA, Contenu Généré et Tests A/B crée une machine d'optimisation marketing perpétuelle. L'IA génère des dizaines de variations de contenu. Les campagnes testent ces variations auprès des audiences. Les tests identifient les gagnants. Les nouveaux contenus sont générés en s'inspirant des succès. Le cycle se répète indéfiniment, améliorant continuellement la performance.",
+      "cumulative_impact": "Ensemble, ces trois modules génèrent une amélioration continue sans effort humain. Le coût d'acquisition diminue régulièrement. Les taux de conversion augmentent. Les créatives restent fraîches et optimisées. Votre marketing devient une machine apprenante."
+    },
+
+    "engage-email+engage-social+engage-analytics": {
+      "name": "Marketing Omnicanal Mesuré",
+      "tagline": "Tous les canaux, une seule mesure",
+      "story_paragraph": "Quand Emails Auto, Réseaux Sociaux et Analytics Marketing fonctionnent ensemble, vous disposez d'une vue complète et actionnable de votre performance marketing omnicanal. Chaque canal est mesuré avec les mêmes standards. Les interactions cross-canal sont trackées. L'attribution révèle la contribution de chaque touchpoint. Les optimisations sont coordonnées à travers les canaux.",
+      "cumulative_impact": "Cette orchestration triple donne une visibilité complète sur votre marketing digital. Les décisions d'allocation sont éclairées. Les parcours clients multi-touch sont compris. L'optimisation devient cross-canal. Votre marketing digital atteint une maturité supérieure."
+    },
+
+    "engage-budget+engage-attribution+engage-analytics": {
+      "name": "ROI Marketing Maîtrisé",
+      "tagline": "Investissement, attribution, mesure alignés",
+      "story_paragraph": "L'intégration Budget Optimisé, Attribution et Analytics Marketing crée un système de pilotage marketing parfaitement rationnel. L'attribution identifie la vraie valeur de chaque canal. Les analytics mesurent le retour sur investissement. Le budget est alloué en conséquence. Les trois composantes s'alimentent mutuellement pour une optimisation continue basée sur la valeur réelle créée.",
+      "cumulative_impact": "Cette combinaison transforme le marketing en centre de profit mesurable. Chaque euro est tracké du coût à la conversion. Le ROI est calculé précisément. Les décisions d'investissement sont objectives. Le marketing prouve sa valeur avec des données irréfutables."
+    }
+  }
+}

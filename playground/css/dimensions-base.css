@@ -1,0 +1,156 @@
+/* ============================================
+   DIMENSIONS BASE
+   Variables, Reset & Base Styles
+   ============================================ */
+
+/* ---------- CSS Variables ---------- */
+/* KAALYTICS PALETTE - Emerald Theme */
+:root {
+    /* Backgrounds - Kaalytics Dark Theme */
+    --bg-dark: #040a08;
+    --bg-darker: #060c0a;
+    --bg-card: #0a1412;
+    --bg-sidebar: rgba(10, 20, 18, 0.97);
+    --bg-elevated: #1a312d;
+
+    /* Primary Colors - Emerald (replaces yellow) */
+    --brand-green: #0f1c1a;
+    --brand-green-light: #142523;
+    --brand-yellow: #10b981;
+    --brand-yellow-glow: rgba(16, 185, 129, 0.4);
+
+    /* Extended Emerald Palette */
+    --emerald: #10b981;
+    --emerald-bright: #34d399;
+    --emerald-light: #6ee7b7;
+    --emerald-dim: #059669;
+    --emerald-dark: #047857;
+    --emerald-glow: rgba(16, 185, 129, 0.4);
+
+    /* Teal Accent */
+    --teal: #0d9488;
+    --teal-bright: #14b8a6;
+    --teal-glow: rgba(13, 148, 136, 0.4);
+
+    /* Text - Kaalytics Style */
+    --text-primary: #ecfdf5;
+    --text-secondary: #a7f3d0;
+    --text-muted: #5f9e8a;
+    --text-dim: rgba(255, 255, 255, 0.5);
+
+    /* Borders */
+    --border-subtle: rgba(16, 185, 129, 0.15);
+    --border-active: rgba(16, 185, 129, 0.5);
+
+    /* Layout */
+    --sidebar-width: 320px;
+    --header-height: 60px;
+    --port-size: 12px;
+
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.25s ease;
+    --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------- Reset & Base ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-secondary);
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* ---------- Common Button Styles ---------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 36px;
+    padding: 0 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    border: none;
+    white-space: nowrap;
+}
+
+.btn svg {
+    flex-shrink: 0;
+}
+
+.btn-outline {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+}
+
+.btn-outline:hover {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: var(--emerald);
+    color: var(--emerald);
+}
+
+.btn-primary {
+    background: var(--emerald);
+    color: #040a08;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: var(--emerald-bright);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px var(--emerald-glow);
+}
+
+/* ---------- Lucide Icon Utilities ---------- */
+[data-lucide] {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon-xs {
+    width: 12px;
+    height: 12px;
+}
+
+.icon-sm {
+    width: 16px;
+    height: 16px;
+}
+
+.icon-md {
+    width: 20px;
+    height: 20px;
+}
+
+.icon-lg {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-xl {
+    width: 32px;
+    height: 32px;
+}
+
+.icon-2xl {
+    width: 48px;
+    height: 48px;
+}
+
+/* Icon color inheritance */
+.btn [data-lucide],
+.context-menu-item [data-lucide] {
+    stroke: currentColor;
+}

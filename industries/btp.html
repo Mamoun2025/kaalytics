@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gestion de flotte BTP: -40% arrets, +35% utilisation. Suivez vos engins sur tous vos chantiers, anticipez les pannes. Demo gratuite.">
+    <meta name="keywords" content="FleetOps BTP, Gestion flotte BTP, Engins chantier, Construction, Maintenance predictive, GPS chantier">
+    <meta name="author" content="Kaalytics">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#10b981">
+    <title>Gestion de Flotte BTP | -40% Arrets, +35% Utilisation | Kaalytics</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kaalytics.com/industries/btp">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaalytics.com/industries/btp">
+    <meta property="og:title" content="FleetOps Pro pour le BTP | Gestion de Flotte Intelligente">
+    <meta property="og:description" content="Gerez vos engins sur tous vos chantiers. -40% arrets, +35% utilisation. Maintenance predictive IA.">
+    <meta property="og:image" content="https://kaalytics.com/assets/images/og-btp.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Kaalytics">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FleetOps Pro pour le BTP | -40% Arrets">
+    <meta name="twitter:description" content="Gestion de flotte BTP intelligente. Suivez vos engins, anticipez les pannes.">
+    <meta name="twitter:image" content="https://kaalytics.com/assets/images/og-btp.jpg">
+    <meta name="twitter:site" content="@kaalytics">
+
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "FleetOps Pro pour le BTP",
+        "description": "Solution de gestion de flotte specialisee pour le secteur BTP et Construction",
+        "url": "https://kaalytics.com/industries/btp",
+        "provider": {
+            "@type": "Organization",
+            "name": "Kaalytics"
+        },
+        "areaServed": "Afrique",
+        "serviceType": "Fleet Management Software"
+    }
+    </script>
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+    <style>
+        .industry-hero {
+            background: var(--bg-void);
+            padding: var(--space-4xl) 0;
+            position: relative;
+            overflow: hidden;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .industry-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(245, 158, 11, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 40% at 80% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+        }
+
+        .industry-hero__content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-4xl);
+            align-items: center;
+        }
+
+        @media (max-width: 968px) {
+            .industry-hero__content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        .industry-hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-xs) var(--space-md);
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid #f59e0b;
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            color: #f59e0b;
+            margin-bottom: var(--space-xl);
+        }
+
+        .industry-hero__title {
+            font-size: var(--text-5xl);
+            font-weight: 800;
+            margin-bottom: var(--space-lg);
+            line-height: 1.1;
+        }
+
+        .industry-hero__title span {
+            background: linear-gradient(135deg, #f59e0b 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .industry-hero__subtitle {
+            font-size: var(--text-xl);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-2xl);
+            line-height: 1.6;
+        }
+
+        .industry-hero__cta {
+            display: flex;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 968px) {
+            .industry-hero__cta {
+                justify-content: center;
+            }
+        }
+
+        .industry-hero__visual {
+            position: relative;
+        }
+
+        .industry-hero__stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-lg);
+        }
+
+        .industry-hero__stat {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            text-align: center;
+        }
+
+        .industry-hero__stat-value {
+            font-size: var(--text-3xl);
+            font-weight: 800;
+            color: var(--emerald);
+            margin-bottom: var(--space-xs);
+        }
+
+        .industry-hero__stat-label {
+            font-size: var(--text-sm);
+            color: var(--text-muted);
+        }
+
+        /* Pain Points Section */
+        .pain-points {
+            background: var(--bg-secondary);
+            padding: var(--space-4xl) 0;
+        }
+
+        .pain-points__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-xl);
+        }
+
+        @media (max-width: 968px) {
+            .pain-points__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pain-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            transition: all var(--transition-base);
+        }
+
+        .pain-card:hover {
+            border-color: #ef4444;
+            transform: translateY(-4px);
+        }
+
+        .pain-card__icon {
+            font-size: 2rem;
+            margin-bottom: var(--space-md);
+        }
+
+        .pain-card__title {
+            font-size: var(--text-lg);
+            font-weight: 700;
+            margin-bottom: var(--space-sm);
+            color: #ef4444;
+        }
+
+        .pain-card__desc {
+            color: var(--text-secondary);
+            font-size: var(--text-sm);
+            line-height: 1.6;
+        }
+
+        /* Solutions Section */
+        .solutions {
+            background: var(--bg-primary);
+            padding: var(--space-4xl) 0;
+        }
+
+        .solutions__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-xl);
+        }
+
+        @media (max-width: 968px) {
+            .solutions__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .solution-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+            transition: all var(--transition-base);
+        }
+
+        .solution-card:hover {
+            border-color: var(--emerald);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 40px -10px rgba(16, 185, 129, 0.2);
+        }
+
+        .solution-card__header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+
+        .solution-card__icon {
+            font-size: 2.5rem;
+        }
+
+        .solution-card__title {
+            font-size: var(--text-xl);
+            font-weight: 700;
+        }
+
+        .solution-card__benefit {
+            display: inline-block;
+            padding: var(--space-xs) var(--space-sm);
+            background: rgba(16, 185, 129, 0.15);
+            border-radius: var(--radius-sm);
+            font-size: var(--text-xs);
+            font-weight: 600;
+            color: var(--emerald);
+        }
+
+        .solution-card__desc {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: var(--space-lg);
+        }
+
+        .solution-card__features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .solution-card__feature {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-sm) 0;
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+        }
+
+        .solution-card__feature::before {
+            content: '✓';
+            color: var(--emerald);
+            font-weight: 600;
+        }
+
+        /* ROI Section */
+        .roi-section {
+            background: linear-gradient(135deg, var(--bg-void) 0%, rgba(16, 185, 129, 0.05) 100%);
+            padding: var(--space-4xl) 0;
+        }
+
+        .roi-section__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-4xl);
+            align-items: center;
+        }
+
+        @media (max-width: 968px) {
+            .roi-section__content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .roi-calculator {
+            background: var(--bg-card);
+            border: 1px solid var(--emerald);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+        }
+
+        .roi-calculator__title {
+            font-size: var(--text-xl);
+            font-weight: 700;
+            margin-bottom: var(--space-xl);
+            text-align: center;
+        }
+
+        .roi-calculator__row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-md) 0;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .roi-calculator__label {
+            color: var(--text-secondary);
+        }
+
+        .roi-calculator__value {
+            font-weight: 700;
+            color: var(--emerald);
+        }
+
+        .roi-calculator__total {
+            margin-top: var(--space-xl);
+            padding: var(--space-lg);
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: var(--radius-lg);
+            text-align: center;
+        }
+
+        .roi-calculator__total-label {
+            font-size: var(--text-sm);
+            color: var(--text-muted);
+            margin-bottom: var(--space-xs);
+        }
+
+        .roi-calculator__total-value {
+            font-size: var(--text-3xl);
+            font-weight: 800;
+            color: var(--emerald);
+        }
+
+        /* Case Study Teaser */
+        .case-teaser {
+            background: var(--bg-secondary);
+            padding: var(--space-4xl) 0;
+        }
+
+        .case-teaser__card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-3xl);
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--space-3xl);
+            align-items: center;
+        }
+
+        @media (max-width: 968px) {
+            .case-teaser__card {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .case-teaser__quote {
+            font-size: var(--text-xl);
+            font-style: italic;
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin-bottom: var(--space-xl);
+        }
+
+        .case-teaser__author {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .case-teaser__avatar {
+            width: 56px;
+            height: 56px;
+            background: var(--emerald);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--bg-void);
+            font-size: var(--text-lg);
+        }
+
+        .case-teaser__name {
+            font-weight: 600;
+        }
+
+        .case-teaser__role {
+            font-size: var(--text-sm);
+            color: var(--text-muted);
+        }
+
+        .case-teaser__stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-lg);
+        }
+
+        .case-teaser__stat {
+            text-align: center;
+            padding: var(--space-lg);
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+        }
+
+        .case-teaser__stat-value {
+            font-size: var(--text-2xl);
+            font-weight: 800;
+            color: var(--emerald);
+        }
+
+        .case-teaser__stat-label {
+            font-size: var(--text-xs);
+            color: var(--text-muted);
+        }
+
+        /* CTA Section */
+        .industry-cta {
+            background: var(--bg-void);
+            padding: var(--space-4xl) 0;
+            text-align: center;
+        }
+
+        .industry-cta__title {
+            font-size: var(--text-3xl);
+            font-weight: 800;
+            margin-bottom: var(--space-lg);
+        }
+
+        .industry-cta__desc {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-2xl);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-container" data-navbar="full" data-navbar-style="solid"></div>
+
+    <!-- Hero -->
+    <section class="industry-hero">
+        <div class="container">
+            <div class="industry-hero__content">
+                <div>
+                    <span class="industry-hero__badge">
+                        Solution BTP
+                    </span>
+                    <h1 class="industry-hero__title">
+                        Gerez vos <span>engins de chantier</span> comme jamais
+                    </h1>
+                    <p class="industry-hero__subtitle">
+                        FleetOps Pro pour le BTP : suivi GPS temps reel, maintenance preventive, allocation optimisee. Reduisez vos couts de 40% et boostez votre productivite.
+                    </p>
+                    <div class="industry-hero__cta">
+                        <a href="../#contact" class="btn btn-primary btn-lg">
+                            Demander une demo BTP
+                        </a>
+                        <a href="../case-studies/beks.html" class="btn btn-secondary btn-lg">
+                            Voir le case study BEKS
+                        </a>
+                    </div>
+                </div>
+
+                <div class="industry-hero__visual">
+                    <div class="industry-hero__stats">
+                        <div class="industry-hero__stat">
+                            <div class="industry-hero__stat-value">-40%</div>
+                            <div class="industry-hero__stat-label">Couts maintenance</div>
+                        </div>
+                        <div class="industry-hero__stat">
+                            <div class="industry-hero__stat-value">-60%</div>
+                            <div class="industry-hero__stat-label">Temps admin</div>
+                        </div>
+                        <div class="industry-hero__stat">
+                            <div class="industry-hero__stat-value">+35%</div>
+                            <div class="industry-hero__stat-label">Productivite</div>
+                        </div>
+                        <div class="industry-hero__stat">
+                            <div class="industry-hero__stat-value">48h</div>
+                            <div class="industry-hero__stat-label">Deploiement</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points -->
+    <section class="pain-points">
+        <div class="container">
+            <div class="section-header section-header--center" style="margin-bottom: var(--space-3xl);">
+                <span class="section-label">Les defis du BTP</span>
+                <h2 class="section-title">On connait vos problemes</h2>
+            </div>
+
+            <div class="pain-points__grid">
+                <div class="pain-card">
+                    <div class="pain-card__icon">01</div>
+                    <h3 class="pain-card__title">Ou est mon engin ?</h3>
+                    <p class="pain-card__desc">
+                        Appels incessants aux chauffeurs, perte de temps a localiser les equipements. Pas de visibilite temps reel sur votre parc.
+                    </p>
+                </div>
+
+                <div class="pain-card">
+                    <div class="pain-card__icon">02</div>
+                    <h3 class="pain-card__title">Pannes imprevues</h3>
+                    <p class="pain-card__desc">
+                        Maintenance reactive au lieu de preventive. Chaque panne = chantier arrete = penalites de retard = marges qui fondent.
+                    </p>
+                </div>
+
+                <div class="pain-card">
+                    <div class="pain-card__icon">03</div>
+                    <h3 class="pain-card__title">Couts invisibles</h3>
+                    <p class="pain-card__desc">
+                        Impossible de savoir combien coute vraiment un chantier. Carburant, maintenance, location... tout est approximatif.
+                    </p>
+                </div>
+
+                <div class="pain-card">
+                    <div class="pain-card__icon">04</div>
+                    <h3 class="pain-card__title">Planning chaotique</h3>
+                    <p class="pain-card__desc">
+                        Conflits d'allocation, engins sous-utilises, ressources mal reparties entre chantiers. Excel ne suit plus.
+                    </p>
+                </div>
+
+                <div class="pain-card">
+                    <div class="pain-card__icon">05</div>
+                    <h3 class="pain-card__title">Equipes dispersees</h3>
+                    <p class="pain-card__desc">
+                        Coordination difficile entre chantiers, bureaux et ateliers. L'info circule mal, les decisions sont lentes.
+                    </p>
+                </div>
+
+                <div class="pain-card">
+                    <div class="pain-card__icon">06</div>
+                    <h3 class="pain-card__title">Marges sous pression</h3>
+                    <p class="pain-card__desc">
+                        Concurrence feroce, clients exigeants, couts qui augmentent. Sans visibilite, impossible d'optimiser.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions -->
+    <section class="solutions">
+        <div class="container">
+            <div class="section-header section-header--center" style="margin-bottom: var(--space-3xl);">
+                <span class="section-label">FleetOps Pro pour le BTP</span>
+                <h2 class="section-title">La solution complete</h2>
+                <p class="section-description">6 modules conçus pour les contraintes du BTP</p>
+            </div>
+
+            <div class="solutions__grid">
+                <div class="solution-card">
+                    <div class="solution-card__header">
+                        <span class="solution-card__icon">01</span>
+                        <div>
+                            <h3 class="solution-card__title">Module Parc</h3>
+                            <span class="solution-card__benefit">-60% temps localisation</span>
+                        </div>
+                    </div>
+                    <p class="solution-card__desc">
+                        GPS temps reel sur tous vos engins : pelles, grues, camions, compacteurs. Geofencing par chantier, alertes de mouvement non autorise.
+                    </p>
+                    <ul class="solution-card__features">
+                        <li class="solution-card__feature">Carte temps reel de tous les equipements</li>
+                        <li class="solution-card__feature">Historique des deplacements</li>
+                        <li class="solution-card__feature">Alertes entree/sortie de zone</li>
+                        <li class="solution-card__feature">Compteurs d'heures automatiques</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-card__header">
+                        <span class="solution-card__icon">03</span>
+                        <div>
+                            <h3 class="solution-card__title">Module Maintenance</h3>
+                            <span class="solution-card__benefit">-45% couts maintenance</span>
+                        </div>
+                    </div>
+                    <p class="solution-card__desc">
+                        Passez du reactif au preventif. L'IA analyse les heures de fonctionnement et declenche les maintenances au bon moment.
+                    </p>
+                    <ul class="solution-card__features">
+                        <li class="solution-card__feature">Alertes preventives automatiques</li>
+                        <li class="solution-card__feature">Historique complet par engin</li>
+                        <li class="solution-card__feature">Gestion des pieces detachees</li>
+                        <li class="solution-card__feature">Rapports de conformite</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-card__header">
+                        <span class="solution-card__icon">02</span>
+                        <div>
+                            <h3 class="solution-card__title">Module Planning</h3>
+                            <span class="solution-card__benefit">0 conflit d'allocation</span>
+                        </div>
+                    </div>
+                    <p class="solution-card__desc">
+                        Timeline visuelle drag & drop. Voyez en un coup d'oeil qui est ou, quand, et optimisez l'allocation entre chantiers.
+                    </p>
+                    <ul class="solution-card__features">
+                        <li class="solution-card__feature">Vue Gantt multi-chantiers</li>
+                        <li class="solution-card__feature">Detection des conflits</li>
+                        <li class="solution-card__feature">Reservation en ligne</li>
+                        <li class="solution-card__feature">Notifications automatiques</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-card__header">
+                        <span class="solution-card__icon">05</span>
+                        <div>
+                            <h3 class="solution-card__title">Module Chantiers</h3>
+                            <span class="solution-card__benefit">Couts au centime pres</span>
+                        </div>
+                    </div>
+                    <p class="solution-card__desc">
+                        Chaque chantier devient un centre de profit. Suivez les heures, le carburant, la maintenance et comparez au budget.
+                    </p>
+                    <ul class="solution-card__features">
+                        <li class="solution-card__feature">Cout reel vs budget</li>
+                        <li class="solution-card__feature">Heures par chantier automatiques</li>
+                        <li class="solution-card__feature">Rapports client</li>
+                        <li class="solution-card__feature">Analyse de rentabilite</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-card__header">
+                        <span class="solution-card__icon">06</span>
+                        <div>
+                            <h3 class="solution-card__title">Module Effectif</h3>
+                            <span class="solution-card__benefit">+25% productivite equipes</span>
+                        </div>
+                    </div>
+                    <p class="solution-card__desc">
+                        Qui conduit quoi ? Quelles certifications ? Optimisez l'affectation des competences sur vos chantiers.
+                    </p>
+                    <ul class="solution-card__features">
+                        <li class="solution-card__feature">Matrice de competences</li>
+                        <li class="solution-card__feature">Suivi des habilitations</li>
+                        <li class="solution-card__feature">Affectation optimisee</li>
+                        <li class="solution-card__feature">Alertes expiration CACES</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-card__header">
+                        <span class="solution-card__icon">08</span>
+                        <div>
+                            <h3 class="solution-card__title">Module Dashboard</h3>
+                            <span class="solution-card__benefit">Decisions en temps reel</span>
+                        </div>
+                    </div>
+                    <p class="solution-card__desc">
+                        Tous vos KPIs sur un ecran. Taux d'utilisation, couts, disponibilite, alertes. Pour la direction et les operationnels.
+                    </p>
+                    <ul class="solution-card__features">
+                        <li class="solution-card__feature">KPIs personnalisables</li>
+                        <li class="solution-card__feature">Rapports automatiques</li>
+                        <li class="solution-card__feature">Export Excel/PDF</li>
+                        <li class="solution-card__feature">Alertes configurables</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Section -->
+    <section class="roi-section">
+        <div class="container">
+            <div class="roi-section__content">
+                <div>
+                    <span class="section-label">ROI garanti</span>
+                    <h2 class="section-title" style="margin-bottom: var(--space-lg);">Economisez des maintenant</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--space-xl); line-height: 1.7;">
+                        Pour une flotte BTP de 50 engins, voici les economies moyennes constatees chez nos clients apres 12 mois d'utilisation de FleetOps Pro.
+                    </p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="display: flex; align-items: center; gap: var(--space-md); padding: var(--space-sm) 0; color: var(--text-secondary);">
+                            <span style="color: var(--emerald);">✓</span>
+                            ROI positif des le 4eme mois
+                        </li>
+                        <li style="display: flex; align-items: center; gap: var(--space-md); padding: var(--space-sm) 0; color: var(--text-secondary);">
+                            <span style="color: var(--emerald);">✓</span>
+                            Pas de frais d'installation
+                        </li>
+                        <li style="display: flex; align-items: center; gap: var(--space-md); padding: var(--space-sm) 0; color: var(--text-secondary);">
+                            <span style="color: var(--emerald);">✓</span>
+                            Accompagnement inclus
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="roi-calculator">
+                    <h3 class="roi-calculator__title">Economies estimees (50 engins)</h3>
+                    <div class="roi-calculator__row">
+                        <span class="roi-calculator__label">Maintenance preventive</span>
+                        <span class="roi-calculator__value">-18 000€/an</span>
+                    </div>
+                    <div class="roi-calculator__row">
+                        <span class="roi-calculator__label">Temps administratif</span>
+                        <span class="roi-calculator__value">-12 000€/an</span>
+                    </div>
+                    <div class="roi-calculator__row">
+                        <span class="roi-calculator__label">Optimisation carburant</span>
+                        <span class="roi-calculator__value">-8 000€/an</span>
+                    </div>
+                    <div class="roi-calculator__row">
+                        <span class="roi-calculator__label">Reduction vols/abus</span>
+                        <span class="roi-calculator__value">-6 000€/an</span>
+                    </div>
+                    <div class="roi-calculator__row">
+                        <span class="roi-calculator__label">Cout FleetOps Pro</span>
+                        <span class="roi-calculator__value" style="color: #ef4444;">-9 000€/an</span>
+                    </div>
+                    <div class="roi-calculator__total">
+                        <div class="roi-calculator__total-label">Economies nettes annuelles</div>
+                        <div class="roi-calculator__total-value">+35 000€</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Teaser -->
+    <section class="case-teaser">
+        <div class="container">
+            <div class="case-teaser__card">
+                <div>
+                    <span class="section-label" style="margin-bottom: var(--space-lg); display: block;">Etude de cas</span>
+                    <p class="case-teaser__quote">
+                        "Avant FleetOps Pro, je passais mes matinees a appeler les chauffeurs. Maintenant, j'ouvre l'app et je sais exactement ou est chaque engin, ce qui doit etre maintenu, et combien chaque chantier nous coute."
+                    </p>
+                    <div class="case-teaser__author">
+                        <div class="case-teaser__avatar">YB</div>
+                        <div>
+                            <div class="case-teaser__name">Youssef Bennani</div>
+                            <div class="case-teaser__role">Directeur Operations, BEKS</div>
+                        </div>
+                    </div>
+                    <a href="../case-studies/beks.html" class="btn btn-secondary" style="margin-top: var(--space-xl);">
+                        Lire le case study complet →
+                    </a>
+                </div>
+
+                <div class="case-teaser__stats">
+                    <div class="case-teaser__stat">
+                        <div class="case-teaser__stat-value">-45%</div>
+                        <div class="case-teaser__stat-label">Couts maintenance</div>
+                    </div>
+                    <div class="case-teaser__stat">
+                        <div class="case-teaser__stat-value">-60%</div>
+                        <div class="case-teaser__stat-label">Temps admin</div>
+                    </div>
+                    <div class="case-teaser__stat">
+                        <div class="case-teaser__stat-value">120+</div>
+                        <div class="case-teaser__stat-label">Vehicules geres</div>
+                    </div>
+                    <div class="case-teaser__stat">
+                        <div class="case-teaser__stat-value">4 mois</div>
+                        <div class="case-teaser__stat-label">ROI atteint</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="industry-cta">
+        <div class="container">
+            <h2 class="industry-cta__title">Pret a transformer votre flotte BTP ?</h2>
+            <p class="industry-cta__desc">
+                Demandez votre audit gratuit et decouvrez combien vous pourriez economiser avec FleetOps Pro.
+            </p>
+            <div class="btn-group" style="justify-content: center;">
+                <a href="../#contact" class="btn btn-primary btn-lg">
+                    Demander un audit gratuit
+                </a>
+                <a href="https://wa.me/212661718141?text=Bonjour%2C%20je%20suis%20dans%20le%20BTP%20et%20je%20souhaite%20une%20demo%20de%20FleetOps%20Pro" target="_blank" class="btn btn-secondary btn-lg">
+                    WhatsApp direct
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 Kaalytics. Tous droits reserves.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Sticky -->
+    <a href="https://wa.me/212661718141?text=Bonjour%2C%20je%20suis%20dans%20le%20BTP%20et%20je%20souhaite%20en%20savoir%20plus%20sur%20FleetOps%20Pro"
+       target="_blank"
+       class="whatsapp-sticky"
+       style="position: fixed; bottom: 24px; right: 24px; z-index: 1000; display: flex; align-items: center; gap: 12px; padding: 12px 20px; background: #25D366; color: white; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 14px; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span>Discutons de votre projet BTP</span>
+    </a>
+
+    <!-- Navbar Loader -->
+    <script src="../components/navbar/navbar-loader.js"></script>
+
+    <!-- i18n -->
+    <script src="../assets/js/i18n/i18n.js"></script>
+    <script>
+        if (window.i18n) {
+            window.i18n.localesPath = '../assets/locales';
+            window.i18n.init();
+        }
+    </script>
+</body>
+</html>

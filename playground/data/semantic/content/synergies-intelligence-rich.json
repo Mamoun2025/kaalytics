@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "version": "3.0",
+    "dimension": "intelligence",
+    "description": "Synergies ULTRA-RICHES pour la dimension Intelligence Décisionnelle"
+  },
+
+  "connections": {
+    "intel-banks+intel-cashflow": {
+      "name": "Trésorerie 360",
+      "tagline": "Position actuelle et future, unifiées",
+      "story_paragraph": "L'intégration Multi-Banques avec Flux de Trésorerie crée une vision complète de votre situation cash. Les soldes temps réel de tous vos comptes alimentent les projections de trésorerie. Les mouvements entrants et sortants sont automatiquement intégrés dans le prévisionnel. Vous voyez simultanément où vous en êtes et où vous serez demain, la semaine prochaine, le mois prochain. Cette vision unifiée permet une gestion proactive du cash, anticipant les besoins de financement comme les opportunités de placement.",
+      "impact_narrative": "Cette synergie transforme la gestion de trésorerie. Les découverts deviennent des choix stratégiques plutôt que des surprises. Les pics de besoin sont anticipés et financés au meilleur coût. Les excédents temporaires sont identifiés et valorisés. Votre coût du capital diminue grâce à une optimisation continue."
+    },
+
+    "intel-ml+intel-forecast": {
+      "name": "Intelligence Prédictive",
+      "tagline": "Prévisions augmentées par l'IA",
+      "story_paragraph": "Quand les Prédictions IA rencontrent le module Prévisions, la fiabilité de vos projections atteint un niveau supérieur. L'IA identifie des patterns et des corrélations que les modèles statistiques classiques ne voient pas. Les variables externes — météo, événements économiques, tendances sectorielles — sont intégrées dans les modèles. Les prévisions s'auto-corrigent en apprenant de leurs écarts passés. Chaque nouveau mois améliore la précision du système.",
+      "impact_narrative": "Cette combinaison produit des prévisions d'une fiabilité exceptionnelle. Les écarts budget/réel se réduisent drastiquement. Les scénarios de stress test deviennent réalistes. Les décisions d'investissement s'appuient sur des projections crédibles. La confiance des parties prenantes — investisseurs, banquiers, équipes — s'en trouve renforcée."
+    },
+
+    "intel-reports+intel-dashboards": {
+      "name": "Information Orchestrée",
+      "tagline": "La bonne info, au bon format, au bon moment",
+      "story_paragraph": "L'alliance Rapports Auto et Tableaux de Bord crée un écosystème d'information cohérent et complet. Les dashboards offrent la vision temps réel et interactive pour le pilotage quotidien. Les rapports automatiques fournissent les analyses approfondies et formatées pour le partage et l'archivage. Les mêmes données alimentent les deux supports, garantissant la cohérence. Chaque audience dispose du format adapté à son usage : dashboard pour l'action immédiate, rapport pour l'analyse de fond.",
+      "impact_narrative": "Cette orchestration de l'information élimine les silos et les incohérences. Les réunions de direction s'appuient sur des données fiables et partagées. Les analyses sont accessibles dans le format optimal. Le temps passé à produire et à chercher de l'information chute drastiquement. La data-driven culture s'installe naturellement."
+    },
+
+    "intel-margins+intel-cashflow": {
+      "name": "Rentabilité Cash",
+      "tagline": "Marge et trésorerie, enfin réconciliées",
+      "story_paragraph": "L'intégration Analyse Marges avec Flux de Trésorerie réconcilie la vision comptable et la vision cash. Un client peut être rentable sur le papier mais désastreux pour la trésorerie si son délai de paiement est long. Un produit à forte marge peut avoir un impact cash négatif s'il nécessite un stock important. Cette synergie révèle ces décalages et permet de prendre des décisions qui optimisent à la fois la rentabilité et le cash.",
+      "impact_narrative": "Cette vision intégrée transforme vos décisions commerciales et financières. Les clients rentables ET bons payeurs sont identifiés et choyés. Les produits à forte marge mais fort besoin en cash sont pilotés spécifiquement. L'équilibre entre croissance, rentabilité et trésorerie devient maîtrisable."
+    },
+
+    "intel-alerts+intel-banks": {
+      "name": "Surveillance Bancaire",
+      "tagline": "Transactions anormales détectées instantanément",
+      "story_paragraph": "Quand la Détection Anomalies s'applique aux flux Multi-Banques, chaque transaction suspecte est identifiée en temps réel. Une sortie inhabituellement élevée, un virement vers un nouveau bénéficiaire, un pattern de paiements atypique : le système alerte immédiatement. Les fraudes sont détectées avant que les fonds ne soient irrémédiablement perdus. Les erreurs de saisie sont repérées avant la validation. Votre cash est protégé par une vigilance algorithmique permanente.",
+      "impact_narrative": "Cette synergie sécurise votre trésorerie. Les tentatives de fraude sont détectées et bloquées. Les erreurs de paiement sont corrigées à temps. La confiance dans les processus financiers augmente. Les contrôles manuels fastidieux peuvent être allégés."
+    },
+
+    "intel-forecast+intel-margins": {
+      "name": "Prévision Rentabilité",
+      "tagline": "Projetez votre profitabilité future",
+      "story_paragraph": "L'alliance Prévisions et Analyse Marges permet de projeter non seulement le chiffre d'affaires mais la rentabilité future. Les évolutions de coûts, les changements de mix produit, les effets prix sont modélisés et leur impact sur la marge est calculé. Les scénarios stratégiques — lancement produit, entrée sur un nouveau marché, changement de pricing — sont évalués sur leur contribution à la rentabilité, pas seulement au volume.",
+      "impact_narrative": "Cette combinaison transforme la planification stratégique. Les décisions de développement sont évaluées sur leur création de valeur. Les business plans deviennent crédibles car ils intègrent une vision réaliste de la marge. Les arbitrages entre volume et rentabilité sont éclairés par des données prospectives."
+    },
+
+    "intel-dashboards+intel-alerts": {
+      "name": "Vigie Visuelle",
+      "tagline": "Alertes intégrées dans vos dashboards",
+      "story_paragraph": "L'intégration Tableaux de Bord et Détection Anomalies crée une interface de pilotage qui attire automatiquement l'attention sur les points d'action. Les alertes ne sont plus des emails perdus dans la masse mais des notifications visuelles intégrées dans les dashboards quotidiens. Les KPIs anormaux sont mis en évidence. Les tendances préoccupantes sont signalées par des indicateurs colorés. Le décideur sait instantanément où porter son attention.",
+      "impact_narrative": "Cette synergie optimise le temps des décideurs. Les problèmes critiques sont visibles immédiatement. Les informations importantes ne sont plus noyées dans le bruit. La réactivité de l'organisation s'améliore car les alertes sont vues et traitées plus rapidement."
+    },
+
+    "intel-ml+intel-margins": {
+      "name": "Optimisation IA des Marges",
+      "tagline": "L'IA trouve les gisements de profit",
+      "story_paragraph": "Quand les Prédictions IA analysent les données d'Analyse Marges, des opportunités d'optimisation invisibles à l'œil humain émergent. Quelles combinaisons produit/client sont les plus rentables ? Quels facteurs influencent vraiment la marge ? Où se cachent les inefficiences de coût ? L'IA explore les corrélations dans vos données et identifie les leviers d'amélioration les plus prometteurs. Les recommandations sont actionnables et quantifiées.",
+      "impact_narrative": "Cette analyse augmentée révèle des gisements de valeur inexploités. Les actions d'amélioration sont priorisées par impact potentiel. Les décisions de pricing deviennent data-driven. La marge globale s'améliore par une série d'optimisations ciblées identifiées par l'IA."
+    }
+  },
+
+  "multi_connections": {
+    "intel-banks+intel-cashflow+intel-forecast": {
+      "name": "Tour de Contrôle Trésorerie",
+      "tagline": "Passé, présent et futur du cash, unifiés",
+      "story_paragraph": "La triple alliance Multi-Banques, Flux de Trésorerie et Prévisions constitue une tour de contrôle complète de votre position financière. Les soldes actuels de toutes vos banques alimentent la vision temps réel. Les mouvements prévus projettent votre position à court terme. Les prévisions IA étendent la visibilité sur plusieurs mois. Vous pilotez votre trésorerie avec une vue passé-présent-futur intégrée, permettant une anticipation et une optimisation sans précédent.",
+      "cumulative_impact": "Ensemble, ces trois modules transforment la gestion de trésorerie en avantage compétitif. Le coût du financement diminue grâce à l'anticipation. Les opportunités de placement sont saisies. Les négociations bancaires s'appuient sur une crédibilité chiffrée. Votre entreprise dispose d'une agilité financière qui fait la différence."
+    },
+
+    "intel-reports+intel-dashboards+intel-alerts": {
+      "name": "Intelligence Opérationnelle",
+      "tagline": "Information temps réel, rapports automatiques, alertes intégrées",
+      "story_paragraph": "Quand Rapports Auto, Tableaux de Bord et Détection Anomalies fonctionnent ensemble, votre organisation dispose d'un système d'intelligence opérationnelle complet. Les dashboards offrent la vision temps réel. Les alertes signalent les points d'attention. Les rapports documentent et analysent en profondeur. Chaque niveau de l'organisation — opérationnel, managérial, stratégique — dispose de l'information adaptée à ses besoins, dans le format optimal, au bon moment.",
+      "cumulative_impact": "Cette orchestration triple génère une organisation véritablement data-driven. Les décisions se prennent plus vite car l'information est accessible. Les problèmes sont traités plus tôt car ils sont visibles. Les succès sont répliqués car ils sont documentés. La culture de la donnée s'installe durablement."
+    },
+
+    "intel-ml+intel-margins+intel-forecast": {
+      "name": "Pilotage Stratégique IA",
+      "tagline": "L'IA au service de la stratégie",
+      "story_paragraph": "L'intégration Prédictions IA, Analyse Marges et Prévisions crée un cockpit de pilotage stratégique d'une puissance inédite. L'IA analyse les drivers de rentabilité, identifie les opportunités d'optimisation, et projette l'impact des décisions stratégiques sur la performance future. Les scénarios sont simulés avec une granularité et une fiabilité remarquables. Chaque décision importante — nouveau produit, expansion géographique, restructuration — est éclairée par une analyse prédictive complète.",
+      "cumulative_impact": "Cette combinaison donne à votre direction un avantage informationnel décisif. Les décisions stratégiques sont mieux informées et plus rapides. Les risques sont quantifiés et anticipés. Les opportunités sont identifiées plus tôt. Votre stratégie devient véritablement data-driven, avec l'IA comme copilote."
+    }
+  }
+}

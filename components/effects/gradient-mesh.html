@@ -1,0 +1,179 @@
+<!--
+KAALYTICS - Gradient Mesh Background
+=====================================
+Fond mesh gradient anime moderne
+Source: meshgradient.com, stripe.com design
+-->
+
+<div class="mesh-demo">
+    <div class="mesh-background">
+        <div class="mesh-blob mesh-blob--1"></div>
+        <div class="mesh-blob mesh-blob--2"></div>
+        <div class="mesh-blob mesh-blob--3"></div>
+        <div class="mesh-blob mesh-blob--4"></div>
+        <div class="mesh-blob mesh-blob--5"></div>
+        <div class="mesh-noise"></div>
+    </div>
+    <div class="mesh-content">
+        <h2>Gradient Mesh</h2>
+        <p>Des fonds fluides et organiques inspires de Stripe</p>
+    </div>
+</div>
+
+<style>
+:root {
+    --emerald: #10b981;
+    --teal: #0d9488;
+    --cyan: #06b6d4;
+    --purple: #8b5cf6;
+    --pink: #ec4899;
+    --bg-void: #030a08;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mesh-demo {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-void);
+    overflow: hidden;
+}
+
+.mesh-background {
+    position: absolute;
+    inset: -50%;
+    width: 200%;
+    height: 200%;
+}
+
+.mesh-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    mix-blend-mode: screen;
+    opacity: 0.7;
+}
+
+.mesh-blob--1 {
+    width: 40%;
+    height: 40%;
+    background: var(--emerald);
+    top: 10%;
+    left: 10%;
+    animation: meshMove1 20s ease-in-out infinite;
+}
+
+.mesh-blob--2 {
+    width: 35%;
+    height: 35%;
+    background: var(--teal);
+    top: 30%;
+    right: 15%;
+    animation: meshMove2 25s ease-in-out infinite;
+}
+
+.mesh-blob--3 {
+    width: 45%;
+    height: 45%;
+    background: var(--cyan);
+    bottom: 10%;
+    left: 20%;
+    animation: meshMove3 22s ease-in-out infinite;
+}
+
+.mesh-blob--4 {
+    width: 30%;
+    height: 30%;
+    background: var(--purple);
+    top: 50%;
+    left: 50%;
+    animation: meshMove4 18s ease-in-out infinite;
+}
+
+.mesh-blob--5 {
+    width: 25%;
+    height: 25%;
+    background: var(--pink);
+    bottom: 30%;
+    right: 10%;
+    opacity: 0.4;
+    animation: meshMove5 15s ease-in-out infinite;
+}
+
+@keyframes meshMove1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(10%, 15%) scale(1.1); }
+    50% { transform: translate(-5%, 10%) scale(0.9); }
+    75% { transform: translate(5%, -10%) scale(1.05); }
+}
+
+@keyframes meshMove2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(-15%, 10%) scale(1.15); }
+    66% { transform: translate(10%, -15%) scale(0.85); }
+}
+
+@keyframes meshMove3 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(20%, -10%) rotate(10deg); }
+}
+
+@keyframes meshMove4 {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-40%, -60%) scale(1.2); }
+}
+
+@keyframes meshMove5 {
+    0%, 100% { transform: translate(0, 0); opacity: 0.4; }
+    50% { transform: translate(-30%, 20%); opacity: 0.6; }
+}
+
+/* Texture de bruit pour effet realiste */
+.mesh-noise {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+}
+
+.mesh-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 2rem;
+}
+
+.mesh-content h2 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.mesh-content p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Mode sombre alternatif */
+.mesh-demo--dark .mesh-background {
+    filter: saturate(0.8) brightness(0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mesh-blob {
+        filter: blur(60px);
+    }
+}
+</style>

@@ -1,0 +1,129 @@
+<!--
+KAALYTICS - Footer Component
+=============================
+Composant footer modulaire et reutilisable
+Usage: Inclure via footer-loader.js
+
+Variantes supportees:
+- data-footer="full" (defaut) - Footer complet avec toutes sections
+- data-footer="simple" - Footer simplifie (copyright + liens essentiels)
+- data-footer="minimal" - Copyright uniquement
+-->
+
+<footer class="footer" id="mainFooter">
+    <!-- Section Newsletter (data-footer-full) -->
+    <div class="footer__newsletter" data-footer-full>
+        <div class="container">
+            <div class="footer__newsletter-content">
+                <div class="footer__newsletter-text">
+                    <h3 data-i18n="footer.newsletter.title">Restez informe</h3>
+                    <p data-i18n="footer.newsletter.desc">Recevez nos conseils IA et actualites fleet management</p>
+                </div>
+                <form class="footer__newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="votre@email.com" data-i18n-placeholder="footer.newsletter.placeholder" required>
+                    <button type="submit" class="btn btn-primary" data-i18n="footer.newsletter.btn">S'abonner</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Principale -->
+    <div class="footer__main">
+        <div class="container">
+            <div class="footer__grid">
+                <!-- Colonne Logo & Description -->
+                <div class="footer__brand">
+                    <a href="{{ROOT}}" class="footer__logo">
+                        <svg class="footer__logo-icon" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="18" stroke="#10b981" stroke-width="2"/>
+                            <path d="M12 20l6 6 10-12" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="footer__logo-text">Kaal<span>ytics</span></span>
+                    </a>
+                    <p class="footer__description" data-i18n="footer.description">
+                        Solutions IA pour la gestion de flotte et la transformation digitale des entreprises africaines.
+                    </p>
+                    <div class="footer__social">
+                        <a href="https://linkedin.com/company/kaalytics" aria-label="LinkedIn" class="footer__social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="https://wa.me/212661718141" aria-label="WhatsApp" class="footer__social-link footer__social-link--whatsapp">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                        <a href="mailto:contact@kaalytics.com" aria-label="Email" class="footer__social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Colonne Produits -->
+                <div class="footer__column" data-footer-full>
+                    <h4 class="footer__column-title" data-i18n="footer.products.title">Produits</h4>
+                    <ul class="footer__links">
+                        <li><a href="{{ROOT}}products/fleetops.html" data-i18n="footer.products.fleetops">FleetOps Pro</a></li>
+                        <li><a href="{{ROOT}}products/daedalia.html" data-i18n="footer.products.daedalia">Daedalia AI</a></li>
+                        <li><a href="{{ROOT}}#modules" data-i18n="footer.products.modules">Modules IA</a></li>
+                        <li><a href="{{ROOT}}#pricing" data-i18n="footer.products.pricing">Tarifs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Colonne Industries -->
+                <div class="footer__column" data-footer-full>
+                    <h4 class="footer__column-title" data-i18n="footer.industries.title">Industries</h4>
+                    <ul class="footer__links">
+                        <li><a href="{{ROOT}}industries/transport.html" data-i18n="footer.industries.transport">Transport</a></li>
+                        <li><a href="{{ROOT}}industries/btp.html" data-i18n="footer.industries.btp">BTP</a></li>
+                        <li><a href="{{ROOT}}industries/mines.html" data-i18n="footer.industries.mines">Mines</a></li>
+                        <li><a href="{{ROOT}}industries/location.html" data-i18n="footer.industries.location">Location</a></li>
+                    </ul>
+                </div>
+
+                <!-- Colonne Ressources -->
+                <div class="footer__column" data-footer-full>
+                    <h4 class="footer__column-title" data-i18n="footer.resources.title">Ressources</h4>
+                    <ul class="footer__links">
+                        <li><a href="{{ROOT}}blog/" data-i18n="footer.resources.blog">Blog</a></li>
+                        <li><a href="{{ROOT}}guides/" data-i18n="footer.resources.guides">Guides</a></li>
+                        <li><a href="{{ROOT}}case-studies/beks.html" data-i18n="footer.resources.cases">Etudes de cas</a></li>
+                        <li><a href="{{ROOT}}playground/" data-i18n="footer.resources.playground">Playground</a></li>
+                    </ul>
+                </div>
+
+                <!-- Colonne Contact -->
+                <div class="footer__column">
+                    <h4 class="footer__column-title" data-i18n="footer.contact.title">Contact</h4>
+                    <ul class="footer__contact">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Casablanca, Maroc</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <a href="tel:+212661718141">+212 661 718 141</a>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <a href="mailto:contact@kaalytics.com">contact@kaalytics.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Bottom -->
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="footer__bottom-content">
+                <p class="footer__copyright">
+                    &copy; <span id="currentYear">2025</span> Kaalytics. <span data-i18n="footer.rights">Tous droits reserves.</span>
+                </p>
+                <div class="footer__legal">
+                    <a href="{{ROOT}}legal/privacy.html" data-i18n="footer.legal.privacy">Confidentialite</a>
+                    <a href="{{ROOT}}legal/terms.html" data-i18n="footer.legal.terms">CGU</a>
+                    <a href="{{ROOT}}legal/cookies.html" data-i18n="footer.legal.cookies">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

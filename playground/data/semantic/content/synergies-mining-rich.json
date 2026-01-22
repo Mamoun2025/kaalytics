@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "version": "3.0",
+    "dimension": "mining",
+    "description": "Synergies ULTRA-RICHES pour la dimension Mines & Carrières"
+  },
+
+  "connections": {
+    "mine-deposits+mine-planning": {
+      "name": "Extraction Optimisée",
+      "tagline": "Les bonnes zones au bon moment",
+      "story_paragraph": "L'intégration de la Gestion Gisements avec la Planification Extraction optimise l'exploitation des ressources. Les zones à exploiter sont choisies en fonction de leur qualité et de leur accessibilité. Le plan d'extraction suit la stratégie de valorisation du gisement. Les réserves sont consommées de manière optimale. L'extraction devient stratégique plutôt qu'opportuniste.",
+      "impact_narrative": "Cette synergie maximise la valeur extraite. Les meilleures zones sont exploitées au meilleur moment. La durée de vie du site est optimisée. La qualité produite correspond aux besoins du marché. L'actif minier est valorisé au maximum."
+    },
+
+    "mine-weighing+mine-quality": {
+      "name": "Livraison Certifiée",
+      "tagline": "Quantité et qualité documentées",
+      "story_paragraph": "Quand le Pesage & Facturation intègre le Contrôle Qualité, chaque livraison est doublement certifiée. Le ticket de pesée est associé aux analyses qualité du lot. Le client reçoit une documentation complète : quantité exacte et caractéristiques du produit. Les réclamations sont évitées car tout est prouvé. La confiance client est totale.",
+      "impact_narrative": "Cette combinaison élimine les litiges. Chaque livraison est documentée en quantité et qualité. Les clients sont rassurés. Les marges sont préservées car les réclamations infondées sont réfutables. La réputation de fiabilité se construit."
+    },
+
+    "mine-production+mine-planning": {
+      "name": "Pilotage Temps Réel",
+      "tagline": "Prévu et réalisé alignés",
+      "story_paragraph": "L'alliance du Suivi Production avec la Planification Extraction crée un pilotage réactif. La production réelle met à jour le plan. Les écarts sont visibles immédiatement. Les ajustements sont faits en temps réel. Le planning n'est plus un document figé mais un outil vivant. Les objectifs de production sont atteints grâce à une réactivité accrue.",
+      "impact_narrative": "Cette synergie garantit l'atteinte des objectifs. Les dérives sont corrigées rapidement. Les ressources sont réallouées en fonction de la réalité. Le site produit ce qui était prévu. La performance est pilotée, pas subie."
+    },
+
+    "mine-environment+mine-deposits": {
+      "name": "Exploitation Durable",
+      "tagline": "Extraire et réhabiliter",
+      "story_paragraph": "L'intégration de l'Environnement avec la Gestion Gisements planifie la réhabilitation dès l'exploitation. Les zones extraites sont identifiées pour leur réhabilitation. Le plan de réhabilitation suit l'avancement de l'extraction. Les provisions sont calculées en fonction des surfaces à traiter. L'après-exploitation est préparé pendant l'exploitation.",
+      "impact_narrative": "Cette combinaison assure la pérennité. La réhabilitation est intégrée au business plan. Les provisions sont précises. Les engagements environnementaux sont respectés. La licence sociale d'exploitation est maintenue."
+    },
+
+    "mine-maintenance+mine-production": {
+      "name": "Disponibilité Productive",
+      "tagline": "Machines prêtes, production assurée",
+      "story_paragraph": "Quand la Maintenance Engins dialogue avec le Suivi Production, la disponibilité est optimisée pour la performance. Les maintenances sont planifiées dans les créneaux à moindre impact. Les pannes sont corrélées aux pertes de production. Les investissements de remplacement sont justifiés par les données. La maintenance devient un levier de productivité.",
+      "impact_narrative": "Cette synergie aligne maintenance et production. Les arrêts sont minimisés et planifiés. L'impact des pannes est mesuré. Les décisions d'investissement sont éclairées. La disponibilité devient un avantage compétitif."
+    },
+
+    "mine-explosives+mine-planning": {
+      "name": "Tirs Coordonnés",
+      "tagline": "Explosifs alignés sur le plan",
+      "story_paragraph": "L'alliance de la Gestion Explosifs avec la Planification Extraction coordonne les tirs avec l'extraction. Les besoins en explosifs découlent du plan de tir. L'approvisionnement est calé sur les dates de tir. La consommation est tracée par zone et par tir. Le planning intègre les contraintes de sécurité des tirs. Tout s'enchaîne logiquement.",
+      "impact_narrative": "Cette combinaison fluidifie les opérations. Les explosifs sont disponibles au bon moment. Les tirs sont planifiés optimalement. La traçabilité est complète. La sécurité est intégrée à la planification."
+    },
+
+    "mine-quality+mine-deposits": {
+      "name": "Qualité par Zone",
+      "tagline": "Connaître la qualité avant d'extraire",
+      "story_paragraph": "L'intégration du Contrôle Qualité avec la Gestion Gisements lie la qualité au gisement. Les analyses enrichissent le modèle de gisement. La qualité prévisible par zone guide l'extraction. Les mélanges sont optimisés en fonction des qualités par zone. Le produit fini répond précisément aux spécifications grâce à une extraction intelligente.",
+      "impact_narrative": "Cette synergie améliore la qualité produite. L'extraction cible les zones de qualité adaptée. Les mélanges sont calculés. Les produits hors spécification diminuent. La valorisation du gisement est optimisée."
+    },
+
+    "mine-weighing+mine-production": {
+      "name": "Production Mesurée",
+      "tagline": "Chaque tonne tracée",
+      "story_paragraph": "Quand le Pesage & Facturation alimente le Suivi Production, les volumes sont fiabilisés. Les sorties pesées sont réconciliées avec la production déclarée. Les écarts de stock sont identifiés. Le rendement est calculé précisément. Les pertes inexpliquées sont détectées. La production est mesurée avec la précision de la balance.",
+      "impact_narrative": "Cette combinaison fiabilise les données. La production est mesurée, pas estimée. Les pertes sont identifiées. Les rendements sont exacts. Le pilotage s'appuie sur des faits."
+    }
+  },
+
+  "multi_connections": {
+    "mine-deposits+mine-planning+mine-production": {
+      "name": "Pilotage du Gisement",
+      "tagline": "Réserves, plan, réalisation unifiés",
+      "story_paragraph": "La triple alliance Gestion Gisements, Planification Extraction et Suivi Production crée un pilotage complet de l'exploitation. Les réserves sont connues. L'extraction est planifiée. La production est mesurée. Les trois visions sont cohérentes et interconnectées. Les dirigeants ont une vision complète : ce qui reste, ce qui est prévu, ce qui est fait. Le site est véritablement piloté.",
+      "cumulative_impact": "Ensemble, ces trois modules créent une maîtrise totale. La stratégie d'exploitation est claire. L'exécution est suivie. Les écarts sont compris. La valorisation du gisement est optimisée sur la durée."
+    },
+
+    "mine-weighing+mine-quality+mine-production": {
+      "name": "Performance Commerciale",
+      "tagline": "Produire, contrôler, vendre",
+      "story_paragraph": "Quand Pesage & Facturation, Contrôle Qualité et Suivi Production fonctionnent ensemble, la performance commerciale est maximale. La production est mesurée précisément. La qualité est contrôlée systématiquement. La facturation est automatique et fiable. Du tonnage extrait au chiffre d'affaires, la chaîne est fluide et traçable.",
+      "cumulative_impact": "Cette combinaison triple optimise le CA. Les livraisons sont conformes et documentées. La facturation est immédiate. Les litiges sont évités. La performance commerciale atteint son maximum."
+    },
+
+    "mine-environment+mine-explosives+mine-maintenance": {
+      "name": "Exploitation Responsable",
+      "tagline": "Sécurité, environnement, maintenance alignés",
+      "story_paragraph": "L'intégration Environnement, Gestion Explosifs et Maintenance Engins assure une exploitation responsable et pérenne. L'impact environnemental est maîtrisé. Les explosifs sont gérés en toute sécurité. Les engins sont maintenus pour éviter les pollutions. Les trois dimensions de la responsabilité sont couvertes. Les inspecteurs trouvent un site exemplaire.",
+      "cumulative_impact": "Cette orchestration triple sécurise l'exploitation. La conformité est totale. Les risques sont maîtrisés. L'image de l'entreprise est positive. La pérennité de l'exploitation est assurée."
+    }
+  }
+}

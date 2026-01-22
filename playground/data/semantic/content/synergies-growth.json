@@ -1,0 +1,259 @@
+{
+  "dimension": "growth",
+  "dimension_name": "Croissance Commerciale",
+  "version": "1.0",
+  "total_connections": 28,
+  "connections": {
+    "growth-crm+growth-whatsapp": {
+      "name": "Acquisition Omnicanale",
+      "tagline": "WhatsApp nourrit, CRM mémorise",
+      "description": "Chaque conversation WhatsApp enrichit automatiquement le CRM. Le bot qualifie, le CRM historise. Aucune information ne se perd entre les canaux.",
+      "impact": "Qualification +70%, données client enrichies automatiquement",
+      "narrative_short": "WhatsApp et CRM fusionnent en une mémoire commerciale parfaite.",
+      "narrative_full": "Le Bot WhatsApp devient l'avant-poste de votre CRM. Chaque question posée, chaque réponse donnée, chaque information collectée remonte instantanément dans la fiche client. Vos commerciaux reprennent les conversations là où le bot les a laissées, avec tout le contexte nécessaire."
+    },
+    "growth-crm+growth-pipeline": {
+      "name": "Tunnel de Vente Intégré",
+      "tagline": "Du contact au contrat, zéro friction",
+      "description": "Le CRM alimente le pipeline en temps réel. Chaque nouveau contact démarre son parcours de vente, chaque interaction fait avancer les deals.",
+      "impact": "Visibilité pipeline +100%, prévisions CA précises à 90%",
+      "narrative_short": "Chaque contact CRM devient automatiquement une opportunité pipeline.",
+      "narrative_full": "La fusion CRM-Pipeline crée un tunnel de vente sans couture. Un prospect entre dans le CRM, une opportunité se crée dans le pipeline. Chaque appel, chaque email, chaque réunion fait avancer le deal d'une étape. Vous ne gérez plus deux systèmes, vous pilotez une machine de conversion unifiée."
+    },
+    "growth-crm+growth-insights": {
+      "name": "Intelligence Relationnelle",
+      "tagline": "Des fiches clients qui racontent tout",
+      "description": "Le CRM enrichi par la Vision 360 devient une mine d'or d'insights. Chaque fiche client raconte son histoire complète.",
+      "impact": "Personnalisation +60%, satisfaction client +40%",
+      "narrative_short": "Vos fiches CRM deviennent des portraits clients complets et prédictifs.",
+      "narrative_full": "La Vision Client 360 transforme votre CRM de simple carnet d'adresses en oracle commercial. Avant chaque interaction, vous savez ce que le client a acheté, préféré, détesté. Vous anticipez ses besoins avant qu'il ne les exprime. La personnalisation atteint un niveau qui crée la fidélité."
+    },
+    "growth-crm+growth-scoring": {
+      "name": "CRM Prédictif",
+      "tagline": "Chaque contact a son score",
+      "description": "Le scoring IA enrichit chaque fiche CRM d'un score de conversion. La priorisation devient scientifique.",
+      "impact": "Efficacité commerciale +50%, temps optimal par lead",
+      "narrative_short": "Vos contacts CRM sont maintenant classés par potentiel de conversion.",
+      "narrative_full": "Chaque entrée dans votre CRM reçoit instantanément son score de conversion. Les commerciaux ne scrollent plus des listes infinies : ils attaquent les leads chauds en premier, nurturent les tièdes, et ignorent les froids. Le temps commercial est enfin alloué de manière optimale."
+    },
+    "growth-crm+growth-followup": {
+      "name": "Relation Continue",
+      "tagline": "Le CRM qui ne lâche rien",
+      "description": "Les relances automatiques partent directement du CRM. Chaque contact reçoit le bon suivi au bon moment.",
+      "impact": "Taux de suivi 100%, aucun prospect oublié",
+      "narrative_short": "Votre CRM maintient automatiquement le contact avec chaque prospect.",
+      "narrative_full": "Le CRM devient proactif. Dès qu'un contact entre, les séquences de nurturing démarrent. Un prospect silencieux depuis 7 jours ? Relance automatique. Un client qui n'a pas commandé depuis 3 mois ? Offre de réactivation. Le CRM ne stocke plus, il agit."
+    },
+    "growth-crm+growth-quotes": {
+      "name": "Proposition Personnalisée",
+      "tagline": "Des devis qui connaissent le client",
+      "description": "Les devis s'enrichissent automatiquement des données CRM. Personnalisation maximale, conversion optimale.",
+      "impact": "Temps de création devis -60%, taux d'acceptation +25%",
+      "narrative_short": "Vos devis se personnalisent automatiquement avec les données CRM.",
+      "narrative_full": "Générer un devis depuis le CRM devient un jeu d'enfant. Les informations client, l'historique d'achats, les préférences : tout est pré-rempli. Le commercial ajuste les lignes, valide, envoie. En 2 minutes, un devis personnalisé part avec toutes les bonnes informations."
+    },
+    "growth-crm+growth-churn": {
+      "name": "Fidélisation Proactive",
+      "tagline": "Des clients gardés avant d'être perdus",
+      "description": "L'Anti-Attrition enrichit le CRM de scores de risque. Vos commerciaux voient qui va partir.",
+      "impact": "Churn -40%, rétention proactive au lieu de réactive",
+      "narrative_short": "Chaque fiche CRM affiche maintenant son risque de départ.",
+      "narrative_full": "Le CRM devient un système d'alerte précoce. Un badge rouge sur une fiche ? Ce client montre des signaux de départ. Vos commerciaux n'attendent plus le mail de résiliation : ils appellent avant, écoutent, proposent. La rétention devient proactive."
+    },
+    "growth-whatsapp+growth-pipeline": {
+      "name": "Pipeline Conversationnel",
+      "tagline": "Les conversations qui font avancer les deals",
+      "description": "Chaque échange WhatsApp qualifiant fait avancer l'opportunité dans le pipeline. Progression automatique.",
+      "impact": "Vitesse pipeline +45%, deals qui avancent en continu",
+      "narrative_short": "Les conversations WhatsApp font progresser automatiquement vos deals.",
+      "narrative_full": "Le bot WhatsApp devient un moteur de pipeline. Un prospect qui donne son budget ? Le deal passe en qualification. Une date de décision mentionnée ? L'opportunité avance en négociation. Les conversations ne sont plus déconnectées du processus de vente."
+    },
+    "growth-whatsapp+growth-insights": {
+      "name": "Profiling Conversationnel",
+      "tagline": "Chaque message révèle le client",
+      "description": "Les conversations WhatsApp enrichissent le profil client 360. Préférences, questions, objections : tout est capturé.",
+      "impact": "Données client +300%, profils auto-enrichis",
+      "narrative_short": "Chaque conversation WhatsApp complète automatiquement le portrait client.",
+      "narrative_full": "Le bot WhatsApp devient un collecteur d'insights discret mais efficace. Les questions posées révèlent les besoins, les objections indiquent les freins, les horaires de réponse trahissent les habitudes. Tout remonte dans la Vision 360 pour des profils toujours plus précis."
+    },
+    "growth-whatsapp+growth-scoring": {
+      "name": "Qualification Instantanée",
+      "tagline": "Score en temps réel par chat",
+      "description": "Le scoring analyse chaque conversation WhatsApp et ajuste le score lead en temps réel.",
+      "impact": "Qualification temps réel, transfert commercial instantané si lead chaud",
+      "narrative_short": "Le score du prospect évolue à chaque message WhatsApp échangé.",
+      "narrative_full": "Chaque message analysé par le scoring IA. Un prospect qui pose des questions sur les tarifs ? Score +15. Qui demande une démo ? Score +30. Qui mentionne un concurrent ? Score +20, flag \"comparatif actif\". Le commercial est alerté quand le score atteint le seuil de transfert."
+    },
+    "growth-whatsapp+growth-followup": {
+      "name": "Conversation Perpétuelle",
+      "tagline": "Du chat au mail, jamais de silence",
+      "description": "Si WhatsApp ne répond plus, les relances email prennent le relais. Multi-canal automatique.",
+      "impact": "Taux de contact +80%, aucun canal mort",
+      "narrative_short": "WhatsApp silencieux ? Les relances email prennent automatiquement le relais.",
+      "narrative_full": "Le prospect ne répond plus sur WhatsApp depuis 3 jours ? Une relance email personnalisée part automatiquement, résumant la conversation. Toujours pas de réponse ? Un SMS de rappel. La persistance multi-canal maximise les chances de reprise de contact."
+    },
+    "growth-whatsapp+growth-quotes": {
+      "name": "Devis Instantané par Chat",
+      "tagline": "Demandez un prix, recevez un devis",
+      "description": "Le bot génère et envoie des devis personnalisés directement dans WhatsApp. Zéro délai.",
+      "impact": "Temps de réponse devis : secondes au lieu d'heures",
+      "narrative_short": "\"Combien ça coûte ?\" - Le devis arrive instantanément sur WhatsApp.",
+      "narrative_full": "Le prospect demande un prix sur WhatsApp à 23h. Le bot lui pose les questions de qualification, calcule le devis adapté, et l'envoie en PDF dans la conversation. Le lendemain matin, votre commercial trouve un lead chaud avec devis déjà accepté."
+    },
+    "growth-whatsapp+growth-churn": {
+      "name": "Rétention Conversationnelle",
+      "tagline": "Gardez vos clients par le dialogue",
+      "description": "Les clients à risque reçoivent des messages WhatsApp de rétention personnalisés. Canal intime pour situations délicates.",
+      "impact": "Taux de rétention +30% via canal préféré",
+      "narrative_short": "Les clients à risque reçoivent une attention WhatsApp personnalisée.",
+      "narrative_full": "Un client affiche un score de churn élevé. Plutôt qu'un email impersonnel, il reçoit un message WhatsApp du commercial qui le suit. \"On a remarqué que vous utilisez moins notre service. Tout va bien ? Comment peut-on vous aider ?\" L'intimité du canal fait la différence."
+    },
+    "growth-pipeline+growth-insights": {
+      "name": "Pipeline Contextualisé",
+      "tagline": "Des deals qui racontent leur histoire",
+      "description": "Chaque opportunité pipeline s'enrichit du contexte client 360. Négociation informée garantie.",
+      "impact": "Closing rate +35%, négociations mieux préparées",
+      "narrative_short": "Chaque deal du pipeline affiche maintenant tout le contexte client.",
+      "narrative_full": "Ouvrir un deal dans le pipeline, c'est ouvrir le livre du client. Son historique complet, ses achats passés, ses interactions, ses préférences. Le commercial entre en négociation armé de toutes les informations. Il sait quels arguments utiliser, quels pièges éviter."
+    },
+    "growth-pipeline+growth-scoring": {
+      "name": "Pipeline Priorisé",
+      "tagline": "Les meilleurs deals en haut",
+      "description": "Le scoring IA réordonne automatiquement le pipeline par probabilité de closing. Focus sur l'essentiel.",
+      "impact": "Temps commercial optimal, deals gagnés +40%",
+      "narrative_short": "Votre pipeline se trie automatiquement par probabilité de succès.",
+      "narrative_full": "Fini le pipeline statique par date. L'IA analyse chaque deal : engagement du prospect, historique d'interactions, signaux comportementaux. Les opportunités les plus chaudes remontent en haut, celles qui refroidissent descendent avec des alertes. Votre attention va naturellement aux bons deals."
+    },
+    "growth-pipeline+growth-followup": {
+      "name": "Pipeline Automatisé",
+      "tagline": "Des deals qui avancent tout seuls",
+      "description": "Chaque étape du pipeline déclenche les relances appropriées. Automatisation du cycle de vente.",
+      "impact": "Vélocité pipeline +50%, aucun deal stagnant",
+      "narrative_short": "Les deals stagnants déclenchent automatiquement les bonnes relances.",
+      "narrative_full": "Un deal en \"démo planifiée\" depuis 5 jours sans suite ? Relance de confirmation automatique. En \"proposition envoyée\" depuis une semaine ? Séquence de suivi devis. Chaque étape a ses triggers, chaque trigger son action. Le pipeline devient une machine qui ne s'arrête jamais."
+    },
+    "growth-pipeline+growth-quotes": {
+      "name": "Cycle Devis Intégré",
+      "tagline": "Du deal au devis en un clic",
+      "description": "Générer un devis depuis le pipeline, le deal avance automatiquement. Synchronisation parfaite.",
+      "impact": "Processus fluide, zéro double saisie",
+      "narrative_short": "Créer un devis fait automatiquement avancer le deal dans le pipeline.",
+      "narrative_full": "Depuis la vue pipeline, un clic génère le devis pré-rempli avec toutes les informations du deal. L'envoi fait passer l'opportunité en \"proposition envoyée\". L'ouverture par le prospect est trackée. La signature fait basculer en \"gagné\". Pipeline et devis ne font plus qu'un."
+    },
+    "growth-pipeline+growth-churn": {
+      "name": "Rétention dans le Funnel",
+      "tagline": "Gardez aussi vos clients existants",
+      "description": "Les clients à risque de churn apparaissent dans un pipeline de rétention dédié. Même rigueur que l'acquisition.",
+      "impact": "Rétention structurée comme l'acquisition",
+      "narrative_short": "Un pipeline dédié pour vos clients à risque, avec les mêmes process que l'acquisition.",
+      "narrative_full": "Pourquoi réserver la rigueur du pipeline à l'acquisition ? Les clients à risque ont leur propre funnel : identification, diagnostic, proposition, rétention. Chaque client à risque est un deal à sauver, avec les mêmes étapes, les mêmes relances, la même attention."
+    },
+    "growth-insights+growth-scoring": {
+      "name": "Scoring Enrichi",
+      "tagline": "Des scores basés sur tout",
+      "description": "Le scoring exploite la richesse de la Vision 360. Plus de données = prédictions plus précises.",
+      "impact": "Précision scoring +45%, faux positifs -60%",
+      "narrative_short": "Le scoring devient ultra-précis grâce à toutes les données de la Vision 360.",
+      "narrative_full": "Le scoring ne se limite plus aux clics et ouvertures d'emails. Il intègre tout : historique d'achats, comportement sur site, interactions support, activité sur les réseaux. La Vision 360 nourrit un modèle de scoring multi-dimensionnel qui détecte les vrais acheteurs."
+    },
+    "growth-insights+growth-followup": {
+      "name": "Relances Contextuelles",
+      "tagline": "Des messages qui résonnent",
+      "description": "Les relances s'adaptent au profil client 360. Personnalisation qui fait la différence.",
+      "impact": "Taux de réponse relances +60%",
+      "narrative_short": "Chaque relance est personnalisée selon le profil complet du client.",
+      "narrative_full": "Plus de relances génériques. La Vision 360 permet des messages qui touchent juste. \"Suite à votre achat de [produit X], vous pourriez être intéressé par...\" ou \"Vous aviez mentionné que [besoin Y] était important pour vous...\". Chaque relance prouve que vous connaissez le client."
+    },
+    "growth-insights+growth-quotes": {
+      "name": "Devis Hyper-Personnalisés",
+      "tagline": "Des propositions qui parlent au client",
+      "description": "Les devis intègrent le contexte client complet. Recommandations basées sur l'historique et les préférences.",
+      "impact": "Taux d'acceptation devis +35%",
+      "narrative_short": "Vos devis recommandent les produits que ce client spécifique va aimer.",
+      "narrative_full": "La Vision 360 révolutionne vos devis. Les produits recommandés sont basés sur l'historique d'achat. Les remises tiennent compte de la valeur client. Les arguments sont adaptés aux préférences connues. Chaque devis semble fait sur-mesure, parce qu'il l'est."
+    },
+    "growth-insights+growth-churn": {
+      "name": "Prédiction d'Attrition Avancée",
+      "tagline": "Voir partir avant le départ",
+      "description": "L'Anti-Attrition exploite tous les signaux de la Vision 360. Prédictions ultra-précises.",
+      "impact": "Détection précoce +80%, interventions plus ciblées",
+      "narrative_short": "La richesse des profils permet de détecter les signaux de départ les plus subtils.",
+      "narrative_full": "L'Anti-Attrition ne regarde plus seulement l'activité récente. Il analyse les patterns sur tout le profil 360 : comparaison avec le comportement habituel, corrélation avec des clients partis, signaux faibles cross-canal. Les prédictions atteignent une précision qui permet d'intervenir à coup sûr."
+    },
+    "growth-scoring+growth-followup": {
+      "name": "Relances Intelligentes",
+      "tagline": "La bonne relance au bon lead",
+      "description": "Le scoring détermine le type de relance. Leads chauds : commercial. Tièdes : nurturing. Froids : réactivation longue.",
+      "impact": "ROI relances +100%, ressources bien allouées",
+      "narrative_short": "Chaque score de lead déclenche le type de relance approprié.",
+      "narrative_full": "Lead score > 80 ? Le commercial appelle dans l'heure. Score 50-80 ? Séquence de nurturing personnalisé. Score < 50 ? Programme de réactivation long terme. Le scoring ne sert pas qu'à trier : il dicte la stratégie de suivi optimale pour chaque prospect."
+    },
+    "growth-scoring+growth-quotes": {
+      "name": "Tarification Dynamique",
+      "tagline": "Le bon prix pour le bon prospect",
+      "description": "Le scoring influence la stratégie de pricing. Leads chauds : prix standard. Hésitants : offres incitatives.",
+      "impact": "Conversion +25%, marge préservée sur leads chauds",
+      "narrative_short": "Le score du prospect influence la stratégie de pricing du devis.",
+      "narrative_full": "Le scoring révèle l'appétit d'achat. Un lead ultra-chaud recevra un devis standard : il va signer. Un lead hésitant aura une remise early-bird ou une offre spéciale. La tarification dynamique optimise simultanément conversion et marge."
+    },
+    "growth-scoring+growth-churn": {
+      "name": "Double Prédiction",
+      "tagline": "Score d'entrée, score de sortie",
+      "description": "Le scoring prédit l'acquisition, l'Anti-Attrition prédit la rétention. Vue complète du cycle de vie.",
+      "impact": "Valeur vie client prédite, allocation ressources optimale",
+      "narrative_short": "Deux scores par client : probabilité d'achat + probabilité de départ.",
+      "narrative_full": "Chaque client a maintenant deux scores. Le score d'acquisition prédit s'il va signer. Le score de churn prédit combien de temps il va rester. Combinés, ils donnent la valeur vie client probable. Vous savez exactement combien investir pour acquérir et retenir chaque client."
+    },
+    "growth-followup+growth-quotes": {
+      "name": "Cycle Devis Automatisé",
+      "tagline": "Du devis à la signature, zero effort",
+      "description": "Les relances de devis sont automatiques. Rappels progressifs jusqu'à signature ou expiration.",
+      "impact": "Devis signés +40%, zéro devis oublié",
+      "narrative_short": "Chaque devis non signé déclenche une séquence de relance automatique.",
+      "narrative_full": "Devis envoyé J+0. J+2 : email de disponibilité. J+5 : rappel avec deadline. J+7 : offre spéciale dernière chance. J+10 : dernier rappel avant expiration. La séquence est personnalisable par commercial, par type de deal. Aucun devis n'expire sans avoir été relancé."
+    },
+    "growth-followup+growth-churn": {
+      "name": "Réactivation Automatique",
+      "tagline": "Récupérez les clients qui s'éloignent",
+      "description": "Les clients à risque entrent dans des séquences de réactivation automatiques. Rétention proactive.",
+      "impact": "Clients récupérés +45%, churn évité",
+      "narrative_short": "Les clients à risque reçoivent automatiquement des séquences de rétention.",
+      "narrative_full": "Un client passe en zone de risque ? La séquence de rétention démarre. D'abord un email de check-in. Puis une offre de fidélité. Ensuite un appel du commercial. Enfin, une proposition sur-mesure. La machine de rétention fonctionne aussi bien que la machine d'acquisition."
+    },
+    "growth-quotes+growth-churn": {
+      "name": "Rétention par la Valeur",
+      "tagline": "Des offres qui gardent",
+      "description": "Les clients à risque reçoivent des devis de rétention personnalisés. Offres qui font rester.",
+      "impact": "Rétention +35% via offres ciblées",
+      "narrative_short": "Les clients à risque reçoivent des propositions de rétention sur-mesure.",
+      "narrative_full": "Un client en zone de churn ne reçoit pas un mail générique. Il reçoit un devis de rétention personnalisé : upgrade avec réduction, extension de service, offre bundle. Le système connaît sa valeur et propose une offre calculée pour le garder tout en préservant la rentabilité."
+    }
+  },
+  "multi_connections": {
+    "growth-crm+growth-pipeline+growth-scoring": {
+      "name": "Machine à Vendre",
+      "description": "Le trio CRM-Pipeline-Scoring crée une machine de vente prédictive. Les contacts sont scorés, triés, et suivis à travers tout le cycle.",
+      "impact": "Processus commercial entièrement optimisé par l'IA"
+    },
+    "growth-whatsapp+growth-scoring+growth-followup": {
+      "name": "Qualification Non-Stop",
+      "description": "WhatsApp qualifie, le scoring trie, les relances maintiennent. Une chaîne de conversion 24/7.",
+      "impact": "Leads traités automatiquement de bout en bout"
+    },
+    "growth-insights+growth-churn+growth-followup": {
+      "name": "Rétention Prédictive Complète",
+      "description": "La Vision 360 détecte, l'Anti-Attrition prédit, les relances agissent. Système de rétention complet.",
+      "impact": "Churn réduit de moitié grâce à l'anticipation"
+    },
+    "growth-pipeline+growth-quotes+growth-followup": {
+      "name": "Closing Automatisé",
+      "description": "Du deal au devis à la signature. Chaque étape déclenche la suivante automatiquement.",
+      "impact": "Cycle de vente raccourci de 40%"
+    },
+    "growth-crm+growth-insights+growth-churn": {
+      "name": "Connaissance Client Totale",
+      "description": "CRM + Vision 360 + Anti-Attrition = vous savez tout sur chaque client, y compris quand il va partir.",
+      "impact": "Relation client maîtrisée de A à Z"
+    }
+  }
+}

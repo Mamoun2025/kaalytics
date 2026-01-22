@@ -1,0 +1,203 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Semantic affinities between modules for intelligent connection recommendations",
+    "affinity_scale": "0-100 (0=incompatible, 50=neutral, 100=perfect match)"
+  },
+
+  "dimension_affinities": {
+    "operations": {
+      "operations": 80,
+      "intelligence": 85,
+      "integration": 90,
+      "security": 70,
+      "enterprise": 75,
+      "growth": 50,
+      "engagement": 40,
+      "brand": 30
+    },
+    "intelligence": {
+      "operations": 85,
+      "intelligence": 75,
+      "integration": 80,
+      "security": 75,
+      "enterprise": 85,
+      "growth": 90,
+      "engagement": 70,
+      "brand": 50
+    },
+    "growth": {
+      "operations": 50,
+      "intelligence": 90,
+      "integration": 65,
+      "security": 60,
+      "enterprise": 80,
+      "growth": 85,
+      "engagement": 95,
+      "brand": 85
+    },
+    "engagement": {
+      "operations": 40,
+      "intelligence": 70,
+      "integration": 60,
+      "security": 55,
+      "enterprise": 60,
+      "growth": 95,
+      "engagement": 80,
+      "brand": 90
+    },
+    "brand": {
+      "operations": 30,
+      "intelligence": 50,
+      "integration": 55,
+      "security": 45,
+      "enterprise": 65,
+      "growth": 85,
+      "engagement": 90,
+      "brand": 70
+    },
+    "integration": {
+      "operations": 90,
+      "intelligence": 80,
+      "integration": 75,
+      "security": 85,
+      "enterprise": 95,
+      "growth": 65,
+      "engagement": 60,
+      "brand": 55
+    },
+    "security": {
+      "operations": 70,
+      "intelligence": 75,
+      "integration": 85,
+      "security": 80,
+      "enterprise": 90,
+      "growth": 60,
+      "engagement": 55,
+      "brand": 45
+    },
+    "enterprise": {
+      "operations": 75,
+      "intelligence": 85,
+      "integration": 95,
+      "security": 90,
+      "enterprise": 80,
+      "growth": 80,
+      "engagement": 60,
+      "brand": 65
+    }
+  },
+
+  "module_pairs": {
+    "ops-fleet+ops-map": { "affinity": 98, "flow": "bidirectional", "priority": 1 },
+    "ops-fleet+ops-routes": { "affinity": 95, "flow": "from-to", "priority": 1 },
+    "ops-fleet+ops-maintenance": { "affinity": 92, "flow": "from-to", "priority": 1 },
+    "ops-map+ops-routes": { "affinity": 90, "flow": "bidirectional", "priority": 2 },
+    "ops-maintenance+integ-iot": { "affinity": 95, "flow": "to-from", "priority": 1 },
+    "ops-inventory+intel-forecast": { "affinity": 88, "flow": "to-from", "priority": 2 },
+    "ops-scheduling+ent-hr": { "affinity": 90, "flow": "bidirectional", "priority": 1 },
+    "ops-kpi+intel-dashboards": { "affinity": 92, "flow": "from-to", "priority": 1 },
+    "ops-alerts+sec-detect": { "affinity": 85, "flow": "bidirectional", "priority": 2 },
+
+    "intel-banks+intel-cashflow": { "affinity": 98, "flow": "from-to", "priority": 1 },
+    "intel-ml+intel-forecast": { "affinity": 95, "flow": "from-to", "priority": 1 },
+    "intel-ml+growth-scoring": { "affinity": 92, "flow": "from-to", "priority": 1 },
+    "intel-ml+growth-churn": { "affinity": 90, "flow": "from-to", "priority": 2 },
+    "intel-reports+ent-erp": { "affinity": 88, "flow": "to-from", "priority": 1 },
+    "intel-margins+growth-insights": { "affinity": 85, "flow": "bidirectional", "priority": 2 },
+    "intel-cashflow+ent-purchase": { "affinity": 87, "flow": "bidirectional", "priority": 2 },
+    "intel-dashboards+ops-kpi": { "affinity": 92, "flow": "to-from", "priority": 1 },
+
+    "growth-crm+growth-scoring": { "affinity": 98, "flow": "bidirectional", "priority": 1 },
+    "growth-crm+growth-pipeline": { "affinity": 96, "flow": "from-to", "priority": 1 },
+    "growth-crm+growth-insights": { "affinity": 94, "flow": "bidirectional", "priority": 1 },
+    "growth-crm+engage-campaigns": { "affinity": 90, "flow": "bidirectional", "priority": 1 },
+    "growth-whatsapp+growth-followup": { "affinity": 92, "flow": "from-to", "priority": 1 },
+    "growth-whatsapp+engage-campaigns": { "affinity": 85, "flow": "bidirectional", "priority": 2 },
+    "growth-pipeline+intel-forecast": { "affinity": 88, "flow": "from-to", "priority": 2 },
+    "growth-quotes+brand-docs": { "affinity": 85, "flow": "to-from", "priority": 2 },
+    "growth-quotes+ent-erp": { "affinity": 90, "flow": "from-to", "priority": 1 },
+    "growth-churn+growth-followup": { "affinity": 88, "flow": "from-to", "priority": 1 },
+
+    "engage-campaigns+engage-budget": { "affinity": 95, "flow": "bidirectional", "priority": 1 },
+    "engage-campaigns+engage-analytics": { "affinity": 92, "flow": "from-to", "priority": 1 },
+    "engage-campaigns+growth-crm": { "affinity": 90, "flow": "to-from", "priority": 1 },
+    "engage-content+brand-social": { "affinity": 88, "flow": "from-to", "priority": 1 },
+    "engage-content+engage-email": { "affinity": 90, "flow": "from-to", "priority": 1 },
+    "engage-email+growth-crm": { "affinity": 85, "flow": "to-from", "priority": 2 },
+    "engage-attribution+engage-budget": { "affinity": 92, "flow": "from-to", "priority": 1 },
+    "engage-ab+intel-ml": { "affinity": 80, "flow": "to-from", "priority": 2 },
+
+    "brand-identity+brand-web": { "affinity": 98, "flow": "from-to", "priority": 1 },
+    "brand-identity+brand-system": { "affinity": 95, "flow": "from-to", "priority": 1 },
+    "brand-web+engage-analytics": { "affinity": 85, "flow": "from-to", "priority": 2 },
+    "brand-web+growth-crm": { "affinity": 82, "flow": "from-to", "priority": 2 },
+    "brand-motion+brand-social": { "affinity": 90, "flow": "from-to", "priority": 1 },
+    "brand-ui+ent-custom": { "affinity": 88, "flow": "to-from", "priority": 1 },
+    "brand-docs+ent-erp": { "affinity": 85, "flow": "to-from", "priority": 2 },
+
+    "integ-universal+ent-erp": { "affinity": 95, "flow": "bidirectional", "priority": 1 },
+    "integ-sync+intel-banks": { "affinity": 92, "flow": "from-to", "priority": 1 },
+    "integ-api+ent-custom": { "affinity": 90, "flow": "to-from", "priority": 1 },
+    "integ-iot+ops-fleet": { "affinity": 95, "flow": "from-to", "priority": 1 },
+    "integ-iot+ops-maintenance": { "affinity": 93, "flow": "from-to", "priority": 1 },
+    "integ-etl+intel-ml": { "affinity": 88, "flow": "from-to", "priority": 1 },
+    "integ-legacy+integ-universal": { "affinity": 85, "flow": "from-to", "priority": 2 },
+    "integ-monitor+sec-detect": { "affinity": 82, "flow": "from-to", "priority": 2 },
+
+    "sec-detect+sec-response": { "affinity": 98, "flow": "from-to", "priority": 1 },
+    "sec-compliance+sec-audit": { "affinity": 95, "flow": "bidirectional", "priority": 1 },
+    "sec-access+ent-hr": { "affinity": 90, "flow": "to-from", "priority": 1 },
+    "sec-encrypt+integ-sync": { "affinity": 88, "flow": "to-from", "priority": 2 },
+    "sec-backup+ent-erp": { "affinity": 85, "flow": "to-from", "priority": 2 },
+    "sec-pentest+integ-api": { "affinity": 82, "flow": "from-to", "priority": 2 },
+
+    "ent-erp+intel-reports": { "affinity": 92, "flow": "from-to", "priority": 1 },
+    "ent-erp+ent-hr": { "affinity": 95, "flow": "bidirectional", "priority": 1 },
+    "ent-erp+ent-purchase": { "affinity": 93, "flow": "bidirectional", "priority": 1 },
+    "ent-custom+brand-ui": { "affinity": 88, "flow": "from-to", "priority": 1 },
+    "ent-deploy+ent-support": { "affinity": 90, "flow": "from-to", "priority": 1 },
+    "ent-project+ent-hr": { "affinity": 85, "flow": "bidirectional", "priority": 2 },
+    "ent-docs+sec-access": { "affinity": 82, "flow": "to-from", "priority": 2 }
+  },
+
+  "module_categories": {
+    "data_sources": ["ops-fleet", "ops-map", "intel-banks", "integ-iot", "integ-sync"],
+    "data_processors": ["intel-ml", "intel-forecast", "integ-etl", "engage-analytics"],
+    "data_outputs": ["intel-reports", "intel-dashboards", "ops-kpi", "brand-docs"],
+    "customer_facing": ["growth-crm", "growth-whatsapp", "brand-web", "engage-email"],
+    "internal_tools": ["ent-erp", "ent-hr", "ent-project", "ops-scheduling"],
+    "security_layer": ["sec-detect", "sec-response", "sec-access", "sec-audit"],
+    "connectors": ["integ-universal", "integ-api", "integ-legacy"]
+  },
+
+  "flow_patterns": {
+    "data_pipeline": {
+      "description": "Data flows from sources through processors to outputs",
+      "layers": ["data_sources", "data_processors", "data_outputs"]
+    },
+    "customer_journey": {
+      "description": "Customer interaction flow from acquisition to retention",
+      "sequence": ["brand-web", "growth-crm", "growth-pipeline", "engage-campaigns", "growth-followup"]
+    },
+    "security_perimeter": {
+      "description": "Security wraps around all other systems",
+      "core": ["sec-detect", "sec-response"],
+      "extends_to": ["sec-access", "sec-audit", "sec-compliance"]
+    }
+  },
+
+  "layout_hints": {
+    "ops-fleet": { "tier": 1, "cluster": "operations" },
+    "ops-map": { "tier": 1, "cluster": "operations" },
+    "ops-routes": { "tier": 2, "cluster": "operations" },
+    "ops-maintenance": { "tier": 2, "cluster": "operations" },
+    "intel-ml": { "tier": 2, "cluster": "intelligence" },
+    "intel-forecast": { "tier": 3, "cluster": "intelligence" },
+    "intel-banks": { "tier": 1, "cluster": "intelligence" },
+    "growth-crm": { "tier": 1, "cluster": "growth" },
+    "growth-pipeline": { "tier": 2, "cluster": "growth" },
+    "ent-erp": { "tier": 0, "cluster": "enterprise", "central": true },
+    "integ-universal": { "tier": 0, "cluster": "integration", "central": true }
+  }
+}

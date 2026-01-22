@@ -1,0 +1,191 @@
+{
+  "dimension": "enterprise",
+  "dimension_name": "Gestion d'Entreprise",
+  "version": "1.0",
+  "modules": {
+    "ent-erp": {
+      "name": "ERP Complet",
+      "tagline": "Le système nerveux de votre entreprise",
+      "description_short": "Tous vos processus métier dans un seul système intégré. Ventes, achats, stock, compta : tout communique.",
+      "description_full": "L'ERP Complet est le système d'exploitation de votre entreprise. Ventes, achats, stocks, production, comptabilité : tout fonctionne ensemble dans un système unifié. Fini les ressaisies, fini les incohérences entre services, fini les exports Excel pour réconcilier des données qui auraient dû être liées. L'information circule naturellement de la commande client à la facture fournisseur.",
+      "impact_business": {
+        "primary": "Productivité administrative +40%",
+        "secondary": "Erreurs de saisie éliminées à 95%",
+        "tertiary": "Visibilité temps réel sur toute l'activité"
+      },
+      "use_cases": [
+        "Gestion commerciale intégrée",
+        "Suivi des stocks en temps réel",
+        "Comptabilité automatisée",
+        "Reporting unifié multi-services"
+      ],
+      "transformation_narrative": {
+        "alone": "Votre entreprise a son système nerveux central. Tout est connecté, tout communique.",
+        "with_hr": "L'ERP + RH = gestion unifiée des ressources humaines et matérielles.",
+        "with_purchase": "Les achats sont liés aux ventes. La chaîne approvisionnement est fluide.",
+        "with_project": "Les projets s'intègrent à la gestion globale. Temps, ressources, facturation alignés."
+      }
+    },
+    "ent-custom": {
+      "name": "Modules Sur-Mesure",
+      "tagline": "Votre métier, nos solutions",
+      "description_short": "Développements spécifiques pour vos processus uniques. L'ERP adapté à vous, pas l'inverse.",
+      "description_full": "Les Modules Sur-Mesure adaptent le système à vos processus uniques. Chaque entreprise a ses particularités : workflows spécifiques, calculs métier, interfaces dédiées. Plutôt que de forcer vos processus dans un moule standard, nous développons les modules qui s'adaptent parfaitement à votre façon de travailler. L'ERP devient votre ERP.",
+      "impact_business": {
+        "primary": "Adoption utilisateur +60% grâce à l'ergonomie adaptée",
+        "secondary": "Processus métier digitalisés à 100%",
+        "tertiary": "Avantage compétitif via outillage unique"
+      },
+      "use_cases": [
+        "Workflows métier spécifiques",
+        "Calculs et règles de gestion uniques",
+        "Interfaces adaptées aux rôles",
+        "Intégrations avec outils sectoriels"
+      ],
+      "transformation_narrative": {
+        "alone": "Votre métier a ses propres outils. Pas de compromis sur vos processus clés.",
+        "with_erp": "L'ERP standard + modules sur-mesure = le meilleur des deux mondes.",
+        "with_deploy": "Déploiement rapide même des modules customs. Pas de projet qui traîne.",
+        "with_support": "L'équipe support connaît vos spécificités. Accompagnement personnalisé."
+      }
+    },
+    "ent-deploy": {
+      "name": "Déploiement Rapide",
+      "tagline": "En semaines, pas en années",
+      "description_short": "Mise en production accélérée. Méthodologie éprouvée pour un go-live rapide et réussi.",
+      "description_full": "Le Déploiement Rapide transforme le projet ERP de marathon en sprint. Une méthodologie éprouvée, des templates prêts à l'emploi, des consultants expérimentés : tout est optimisé pour un go-live en semaines. Pas de big bang risqué : des phases courtes avec valeur immédiate à chaque étape. Vous commencez à bénéficier du système rapidement.",
+      "impact_business": {
+        "primary": "Time-to-value 3x plus rapide",
+        "secondary": "Risque projet réduit par approche itérative",
+        "tertiary": "Coût projet maîtrisé par efficacité"
+      },
+      "use_cases": [
+        "Déploiement par vagues fonctionnelles",
+        "Formation accélérée des utilisateurs",
+        "Migration de données assistée",
+        "Recette et validation par étapes"
+      ],
+      "transformation_narrative": {
+        "alone": "Le projet ERP n'est plus une odyssée. En quelques semaines, vous êtes opérationnel.",
+        "with_erp": "L'ERP se déploie rapidement grâce à la méthodologie éprouvée.",
+        "with_support": "Déploiement + Support = accompagnement continu du projet au quotidien.",
+        "with_custom": "Même les modules sur-mesure sont déployés rapidement."
+      }
+    },
+    "ent-support": {
+      "name": "Support Expert",
+      "tagline": "Jamais seul face au système",
+      "description_short": "Équipe dédiée disponible 24/7. Réponses rapides, résolutions efficaces, accompagnement continu.",
+      "description_full": "Le Support Expert garantit que vous n'êtes jamais bloqué. Une équipe dédiée qui connaît votre installation, disponible quand vous en avez besoin. Les questions simples trouvent réponse immédiate, les problèmes complexes sont escaladés aux bons experts. Au-delà du dépannage : un accompagnement pour optimiser votre usage du système au fil du temps.",
+      "impact_business": {
+        "primary": "Temps de résolution moyen < 4h",
+        "secondary": "Disponibilité système > 99.9%",
+        "tertiary": "Utilisateurs autonomes grâce à l'accompagnement"
+      },
+      "use_cases": [
+        "Hotline support technique",
+        "Résolution de bugs et incidents",
+        "Formation continue des utilisateurs",
+        "Conseil en optimisation"
+      ],
+      "transformation_narrative": {
+        "alone": "Vous avez une équipe dans votre poche. Questions, problèmes : réponses rapides garanties.",
+        "with_erp": "L'ERP est couvert par un support qui connaît chaque fonctionnalité.",
+        "with_custom": "Même vos modules sur-mesure sont supportés par l'équipe dédiée.",
+        "with_deploy": "Du déploiement au quotidien, l'accompagnement est continu."
+      }
+    },
+    "ent-hr": {
+      "name": "Gestion RH",
+      "tagline": "Vos talents, notre priorité",
+      "description_short": "Cycle de vie employé complet : recrutement, contrats, absences, paie, évaluations.",
+      "description_full": "La Gestion RH digitalise l'ensemble du cycle de vie employé. Du recrutement à la sortie, en passant par les contrats, les absences, les formations, les évaluations et la paie : tout est géré dans un système intégré. Les managers ont leurs outils, les RH leur vision globale, les employés leur portail. Les processus RH deviennent fluides et traçables.",
+      "impact_business": {
+        "primary": "Temps administratif RH -50%",
+        "secondary": "Conformité sociale garantie",
+        "tertiary": "Expérience employé améliorée"
+      },
+      "use_cases": [
+        "Gestion des recrutements",
+        "Suivi des congés et absences",
+        "Préparation de la paie",
+        "Entretiens et évaluations"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos RH sont digitalisées. Du recrutement à la paie, tout est fluide.",
+        "with_erp": "RH intégrée à l'ERP. Les coûts salariaux s'intègrent à la comptabilité.",
+        "with_project": "Temps projet et temps RH sont réconciliés. Facturation précise.",
+        "with_docs": "Les documents RH sont centralisés et accessibles. Zéro papier perdu."
+      }
+    },
+    "ent-purchase": {
+      "name": "Achats",
+      "tagline": "Achetez mieux, dépensez moins",
+      "description_short": "Gestion des achats et fournisseurs. Demandes, commandes, réceptions, factures : chaîne complète.",
+      "description_full": "Le module Achats optimise votre chaîne d'approvisionnement. Des demandes d'achat à la réception, en passant par les appels d'offres et les commandes : chaque étape est tracée et optimisée. Les fournisseurs sont évalués, les conditions négociées sont respectées, les écarts sont détectés. Vous achetez mieux et vous le prouvez.",
+      "impact_business": {
+        "primary": "Économies sur achats de 5-15%",
+        "secondary": "Cycle d'approvisionnement -30%",
+        "tertiary": "Conformité des achats garantie"
+      },
+      "use_cases": [
+        "Gestion des demandes d'achat",
+        "Appels d'offres fournisseurs",
+        "Commandes et réceptions",
+        "Évaluation des fournisseurs"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos achats sont sous contrôle. Chaque commande, chaque fournisseur est tracé.",
+        "with_erp": "Achats liés aux stocks et à la compta. La chaîne est complète.",
+        "with_project": "Les achats projet sont suivis spécifiquement. Rentabilité projet précise.",
+        "with_docs": "Les contrats et conditions sont centralisés. Plus de clause oubliée."
+      }
+    },
+    "ent-project": {
+      "name": "Gestion Projets",
+      "tagline": "Projets maîtrisés de A à Z",
+      "description_short": "Planification, suivi du temps, ressources et facturation projet. Rentabilité visible.",
+      "description_full": "La Gestion Projets donne une visibilité complète sur chaque projet. Planification des tâches, affectation des ressources, saisie des temps, suivi des dépenses et facturation : tout est intégré. Vous savez à chaque instant si le projet est rentable, si les délais seront tenus, si les ressources sont correctement utilisées. Les projets ne sont plus des boîtes noires.",
+      "impact_business": {
+        "primary": "Rentabilité projet améliorée de 15%",
+        "secondary": "Visibilité temps réel sur avancement",
+        "tertiary": "Facturation projet accélérée"
+      },
+      "use_cases": [
+        "Planification et Gantt",
+        "Suivi des temps passés",
+        "Gestion des budgets projet",
+        "Facturation avancement"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos projets sont transparents. Temps, budget, rentabilité : tout est visible.",
+        "with_erp": "Projets intégrés à l'ERP. Ressources et facturation en cohérence.",
+        "with_hr": "Temps projet et temps RH alignés. Une seule vérité.",
+        "with_purchase": "Achats imputés aux projets. Coût complet calculé."
+      }
+    },
+    "ent-docs": {
+      "name": "GED",
+      "tagline": "Tous vos documents, accessibles",
+      "description_short": "Gestion électronique des documents. Stockage centralisé, versioning, recherche et partage.",
+      "description_full": "La GED centralise tous les documents de l'entreprise. Contrats, factures, rapports, manuels : tout est stocké, classé, versionné et accessible. La recherche plein texte retrouve n'importe quel document en secondes. Les droits d'accès garantissent la confidentialité. Fini les fichiers perdus sur des disques locaux ou dans des emails.",
+      "impact_business": {
+        "primary": "Temps de recherche document -80%",
+        "secondary": "Zéro document perdu ou introuvable",
+        "tertiary": "Collaboration documentaire fluide"
+      },
+      "use_cases": [
+        "Stockage centralisé et sécurisé",
+        "Versioning et historique",
+        "Recherche plein texte",
+        "Workflows de validation"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos documents sont centralisés. Plus de fichier perdu, tout est accessible.",
+        "with_erp": "Les documents sont liés aux données ERP. Facture attachée à la commande.",
+        "with_hr": "Documents RH centralisés. Contrats, bulletins : tout au même endroit.",
+        "with_purchase": "Contrats fournisseurs accessibles. Plus de condition oubliée."
+      }
+    }
+  }
+}

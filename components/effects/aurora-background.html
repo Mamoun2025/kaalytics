@@ -1,0 +1,167 @@
+<!--
+KAALYTICS - Aurora Background Effect
+=====================================
+Fond anime aurora borealis avec gradients CSS purs
+Source: github.com/LunarLogic/auroral, ui.aceternity.com
+-->
+
+<div class="aurora-demo">
+    <div class="aurora-background">
+        <div class="aurora-layer aurora-layer--1"></div>
+        <div class="aurora-layer aurora-layer--2"></div>
+        <div class="aurora-layer aurora-layer--3"></div>
+        <div class="aurora-layer aurora-layer--4"></div>
+    </div>
+    <div class="aurora-content">
+        <h1>Aurora Background</h1>
+        <p>Un effet de lumiere boreale anime en CSS pur</p>
+        <button class="aurora-btn">Decouvrir</button>
+    </div>
+</div>
+
+<style>
+:root {
+    --emerald: #10b981;
+    --emerald-dim: rgba(16, 185, 129, 0.3);
+    --teal: #0d9488;
+    --teal-dim: rgba(13, 148, 136, 0.3);
+    --bg-void: #030a08;
+    --cyan: #06b6d4;
+    --purple: #8b5cf6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.aurora-demo {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-void);
+}
+
+.aurora-background {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    filter: blur(80px);
+    opacity: 0.6;
+}
+
+.aurora-layer {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    border-radius: 50%;
+}
+
+.aurora-layer--1 {
+    top: -50%;
+    left: -25%;
+    background: radial-gradient(ellipse at center, var(--emerald-dim) 0%, transparent 70%);
+    animation: aurora1 8s ease-in-out infinite;
+}
+
+.aurora-layer--2 {
+    top: -30%;
+    right: -25%;
+    background: radial-gradient(ellipse at center, var(--teal-dim) 0%, transparent 70%);
+    animation: aurora2 10s ease-in-out infinite;
+}
+
+.aurora-layer--3 {
+    bottom: -50%;
+    left: 10%;
+    background: radial-gradient(ellipse at center, rgba(6, 182, 212, 0.2) 0%, transparent 70%);
+    animation: aurora3 12s ease-in-out infinite;
+}
+
+.aurora-layer--4 {
+    top: 20%;
+    right: -10%;
+    background: radial-gradient(ellipse at center, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+    animation: aurora4 14s ease-in-out infinite;
+}
+
+@keyframes aurora1 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+    25% { transform: translate(5%, 10%) rotate(5deg) scale(1.1); }
+    50% { transform: translate(-5%, 5%) rotate(-5deg) scale(0.95); }
+    75% { transform: translate(10%, -5%) rotate(3deg) scale(1.05); }
+}
+
+@keyframes aurora2 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+    33% { transform: translate(-10%, 5%) rotate(-8deg) scale(1.15); }
+    66% { transform: translate(5%, -10%) rotate(5deg) scale(0.9); }
+}
+
+@keyframes aurora3 {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+    50% { transform: translate(15%, -10%) scale(1.2); opacity: 0.8; }
+}
+
+@keyframes aurora4 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-20%, 15%) rotate(10deg); }
+}
+
+.aurora-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.aurora-content h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #fff 0%, var(--emerald) 50%, var(--teal) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.aurora-content p {
+    font-size: 1.25rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 2rem;
+}
+
+.aurora-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--bg-void);
+    background: linear-gradient(135deg, var(--emerald), var(--teal));
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 30px var(--emerald-dim);
+}
+
+.aurora-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 50px var(--emerald);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .aurora-background {
+        filter: blur(60px);
+    }
+    .aurora-content p {
+        font-size: 1rem;
+    }
+}
+</style>

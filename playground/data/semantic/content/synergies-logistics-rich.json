@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "version": "3.0",
+    "dimension": "logistics",
+    "description": "Synergies ULTRA-RICHES pour la dimension Logistique & Distribution"
+  },
+
+  "connections": {
+    "log-wms+log-picking": {
+      "name": "Entrepôt Optimisé",
+      "tagline": "Stockage et préparation en synergie",
+      "story_paragraph": "L'intégration de la Gestion Entrepôt avec la Préparation Commandes crée une logistique fluide et optimisée. Le WMS connaît l'emplacement exact de chaque article. Le picking utilise cette information pour guider les préparateurs sur le chemin optimal. Les articles à forte rotation sont positionnés pour minimiser les déplacements. Les réapprovisionnements picking sont déclenchés automatiquement. L'entrepôt fonctionne comme une machine bien huilée.",
+      "impact_narrative": "Cette synergie maximise l'efficacité de l'entrepôt. Les temps de préparation diminuent significativement. Les erreurs sont quasi-éliminées. La productivité des équipes augmente sans stress supplémentaire. L'entrepôt traite plus de commandes avec les mêmes ressources."
+    },
+
+    "log-tms+log-tracking": {
+      "name": "Livraison Transparente",
+      "tagline": "Suivi de bout en bout",
+      "story_paragraph": "Quand le Transport rencontre la Traçabilité, la visibilité sur les livraisons devient totale. Chaque colis est suivi de la préparation jusqu'à la remise au client. Les ETAs sont mis à jour en temps réel. Les clients peuvent suivre leur livraison. Les preuves de livraison sont géolocalisées et horodatées. Les réclamations trouvent leur réponse dans les données. La transparence renforce la confiance client.",
+      "impact_narrative": "Cette combinaison crée une expérience de livraison premium. Les clients savent où est leur colis. Les litiges sont résolus factuellement. La qualité de service est mesurable et améliorable. La satisfaction client atteint de nouveaux sommets."
+    },
+
+    "log-forecast+log-inventory": {
+      "name": "Stock Intelligent",
+      "tagline": "Anticiper pour optimiser",
+      "story_paragraph": "L'alliance des Prévisions Demande avec l'Inventaire Permanent crée une gestion des stocks prédictive et fiable. Les prévisions guident les niveaux de stock cible. L'inventaire permanent garantit la fiabilité des données. Les réapprovisionnements sont déclenchés au bon moment. Les sur-stocks sont identifiés et traités. La rupture et le sur-stock deviennent également rares.",
+      "impact_narrative": "Cette synergie optimise le capital immobilisé en stock. Le juste stock est maintenu pour chaque article. Les coûts de stockage diminuent. Le taux de service reste excellent. L'argent libéré du stock finance la croissance."
+    },
+
+    "log-wms+log-returns": {
+      "name": "Flux Bidirectionnel",
+      "tagline": "Entrant et sortant maîtrisés",
+      "story_paragraph": "L'intégration de la Gestion Entrepôt avec la Gestion Retours unifie les flux logistiques. Les retours sont réceptionnés et traités dans le même système que les entrées fournisseurs. Les articles reconditionnables retrouvent leur place en stock. L'entrepôt gère naturellement les flux dans les deux sens. La valeur des retours est maximisée par une réintégration rapide.",
+      "impact_narrative": "Cette combinaison valorise les retours. Le temps de remise en stock est minimisé. Les articles reconditionnés sont revendables rapidement. L'espace retours est optimisé. La logistique inverse devient aussi efficace que la logistique directe."
+    },
+
+    "log-picking+log-tracking": {
+      "name": "Préparation Traçable",
+      "tagline": "Chaque geste documenté",
+      "story_paragraph": "Quand la Préparation Commandes utilise la Traçabilité, chaque article préparé est documenté. Qui a préparé quoi, quand, depuis quel emplacement. Les lots et DLC sont enregistrés. En cas de rappel, on sait exactement quels clients sont concernés. Les erreurs de préparation sont traçables jusqu'à leur source. La qualité s'améliore par la responsabilisation.",
+      "impact_narrative": "Cette synergie crée une préparation de confiance. Les erreurs sont identifiables et corrigibles. Les rappels sont ciblés. La conformité réglementaire est assurée. La traçabilité devient un outil d'amélioration continue."
+    },
+
+    "log-tms+log-forecast": {
+      "name": "Distribution Anticipée",
+      "tagline": "Capacité ajustée à la demande",
+      "story_paragraph": "L'alliance du Transport avec les Prévisions Demande permet d'anticiper les besoins de capacité. Les pics de demande sont prévisibles. La flotte est dimensionnée ou renforcée à l'avance. Les tournées sont planifiées avec la volumétrie prévisionnelle. Pas de surprise : la capacité de livraison suit la demande prévue.",
+      "impact_narrative": "Cette combinaison lisse l'activité transport. Les pics sont absorbés car anticipés. Les coûts de livraison express d'urgence disparaissent. La qualité de service reste stable malgré les variations. La planification des ressources devient proactive."
+    },
+
+    "log-crossdock+log-tms": {
+      "name": "Transit Express",
+      "tagline": "Arrivée et départ synchronisés",
+      "story_paragraph": "L'intégration du Cross-Docking avec le Transport crée des flux tendus ultra-efficaces. Les arrivées fournisseurs sont synchronisées avec les départs tournées. Les produits traversent sans stockage. Les créneaux de réception sont calés sur les besoins d'expédition. Le temps de traversée est minimal. Les livraisons sont plus rapides car le transit est supprimé.",
+      "impact_narrative": "Cette synergie accélère les flux. Le délai client diminue. Le stock en transit est minimal. Les produits frais arrivent plus vite. La supply chain gagne en réactivité."
+    },
+
+    "log-inventory+log-returns": {
+      "name": "Stock Réconcilié",
+      "tagline": "Retours intégrés au stock réel",
+      "story_paragraph": "Quand l'Inventaire Permanent intègre la Gestion Retours, le stock est toujours juste. Les retours reçus sont comptabilisés en temps réel. Les articles remis en stock sont immédiatement disponibles. Les destructions sont déduites. L'image stock reflète la réalité incluant les retours. Pas d'écart entre le stock informatique et le stock physique.",
+      "impact_narrative": "Cette combinaison garantit la justesse du stock. Les articles retournés sont immédiatement revendables. Les écarts d'inventaire incluant les retours sont maîtrisés. La fiabilité stock est totale."
+    }
+  },
+
+  "multi_connections": {
+    "log-wms+log-picking+log-tracking": {
+      "name": "Entrepôt Excellence",
+      "tagline": "Stockage, préparation, traçabilité unifiés",
+      "story_paragraph": "La triple alliance Gestion Entrepôt, Préparation Commandes et Traçabilité crée un entrepôt de classe mondiale. Chaque article est localisé, son historique est connu, sa préparation est guidée et documentée. L'excellence opérationnelle est atteinte : rapidité, précision, traçabilité. Les audits trouvent une documentation parfaite. Les clients reçoivent des produits conformes avec un historique complet.",
+      "cumulative_impact": "Ensemble, ces trois modules créent une logistique d'élite. La qualité est constante et prouvable. La productivité est maximale. La conformité est totale. Votre entrepôt devient une référence."
+    },
+
+    "log-tms+log-tracking+log-forecast": {
+      "name": "Distribution Intelligente",
+      "tagline": "Anticiper, livrer, prouver",
+      "story_paragraph": "Quand Transport, Traçabilité et Prévisions Demande fonctionnent ensemble, la distribution devient intelligente. Les besoins sont anticipés. Les capacités sont ajustées. Chaque livraison est tracée et prouvée. Le service client dispose d'informations en temps réel. L'ensemble de la chaîne de distribution est visible, prévisible et contrôlable.",
+      "cumulative_impact": "Cette combinaison triple crée une distribution premium. La promesse client est tenue. Les coûts sont optimisés. La visibilité est totale. Votre distribution devient un avantage concurrentiel."
+    },
+
+    "log-forecast+log-inventory+log-wms": {
+      "name": "Stock Optimum",
+      "tagline": "Prévoir, compter, stocker au mieux",
+      "story_paragraph": "L'intégration Prévisions Demande, Inventaire Permanent et Gestion Entrepôt optimise le stock sous tous les angles. Les prévisions définissent le stock cible. L'inventaire garantit la fiabilité. Le WMS optimise le placement. Le résultat : le bon stock, au bon endroit, dans la bonne quantité. Le capital stock est minimisé tout en assurant le service.",
+      "cumulative_impact": "Cette orchestration triple libère du cash. Le stock est juste, fiable et bien placé. Les coûts de stockage sont minimisés. Le service client est maximal. Votre gestion des stocks atteint l'excellence."
+    }
+  }
+}

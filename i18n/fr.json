@@ -1,0 +1,215 @@
+{
+    "nav": {
+        "services": "Services",
+        "playground": "Playground",
+        "industries": "Industries",
+        "daedalia": "Daedalia AI",
+        "resources": "Ressources",
+        "demo": "Demo gratuite"
+    },
+    "hero": {
+        "badge": "En production - 50+ entreprises transformees",
+        "title1": "L'IA qui transforme",
+        "title2": "les entreprises africaines",
+        "description": "Du chaos operationnel a l'excellence connectee. Notre plateforme IA centralise vos donnees, automatise vos processus et accelere vos decisions.",
+        "cta1": "Decouvrir",
+        "cta2": "Demo gratuite",
+        "metrics": {
+            "precision": "Precision",
+            "time": "Temps gagne",
+            "response": "Reponse",
+            "uptime": "Disponibilite"
+        }
+    },
+    "fleetops": {
+        "badge": "Produit Phare",
+        "title": "FleetOps Pro",
+        "subtitle": "Le systeme nerveux de votre flotte",
+        "cta": "Demander une demo FleetOps Pro",
+        "pricing": "A partir de",
+        "modules": {
+            "parc": {
+                "name": "Parc",
+                "description": "Suivi temps reel de tous vos vehicules"
+            },
+            "planning": {
+                "name": "Planning",
+                "description": "Timeline visuelle drag & drop"
+            },
+            "maintenance": {
+                "name": "Maintenance",
+                "description": "Maintenance preventive intelligente"
+            },
+            "supply": {
+                "name": "Supply Chain",
+                "description": "Gestion achats et stocks"
+            },
+            "chantiers": {
+                "name": "Chantiers",
+                "description": "Suivi projets et budgets"
+            },
+            "effectif": {
+                "name": "Effectif",
+                "description": "Allocation des competences"
+            },
+            "produits": {
+                "name": "Produits",
+                "description": "Catalogue pieces detachees"
+            },
+            "dashboard": {
+                "name": "Dashboard",
+                "description": "KPIs en temps reel"
+            }
+        }
+    },
+    "playground": {
+        "label": "Outil Interactif",
+        "title": "Construisez votre Architecture Digitale",
+        "description": "Assemblez visuellement les modules IA dont votre entreprise a besoin. Drag & drop, connectez, exportez.",
+        "cta": "Ouvrir le Playground",
+        "stats": {
+            "dimensions": "Dimensions",
+            "modules": "Modules",
+            "connections": "Connexions"
+        }
+    },
+    "services": {
+        "label": "Nos Solutions",
+        "title": "L'IA au service de votre croissance"
+    },
+    "socialProof": {
+        "stats": {
+            "companies": "Entreprises transformees",
+            "satisfaction": "Satisfaction client",
+            "support": "Support disponible"
+        },
+        "clients": "Ils nous font confiance"
+    },
+    "cta": {
+        "title": "Audit Gratuit 48H",
+        "description": "Decouvrez le potentiel cache de votre entreprise. Sans engagement.",
+        "steps": {
+            "1": "On se connecte",
+            "2": "On analyse",
+            "3": "Vous recevez un rapport"
+        },
+        "email": "Demander mon audit gratuit",
+        "whatsapp": "WhatsApp - Reponse immediate"
+    },
+    "daedalia": {
+        "badge": "Nouveau",
+        "title": "Daedalia AI",
+        "subtitle": "Votre copilote pour Odoo",
+        "description": "Posez vos questions en francais, Daedalia interroge votre Odoo et vous repond en temps reel. Plus besoin de naviguer dans 10 menus.",
+        "cta": "Tester Daedalia AI",
+        "features": {
+            "docs": {
+                "title": "178k+ docs indexes",
+                "description": "Base de connaissances massive"
+            },
+            "search": {
+                "title": "Recherche intelligente",
+                "description": "Decrivez, on trouve"
+            },
+            "quotes": {
+                "title": "Devis en 1 phrase",
+                "description": "Cree un devis pour X..."
+            },
+            "analytics": {
+                "title": "Analyse instantanee",
+                "description": "Ventes, stocks, clients"
+            }
+        },
+        "stats": {
+            "response": "Reponse",
+            "precision": "Precision",
+            "available": "Disponible"
+        }
+    },
+    "industries": {
+        "label": "Industries",
+        "title": "Une solution pour chaque secteur",
+        "description": "FleetOps Pro s'adapte aux specificites de votre industrie",
+        "btp": {
+            "title": "BTP & Construction",
+            "description": "Machines dispersees sur plusieurs chantiers ? Pannes imprevues couteuses ? On centralise tout."
+        },
+        "transport": {
+            "title": "Transport & Logistique",
+            "description": "Optimisez carburant, maintenance et conformite reglementaire."
+        },
+        "location": {
+            "title": "Location d'Equipements",
+            "description": "Maximisez votre taux d'utilisation avec le multi-tenant natif."
+        },
+        "mining": {
+            "title": "Mines & Carrieres",
+            "description": "Equipements critiques, conditions difficiles. Tracabilite complete."
+        },
+        "industrie": {
+            "title": "Industrie",
+            "description": "Conformite ISO, integration ERP, reporting automatise."
+        },
+        "collectivites": {
+            "title": "Collectivites",
+            "description": "Transparence budgetaire, reporting pour elus et citoyens."
+        }
+    },
+    "personas": {
+        "label": "Pour qui ?",
+        "title": "FleetOps Pro parle a toute l'equipe",
+        "description": "Du DG au chef de chantier, chacun y trouve son compte",
+        "dg": {
+            "title": "Directeur General",
+            "quote": "Augmentez votre rentabilite de 35% en optimisant votre flotte."
+        },
+        "daf": {
+            "title": "Directeur Financier",
+            "quote": "Reduisez vos couts de maintenance de 40% et maitrisez votre budget."
+        },
+        "fleet": {
+            "title": "Responsable de Parc",
+            "quote": "Gagnez 60% de votre temps. Fini les fichiers Excel."
+        },
+        "maintenance": {
+            "title": "Responsable Maintenance",
+            "quote": "Divisez vos pannes par 3 avec les alertes predictives."
+        },
+        "achats": {
+            "title": "Responsable Achats",
+            "quote": "Divisez vos delais d'approvisionnement par 2."
+        },
+        "chantier": {
+            "title": "Chef de Chantier",
+            "quote": "Ayez toujours les bonnes machines au bon moment."
+        }
+    },
+    "faq": {
+        "label": "Questions Frequentes",
+        "title": "Tout ce que vous devez savoir",
+        "q1": {
+            "question": "Combien de temps pour deployer FleetOps Pro ?",
+            "answer": "48h pour etre operationnel. Pour les deployements enterprise, 2-4 semaines."
+        },
+        "q2": {
+            "question": "Est-ce que ca marche avec mon systeme actuel ?",
+            "answer": "Oui, on s'integre a tout : Odoo, SAP, Sage, Salesforce, et Excel."
+        },
+        "q3": {
+            "question": "Quel ROI puis-je attendre ?",
+            "answer": "ROI positif en 6 mois : -40% maintenance, +35% productivite."
+        }
+    },
+    "footer": {
+        "tagline": "L'IA qui transforme les entreprises africaines. Solutions de gestion de flotte, automatisation et intelligence decisionnelle.",
+        "services": "Services",
+        "industries": "Industries",
+        "company": "Entreprise",
+        "about": "A propos",
+        "contact": "Contact",
+        "resources": "Ressources",
+        "privacy": "Confidentialite",
+        "terms": "CGU",
+        "copyright": "Tous droits reserves"
+    }
+}

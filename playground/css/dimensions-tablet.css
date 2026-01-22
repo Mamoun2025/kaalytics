@@ -1,0 +1,1289 @@
+/* ============================================
+   DIMENSIONS TABLET - Complete Responsive UI
+   Ultra-Premium Touch Experience
+   ============================================
+
+   Structure:
+   - Performance optimizations (drag/zoom)
+   - Base tablet styles (pointer: coarse)
+   - Landscape mode (orientation: landscape)
+   - Portrait mode (orientation: portrait)
+   - Phone specific (max-width: 600px)
+
+   ============================================ */
+
+/* ═══════════════════════════════════════════════════════════
+   PERFORMANCE CRITICAL: Drag & Zoom States
+   These apply ALWAYS, not just on tablet
+   ═══════════════════════════════════════════════════════════ */
+
+body.is-dragging-module .placed-module:not(.dragging),
+body.is-dragging-module .connection-group,
+body.pinch-zooming .placed-module,
+body.pinch-zooming .connection-group {
+    pointer-events: none !important;
+}
+
+body.is-dragging-module .connections-layer,
+body.pinch-zooming .connections-layer {
+    opacity: 0.5;
+    transition: none !important;
+}
+
+.placed-module.dragging {
+    z-index: 1000 !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+    transform: scale(1.02);
+    transition: none !important;
+}
+
+/* Disable ALL transitions during interactions for max performance */
+body.is-dragging-module *,
+body.pinch-zooming *,
+body.is-panning * {
+    transition: none !important;
+    animation: none !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   TABLET & TOUCH DETECTION
+   Targets: tablets, phones, and touch screens
+   ═══════════════════════════════════════════════════════════ */
+@media (pointer: coarse), (max-width: 1024px) {
+
+    /* === ROOT VARIABLES FOR TABLET === */
+    :root {
+        --tablet-header-height: 50px;
+        --tablet-sidebar-height: 50vh;
+        --tablet-right-panel-width: 280px;
+        --tablet-font-scale: 0.85;
+        /* Missing variables for tablet UI */
+        --surface: rgba(26, 61, 46, 0.95);
+        --surface-hover: rgba(36, 81, 60, 0.95);
+        --border: rgba(255, 255, 255, 0.15);
+    }
+
+    /* ───────────────────────────────────────
+       HIDE DESKTOP-ONLY ELEMENTS
+       ─────────────────────────────────────── */
+
+    /* Desktop zoom controls - HIDE (tablet has its own) */
+    .zoom-controls {
+        display: none !important;
+    }
+
+    /* Desktop keyboard shortcuts - HIDE */
+    .shortcut-hint {
+        display: none !important;
+    }
+
+    /* Desktop context menu - HIDE (tablet has its own) */
+    .context-menu:not(.tablet-context-menu) {
+        display: none !important;
+    }
+
+    /* Desktop tooltips - HIDE on touch */
+    .rich-tooltip,
+    .tooltip {
+        display: none !important;
+    }
+
+    /* Desktop viewport controls - HIDE */
+    .viewport-controls {
+        display: none !important;
+    }
+
+
+    /* ───────────────────────────────────────
+       HEADER - Compact & Touch-Friendly
+       ─────────────────────────────────────── */
+    .header {
+        height: var(--tablet-header-height);
+        padding: 8px 12px;
+        flex-wrap: nowrap;
+        gap: 8px;
+    }
+
+    .logo {
+        flex-shrink: 0;
+    }
+
+    .logo-text {
+        font-size: 14px;
+    }
+
+    .logo-text span {
+        display: none; /* Hide "Playground" text */
+    }
+
+    .header-actions {
+        gap: 6px;
+        flex-wrap: nowrap;
+    }
+
+    /* Preset selector - compact */
+    .preset-selector {
+        max-width: 120px;
+    }
+
+    .preset-selector select {
+        font-size: 11px;
+        padding: 6px 8px;
+        min-height: 36px;
+    }
+
+    .header-actions .btn {
+        padding: 8px 10px;
+        font-size: 11px;
+        min-height: 36px;
+        min-width: 36px;
+    }
+
+    /* Icon-only buttons on small tablets */
+    .header-actions .btn span:not(.icon-sm):not([data-lucide]) {
+        display: none;
+    }
+
+
+    /* ───────────────────────────────────────
+       MAIN LAYOUT - Full Screen Grid
+       ─────────────────────────────────────── */
+    .main-content {
+        display: grid;
+        grid-template-areas: "workspace";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        height: calc(100vh - var(--tablet-header-height));
+    }
+
+
+    /* ───────────────────────────────────────
+       SIDEBAR - Bottom Sheet (Swipeable)
+       IMPORTANT: Override styles from responsive.css
+       ─────────────────────────────────────── */
+    .sidebar {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        top: auto !important;
+        width: 100% !important;
+        height: auto !important;
+        max-height: var(--tablet-sidebar-height) !important;
+        min-height: 56px;
+        z-index: 1000;
+        border-radius: 16px 16px 0 0;
+        border-right: none !important;
+        border-top: none !important;
+        transform: translateY(calc(100% - 56px));
+        transition: transform 0.3s ease-out;
+        box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.4);
+        background: var(--bg-card);
+    }
+
+    .sidebar.expanded {
+        transform: translateY(0);
+    }
+
+    /* Drag handle indicator */
+    .sidebar::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 36px;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 2px;
+        z-index: 10;
+    }
+
+    .sidebar-header {
+        padding: 16px 16px 8px;
+        cursor: grab;
+        min-height: 56px;
+        display: flex;
+        align-items: center;
+    }
+
+    .sidebar-title {
+        font-size: 13px;
+    }
+
+    .sidebar-toggle-btn {
+        display: none;
+    }
+
+
+    /* ───────────────────────────────────────
+       DIMENSIONS LIST - Horizontal Scroll
+       ─────────────────────────────────────── */
+    .dimensions-list {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 10px;
+        padding: 8px 12px 16px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .dimensions-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .dimension-group {
+        flex: 0 0 240px;
+        scroll-snap-align: start;
+        max-height: calc(var(--tablet-sidebar-height) - 80px);
+        overflow-y: auto;
+    }
+
+    .dimension-group.collapsed .modules-list {
+        display: none;
+    }
+
+    .dimension-header {
+        padding: 10px;
+        min-height: 44px;
+        font-size: 12px;
+    }
+
+    .dimension-header svg {
+        width: 16px;
+        height: 16px;
+    }
+
+
+    /* ───────────────────────────────────────
+       MODULE ITEMS - Touch Optimized
+       ─────────────────────────────────────── */
+    .module-item {
+        padding: 10px 12px;
+        min-height: 52px;
+        margin-bottom: 6px;
+        touch-action: none;
+        font-size: calc(13px * var(--tablet-font-scale));
+    }
+
+    .module-item:active {
+        transform: scale(0.98);
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    .module-name {
+        font-size: 12px;
+    }
+
+    .module-desc {
+        font-size: 10px;
+        line-height: 1.3;
+    }
+
+
+    /* ───────────────────────────────────────
+       WORKSPACE - Full Screen
+       IMPORTANT: Override styles from responsive.css
+       ─────────────────────────────────────── */
+    .workspace {
+        position: fixed !important;
+        top: var(--tablet-header-height) !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 56px !important; /* Space for collapsed sidebar */
+    }
+
+    .workspace-grid {
+        background-size: 30px 30px; /* Smaller grid */
+    }
+
+
+    /* ───────────────────────────────────────
+       PLACED MODULES - Touch Targets
+       ─────────────────────────────────────── */
+    .placed-module {
+        min-width: 180px;
+        width: 180px;
+        min-height: 85px;
+        height: 85px;
+        padding: 10px 12px;
+        touch-action: none;
+        border-radius: 10px;
+    }
+
+    .placed-module-header {
+        gap: 8px;
+        margin-bottom: 4px;
+    }
+
+    .placed-module-emoji,
+    .placed-module-emoji svg {
+        width: 14px;
+        height: 14px;
+        font-size: 14px;
+    }
+
+    .placed-module-title {
+        font-size: 12px;
+    }
+
+    .placed-module-desc {
+        font-size: 9px;
+        line-height: 1.2;
+        max-height: 22px;
+    }
+
+    .placed-module-dimension {
+        font-size: 8px;
+        padding-top: 4px;
+        bottom: 8px;
+        left: 12px;
+        right: 12px;
+    }
+
+    .dimension-dot {
+        width: 6px;
+        height: 6px;
+    }
+
+
+    /* ───────────────────────────────────────
+       CONNECTION PORTS - Large Touch Targets
+       ─────────────────────────────────────── */
+    .port {
+        width: 24px !important;
+        height: 24px !important;
+        opacity: 0.7; /* More visible on touch */
+    }
+
+    .port-top {
+        top: -12px !important;
+    }
+
+    .port-bottom {
+        bottom: -12px !important;
+    }
+
+    .port-left {
+        left: -12px !important;
+    }
+
+    .port-right {
+        right: -12px !important;
+    }
+
+
+    /* ───────────────────────────────────────
+       CONNECTIONS - Thicker for visibility
+       ─────────────────────────────────────── */
+    .connection-path-visible {
+        stroke-width: 3px;
+    }
+
+    .connection-hit-area {
+        stroke-width: 28px;
+    }
+
+
+    /* ───────────────────────────────────────
+       RIGHT PANEL - Slide-in from right
+       IMPORTANT: Override display:none from right-panel.css
+       ─────────────────────────────────────── */
+    .right-panel {
+        display: flex !important; /* Override display:none at 768px */
+        position: fixed !important;
+        top: var(--tablet-header-height) !important;
+        right: 0 !important;
+        bottom: 56px !important;
+        left: auto !important;
+        width: var(--tablet-right-panel-width) !important;
+        height: auto !important;
+        transform: translateX(calc(100% - 40px)); /* Peek 40px */
+        transition: transform 0.3s ease;
+        z-index: 500;
+        overflow-y: auto;
+        background: var(--bg-darker);
+        border-left: 1px solid var(--border-subtle);
+        pointer-events: auto !important;
+    }
+
+    .right-panel.expanded {
+        transform: translateX(0);
+    }
+
+    /* Tab indicator for right panel - yellow handle to pull */
+    .right-panel::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -20px; /* Outside the panel */
+        transform: translateY(-50%);
+        width: 20px;
+        height: 60px;
+        background: var(--brand-yellow);
+        border-radius: 8px 0 0 8px;
+        opacity: 0.9;
+        cursor: pointer;
+        z-index: 10;
+        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Recommendations Panel */
+    .reco-panel {
+        position: relative;
+        width: 100%;
+        max-width: none;
+        border-radius: 0;
+        margin: 0;
+        padding: 12px;
+        font-size: 11px;
+    }
+
+    .reco-header-bar {
+        font-size: 11px;
+        padding: 8px 0;
+    }
+
+    .reco-title {
+        font-size: 11px;
+    }
+
+    .reco-list {
+        font-size: 10px;
+    }
+
+    .reco-item {
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    /* Narrative/Transformation Panel */
+    .narrative-panel {
+        position: relative;
+        width: 100%;
+        max-width: none;
+        border-radius: 0;
+        margin: 0;
+        padding: 12px;
+    }
+
+    .narrative-header {
+        padding: 8px 0;
+    }
+
+    .narrative-icon svg,
+    .narrative-icon [data-lucide] {
+        width: 18px;
+        height: 18px;
+    }
+
+    .narrative-title {
+        font-size: 13px;
+    }
+
+    .narrative-text {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    .narrative-bullets,
+    .narrative-synergies,
+    .narrative-values {
+        font-size: 10px;
+    }
+
+    .narrative-stats {
+        font-size: 10px;
+        padding: 8px 0;
+    }
+
+    .cta-audit {
+        padding: 10px 14px;
+        font-size: 11px;
+    }
+
+
+    /* ───────────────────────────────────────
+       INFO PANEL - Compact
+       IMPORTANT: Override responsive.css
+       ─────────────────────────────────────── */
+    .info-panel {
+        position: fixed !important;
+        bottom: 64px !important;
+        right: 8px !important;
+        left: auto !important;
+        padding: 6px 10px;
+        font-size: 10px;
+        z-index: 400;
+        background: rgba(26, 61, 46, 0.9);
+        border-radius: 8px;
+    }
+
+    .info-panel-title {
+        font-size: 9px;
+    }
+
+    .info-panel-stat {
+        font-size: 10px;
+    }
+
+
+    /* ───────────────────────────────────────
+       EMPTY STATE - Smaller
+       ─────────────────────────────────────── */
+    .empty-state {
+        padding: 20px;
+    }
+
+    .empty-state-icon {
+        width: 120px;
+        height: 90px;
+        margin-bottom: 16px;
+    }
+
+    .empty-state-icon svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .empty-state-title {
+        font-size: 16px;
+    }
+
+    .empty-state-desc {
+        font-size: 11px;
+        max-width: 280px;
+    }
+
+
+    /* ───────────────────────────────────────
+       TABLET UI COMPONENTS (from ui.js)
+       ─────────────────────────────────────── */
+
+    /* FAB - Floating Action Button */
+    .tablet-fab {
+        position: fixed;
+        bottom: 70px;
+        right: 12px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: var(--brand-yellow);
+        color: var(--brand-dark);
+        border: none;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .tablet-fab:active {
+        transform: scale(0.92);
+    }
+
+    .tablet-fab svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Zoom Controls - Vertical Stack */
+    .tablet-zoom-controls {
+        position: fixed;
+        bottom: 130px;
+        right: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        z-index: 998;
+    }
+
+    .tablet-zoom-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        color: var(--text-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .tablet-zoom-btn:active {
+        background: var(--surface-hover);
+        transform: scale(0.95);
+    }
+
+    .tablet-zoom-btn svg {
+        width: 18px;
+        height: 18px;
+        stroke: currentColor;
+    }
+
+    /* Quick Menu */
+    .tablet-quick-menu {
+        position: fixed;
+        bottom: 130px;
+        right: 12px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 8px;
+        display: none;
+        flex-direction: column;
+        gap: 6px;
+        z-index: 1001;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        max-height: 45vh;
+        overflow-y: auto;
+        width: 220px;
+    }
+
+    .tablet-quick-menu.visible {
+        display: flex;
+    }
+
+    .tablet-quick-menu-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 12px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        cursor: pointer;
+        min-height: 44px;
+        transition: background 0.15s;
+        font-size: 12px;
+    }
+
+    .tablet-quick-menu-item:active {
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    .tablet-quick-menu-item .icon {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Context Menu (Long Press) */
+    .tablet-context-menu {
+        position: fixed;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 6px;
+        z-index: 2000;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        display: none;
+    }
+
+    .tablet-context-menu.visible {
+        display: block;
+    }
+
+    .tablet-context-menu-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 14px;
+        border-radius: 6px;
+        cursor: pointer;
+        min-width: 150px;
+        font-size: 12px;
+        color: var(--text-primary);
+    }
+
+    .tablet-context-menu-item:active {
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    .tablet-context-menu-item.danger {
+        color: #ef4444;
+    }
+
+    .tablet-context-menu-item svg {
+        width: 16px;
+        height: 16px;
+        stroke: currentColor;
+    }
+
+    /* Connection Indicator */
+    .tablet-connection-indicator {
+        position: fixed;
+        top: calc(var(--tablet-header-height) + 10px);
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--brand-yellow);
+        color: var(--brand-dark);
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 12px;
+        z-index: 1002;
+        display: none;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .tablet-connection-indicator.visible {
+        display: flex;
+    }
+
+    .tablet-connection-indicator .cancel-btn {
+        background: rgba(0, 0, 0, 0.2);
+        border: none;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    /* Touch Feedback */
+    .tablet-touch-feedback {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgba(255, 200, 0, 0.25);
+        border: 2px solid var(--brand-yellow);
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%) scale(0);
+        animation: touchPulse 0.35s ease-out forwards;
+    }
+
+    @keyframes touchPulse {
+        0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
+        100% { transform: translate(-50%, -50%) scale(1.3); opacity: 0; }
+    }
+
+
+    /* ───────────────────────────────────────
+       MODALS - Touch Friendly
+       ─────────────────────────────────────── */
+    .confirm-modal-container {
+        width: 90vw;
+        max-width: 360px;
+        padding: 20px;
+    }
+
+    .confirm-modal-title {
+        font-size: 16px;
+    }
+
+    .confirm-modal-message {
+        font-size: 12px;
+    }
+
+    .confirm-modal-btn {
+        padding: 12px 20px;
+        font-size: 12px;
+        min-height: 44px;
+    }
+
+
+    /* ───────────────────────────────────────
+       TUTORIAL - Adjusted
+       ─────────────────────────────────────── */
+    .tuto-bubble {
+        max-width: 85vw;
+        font-size: 12px;
+        padding: 12px 16px;
+    }
+
+    .tuto-modal {
+        width: 90vw;
+        max-width: 360px;
+    }
+
+} /* End @media (pointer: coarse) */
+
+
+/* ═══════════════════════════════════════════════════════════
+   LANDSCAPE MODE - Tablets in horizontal orientation
+   ═══════════════════════════════════════════════════════════ */
+@media (pointer: coarse) and (orientation: landscape) {
+
+    :root {
+        --tablet-header-height: 44px;
+        --tablet-sidebar-height: 40vh;
+        --tablet-right-panel-width: 240px;
+    }
+
+    /* Header even more compact */
+    .header {
+        height: var(--tablet-header-height);
+        padding: 6px 10px;
+    }
+
+    .logo-text {
+        font-size: 13px;
+    }
+
+    /* Sidebar - smaller in landscape */
+    .sidebar {
+        max-height: var(--tablet-sidebar-height);
+        min-height: 50px;
+    }
+
+    .sidebar::before {
+        top: 6px;
+        width: 32px;
+        height: 3px;
+    }
+
+    .sidebar-header {
+        padding: 12px 12px 6px;
+        min-height: 50px;
+    }
+
+    .dimensions-list {
+        padding: 6px 10px 12px;
+        gap: 8px;
+    }
+
+    .dimension-group {
+        flex: 0 0 200px;
+        max-height: calc(var(--tablet-sidebar-height) - 70px);
+    }
+
+    /* Workspace uses more space */
+    .workspace {
+        bottom: 50px;
+    }
+
+    /* Right panel narrower */
+    .right-panel {
+        width: var(--tablet-right-panel-width);
+        bottom: 50px;
+    }
+
+    /* Modules slightly smaller */
+    .placed-module {
+        width: 160px;
+        min-width: 160px;
+        height: 75px;
+        min-height: 75px;
+        padding: 8px 10px;
+    }
+
+    .placed-module-title {
+        font-size: 11px;
+    }
+
+    .placed-module-desc {
+        font-size: 8px;
+        max-height: 18px;
+    }
+
+    /* Tablet UI - adjusted positions */
+    .tablet-fab {
+        bottom: 60px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .tablet-zoom-controls {
+        bottom: 115px;
+    }
+
+    .tablet-zoom-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .info-panel {
+        bottom: 58px;
+    }
+
+} /* End landscape */
+
+
+/* ═══════════════════════════════════════════════════════════
+   PORTRAIT MODE - Tablets in vertical orientation
+   ═══════════════════════════════════════════════════════════ */
+@media (pointer: coarse) and (orientation: portrait) {
+
+    :root {
+        --tablet-header-height: 50px;
+        --tablet-sidebar-height: 50vh;
+        --tablet-right-panel-width: 100%;
+    }
+
+    /* Sidebar takes more space in portrait */
+    .sidebar {
+        max-height: var(--tablet-sidebar-height);
+    }
+
+    /* Right panel - full width overlay in portrait (bottom sheet style) */
+    .right-panel {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        top: auto !important;
+        bottom: 56px !important;
+        height: 45vh !important;
+        transform: translateY(calc(100% - 50px));
+        border-left: none !important;
+        border-top: 1px solid var(--border-subtle);
+        border-radius: 16px 16px 0 0;
+        background: var(--bg-darker);
+    }
+
+    .right-panel.expanded {
+        transform: translateY(0);
+    }
+
+    /* Handle for right panel in portrait - horizontal bar at top */
+    .right-panel::before {
+        top: 8px !important;
+        left: 50% !important;
+        bottom: auto !important;
+        transform: translateX(-50%) !important;
+        width: 36px !important;
+        height: 4px !important;
+        border-radius: 2px !important;
+        box-shadow: none !important;
+    }
+
+    /* Panels stack vertically */
+    .reco-panel,
+    .narrative-panel {
+        padding: 10px 16px;
+    }
+
+    /* FAB moves to center-right */
+    .tablet-fab {
+        right: 16px;
+        bottom: 75px;
+    }
+
+    .tablet-zoom-controls {
+        right: 16px;
+        bottom: 135px;
+    }
+
+    /* Modules - good size for portrait */
+    .placed-module {
+        width: 170px;
+        min-width: 170px;
+        height: 80px;
+        min-height: 80px;
+    }
+
+} /* End portrait */
+
+
+/* ═══════════════════════════════════════════════════════════
+   PHONE SPECIFIC (< 600px width)
+   Extra compact for small screens
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 600px) {
+
+    :root {
+        --tablet-header-height: 44px;
+        --tablet-font-scale: 0.8;
+    }
+
+    /* Header ultra-compact */
+    .header {
+        height: var(--tablet-header-height);
+        padding: 6px 8px;
+        gap: 4px;
+    }
+
+    .logo-text {
+        font-size: 12px;
+    }
+
+    .preset-selector {
+        max-width: 90px;
+    }
+
+    .preset-selector select {
+        font-size: 10px;
+        padding: 4px 6px;
+        min-height: 32px;
+    }
+
+    .header-actions .btn {
+        padding: 6px 8px;
+        min-height: 32px;
+        min-width: 32px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        max-height: 55vh;
+        min-height: 48px;
+    }
+
+    .sidebar::before {
+        width: 28px;
+        height: 3px;
+    }
+
+    .sidebar-header {
+        min-height: 48px;
+        padding: 12px 10px 6px;
+    }
+
+    .sidebar-title {
+        font-size: 12px;
+    }
+
+    .dimensions-list {
+        padding: 6px 8px 12px;
+        gap: 6px;
+    }
+
+    .dimension-group {
+        flex: 0 0 180px;
+    }
+
+    .dimension-header {
+        padding: 8px;
+        min-height: 38px;
+        font-size: 11px;
+    }
+
+    .module-item {
+        padding: 8px 10px;
+        min-height: 44px;
+    }
+
+    .module-name {
+        font-size: 11px;
+    }
+
+    .module-desc {
+        font-size: 9px;
+    }
+
+    /* Workspace */
+    .workspace {
+        bottom: 48px;
+    }
+
+    .workspace-grid {
+        background-size: 25px 25px;
+    }
+
+    /* Placed modules - smallest */
+    .placed-module {
+        width: 150px;
+        min-width: 150px;
+        height: 70px;
+        min-height: 70px;
+        padding: 8px 10px;
+        border-radius: 8px;
+    }
+
+    .placed-module-emoji,
+    .placed-module-emoji svg {
+        width: 12px;
+        height: 12px;
+        font-size: 12px;
+    }
+
+    .placed-module-title {
+        font-size: 10px;
+    }
+
+    .placed-module-desc {
+        font-size: 8px;
+        max-height: 16px;
+    }
+
+    .placed-module-dimension {
+        font-size: 7px;
+        bottom: 6px;
+        left: 10px;
+        right: 10px;
+    }
+
+    /* Ports */
+    .port {
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    .port-top { top: -11px !important; }
+    .port-bottom { bottom: -11px !important; }
+    .port-left { left: -11px !important; }
+    .port-right { right: -11px !important; }
+
+    /* Right panel */
+    .right-panel {
+        height: 50vh;
+    }
+
+    .reco-panel,
+    .narrative-panel {
+        padding: 8px 12px;
+    }
+
+    .narrative-title {
+        font-size: 12px;
+    }
+
+    .narrative-text {
+        font-size: 10px;
+    }
+
+    /* Tablet UI */
+    .tablet-fab {
+        width: 42px;
+        height: 42px;
+        bottom: 60px;
+        right: 10px;
+    }
+
+    .tablet-fab svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .tablet-zoom-controls {
+        bottom: 110px;
+        right: 10px;
+        gap: 4px;
+    }
+
+    .tablet-zoom-btn {
+        width: 34px;
+        height: 34px;
+    }
+
+    .tablet-zoom-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .tablet-quick-menu {
+        width: 200px;
+        bottom: 110px;
+    }
+
+    .tablet-quick-menu-item {
+        padding: 8px 10px;
+        min-height: 40px;
+        font-size: 11px;
+    }
+
+    .tablet-context-menu-item {
+        padding: 8px 12px;
+        font-size: 11px;
+        min-width: 130px;
+    }
+
+    /* Info panel */
+    .info-panel {
+        bottom: 56px;
+        padding: 4px 8px;
+        font-size: 9px;
+    }
+
+    /* Empty state */
+    .empty-state-icon {
+        width: 100px;
+        height: 75px;
+    }
+
+    .empty-state-title {
+        font-size: 14px;
+    }
+
+    .empty-state-desc {
+        font-size: 10px;
+        max-width: 240px;
+    }
+
+    /* Modals */
+    .confirm-modal-container {
+        width: 92vw;
+        padding: 16px;
+    }
+
+    .confirm-modal-title {
+        font-size: 14px;
+    }
+
+    .confirm-modal-message {
+        font-size: 11px;
+    }
+
+    .confirm-modal-btn {
+        padding: 10px 16px;
+        font-size: 11px;
+        min-height: 40px;
+    }
+
+} /* End phone */
+
+
+/* ═══════════════════════════════════════════════════════════
+   VERY SMALL PHONES (< 400px)
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 400px) {
+
+    .header {
+        padding: 4px 6px;
+    }
+
+    .logo-text {
+        font-size: 11px;
+    }
+
+    .preset-selector {
+        display: none; /* Hide on very small screens */
+    }
+
+    .header-actions .btn {
+        padding: 5px 6px;
+        min-height: 30px;
+        min-width: 30px;
+    }
+
+    .dimension-group {
+        flex: 0 0 160px;
+    }
+
+    .placed-module {
+        width: 130px;
+        min-width: 130px;
+        height: 65px;
+        min-height: 65px;
+    }
+
+    .tablet-fab {
+        width: 38px;
+        height: 38px;
+    }
+
+    .tablet-zoom-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+} /* End very small phones */

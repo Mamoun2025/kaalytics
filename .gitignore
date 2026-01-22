@@ -1,0 +1,27 @@
+# Trash and temp files
+TRASH/
+TRASH-FILES.md
+*.tmp
+*.temp
+*.bak
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Node (if any)
+node_modules/
+npm-debug.log
+
+# Logs
+*.log
+
+# Session reports (dev only)
+RAPPORT-SESSION.md

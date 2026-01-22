@@ -1,0 +1,411 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Narrative Threads - Thematic story lines that weave through the transformation"
+  },
+
+  "threads": {
+    "visibility": {
+      "id": "visibility",
+      "name": "Visibilité & Transparence",
+      "icon": "👁️",
+      "color": "#3b82f6",
+      "description": "Voir clairement pour décider juste",
+      "keywords": ["voir", "visualiser", "temps réel", "tableau de bord", "carte", "monitoring", "tracking"],
+      "modules": [
+        "ops-map", "ops-fleet", "ops-kpi", "ops-field",
+        "intel-dashboards", "intel-cashflow",
+        "log-tracking", "log-inventory",
+        "mine-production", "mine-deposits",
+        "mfg-mes", "btp-sites"
+      ],
+      "introductions": [
+        "La visibilité est le premier pilier de votre transformation.",
+        "Voir clairement, c'est pouvoir agir justement.",
+        "L'ombre se dissipe, la clarté s'installe."
+      ],
+      "transitions": [
+        "Cette visibilité nouvelle permet de ",
+        "Avec cette transparence accrue, ",
+        "Désormais, rien n'échappe à votre regard. ",
+        "La clarté gagnée ouvre de nouvelles perspectives : "
+      ],
+      "strengthDescriptions": {
+        "1": "Un premier éclairage sur vos opérations.",
+        "2": "La visibilité s'étend à plusieurs domaines.",
+        "3": "Une vision panoramique commence à se former.",
+        "4": "La transparence devient un avantage compétitif.",
+        "5": "Vous voyez tout, en temps réel, partout."
+      }
+    },
+
+    "efficiency": {
+      "id": "efficiency",
+      "name": "Efficacité & Optimisation",
+      "icon": "⚡",
+      "color": "#f59e0b",
+      "description": "Faire plus avec moins, faire mieux plus vite",
+      "keywords": ["optimiser", "automatiser", "réduire", "accélérer", "fluidifier", "rationaliser"],
+      "modules": [
+        "ops-routes", "ops-scheduling", "ops-maintenance",
+        "log-picking", "log-wms", "log-crossdock",
+        "mfg-planning", "mfg-mrp",
+        "btp-planning", "btp-materials",
+        "ent-deploy", "growth-followup"
+      ],
+      "introductions": [
+        "L'efficacité n'est pas un objectif, c'est une culture.",
+        "Chaque processus peut être optimisé, chaque ressource mieux utilisée.",
+        "La performance opérationnelle devient votre signature."
+      ],
+      "transitions": [
+        "Cette efficacité se propage naturellement : ",
+        "L'optimisation s'étend maintenant à ",
+        "Chaque processus gagne en fluidité. ",
+        "La machine est huilée, prête pour "
+      ],
+      "strengthDescriptions": {
+        "1": "Les premiers gains d'efficacité apparaissent.",
+        "2": "L'optimisation touche plusieurs processus.",
+        "3": "Une culture de l'efficacité s'installe.",
+        "4": "Vos processus sont parmi les plus performants.",
+        "5": "L'excellence opérationnelle est atteinte."
+      }
+    },
+
+    "intelligence": {
+      "id": "intelligence",
+      "name": "Intelligence & Prédiction",
+      "icon": "🧠",
+      "color": "#8b5cf6",
+      "description": "Anticiper demain grâce aux données d'aujourd'hui",
+      "keywords": ["prédire", "anticiper", "IA", "machine learning", "analyse", "forecast", "détection"],
+      "modules": [
+        "intel-ml", "intel-forecast", "intel-alerts", "intel-margins",
+        "ops-maintenance", "ops-weather",
+        "growth-scoring", "growth-churn",
+        "log-forecast",
+        "sec-detect",
+        "engage-attribution", "engage-analytics"
+      ],
+      "introductions": [
+        "L'intelligence artificielle devient votre copilote.",
+        "Prédire n'est plus un luxe, c'est une nécessité.",
+        "Vos données racontent l'avenir à qui sait les écouter."
+      ],
+      "transitions": [
+        "L'intelligence artificielle renforce cette capacité. ",
+        "La prédiction s'affine encore avec ",
+        "Votre système apprend et anticipe : ",
+        "Les algorithmes détectent ce que l'œil humain manquerait. "
+      ],
+      "strengthDescriptions": {
+        "1": "Les premières prédictions guident vos décisions.",
+        "2": "L'IA commence à révéler des patterns cachés.",
+        "3": "L'anticipation devient un réflexe organisationnel.",
+        "4": "Vos prévisions atteignent une précision remarquable.",
+        "5": "L'intelligence prédictive est votre avantage décisif."
+      }
+    },
+
+    "integration": {
+      "id": "integration",
+      "name": "Intégration & Synergie",
+      "icon": "🔗",
+      "color": "#06b6d4",
+      "description": "Unifier pour amplifier",
+      "keywords": ["connecter", "unifier", "intégrer", "synchroniser", "centraliser", "harmoniser"],
+      "modules": [
+        "integ-universal", "integ-sync", "integ-api", "integ-etl",
+        "ent-erp", "ent-custom",
+        "intel-banks",
+        "log-wms"
+      ],
+      "introductions": [
+        "L'intégration transforme des outils isolés en écosystème.",
+        "Quand les systèmes communiquent, l'entreprise s'élève.",
+        "Les silos tombent, les synergies émergent."
+      ],
+      "transitions": [
+        "L'intégration se renforce avec ",
+        "Les systèmes communiquent désormais : ",
+        "Cette connexion ouvre de nouvelles possibilités. ",
+        "Le tissu digital se densifie : "
+      ],
+      "strengthDescriptions": {
+        "1": "Les premiers ponts sont construits entre systèmes.",
+        "2": "L'information commence à circuler librement.",
+        "3": "Un véritable écosystème intégré prend forme.",
+        "4": "Les synergies se multiplient exponentiellement.",
+        "5": "L'intégration totale : un système nerveux digital unifié."
+      }
+    },
+
+    "security": {
+      "id": "security",
+      "name": "Sécurité & Conformité",
+      "icon": "🛡️",
+      "color": "#ef4444",
+      "description": "Protéger pour pérenniser",
+      "keywords": ["protéger", "sécuriser", "conformité", "audit", "chiffrer", "contrôler"],
+      "modules": [
+        "sec-detect", "sec-response", "sec-compliance", "sec-audit",
+        "sec-access", "sec-encrypt", "sec-backup", "sec-pentest",
+        "mine-explosives", "mine-environment",
+        "btp-safety"
+      ],
+      "introductions": [
+        "La sécurité n'est pas une option, c'est un fondement.",
+        "Protéger aujourd'hui, c'est assurer demain.",
+        "La confiance se construit sur des bases sécurisées."
+      ],
+      "transitions": [
+        "La sécurité s'en trouve renforcée. ",
+        "Cette protection s'étend désormais à ",
+        "Votre conformité progresse : ",
+        "Le bouclier se renforce avec "
+      ],
+      "strengthDescriptions": {
+        "1": "Les premières protections sont en place.",
+        "2": "La sécurité couvre plusieurs périmètres.",
+        "3": "Une posture de sécurité mature se dessine.",
+        "4": "La protection est proactive et multicouche.",
+        "5": "Forteresse digitale : sécurité et conformité exemplaires."
+      }
+    },
+
+    "growth": {
+      "id": "growth",
+      "name": "Croissance & Relation Client",
+      "icon": "📈",
+      "color": "#10b981",
+      "description": "Conquérir et fidéliser",
+      "keywords": ["client", "vente", "croissance", "fidélisation", "acquisition", "conversion"],
+      "modules": [
+        "growth-crm", "growth-pipeline", "growth-whatsapp", "growth-insights",
+        "growth-scoring", "growth-followup", "growth-quotes", "growth-churn",
+        "engage-campaigns", "engage-email", "engage-social"
+      ],
+      "introductions": [
+        "La croissance commence par la connaissance client.",
+        "Chaque interaction devient une opportunité.",
+        "Votre relation client entre dans une nouvelle dimension."
+      ],
+      "transitions": [
+        "Votre croissance s'accélère avec ",
+        "La relation client se transforme : ",
+        "Chaque opportunité est maintenant ",
+        "Le pipeline commercial s'enrichit de "
+      ],
+      "strengthDescriptions": {
+        "1": "Les fondations de la croissance sont posées.",
+        "2": "La machine commerciale gagne en puissance.",
+        "3": "L'acquisition et la fidélisation sont systématisées.",
+        "4": "Votre croissance est prévisible et scalable.",
+        "5": "Excellence commerciale : croissance maîtrisée et pérenne."
+      }
+    },
+
+    "quality": {
+      "id": "quality",
+      "name": "Qualité & Excellence",
+      "icon": "✨",
+      "color": "#ec4899",
+      "description": "L'excellence comme standard",
+      "keywords": ["qualité", "contrôle", "excellence", "conformité", "standard", "certification"],
+      "modules": [
+        "mfg-quality", "mfg-traceability",
+        "mine-quality",
+        "btp-quality",
+        "log-tracking",
+        "sec-compliance"
+      ],
+      "introductions": [
+        "La qualité n'est pas un département, c'est une culture.",
+        "L'excellence se construit contrôle après contrôle.",
+        "Zéro défaut n'est pas un rêve, c'est une méthode."
+      ],
+      "transitions": [
+        "La qualité s'élève encore avec ",
+        "L'excellence s'étend à ",
+        "Chaque processus gagne en rigueur. ",
+        "Les standards s'élèvent : "
+      ],
+      "strengthDescriptions": {
+        "1": "Les premiers contrôles qualité sont en place.",
+        "2": "La qualité devient une préoccupation transverse.",
+        "3": "Une culture de l'excellence s'installe.",
+        "4": "Vos processus qualité sont exemplaires.",
+        "5": "L'excellence opérationnelle totale : zéro défaut en vue."
+      }
+    },
+
+    "agility": {
+      "id": "agility",
+      "name": "Agilité & Réactivité",
+      "icon": "🚀",
+      "color": "#f97316",
+      "description": "S'adapter plus vite que le changement",
+      "keywords": ["réactivité", "adaptation", "temps réel", "instantané", "automatique", "rapide"],
+      "modules": [
+        "sec-response", "ops-alerts",
+        "integ-sync",
+        "engage-ab",
+        "ent-deploy"
+      ],
+      "introductions": [
+        "L'agilité distingue les leaders des suiveurs.",
+        "Dans un monde qui change, la réactivité est reine.",
+        "Réagir en secondes quand les autres mettent des heures."
+      ],
+      "transitions": [
+        "Cette agilité nouvelle permet de ",
+        "La réactivité gagne encore avec ",
+        "Le temps de réponse se réduit : ",
+        "L'organisation devient plus agile grâce à "
+      ],
+      "strengthDescriptions": {
+        "1": "Les premiers réflexes automatiques sont en place.",
+        "2": "La réactivité s'améliore sur plusieurs fronts.",
+        "3": "L'agilité devient un avantage compétitif.",
+        "4": "Votre organisation réagit à la vitesse du digital.",
+        "5": "Agilité maximale : adaptation instantanée au changement."
+      }
+    }
+  },
+
+  "moduleThreadMapping": {
+    "_comment": "Maps each module to its contributing threads (primary, secondary)",
+
+    "ops-map": { "primary": "visibility", "secondary": ["integration"] },
+    "ops-routes": { "primary": "efficiency", "secondary": ["intelligence"] },
+    "ops-maintenance": { "primary": "intelligence", "secondary": ["efficiency"] },
+    "ops-inventory": { "primary": "visibility", "secondary": ["efficiency"] },
+    "ops-fleet": { "primary": "visibility", "secondary": ["efficiency"] },
+    "ops-scheduling": { "primary": "efficiency", "secondary": ["agility"] },
+    "ops-alerts": { "primary": "agility", "secondary": ["visibility"] },
+    "ops-kpi": { "primary": "visibility", "secondary": ["intelligence"] },
+    "ops-sites": { "primary": "visibility", "secondary": ["efficiency"] },
+    "ops-machines": { "primary": "efficiency", "secondary": ["visibility"] },
+    "ops-field": { "primary": "visibility", "secondary": ["quality"] },
+    "ops-weather": { "primary": "intelligence", "secondary": ["agility"] },
+
+    "growth-crm": { "primary": "growth", "secondary": ["visibility"] },
+    "growth-whatsapp": { "primary": "growth", "secondary": ["agility"] },
+    "growth-pipeline": { "primary": "growth", "secondary": ["visibility"] },
+    "growth-insights": { "primary": "growth", "secondary": ["intelligence"] },
+    "growth-scoring": { "primary": "intelligence", "secondary": ["growth"] },
+    "growth-followup": { "primary": "efficiency", "secondary": ["growth"] },
+    "growth-quotes": { "primary": "growth", "secondary": ["efficiency"] },
+    "growth-churn": { "primary": "intelligence", "secondary": ["growth"] },
+
+    "intel-banks": { "primary": "integration", "secondary": ["visibility"] },
+    "intel-ml": { "primary": "intelligence", "secondary": [] },
+    "intel-reports": { "primary": "visibility", "secondary": ["efficiency"] },
+    "intel-dashboards": { "primary": "visibility", "secondary": ["intelligence"] },
+    "intel-cashflow": { "primary": "visibility", "secondary": ["intelligence"] },
+    "intel-margins": { "primary": "intelligence", "secondary": ["visibility"] },
+    "intel-forecast": { "primary": "intelligence", "secondary": [] },
+    "intel-alerts": { "primary": "intelligence", "secondary": ["agility"] },
+
+    "engage-campaigns": { "primary": "growth", "secondary": ["intelligence"] },
+    "engage-content": { "primary": "growth", "secondary": ["efficiency"] },
+    "engage-budget": { "primary": "efficiency", "secondary": ["intelligence"] },
+    "engage-attribution": { "primary": "intelligence", "secondary": ["growth"] },
+    "engage-email": { "primary": "growth", "secondary": ["efficiency"] },
+    "engage-social": { "primary": "growth", "secondary": ["visibility"] },
+    "engage-ab": { "primary": "agility", "secondary": ["intelligence"] },
+    "engage-analytics": { "primary": "intelligence", "secondary": ["visibility"] },
+
+    "sec-detect": { "primary": "security", "secondary": ["intelligence"] },
+    "sec-response": { "primary": "agility", "secondary": ["security"] },
+    "sec-compliance": { "primary": "security", "secondary": ["quality"] },
+    "sec-audit": { "primary": "security", "secondary": ["visibility"] },
+    "sec-access": { "primary": "security", "secondary": [] },
+    "sec-encrypt": { "primary": "security", "secondary": [] },
+    "sec-backup": { "primary": "security", "secondary": ["agility"] },
+    "sec-pentest": { "primary": "security", "secondary": ["intelligence"] },
+
+    "integ-universal": { "primary": "integration", "secondary": [] },
+    "integ-sync": { "primary": "integration", "secondary": ["agility"] },
+    "integ-api": { "primary": "integration", "secondary": [] },
+    "integ-etl": { "primary": "integration", "secondary": ["intelligence"] },
+    "integ-iot": { "primary": "integration", "secondary": ["visibility"] },
+    "integ-legacy": { "primary": "integration", "secondary": [] },
+    "integ-queue": { "primary": "integration", "secondary": ["agility"] },
+    "integ-monitor": { "primary": "visibility", "secondary": ["integration"] },
+
+    "ent-erp": { "primary": "integration", "secondary": ["efficiency"] },
+    "ent-custom": { "primary": "efficiency", "secondary": ["integration"] },
+    "ent-deploy": { "primary": "agility", "secondary": ["efficiency"] },
+    "ent-support": { "primary": "quality", "secondary": ["agility"] },
+    "ent-hr": { "primary": "efficiency", "secondary": ["visibility"] },
+    "ent-purchase": { "primary": "efficiency", "secondary": ["visibility"] },
+    "ent-project": { "primary": "visibility", "secondary": ["efficiency"] },
+    "ent-docs": { "primary": "integration", "secondary": ["quality"] },
+
+    "brand-identity": { "primary": "quality", "secondary": ["growth"] },
+    "brand-web": { "primary": "growth", "secondary": ["visibility"] },
+    "brand-docs": { "primary": "quality", "secondary": ["efficiency"] },
+    "brand-system": { "primary": "quality", "secondary": ["efficiency"] },
+    "brand-ui": { "primary": "quality", "secondary": ["growth"] },
+    "brand-motion": { "primary": "growth", "secondary": ["quality"] },
+    "brand-print": { "primary": "quality", "secondary": ["growth"] },
+    "brand-social": { "primary": "growth", "secondary": ["visibility"] },
+
+    "btp-tenders": { "primary": "growth", "secondary": ["efficiency"] },
+    "btp-sites": { "primary": "visibility", "secondary": ["efficiency"] },
+    "btp-safety": { "primary": "security", "secondary": ["quality"] },
+    "btp-subcontract": { "primary": "efficiency", "secondary": ["quality"] },
+    "btp-situations": { "primary": "efficiency", "secondary": ["visibility"] },
+    "btp-planning": { "primary": "efficiency", "secondary": ["visibility"] },
+    "btp-materials": { "primary": "efficiency", "secondary": ["visibility"] },
+    "btp-quality": { "primary": "quality", "secondary": ["visibility"] },
+
+    "log-wms": { "primary": "efficiency", "secondary": ["integration"] },
+    "log-tms": { "primary": "efficiency", "secondary": ["visibility"] },
+    "log-tracking": { "primary": "visibility", "secondary": ["quality"] },
+    "log-picking": { "primary": "efficiency", "secondary": ["quality"] },
+    "log-returns": { "primary": "efficiency", "secondary": ["quality"] },
+    "log-inventory": { "primary": "visibility", "secondary": ["efficiency"] },
+    "log-crossdock": { "primary": "efficiency", "secondary": ["agility"] },
+    "log-forecast": { "primary": "intelligence", "secondary": ["efficiency"] },
+
+    "mine-deposits": { "primary": "visibility", "secondary": ["intelligence"] },
+    "mine-planning": { "primary": "efficiency", "secondary": ["visibility"] },
+    "mine-weighing": { "primary": "visibility", "secondary": ["efficiency"] },
+    "mine-quality": { "primary": "quality", "secondary": ["visibility"] },
+    "mine-environment": { "primary": "security", "secondary": ["quality"] },
+    "mine-explosives": { "primary": "security", "secondary": ["visibility"] },
+    "mine-production": { "primary": "visibility", "secondary": ["efficiency"] },
+    "mine-maintenance": { "primary": "efficiency", "secondary": ["intelligence"] },
+
+    "mfg-mes": { "primary": "visibility", "secondary": ["efficiency"] },
+    "mfg-planning": { "primary": "efficiency", "secondary": ["intelligence"] },
+    "mfg-mrp": { "primary": "efficiency", "secondary": ["intelligence"] },
+    "mfg-quality": { "primary": "quality", "secondary": ["visibility"] },
+    "mfg-traceability": { "primary": "quality", "secondary": ["visibility"] },
+    "mfg-maintenance": { "primary": "efficiency", "secondary": ["intelligence"] },
+    "mfg-bom": { "primary": "integration", "secondary": ["efficiency"] },
+    "mfg-costing": { "primary": "visibility", "secondary": ["intelligence"] }
+  },
+
+  "connectionThreadBoosts": {
+    "_comment": "When a connection is made, it can boost certain threads",
+    "crossDimension": {
+      "boost": "integration",
+      "amount": 2,
+      "narrative": "Cette connexion cross-dimension renforce l'intégration de votre écosystème."
+    },
+    "sameDimension": {
+      "boost": "efficiency",
+      "amount": 1,
+      "narrative": "Cette synergie interne amplifie l'efficacité du domaine."
+    },
+    "tripleConnection": {
+      "boost": "integration",
+      "amount": 3,
+      "narrative": "Ce triangle de connexions crée un noyau d'intégration puissant."
+    }
+  }
+}

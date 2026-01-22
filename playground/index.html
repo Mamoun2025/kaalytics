@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<!--
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                     KAALYTICS DIMENSIONS PLAYGROUND                       ║
+╠═══════════════════════════════════════════════════════════════════════════╣
+║  Interactive module architecture builder                                   ║
+║  - 8 Dimensions with 64 sub-modules                                       ║
+║  - Drag & drop modules to workspace                                       ║
+║  - 4-directional connection ports (top, bottom, left, right)              ║
+║  - Zoom & Pan navigation (mouse wheel, drag, pinch)                       ║
+║  - Visual flow connections with animations                                ║
+║                                                                           ║
+║  Adapted for Kaalytics - Emerald Theme                                    ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+-->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground | Kaalytics - Construisez votre Architecture Digitale</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Configurez votre architecture digitale sur mesure. Glissez-deposez des modules et visualisez les synergies.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <!-- Modular CSS -->
+    <link rel="stylesheet" href="css/dimensions-main.css">
+    <link rel="stylesheet" href="css/smart-connect.css">
+    <link rel="stylesheet" href="css/dimensions-tablet.css">
+    <link rel="stylesheet" href="css/dimensions-tutorial.css">
+
+    <!-- Custom Override for Kaalytics integration -->
+    <style>
+        /* Override body for full-page playground */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        /* Header Kaalytics style */
+        .header {
+            background: rgba(4, 10, 8, 0.95);
+            border-bottom: 1px solid rgba(16, 185, 129, 0.15);
+        }
+
+        .logo-text {
+            color: #ecfdf5;
+        }
+
+        .logo-text span {
+            color: #10b981;
+        }
+
+        /* Sidebar improvements */
+        .sidebar {
+            background: rgba(10, 20, 18, 0.97);
+            border-right: 1px solid rgba(16, 185, 129, 0.15);
+        }
+
+        /* Empty state emerald theme */
+        .empty-state-icon svg rect[fill="var(--brand-yellow)"] {
+            fill: var(--emerald);
+        }
+
+        .empty-state-icon svg path[stroke="var(--brand-yellow)"] {
+            stroke: var(--emerald);
+        }
+
+        /* Module colors */
+        .module-item:hover {
+            border-color: rgba(16, 185, 129, 0.4);
+            background: rgba(16, 185, 129, 0.08);
+        }
+
+        /* CTA Button */
+        .cta-audit {
+            background: linear-gradient(135deg, #047857 0%, #10b981 50%, #34d399 100%);
+        }
+
+        .cta-audit:hover {
+            box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4);
+        }
+
+        /* Connections emerald */
+        .connection-line {
+            stroke: var(--emerald);
+        }
+
+        /* Back to site link */
+        .back-to-site {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            background: rgba(10, 20, 18, 0.95);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 8px;
+            color: #a7f3d0;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.25s ease;
+        }
+
+        .back-to-site:hover {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: rgba(16, 185, 129, 0.5);
+            color: #10b981;
+        }
+
+        .back-to-site svg {
+            width: 16px;
+            height: 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ═══════════════════════════════════════════
+         HEADER
+         ═══════════════════════════════════════════ -->
+    <header class="header">
+        <div class="logo">
+            <a href="../index.html" style="text-decoration: none;">
+                <div class="logo-text">Kaalytics <span>Playground</span></div>
+            </a>
+        </div>
+        <div class="header-actions">
+            <!-- Preset Selector -->
+            <div class="preset-selector" id="presetSelector"></div>
+
+            <button class="btn btn-outline" id="clearBtn" title="Effacer l'espace">
+                <i data-lucide="trash-2" class="icon-sm"></i>
+                Effacer
+            </button>
+            <button class="btn btn-primary" id="exportBtn" title="Exporter la configuration">
+                <i data-lucide="download" class="icon-sm"></i>
+                Exporter
+            </button>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════
+         SIDEBAR - Dimensions & Modules
+         ═══════════════════════════════════════════ -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-title">Chargement...</div>
+        </div>
+    </aside>
+
+    <!-- ═══════════════════════════════════════════
+         WORKSPACE - Zoomable/Pannable Canvas
+         ═══════════════════════════════════════════ -->
+    <main class="workspace" id="workspace">
+        <!-- Grid background (fixed) -->
+        <div class="workspace-grid"></div>
+
+        <!-- Transformable canvas container -->
+        <div class="canvas-container" id="canvasContainer">
+            <!-- SVG layer for connections -->
+            <svg class="connections-layer" id="connectionsLayer"></svg>
+        </div>
+
+        <!-- Empty state (fixed position) -->
+        <div class="empty-state" id="emptyState">
+            <div class="empty-state-icon">
+                <svg viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Connection lines -->
+                    <path d="M35 25 L60 50" stroke="var(--emerald)" stroke-width="2" stroke-dasharray="4 2" opacity="0.6"/>
+                    <path d="M85 25 L60 50" stroke="var(--emerald)" stroke-width="2" stroke-dasharray="4 2" opacity="0.6"/>
+                    <path d="M60 50 L35 75" stroke="var(--emerald)" stroke-width="2" stroke-dasharray="4 2" opacity="0.6"/>
+                    <path d="M60 50 L85 75" stroke="var(--emerald)" stroke-width="2" stroke-dasharray="4 2" opacity="0.6"/>
+
+                    <!-- Top left module -->
+                    <rect x="15" y="10" width="40" height="30" rx="6" fill="#0f1c1a" stroke="var(--emerald)" stroke-width="1.5"/>
+                    <rect x="22" y="17" width="12" height="3" rx="1.5" fill="var(--emerald)" opacity="0.8"/>
+                    <rect x="22" y="23" width="20" height="2" rx="1" fill="var(--emerald)" opacity="0.4"/>
+                    <rect x="22" y="28" width="16" height="2" rx="1" fill="var(--emerald)" opacity="0.4"/>
+
+                    <!-- Top right module -->
+                    <rect x="65" y="10" width="40" height="30" rx="6" fill="#0f1c1a" stroke="var(--emerald)" stroke-width="1.5"/>
+                    <rect x="72" y="17" width="12" height="3" rx="1.5" fill="var(--emerald)" opacity="0.8"/>
+                    <rect x="72" y="23" width="20" height="2" rx="1" fill="var(--emerald)" opacity="0.4"/>
+                    <rect x="72" y="28" width="16" height="2" rx="1" fill="var(--emerald)" opacity="0.4"/>
+
+                    <!-- Center module (main) -->
+                    <rect x="40" y="40" width="40" height="30" rx="6" fill="var(--emerald)" stroke="#0f1c1a" stroke-width="2"/>
+                    <rect x="47" y="47" width="14" height="4" rx="2" fill="#0f1c1a" opacity="0.9"/>
+                    <rect x="47" y="54" width="22" height="2" rx="1" fill="#0f1c1a" opacity="0.5"/>
+                    <rect x="47" y="59" width="18" height="2" rx="1" fill="#0f1c1a" opacity="0.5"/>
+
+                    <!-- Bottom left module -->
+                    <rect x="15" y="60" width="40" height="30" rx="6" fill="#0f1c1a" stroke="var(--emerald)" stroke-width="1.5"/>
+                    <rect x="22" y="67" width="12" height="3" rx="1.5" fill="var(--emerald)" opacity="0.8"/>
+                    <rect x="22" y="73" width="20" height="2" rx="1" fill="var(--emerald)" opacity="0.4"/>
+                    <rect x="22" y="78" width="16" height="2" rx="1" fill="var(--emerald)" opacity="0.4"/>
+
+                    <!-- Bottom right module -->
+                    <rect x="65" y="60" width="40" height="30" rx="6" fill="#0f1c1a" stroke="var(--emerald)" stroke-width="1.5"/>
+                    <rect x="72" y="67" width="12" height="3" rx="1.5" fill="var(--emerald)" opacity="0.8"/>
+                    <rect x="72" y="73" width="20" height="2" rx="1" fill="var(--emerald)" opacity="0.4"/>
+                    <rect x="72" y="78" width="16" height="2" rx="1" fill="var(--emerald)" opacity="0.4"/>
+
+                    <!-- Connection dots -->
+                    <circle cx="35" cy="40" r="3" fill="var(--emerald)"/>
+                    <circle cx="85" cy="40" r="3" fill="var(--emerald)"/>
+                    <circle cx="35" cy="60" r="3" fill="var(--emerald)"/>
+                    <circle cx="85" cy="60" r="3" fill="var(--emerald)"/>
+                    <circle cx="60" cy="40" r="3" fill="#0f1c1a"/>
+                    <circle cx="60" cy="70" r="3" fill="#0f1c1a"/>
+                </svg>
+            </div>
+            <div class="empty-state-title">Construisez votre Architecture</div>
+            <div class="empty-state-desc">
+                Glissez des modules depuis la barre laterale et connectez-les pour creer votre systeme
+            </div>
+        </div>
+    </main>
+
+    <!-- ═══════════════════════════════════════════
+         RIGHT PANEL - Vertical Strip
+         ═══════════════════════════════════════════ -->
+    <div class="right-panel" id="rightPanel">
+        <!-- RECOMMENDATIONS (top) -->
+        <div class="reco-panel" id="recoPanel">
+            <div class="reco-header-bar">
+                <span class="reco-title"><i data-lucide="lightbulb" class="icon-sm"></i> Recommandations</span>
+                <span class="reco-vision"></span>
+            </div>
+            <div class="reco-list"></div>
+        </div>
+
+        <!-- NARRATIVE / TRANSFORMATION (bottom) -->
+        <div class="narrative-panel" id="narrativePanel">
+            <div class="narrative-header">
+                <div class="narrative-icon"><i data-lucide="sparkles" class="icon-md"></i></div>
+                <div class="narrative-title">Votre Transformation</div>
+            </div>
+            <div class="narrative-scrollable">
+                <div class="narrative-content">
+                    <div class="narrative-text">Chaque entreprise qui domine son marche a un secret : une architecture digitale coherente. Construisez la votre.</div>
+                </div>
+                <div class="narrative-bullets"></div>
+                <div class="narrative-synergies"></div>
+                <div class="narrative-values"></div>
+            </div>
+            <div class="narrative-stats">
+                <span class="stat"><strong id="narrativeModules">0</strong> modules</span>
+                <span class="stat-sep">•</span>
+                <span class="stat"><strong id="narrativeConnections">0</strong> synergies</span>
+            </div>
+            <button class="cta-audit" id="ctaAudit">
+                <span class="cta-audit-icon"><i data-lucide="scan-search" class="icon-md"></i></span>
+                <span class="cta-audit-text">Demander un audit personnalise</span>
+                <span class="cta-audit-arrow"><i data-lucide="arrow-right" class="icon-sm"></i></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         INFO PANEL (compact)
+         ═══════════════════════════════════════════ -->
+    <div class="info-panel" id="infoPanel">
+        <div class="info-panel-title">Configuration</div>
+        <div class="info-panel-stat">
+            <span class="label">Modules</span>
+            <span class="value" id="moduleCount">0</span>
+        </div>
+        <div class="info-panel-stat">
+            <span class="label">Connexions</span>
+            <span class="value" id="connectionCount">0</span>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         SHORTCUT HINTS
+         ═══════════════════════════════════════════ -->
+    <div class="shortcut-hint">
+        <span><kbd>←↑↓→</kbd> Naviguer</span>
+        <span><kbd>D</kbd> Dimensions</span>
+        <span><kbd>P</kbd> Panneaux</span>
+        <span><kbd>Space</kbd> Focus</span>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         CONTEXT MENU
+         ═══════════════════════════════════════════ -->
+    <div class="context-menu" id="contextMenu">
+        <div class="context-menu-item" data-action="duplicate">
+            <i data-lucide="copy" class="icon-sm"></i>
+            Dupliquer
+        </div>
+        <div class="context-menu-separator"></div>
+        <div class="context-menu-item danger" data-action="delete">
+            <i data-lucide="trash-2" class="icon-sm"></i>
+            Supprimer
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         TOOLTIP
+         ═══════════════════════════════════════════ -->
+    <div class="tooltip" id="tooltip"></div>
+
+    <!-- ═══════════════════════════════════════════
+         CONFIRM MODAL
+         ═══════════════════════════════════════════ -->
+    <div class="confirm-modal" id="confirmModal">
+        <div class="confirm-modal-backdrop"></div>
+        <div class="confirm-modal-container">
+            <div class="confirm-modal-icon">
+                <i data-lucide="trash-2" class="icon-xl"></i>
+            </div>
+            <div class="confirm-modal-content">
+                <h3 class="confirm-modal-title">Effacer l'espace de travail ?</h3>
+                <p class="confirm-modal-message">Tous les modules et connexions seront supprimes. Cette action est irreversible.</p>
+            </div>
+            <div class="confirm-modal-actions">
+                <button class="confirm-modal-btn confirm-modal-btn-cancel" id="confirmCancel">
+                    <i data-lucide="x" class="icon-sm"></i>
+                    Annuler
+                </button>
+                <button class="confirm-modal-btn confirm-modal-btn-confirm" id="confirmOk">
+                    <i data-lucide="trash-2" class="icon-sm"></i>
+                    Effacer tout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         BACK TO SITE LINK
+         ═══════════════════════════════════════════ -->
+    <a href="../index.html" class="back-to-site">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 19-7-7 7-7"/><path d="M19 12H5"/>
+        </svg>
+        Retour au site
+    </a>
+
+    <!-- ═══════════════════════════════════════════
+         MODULAR JAVASCRIPT
+         ═══════════════════════════════════════════ -->
+    <script src="js/heroicons.js"></script>
+    <script src="js/dimensions-data.js"></script>
+    <script src="js/dimensions-audio.js"></script>
+    <script src="js/dimensions-sidebar.js"></script>
+    <script src="js/dimensions-workspace.js"></script>
+    <script src="js/dimensions-connections.js"></script>
+    <script src="js/dimensions-viewport.js"></script>
+
+    <!-- Semantic Content Loader -->
+    <script src="js/semantic-loader.js"></script>
+
+    <!-- Story Engine -->
+    <script src="js/story-memory.js"></script>
+    <script src="js/story-builder.js"></script>
+
+    <script src="js/dimensions-narrative.js"></script>
+    <script src="js/dimensions-recommendations.js"></script>
+    <script src="js/dimensions-presets.js"></script>
+    <script src="js/dimensions-audit-modal.js"></script>
+    <script src="js/dimensions-evolution.js"></script>
+
+    <!-- Tooltip Manager -->
+    <script src="js/tooltip-manager/state-detector.js"></script>
+    <script src="js/tooltip-manager/controller.js"></script>
+    <script src="js/tooltip-manager/index.js"></script>
+
+    <script src="js/dimensions-tooltips.js"></script>
+    <script src="js/dimensions-report.js"></script>
+
+    <!-- Unified Semantic Engine -->
+    <script src="js/semantic/index.js"></script>
+
+    <!-- Smart Connect System -->
+    <script src="js/smart-connect/sounds.js"></script>
+    <script src="js/smart-connect/state.js"></script>
+    <script src="js/smart-connect/ui.js"></script>
+    <script src="js/smart-connect/semantic-engine.js"></script>
+    <script src="js/smart-connect/layout-optimizer.js"></script>
+    <script src="js/smart-connect/collision-detector.js"></script>
+    <script src="js/smart-connect/index.js"></script>
+
+    <!-- Tutorial System -->
+    <script src="js/dimensions-tutorial/sounds.js"></script>
+    <script src="js/dimensions-tutorial/steps.js"></script>
+    <script src="js/dimensions-tutorial/overlay.js"></script>
+    <script src="js/dimensions-tutorial/confetti.js"></script>
+    <script src="js/dimensions-tutorial/ui.js"></script>
+    <script src="js/dimensions-tutorial/wait-handlers.js"></script>
+    <script src="js/dimensions-tutorial/index.js"></script>
+
+    <!-- Tablet Mode -->
+    <script src="js/tablet-mode/device-detector.js"></script>
+    <script src="js/tablet-mode/gestures.js"></script>
+    <script src="js/tablet-mode/ui.js"></script>
+    <script src="js/tablet-mode/index.js"></script>
+
+    <!-- Main initialization -->
+    <script>
+        (async function() {
+            'use strict';
+
+            // Initialize data first
+            await DimensionsData.init();
+
+            // Initialize audio (subtle sounds)
+            DimensionsAudio.init();
+
+            // Initialize UI modules
+            DimensionsSidebar.init('#sidebar');
+            DimensionsWorkspace.init('#workspace');
+            DimensionsConnections.init('#connectionsLayer');
+            DimensionsViewport.init('#workspace', '#canvasContainer');
+
+            // Initialize Story Engine
+            if (typeof StoryMemory !== 'undefined') {
+                StoryMemory.init();
+            }
+            if (typeof StoryBuilder !== 'undefined') {
+                await StoryBuilder.init();
+            }
+
+            await DimensionsNarrative.init('#narrativePanel');
+            await DimensionsRecommendations.init('#recoPanel');
+            await DimensionsPresets.init('presetSelector');
+            DimensionsAuditModal.init();
+            await SmartConnect.init();
+
+            // Setup header buttons
+            setupHeaderButtons();
+
+            // Setup context menu
+            setupContextMenu();
+
+            // Initialize Lucide icons
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
+            // Log stats
+            const dims = DimensionsData.getDimensions();
+            const moduleCount = dims.reduce((sum, d) => sum + d.modules.length, 0);
+            console.log(`🎨 Kaalytics Playground initialized`);
+            console.log(`   ${dims.length} dimensions, ${moduleCount} modules available`);
+
+            // Initialize Tutorial (shows on first visit)
+            DimensionsTutorial.init();
+        })();
+
+        // Header button handlers
+        function setupHeaderButtons() {
+            document.getElementById('clearBtn').addEventListener('click', () => {
+                if (DimensionsData.getStats().moduleCount === 0) return;
+                showConfirmModal();
+            });
+
+            setupConfirmModal();
+
+            document.getElementById('exportBtn').addEventListener('click', () => {
+                const stats = DimensionsData.getStats();
+                if (stats.moduleCount === 0) {
+                    alert('Ajoutez des modules d\'abord !');
+                    return;
+                }
+
+                const modules = DimensionsData.getPlacedModules();
+                const connections = DimensionsConnections.getConnectionsInfo();
+
+                let output = '╔═══════════════════════════════════════════╗\n';
+                output += '║       Export Architecture Kaalytics        ║\n';
+                output += '╠═══════════════════════════════════════════╣\n\n';
+
+                output += `📦 MODULES (${stats.moduleCount})\n`;
+                output += '─'.repeat(40) + '\n';
+
+                const byDimension = {};
+                modules.forEach(m => {
+                    const dimId = m.dimension.id;
+                    if (!byDimension[dimId]) {
+                        byDimension[dimId] = {
+                            title: m.dimension.title,
+                            emoji: m.dimension.emoji,
+                            modules: []
+                        };
+                    }
+                    byDimension[dimId].modules.push(m.name);
+                });
+
+                Object.values(byDimension).forEach(dim => {
+                    output += `\n${dim.emoji} ${dim.title}\n`;
+                    dim.modules.forEach(name => {
+                        output += `   • ${name}\n`;
+                    });
+                });
+
+                if (connections.length > 0) {
+                    output += `\n\n🔗 CONNEXIONS (${connections.length})\n`;
+                    output += '─'.repeat(40) + '\n';
+                    connections.forEach(c => {
+                        output += `   ${c.from} → ${c.to}\n`;
+                    });
+                }
+
+                output += '\n\n╚═══════════════════════════════════════════╝';
+                alert(output);
+                console.log('Export JSON:', DimensionsData.exportConfig());
+            });
+        }
+
+        function setupContextMenu() {
+            const contextMenu = document.getElementById('contextMenu');
+            let targetModuleId = null;
+
+            document.addEventListener('contextmenu', (e) => {
+                const module = e.target.closest('.placed-module');
+                if (!module) {
+                    contextMenu.classList.remove('visible');
+                    return;
+                }
+
+                e.preventDefault();
+                targetModuleId = module.id;
+
+                contextMenu.style.left = `${e.clientX}px`;
+                contextMenu.style.top = `${e.clientY}px`;
+                contextMenu.classList.add('visible');
+            });
+
+            document.addEventListener('click', () => {
+                contextMenu.classList.remove('visible');
+            });
+
+            contextMenu.addEventListener('click', (e) => {
+                const item = e.target.closest('.context-menu-item');
+                if (!item || !targetModuleId) return;
+
+                const action = item.dataset.action;
+
+                if (action === 'delete') {
+                    DimensionsData.removePlacedModule(targetModuleId);
+                }
+
+                if (action === 'duplicate') {
+                    const module = DimensionsData.getPlacedModule(targetModuleId);
+                    if (module) {
+                        DimensionsWorkspace.createModule(
+                            module.templateId,
+                            module.x + 40,
+                            module.y + 40
+                        );
+                    }
+                }
+
+                contextMenu.classList.remove('visible');
+                targetModuleId = null;
+            });
+        }
+
+        function setupConfirmModal() {
+            const modal = document.getElementById('confirmModal');
+            const backdrop = modal.querySelector('.confirm-modal-backdrop');
+            const cancelBtn = document.getElementById('confirmCancel');
+            const confirmBtn = document.getElementById('confirmOk');
+
+            backdrop.addEventListener('click', hideConfirmModal);
+            cancelBtn.addEventListener('click', hideConfirmModal);
+
+            confirmBtn.addEventListener('click', () => {
+                if (typeof DimensionsAudio !== 'undefined') {
+                    DimensionsAudio.playClear();
+                }
+                DimensionsData.clearAll();
+                document.querySelectorAll('.placed-module').forEach(el => el.remove());
+                document.getElementById('connectionsLayer').innerHTML = '';
+                DimensionsWorkspace.updateUI();
+                DimensionsViewport.reset();
+                if (DimensionsPresets.clearPresetFlag) DimensionsPresets.clearPresetFlag();
+                hideConfirmModal();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('open')) {
+                    hideConfirmModal();
+                }
+            });
+        }
+
+        function showConfirmModal() {
+            const modal = document.getElementById('confirmModal');
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideConfirmModal() {
+            const modal = document.getElementById('confirmModal');
+            modal.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+    </script>
+
+    <!-- Unit Tests (dev only) -->
+    <script src="js/tests/semantic-tests.js"></script>
+</body>
+</html>

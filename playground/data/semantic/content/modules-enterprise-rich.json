@@ -1,0 +1,105 @@
+{
+  "_meta": {
+    "version": "3.0",
+    "dimension": "enterprise",
+    "description": "Contenu sémantique ULTRA-RICHE pour la dimension Gestion d'Entreprise"
+  },
+
+  "modules": {
+    "ent-erp": {
+      "name": "ERP Complet",
+      "tagline": "Tous les processus en harmonie",
+      "description_short": "Système de gestion intégré couvrant tous les processus métier de l'entreprise.",
+      "description_full": "L'ERP Complet est le cœur battant de votre entreprise, unifiant tous les processus métier dans un système cohérent. Comptabilité, gestion commerciale, stocks, achats, production, ressources humaines : tout est intégré et interconnecté. Une vente déclenche automatiquement la préparation, la livraison, la facturation et la mise à jour comptable. Les décisions se prennent sur des données unifiées et fiables. Les silos départementaux disparaissent au profit d'une vision transversale. L'entreprise fonctionne comme un organisme intégré plutôt qu'une collection de services isolés.",
+      "transformation_story": {
+        "intro": "Vous disposez d'un système nerveux central pour votre entreprise. Tous les processus s'enchaînent naturellement, les données circulent librement, les décisions s'appuient sur une vue consolidée. L'ère des systèmes fragmentés est révolue.",
+        "deep_narrative": "L'ERP Complet transforme fondamentalement votre fonctionnement. Les tâches manuelles de ressaisie disparaissent. Les erreurs de transmission entre services s'éliminent. Les clôtures comptables s'accélèrent. Le pilotage devient possible car les données sont fiables et à jour. L'entreprise gagne en efficacité et en maîtrise.",
+        "business_impact": "L'impact organisationnel est majeur : réduction de 40% des coûts administratifs, accélération de 30% des cycles de clôture, et visibilité temps réel sur tous les aspects de l'activité."
+      }
+    },
+
+    "ent-custom": {
+      "name": "Modules Sur-Mesure",
+      "tagline": "Construits juste pour vous",
+      "description_short": "Développement de modules métier spécifiques adaptés à vos processus uniques.",
+      "description_full": "Les Modules Sur-Mesure étendent l'ERP standard avec des fonctionnalités développées spécifiquement pour vos besoins métier. Vos processus uniques, vos règles spécifiques, vos calculs propriétaires : tout peut être implémenté sans compromis. Ces modules s'intègrent parfaitement à l'ERP standard, bénéficiant de ses fondations solides tout en ajoutant exactement les capacités dont vous avez besoin. Votre système n'est plus un compromis entre vos besoins et les fonctionnalités disponibles.",
+      "transformation_story": {
+        "intro": "Votre système ne vous impose plus de compromis. Les processus qui font votre différenciation sont implémentés exactement comme vous le souhaitez. Le logiciel s'adapte à votre entreprise, pas l'inverse.",
+        "deep_narrative": "Les Modules Sur-Mesure transforment votre ERP en avantage compétitif. Les workflows spécifiques sont automatisés. Les calculs propriétaires sont intégrés. Les interfaces métier sont optimisées pour vos utilisateurs. Votre savoir-faire est encapsulé dans le système.",
+        "business_impact": "L'impact sur l'efficacité est significatif : automatisation de vos processus différenciants, préservation de votre avantage compétitif dans le système, et satisfaction utilisateur grâce à des outils parfaitement adaptés."
+      }
+    },
+
+    "ent-deploy": {
+      "name": "Déploiement Rapide",
+      "tagline": "En semaines, pas en années",
+      "description_short": "Mise en production accélérée avec méthodologie agile et templates sectoriels.",
+      "description_full": "Le module Déploiement Rapide révolutionne l'implémentation ERP. Une méthodologie agile combinée à des templates sectoriels pré-configurés permet d'être opérationnel en semaines plutôt qu'en mois ou années. Le paramétrage s'appuie sur les bonnes pratiques de votre secteur. La formation est intégrée au déploiement. Les utilisateurs adoptent le système progressivement avec un accompagnement continu. Le risque du projet big bang est éliminé au profit d'une montée en puissance maîtrisée.",
+      "transformation_story": {
+        "intro": "Votre transformation digitale prend de la vitesse. Plus de projets ERP qui s'éternisent pendant des années. Une mise en production rapide qui délivre de la valeur vite tout en minimisant les risques.",
+        "deep_narrative": "Le Déploiement Rapide change l'équation du projet ERP. Les templates sectoriels accélèrent le paramétrage. L'agilité permet des ajustements en cours de route. L'adoption utilisateur est gérée dès le début. Le ROI est atteint plus vite car la mise en production est rapide.",
+        "business_impact": "Les bénéfices sont concrets : réduction de 60% du temps de déploiement, minimisation du risque projet, et retour sur investissement accéléré grâce à une mise en production précoce."
+      }
+    },
+
+    "ent-support": {
+      "name": "Support Expert",
+      "tagline": "Équipe dédiée 24/7",
+      "description_short": "Assistance technique et fonctionnelle par des experts qui connaissent votre configuration.",
+      "description_full": "Le Support Expert vous garantit une assistance de qualité par des professionnels qui connaissent votre système et votre métier. Une équipe dédiée plutôt qu'un call center anonyme. Des temps de réponse garantis adaptés à la criticité. Un suivi personnalisé de vos demandes. Des experts techniques et fonctionnels disponibles pour vous accompagner au quotidien. Votre système est maintenu, optimisé et évolue avec votre entreprise grâce à un partenariat sur le long terme.",
+      "transformation_story": {
+        "intro": "Vous n'êtes jamais seul face à votre système. Une équipe d'experts qui connaît votre configuration est là pour vous accompagner. Les problèmes sont résolus vite, les évolutions sont accompagnées.",
+        "deep_narrative": "Le Support Expert transforme la relation avec votre éditeur en partenariat. Les incidents sont résolus rapidement par des experts, pas des scripts. Les évolutions sont conseillées par des professionnels qui comprennent votre métier. Le système s'améliore continuellement grâce à un accompagnement proactif.",
+        "business_impact": "L'impact sur la continuité opérationnelle est majeur : temps de résolution des incidents divisé par 3, satisfaction utilisateur améliorée, et évolution continue du système guidée par des experts."
+      }
+    },
+
+    "ent-hr": {
+      "name": "Gestion RH",
+      "tagline": "Le cycle de vie employé maîtrisé",
+      "description_short": "Gestion complète des ressources humaines : recrutement, administration, paie, formation.",
+      "description_full": "Le module Gestion RH couvre l'intégralité du cycle de vie de vos collaborateurs. Du recrutement à l'onboarding, de l'administration quotidienne à la gestion des compétences, de la paie aux formations : tout est géré dans un système unifié. Les contrats sont générés automatiquement. Les congés sont suivis et validés digitalement. La paie est calculée et versée sans erreur. Les entretiens annuels sont documentés. Les formations sont planifiées et suivies. Le parcours de chaque collaborateur est traçable et optimisable.",
+      "transformation_story": {
+        "intro": "Vos ressources humaines passent de l'administration à la stratégie. Les tâches répétitives sont automatisées. Les managers disposent d'outils de pilotage. Les collaborateurs ont une visibilité sur leur parcours.",
+        "deep_narrative": "La Gestion RH transforme la fonction ressources humaines. Le temps administratif chute drastiquement. Les erreurs de paie disparaissent. Les managers pilotent leurs équipes avec des données. Les collaborateurs sont acteurs de leur développement. La conformité réglementaire est garantie.",
+        "business_impact": "Les gains sont mesurables : réduction de 50% du temps administratif RH, élimination des erreurs de paie, et amélioration de l'engagement collaborateur grâce à une meilleure gestion des parcours."
+      }
+    },
+
+    "ent-purchase": {
+      "name": "Achats",
+      "tagline": "Maîtrisez vos approvisionnements",
+      "description_short": "Gestion des achats, des fournisseurs et des approvisionnements avec optimisation des coûts.",
+      "description_full": "Le module Achats structure et optimise tout votre processus d'approvisionnement. Référencement et évaluation des fournisseurs, demandes d'achat et validations, consultation et négociation, commandes et suivi des livraisons, réception et contrôle, rapprochement factures. Chaque étape est tracée et optimisée. Les meilleures conditions sont négociées grâce à la consolidation des besoins. Les délais d'approvisionnement sont maîtrisés. Le coût total d'achat est optimisé, pas seulement le prix unitaire.",
+      "transformation_story": {
+        "intro": "Vos achats deviennent stratégiques. La visibilité sur les dépenses permet de négocier mieux. Les processus sont fluides et traçables. Les fournisseurs sont évalués objectivement.",
+        "deep_narrative": "La Gestion des Achats transforme votre pouvoir de négociation. La consolidation révèle le volume réel chez chaque fournisseur. Les performances sont mesurées objectivement. Les processus de validation accélèrent le cycle d'achat. Les coûts cachés sont identifiés et réduits.",
+        "business_impact": "L'impact financier est significatif : économies de 10 à 15% sur les achats grâce à une meilleure négociation, réduction des ruptures grâce au suivi des approvisionnements, et conformité garantie des processus d'achat."
+      }
+    },
+
+    "ent-project": {
+      "name": "Gestion Projets",
+      "tagline": "Tâches, temps, facturation",
+      "description_short": "Pilotage complet des projets : planning, ressources, temps passé, budget, facturation.",
+      "description_full": "Le module Gestion Projets offre un pilotage 360° de vos projets. Définition des phases et des tâches, planification des ressources, suivi des temps passés, gestion du budget prévisionnel et réel, facturation à l'avancement ou au forfait. Chaque projet est visible : son avancement, sa rentabilité, ses risques. Les ressources sont affectées en tenant compte de leur charge globale. Le revenue recognition est automatisé. La facturation ne retarde plus car elle est intégrée au suivi projet.",
+      "transformation_story": {
+        "intro": "Vos projets sont enfin sous contrôle. L'avancement est visible, la rentabilité est mesurée, les ressources sont optimisées. Le pilotage par projet devient réalité.",
+        "deep_narrative": "La Gestion Projets transforme votre delivery. Les dérives sont détectées tôt. La rentabilité réelle de chaque projet est connue. Les ressources sont planifiées de façon optimale. La facturation suit l'avancement sans délai. Les décisions projet sont éclairées par les données.",
+        "business_impact": "Les résultats sont probants : amélioration de 25% de la rentabilité projet moyenne, réduction de 40% des dépassements de budget, et accélération de la facturation grâce à l'intégration avec l'avancement."
+      }
+    },
+
+    "ent-docs": {
+      "name": "GED",
+      "tagline": "Documents sous contrôle",
+      "description_short": "Gestion électronique des documents avec stockage, versioning et recherche intelligente.",
+      "description_full": "Le module GED (Gestion Électronique des Documents) centralise et organise toute la documentation de votre entreprise. Contrats, factures, procédures, livrables projet, documentation technique : tout est stocké de manière structurée, versionné automatiquement, accessible aux bonnes personnes avec les bons droits. La recherche plein texte retrouve n'importe quel document en secondes. Les workflows de validation sont automatisés. L'archivage répond aux exigences légales. Les documents physiques sont numérisés et intégrés.",
+      "transformation_story": {
+        "intro": "Vos documents sortent des dossiers éparpillés pour rejoindre un référentiel unique et organisé. Trouver un document prend des secondes, pas des heures. La collaboration documentaire devient fluide.",
+        "deep_narrative": "La GED transforme votre gestion de l'information. Les documents sont retrouvés instantanément. Les versions sont maîtrisées. Le partage est contrôlé. La conformité est assurée. Les processus documentaires sont automatisés. L'entreprise devient paperless et efficace.",
+        "business_impact": "Les gains de productivité sont substantiels : réduction de 80% du temps de recherche de documents, élimination des pertes de fichiers, et conformité garantie pour les audits et obligations légales."
+      }
+    }
+  }
+}

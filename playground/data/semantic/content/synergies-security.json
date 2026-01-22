@@ -1,0 +1,259 @@
+{
+  "dimension": "security",
+  "dimension_name": "Sécurité & Conformité",
+  "version": "1.0",
+  "total_connections": 28,
+  "connections": {
+    "sec-detect+sec-response": {
+      "name": "Défense Active",
+      "tagline": "Voir et neutraliser en temps réel",
+      "description": "La détection identifie, la réponse neutralise. Chaîne de défense complète et automatique.",
+      "impact": "MTTD + MTTR < 1 minute",
+      "narrative_short": "Les menaces sont détectées ET neutralisées automatiquement en temps réel.",
+      "narrative_full": "L'IA détecte une tentative de brute force. En moins d'une seconde, la Réponse Auto bloque l'IP, termine les sessions suspectes, alerte le SOC. L'attaque est stoppée avant d'avoir réussi. La boucle détection-réponse tourne plus vite que les attaquants."
+    },
+    "sec-detect+sec-compliance": {
+      "name": "Détection Conforme",
+      "tagline": "Surveillance réglementaire",
+      "description": "La détection des menaces alimente les preuves de conformité. Surveillance = obligation remplie.",
+      "impact": "Exigences de surveillance prouvées automatiquement",
+      "narrative_short": "Votre surveillance des menaces prouve votre conformité aux exigences de sécurité.",
+      "narrative_full": "RGPD, ISO 27001, SOC2 exigent une surveillance des menaces. La Détection Menaces remplit cette obligation et le module Conformité génère les preuves. Les auditeurs voient que vous surveillez activement, pas juste sur le papier."
+    },
+    "sec-detect+sec-audit": {
+      "name": "Détection Tracée",
+      "tagline": "Chaque alerte documentée",
+      "description": "Les alertes de détection alimentent la piste d'audit. Historique des menaces complet.",
+      "impact": "Historique des menaces investigable",
+      "narrative_short": "Chaque alerte de sécurité est tracée dans la piste d'audit pour investigation.",
+      "narrative_full": "Une alerte est générée ? Elle est immédiatement tracée avec tout le contexte : source, cible, payload, timeline. L'investigation forensique peut reconstituer exactement ce qui s'est passé. Les patterns d'attaque sont analysables sur le long terme."
+    },
+    "sec-detect+sec-access": {
+      "name": "Détection Comportementale",
+      "tagline": "Comptes compromis identifiés",
+      "description": "La détection analyse les comportements par compte. Compromission identifiée par anomalie.",
+      "impact": "Comptes compromis détectés en temps réel",
+      "narrative_short": "Les comportements anormaux par compte révèlent les compromissions.",
+      "narrative_full": "L'utilisateur Jean se connecte habituellement de Paris à 9h. Aujourd'hui, connexion de Russie à 3h ? Alerte immédiate. La Détection connaît le comportement normal de chaque compte et identifie les anomalies qui signalent une compromission."
+    },
+    "sec-detect+sec-encrypt": {
+      "name": "Détection de Fuite",
+      "tagline": "Exfiltration impossible",
+      "description": "La détection surveille les flux de données chiffrées. Exfiltration détectée même sur trafic crypté.",
+      "impact": "Exfiltration détectée malgré le chiffrement",
+      "narrative_short": "Les tentatives d'exfiltration sont détectées même sur les flux chiffrés.",
+      "narrative_full": "Un attaquant essaie d'exfiltrer des données via un tunnel chiffré. La Détection analyse les patterns de trafic : volume anormal, destination suspecte. Le chiffrement protège les données, la détection repère les comportements malveillants."
+    },
+    "sec-detect+sec-backup": {
+      "name": "Détection Ransomware",
+      "tagline": "Ransomware vu et stoppé",
+      "description": "La détection identifie les patterns ransomware. Backups protégés avant chiffrement malveillant.",
+      "impact": "Ransomware détecté avant impact sur les backups",
+      "narrative_short": "Les attaques ransomware sont détectées avant qu'elles ne chiffrent vos backups.",
+      "narrative_full": "Un ransomware commence à chiffrer des fichiers. La Détection repère le pattern en secondes : modifications massives et rapides. L'alerte déclenche l'isolation ET la protection des backups. Le ransomware est stoppé, la récupération est possible."
+    },
+    "sec-detect+sec-pentest": {
+      "name": "Défense Informée",
+      "tagline": "Vulnérabilités surveillées",
+      "description": "La détection cible les vulnérabilités connues. Surveillance prioritaire des failles.",
+      "impact": "Exploitation de vulnérabilités connues détectée en priorité",
+      "narrative_short": "La détection surveille spécifiquement les tentatives d'exploitation des vulnérabilités connues.",
+      "narrative_full": "Le scan a identifié une vulnérabilité sur le serveur X. La Détection augmente la surveillance sur ce serveur spécifiquement. Toute tentative d'exploitation de cette faille est détectée avec priorité maximale."
+    },
+    "sec-response+sec-compliance": {
+      "name": "Réponse Conforme",
+      "tagline": "Actions conformes aux procédures",
+      "description": "Les réponses automatiques respectent les procédures de conformité. Actions documentées.",
+      "impact": "Réponses aux incidents conformes aux exigences",
+      "narrative_short": "Les réponses automatiques respectent vos procédures de gestion d'incidents.",
+      "narrative_full": "La réponse automatique ne fait pas n'importe quoi. Chaque action est conforme aux procédures définies, documentée, justifiée. Les auditeurs voient que les incidents sont gérés selon le processus approuvé, même quand c'est automatique."
+    },
+    "sec-response+sec-audit": {
+      "name": "Réponse Tracée",
+      "tagline": "Chaque action justifiée",
+      "description": "Les actions de réponse sont tracées dans l'audit. Justification complète.",
+      "impact": "Historique des réponses aux incidents complet",
+      "narrative_short": "Chaque action de réponse automatique est tracée avec sa justification.",
+      "narrative_full": "IP 1.2.3.4 bloquée à 14:32:05 suite à détection de brute force (alerte #12345). Session de l'utilisateur X terminée à 14:32:06 suite à comportement anormal (alerte #12346). Chaque action a son pourquoi, son quand, son contexte."
+    },
+    "sec-response+sec-access": {
+      "name": "Réponse sur Accès",
+      "tagline": "Accès révoqués instantanément",
+      "description": "La réponse agit sur les accès compromis. Sessions terminées, privilèges révoqués.",
+      "impact": "Comptes compromis neutralisés en secondes",
+      "narrative_short": "Les accès compromis sont révoqués automatiquement en temps réel.",
+      "narrative_full": "Compte compromis détecté ? La Réponse Auto termine toutes les sessions actives, révoque les tokens, force le changement de mot de passe, notifie le manager. L'attaquant perd l'accès en secondes, pas en heures."
+    },
+    "sec-response+sec-encrypt": {
+      "name": "Réponse Crypto",
+      "tagline": "Clés révoquées si compromises",
+      "description": "La réponse peut révoquer les clés de chiffrement compromises. Protection des données.",
+      "impact": "Clés compromises révoquées automatiquement",
+      "narrative_short": "Les clés de chiffrement sont révoquées automatiquement en cas de compromission.",
+      "narrative_full": "Une fuite de clé est détectée ? La Réponse Auto révoque la clé compromise, génère une nouvelle clé, re-chiffre les données. La fenêtre de vulnérabilité est réduite au minimum technique possible."
+    },
+    "sec-response+sec-backup": {
+      "name": "Réponse Récupération",
+      "tagline": "Restauration automatique",
+      "description": "La réponse peut déclencher une restauration depuis les backups. Récupération rapide.",
+      "impact": "Restauration déclenchée automatiquement si nécessaire",
+      "narrative_short": "La restauration depuis backup peut être déclenchée automatiquement en cas d'incident.",
+      "narrative_full": "Ransomware détecté et isolé. La Réponse Auto évalue les dégâts et déclenche la restauration des fichiers touchés depuis le dernier backup sain. La récupération commence automatiquement, les utilisateurs retrouvent leurs données rapidement."
+    },
+    "sec-response+sec-pentest": {
+      "name": "Réponse Vulnérabilités",
+      "tagline": "Compensation automatique",
+      "description": "La réponse peut compenser les vulnérabilités. Règles de protection temporaires.",
+      "impact": "Vulnérabilités compensées en attendant le patch",
+      "narrative_short": "Les vulnérabilités critiques sont compensées par des règles de protection automatiques.",
+      "narrative_full": "Vulnérabilité critique découverte, patch pas encore disponible ? La Réponse Auto déploie des règles de compensation : restriction d'accès, filtrage de patterns d'exploit, monitoring renforcé. La faille est protégée en attendant le correctif."
+    },
+    "sec-compliance+sec-audit": {
+      "name": "Conformité Prouvée",
+      "tagline": "Preuves dans les logs",
+      "description": "Les exigences de conformité sont prouvées par les pistes d'audit. Vérifiable.",
+      "impact": "Preuves de conformité générées automatiquement",
+      "narrative_short": "Vos pistes d'audit génèrent automatiquement les preuves de conformité.",
+      "narrative_full": "L'auditeur demande : 'Prouvez que les accès aux données sensibles sont tracés.' Un clic génère le rapport depuis la piste d'audit. Preuves horodatées, non falsifiables, complètes. La conformité n'est plus déclarative mais démontrable."
+    },
+    "sec-compliance+sec-access": {
+      "name": "Accès Conforme",
+      "tagline": "Moindre privilège prouvé",
+      "description": "Le contrôle d'accès respecte les exigences de conformité. Principe du moindre privilège documenté.",
+      "impact": "Conformité des accès prouvée automatiquement",
+      "narrative_short": "Votre gestion des accès génère automatiquement les preuves de conformité.",
+      "narrative_full": "RGPD exige que seuls les autorisés accèdent aux données personnelles. Le Contrôle d'Accès applique cette règle, le module Conformité génère la preuve. L'auditeur voit exactement qui peut accéder à quoi et pourquoi."
+    },
+    "sec-compliance+sec-encrypt": {
+      "name": "Chiffrement Conforme",
+      "tagline": "Protection aux normes",
+      "description": "Le chiffrement respecte les standards de conformité. AES-256, TLS 1.3 documentés.",
+      "impact": "Conformité du chiffrement prouvée",
+      "narrative_short": "Votre chiffrement respecte les standards et génère les preuves de conformité.",
+      "narrative_full": "PCI-DSS exige AES-256 pour les données de carte. ISO 27001 exige TLS 1.3 minimum. Le module Chiffrement applique ces standards, le module Conformité génère les attestations. Les algorithmes utilisés sont documentés et prouvés."
+    },
+    "sec-compliance+sec-backup": {
+      "name": "Rétention Conforme",
+      "tagline": "Sauvegardes réglementaires",
+      "description": "Les sauvegardes respectent les exigences de rétention. Durées conformes aux réglementations.",
+      "impact": "Rétention des données conforme prouvée",
+      "narrative_short": "Vos politiques de sauvegarde respectent les exigences de rétention réglementaires.",
+      "narrative_full": "La réglementation exige 7 ans de conservation des données comptables. Les backups respectent cette durée, le module Conformité le prouve. Les données supprimées le sont dans les délais légaux. Tout est documenté et vérifiable."
+    },
+    "sec-compliance+sec-pentest": {
+      "name": "Tests Conformes",
+      "tagline": "Scans réglementaires",
+      "description": "Les scans de vulnérabilités remplissent les exigences de tests de sécurité.",
+      "impact": "Exigences de tests de sécurité prouvées",
+      "narrative_short": "Vos scans de vulnérabilités prouvent la conformité aux exigences de tests de sécurité.",
+      "narrative_full": "SOC2 exige des tests de vulnérabilités réguliers. Les scans sont exécutés, les rapports sont générés, les preuves sont documentées. L'auditeur voit que les tests sont effectués, pas juste promis."
+    },
+    "sec-audit+sec-access": {
+      "name": "Accès Audités",
+      "tagline": "Qui a vu quoi, tracé",
+      "description": "Chaque accès est tracé dans la piste d'audit. Historique complet des consultations.",
+      "impact": "Traçabilité 100% des accès aux données",
+      "narrative_short": "Chaque accès aux données est tracé avec utilisateur, date et contexte.",
+      "narrative_full": "L'utilisateur X a consulté le dossier client Y le 15 janvier à 14h32 depuis le bureau de Paris. Chaque accès aux données sensibles est tracé, horodaté, contextualisé. L'investigation sait exactement qui a vu quoi et quand."
+    },
+    "sec-audit+sec-encrypt": {
+      "name": "Crypto Auditée",
+      "tagline": "Opérations crypto tracées",
+      "description": "Les opérations de chiffrement sont tracées. Accès aux clés documenté.",
+      "impact": "Traçabilité des opérations cryptographiques",
+      "narrative_short": "Chaque opération de chiffrement et déchiffrement est tracée.",
+      "narrative_full": "Qui a accédé à la clé de chiffrement des backups ? Quand a-t-elle été utilisée ? Par quel processus ? La piste d'audit trace les opérations cryptographiques sensibles. L'usage des clés est transparent et auditable."
+    },
+    "sec-audit+sec-backup": {
+      "name": "Sauvegardes Auditées",
+      "tagline": "Chaque backup tracé",
+      "description": "Les opérations de sauvegarde et restauration sont tracées. Historique complet.",
+      "impact": "Traçabilité complète des sauvegardes",
+      "narrative_short": "Chaque sauvegarde et restauration est tracée avec date et résultat.",
+      "narrative_full": "Backup complet du 15 janvier à 02h00 : succès, 1.2TB, durée 45 minutes. Restauration du dossier X le 16 janvier à 10h30 par l'admin Y : succès. L'historique des sauvegardes est complet et vérifiable."
+    },
+    "sec-audit+sec-pentest": {
+      "name": "Scans Audités",
+      "tagline": "Tests de sécurité tracés",
+      "description": "Les scans de vulnérabilités sont tracés dans l'audit. Historique des postures.",
+      "impact": "Historique de l'évolution de la posture de sécurité",
+      "narrative_short": "L'historique de vos scans de sécurité montre l'évolution de votre posture.",
+      "narrative_full": "Scan de janvier : 12 vulnérabilités critiques. Scan de février : 3 vulnérabilités critiques. La tendance est visible, les progrès sont prouvés. L'historique des scans documente l'amélioration continue de la sécurité."
+    },
+    "sec-access+sec-encrypt": {
+      "name": "Accès Chiffré",
+      "tagline": "Double protection",
+      "description": "Les données sont protégées par accès ET chiffrement. Défense en profondeur.",
+      "impact": "Données protégées même si un contrôle échoue",
+      "narrative_short": "Vos données sont protégées par le contrôle d'accès ET le chiffrement.",
+      "narrative_full": "L'attaquant a contourné le contrôle d'accès ? Les données sont chiffrées, inutilisables. Il a volé les données chiffrées ? Il n'a pas les clés. La double protection assure que les données restent protégées même si une couche cède."
+    },
+    "sec-access+sec-backup": {
+      "name": "Backups Contrôlés",
+      "tagline": "Restauration autorisée",
+      "description": "L'accès aux backups est contrôlé. Restauration limitée aux autorisés.",
+      "impact": "Backups protégés contre les accès non autorisés",
+      "narrative_short": "L'accès aux sauvegardes est strictement contrôlé et audité.",
+      "narrative_full": "Les backups contiennent des données sensibles. Seuls les admins habilités peuvent y accéder. Chaque restauration nécessite une justification. Les données de backup sont aussi protégées que les données de production."
+    },
+    "sec-access+sec-pentest": {
+      "name": "Accès Testé",
+      "tagline": "Contrôles vérifiés",
+      "description": "Les contrôles d'accès sont testés par les scans. Efficacité vérifiée.",
+      "impact": "Contrôles d'accès validés par tests techniques",
+      "narrative_short": "L'efficacité de vos contrôles d'accès est vérifiée par les scans.",
+      "narrative_full": "Le Contrôle d'Accès dit qu'un utilisateur ne peut pas accéder au serveur X. Le scan vérifie : tentative de connexion depuis ce profil = échec. Le contrôle fonctionne vraiment, pas juste sur le papier."
+    },
+    "sec-encrypt+sec-backup": {
+      "name": "Backups Chiffrés",
+      "tagline": "Sauvegardes protégées",
+      "description": "Les sauvegardes sont chiffrées. Protection même du stockage secondaire.",
+      "impact": "Backups inutilisables en cas de vol",
+      "narrative_short": "Vos sauvegardes sont chiffrées, inutilisables même en cas de vol.",
+      "narrative_full": "Les bandes de backup sont volées ? Les données sont chiffrées, inutilisables sans la clé. Le stockage cloud de backup est compromis ? Même chose. Le chiffrement protège les données où qu'elles soient."
+    },
+    "sec-encrypt+sec-pentest": {
+      "name": "Crypto Testée",
+      "tagline": "Chiffrement vérifié",
+      "description": "L'implémentation du chiffrement est testée. Algorithmes et configurations validés.",
+      "impact": "Chiffrement validé techniquement",
+      "narrative_short": "L'implémentation de votre chiffrement est vérifiée par les scans.",
+      "narrative_full": "Le scan vérifie : TLS 1.3 activé, suites cryptographiques sécurisées, certificats valides. Le chiffrement n'est pas juste configuré : il est vérifié fonctionner correctement et résister aux attaques connues."
+    },
+    "sec-backup+sec-pentest": {
+      "name": "Backups Testés",
+      "tagline": "Récupération vérifiée",
+      "description": "Les processus de backup sont testés. Récupérabilité validée régulièrement.",
+      "impact": "Garantie que les backups sont restaurables",
+      "narrative_short": "Vos processus de sauvegarde et restauration sont testés régulièrement.",
+      "narrative_full": "Un backup qui n'a jamais été testé n'est pas un backup. Les scans incluent des tests de restauration : les données sont-elles récupérables ? En combien de temps ? La capacité de récupération est prouvée, pas supposée."
+    }
+  },
+  "multi_connections": {
+    "sec-detect+sec-response+sec-audit": {
+      "name": "SOC Automatisé",
+      "description": "Détection + Réponse + Audit = opérations de sécurité automatisées et traçables.",
+      "impact": "Centre de sécurité opérant 24/7 sans intervention"
+    },
+    "sec-compliance+sec-audit+sec-access": {
+      "name": "Conformité Complète",
+      "description": "Conformité + Audit + Accès = exigences réglementaires couvertes et prouvées.",
+      "impact": "Audits de conformité réussis automatiquement"
+    },
+    "sec-encrypt+sec-backup+sec-access": {
+      "name": "Protection Données",
+      "description": "Chiffrement + Backup + Accès = données protégées en profondeur.",
+      "impact": "Données protégées contre toutes les menaces"
+    },
+    "sec-detect+sec-pentest+sec-response": {
+      "name": "Défense Active Informée",
+      "description": "Détection + Vulnérabilités + Réponse = défense qui connaît et protège les failles.",
+      "impact": "Vulnérabilités surveillées et protégées"
+    },
+    "sec-compliance+sec-encrypt+sec-audit": {
+      "name": "Conformité Crypto",
+      "description": "Conformité + Chiffrement + Audit = protection des données conforme et prouvée.",
+      "impact": "Exigences de protection des données entièrement couvertes"
+    }
+  }
+}

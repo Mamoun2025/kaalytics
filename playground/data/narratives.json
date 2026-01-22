@@ -1,0 +1,967 @@
+{
+  "intro": {
+    "empty": "Chaque entreprise qui domine son marché a un secret : une architecture digitale cohérente. Construisez la vôtre.",
+    "first_module": "Premier pilier posé. {module} — le début d'une transformation mesurable."
+  },
+
+  "modules": {
+    "ops-map": {
+      "add": "Carte intelligente activée.",
+      "bullet": "Localisation temps réel de 100% des actifs",
+      "value": "Visibilité terrain totale",
+      "business": "Réduction de 40% du temps de recherche d'équipements",
+      "connects_well_with": ["ops-fleet", "ops-routes", "integ-iot"]
+    },
+    "ops-routes": {
+      "add": "Optimisation des trajets activée.",
+      "bullet": "Routes recalculées par IA chaque matin",
+      "value": "Logistique optimisée",
+      "business": "Économie moyenne de 23% sur les coûts carburant",
+      "connects_well_with": ["ops-fleet", "ops-map", "intel-forecast"]
+    },
+    "ops-maintenance": {
+      "add": "Maintenance prédictive activée.",
+      "bullet": "Alertes 72h avant chaque panne potentielle",
+      "value": "Zéro arrêt surprise",
+      "business": "Réduction de 67% des pannes non planifiées",
+      "connects_well_with": ["ops-fleet", "integ-iot", "sec-audit"]
+    },
+    "ops-inventory": {
+      "add": "Gestion intelligente des stocks activée.",
+      "bullet": "Réapprovisionnement automatique optimisé",
+      "value": "Stock juste-à-temps",
+      "business": "Réduction de 35% du capital immobilisé en stock",
+      "connects_well_with": ["intel-forecast", "ent-purchase", "intel-ml"]
+    },
+    "ops-fleet": {
+      "add": "Suivi de flotte GPS activé.",
+      "bullet": "Position et statut de chaque véhicule en temps réel",
+      "value": "Flotte transparente",
+      "business": "Amélioration de 28% de l'utilisation des véhicules",
+      "connects_well_with": ["ops-map", "ops-routes", "ops-maintenance"]
+    },
+    "ops-scheduling": {
+      "add": "Planification automatique des équipes.",
+      "bullet": "Affectation optimale selon compétences et disponibilités",
+      "value": "Équipes synchronisées",
+      "business": "Gain de 12h/semaine en coordination",
+      "connects_well_with": ["ent-hr", "ops-kpi", "growth-pipeline"]
+    },
+    "ops-alerts": {
+      "add": "Système d'alertes intelligent activé.",
+      "bullet": "Notification instantanée sur événements critiques",
+      "value": "Réactivité maximale",
+      "business": "Temps de réaction divisé par 5",
+      "connects_well_with": ["sec-detect", "ops-maintenance", "intel-alerts"]
+    },
+    "ops-kpi": {
+      "add": "Tableaux de bord opérationnels activés.",
+      "bullet": "KPIs métier actualisés en temps réel",
+      "value": "Pilotage data-driven",
+      "business": "Décisions 3x plus rapides avec données fiables",
+      "connects_well_with": ["intel-dashboards", "intel-reports", "ent-erp"]
+    },
+    "ops-sites": {
+      "add": "Gestion des chantiers activée.",
+      "bullet": "Suivi temps réel de tous les sites actifs",
+      "value": "Chantiers maîtrisés",
+      "business": "Visibilité 100% sur l'avancement de chaque chantier",
+      "connects_well_with": ["ops-machines", "ops-field", "ops-scheduling", "ent-project"]
+    },
+    "ops-machines": {
+      "add": "Planning des machines activé.",
+      "bullet": "Disponibilité et affectation des engins en temps réel",
+      "value": "Machines optimisées",
+      "business": "Taux d'utilisation machines amélioré de 35%",
+      "connects_well_with": ["ops-sites", "ops-maintenance", "integ-iot", "ops-fleet"]
+    },
+    "ops-field": {
+      "add": "Suivi des interventions terrain activé.",
+      "bullet": "Rapports géolocalisés avec photos et signatures",
+      "value": "Traçabilité terrain",
+      "business": "Preuve documentée de 100% des interventions",
+      "connects_well_with": ["ops-sites", "ops-alerts", "sec-compliance", "ops-scheduling"]
+    },
+    "ops-weather": {
+      "add": "Module météo et conditions activé.",
+      "bullet": "Prévisions météo intégrées au planning opérationnel",
+      "value": "Anticipation météo",
+      "business": "Réduction de 60% des arrêts météo non planifiés",
+      "connects_well_with": ["ops-sites", "ops-scheduling", "ops-routes", "ops-alerts"]
+    },
+
+    "intel-banks": {
+      "add": "Consolidation bancaire multi-établissements.",
+      "bullet": "Soldes et mouvements de toutes vos banques unifiés",
+      "value": "Trésorerie unifiée",
+      "business": "Vue consolidée instantanée vs 2h de rapprochement manuel",
+      "connects_well_with": ["intel-cashflow", "intel-forecast", "ent-erp"]
+    },
+    "intel-ml": {
+      "add": "Intelligence artificielle prédictive activée.",
+      "bullet": "Détection de patterns invisibles à l'œil humain",
+      "value": "Anticipation stratégique",
+      "business": "Identification d'opportunités 3 semaines en avance",
+      "connects_well_with": ["intel-forecast", "growth-scoring", "intel-alerts"]
+    },
+    "intel-reports": {
+      "add": "Génération automatique de rapports.",
+      "bullet": "Rapports mensuels générés sans intervention",
+      "value": "Reporting automatisé",
+      "business": "20h/mois économisées en rédaction de rapports",
+      "connects_well_with": ["intel-dashboards", "ops-kpi", "ent-erp"]
+    },
+    "intel-dashboards": {
+      "add": "Dashboards visuels temps réel activés.",
+      "bullet": "Visualisations claires pour direction et investisseurs",
+      "value": "Clarté décisionnelle",
+      "business": "Réunions de direction réduites de 50% grâce à la data visible",
+      "connects_well_with": ["intel-reports", "ops-kpi", "brand-web"]
+    },
+    "intel-cashflow": {
+      "add": "Suivi des flux de trésorerie activé.",
+      "bullet": "Chaque dirham entrant et sortant tracé en temps réel",
+      "value": "Cash sous contrôle",
+      "business": "Prévision de trésorerie à 95% de précision sur 90 jours",
+      "connects_well_with": ["intel-banks", "intel-forecast", "ent-purchase"]
+    },
+    "intel-margins": {
+      "add": "Analyse de rentabilité par produit/client.",
+      "bullet": "Marges calculées automatiquement à chaque transaction",
+      "value": "Rentabilité visible",
+      "business": "Identification des 20% de clients générant 80% des profits",
+      "connects_well_with": ["growth-insights", "intel-ml", "ent-erp"]
+    },
+    "intel-forecast": {
+      "add": "Prévisions financières IA activées.",
+      "bullet": "Projections de revenus basées sur données historiques et tendances",
+      "value": "Futur prévisible",
+      "business": "Budget prévisionnel fiable à 95% sur le trimestre",
+      "connects_well_with": ["intel-ml", "intel-cashflow", "ops-inventory"]
+    },
+    "intel-alerts": {
+      "add": "Détection d'anomalies financières.",
+      "bullet": "Alertes automatiques sur écarts et transactions suspectes",
+      "value": "Vigilance permanente",
+      "business": "Fraudes et erreurs détectées avant impact",
+      "connects_well_with": ["sec-detect", "intel-ml", "sec-audit"]
+    },
+
+    "growth-crm": {
+      "add": "CRM intelligent avec scoring IA.",
+      "bullet": "Chaque prospect noté et priorisé automatiquement",
+      "value": "Prospects qualifiés",
+      "business": "Taux de conversion amélioré de 34% grâce au ciblage",
+      "connects_well_with": ["growth-scoring", "growth-pipeline", "growth-insights"]
+    },
+    "growth-whatsapp": {
+      "add": "Bot WhatsApp de qualification activé.",
+      "bullet": "Réponses instantanées 24/7 sur votre canal principal",
+      "value": "Disponibilité totale",
+      "business": "65% des leads qualifiés automatiquement avant contact humain",
+      "connects_well_with": ["growth-crm", "growth-followup", "engage-campaigns"]
+    },
+    "growth-pipeline": {
+      "add": "Pipeline commercial visuel activé.",
+      "bullet": "Chaque opportunité suivie de la prospection à la signature",
+      "value": "Ventes maîtrisées",
+      "business": "Visibilité sur 100% du chiffre d'affaires potentiel",
+      "connects_well_with": ["growth-crm", "growth-quotes", "intel-forecast"]
+    },
+    "growth-insights": {
+      "add": "Vue client 360° activée.",
+      "bullet": "Historique complet, préférences et comportements unifiés",
+      "value": "Connaissance client",
+      "business": "Personnalisation qui augmente le panier moyen de 27%",
+      "connects_well_with": ["growth-crm", "intel-margins", "engage-campaigns"]
+    },
+    "growth-scoring": {
+      "add": "Lead scoring prédictif activé.",
+      "bullet": "Chaque lead noté sur sa probabilité de conversion",
+      "value": "Priorisation intelligente",
+      "business": "Commerciaux focalisés sur les 30% de leads à fort potentiel",
+      "connects_well_with": ["growth-crm", "intel-ml", "growth-pipeline"]
+    },
+    "growth-followup": {
+      "add": "Relances automatiques configurées.",
+      "bullet": "Séquences de suivi déclenchées au bon moment",
+      "value": "Aucun oubli",
+      "business": "Récupération de 23% d'opportunités autrement perdues",
+      "connects_well_with": ["growth-crm", "engage-email", "growth-whatsapp"]
+    },
+    "growth-quotes": {
+      "add": "Génération de devis dynamiques.",
+      "bullet": "Propositions personnalisées en quelques clics",
+      "value": "Réactivité commerciale",
+      "business": "Devis envoyés en 5 min vs 2h — avantage concurrentiel décisif",
+      "connects_well_with": ["growth-pipeline", "ent-erp", "brand-docs"]
+    },
+    "growth-churn": {
+      "add": "Prédiction d'attrition client activée.",
+      "bullet": "Clients à risque identifiés 30 jours avant leur départ",
+      "value": "Rétention proactive",
+      "business": "Réduction de 45% du taux de churn grâce à l'intervention précoce",
+      "connects_well_with": ["growth-insights", "intel-ml", "growth-followup"]
+    },
+
+    "engage-campaigns": {
+      "add": "Campagnes marketing auto-optimisées.",
+      "bullet": "A/B testing automatique et réallocation budget temps réel",
+      "value": "Marketing intelligent",
+      "business": "ROI marketing amélioré de 40% par optimisation continue",
+      "connects_well_with": ["engage-budget", "engage-ab", "growth-insights"]
+    },
+    "engage-content": {
+      "add": "Création de contenu assistée par IA.",
+      "bullet": "Textes, visuels et messages générés et adaptés par canal",
+      "value": "Contenu à la demande",
+      "business": "Production de contenu x5 sans augmenter l'équipe",
+      "connects_well_with": ["brand-social", "engage-email", "engage-campaigns"]
+    },
+    "engage-budget": {
+      "add": "Optimisation budgétaire marketing.",
+      "bullet": "Chaque dirham réalloué vers les canaux performants",
+      "value": "Investissement optimisé",
+      "business": "Même budget, 60% plus de résultats",
+      "connects_well_with": ["engage-campaigns", "engage-analytics", "intel-margins"]
+    },
+    "engage-attribution": {
+      "add": "Attribution multicanal activée.",
+      "bullet": "Parcours client complet de la première visite à l'achat",
+      "value": "Source de vérité",
+      "business": "Fin des décisions basées sur des intuitions — data fiable",
+      "connects_well_with": ["engage-analytics", "growth-insights", "intel-ml"]
+    },
+    "engage-email": {
+      "add": "Automation email personnalisée.",
+      "bullet": "Séquences déclenchées selon comportement utilisateur",
+      "value": "Nurturing automatisé",
+      "business": "Taux d'ouverture de 45% vs 15% en masse",
+      "connects_well_with": ["growth-followup", "engage-content", "growth-crm"]
+    },
+    "engage-social": {
+      "add": "Gestion réseaux sociaux centralisée.",
+      "bullet": "Publication, modération et analytics sur tous les réseaux",
+      "value": "Présence sociale unifiée",
+      "business": "Temps de gestion social divisé par 3",
+      "connects_well_with": ["brand-social", "engage-content", "engage-analytics"]
+    },
+    "engage-ab": {
+      "add": "Tests A/B automatisés.",
+      "bullet": "Chaque campagne testée scientifiquement",
+      "value": "Amélioration continue",
+      "business": "Gains de performance composés : +5% chaque mois",
+      "connects_well_with": ["engage-campaigns", "engage-analytics", "intel-ml"]
+    },
+    "engage-analytics": {
+      "add": "Analytics marketing temps réel.",
+      "bullet": "Performance de chaque canal et campagne instantanée",
+      "value": "Mesure précise",
+      "business": "Réaction en heures au lieu de semaines sur les campagnes",
+      "connects_well_with": ["intel-dashboards", "engage-budget", "engage-attribution"]
+    },
+
+    "brand-identity": {
+      "add": "Identité de marque professionnelle.",
+      "bullet": "Logo, palette, typographie — cohérence garantie",
+      "value": "Image premium",
+      "business": "Perception prix +25% grâce au positionnement visuel",
+      "connects_well_with": ["brand-system", "brand-web", "brand-docs"]
+    },
+    "brand-web": {
+      "add": "Site web orienté conversion.",
+      "bullet": "Design moderne optimisé pour transformer les visiteurs",
+      "value": "Vitrine digitale",
+      "business": "Taux de conversion web x2.5 vs site classique",
+      "connects_well_with": ["brand-identity", "engage-analytics", "growth-crm"]
+    },
+    "brand-docs": {
+      "add": "Templates documents premium.",
+      "bullet": "Devis, factures, présentations à votre image",
+      "value": "Professionnalisme visible",
+      "business": "Perception de qualité renforcée à chaque interaction",
+      "connects_well_with": ["brand-identity", "growth-quotes", "ent-erp"]
+    },
+    "brand-system": {
+      "add": "Design system complet.",
+      "bullet": "Composants réutilisables pour cohérence totale",
+      "value": "Cohérence garantie",
+      "business": "Développement UI 3x plus rapide avec composants prêts",
+      "connects_well_with": ["brand-identity", "brand-ui", "brand-web"]
+    },
+    "brand-ui": {
+      "add": "Design d'interfaces utilisateur.",
+      "bullet": "Expériences intuitives que les utilisateurs adorent",
+      "value": "UX mémorable",
+      "business": "Réduction de 60% des demandes support grâce à l'intuitivité",
+      "connects_well_with": ["brand-system", "ent-custom", "brand-web"]
+    },
+    "brand-motion": {
+      "add": "Motion design et vidéo.",
+      "bullet": "Animations et contenus vidéo engageants",
+      "value": "Contenu captivant",
+      "business": "Engagement x4 sur les contenus animés vs statiques",
+      "connects_well_with": ["brand-social", "engage-content", "brand-identity"]
+    },
+    "brand-print": {
+      "add": "Supports print premium.",
+      "bullet": "Cartes, brochures, signalétique haut de gamme",
+      "value": "Impact physique",
+      "business": "Mémorabilité marque +35% avec supports tangibles",
+      "connects_well_with": ["brand-identity", "brand-docs", "brand-system"]
+    },
+    "brand-social": {
+      "add": "Assets réseaux sociaux optimisés.",
+      "bullet": "Visuels adaptés aux specs de chaque plateforme",
+      "value": "Performance sociale",
+      "business": "Reach organique +80% avec visuels optimisés",
+      "connects_well_with": ["engage-social", "engage-content", "brand-motion"]
+    },
+
+    "integ-universal": {
+      "add": "Connecteur universel activé.",
+      "bullet": "Intégration possible avec tout système existant",
+      "value": "Interopérabilité totale",
+      "business": "Connexion de systèmes en jours au lieu de mois",
+      "connects_well_with": ["integ-api", "integ-sync", "ent-erp"]
+    },
+    "integ-sync": {
+      "add": "Synchronisation temps réel activée.",
+      "bullet": "Données cohérentes partout, instantanément",
+      "value": "Une seule vérité",
+      "business": "Fin des erreurs de ressaisie et données obsolètes",
+      "connects_well_with": ["integ-universal", "ent-erp", "intel-banks"]
+    },
+    "integ-api": {
+      "add": "Hub d'APIs REST activé.",
+      "bullet": "Interfaces standardisées pour tous vos développements",
+      "value": "Extensibilité native",
+      "business": "Coût d'intégration réduit de 70% sur nouveaux projets",
+      "connects_well_with": ["integ-universal", "ent-custom", "integ-queue"]
+    },
+    "integ-etl": {
+      "add": "Pipeline de transformation de données.",
+      "bullet": "Données nettoyées, normalisées, enrichies automatiquement",
+      "value": "Données propres",
+      "business": "Qualité de données à 99.5% sans intervention manuelle",
+      "connects_well_with": ["intel-ml", "integ-sync", "intel-reports"]
+    },
+    "integ-iot": {
+      "add": "Passerelle IoT activée.",
+      "bullet": "Capteurs, machines et objets connectés intégrés",
+      "value": "Monde physique connecté",
+      "business": "Données terrain automatiques — fin de la saisie manuelle",
+      "connects_well_with": ["ops-maintenance", "ops-fleet", "ops-map"]
+    },
+    "integ-legacy": {
+      "add": "Pont vers systèmes legacy.",
+      "bullet": "Anciens logiciels connectés au nouveau monde",
+      "value": "Migration douce",
+      "business": "Conservation des investissements existants — ROI immédiat",
+      "connects_well_with": ["integ-universal", "ent-erp", "integ-api"]
+    },
+    "integ-queue": {
+      "add": "File de messages asynchrones.",
+      "bullet": "Échanges fiables même en cas de pic ou panne",
+      "value": "Fiabilité garantie",
+      "business": "Zéro perte de données — intégrité transactionnelle",
+      "connects_well_with": ["integ-api", "integ-sync", "sec-backup"]
+    },
+    "integ-monitor": {
+      "add": "Monitoring des flux de données.",
+      "bullet": "Visibilité complète sur tous les échanges",
+      "value": "Transparence des flux",
+      "business": "Problèmes d'intégration détectés en minutes vs jours",
+      "connects_well_with": ["integ-sync", "ops-alerts", "sec-audit"]
+    },
+
+    "sec-detect": {
+      "add": "Détection de menaces IA.",
+      "bullet": "Surveillance 24/7 des comportements anormaux",
+      "value": "Protection proactive",
+      "business": "Menaces neutralisées avant impact — tranquillité totale",
+      "connects_well_with": ["sec-response", "sec-audit", "intel-alerts"]
+    },
+    "sec-response": {
+      "add": "Réponse automatique aux incidents.",
+      "bullet": "Contre-mesures déclenchées en millisecondes",
+      "value": "Réaction instantanée",
+      "business": "Temps de réponse incident : 50ms vs 4h humain",
+      "connects_well_with": ["sec-detect", "ops-alerts", "sec-audit"]
+    },
+    "sec-compliance": {
+      "add": "Conformité réglementaire automatisée.",
+      "bullet": "RGPD, ISO, normes sectorielles — suivi continu",
+      "value": "Conformité assurée",
+      "business": "Audits passés du premier coup — zéro stress réglementaire",
+      "connects_well_with": ["sec-audit", "ent-docs", "sec-access"]
+    },
+    "sec-audit": {
+      "add": "Piste d'audit complète.",
+      "bullet": "Chaque action tracée, horodatée, attribuée",
+      "value": "Traçabilité totale",
+      "business": "Reconstitution possible de tout événement — protection juridique",
+      "connects_well_with": ["sec-compliance", "sec-access", "intel-alerts"]
+    },
+    "sec-access": {
+      "add": "Contrôle d'accès granulaire.",
+      "bullet": "Droits précis par rôle, équipe, projet",
+      "value": "Accès maîtrisé",
+      "business": "Principe du moindre privilège appliqué automatiquement",
+      "connects_well_with": ["sec-audit", "ent-hr", "sec-encrypt"]
+    },
+    "sec-encrypt": {
+      "add": "Chiffrement de bout en bout.",
+      "bullet": "Données illisibles même en cas d'interception",
+      "value": "Confidentialité absolue",
+      "business": "Données clients protégées — confiance renforcée",
+      "connects_well_with": ["sec-access", "sec-backup", "integ-sync"]
+    },
+    "sec-backup": {
+      "add": "Sauvegarde intelligente.",
+      "bullet": "Backups automatiques, chiffrés, géo-distribués",
+      "value": "Résilience garantie",
+      "business": "Reprise après sinistre en moins de 4h — continuité assurée",
+      "connects_well_with": ["sec-encrypt", "ent-erp", "integ-queue"]
+    },
+    "sec-pentest": {
+      "add": "Tests de vulnérabilité continus.",
+      "bullet": "Failles détectées et corrigées avant exploitation",
+      "value": "Sécurité proactive",
+      "business": "Posture de sécurité au niveau des grandes entreprises",
+      "connects_well_with": ["sec-detect", "sec-compliance", "integ-api"]
+    },
+
+    "ent-erp": {
+      "add": "ERP complet Odoo activé.",
+      "bullet": "Tous les processus métier dans un système unifié",
+      "value": "Gestion unifiée",
+      "business": "Une seule source de vérité pour toute l'entreprise",
+      "connects_well_with": ["intel-reports", "ent-hr", "ent-purchase"]
+    },
+    "ent-custom": {
+      "add": "Développement sur mesure.",
+      "bullet": "Modules adaptés à vos processus uniques",
+      "value": "Solution sur mesure",
+      "business": "Processus métier digitalisés exactement comme vous travaillez",
+      "connects_well_with": ["ent-erp", "integ-api", "brand-ui"]
+    },
+    "ent-deploy": {
+      "add": "Déploiement rapide.",
+      "bullet": "Mise en production en semaines, pas en mois",
+      "value": "Time-to-value court",
+      "business": "ROI visible dès le premier trimestre",
+      "connects_well_with": ["ent-erp", "ent-support", "integ-universal"]
+    },
+    "ent-support": {
+      "add": "Support expert dédié.",
+      "bullet": "Équipe technique disponible 24/7",
+      "value": "Accompagnement continu",
+      "business": "Problèmes résolus en heures — jamais bloqué",
+      "connects_well_with": ["ent-erp", "ent-deploy", "sec-response"]
+    },
+    "ent-hr": {
+      "add": "Gestion RH complète.",
+      "bullet": "Recrutement, paie, congés, évaluations centralisés",
+      "value": "Capital humain optimisé",
+      "business": "Administration RH automatisée — focus sur les talents",
+      "connects_well_with": ["ent-erp", "ops-scheduling", "sec-access"]
+    },
+    "ent-purchase": {
+      "add": "Gestion des achats optimisée.",
+      "bullet": "Fournisseurs évalués, commandes automatisées",
+      "value": "Achats intelligents",
+      "business": "Économies de 15% sur les achats grâce à la consolidation",
+      "connects_well_with": ["ent-erp", "ops-inventory", "intel-cashflow"]
+    },
+    "ent-project": {
+      "add": "Gestion de projets intégrée.",
+      "bullet": "Tâches, temps, budgets suivis en temps réel",
+      "value": "Projets maîtrisés",
+      "business": "Projets livrés à temps et dans le budget — clients satisfaits",
+      "connects_well_with": ["ent-erp", "ent-hr", "intel-margins"]
+    },
+    "ent-docs": {
+      "add": "GED intelligente.",
+      "bullet": "Documents centralisés, versionnés, recherchables",
+      "value": "Information accessible",
+      "business": "Document trouvé en 10 secondes vs 10 minutes",
+      "connects_well_with": ["ent-erp", "sec-access", "brand-docs"]
+    }
+  },
+
+  "connections": {
+    "ops-fleet+ops-map": {
+      "text": "Flotte + Carte = Vision terrain complète",
+      "benefit": "Chaque véhicule visible sur carte interactive avec statut temps réel"
+    },
+    "ops-fleet+ops-routes": {
+      "text": "Flotte + Routes = Logistique optimisée",
+      "benefit": "Trajets recalculés dynamiquement selon positions réelles"
+    },
+    "ops-fleet+ops-maintenance": {
+      "text": "Flotte + Maintenance = Continuité opérationnelle",
+      "benefit": "Véhicules maintenus proactivement selon usage réel"
+    },
+    "ops-maintenance+integ-iot": {
+      "text": "Maintenance + IoT = Prédiction mécanique",
+      "benefit": "Capteurs qui prédisent les pannes 72h à l'avance"
+    },
+    "ops-map+ops-routes": {
+      "text": "Carte + Routes = Navigation intelligente",
+      "benefit": "Itinéraires optimisés en temps réel selon trafic et contraintes"
+    },
+    "ops-kpi+intel-dashboards": {
+      "text": "KPIs Ops + Dashboards = Pilotage unifié",
+      "benefit": "Performance opérationnelle visible d'un coup d'œil"
+    },
+    "ops-alerts+sec-detect": {
+      "text": "Alertes + Détection = Vigilance totale",
+      "benefit": "Anomalies opérationnelles et sécuritaires traitées ensemble"
+    },
+    "ops-inventory+intel-forecast": {
+      "text": "Stock + Prévisions = Approvisionnement intelligent",
+      "benefit": "Stocks ajustés automatiquement selon prédictions de demande"
+    },
+    "ops-scheduling+ent-hr": {
+      "text": "Planning + RH = Équipes optimisées",
+      "benefit": "Affectations automatiques selon compétences et disponibilités"
+    },
+    "intel-banks+intel-cashflow": {
+      "text": "Banques + Cash Flow = Trésorerie maîtrisée",
+      "benefit": "Vision consolidée de tous vos flux financiers"
+    },
+    "intel-ml+intel-forecast": {
+      "text": "IA + Prévisions = Anticipation stratégique",
+      "benefit": "Prédictions à 95% de fiabilité sur 90 jours"
+    },
+    "intel-ml+growth-scoring": {
+      "text": "IA + Scoring = Ciblage prédictif",
+      "benefit": "Prospects scorés par algorithme auto-apprenant"
+    },
+    "intel-ml+growth-churn": {
+      "text": "IA + Attrition = Rétention proactive",
+      "benefit": "Clients à risque identifiés 30 jours avant départ"
+    },
+    "intel-reports+ent-erp": {
+      "text": "Reporting + ERP = Business Intelligence native",
+      "benefit": "Rapports générés automatiquement depuis données ERP"
+    },
+    "intel-margins+growth-insights": {
+      "text": "Marges + Insights Client = Rentabilité ciblée",
+      "benefit": "Stratégie prix ajustée par segment client"
+    },
+    "intel-alerts+sec-audit": {
+      "text": "Alertes Intel + Audit = Compliance intelligente",
+      "benefit": "Anomalies financières tracées et documentées automatiquement"
+    },
+    "intel-cashflow+ent-purchase": {
+      "text": "Cash Flow + Achats = Trésorerie optimisée",
+      "benefit": "Paiements fournisseurs calés sur prévisions de trésorerie"
+    },
+    "growth-crm+growth-scoring": {
+      "text": "CRM + Scoring = Ventes ciblées",
+      "benefit": "Commerciaux focalisés sur les prospects à fort potentiel"
+    },
+    "growth-crm+growth-pipeline": {
+      "text": "CRM + Pipeline = Revenus prévisibles",
+      "benefit": "Visibilité complète du cycle de vente"
+    },
+    "growth-crm+engage-campaigns": {
+      "text": "CRM + Campagnes = Marketing personnalisé",
+      "benefit": "Campagnes ciblées selon profil et historique client"
+    },
+    "growth-crm+intel-margins": {
+      "text": "CRM + Marges = Valeur client quantifiée",
+      "benefit": "Chaque client associé à sa contribution réelle"
+    },
+    "growth-whatsapp+growth-followup": {
+      "text": "WhatsApp + Relances = Engagement continu",
+      "benefit": "Prospects engagés 24/7 sur leur canal préféré"
+    },
+    "growth-whatsapp+engage-campaigns": {
+      "text": "WhatsApp + Campagnes = Outreach multicanal",
+      "benefit": "Messages marketing livrés sur le canal le plus efficace"
+    },
+    "growth-pipeline+intel-forecast": {
+      "text": "Pipeline + Prévisions = Revenue prévisible",
+      "benefit": "Chiffre d'affaires projeté avec fiabilité"
+    },
+    "growth-quotes+brand-docs": {
+      "text": "Devis + Templates = Propositions premium",
+      "benefit": "Chaque devis renforce votre image professionnelle"
+    },
+    "growth-quotes+ent-erp": {
+      "text": "Devis + ERP = Processus commercial intégré",
+      "benefit": "Du devis à la facturation, flux automatisé"
+    },
+    "growth-insights+engage-campaigns": {
+      "text": "Insights + Campagnes = Personnalisation data-driven",
+      "benefit": "Chaque message adapté au profil comportemental"
+    },
+    "growth-churn+growth-followup": {
+      "text": "Prédiction Churn + Relances = Intervention précoce",
+      "benefit": "Actions de rétention déclenchées automatiquement"
+    },
+    "engage-campaigns+engage-budget": {
+      "text": "Campagnes + Budget = ROI optimisé",
+      "benefit": "Chaque dirham marketing travaille au maximum"
+    },
+    "engage-campaigns+engage-analytics": {
+      "text": "Campagnes + Analytics = Optimisation continue",
+      "benefit": "Performance mesurée, stratégie ajustée en temps réel"
+    },
+    "engage-content+brand-social": {
+      "text": "Contenu + Social = Présence éditoriale",
+      "benefit": "Calendrier éditorial alimenté automatiquement"
+    },
+    "engage-content+engage-email": {
+      "text": "Contenu + Email = Nurturing automatisé",
+      "benefit": "Séquences email alimentées par contenu IA"
+    },
+    "engage-email+growth-crm": {
+      "text": "Email + CRM = Communication segmentée",
+      "benefit": "Emails personnalisés selon étape du cycle de vie"
+    },
+    "engage-attribution+engage-budget": {
+      "text": "Attribution + Budget = Investissement intelligent",
+      "benefit": "Budget réalloué vers les canaux qui convertissent"
+    },
+    "engage-ab+intel-ml": {
+      "text": "A/B Testing + IA = Optimisation auto-apprenante",
+      "benefit": "Tests analysés et gagnants déployés automatiquement"
+    },
+    "brand-identity+brand-web": {
+      "text": "Identité + Web = Présence digitale cohérente",
+      "benefit": "Marque reconnaissable du premier regard"
+    },
+    "brand-identity+brand-system": {
+      "text": "Identité + Design System = Cohérence garantie",
+      "benefit": "Chaque interface respecte l'ADN de marque"
+    },
+    "brand-web+engage-analytics": {
+      "text": "Site + Analytics = Conversion optimisée",
+      "benefit": "Parcours utilisateur analysé et amélioré continuellement"
+    },
+    "brand-web+growth-crm": {
+      "text": "Site + CRM = Leads qualifiés automatiquement",
+      "benefit": "Visiteurs web convertis en contacts CRM enrichis"
+    },
+    "brand-motion+brand-social": {
+      "text": "Motion + Social = Engagement visuel",
+      "benefit": "Contenus animés qui captent l'attention sur les réseaux"
+    },
+    "brand-ui+ent-custom": {
+      "text": "UI + Sur-mesure = Expérience unique",
+      "benefit": "Interfaces métier aussi agréables que grand public"
+    },
+    "brand-docs+ent-erp": {
+      "text": "Templates + ERP = Documents pro automatisés",
+      "benefit": "Factures, devis, rapports générés à votre image"
+    },
+    "integ-universal+ent-erp": {
+      "text": "Connecteur + ERP = Écosystème unifié",
+      "benefit": "Tous vos systèmes communiquent parfaitement"
+    },
+    "integ-sync+intel-banks": {
+      "text": "Sync + Banques = Trésorerie temps réel",
+      "benefit": "Soldes et mouvements actualisés automatiquement"
+    },
+    "integ-api+ent-custom": {
+      "text": "APIs + Sur-mesure = Extensibilité native",
+      "benefit": "Nouveaux développements intégrés facilement"
+    },
+    "integ-iot+ops-fleet": {
+      "text": "IoT + Flotte = Télémétrie complète",
+      "benefit": "Données véhicules remontées en temps réel"
+    },
+    "integ-iot+ops-maintenance": {
+      "text": "IoT + Maintenance = Prédiction mécanique",
+      "benefit": "Pannes anticipées grâce aux capteurs embarqués"
+    },
+    "integ-etl+intel-ml": {
+      "text": "ETL + IA = Données prêtes pour l'intelligence",
+      "benefit": "Données nettoyées alimentent les modèles prédictifs"
+    },
+    "integ-legacy+integ-universal": {
+      "text": "Legacy + Connecteur = Migration douce",
+      "benefit": "Anciens systèmes intégrés sans disruption"
+    },
+    "integ-monitor+sec-detect": {
+      "text": "Monitoring + Détection = Surveillance unifiée",
+      "benefit": "Anomalies techniques et sécuritaires corrélées"
+    },
+    "sec-detect+sec-response": {
+      "text": "Détection + Réponse = Protection automatique",
+      "benefit": "Menaces neutralisées sans intervention humaine"
+    },
+    "sec-compliance+sec-audit": {
+      "text": "Compliance + Audit = Conformité prouvée",
+      "benefit": "Piste d'audit complète pour chaque exigence réglementaire"
+    },
+    "sec-access+ent-hr": {
+      "text": "Accès + RH = Droits alignés sur l'organisation",
+      "benefit": "Permissions ajustées automatiquement aux mouvements RH"
+    },
+    "sec-encrypt+integ-sync": {
+      "text": "Chiffrement + Sync = Données protégées en transit",
+      "benefit": "Synchronisation sécurisée de bout en bout"
+    },
+    "sec-backup+ent-erp": {
+      "text": "Backup + ERP = Continuité garantie",
+      "benefit": "Données métier sauvegardées et restaurables"
+    },
+    "sec-pentest+integ-api": {
+      "text": "Pentest + APIs = Sécurité applicative",
+      "benefit": "Interfaces exposées testées en permanence"
+    },
+    "ent-erp+intel-reports": {
+      "text": "ERP + Reporting = Visibilité totale",
+      "benefit": "Données opérationnelles transformées en insights actionnables"
+    },
+    "ent-erp+ent-hr": {
+      "text": "ERP + RH = Gestion unifiée du capital humain",
+      "benefit": "Paie, congés, évaluations intégrés au système central"
+    },
+    "ent-erp+ent-purchase": {
+      "text": "ERP + Achats = Supply chain maîtrisée",
+      "benefit": "Commandes, réceptions, factures dans un flux unique"
+    },
+    "ent-custom+brand-ui": {
+      "text": "Sur-mesure + UI = Solution métier agréable",
+      "benefit": "Processus uniques avec expérience utilisateur soignée"
+    },
+    "ent-deploy+ent-support": {
+      "text": "Déploiement + Support = Succès garanti",
+      "benefit": "Mise en production accompagnée, adoption assurée"
+    },
+    "ent-project+ent-hr": {
+      "text": "Projets + RH = Ressources optimisées",
+      "benefit": "Affectations projet alignées sur disponibilités et compétences"
+    },
+    "ent-docs+sec-access": {
+      "text": "GED + Accès = Information sécurisée",
+      "benefit": "Documents accessibles aux bonnes personnes uniquement"
+    },
+    "default": {
+      "text": "Synergie établie",
+      "benefit": "L'information circule, la valeur se multiplie"
+    }
+  },
+
+  "dimensions": {
+    "operations": {
+      "name": "Opérations Terrain",
+      "unlock": "Vos opérations passent en mode intelligent.",
+      "bullets": [
+        "Visibilité temps réel sur le terrain",
+        "Planification optimisée par IA",
+        "Maintenance anticipée, zéro surprise"
+      ],
+      "full": "Chaîne opérationnelle entièrement digitalisée. Vous opérez avec la précision d'une horloge suisse."
+    },
+    "intelligence": {
+      "name": "Intelligence Décisionnelle",
+      "unlock": "Vos données deviennent votre avantage compétitif.",
+      "bullets": [
+        "Trésorerie consolidée en temps réel",
+        "Prévisions financières fiables",
+        "Anomalies détectées automatiquement"
+      ],
+      "full": "Intelligence financière complète. Chaque décision est désormais éclairée par des données fiables."
+    },
+    "growth": {
+      "name": "Croissance Commerciale",
+      "unlock": "Votre machine commerciale s'accélère.",
+      "bullets": [
+        "Leads qualifiés automatiquement",
+        "Pipeline transparent et prévisible",
+        "Clients fidélisés proactivement"
+      ],
+      "full": "Force de vente augmentée. Chaque opportunité est captée, suivie et convertie systématiquement."
+    },
+    "engagement": {
+      "name": "Marketing Automation",
+      "unlock": "Votre marketing devient une science exacte.",
+      "bullets": [
+        "Campagnes auto-optimisées",
+        "Contenu généré à la demande",
+        "ROI mesuré avec précision"
+      ],
+      "full": "Marketing automation complète. Vos campagnes s'améliorent continuellement sans effort."
+    },
+    "brand": {
+      "name": "Identité & Design",
+      "unlock": "Votre image inspire confiance et premium.",
+      "bullets": [
+        "Identité visuelle cohérente",
+        "Présence digitale impactante",
+        "Supports professionnels"
+      ],
+      "full": "Marque premium établie. Chaque point de contact renforce votre positionnement haut de gamme."
+    },
+    "integration": {
+      "name": "Connectivité",
+      "unlock": "Vos systèmes communiquent enfin.",
+      "bullets": [
+        "Données synchronisées partout",
+        "Intégrations sans friction",
+        "Flux visibles et monitorés"
+      ],
+      "full": "Écosystème technique unifié. L'information circule librement entre tous vos outils."
+    },
+    "security": {
+      "name": "Sécurité & Conformité",
+      "unlock": "Vos actifs numériques sont protégés.",
+      "bullets": [
+        "Menaces détectées en temps réel",
+        "Conformité automatisée",
+        "Données chiffrées et sauvegardées"
+      ],
+      "full": "Forteresse digitale opérationnelle. Vous opérez avec la sécurité d'une banque."
+    },
+    "enterprise": {
+      "name": "Gestion d'Entreprise",
+      "unlock": "Votre entreprise a des fondations solides.",
+      "bullets": [
+        "Processus unifiés dans l'ERP",
+        "Équipes coordonnées",
+        "Support expert disponible"
+      ],
+      "full": "Infrastructure enterprise-grade. Vous disposez des outils des grandes entreprises, adaptés à votre taille."
+    }
+  },
+
+  "dimension_synergies": {
+    "operations+intelligence": {
+      "text": "Ops × Intel = Décisions terrain éclairées",
+      "detail": "Vos données opérationnelles alimentent directement votre intelligence décisionnelle."
+    },
+    "operations+integration": {
+      "text": "Ops × Intégration = Terrain connecté",
+      "detail": "IoT, capteurs et systèmes terrain remontent en temps réel."
+    },
+    "operations+growth": {
+      "text": "Ops × Growth = Promesses tenues",
+      "detail": "Excellence opérationnelle qui renforce la confiance commerciale."
+    },
+    "operations+security": {
+      "text": "Ops × Sécurité = Continuité protégée",
+      "detail": "Opérations critiques sécurisées et auditables."
+    },
+    "operations+enterprise": {
+      "text": "Ops × Enterprise = Processus intégrés",
+      "detail": "Terrain et back-office dans un système unifié."
+    },
+    "operations+engagement": {
+      "text": "Ops × Engagement = Service client augmenté",
+      "detail": "Données terrain pour une communication client pertinente."
+    },
+    "operations+brand": {
+      "text": "Ops × Brand = Excellence visible",
+      "detail": "Qualité opérationnelle reflétée dans l'image de marque."
+    },
+    "intelligence+growth": {
+      "text": "Intel × Growth = Revenue prévisible",
+      "detail": "Prévisions financières alimentées par les données commerciales réelles."
+    },
+    "intelligence+security": {
+      "text": "Intel × Sécurité = Vigilance intelligente",
+      "detail": "IA qui détecte les anomalies financières et les menaces simultanément."
+    },
+    "intelligence+engagement": {
+      "text": "Intel × Engagement = Marketing data-driven",
+      "detail": "Décisions marketing guidées par l'intelligence des données."
+    },
+    "intelligence+brand": {
+      "text": "Intel × Brand = Positionnement éclairé",
+      "detail": "Stratégie de marque basée sur des insights marché."
+    },
+    "intelligence+integration": {
+      "text": "Intel × Intégration = Data lake unifié",
+      "detail": "Toutes les sources de données dans un lac analytique."
+    },
+    "intelligence+enterprise": {
+      "text": "Intel × Enterprise = BI native",
+      "detail": "Intelligence décisionnelle intégrée aux processus métier."
+    },
+    "growth+engagement": {
+      "text": "Growth × Engagement = Cycle client vertueux",
+      "detail": "Acquisition et fidélisation fusionnent en un système continu."
+    },
+    "growth+brand": {
+      "text": "Growth × Brand = Conversion premium",
+      "detail": "Image forte qui attire, commerciaux qui convertissent."
+    },
+    "growth+integration": {
+      "text": "Growth × Intégration = Pipeline connecté",
+      "detail": "CRM synchronisé avec tous les points de contact."
+    },
+    "growth+security": {
+      "text": "Growth × Sécurité = Confiance client",
+      "detail": "Données clients protégées, relation de confiance."
+    },
+    "growth+enterprise": {
+      "text": "Growth × Enterprise = Ventes intégrées",
+      "detail": "Du prospect à la facturation, flux automatisé."
+    },
+    "engagement+brand": {
+      "text": "Engagement × Brand = Communication cohérente",
+      "detail": "Chaque message renforce votre positionnement."
+    },
+    "engagement+integration": {
+      "text": "Engagement × Intégration = Marketing omnicanal",
+      "detail": "Campagnes orchestrées sur tous les canaux."
+    },
+    "engagement+security": {
+      "text": "Engagement × Sécurité = RGPD by design",
+      "detail": "Marketing conforme et respectueux des données."
+    },
+    "engagement+enterprise": {
+      "text": "Engagement × Enterprise = Marketing intégré",
+      "detail": "Campagnes pilotées depuis le système central."
+    },
+    "brand+integration": {
+      "text": "Brand × Intégration = Identité partout",
+      "detail": "Marque cohérente sur tous les points de contact digitaux."
+    },
+    "brand+security": {
+      "text": "Brand × Sécurité = Réputation protégée",
+      "detail": "Image de marque préservée des risques cyber."
+    },
+    "brand+enterprise": {
+      "text": "Brand × Enterprise = Documents premium",
+      "detail": "Chaque sortie système reflète votre identité."
+    },
+    "integration+enterprise": {
+      "text": "Intégration × Enterprise = Système unifié",
+      "detail": "ERP central connecté à tout l'écosystème."
+    },
+    "integration+security": {
+      "text": "Intégration × Sécurité = Flux sécurisés",
+      "detail": "Échanges de données chiffrés et tracés."
+    },
+    "security+enterprise": {
+      "text": "Sécurité × Enterprise = Fondations sûres",
+      "detail": "Sécurité intégrée dès les fondations, pas ajoutée après."
+    },
+    "full_ecosystem": {
+      "text": "Écosystème Digital Complet",
+      "detail": "Tous les systèmes interconnectés. Vous opérez une entreprise véritablement digitale."
+    }
+  },
+
+  "milestones": {
+    "2_modules": "Première synergie possible.",
+    "3_modules": "Architecture en formation.",
+    "5_modules": "Écosystème significatif.",
+    "8_modules": "Infrastructure solide.",
+    "2_connections": "Les systèmes dialoguent.",
+    "3_connections": "Réseau d'intelligence actif.",
+    "5_connections": "Synergie maximale entre modules.",
+    "2_dimensions": "Vision transversale activée.",
+    "4_dimensions": "Entreprise intégrée.",
+    "6_dimensions": "Transformation digitale avancée.",
+    "full_dimension": "Maîtrise totale : {dimension}"
+  }
+}

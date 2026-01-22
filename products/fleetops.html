@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FleetOps Pro: -30% couts, -40% pannes, ROI en 6 mois. Gestion de flotte IA pour BTP, Transport, Location. 8 modules integres. Demo gratuite.">
+    <meta name="keywords" content="FleetOps Pro, Gestion de flotte, Fleet Management, BTP, Transport, Location, Maintenance predictive, GPS, IA">
+    <meta name="author" content="Kaalytics">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#10b981">
+    <title>FleetOps Pro | Gestion de Flotte IA -30% Couts | Kaalytics</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kaalytics.com/products/fleetops">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://kaalytics.com/products/fleetops">
+    <meta property="og:title" content="FleetOps Pro | Gestion de Flotte IA - Reduisez vos couts de 30%">
+    <meta property="og:description" content="Solution complete de gestion de flotte IA. 8 modules integres, maintenance predictive, ROI en 6 mois. Demo gratuite.">
+    <meta property="og:image" content="https://kaalytics.com/assets/images/og-fleetops.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Kaalytics">
+    <meta property="product:price:amount" content="500">
+    <meta property="product:price:currency" content="EUR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://kaalytics.com/products/fleetops">
+    <meta name="twitter:title" content="FleetOps Pro | Gestion de Flotte IA -30% Couts">
+    <meta name="twitter:description" content="Solution complete de gestion de flotte IA. 8 modules integres, ROI en 6 mois.">
+    <meta name="twitter:image" content="https://kaalytics.com/assets/images/og-fleetops.jpg">
+    <meta name="twitter:site" content="@kaalytics">
+
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "FleetOps Pro",
+        "description": "Solution complete de gestion de flotte IA pour BTP, Transport et Location. 8 modules integres: Parc, Planning, Maintenance, Supply, Chantiers, Effectif, Produits, Dashboard.",
+        "url": "https://kaalytics.com/products/fleetops",
+        "image": "https://kaalytics.com/assets/images/fleetops-hero.jpg",
+        "brand": {
+            "@type": "Brand",
+            "name": "Kaalytics"
+        },
+        "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "500",
+            "highPrice": "5000",
+            "priceCurrency": "EUR",
+            "offerCount": "3",
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "name": "Starter",
+                    "price": "500",
+                    "priceCurrency": "EUR",
+                    "description": "1-20 vehicules"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Professional",
+                    "price": "1500",
+                    "priceCurrency": "EUR",
+                    "description": "21-100 vehicules"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Enterprise",
+                    "description": "100+ vehicules, sur mesure"
+                }
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "50"
+        }
+    }
+    </script>
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- GSAP -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+    <style>
+        /* FleetOps Page Styles */
+        :root {
+            --fleet-primary: #10b981;
+            --fleet-secondary: #0d9488;
+            --fleet-gradient: linear-gradient(135deg, #047857 0%, #10b981 50%, #0d9488 100%);
+        }
+
+        /* Hero FleetOps */
+        .hero-fleet {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--bg-void);
+            overflow: hidden;
+            padding-top: var(--navbar-height);
+        }
+
+        .hero-fleet__bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 50% at 50% -10%, rgba(16, 185, 129, 0.2) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 40% at 80% 80%, rgba(13, 148, 136, 0.15) 0%, transparent 50%);
+        }
+
+        .hero-fleet__grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        .hero-fleet__content {
+            position: relative;
+            max-width: var(--container-xl);
+            margin: 0 auto;
+            padding: var(--space-3xl) var(--space-xl);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-3xl);
+            align-items: center;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-fleet__content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        .hero-fleet__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-xs) var(--space-md);
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid var(--emerald);
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            font-weight: 600;
+            color: var(--emerald);
+            margin-bottom: var(--space-lg);
+        }
+
+        .hero-fleet__title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: var(--space-lg);
+        }
+
+        .hero-fleet__title-gradient {
+            background: var(--fleet-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-fleet__subtitle {
+            font-size: var(--text-xl);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xl);
+            max-width: 550px;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-fleet__subtitle {
+                margin: 0 auto var(--space-xl);
+            }
+        }
+
+        .hero-fleet__stats {
+            display: flex;
+            gap: var(--space-2xl);
+            margin-bottom: var(--space-xl);
+        }
+
+        @media (max-width: 1024px) {
+            .hero-fleet__stats {
+                justify-content: center;
+            }
+        }
+
+        .hero-fleet__stat {
+            text-align: left;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-fleet__stat {
+                text-align: center;
+            }
+        }
+
+        .hero-fleet__stat-value {
+            font-size: var(--text-3xl);
+            font-weight: 800;
+            color: var(--emerald);
+        }
+
+        .hero-fleet__stat-label {
+            font-size: var(--text-sm);
+            color: var(--text-muted);
+        }
+
+        .hero-fleet__cta {
+            display: flex;
+            gap: var(--space-md);
+        }
+
+        @media (max-width: 1024px) {
+            .hero-fleet__cta {
+                justify-content: center;
+            }
+        }
+
+        .btn-fleet {
+            background: var(--fleet-gradient);
+            color: white;
+            font-weight: 700;
+        }
+
+        .btn-fleet:hover {
+            box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Dashboard Preview */
+        .dashboard-preview {
+            position: relative;
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-2xl);
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .dashboard-preview__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-md) var(--space-lg);
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .dashboard-preview__tabs {
+            display: flex;
+            gap: var(--space-sm);
+        }
+
+        .dashboard-preview__tab {
+            padding: var(--space-xs) var(--space-md);
+            background: transparent;
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: var(--text-xs);
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .dashboard-preview__tab--active {
+            background: var(--emerald);
+            color: var(--bg-void);
+        }
+
+        .dashboard-preview__body {
+            padding: var(--space-lg);
+            min-height: 380px;
+        }
+
+        /* Mini Map */
+        .mini-map {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mini-map__africa {
+            position: absolute;
+            inset: 10px;
+            background:
+                radial-gradient(circle at 30% 40%, rgba(16, 185, 129, 0.3) 0%, transparent 30%),
+                radial-gradient(circle at 50% 60%, rgba(13, 148, 136, 0.2) 0%, transparent 25%);
+            opacity: 0.5;
+        }
+
+        .mini-map__vehicle {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: var(--emerald);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--emerald);
+            animation: pulse 2s infinite;
+        }
+
+        .mini-map__vehicle:nth-child(1) { top: 30%; left: 25%; animation-delay: 0s; }
+        .mini-map__vehicle:nth-child(2) { top: 45%; left: 40%; animation-delay: 0.5s; }
+        .mini-map__vehicle:nth-child(3) { top: 60%; left: 35%; animation-delay: 1s; }
+        .mini-map__vehicle:nth-child(4) { top: 40%; left: 55%; animation-delay: 1.5s; }
+        .mini-map__vehicle:nth-child(5) { top: 55%; left: 65%; animation-delay: 0.3s; }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.3); opacity: 0.7; }
+        }
+
+        /* Mini Stats */
+        .mini-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+
+        .mini-stat {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            text-align: center;
+        }
+
+        .mini-stat__value {
+            font-size: var(--text-xl);
+            font-weight: 700;
+            color: var(--emerald);
+        }
+
+        .mini-stat__label {
+            font-size: var(--text-xs);
+            color: var(--text-muted);
+        }
+
+        /* Modules Section */
+        .modules-fleet {
+            background: var(--bg-primary);
+            padding: var(--space-4xl) 0;
+        }
+
+        .modules-fleet__container {
+            max-width: var(--container-xl);
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+
+        .modules-fleet__header {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+        }
+
+        .modules-fleet__title {
+            font-size: var(--text-4xl);
+            font-weight: 800;
+            margin-bottom: var(--space-md);
+        }
+
+        .modules-fleet__subtitle {
+            font-size: var(--text-lg);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .modules-fleet__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-lg);
+        }
+
+        @media (max-width: 1024px) {
+            .modules-fleet__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .modules-fleet__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .module-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            transition: all var(--transition-base);
+        }
+
+        .module-card:hover {
+            border-color: var(--emerald);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -20px rgba(16, 185, 129, 0.3);
+        }
+
+        .module-card__number {
+            font-size: var(--text-sm);
+            font-weight: 800;
+            color: var(--emerald);
+            font-family: var(--font-mono);
+            margin-bottom: var(--space-md);
+            opacity: 0.6;
+        }
+
+        .module-card:hover .module-card__number {
+            opacity: 1;
+        }
+
+        .module-card__title {
+            font-size: var(--text-lg);
+            font-weight: 700;
+            margin-bottom: var(--space-sm);
+        }
+
+        .module-card__desc {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--space-md);
+        }
+
+        .module-card__benefit {
+            display: inline-block;
+            padding: var(--space-xs) var(--space-sm);
+            background: rgba(16, 185, 129, 0.15);
+            border-radius: var(--radius-sm);
+            font-size: var(--text-xs);
+            font-weight: 600;
+            color: var(--emerald-light);
+        }
+
+        /* Industries Section */
+        .industries-fleet {
+            background: var(--bg-void);
+            padding: var(--space-4xl) 0;
+        }
+
+        .industries-fleet__container {
+            max-width: var(--container-xl);
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+
+        .industries-fleet__header {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+        }
+
+        .industries-fleet__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-lg);
+        }
+
+        @media (max-width: 968px) {
+            .industries-fleet__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .industry-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            text-align: center;
+            transition: all var(--transition-base);
+            text-decoration: none;
+        }
+
+        .industry-card:hover {
+            border-color: var(--emerald);
+            transform: translateY(-4px);
+        }
+
+        .industry-card__icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto var(--space-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--fleet-gradient);
+            border-radius: var(--radius-lg);
+            color: white;
+        }
+
+        .industry-card__name {
+            font-size: var(--text-lg);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-xs);
+        }
+
+        .industry-card__desc {
+            font-size: var(--text-sm);
+            color: var(--text-muted);
+        }
+
+        /* Pricing Section */
+        .pricing-fleet {
+            background: var(--bg-primary);
+            padding: var(--space-4xl) 0;
+        }
+
+        .pricing-fleet__container {
+            max-width: var(--container-xl);
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+
+        .pricing-fleet__header {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+        }
+
+        .pricing-fleet__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-xl);
+        }
+
+        @media (max-width: 968px) {
+            .pricing-fleet__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pricing-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+            display: flex;
+            flex-direction: column;
+            transition: all var(--transition-base);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .pricing-card--featured {
+            border-color: var(--emerald);
+            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(16, 185, 129, 0.05) 100%);
+            position: relative;
+        }
+
+        .pricing-card--featured::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--fleet-gradient);
+            border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+        }
+
+        .pricing-card__badge {
+            display: inline-block;
+            padding: var(--space-xs) var(--space-md);
+            background: var(--fleet-gradient);
+            border-radius: var(--radius-full);
+            font-size: var(--text-xs);
+            font-weight: 700;
+            color: white;
+            margin-bottom: var(--space-lg);
+            align-self: flex-start;
+        }
+
+        .pricing-card__name {
+            font-size: var(--text-xl);
+            font-weight: 700;
+            margin-bottom: var(--space-xs);
+        }
+
+        .pricing-card__vehicles {
+            font-size: var(--text-sm);
+            color: var(--text-muted);
+            margin-bottom: var(--space-lg);
+        }
+
+        .pricing-card__price {
+            margin-bottom: var(--space-lg);
+        }
+
+        .pricing-card__price-value {
+            font-size: var(--text-4xl);
+            font-weight: 800;
+        }
+
+        .pricing-card__price-period {
+            font-size: var(--text-sm);
+            color: var(--text-muted);
+        }
+
+        .pricing-card__features {
+            list-style: none;
+            margin-bottom: var(--space-xl);
+            flex-grow: 1;
+        }
+
+        .pricing-card__features li {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-sm) 0;
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+        }
+
+        .pricing-card__features li svg {
+            color: var(--emerald);
+            flex-shrink: 0;
+        }
+
+        .pricing-card__cta {
+            width: 100%;
+        }
+
+        /* CTA Section */
+        .cta-fleet {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(13, 148, 136, 0.1) 100%);
+            padding: var(--space-4xl) 0;
+            text-align: center;
+        }
+
+        .cta-fleet__container {
+            max-width: var(--container-md);
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+
+        .cta-fleet__title {
+            font-size: var(--text-3xl);
+            font-weight: 800;
+            margin-bottom: var(--space-md);
+        }
+
+        .cta-fleet__subtitle {
+            font-size: var(--text-lg);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xl);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-container" data-navbar="full" data-navbar-style="transparent"></div>
+
+    <!-- Hero Section - Message fort -->
+    <section class="hero-fleet">
+        <div class="hero-fleet__bg"></div>
+        <div class="hero-fleet__grid"></div>
+
+        <!-- Floating particles -->
+        <div class="hero__particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+
+        <div class="hero-fleet__content">
+            <div class="hero-fleet__text">
+                <!-- Trust indicator -->
+                <div class="hero-fleet__trust-bar" style="display: flex; align-items: center; gap: var(--space-lg); margin-bottom: var(--space-xl); flex-wrap: wrap;">
+                    <div class="hero-fleet__badge">
+                        <span style="width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite;"></span>
+                        En production - 50+ flottes gerees
+                    </div>
+                    <div style="font-size: var(--text-sm); color: var(--text-muted);">
+                        Utilise par <strong style="color: var(--text-primary);">BEKS &bull; TransMaroc &bull; MineralCo</strong>
+                    </div>
+                </div>
+
+                <h1 class="hero-fleet__title">
+                    <span style="color: var(--text-primary); display: block;">Votre flotte vous coute</span>
+                    <span class="hero-fleet__title-gradient" style="font-size: 1.2em;">30% de trop.</span>
+                    <span style="color: var(--text-primary); display: block; margin-top: var(--space-sm);">On corrige ca.</span>
+                </h1>
+
+                <p class="hero-fleet__subtitle">
+                    Vos gestionnaires jonglent entre <strong>5-10 systemes</strong> differents.
+                    FleetOps Pro unifie tout en une plateforme. <strong>Deploye en 2-4 semaines. ROI en 6 mois.</strong>
+                </p>
+
+                <div class="hero-fleet__stats">
+                    <div class="hero-fleet__stat">
+                        <div class="hero-fleet__stat-value">-30%</div>
+                        <div class="hero-fleet__stat-label">Couts operationnels</div>
+                    </div>
+                    <div class="hero-fleet__stat">
+                        <div class="hero-fleet__stat-value">-40%</div>
+                        <div class="hero-fleet__stat-label">Temps d'arret</div>
+                    </div>
+                    <div class="hero-fleet__stat">
+                        <div class="hero-fleet__stat-value">+30%</div>
+                        <div class="hero-fleet__stat-label">Utilisation flotte</div>
+                    </div>
+                    <div class="hero-fleet__stat">
+                        <div class="hero-fleet__stat-value">-50%</div>
+                        <div class="hero-fleet__stat-label">Temps admin</div>
+                    </div>
+                </div>
+
+                <div class="hero-fleet__cta">
+                    <a href="#demo" class="btn btn-fleet btn-lg" style="position: relative;">
+                        Audit gratuit en 48h
+                        <span style="position: absolute; top: -8px; right: -8px; background: #ef4444; color: white; font-size: 10px; padding: 2px 8px; border-radius: 10px;">3 places</span>
+                    </a>
+                    <a href="#modules" class="btn btn-ghost btn-lg">Voir les 8 modules</a>
+                </div>
+
+                <!-- Social proof -->
+                <div style="display: flex; align-items: center; gap: var(--space-md); margin-top: var(--space-xl);">
+                    <div style="display: flex;">
+                        <div style="width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #10b981, #0d9488); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; color: white; border: 2px solid var(--bg-void);">MB</div>
+                        <div style="width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #0d9488, #14b8a6); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; color: white; border: 2px solid var(--bg-void); margin-left: -8px;">SK</div>
+                        <div style="width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #059669, #10b981); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; color: white; border: 2px solid var(--bg-void); margin-left: -8px;">AE</div>
+                        <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--bg-tertiary); display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 600; color: var(--text-muted); border: 2px solid var(--bg-void); margin-left: -8px;">+47</div>
+                    </div>
+                    <div>
+                        <div style="color: #fbbf24;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <span style="font-size: var(--text-sm); color: var(--text-muted);">4.9/5 - 50+ entreprises transformees</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Preview -->
+            <div class="dashboard-preview">
+                <div class="dashboard-preview__header">
+                    <div class="dashboard-preview__tabs">
+                        <button class="dashboard-preview__tab dashboard-preview__tab--active">Carte</button>
+                        <button class="dashboard-preview__tab">Planning</button>
+                        <button class="dashboard-preview__tab">Alertes</button>
+                    </div>
+                    <span style="font-size: var(--text-xs); color: var(--text-muted);">Live</span>
+                </div>
+                <div class="dashboard-preview__body">
+                    <div class="mini-map">
+                        <div class="mini-map__africa"></div>
+                        <div class="mini-map__vehicle"></div>
+                        <div class="mini-map__vehicle"></div>
+                        <div class="mini-map__vehicle"></div>
+                        <div class="mini-map__vehicle"></div>
+                        <div class="mini-map__vehicle"></div>
+                    </div>
+                    <div class="mini-stats">
+                        <div class="mini-stat">
+                            <div class="mini-stat__value">127</div>
+                            <div class="mini-stat__label">Vehicules actifs</div>
+                        </div>
+                        <div class="mini-stat">
+                            <div class="mini-stat__value">98%</div>
+                            <div class="mini-stat__label">Disponibilite</div>
+                        </div>
+                        <div class="mini-stat">
+                            <div class="mini-stat__value">3</div>
+                            <div class="mini-stat__label">Alertes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Constat - Avant/Apres -->
+    <section class="constat-fleet" style="padding: var(--space-4xl) 0; background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);">
+        <div style="max-width: var(--container-xl); margin: 0 auto; padding: 0 var(--space-xl);">
+            <div style="text-align: center; margin-bottom: var(--space-3xl);">
+                <span style="display: inline-block; padding: var(--space-xs) var(--space-md); background: rgba(16, 185, 129, 0.15); border-radius: var(--radius-full); font-size: var(--text-sm); font-weight: 600; color: var(--emerald); margin-bottom: var(--space-md);">Le constat</span>
+                <h2 style="font-size: var(--text-4xl); font-weight: 800; color: var(--text-primary);">Gerer une flotte industrielle, c'est le chaos</h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: var(--space-2xl); align-items: start;">
+                <!-- AVANT - Problemes -->
+                <div style="background: var(--bg-card); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: var(--radius-xl); padding: var(--space-xl);">
+                    <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-lg);">
+                        <span style="font-size: 1.5rem;">😤</span>
+                        <h3 style="font-size: var(--text-xl); font-weight: 700; color: #ef4444;">Avant</h3>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-md);">
+                        <li style="display: flex; align-items: flex-start; gap: var(--space-sm); color: var(--text-secondary);">
+                            <span style="color: #ef4444; font-weight: bold;">✗</span>
+                            <span>Equipements disperses sur <strong>10+ chantiers</strong> sans visibilite</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: var(--space-sm); color: var(--text-secondary);">
+                            <span style="color: #ef4444; font-weight: bold;">✗</span>
+                            <span>Maintenance <strong>reactive</strong> : pannes surprises a 15 000€</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: var(--space-sm); color: var(--text-secondary);">
+                            <span style="color: #ef4444; font-weight: bold;">✗</span>
+                            <span><strong>5-10 fichiers Excel</strong> pour suivre le parc</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: var(--space-sm); color: var(--text-secondary);">
+                            <span style="color: #ef4444; font-weight: bold;">✗</span>
+                            <span>Decisions basees sur des <strong>donnees obsoletes</strong></span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: var(--space-sm); color: var(--text-secondary);">
+                            <span style="color: #ef4444; font-weight: bold;">✗</span>
+                            <span><strong>50 000€/an</strong> gaspilles en temps d'arret evitables</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Fleche -->
+                <div style="display: flex; align-items: center; justify-content: center; height: 100%; padding-top: var(--space-3xl);">
+                    <div style="background: var(--gradient-brand); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- APRES - Solutions -->
+                <div style="background: var(--bg-card); border: 1px solid var(--emerald); border-radius: var(--radius-xl); padding: var(--space-xl); box-shadow: 0 0 30px -10px rgba(16, 185, 129, 0.3);">
+                    <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-lg);">
+                        <span style="font-size: 1.5rem;">🚀</span>
+                        <h3 style="font-size: var(--text-xl); font-weight: 700; color: var(--emerald);">Avec FleetOps Pro</h3>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-md);">
+                        <li style="display: flex; align-items: flex-start; gap: var(--space-sm); color: var(--text-secondary);">
+                            <span style="color: var(--emerald); font-weight: bold;">✓</span>
+                            <span>Localisation <strong>GPS en 10 secondes</strong> max</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: var(--space-sm); color: var(--text-secondary);">
+                            <span style="color: var(--emerald); font-weight: bold;">✓</span>
+                            <span>IA <strong>predictive</strong> : alertes 2 semaines avant panne</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: var(--space-sm); color: var(--text-secondary);">
+                            <span style="color: var(--emerald); font-weight: bold;">✓</span>
+                            <span><strong>1 seule plateforme</strong> unifiee pour tout</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: var(--space-sm); color: var(--text-secondary);">
+                            <span style="color: var(--emerald); font-weight: bold;">✓</span>
+                            <span>Tableaux de bord <strong>temps reel</strong>, pas fin de mois</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: var(--space-sm); color: var(--text-secondary);">
+                            <span style="color: var(--emerald); font-weight: bold;">✓</span>
+                            <span>ROI visible en <strong>6 mois</strong> : -40% couts maintenance</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Stats impact -->
+            <div style="display: flex; justify-content: center; gap: var(--space-3xl); margin-top: var(--space-3xl); flex-wrap: wrap;">
+                <div style="text-align: center;">
+                    <div style="font-size: var(--text-4xl); font-weight: 800; color: var(--emerald);">-70%</div>
+                    <div style="font-size: var(--text-sm); color: var(--text-muted);">Pannes imprevues</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: var(--text-4xl); font-weight: 800; color: var(--emerald);">+35%</div>
+                    <div style="font-size: var(--text-sm); color: var(--text-muted);">Taux utilisation</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: var(--text-4xl); font-weight: 800; color: var(--emerald);">2-4 sem</div>
+                    <div style="font-size: var(--text-sm); color: var(--text-muted);">Deploiement</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: var(--text-4xl); font-weight: 800; color: var(--emerald);">24/7</div>
+                    <div style="font-size: var(--text-sm); color: var(--text-muted);">Support Afrique</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section class="modules-fleet" id="modules">
+        <div class="modules-fleet__container">
+            <div class="modules-fleet__header">
+                <h2 class="modules-fleet__title">8 modules integres</h2>
+                <p class="modules-fleet__subtitle">
+                    Une plateforme unique pour gerer toute votre flotte. Fini les 5-10 systemes differents.
+                </p>
+            </div>
+            <div class="modules-fleet__grid">
+                <!-- Module 1: Parc -->
+                <div class="module-card">
+                    <div class="module-card__number">01</div>
+                    <h3 class="module-card__title">Parc</h3>
+                    <p class="module-card__desc">Suivi temps reel de tous vos vehicules et equipements sur une carte interactive.</p>
+                    <span class="module-card__benefit">-60% temps localisation</span>
+                </div>
+
+                <!-- Module 2: Planning -->
+                <div class="module-card">
+                    <div class="module-card__number">02</div>
+                    <h3 class="module-card__title">Planning</h3>
+                    <p class="module-card__desc">Timeline visuelle drag & drop pour planifier vos ressources et detecter les conflits.</p>
+                    <span class="module-card__benefit">+35% productivite</span>
+                </div>
+
+                <!-- Module 3: Maintenance -->
+                <div class="module-card">
+                    <div class="module-card__number">03</div>
+                    <h3 class="module-card__title">Maintenance</h3>
+                    <p class="module-card__desc">Maintenance preventive intelligente basee sur l'usage reel de vos machines.</p>
+                    <span class="module-card__benefit">-40% couts maintenance</span>
+                </div>
+
+                <!-- Module 4: Supply Chain -->
+                <div class="module-card">
+                    <div class="module-card__number">04</div>
+                    <h3 class="module-card__title">Supply Chain</h3>
+                    <p class="module-card__desc">Workflow automatise des achats et gestion des stocks en temps reel.</p>
+                    <span class="module-card__benefit">-30% couts achat</span>
+                </div>
+
+                <!-- Module 5: Chantiers -->
+                <div class="module-card">
+                    <div class="module-card__number">05</div>
+                    <h3 class="module-card__title">Chantiers</h3>
+                    <p class="module-card__desc">Suivi projets, budgets et ressources par chantier avec reporting client.</p>
+                    <span class="module-card__benefit">ROI visible par projet</span>
+                </div>
+
+                <!-- Module 6: Effectif -->
+                <div class="module-card">
+                    <div class="module-card__number">06</div>
+                    <h3 class="module-card__title">Effectif</h3>
+                    <p class="module-card__desc">Allocation des competences et suivi productivite de vos equipes.</p>
+                    <span class="module-card__benefit">Meilleure allocation RH</span>
+                </div>
+
+                <!-- Module 7: Produits -->
+                <div class="module-card">
+                    <div class="module-card__number">07</div>
+                    <h3 class="module-card__title">Produits</h3>
+                    <p class="module-card__desc">Catalogue pieces detachees et compatibilites machines automatiques.</p>
+                    <span class="module-card__benefit">6000+ references</span>
+                </div>
+
+                <!-- Module 8: Dashboard -->
+                <div class="module-card">
+                    <div class="module-card__number">08</div>
+                    <h3 class="module-card__title">Dashboard</h3>
+                    <p class="module-card__desc">KPIs en temps reel et rapports automatises pour piloter votre activite.</p>
+                    <span class="module-card__benefit">Decisions eclairees</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries-fleet">
+        <div class="industries-fleet__container">
+            <div class="industries-fleet__header">
+                <h2 class="modules-fleet__title">Concu pour votre industrie</h2>
+                <p class="modules-fleet__subtitle">FleetOps Pro s'adapte aux specificites de votre secteur</p>
+            </div>
+            <div class="industries-fleet__grid">
+                <a href="../industries/transport.html" class="industry-card">
+                    <div class="industry-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="1" y="3" width="15" height="13"/>
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                            <circle cx="5.5" cy="18.5" r="2.5"/>
+                            <circle cx="18.5" cy="18.5" r="2.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="industry-card__name">Transport & Logistique</h3>
+                    <p class="industry-card__desc">Flottes de camions et livraison</p>
+                </a>
+
+                <a href="../industries/btp.html" class="industry-card">
+                    <div class="industry-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 20h20M5 20V8l7-4 7 4v12"/>
+                            <path d="M9 20v-6h6v6"/>
+                        </svg>
+                    </div>
+                    <h3 class="industry-card__name">BTP & Construction</h3>
+                    <p class="industry-card__desc">Engins et materiels de chantier</p>
+                </a>
+
+                <a href="../industries/mines.html" class="industry-card">
+                    <div class="industry-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v8l4 4-4 4v4"/>
+                            <path d="M8 2v8l-4 4 4 4v4"/>
+                        </svg>
+                    </div>
+                    <h3 class="industry-card__name">Mines & Energie</h3>
+                    <p class="industry-card__desc">Equipements lourds et extraction</p>
+                </a>
+
+                <a href="../industries/location.html" class="industry-card">
+                    <div class="industry-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </div>
+                    <h3 class="industry-card__name">Location Vehicules</h3>
+                    <p class="industry-card__desc">Gestion de parc locatif</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-fleet" id="pricing">
+        <div class="pricing-fleet__container">
+            <div class="pricing-fleet__header">
+                <h2 class="modules-fleet__title">Tarifs adaptes a votre flotte</h2>
+                <p class="modules-fleet__subtitle">Deploiement en 2-4 semaines. ROI en 6-12 mois.</p>
+            </div>
+            <div class="pricing-fleet__grid">
+                <!-- Starter -->
+                <div class="pricing-card">
+                    <h3 class="pricing-card__name">Starter</h3>
+                    <p class="pricing-card__vehicles">10-50 vehicules</p>
+                    <div class="pricing-card__price">
+                        <span class="pricing-card__price-value">500 EUR</span>
+                        <span class="pricing-card__price-period">/mois</span>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 5 utilisateurs</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 8 modules inclus</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Support email</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Formation incluse</li>
+                    </ul>
+                    <a href="../#contact" class="btn btn-ghost btn-lg pricing-card__cta">Commencer</a>
+                </div>
+
+                <!-- Professional (Featured) -->
+                <div class="pricing-card pricing-card--featured">
+                    <span class="pricing-card__badge">Recommande</span>
+                    <h3 class="pricing-card__name">Professional</h3>
+                    <p class="pricing-card__vehicles">50-200 vehicules</p>
+                    <div class="pricing-card__price">
+                        <span class="pricing-card__price-value">1 500 EUR</span>
+                        <span class="pricing-card__price-period">/mois</span>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 20 utilisateurs</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 8 modules inclus</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Support prioritaire</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Formation equipe</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> API access</li>
+                    </ul>
+                    <a href="../#contact" class="btn btn-fleet btn-lg pricing-card__cta">Commencer</a>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="pricing-card">
+                    <h3 class="pricing-card__name">Enterprise</h3>
+                    <p class="pricing-card__vehicles">200+ vehicules</p>
+                    <div class="pricing-card__price">
+                        <span class="pricing-card__price-value">5 000 EUR</span>
+                        <span class="pricing-card__price-period">/mois</span>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Utilisateurs illimites</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 8 modules inclus</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Support dedie 24/7</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Integrations custom</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> SLA garanti</li>
+                    </ul>
+                    <a href="../#contact" class="btn btn-ghost btn-lg pricing-card__cta">Nous contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-fleet" id="demo">
+        <div class="cta-fleet__container">
+            <h2 class="cta-fleet__title">Pret a optimiser votre flotte?</h2>
+            <p class="cta-fleet__subtitle">
+                Deploiement en 2-4 semaines. Formation incluse. ROI garanti.
+            </p>
+            <a href="../#contact" class="btn btn-fleet btn-lg">Demander une demo gratuite</a>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="../components/navbar/navbar-loader.js"></script>
+    <script src="../assets/js/i18n/i18n.js"></script>
+    <script>
+        // Configure i18n for subpages
+        if (window.i18n) {
+            window.i18n.localesPath = '../assets/locales';
+            window.i18n.init();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+{
+    "presets": [
+        {
+            "id": "level-1-foundation",
+            "name": "Foundation",
+            "emoji": "🌱",
+            "level": 1,
+            "levelLabel": "Niveau 1",
+            "description": "Les bases solides - ERP central avec piliers essentiels",
+            "tags": ["starter", "simple", "erp"],
+            "moduleCount": 5,
+            "file": "level-1-foundation.json"
+        },
+        {
+            "id": "level-2-professional",
+            "name": "Professional",
+            "emoji": "🚀",
+            "level": 2,
+            "levelLabel": "Niveau 2",
+            "description": "Architecture professionnelle multi-dimensionnelle",
+            "tags": ["growth", "operations", "intelligence"],
+            "moduleCount": 10,
+            "file": "level-2-professional.json"
+        },
+        {
+            "id": "level-3-enterprise",
+            "name": "Enterprise",
+            "emoji": "💎",
+            "level": 3,
+            "levelLabel": "Niveau 3",
+            "description": "Architecture hexagonale complète - Toutes dimensions",
+            "tags": ["complete", "advanced", "hexagonal"],
+            "moduleCount": 17,
+            "file": "level-3-enterprise.json"
+        },
+        {
+            "id": "hexagonal-command",
+            "name": "Hexagonal Command",
+            "emoji": "⬡",
+            "level": 3,
+            "levelLabel": "Avancé",
+            "description": "Structure hexagonale parfaite avec hub central",
+            "tags": ["geometric", "architecture", "premium"],
+            "moduleCount": 13,
+            "file": "hexagonal-command.json"
+        },
+        {
+            "id": "diamond-architecture",
+            "name": "Diamond Flow",
+            "emoji": "💠",
+            "level": 3,
+            "levelLabel": "Avancé",
+            "description": "Flux stratégique en diamant du sommet vers la base",
+            "tags": ["geometric", "flow", "premium"],
+            "moduleCount": 13,
+            "file": "diamond-architecture.json"
+        },
+        {
+            "id": "operations-fleet",
+            "name": "Operations & Fleet",
+            "emoji": "🚛",
+            "level": 2,
+            "levelLabel": "Spécialisé",
+            "description": "Gestion de flotte avec maintenance prédictive",
+            "tags": ["operations", "fleet", "logistics"],
+            "moduleCount": 6,
+            "file": "operations-fleet.json"
+        },
+        {
+            "id": "growth-crm",
+            "name": "Growth & CRM",
+            "emoji": "📈",
+            "level": 2,
+            "levelLabel": "Spécialisé",
+            "description": "Pipeline commercial intelligent avec scoring",
+            "tags": ["growth", "sales", "crm"],
+            "moduleCount": 5,
+            "file": "growth-crm.json"
+        },
+        {
+            "id": "security-compliance",
+            "name": "Security Suite",
+            "emoji": "🛡️",
+            "level": 2,
+            "levelLabel": "Spécialisé",
+            "description": "Protection des données et conformité RGPD",
+            "tags": ["security", "compliance", "audit"],
+            "moduleCount": 5,
+            "file": "security-compliance.json"
+        }
+    ],
+    "levels": {
+        "1": {
+            "name": "Foundation",
+            "icon": "🌱",
+            "description": "Démarrage simple et efficace"
+        },
+        "2": {
+            "name": "Professional",
+            "icon": "🚀",
+            "description": "Architecture multi-dimensionnelle"
+        },
+        "3": {
+            "name": "Enterprise",
+            "icon": "💎",
+            "description": "Architecture géométrique avancée"
+        }
+    }
+}

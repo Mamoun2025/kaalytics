@@ -1,0 +1,602 @@
+<!--
+KAALYTICS - Chatbot Widget Component
+=====================================
+Floating chatbot widget with demo messages
+Glassmorphism design with typing indicator
+-->
+
+<!-- Chatbot Toggle Button -->
+<button class="chatbot-toggle" id="chatbotToggle" aria-label="Ouvrir le chat">
+    <div class="chatbot-toggle__icon chatbot-toggle__icon--chat">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+    </div>
+    <div class="chatbot-toggle__icon chatbot-toggle__icon--close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+    </div>
+    <span class="chatbot-toggle__badge">1</span>
+</button>
+
+<!-- Chatbot Widget -->
+<div class="chatbot-widget" id="chatbotWidget">
+    <div class="chatbot-widget__header">
+        <div class="chatbot-widget__avatar">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z"/>
+                <circle cx="12" cy="10" r="3"/>
+                <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/>
+            </svg>
+        </div>
+        <div class="chatbot-widget__info">
+            <span class="chatbot-widget__name">Kaalytics Assistant</span>
+            <span class="chatbot-widget__status">
+                <span class="chatbot-widget__status-dot"></span>
+                En ligne
+            </span>
+        </div>
+        <button class="chatbot-widget__minimize" id="chatbotMinimize" aria-label="Fermer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="chatbot-widget__messages" id="chatbotMessages">
+        <!-- Initial bot message -->
+        <div class="chatbot-message chatbot-message--bot">
+            <div class="chatbot-message__avatar">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="12" r="10"/>
+                </svg>
+            </div>
+            <div class="chatbot-message__bubble">
+                <p>Bonjour ! Je suis l'assistant Kaalytics. Comment puis-je vous aider aujourd'hui ?</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="chatbot-widget__suggestions" id="chatbotSuggestions">
+        <button class="chatbot-suggestion" data-question="pricing">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+            Quels sont vos tarifs ?
+        </button>
+        <button class="chatbot-suggestion" data-question="demo">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            Demander une demo
+        </button>
+        <button class="chatbot-suggestion" data-question="roi">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+            Quel ROI attendre ?
+        </button>
+        <button class="chatbot-suggestion" data-question="features">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <line x1="3" y1="9" x2="21" y2="9"/>
+                <line x1="9" y1="21" x2="9" y2="9"/>
+            </svg>
+            Fonctionnalites FleetOps
+        </button>
+    </div>
+
+    <div class="chatbot-widget__input">
+        <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Ecrivez votre message...">
+        <button class="chatbot-send" id="chatbotSend" aria-label="Envoyer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+        </button>
+    </div>
+</div>
+
+<style>
+/* Toggle Button */
+.chatbot-toggle {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--gradient-brand);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px var(--emerald-glow);
+    z-index: var(--z-fixed);
+    transition: all var(--transition-base);
+}
+
+.chatbot-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px var(--emerald-glow);
+}
+
+.chatbot-toggle__icon {
+    color: white;
+    transition: all var(--transition-base);
+}
+
+.chatbot-toggle__icon--close {
+    position: absolute;
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.5);
+}
+
+.chatbot-toggle.active .chatbot-toggle__icon--chat {
+    opacity: 0;
+    transform: rotate(90deg) scale(0.5);
+}
+
+.chatbot-toggle.active .chatbot-toggle__icon--close {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+}
+
+.chatbot-toggle__badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 20px;
+    height: 20px;
+    background: var(--orange);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 2s infinite;
+}
+
+.chatbot-toggle.active .chatbot-toggle__badge {
+    display: none;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Widget Container */
+.chatbot-widget {
+    position: fixed;
+    bottom: 100px;
+    right: 24px;
+    width: 380px;
+    max-height: 520px;
+    background: rgba(10, 20, 18, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-2xl);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    z-index: var(--z-fixed);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.95);
+    transition: all var(--transition-base);
+}
+
+.chatbot-widget.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+@media (max-width: 480px) {
+    .chatbot-widget {
+        width: calc(100vw - 32px);
+        right: 16px;
+        bottom: 90px;
+        max-height: 70vh;
+    }
+}
+
+/* Header */
+.chatbot-widget__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(13, 148, 136, 0.1) 100%);
+    border-bottom: 1px solid var(--border-subtle);
+    border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+}
+
+.chatbot-widget__avatar {
+    width: 44px;
+    height: 44px;
+    background: var(--gradient-brand);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.chatbot-widget__info {
+    flex: 1;
+}
+
+.chatbot-widget__name {
+    display: block;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: var(--text-sm);
+}
+
+.chatbot-widget__status {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+}
+
+.chatbot-widget__status-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--success);
+    border-radius: 50%;
+    animation: statusPulse 2s infinite;
+}
+
+@keyframes statusPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.chatbot-widget__minimize {
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+}
+
+.chatbot-widget__minimize:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+/* Messages Area */
+.chatbot-widget__messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    min-height: 200px;
+    max-height: 280px;
+}
+
+.chatbot-message {
+    display: flex;
+    gap: var(--space-sm);
+    max-width: 85%;
+    animation: messageIn 0.3s ease;
+}
+
+@keyframes messageIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chatbot-message--user {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.chatbot-message__avatar {
+    width: 28px;
+    height: 28px;
+    background: var(--gradient-brand);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+}
+
+.chatbot-message--user .chatbot-message__avatar {
+    background: var(--gradient-blue);
+}
+
+.chatbot-message__bubble {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--space-sm) var(--space-md);
+}
+
+.chatbot-message--user .chatbot-message__bubble {
+    background: linear-gradient(135deg, var(--emerald-dim) 0%, var(--teal-dim) 100%);
+    border-color: transparent;
+}
+
+.chatbot-message__bubble p {
+    font-size: var(--text-sm);
+    color: var(--text-primary);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+}
+
+/* Typing Indicator */
+.chatbot-typing {
+    display: flex;
+    gap: 4px;
+    padding: var(--space-sm) var(--space-md);
+}
+
+.chatbot-typing__dot {
+    width: 8px;
+    height: 8px;
+    background: var(--text-dim);
+    border-radius: 50%;
+    animation: typingBounce 1.4s infinite;
+}
+
+.chatbot-typing__dot:nth-child(2) { animation-delay: 0.2s; }
+.chatbot-typing__dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typingBounce {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-4px); }
+}
+
+/* Suggestions */
+.chatbot-widget__suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    padding: 0 var(--space-lg) var(--space-md);
+}
+
+.chatbot-suggestion {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-xs) var(--space-sm);
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.chatbot-suggestion:hover {
+    background: var(--emerald);
+    border-color: var(--emerald);
+    color: var(--bg-void);
+}
+
+.chatbot-suggestion svg {
+    flex-shrink: 0;
+}
+
+/* Input Area */
+.chatbot-widget__input {
+    display: flex;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-lg) var(--space-lg);
+    border-top: 1px solid var(--border-subtle);
+}
+
+.chatbot-input {
+    flex: 1;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    color: var(--text-primary);
+    outline: none;
+    transition: all var(--transition-fast);
+}
+
+.chatbot-input::placeholder {
+    color: var(--text-dim);
+}
+
+.chatbot-input:focus {
+    border-color: var(--emerald);
+    box-shadow: 0 0 0 3px var(--emerald-glow);
+}
+
+.chatbot-send {
+    width: 40px;
+    height: 40px;
+    background: var(--gradient-brand);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+}
+
+.chatbot-send:hover {
+    transform: scale(1.1);
+}
+
+.chatbot-send:active {
+    transform: scale(0.95);
+}
+</style>
+
+<script>
+(function() {
+    const toggle = document.getElementById('chatbotToggle');
+    const widget = document.getElementById('chatbotWidget');
+    const minimize = document.getElementById('chatbotMinimize');
+    const messages = document.getElementById('chatbotMessages');
+    const suggestions = document.getElementById('chatbotSuggestions');
+    const input = document.getElementById('chatbotInput');
+    const sendBtn = document.getElementById('chatbotSend');
+
+    // Predefined responses
+    const responses = {
+        pricing: {
+            question: "Quels sont vos tarifs ?",
+            answer: "FleetOps Pro demarre a 500 EUR/mois pour les flottes jusqu'a 20 vehicules. Le plan Professional (21-100 vehicules) est a 1 500 EUR/mois. Pour les grandes flottes, nous proposons des tarifs sur mesure. Souhaitez-vous un devis personnalise ?"
+        },
+        demo: {
+            question: "Demander une demo",
+            answer: "Excellente idee ! Nos demos sont personnalisees et durent environ 30 minutes. Vous pouvez reserver un creneau directement sur notre calendrier ou me laisser vos coordonnees. Un expert vous rappellera sous 24h."
+        },
+        roi: {
+            question: "Quel ROI attendre ?",
+            answer: "En moyenne, nos clients constatent un ROI positif en 4-6 mois. Les economies typiques sont de 30% sur la maintenance, 25% sur le carburant, et 50% sur le temps administratif. Utilisez notre calculateur ROI pour une estimation personnalisee !"
+        },
+        features: {
+            question: "Fonctionnalites FleetOps",
+            answer: "FleetOps Pro inclut 8 modules : Gestion de Parc, Planning IA, Maintenance Predictive, Supply Chain, Suivi Chantiers, Gestion Effectifs, Catalogue Produits et Dashboards temps reel. Chaque module peut etre deploye separement selon vos besoins."
+        }
+    };
+
+    // Toggle widget
+    function toggleWidget() {
+        toggle.classList.toggle('active');
+        widget.classList.toggle('active');
+    }
+
+    toggle.addEventListener('click', toggleWidget);
+    minimize.addEventListener('click', toggleWidget);
+
+    // Add message to chat
+    function addMessage(text, isUser = false) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `chatbot-message ${isUser ? 'chatbot-message--user' : 'chatbot-message--bot'}`;
+        messageDiv.innerHTML = `
+            <div class="chatbot-message__avatar">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="12" r="10"/>
+                </svg>
+            </div>
+            <div class="chatbot-message__bubble">
+                <p>${text}</p>
+            </div>
+        `;
+        messages.appendChild(messageDiv);
+        messages.scrollTop = messages.scrollHeight;
+    }
+
+    // Show typing indicator
+    function showTyping() {
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'chatbot-message chatbot-message--bot';
+        typingDiv.id = 'typingIndicator';
+        typingDiv.innerHTML = `
+            <div class="chatbot-message__avatar">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="12" r="10"/>
+                </svg>
+            </div>
+            <div class="chatbot-message__bubble">
+                <div class="chatbot-typing">
+                    <span class="chatbot-typing__dot"></span>
+                    <span class="chatbot-typing__dot"></span>
+                    <span class="chatbot-typing__dot"></span>
+                </div>
+            </div>
+        `;
+        messages.appendChild(typingDiv);
+        messages.scrollTop = messages.scrollHeight;
+    }
+
+    // Hide typing indicator
+    function hideTyping() {
+        const typing = document.getElementById('typingIndicator');
+        if (typing) typing.remove();
+    }
+
+    // Handle suggestion click
+    suggestions.addEventListener('click', (e) => {
+        const btn = e.target.closest('.chatbot-suggestion');
+        if (!btn) return;
+
+        const questionKey = btn.dataset.question;
+        const response = responses[questionKey];
+        if (!response) return;
+
+        // Add user message
+        addMessage(response.question, true);
+
+        // Hide suggestions after first use
+        suggestions.style.display = 'none';
+
+        // Show typing, then respond
+        showTyping();
+        setTimeout(() => {
+            hideTyping();
+            addMessage(response.answer);
+        }, 1500);
+    });
+
+    // Handle input send
+    function sendMessage() {
+        const text = input.value.trim();
+        if (!text) return;
+
+        addMessage(text, true);
+        input.value = '';
+
+        // Generic response for custom messages
+        showTyping();
+        setTimeout(() => {
+            hideTyping();
+            addMessage("Merci pour votre message ! Un de nos experts va vous recontacter rapidement. En attendant, n'hesitez pas a explorer notre site ou a utiliser les suggestions ci-dessous.");
+            suggestions.style.display = 'flex';
+        }, 1500);
+    }
+
+    sendBtn.addEventListener('click', sendMessage);
+    input.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') sendMessage();
+    });
+
+    // Auto-open after 5 seconds on first visit
+    if (!sessionStorage.getItem('chatbotShown')) {
+        setTimeout(() => {
+            if (!widget.classList.contains('active')) {
+                toggle.classList.add('pulse-attention');
+            }
+        }, 5000);
+        sessionStorage.setItem('chatbotShown', 'true');
+    }
+})();
+</script>

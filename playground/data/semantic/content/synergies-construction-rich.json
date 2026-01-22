@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "version": "3.0",
+    "dimension": "construction",
+    "description": "Synergies ULTRA-RICHES pour la dimension BTP & Construction"
+  },
+
+  "connections": {
+    "btp-tenders+btp-situations": {
+      "name": "Cycle Commercial Complet",
+      "tagline": "De l'offre à la facturation",
+      "story_paragraph": "L'intégration de la Gestion Appels d'Offres avec les Situations de Travaux crée une continuité parfaite entre le commercial et l'exécution. Le chiffrage de l'offre devient le cadre de la situation. Les postes du marché se retrouvent dans la facturation. Les écarts entre prix offert et coût réel sont visibles. Le suivi économique du marché est automatique. Vous savez exactement comment chaque affaire performe par rapport à ce qui était prévu.",
+      "impact_narrative": "Cette synergie crée une traçabilité économique complète. Les marges prévisionnelles sont comparées aux marges réelles. Les dérives sont détectées tôt. Les retours d'expérience alimentent les prochains chiffrages. La rentabilité des marchés est pilotable."
+    },
+
+    "btp-sites+btp-planning": {
+      "name": "Pilotage Temps Réel",
+      "tagline": "Planning et réalité alignés",
+      "story_paragraph": "Quand le Suivi de Chantier rencontre le Planning Travaux, le pilotage devient véritablement temps réel. L'avancement saisi sur le terrain met à jour le planning automatiquement. Les retards sont visibles dès qu'ils apparaissent. Les re-planifications s'appuient sur des données réelles. Le chef de chantier et le conducteur travaillent sur la même vision actualisée. Les réunions de chantier s'appuient sur des faits, pas sur des impressions.",
+      "impact_narrative": "Cette combinaison élimine le décalage entre plan et réalité. Les décisions sont prises sur des données actuelles. Les alertes sur les dérives sont immédiates. La coordination des intervenants est facilitée. Le chantier est véritablement piloté."
+    },
+
+    "btp-safety+btp-subcontract": {
+      "name": "Sécurité Étendue",
+      "tagline": "Tous responsables, tous protégés",
+      "story_paragraph": "L'alliance de la Sécurité Chantier avec la Gestion Sous-Traitants étend la prévention à tous les intervenants. Les exigences sécurité sont incluses dans les contrats. Les certifications et habilitations des sous-traitants sont vérifiées. Les causeries incluent les équipes sous-traitantes. Les presqu'accidents impliquant des sous-traitants sont analysés. La culture sécurité se diffuse à tout l'écosystème du chantier.",
+      "impact_narrative": "Cette synergie crée une sécurité globale. Les sous-traitants sont engagés contractuellement et opérationnellement. Les risques liés à la coactivité sont gérés. La responsabilité du donneur d'ordres est sécurisée. Le chantier forme un collectif unifié sur la prévention."
+    },
+
+    "btp-situations+btp-sites": {
+      "name": "Facturation Fiable",
+      "tagline": "Situations basées sur le réel",
+      "story_paragraph": "L'intégration des Situations de Travaux avec le Suivi de Chantier garantit une facturation alignée sur la réalité. Les avancements saisis sur le terrain alimentent directement les situations. Pas d'écart entre ce qui est fait et ce qui est facturé. Les photos et pointages justifient les montants. Les litiges avec le maître d'ouvrage sont évités car les preuves existent. La facturation devient incontestable.",
+      "impact_narrative": "Cette combinaison sécurise le cash-flow. Les situations sont rapides car pré-remplies. Les contestations sont rares car documentées. Les DGD sont préparées sereinement. Le risque d'impayé diminue."
+    },
+
+    "btp-planning+btp-materials": {
+      "name": "Supply Chain Chantier",
+      "tagline": "Matériaux synchronisés",
+      "story_paragraph": "Quand le Planning Travaux pilote les Approvisionnements, la logistique chantier devient fluide. Les besoins matériaux sont générés depuis le planning avec les bonnes dates. Les commandes sont passées au bon moment. Les livraisons sont calées sur l'avancement réel. Les stocks chantier sont minimisés car les livraisons sont en flux tendu. Plus de rupture, plus de sur-stock.",
+      "impact_narrative": "Cette synergie optimise la logistique chantier. Le capital immobilisé en stock diminue. Les arrêts pour rupture sont éliminés. L'espace chantier est libéré. Les coûts de manutention baissent. Le chantier respire."
+    },
+
+    "btp-quality+btp-sites": {
+      "name": "Qualité Intégrée",
+      "tagline": "Construire bien du premier coup",
+      "story_paragraph": "L'alliance du Contrôle Qualité avec le Suivi de Chantier intègre la qualité dans le flux de production. Les autocontrôles sont déclenchés par l'avancement des phases. Les non-conformités sont liées au contexte chantier. Les reprises sont planifiées et suivies. La qualité n'est pas une couche ajoutée mais une composante de la production. L'ouvrage est construit bien du premier coup.",
+      "impact_narrative": "Cette combinaison réduit les coûts de non-qualité. Les défauts sont détectés au plus tôt. Les reprises sont minimisées. Le temps de traitement des réserves chute. La qualité livrée s'améliore structurellement."
+    },
+
+    "btp-subcontract+btp-situations": {
+      "name": "Sous-Traitance Maîtrisée",
+      "tagline": "Situations alignées, marges préservées",
+      "story_paragraph": "L'intégration de la Gestion Sous-Traitants avec les Situations de Travaux assure la cohérence économique. Les situations sous-traitants sont validées au regard de l'avancement. Le delta entre situation client et situation sous-traitant est visible. Les marges sur sous-traitance sont suivies en temps réel. Les avenants sous-traitants sont corrélés aux avenants client. Pas de fuite de marge.",
+      "impact_narrative": "Cette synergie protège les marges. Les situations sous-traitants sont contrôlées avant validation. Les dérives sont détectées immédiatement. La rentabilité par sous-traitant est connue. Les négociations futures sont éclairées."
+    },
+
+    "btp-tenders+btp-planning": {
+      "name": "Offre Réaliste",
+      "tagline": "Délais crédibles dès l'offre",
+      "story_paragraph": "Quand la Gestion Appels d'Offres utilise le Planning Travaux, les délais proposés sont réalistes. Le macro-planning de l'offre s'appuie sur les retours d'expérience. Les contraintes de coordination sont anticipées. Les délais d'approvisionnement sont intégrés. Le client reçoit un planning crédible. Le chantier démarre sur des bases saines car le planning était réaliste dès l'offre.",
+      "impact_narrative": "Cette combinaison évite les plannings irréalistes. Les pénalités de retard sont évitées. La relation client démarre bien. Le stress du chantier diminue. La réputation de fiabilité se construit."
+    }
+  },
+
+  "multi_connections": {
+    "btp-sites+btp-planning+btp-situations": {
+      "name": "Pilotage Chantier 360",
+      "tagline": "Avancement, planning, facturation unifiés",
+      "story_paragraph": "La triple alliance Suivi de Chantier, Planning Travaux et Situations de Travaux crée un pilotage complet de l'opération. L'avancement terrain met à jour le planning et alimente les situations. Les trois vues sont cohérentes et synchronisées. Le conducteur de travaux a une vision unifiée : où en est le chantier, est-il en retard, combien a-t-on facturé, combien reste-t-il à facturer. Le pilotage devient véritablement intégré.",
+      "cumulative_impact": "Ensemble, ces trois modules créent une maîtrise totale de l'opération. Les dérives sont détectées sous tous les angles. Les décisions sont éclairées par une vision complète. La rentabilité prévisionnelle est fiable. Le chantier est sous contrôle."
+    },
+
+    "btp-safety+btp-quality+btp-sites": {
+      "name": "Excellence Opérationnelle",
+      "tagline": "Sécurité, qualité, productivité",
+      "story_paragraph": "Quand Sécurité Chantier, Contrôle Qualité et Suivi de Chantier fonctionnent ensemble, l'excellence opérationnelle devient réalité. La sécurité est intégrée aux processus de production. La qualité est construite à chaque étape. L'avancement intègre les jalons sécurité et qualité. Les trois dimensions se renforcent mutuellement. Un chantier sûr est un chantier productif. Un chantier de qualité est un chantier rentable.",
+      "cumulative_impact": "Cette combinaison triple crée un cercle vertueux. Les accidents et les défauts reculent ensemble. La productivité augmente car les reprises et arrêts diminuent. L'image de l'entreprise s'améliore. Les marchés sont plus faciles à gagner grâce à cette réputation."
+    },
+
+    "btp-tenders+btp-subcontract+btp-materials": {
+      "name": "Chiffrage Précis",
+      "tagline": "Offres gagnantes et rentables",
+      "story_paragraph": "L'intégration Gestion Appels d'Offres, Gestion Sous-Traitants et Approvisionnements permet un chiffrage basé sur des données réelles. Les prix sous-traitants sont issus du référentiel. Les prix matériaux reflètent les dernières consultations. Les estimations sont précises car alimentées par le vécu. Les offres sont compétitives sans être kamikazes. Le juste prix est trouvé pour gagner des marchés rentables.",
+      "cumulative_impact": "Cette orchestration triple améliore la qualité du chiffrage. Les affaires gagnées sont rentables. Les écarts entre prévu et réalisé diminuent. La confiance dans les offres augmente. Le développement commercial s'appuie sur des bases économiques solides."
+    }
+  }
+}

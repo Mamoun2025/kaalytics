@@ -1,0 +1,75 @@
+<!--
+KAALYTICS - Chatbot Component
+==============================
+Widget chatbot modulaire avec IA simulee
+Usage: Inclure via chatbot-loader.js
+-->
+
+<div class="chatbot" id="kaalyticsChat">
+    <!-- Toggle Button -->
+    <button class="chatbot__toggle" id="chatbotToggle" aria-label="Ouvrir le chat">
+        <svg class="chatbot__icon chatbot__icon--chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+        <svg class="chatbot__icon chatbot__icon--close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+        <span class="chatbot__badge">1</span>
+    </button>
+
+    <!-- Chat Window -->
+    <div class="chatbot__window" id="chatbotWindow">
+        <!-- Header -->
+        <div class="chatbot__header">
+            <div class="chatbot__header-info">
+                <div class="chatbot__avatar">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+                </div>
+                <div>
+                    <h4 class="chatbot__name" data-i18n="chatbot.name">Assistant Kaalytics</h4>
+                    <span class="chatbot__status" data-i18n="chatbot.status">En ligne</span>
+                </div>
+            </div>
+            <button class="chatbot__minimize" id="chatbotMinimize" aria-label="Minimiser">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Messages -->
+        <div class="chatbot__messages" id="chatbotMessages">
+            <div class="chatbot__message chatbot__message--bot">
+                <div class="chatbot__message-avatar">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+                </div>
+                <div class="chatbot__message-content">
+                    <p data-i18n="chatbot.welcome">Bonjour ! Je suis l'assistant Kaalytics. Comment puis-je vous aider aujourd'hui ?</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="chatbot__quick-actions" id="chatbotQuickActions">
+            <button class="chatbot__quick-btn" data-action="pricing" data-i18n="chatbot.quick.pricing">Tarifs</button>
+            <button class="chatbot__quick-btn" data-action="demo" data-i18n="chatbot.quick.demo">Demo</button>
+            <button class="chatbot__quick-btn" data-action="roi" data-i18n="chatbot.quick.roi">ROI</button>
+            <button class="chatbot__quick-btn" data-action="whatsapp" data-i18n="chatbot.quick.whatsapp">WhatsApp</button>
+        </div>
+
+        <!-- Input -->
+        <div class="chatbot__input-area">
+            <input type="text" class="chatbot__input" id="chatbotInput" placeholder="Ecrivez votre message..." data-i18n-placeholder="chatbot.placeholder">
+            <button class="chatbot__send" id="chatbotSend" aria-label="Envoyer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <div class="chatbot__footer">
+            <span data-i18n="chatbot.poweredBy">Propulse par</span> <strong>Kaalytics AI</strong>
+        </div>
+    </div>
+</div>

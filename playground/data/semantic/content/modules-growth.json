@@ -1,0 +1,191 @@
+{
+  "dimension": "growth",
+  "dimension_name": "Croissance Commerciale",
+  "version": "1.0",
+  "modules": {
+    "growth-crm": {
+      "name": "CRM Intelligent",
+      "tagline": "L'IA qui sait qui appeler",
+      "description_short": "Un CRM qui ne se contente pas de stocker vos contacts, mais vous dit lesquels contacter et pourquoi.",
+      "description_full": "Le CRM Intelligent révolutionne la relation client en transformant chaque interaction en opportunité. L'intelligence artificielle analyse les comportements, prédit les besoins et recommande les actions optimales. Fini les listes de contacts statiques : votre CRM devient un conseiller stratégique qui guide chaque commercial vers les bonnes décisions au bon moment.",
+      "impact_business": {
+        "primary": "Augmentation de 35% du taux de conversion",
+        "secondary": "Réduction de 50% du temps de recherche d'informations",
+        "tertiary": "Amélioration de 40% de la satisfaction client"
+      },
+      "use_cases": [
+        "Priorisation automatique des leads les plus chauds",
+        "Suggestion de la meilleure heure pour contacter un prospect",
+        "Historique complet de toutes les interactions",
+        "Alertes proactives sur les opportunités à saisir"
+      ],
+      "transformation_narrative": {
+        "alone": "Vous venez de centraliser votre intelligence commerciale. Chaque contact devient une opportunité tracée, chaque interaction une donnée exploitable.",
+        "with_pipeline": "Le CRM et le Pipeline fusionnent : vous voyez non seulement vos contacts mais exactement où ils en sont dans leur parcours d'achat.",
+        "with_scoring": "L'IA classe automatiquement vos prospects. Concentrez-vous sur ceux qui comptent vraiment.",
+        "with_whatsapp": "WhatsApp enrichit votre CRM en temps réel. Chaque conversation devient une donnée client exploitable."
+      }
+    },
+    "growth-whatsapp": {
+      "name": "Bot WhatsApp",
+      "tagline": "Vendez pendant que vous dormez",
+      "description_short": "Un assistant commercial disponible 24/7 qui qualifie, répond et convertit sur WhatsApp.",
+      "description_full": "Le Bot WhatsApp transforme votre canal de communication le plus utilisé en machine de qualification. Disponible jour et nuit, il accueille les prospects, répond aux questions courantes, collecte les informations essentielles et transmet les leads qualifiés à votre équipe. C'est comme avoir un commercial qui ne dort jamais et ne rate jamais un message.",
+      "impact_business": {
+        "primary": "Génération de leads 24/7 sans intervention humaine",
+        "secondary": "Réduction de 70% du temps de qualification",
+        "tertiary": "Taux de réponse instantané = satisfaction prospect maximale"
+      },
+      "use_cases": [
+        "Qualification automatique des demandes entrantes",
+        "FAQ interactive pour les questions courantes",
+        "Prise de rendez-vous automatisée",
+        "Envoi de catalogues et devis personnalisés"
+      ],
+      "transformation_narrative": {
+        "alone": "WhatsApp devient votre commercial nocturne. Pendant que vous dormez, il qualifie, répond, et prépare le terrain.",
+        "with_crm": "Chaque conversation WhatsApp alimente directement votre CRM. Aucune information ne se perd.",
+        "with_followup": "Le bot collecte, les relances automatisent. Une chaîne de conversion sans faille.",
+        "with_quotes": "Le prospect demande un prix ? Le bot génère un devis personnalisé instantanément."
+      }
+    },
+    "growth-pipeline": {
+      "name": "Pipeline Commercial",
+      "tagline": "Visualisez où l'argent se bloque",
+      "description_short": "Vue panoramique de tous vos deals en cours, des premiers contacts aux signatures.",
+      "description_full": "Le Pipeline Commercial est votre tour de contrôle des ventes. Visualisez en un coup d'œil où en sont tous vos deals, identifiez les goulots d'étranglement et prédisez votre chiffre d'affaires avec précision. Chaque étape du cycle de vente devient visible, mesurable et optimisable. Plus de deals qui tombent dans l'oubli : le pipeline vous alerte quand une opportunité stagne.",
+      "impact_business": {
+        "primary": "Amélioration de 45% de la précision des prévisions de ventes",
+        "secondary": "Réduction de 30% du cycle de vente moyen",
+        "tertiary": "Identification des deals à risque avant qu'il ne soit trop tard"
+      },
+      "use_cases": [
+        "Suivi visuel de chaque opportunité par étape",
+        "Alertes sur les deals inactifs depuis trop longtemps",
+        "Prévision du CA basée sur les probabilités de closing",
+        "Analyse des taux de conversion par étape"
+      ],
+      "transformation_narrative": {
+        "alone": "Votre funnel commercial devient transparent. Chaque deal, chaque étape, chaque montant : tout est visible.",
+        "with_crm": "Le CRM nourrit le pipeline en continu. Un prospect qui entre ressort client ou perdu, mais jamais oublié.",
+        "with_scoring": "Les deals les plus prometteurs remontent automatiquement. Votre attention va où elle compte.",
+        "with_followup": "Les opportunités stagnantes déclenchent des relances automatiques. Aucun deal n'est laissé pour compte."
+      }
+    },
+    "growth-insights": {
+      "name": "Vision Client 360",
+      "tagline": "Connaissez vos clients mieux qu'eux-mêmes",
+      "description_short": "Fiche client enrichie avec tout l'historique, les préférences et les prédictions comportementales.",
+      "description_full": "La Vision Client 360 agrège toutes les informations disponibles sur chaque client : historique d'achats, interactions, préférences, comportements en ligne, et même prédictions de besoins futurs. Avant chaque appel, chaque réunion, vous savez exactement à qui vous avez affaire. C'est la fin des questions redondantes et le début des conversations personnalisées qui convertissent.",
+      "impact_business": {
+        "primary": "Augmentation de 50% de la valeur vie client (LTV)",
+        "secondary": "Personnalisation qui génère 25% de ventes additionnelles",
+        "tertiary": "Réduction des frustrations client par la connaissance contextuelle"
+      },
+      "use_cases": [
+        "Briefing automatique avant chaque appel client",
+        "Recommandations de produits basées sur l'historique",
+        "Détection des signaux d'insatisfaction",
+        "Segmentation dynamique des clients"
+      ],
+      "transformation_narrative": {
+        "alone": "Chaque client devient un livre ouvert. Son histoire, ses préférences, ses habitudes : tout est là.",
+        "with_crm": "Le CRM enrichi par la Vision 360. Vos commerciaux ne posent plus de questions idiotes.",
+        "with_churn": "Identifiez les clients à risque avant qu'ils ne partent. Intervenez au bon moment.",
+        "with_scoring": "La connaissance client affine le scoring. Vos prédictions deviennent chirurgicales."
+      }
+    },
+    "growth-scoring": {
+      "name": "Scoring Leads",
+      "tagline": "L'IA trie, vous closez",
+      "description_short": "Qualification automatique de chaque prospect selon sa probabilité de conversion.",
+      "description_full": "Le Scoring Leads utilise l'intelligence artificielle pour analyser chaque prospect et lui attribuer un score de conversion. Comportement sur le site, interactions email, profil entreprise, timing : tous les signaux sont analysés pour identifier les leads les plus prometteurs. Votre équipe commerciale se concentre enfin sur ceux qui vont signer, pas sur ceux qui font perdre du temps.",
+      "impact_business": {
+        "primary": "Amélioration de 60% de l'efficacité commerciale",
+        "secondary": "Réduction de 40% du temps perdu sur les mauvais leads",
+        "tertiary": "Augmentation du taux de closing de 25%"
+      },
+      "use_cases": [
+        "Attribution automatique de scores de 0 à 100",
+        "Priorisation de la file d'attente commerciale",
+        "Identification des leads chauds en temps réel",
+        "Alertes quand un lead froid se réchauffe"
+      ],
+      "transformation_narrative": {
+        "alone": "L'IA devient votre trieur de prospects. Elle voit les signaux que l'humain rate.",
+        "with_crm": "Le scoring enrichit chaque fiche CRM. Un chiffre, une priorité claire.",
+        "with_pipeline": "Les leads scorés alimentent le pipeline avec précision. Plus de bruit, que du signal.",
+        "with_whatsapp": "Le bot qualifie, le scoring valide. Une chaîne de filtrage implacable."
+      }
+    },
+    "growth-followup": {
+      "name": "Relances Auto",
+      "tagline": "Ne ratez plus jamais un suivi",
+      "description_short": "Séquences de relance automatisées qui maintiennent le contact sans effort humain.",
+      "description_full": "Les Relances Auto éliminent le talon d'Achille de toute équipe commerciale : l'oubli. Des séquences intelligentes maintiennent le contact avec chaque prospect au bon rythme, avec le bon message, au bon moment. L'automatisation ne remplace pas le commercial, elle lui libère du temps pour les conversations qui comptent vraiment.",
+      "impact_business": {
+        "primary": "Augmentation de 40% du taux de réponse aux relances",
+        "secondary": "Récupération de 30% des deals considérés comme perdus",
+        "tertiary": "Libération de 2h/jour par commercial"
+      },
+      "use_cases": [
+        "Séquences post-démo automatisées",
+        "Relances de devis non signés",
+        "Nurturing des leads froids",
+        "Réactivation des clients dormants"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos relances deviennent automatiques. Plus de prospects oubliés dans un coin.",
+        "with_pipeline": "Chaque étape du pipeline déclenche la bonne séquence. Fluidité totale.",
+        "with_whatsapp": "Le bot initie, les relances poursuivent. Une conversation qui ne s'arrête jamais.",
+        "with_quotes": "Devis envoyé, relance programmée. Le deal avance tout seul."
+      }
+    },
+    "growth-quotes": {
+      "name": "Devis Dynamiques",
+      "tagline": "Des propositions qui closent",
+      "description_short": "Génération de devis personnalisés avec tarification intelligente et suivi des ouvertures.",
+      "description_full": "Les Devis Dynamiques transforment une tâche administrative en arme de closing. Génération rapide, personnalisation poussée, tarification optimisée par l'IA, suivi des ouvertures en temps réel. Vous savez exactement quand votre prospect ouvre le devis et sur quelles lignes il s'attarde. Chaque proposition devient une opportunité de conversion optimisée.",
+      "impact_business": {
+        "primary": "Réduction de 70% du temps de création de devis",
+        "secondary": "Augmentation de 20% du taux d'acceptation",
+        "tertiary": "Tarification optimisée = marges préservées"
+      },
+      "use_cases": [
+        "Génération de devis en 2 minutes",
+        "Templates personnalisés par type de client",
+        "Suivi des ouvertures et du temps passé",
+        "Signature électronique intégrée"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos devis passent de corvée à atout. Rapides, beaux, et traçables.",
+        "with_crm": "Les devis s'enrichissent des données CRM. Personnalisation automatique.",
+        "with_pipeline": "Devis envoyé = deal qui avance dans le pipeline. Synchronisation parfaite.",
+        "with_followup": "Devis non signé ? La relance part automatiquement. Persistance sans effort."
+      }
+    },
+    "growth-churn": {
+      "name": "Anti-Attrition",
+      "tagline": "Gardez vos clients avant qu'ils ne partent",
+      "description_short": "Détection précoce des signaux de départ et actions de rétention automatisées.",
+      "description_full": "L'Anti-Attrition transforme la rétention client d'art en science. L'IA analyse les patterns comportementaux pour détecter les signaux faibles de désengagement : baisse d'activité, tickets support multiples, retards de paiement. Avant que le client ne pense à partir, vous intervenez avec l'offre de rétention qui fait la différence. Garder un client coûte 5x moins cher qu'en acquérir un nouveau.",
+      "impact_business": {
+        "primary": "Réduction de 35% du taux de churn",
+        "secondary": "Économie de 5x le coût d'acquisition client",
+        "tertiary": "Augmentation de la LTV de 50%"
+      },
+      "use_cases": [
+        "Score de risque d'attrition par client",
+        "Alertes précoces sur les clients à risque",
+        "Déclenchement automatique d'actions de rétention",
+        "Analyse des causes de départ"
+      ],
+      "transformation_narrative": {
+        "alone": "Vous passez de la réaction à l'anticipation. Les départs se prévoient maintenant.",
+        "with_insights": "La Vision 360 alimente l'Anti-Attrition. Plus de données = prédictions plus fines.",
+        "with_crm": "Le risque de churn s'affiche sur chaque fiche. Vos commerciaux savent où intervenir.",
+        "with_followup": "Client à risque ? La séquence de rétention se déclenche automatiquement."
+      }
+    }
+  }
+}

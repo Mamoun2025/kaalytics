@@ -1,0 +1,659 @@
+{
+  "_meta": {
+    "version": "2.0",
+    "dimension": "operations",
+    "description": "Dictionnaire complet des synergies Opérations Terrain - 66 connexions possibles",
+    "module_count": 12,
+    "synergy_count": 66
+  },
+
+  "connections": {
+    "ops-fleet+ops-map": {
+      "name": "Centre de Contrôle Terrain",
+      "tagline": "Vision totale, contrôle total",
+      "description": "La fusion de la Flotte et de la Carte crée un véritable centre de contrôle. Chaque véhicule apparaît sur la carte avec son identité complète : immatriculation, conducteur, mission en cours, statut. Le dispatch devient visuel et intuitif — un glisser-déposer affecte un véhicule à une mission. Les zones de chaleur révèlent les patterns de déplacement. Les géo-alertes surveillent les entrées/sorties de zones sensibles.",
+      "impact": "Coordination terrain +60%, temps de réaction -70%",
+      "narrative_short": "Votre flotte prend vie sur la carte. Chaque véhicule visible, traçable, dispatchable en un clic.",
+      "narrative_full": "Le mariage de la géolocalisation et de l'identité véhicule transforme votre vision du terrain. Ce n'est plus une carte avec des points — c'est un tableau de bord vivant de vos opérations."
+    },
+
+    "ops-fleet+ops-routes": {
+      "name": "Logistique Dynamique",
+      "tagline": "Routes vivantes, flotte agile",
+      "description": "Quand la Flotte rencontre l'Optimisation des Routes, la magie opère. Les trajets ne sont plus calculés pour des véhicules théoriques — ils s'adaptent à la position réelle de votre flotte. Un véhicule libéré peut capter une urgence voisine au lieu de renvoyer un véhicule du dépôt.",
+      "impact": "Kilomètres à vide -45%, interventions/jour +22%",
+      "narrative_short": "Les routes s'adaptent à votre flotte, pas l'inverse. Chaque position réelle devient une opportunité d'optimisation.",
+      "narrative_full": "L'optimisation classique calcule des tournées pour des véhicules partant du dépôt. Ici, le système connaît la position exacte de chaque véhicule à chaque instant et réaffecte en temps réel."
+    },
+
+    "ops-fleet+ops-maintenance": {
+      "name": "Actifs Pérennes",
+      "tagline": "Rouler plus, réparer moins",
+      "description": "Les données de télémétrie de la Flotte alimentent la Maintenance Prédictive avec une précision chirurgicale. Chaque kilomètre parcouru, chaque heure moteur, chaque comportement de conduite est analysé. La maintenance s'adapte à l'usage réel, pas au calendrier théorique.",
+      "impact": "Durée de vie véhicule +30%, pannes terrain -75%",
+      "narrative_short": "La télémétrie prédit les pannes. Chaque véhicule bénéficie d'une maintenance personnalisée selon son usage réel.",
+      "narrative_full": "Un véhicule n'est plus une boîte noire. Ses données racontent son histoire : les routes empruntées, les sollicitations subies, les signes de fatigue naissants."
+    },
+
+    "ops-fleet+ops-sites": {
+      "name": "Mobilité Chantiers",
+      "tagline": "Les bons véhicules sur les bons sites",
+      "description": "La flotte de véhicules est rattachée aux chantiers. Vous visualisez quels véhicules sont affectés à quel site, leurs déplacements entre chantiers, leur disponibilité. Les transferts inter-sites sont planifiés et tracés.",
+      "impact": "Utilisation véhicules chantier +35%, trajets inter-sites optimisés",
+      "narrative_short": "Vos véhicules trouvent leur chantier. Affectations claires, transferts tracés, disponibilité visible.",
+      "narrative_full": "Les véhicules ne sont plus une ressource flottante. Chacun est rattaché à un contexte — le chantier qu'il sert — avec une visibilité sur ses mouvements et sa disponibilité."
+    },
+
+    "ops-fleet+ops-machines": {
+      "name": "Parc Roulant Unifié",
+      "tagline": "Véhicules et engins, même combat",
+      "description": "Véhicules légers et engins lourds sous le même système de gestion. La vision unifiée révèle les complémentarités : un camion plateau peut transporter une mini-pelle, une grue peut nécessiter un véhicule d'escorte. La logistique devient globale.",
+      "impact": "Vision parc unifiée, coordination véhicules-machines +40%",
+      "narrative_short": "Véhicules et machines forment un parc unique. La coordination devient naturelle, la logistique fluide.",
+      "narrative_full": "Séparer la gestion des véhicules et des machines crée des silos. Les réunir révèle les synergies : planification coordonnée, transferts optimisés, vision globale du parc mobile."
+    },
+
+    "ops-fleet+ops-field": {
+      "name": "Terrain Documenté Mobile",
+      "tagline": "Chaque trajet, chaque intervention",
+      "description": "Les rapports d'intervention sont liés aux trajets véhicules. Vous voyez non seulement où le technicien est intervenu, mais par où il est passé, combien de temps il a roulé vs travaillé. La productivité terrain devient transparente.",
+      "impact": "Traçabilité trajets+interventions 100%, analyse productivité terrain",
+      "narrative_short": "Le véhicule et l'intervention ne font qu'un. Trajets et travaux documentés ensemble.",
+      "narrative_full": "Un technicien passe sa journée entre route et chantier. Cette intégration capture les deux dimensions : temps de trajet, temps d'intervention, lieux visités, travaux réalisés."
+    },
+
+    "ops-fleet+ops-weather": {
+      "name": "Conduite Météo-Adaptée",
+      "tagline": "Rouler en sécurité",
+      "description": "Les conditions météo sont croisées avec les positions et trajets de la flotte. Verglas sur la route du camion 12 ? Alerte au conducteur. Tempête prévue dans la zone d'intervention ? Report suggéré. La sécurité routière devient proactive.",
+      "impact": "Accidents météo -50%, alertes conducteurs temps réel",
+      "narrative_short": "La flotte sait quel temps il fait. Chaque conducteur averti des conditions sur sa route.",
+      "narrative_full": "Envoyer un véhicule dans une zone de tempête sans prévenir le conducteur, c'est du passé. Le système croise les prévisions météo avec les trajets prévus et alerte avant les problèmes."
+    },
+
+    "ops-fleet+ops-inventory": {
+      "name": "Stock Mobile",
+      "tagline": "La bonne pièce dans le bon véhicule",
+      "description": "Les véhicules deviennent des points de stock mobiles. Chaque camion de technicien a son inventaire embarqué : pièces, outils, consommables. Les réapprovisionnements sont planifiés en fonction des interventions prévues.",
+      "impact": "Interventions réussies 1ère visite +25%, gestion stock véhicules",
+      "narrative_short": "Vos véhicules transportent le bon stock. Plus d'intervention ratée pour manque de pièce.",
+      "narrative_full": "Un technicien qui repart sans avoir pu intervenir faute de pièce, c'est un échec coûteux. Cette intégration garantit que chaque véhicule embarque ce dont il aura besoin."
+    },
+
+    "ops-fleet+ops-scheduling": {
+      "name": "Affectation Véhicule-Équipe",
+      "tagline": "Chaque équipe avec son véhicule",
+      "description": "Le planning des équipes intègre l'affectation des véhicules. Chaque mission planifiée vérifie la disponibilité du véhicule adapté. Les conflits sont détectés : deux équipes ne peuvent pas compter sur le même véhicule.",
+      "impact": "Conflits véhicules éliminés, planning réaliste garanti",
+      "narrative_short": "Équipes et véhicules sont planifiés ensemble. Plus de surprise le matin.",
+      "narrative_full": "Planifier une équipe sans vérifier si un véhicule est disponible, c'est planifier un problème. Cette intégration garantit la cohérence : chaque mission a ses ressources humaines ET matérielles."
+    },
+
+    "ops-fleet+ops-alerts": {
+      "name": "Vigilance Flotte",
+      "tagline": "Chaque anomalie détectée",
+      "description": "La télémétrie flotte alimente le système d'alertes. Excès de vitesse, freinage brusque, sortie de zone, temps d'arrêt anormal — tout génère une notification ciblée. Les comportements à risque sont détectés et corrigés.",
+      "impact": "Comportements à risque détectés -60%, réactivité incidents +80%",
+      "narrative_short": "La flotte parle au système d'alertes. Chaque anomalie remonte instantanément.",
+      "narrative_full": "Les véhicules génèrent des données en continu. Cette intégration les transforme en alertes actionnables : sécurité, productivité, géolocalisation, tout est surveillé."
+    },
+
+    "ops-fleet+ops-kpi": {
+      "name": "Performance Flotte",
+      "tagline": "Chaque véhicule mesuré",
+      "description": "Les données de flotte alimentent des KPIs automatiques. Taux d'utilisation par véhicule, consommation moyenne, kilomètres parcourus, coût total de possession — tout est calculé et présenté. Les tendances montrent les dérives.",
+      "impact": "TCO transparent, optimisation data-driven",
+      "narrative_short": "Chaque véhicule a ses métriques. L'utilisation, la consommation, les coûts — tout se mesure.",
+      "narrative_full": "Votre flotte représente un investissement majeur. Sans mesure, impossible de l'optimiser. Cette intégration transforme les données brutes en indicateurs de gestion."
+    },
+
+    "ops-map+ops-routes": {
+      "name": "Navigation Optimisée",
+      "tagline": "Voir et optimiser",
+      "description": "Les trajets optimisés s'affichent directement sur la carte. Vous voyez non seulement où sont les points à visiter, mais par quels chemins y aller. Les alternatives sont visualisables, les embouteillages contournés.",
+      "impact": "Visualisation trajets intuitive, décisions de routing éclairées",
+      "narrative_short": "Les routes optimisées prennent forme sur la carte. Chaque trajet visible avant le départ.",
+      "narrative_full": "L'optimisation calcule, la carte montre. Cette combinaison rend les décisions de routing visuelles et intuitives. Un doute sur un trajet ? Un coup d'œil sur la carte suffit."
+    },
+
+    "ops-map+ops-sites": {
+      "name": "Cartographie Chantiers",
+      "tagline": "Chaque site sur votre radar",
+      "description": "La Carte Intelligente s'enrichit de vos chantiers. Chaque site apparaît comme une zone identifiée, avec son statut, ses ressources présentes, son niveau d'activité. Le survol affiche les KPIs clés.",
+      "impact": "Vision multi-sites instantanée, pilotage géographique",
+      "narrative_short": "Vos chantiers sont des territoires sur la carte. Vision globale, drill-down local.",
+      "narrative_full": "La carte se transforme en cartographie de votre activité. Les zones de chantier se colorent selon leur statut — vert pour en avance, orange pour attention, rouge pour critique."
+    },
+
+    "ops-map+ops-machines": {
+      "name": "Localisation Engins",
+      "tagline": "Chaque machine visible",
+      "description": "Les machines équipées GPS apparaissent sur la carte. Vous visualisez où se trouve chaque engin : sur quel chantier, en transfert, au dépôt. Les mouvements sont tracés, les positions historisées.",
+      "impact": "Localisation machines temps réel, vol et détournement prévenus",
+      "narrative_short": "Vos engins sont sur la carte. Position, mouvement, historique — tout est visible.",
+      "narrative_full": "Une machine qui vaut des centaines de milliers d'euros mérite d'être localisée. Cette intégration la place sur la carte, avec son historique de mouvements et ses alertes de zone."
+    },
+
+    "ops-map+ops-field": {
+      "name": "Interventions Géolocalisées",
+      "tagline": "Chaque intervention sur la carte",
+      "description": "Les rapports d'intervention apparaissent comme des points sur la carte. Vous voyez où vos équipes sont intervenues, avec les photos et détails accessibles au clic. La couverture géographique de votre activité devient visible.",
+      "impact": "Historique géographique complet, analyse couverture terrain",
+      "narrative_short": "Les interventions s'affichent sur la carte. Chaque rapport a sa position, chaque zone son historique.",
+      "narrative_full": "La carte devient la mémoire de vos interventions. Où êtes-vous intervenus le mois dernier ? Quelles zones sont sous-couvertes ? Les réponses sont visuelles."
+    },
+
+    "ops-map+ops-weather": {
+      "name": "Météo Cartographiée",
+      "tagline": "Le temps qu'il fait, là où ça compte",
+      "description": "Les prévisions météo se superposent à la carte. Chaque zone d'intervention affiche ses conditions attendues. Les alertes météo sont géolocalisées sur les sites concernés.",
+      "impact": "Météo par zone visible, décisions géographiques informées",
+      "narrative_short": "La météo s'affiche sur la carte. Chaque site, chaque route, montre ses conditions.",
+      "narrative_full": "La météo n'est pas uniforme. Cette intégration montre les conditions là où ça compte : sur vos chantiers, sur les routes de vos véhicules, dans vos zones d'intervention."
+    },
+
+    "ops-map+ops-inventory": {
+      "name": "Stocks Géolocalisés",
+      "tagline": "Où sont vos ressources",
+      "description": "Les dépôts et points de stock apparaissent sur la carte avec leurs niveaux. Vous visualisez géographiquement où sont vos ressources, facilitant les décisions de transfert et réapprovisionnement.",
+      "impact": "Vision géographique des stocks, optimisation transferts",
+      "narrative_short": "Vos stocks ont une position sur la carte. La logistique devient géographique.",
+      "narrative_full": "Un stock n'est pas qu'un niveau — c'est aussi une position. Cette intégration rend visible la dimension géographique de votre inventaire."
+    },
+
+    "ops-map+ops-scheduling": {
+      "name": "Planning Géolocalisé",
+      "tagline": "Voir qui va où",
+      "description": "Le planning des équipes se projette sur la carte. Vous voyez demain matin quelles équipes seront sur quels sites, les trajets prévus, la couverture géographique.",
+      "impact": "Répartition géographique visible, équilibrage zones facilité",
+      "narrative_short": "Le planning s'affiche sur la carte. Qui sera où demain — visible d'un coup d'œil.",
+      "narrative_full": "Un planning en tableau, c'est abstrait. Sur une carte, il prend vie : vous voyez la répartition géographique, les zones surchargées, les trous de couverture."
+    },
+
+    "ops-map+ops-alerts": {
+      "name": "Alertes Géolocalisées",
+      "tagline": "L'urgence, là où elle se passe",
+      "description": "Les alertes apparaissent comme des marqueurs sur la carte. Une panne véhicule, un incident chantier, une anomalie détectée — tout est positionné géographiquement pour faciliter la réponse.",
+      "impact": "Localisation instantanée des incidents, intervention ciblée",
+      "narrative_short": "Les alertes ont une position. Vous savez immédiatement où intervenir.",
+      "narrative_full": "Une alerte sans localisation est incomplète. Cette intégration place chaque incident sur la carte, permettant une réponse rapide et ciblée."
+    },
+
+    "ops-map+ops-kpi": {
+      "name": "Performance Géographique",
+      "tagline": "Les chiffres sur le terrain",
+      "description": "Les KPIs se visualisent géographiquement. Productivité par zone, coûts par secteur, performance par région — les métriques prennent une dimension spatiale qui révèle les disparités.",
+      "impact": "Analyse géographique des performances, zones à améliorer identifiées",
+      "narrative_short": "Les KPIs s'affichent sur la carte. Chaque zone a sa performance.",
+      "narrative_full": "Les moyennes cachent les disparités. Cette intégration révèle les écarts géographiques : quelles zones performent, lesquelles sont à la traîne."
+    },
+
+    "ops-routes+ops-maintenance": {
+      "name": "Maintenance Routière",
+      "tagline": "Des véhicules qui durent",
+      "description": "L'optimisation des routes tient compte de l'état des véhicules. Un véhicule qui montre des signes de fatigue peut être épargné des trajets longs. Les maintenances sont planifiées en fonction des tournées prévues.",
+      "impact": "Usure véhicules -20%, maintenances calées sur disponibilités",
+      "narrative_short": "Les routes épargnent les véhicules. L'optimisation intègre l'état mécanique.",
+      "narrative_full": "Un véhicule fatigué envoyé sur un long trajet, c'est une panne assurée. Cette intégration équilibre performance logistique et préservation du parc."
+    },
+
+    "ops-routes+ops-sites": {
+      "name": "Logistique Chantiers",
+      "tagline": "Approvisionner efficacement",
+      "description": "Les trajets d'approvisionnement chantiers sont optimisés. Livraisons de matériaux, rotation d'engins, navettes équipes — tous les flux vers et entre chantiers sont calculés pour minimiser les coûts.",
+      "impact": "Coûts logistique chantiers -30%, approvisionnements fluides",
+      "narrative_short": "Les trajets chantiers sont optimisés. Chaque livraison, chaque transfert, au meilleur coût.",
+      "narrative_full": "Un chantier consomme et génère des flux : matériaux entrants, déchets sortants, rotation d'équipes. Cette intégration optimise chaque trajet."
+    },
+
+    "ops-routes+ops-machines": {
+      "name": "Transferts Engins Optimisés",
+      "tagline": "Déplacer malin",
+      "description": "Les transferts de machines entre sites sont planifiés et optimisés. Quel camion plateau peut transporter quel engin ? Quel itinéraire pour un convoi exceptionnel ? Les contraintes sont intégrées au calcul.",
+      "impact": "Coûts transfert machines -25%, contraintes convois gérées",
+      "narrative_short": "Les transferts machines sont calculés. Chaque mouvement d'engin est optimisé.",
+      "narrative_full": "Déplacer une machine lourde n'est pas anodin : convoi exceptionnel, autorisations, itinéraire adapté. Cette intégration gère ces contraintes spécifiques."
+    },
+
+    "ops-routes+ops-field": {
+      "name": "Tournées d'Interventions",
+      "tagline": "Plus d'interventions, moins de route",
+      "description": "Les interventions terrain sont organisées en tournées optimisées. Le système calcule l'ordre optimal de visite en tenant compte des fenêtres horaires clients, des compétences requises, et des temps d'intervention estimés.",
+      "impact": "Interventions/jour +25%, satisfaction client horaires +40%",
+      "narrative_short": "Les interventions s'enchaînent intelligemment. Chaque journée est une tournée optimisée.",
+      "narrative_full": "Un technicien qui sillonne de façon aléatoire perd du temps et de l'énergie. Cette intégration construit des journées efficaces et prévisibles."
+    },
+
+    "ops-routes+ops-weather": {
+      "name": "Routes Météo-Adaptées",
+      "tagline": "Éviter les intempéries",
+      "description": "Les prévisions météo influencent les calculs d'itinéraires. Neige annoncée en montagne ? Route alternative proposée. Orage violent prévu ? Trajet décalé ou annulé.",
+      "impact": "Incidents météo route -60%, trajets sécurisés",
+      "narrative_short": "Les routes évitent le mauvais temps. Chaque trajet tient compte des conditions.",
+      "narrative_full": "La météo affecte la route. Cette intégration anticipe : itinéraires adaptés, horaires décalés, alertes conducteurs. La sécurité prime."
+    },
+
+    "ops-routes+ops-inventory": {
+      "name": "Approvisionnement Optimisé",
+      "tagline": "Livrer juste-à-temps",
+      "description": "Les réapprovisionnements sont intégrés aux tournées. Un véhicule qui passe près du fournisseur peut récupérer une commande en cours de route. Les livraisons urgentes trouvent le véhicule le mieux placé.",
+      "impact": "Coûts livraison -35%, réapprovisionnements intégrés aux flux",
+      "narrative_short": "Les approvisionnements s'intègrent aux trajets. Chaque mouvement est une opportunité.",
+      "narrative_full": "Pourquoi faire un trajet dédié quand un véhicule passe à côté ? Cette intégration optimise globalement flux logistiques et approvisionnement."
+    },
+
+    "ops-routes+ops-scheduling": {
+      "name": "Tournées Intelligentes",
+      "tagline": "Chaque trajet a un sens",
+      "description": "L'affectation des techniciens intègre l'optimisation des trajets. Le système cherche qui peut arriver le plus efficacement, pas juste qui est compétent et disponible.",
+      "impact": "Temps de trajet -35%, interventions/technicien/jour +20%",
+      "narrative_short": "Les affectations intègrent les trajets. Chaque technicien a une tournée optimisée.",
+      "narrative_full": "Affecter le technicien le plus proche n'est pas toujours optimal. Le système raisonne en tournée complète, pas en mission isolée."
+    },
+
+    "ops-routes+ops-alerts": {
+      "name": "Réaction Rapide",
+      "tagline": "L'urgence trouve son chemin",
+      "description": "Les alertes urgentes déclenchent un recalcul d'itinéraires. Une panne client prioritaire ? Le technicien le mieux placé est rerouté. Un incident bloque un trajet ? Alternative calculée instantanément.",
+      "impact": "Temps de réponse urgences -50%, réactivité maximale",
+      "narrative_short": "Les urgences recalculent les routes. Chaque alerte trouve sa réponse optimale.",
+      "narrative_full": "Une alerte sans réponse rapide perd sa valeur. Cette intégration garantit que chaque urgence trouve le chemin le plus court vers sa résolution."
+    },
+
+    "ops-routes+ops-kpi": {
+      "name": "Efficacité Logistique",
+      "tagline": "Mesurer pour optimiser",
+      "description": "Les KPIs logistiques sont calculés automatiquement : kilomètres parcourus, temps de trajet vs temps de travail, taux de remplissage, respect des horaires. L'optimisation devient mesurable.",
+      "impact": "Performance logistique mesurée, amélioration continue",
+      "narrative_short": "L'optimisation se mesure. Chaque gain kilométrique, chaque minute économisée, visible.",
+      "narrative_full": "Sans mesure, pas d'amélioration. Cette intégration quantifie les gains de l'optimisation et identifie les marges de progrès restantes."
+    },
+
+    "ops-maintenance+ops-sites": {
+      "name": "Maintenance par Chantier",
+      "tagline": "Chaque site entretient ses équipements",
+      "description": "Les maintenances sont planifiées par chantier. Les équipements présents sur un site sont suivis ensemble. Les interventions sont calées sur les phases de moindre activité du chantier.",
+      "impact": "Arrêts chantier pour maintenance coordonnés, disponibilité équipements +20%",
+      "narrative_short": "La maintenance s'adapte aux chantiers. Les interventions n'impactent pas la production.",
+      "narrative_full": "Un équipement en maintenance au mauvais moment bloque le chantier. Cette intégration cale les interventions sur les fenêtres de disponibilité."
+    },
+
+    "ops-maintenance+ops-machines": {
+      "name": "Engins Fiables",
+      "tagline": "Zéro panne sur chantier",
+      "description": "Les machines connectées transmettent leurs données à la Maintenance Prédictive. Heures de marche, cycles de travail, alertes moteur — tout est capturé. Les interventions sont planifiées entre les affectations.",
+      "impact": "Disponibilité machines +25%, arrêts chantier pour panne -80%",
+      "narrative_short": "Les machines parlent à la maintenance. Chaque engin surveillé, anticipé, jamais en panne surprise.",
+      "narrative_full": "Une panne machine sur chantier coûte cher. Cette intégration l'élimine en détectant les signes avant-coureurs et en planifiant les interventions préventives."
+    },
+
+    "ops-maintenance+ops-field": {
+      "name": "Interventions Techniques Documentées",
+      "tagline": "Chaque réparation tracée",
+      "description": "Les interventions de maintenance terrain sont documentées avec le même outil que les interventions client. Photos avant/après, pièces utilisées, temps passé — l'historique technique est complet.",
+      "impact": "Historique maintenance complet, traçabilité 100%",
+      "narrative_short": "Les maintenances terrain sont documentées. Chaque intervention enrichit l'historique.",
+      "narrative_full": "Un historique de maintenance lacunaire, c'est une panne future non anticipée. Cette intégration garantit que chaque intervention est documentée."
+    },
+
+    "ops-maintenance+ops-weather": {
+      "name": "Maintenance Météo-Sensible",
+      "tagline": "Entretenir au bon moment",
+      "description": "Les interventions de maintenance extérieures tiennent compte de la météo. Un entretien qui nécessite des conditions sèches n'est pas planifié un jour de pluie. Les prévisions guident le planning.",
+      "impact": "Maintenances extérieures réussies +40%, replanifications évitées",
+      "narrative_short": "La maintenance regarde la météo. Les interventions sont planifiées quand les conditions le permettent.",
+      "narrative_full": "Certaines maintenances exigent des conditions spécifiques. Cette intégration évite les interventions annulées ou ratées pour cause de météo."
+    },
+
+    "ops-maintenance+ops-inventory": {
+      "name": "Pièces Juste-à-Temps",
+      "tagline": "La pièce qu'il faut, quand il faut",
+      "description": "Une intervention planifiée déclenche la réservation des pièces nécessaires. Le stock de pièces détachées s'adapte aux prévisions de maintenance. Les pièces critiques sont toujours disponibles.",
+      "impact": "Interventions annulées pour pièce manquante -90%, stock PDR -20%",
+      "narrative_short": "La maintenance réserve les pièces. Le stock anticipe les besoins. Zéro intervention ratée.",
+      "narrative_full": "Une intervention reportée faute de pièce, c'est un échec évitable. Cette intégration garantit que chaque maintenance aura ses pièces."
+    },
+
+    "ops-maintenance+ops-scheduling": {
+      "name": "Techniciens Maintenance Planifiés",
+      "tagline": "Les bonnes compétences, au bon moment",
+      "description": "Le planning des techniciens de maintenance intègre leurs spécialités. Une intervention complexe trouve le technicien habilité. Les formations et certifications sont vérifiées automatiquement.",
+      "impact": "Adéquation compétences-interventions +45%, conformité garantie",
+      "narrative_short": "Les maintenances trouvent leurs techniciens. Compétences et habilitations vérifiées.",
+      "narrative_full": "Une maintenance mal faite peut être pire qu'une panne. Cette intégration garantit que chaque intervention est confiée à un technicien qualifié."
+    },
+
+    "ops-maintenance+ops-alerts": {
+      "name": "Maintenance Réactive",
+      "tagline": "L'alerte avant la panne",
+      "description": "Les alertes techniques déclenchent des actions de maintenance. Un témoin moteur s'allume ? Alerte au service maintenance. Une anomalie de consommation ? Investigation programmée.",
+      "impact": "Pannes évitées +40%, diagnostic accéléré -60%",
+      "narrative_short": "Les alertes déclenchent la maintenance. Un signal faible devient une intervention préventive.",
+      "narrative_full": "Entre la prédiction long terme et la panne, il y a les signaux faibles. Cette intégration les capture et déclenche une réponse appropriée."
+    },
+
+    "ops-maintenance+ops-kpi": {
+      "name": "Performance Maintenance",
+      "tagline": "L'entretien optimisé",
+      "description": "Les KPIs maintenance sont automatiques : MTBF, MTTR, coûts par équipement, ratio préventif/curatif. Les tendances révèlent les équipements problématiques et les améliorations obtenues.",
+      "impact": "Performance maintenance mesurée, amélioration continue pilotée",
+      "narrative_short": "La maintenance a ses métriques. Chaque indicateur guide l'optimisation.",
+      "narrative_full": "Sans mesure, la maintenance est un centre de coût opaque. Cette intégration la transforme en fonction pilotée par les données."
+    },
+
+    "ops-sites+ops-machines": {
+      "name": "Parc Machines Intelligent",
+      "tagline": "L'engin qu'il faut, là où il faut",
+      "description": "Chaque machine est vue dans son contexte : le chantier. Les conflits d'affectation sont détectés — deux chantiers ne peuvent pas compter sur la même grue. La réservation passe par un planning visuel partagé.",
+      "impact": "Conflits affectation éliminés, utilisation machines +40%",
+      "narrative_short": "Les machines trouvent leur chantier. Planning visuel, conflits impossibles, utilisation optimale.",
+      "narrative_full": "Une machine n'existe pas dans le vide — elle est au service d'un chantier. Cette intégration rend visible cette relation et élimine les doubles réservations."
+    },
+
+    "ops-sites+ops-field": {
+      "name": "Terrain Documenté",
+      "tagline": "Ce qui se fait se prouve",
+      "description": "Les rapports d'intervention terrain alimentent l'avancement des chantiers. Chaque tâche complétée met à jour le suivi global. Les photos géolocalisées constituent une timeline visuelle du projet.",
+      "impact": "Avancement temps réel, preuve documentée de chaque action",
+      "narrative_short": "Le terrain alimente le suivi. Chaque intervention se reflète dans l'avancement global.",
+      "narrative_full": "Le lien terrain-bureau devient automatique. Le technicien complète sa fiche, le chantier se met à jour instantanément."
+    },
+
+    "ops-sites+ops-weather": {
+      "name": "Chantiers Météo-Intelligents",
+      "tagline": "Planifier avec le ciel",
+      "description": "Les prévisions météo sont projetées sur chaque chantier. Les tâches sensibles aux intempéries sont reprogrammées automatiquement. Les décisions de report sont prises en amont.",
+      "impact": "Journées perdues météo -60%, réorganisations sereines",
+      "narrative_short": "Chaque chantier connaît sa météo. Les travaux sensibles s'adaptent aux prévisions.",
+      "narrative_full": "Couler du béton sous la pluie ? Peindre avec du vent ? Ces erreurs disparaissent. Le système croise plannings et prévisions météo."
+    },
+
+    "ops-sites+ops-inventory": {
+      "name": "Approvisionnement Chantiers",
+      "tagline": "Les bons matériaux, au bon moment",
+      "description": "Chaque chantier connaît ses besoins en matériaux. Les approvisionnements sont planifiés en fonction de l'avancement réel. Les livraisons sont calées sur les phases de travaux.",
+      "impact": "Ruptures matériaux éliminées, stock chantier optimisé",
+      "narrative_short": "Les chantiers connaissent leurs besoins. Les approvisionnements suivent l'avancement.",
+      "narrative_full": "Un chantier à l'arrêt faute de matériaux, c'est inacceptable. Cette intégration anticipe les besoins et déclenche les approvisionnements à temps."
+    },
+
+    "ops-sites+ops-scheduling": {
+      "name": "Ressources Orchestrées",
+      "tagline": "Les bonnes équipes, sur les bons sites",
+      "description": "Le planning s'intègre à la vue chantier. Vous voyez les équipes prévues par site : qui vient demain, avec quelles compétences. Les sous-effectifs sont détectés et alertés.",
+      "impact": "Adéquation besoins/ressources +35%, sous-effectifs anticipés",
+      "narrative_short": "Les équipes sont vues par chantier. Planning et terrain synchronisés.",
+      "narrative_full": "Un chantier n'est rien sans ses équipes. Cette intégration les rend visibles dans leur contexte d'intervention."
+    },
+
+    "ops-sites+ops-alerts": {
+      "name": "Vigilance Chantiers",
+      "tagline": "Chaque site surveillé",
+      "description": "Les événements chantier génèrent des alertes ciblées : retard détecté, dépassement budget, incident sécurité. Chaque problème est remonté au bon interlocuteur avec le contexte nécessaire.",
+      "impact": "Problèmes chantier détectés -70%, réactivité direction",
+      "narrative_short": "Les chantiers alertent. Chaque problème remonte avec son contexte.",
+      "narrative_full": "Un chantier qui dérive sans que personne ne le sache, c'est du passé. Cette intégration met en place une surveillance proactive de chaque site."
+    },
+
+    "ops-sites+ops-kpi": {
+      "name": "Performance Chantiers",
+      "tagline": "Chaque projet mesuré",
+      "description": "Les KPIs chantiers sont automatiques : avancement physique, consommation budget, productivité, respect délais. Les comparaisons entre chantiers stimulent la performance.",
+      "impact": "Performance chantiers mesurée, benchmark interne actif",
+      "narrative_short": "Chaque chantier a ses métriques. Avancement, coûts, délais — tout se mesure.",
+      "narrative_full": "Sans métriques, impossible de savoir quel chantier performe et lequel dérive. Cette intégration objective la performance projet."
+    },
+
+    "ops-machines+ops-field": {
+      "name": "Utilisation Machines Documentée",
+      "tagline": "Chaque heure comptée",
+      "description": "Les rapports terrain incluent l'utilisation des machines. Heures de marche effectives, tâches réalisées, incidents éventuels — l'usage réel des engins est tracé par ceux qui les utilisent.",
+      "impact": "Suivi utilisation machines précis, facturation au réel possible",
+      "narrative_short": "L'utilisation machines est documentée. Chaque engin a son journal d'utilisation terrain.",
+      "narrative_full": "Le compteur horaire ne dit pas tout. Cette intégration capture l'usage réel : qui a utilisé quoi, pour faire quoi, pendant combien de temps."
+    },
+
+    "ops-machines+ops-weather": {
+      "name": "Machines Météo-Sensibles",
+      "tagline": "Utiliser quand c'est possible",
+      "description": "Certaines machines ne doivent pas travailler par tous les temps. Grues interdites au-delà d'un certain vent, terrassement impossible sous la pluie — les contraintes météo sont intégrées à la planification.",
+      "impact": "Accidents machines météo éliminés, utilisation sécurisée",
+      "narrative_short": "Les machines respectent la météo. Chaque contrainte de sécurité est intégrée.",
+      "narrative_full": "Une grue qui travaille par grand vent, c'est un accident potentiel. Cette intégration bloque les utilisations dangereuses."
+    },
+
+    "ops-machines+ops-inventory": {
+      "name": "Consommables Machines",
+      "tagline": "Alimenter les engins",
+      "description": "Les consommables machines (carburant, huile, filtres) sont gérés avec les stocks. Les niveaux sont suivis, les réapprovisionnements déclenchés. Une machine n'est jamais à l'arrêt faute de carburant.",
+      "impact": "Arrêts pour consommables -95%, gestion fluide",
+      "narrative_short": "Les machines ont leurs consommables. Carburant, huile, tout est approvisionné.",
+      "narrative_full": "Une machine sans carburant est aussi inutile qu'une machine en panne. Cette intégration garantit l'alimentation continue des engins."
+    },
+
+    "ops-machines+ops-scheduling": {
+      "name": "Opérateurs Machines Planifiés",
+      "tagline": "La bonne personne sur le bon engin",
+      "description": "Le planning intègre les habilitations machines. Chaque engin trouve son opérateur qualifié. Les CACES et certifications sont vérifiés automatiquement avant affectation.",
+      "impact": "Conformité opérateurs 100%, sécurité renforcée",
+      "narrative_short": "Les machines trouvent leurs opérateurs. Habilitations vérifiées, affectations sécurisées.",
+      "narrative_full": "Un opérateur non habilité sur un engin, c'est illégal et dangereux. Cette intégration garantit la conformité."
+    },
+
+    "ops-machines+ops-alerts": {
+      "name": "Surveillance Engins",
+      "tagline": "Chaque machine surveillée",
+      "description": "Les données machines génèrent des alertes ciblées : niveau carburant bas, température anormale, sortie de zone autorisée. Les problèmes sont détectés avant de devenir critiques.",
+      "impact": "Incidents machines anticipés, vol et mauvais usage détectés",
+      "narrative_short": "Les machines alertent. Chaque anomalie est détectée et signalée.",
+      "narrative_full": "Une machine est un investissement majeur. Cette intégration la surveille en permanence et alerte au moindre problème."
+    },
+
+    "ops-machines+ops-kpi": {
+      "name": "Performance Parc Machines",
+      "tagline": "Chaque engin rentabilisé",
+      "description": "Les KPIs machines sont calculés : taux d'utilisation, coût horaire réel, consommation, indisponibilité. Les engins sous-utilisés ou trop coûteux sont identifiés.",
+      "impact": "Rentabilité parc machines visible, décisions éclairées",
+      "narrative_short": "Chaque machine a ses métriques. Utilisation, coûts, rentabilité — tout est mesuré.",
+      "narrative_full": "Un parc machines représente du capital. Sans mesure, impossible de savoir s'il est rentabilisé. Cette intégration apporte la clarté."
+    },
+
+    "ops-field+ops-weather": {
+      "name": "Interventions Météo-Adaptées",
+      "tagline": "Intervenir quand c'est possible",
+      "description": "Les interventions terrain tiennent compte de la météo. Les travaux extérieurs sont reprogrammés si les conditions sont défavorables. Les techniciens sont prévenus des conditions attendues.",
+      "impact": "Interventions réussies +30%, sécurité terrain renforcée",
+      "narrative_short": "Le terrain s'adapte à la météo. Les interventions sont planifiées aux bons moments.",
+      "narrative_full": "Envoyer un technicien réparer un toit sous l'orage, c'est dangereux et inutile. Cette intégration adapte le terrain aux conditions."
+    },
+
+    "ops-field+ops-inventory": {
+      "name": "Consommation Terrain Tracée",
+      "tagline": "Chaque pièce utilisée décomptée",
+      "description": "Les pièces utilisées lors des interventions sont automatiquement décomptées du stock. L'inventaire est toujours à jour. Les consommations sont rattachées aux interventions pour analyse.",
+      "impact": "Inventaire temps réel, traçabilité consommation totale",
+      "narrative_short": "Le terrain met à jour le stock. Chaque pièce utilisée est tracée.",
+      "narrative_full": "Un stock qui ne reflète pas la réalité, c'est des ruptures surprises. Cette intégration garantit la synchronisation terrain-inventaire."
+    },
+
+    "ops-field+ops-scheduling": {
+      "name": "Planning-Terrain Synchronisé",
+      "tagline": "Planifier et exécuter en harmonie",
+      "description": "Le planning et le terrain se synchronisent. L'intervention terminée libère le technicien pour sa prochaine mission. Les retards terrain sont visibles dans le planning en temps réel.",
+      "impact": "Synchronisation planning-réalité, réajustements temps réel",
+      "narrative_short": "Planning et terrain communiquent. La réalité met à jour les prévisions.",
+      "narrative_full": "Un planning déconnecté de la réalité terrain perd sa valeur. Cette intégration les synchronise en temps réel."
+    },
+
+    "ops-field+ops-alerts": {
+      "name": "Vigilance Terrain",
+      "tagline": "Les yeux partout",
+      "description": "Les observations terrain deviennent des alertes intelligentes. Un technicien signale une anomalie ? L'information remonte instantanément. Les patterns d'anomalies révèlent les problèmes systémiques.",
+      "impact": "Remontée info terrain x10, problèmes détectés plus tôt",
+      "narrative_short": "Le terrain alerte le bureau. Chaque observation devient une action rapide.",
+      "narrative_full": "Les techniciens terrain sont les meilleurs capteurs. Cette intégration transforme leurs observations en alertes actionnables."
+    },
+
+    "ops-field+ops-kpi": {
+      "name": "Productivité Terrain",
+      "tagline": "Mesurer le travail réel",
+      "description": "Les KPIs terrain sont calculés depuis les rapports : temps par intervention, taux de résolution première visite, productivité par technicien. La performance terrain devient objective.",
+      "impact": "Performance terrain mesurée, amélioration continue",
+      "narrative_short": "Le terrain a ses métriques. Chaque intervention enrichit les indicateurs.",
+      "narrative_full": "Sans données terrain, impossible de savoir qui performe et où sont les gains possibles. Cette intégration objective la productivité."
+    },
+
+    "ops-weather+ops-inventory": {
+      "name": "Stock Saisonnier",
+      "tagline": "Anticiper les besoins météo",
+      "description": "Les prévisions météo influencent les niveaux de stock. Vague de froid annoncée ? Stock de sel et antigel renforcé. Été chaud prévu ? Climatiseurs disponibles. L'inventaire anticipe les conditions.",
+      "impact": "Disponibilité produits saisonniers +50%, anticipation",
+      "narrative_short": "Le stock anticipe la météo. Les produits saisonniers sont là quand il faut.",
+      "narrative_full": "La demande de certains produits dépend de la météo. Cette intégration anticipe ces variations et ajuste les stocks."
+    },
+
+    "ops-weather+ops-scheduling": {
+      "name": "Planning Adaptatif Météo",
+      "tagline": "S'adapter avant de subir",
+      "description": "Le planning intègre les contraintes météo. Les tâches extérieures sont repositionnées en cas de mauvais temps prévu. Les équipes savent la veille si leur mission est maintenue.",
+      "impact": "Heures improductives météo -50%, satisfaction équipes +30%",
+      "narrative_short": "Le planning anticipe la météo. Les équipes savent avant de partir.",
+      "narrative_full": "Découvrir sur place qu'on ne peut pas travailler, c'est du temps perdu. Cette intégration informe la veille."
+    },
+
+    "ops-weather+ops-alerts": {
+      "name": "Alertes Météo",
+      "tagline": "Prévenus à temps",
+      "description": "Les prévisions météo défavorables génèrent des alertes automatiques. Tempête annoncée, canicule prévue, verglas attendu — les équipes et managers sont prévenus avec le temps de réagir.",
+      "impact": "Incidents météo anticipés, réactions préparées",
+      "narrative_short": "La météo alerte. Chaque événement significatif est signalé à l'avance.",
+      "narrative_full": "Une alerte météo reçue à temps peut éviter un accident ou sauver une journée de travail. Cette intégration anticipe."
+    },
+
+    "ops-weather+ops-kpi": {
+      "name": "Impact Météo Mesuré",
+      "tagline": "Quantifier l'effet du temps",
+      "description": "L'impact de la météo sur les opérations est mesuré. Jours perdus par mois, corrélation météo-productivité, surcoûts climatiques — les données permettent d'objectiver l'effet des conditions.",
+      "impact": "Impact météo quantifié, décisions basées sur données",
+      "narrative_short": "L'impact météo se mesure. Chaque effet sur les opérations est quantifié.",
+      "narrative_full": "La météo impacte les opérations, mais de combien ? Cette intégration le quantifie et permet de mieux anticiper."
+    },
+
+    "ops-inventory+ops-scheduling": {
+      "name": "Ressources Complètes",
+      "tagline": "Équipes équipées",
+      "description": "Le planning vérifie la disponibilité des ressources matérielles. Une intervention qui nécessite un outil spécifique confirme que cet outil est disponible. Les conflits de ressources sont détectés.",
+      "impact": "Interventions avec matériel garanti, conflits évités",
+      "narrative_short": "Planning et stock communiquent. Chaque mission a ses ressources confirmées.",
+      "narrative_full": "Planifier une intervention sans vérifier le matériel nécessaire, c'est planifier un échec potentiel. Cette intégration vérifie."
+    },
+
+    "ops-inventory+ops-alerts": {
+      "name": "Alertes Stock",
+      "tagline": "Jamais à court",
+      "description": "Les seuils de stock génèrent des alertes automatiques. Niveau bas, rupture imminente, péremption proche — les gestionnaires sont informés à temps pour réagir.",
+      "impact": "Ruptures anticipées, réapprovisionnement serein",
+      "narrative_short": "Le stock alerte. Chaque seuil critique déclenche une notification.",
+      "narrative_full": "Une rupture de stock découverte au moment où on a besoin de la pièce, c'est trop tard. Cette intégration anticipe."
+    },
+
+    "ops-inventory+ops-kpi": {
+      "name": "Performance Stock",
+      "tagline": "Gérer au juste niveau",
+      "description": "Les KPIs stock sont calculés : rotation, valeur immobilisée, taux de service, coût de détention. L'optimisation des stocks devient data-driven.",
+      "impact": "Gestion stock optimisée, capital libéré",
+      "narrative_short": "Le stock a ses métriques. Rotation, valeur, service — tout est mesuré.",
+      "narrative_full": "Un stock trop important immobilise du capital, trop faible crée des ruptures. Cette intégration trouve le juste équilibre."
+    },
+
+    "ops-scheduling+ops-alerts": {
+      "name": "Planning Réactif",
+      "tagline": "S'adapter en temps réel",
+      "description": "Les alertes déclenchent des ajustements de planning. Une absence soudaine ? Remplacement proposé. Un retard sur une mission ? Suivantes décalées automatiquement.",
+      "impact": "Réactivité planning +80%, perturbations absorbées",
+      "narrative_short": "Les alertes ajustent le planning. Chaque imprévu trouve sa réponse.",
+      "narrative_full": "Un planning rigide casse au premier imprévu. Cette intégration le rend adaptatif et résilient."
+    },
+
+    "ops-scheduling+ops-kpi": {
+      "name": "Efficacité Planning",
+      "tagline": "Planifier mieux",
+      "description": "Les KPIs planning sont calculés : taux de réalisation, glissement horaire, charge par ressource, temps improductif. L'efficacité de la planification devient mesurable.",
+      "impact": "Performance planning mesurée, amélioration continue",
+      "narrative_short": "Le planning a ses métriques. Réalisation, charge, efficacité — tout est mesuré.",
+      "narrative_full": "Un planning qui promet 10 interventions et en réalise 7, ce n'est pas un bon planning. Cette intégration le mesure et l'améliore."
+    },
+
+    "ops-alerts+ops-kpi": {
+      "name": "Réactivité Mesurée",
+      "tagline": "Répondre vite et bien",
+      "description": "Les KPIs de réactivité sont calculés : temps de réponse aux alertes, taux de résolution, escalades. La performance du système d'alertes devient mesurable.",
+      "impact": "Performance alertes mesurée, réactivité optimisée",
+      "narrative_short": "La réactivité se mesure. Chaque alerte a son temps de traitement.",
+      "narrative_full": "Des alertes qui restent sans réponse ne servent à rien. Cette intégration mesure et optimise le traitement des alertes."
+    }
+  },
+
+  "multi_connections": {
+    "ops-fleet+ops-map+ops-routes": {
+      "name": "Logistique Terrain Intégrée",
+      "tagline": "Voir, suivre, optimiser",
+      "description": "La trinité du terrain : voir sur la carte, suivre la flotte, optimiser les routes. Trois modules qui séparément sont utiles, ensemble sont transformationnels.",
+      "narrative": "Votre logistique terrain atteint sa maturité. Chaque véhicule visible, chaque trajet optimisé, chaque réaffectation instantanée. Les kilomètres inutiles disparaissent, la réactivité explose."
+    },
+    "ops-sites+ops-machines+ops-scheduling": {
+      "name": "Orchestration Chantier",
+      "tagline": "Ressources alignées",
+      "description": "Chantiers + Machines + Équipes = planification complète. Vous savez quel site a besoin de quels engins avec quelles équipes.",
+      "narrative": "Vos chantiers sont orchestrés comme des symphonies. Ressources humaines et matérielles convergent au bon moment, au bon endroit."
+    },
+    "ops-field+ops-sites+ops-alerts": {
+      "name": "Terrain Connecté",
+      "tagline": "Information en boucle",
+      "description": "Les interventions alimentent le suivi chantier et déclenchent les alertes. Une boucle vertueuse où l'information circule du terrain au bureau.",
+      "narrative": "Le terrain et le bureau ne font plus qu'un. Chaque intervention documentée, chaque avancement visible, chaque problème remonté."
+    },
+    "ops-maintenance+ops-machines+ops-fleet": {
+      "name": "Actifs Maîtrisés",
+      "tagline": "Tout votre parc sous contrôle",
+      "description": "Véhicules et machines sous un même système de maintenance prédictive. Vision unifiée, interventions coordonnées, fiabilité globale.",
+      "narrative": "Véhicules et machines forment un parc unifié. La maintenance prédictive couvre l'ensemble. Votre parc vieillit moins vite et coûte moins cher."
+    },
+    "ops-weather+ops-scheduling+ops-sites": {
+      "name": "Planification Météo-Intelligente",
+      "tagline": "Travailler avec le temps",
+      "description": "La météo informe le planning qui informe les chantiers. Les conditions sont anticipées, les tâches adaptées, les équipes prévenues.",
+      "narrative": "Vos opérations intègrent la météo comme un paramètre de planification. Plus de surprises, plus de journées perdues, plus de réorganisations paniques."
+    },
+    "ops-inventory+ops-maintenance+ops-field": {
+      "name": "Chaîne Logistique Terrain",
+      "tagline": "Du stock à l'intervention",
+      "description": "Le stock alimente la maintenance qui s'exécute sur le terrain. Une chaîne fluide où chaque maillon connaît les autres.",
+      "narrative": "La pièce en stock devient la pièce en maintenance devient la pièce installée sur le terrain. Traçabilité totale, flux optimisé."
+    },
+    "ops-kpi+ops-alerts+ops-scheduling": {
+      "name": "Pilotage Opérationnel",
+      "tagline": "Mesurer, alerter, agir",
+      "description": "Les KPIs détectent les dérives, les alertes les signalent, le planning s'adapte. Un cycle d'amélioration continue automatisé.",
+      "narrative": "Vos opérations s'auto-régulent. Les indicateurs surveillent, les alertes préviennent, le planning réagit. L'amélioration devient systémique."
+    },
+    "ops-fleet+ops-maintenance+ops-alerts+ops-kpi": {
+      "name": "Flotte Autonome",
+      "tagline": "Une flotte qui se gère",
+      "description": "La flotte se surveille elle-même : télémétrie pour les données, maintenance pour l'entretien, alertes pour les anomalies, KPIs pour la performance.",
+      "narrative": "Votre flotte devient intelligente. Elle génère ses données, prédit ses pannes, alerte ses anomalies, mesure sa performance. Vous pilotez, elle s'optimise."
+    },
+    "ops-sites+ops-field+ops-scheduling+ops-kpi": {
+      "name": "Excellence Chantier",
+      "tagline": "Le chantier parfait",
+      "description": "Chantiers suivis, interventions documentées, équipes planifiées, performance mesurée. Tous les aspects du chantier sous contrôle.",
+      "narrative": "Vos chantiers atteignent l'excellence opérationnelle. Chaque aspect est maîtrisé, chaque métrique optimisée, chaque ressource valorisée."
+    },
+    "ops-map+ops-fleet+ops-sites+ops-machines": {
+      "name": "Visibilité Totale",
+      "tagline": "Tout sur la carte",
+      "description": "Véhicules, machines, chantiers — tous vos actifs terrain visibles sur une seule carte. La vision God-mode de vos opérations.",
+      "narrative": "Votre terrain devient transparent. Un seul coup d'œil sur la carte révèle où sont vos véhicules, vos machines, vos chantiers. La décision devient visuelle."
+    }
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "dimension": "intelligence",
+  "dimension_name": "Intelligence Décisionnelle",
+  "version": "1.0",
+  "modules": {
+    "intel-banks": {
+      "name": "Multi-Banques",
+      "tagline": "Toutes vos banques, une seule vue",
+      "description_short": "Agrégation en temps réel de tous vos comptes bancaires dans un tableau de bord unifié.",
+      "description_full": "Multi-Banques met fin au jonglage entre les interfaces bancaires. Tous vos comptes, toutes vos banques, tous vos mouvements dans une vue unique et actualisée en temps réel. La réconciliation automatique élimine les heures perdues en rapprochements manuels. Votre trésorier voit enfin la réalité financière complète de l'entreprise.",
+      "impact_business": {
+        "primary": "Visibilité trésorerie instantanée sur 100% des comptes",
+        "secondary": "Réconciliation automatique = 90% de temps gagné",
+        "tertiary": "Détection des anomalies en temps réel"
+      },
+      "use_cases": [
+        "Vue consolidée de tous les soldes bancaires",
+        "Réconciliation automatique des mouvements",
+        "Alertes de seuil sur chaque compte",
+        "Export comptable automatisé"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos 5, 10, 15 comptes bancaires deviennent une seule réalité. La fragmentation disparaît.",
+        "with_cashflow": "Multi-Banques nourrit le Flux de Trésorerie. Vision passée + projection future.",
+        "with_dashboards": "Les soldes s'affichent sur vos tableaux de bord. La direction voit tout d'un coup d'œil.",
+        "with_alerts": "Solde anormal détecté ? L'alerte part instantanément. Réactivité maximale."
+      }
+    },
+    "intel-ml": {
+      "name": "Prédictions IA",
+      "tagline": "L'avenir, calculé",
+      "description_short": "Modèles de machine learning qui détectent les patterns et prédisent les tendances avant qu'elles ne se matérialisent.",
+      "description_full": "Les Prédictions IA transforment vos données historiques en boule de cristal. Les algorithmes de machine learning analysent les patterns, détectent les corrélations invisibles, et projettent les tendances futures avec une précision que l'intuition humaine ne peut égaler. Anticipez les pics de demande, les baisses de trésorerie, les opportunités de marché des semaines à l'avance.",
+      "impact_business": {
+        "primary": "Anticipation de 2-4 semaines sur les tendances clés",
+        "secondary": "Précision des prévisions améliorée de 40%",
+        "tertiary": "Décisions basées sur les données, pas sur l'intuition"
+      },
+      "use_cases": [
+        "Prédiction des ventes par période",
+        "Anticipation des besoins de stock",
+        "Prévision des défauts de paiement",
+        "Détection des clients à risque de churn"
+      ],
+      "transformation_narrative": {
+        "alone": "L'IA commence à apprendre vos patterns. Chaque jour, ses prédictions s'affinent.",
+        "with_forecast": "Prédictions IA + Prévisions financières = un avenir chiffré et fiable.",
+        "with_alerts": "L'IA prédit, les alertes préviennent. Vous savez avant que ça n'arrive.",
+        "with_margins": "L'IA prédit les marges futures. Ajustez votre stratégie avant le marché."
+      }
+    },
+    "intel-reports": {
+      "name": "Rapports Auto",
+      "tagline": "Des rapports qui s'écrivent seuls",
+      "description_short": "Génération automatique de rapports périodiques avec analyse narrative et visualisations.",
+      "description_full": "Les Rapports Auto libèrent vos équipes de la corvée du reporting. Chaque semaine, chaque mois, les rapports se génèrent automatiquement avec les bonnes données, les bons graphiques, et même une analyse narrative générée par IA. La direction reçoit ses rapports à l'heure, toujours. Les analystes se concentrent sur l'analyse, pas sur la mise en forme.",
+      "impact_business": {
+        "primary": "Temps de reporting réduit de 80%",
+        "secondary": "Rapports toujours à l'heure, toujours complets",
+        "tertiary": "Standardisation et qualité constante"
+      },
+      "use_cases": [
+        "Rapports mensuels de performance automatiques",
+        "Tableaux de bord hebdomadaires pour le COMEX",
+        "Rapports réglementaires pré-formatés",
+        "Exports personnalisés par département"
+      ],
+      "transformation_narrative": {
+        "alone": "Le reporting devient automatique. Vos analystes passent de la production à l'analyse.",
+        "with_dashboards": "Les tableaux de bord nourrissent les rapports. Cohérence totale des chiffres.",
+        "with_ml": "L'IA enrichit les rapports de ses insights prédictifs. Reporting augmenté.",
+        "with_margins": "Les analyses de marge s'intègrent automatiquement aux rapports mensuels."
+      }
+    },
+    "intel-dashboards": {
+      "name": "Tableaux de Bord",
+      "tagline": "La vérité en un regard",
+      "description_short": "Visualisations interactives pour transformer les données en décisions. KPIs en temps réel pour tous les niveaux.",
+      "description_full": "Les Tableaux de Bord transforment le chaos des données en clarté visuelle. Des KPIs actualisés en temps réel, des visualisations intuitives, des drill-downs pour aller au détail. Chaque niveau de l'organisation a sa vue adaptée : le PDG voit la synthèse, le manager voit son périmètre, l'opérationnel voit ses actions. La donnée devient enfin accessible à tous.",
+      "impact_business": {
+        "primary": "Temps de prise de décision divisé par 3",
+        "secondary": "Alignement de toute l'organisation sur les mêmes chiffres",
+        "tertiary": "Détection visuelle instantanée des anomalies"
+      },
+      "use_cases": [
+        "Dashboard direction avec KPIs stratégiques",
+        "Vue opérationnelle temps réel par département",
+        "Écrans muraux pour les équipes terrain",
+        "Alertes visuelles sur dépassement de seuils"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos données prennent forme. Des chiffres bruts aux visualisations qui parlent.",
+        "with_banks": "Les soldes bancaires s'affichent en temps réel. La trésorerie devient visuelle.",
+        "with_cashflow": "Le flux de trésorerie se dessine en courbes. Passé et futur sur un même écran.",
+        "with_forecast": "Les prévisions s'affichent à côté du réel. Comparez, ajustez, pilotez."
+      }
+    },
+    "intel-cashflow": {
+      "name": "Flux de Trésorerie",
+      "tagline": "L'argent qui coule, visible",
+      "description_short": "Suivi en temps réel de toutes les entrées et sorties d'argent. Vision précise de votre cash.",
+      "description_full": "Le Flux de Trésorerie cartographie chaque euro qui entre et sort de votre entreprise. Catégorisation automatique, récurrence détectée, saisonnalité analysée. Vous ne regardez plus un solde statique mais un flux dynamique. Comprenez où part l'argent, d'où il vient, et surtout : quand vous risquez d'être à sec.",
+      "impact_business": {
+        "primary": "Prédiction précise des besoins de trésorerie",
+        "secondary": "Identification des fuites de cash cachées",
+        "tertiary": "Optimisation du BFR grâce à la visibilité"
+      },
+      "use_cases": [
+        "Suivi des encaissements par source",
+        "Analyse des décaissements par catégorie",
+        "Détection des patterns de dépenses",
+        "Alertes sur les tensions de trésorerie"
+      ],
+      "transformation_narrative": {
+        "alone": "L'argent n'est plus une boîte noire. Chaque flux devient visible et catégorisé.",
+        "with_banks": "Multi-Banques alimente le Flux en temps réel. Zéro saisie manuelle.",
+        "with_forecast": "Le flux passé prédit le flux futur. Projetez avec confiance.",
+        "with_margins": "Flux de cash + Marges = compréhension complète de votre rentabilité."
+      }
+    },
+    "intel-margins": {
+      "name": "Analyse Marges",
+      "tagline": "Sachez ce qui rapporte vraiment",
+      "description_short": "Calcul de rentabilité par produit, par client, par projet. Identifiez ce qui génère de la valeur.",
+      "description_full": "L'Analyse Marges décompose votre rentabilité à tous les niveaux. Marge par produit, par client, par commercial, par projet, par canal. Fini de vendre à perte sans le savoir. Fini de chouchouter des clients qui vous coûtent de l'argent. Les décisions de pricing, d'allocation de ressources, de focus commercial deviennent enfin informées.",
+      "impact_business": {
+        "primary": "Identification des 20% de produits qui font 80% de la marge",
+        "secondary": "Détection des clients non rentables",
+        "tertiary": "Optimisation du mix produit/client"
+      },
+      "use_cases": [
+        "Calcul de marge par SKU",
+        "Rentabilité client sur durée de vie",
+        "Marge par canal de vente",
+        "Impact des remises sur la profitabilité"
+      ],
+      "transformation_narrative": {
+        "alone": "La vraie rentabilité apparaît. Certains résultats vont vous surprendre.",
+        "with_cashflow": "Marges + Flux = vision complète. Ce qui est rentable ET ce qui génère du cash.",
+        "with_dashboards": "Les marges s'affichent sur les tableaux de bord. Visibilité pour tous.",
+        "with_ml": "L'IA prédit les marges futures. Ajustez votre stratégie proactivement."
+      }
+    },
+    "intel-forecast": {
+      "name": "Prévisions",
+      "tagline": "Le futur, chiffré",
+      "description_short": "Projections financières fiables basées sur les données réelles et ajustées par l'IA.",
+      "description_full": "Les Prévisions transforment l'exercice budgétaire de corvée annuelle en outil de pilotage continu. Les projections s'alimentent des données réelles, s'ajustent aux tendances détectées, et se mettent à jour en temps réel. Votre forecast n'est plus une photo figée mais un film qui évolue avec votre activité. Les écarts sont détectés dès qu'ils apparaissent.",
+      "impact_business": {
+        "primary": "Précision des prévisions à 95% sur 3 mois",
+        "secondary": "Détection précoce des écarts budget/réel",
+        "tertiary": "Réactivité accrue face aux dérives"
+      },
+      "use_cases": [
+        "Prévision de CA rolling sur 12 mois",
+        "Budget dynamique vs statique",
+        "Scénarios what-if",
+        "Alertes sur écarts significatifs"
+      ],
+      "transformation_narrative": {
+        "alone": "Votre budget n'est plus figé. Il vit, respire, s'ajuste à la réalité.",
+        "with_cashflow": "Prévisions de trésorerie précises. Plus de surprises de fin de mois.",
+        "with_ml": "L'IA affine les prévisions. Le forecast atteint une précision inédite.",
+        "with_margins": "Prévisions de marge par produit. Optimisez votre mix avant les ventes."
+      }
+    },
+    "intel-alerts": {
+      "name": "Détection Anomalies",
+      "tagline": "L'IA qui veille",
+      "description_short": "Surveillance continue des données pour détecter les patterns inhabituels et alerter en temps réel.",
+      "description_full": "La Détection Anomalies est votre gardien silencieux. L'IA apprend les patterns normaux de votre activité et vous alerte dès qu'un écart significatif apparaît. Transaction inhabituelle, dépense anormale, chute de performance, pic d'activité : rien n'échappe à la surveillance algorithmique. Vous passez de la réaction tardive à l'intervention précoce.",
+      "impact_business": {
+        "primary": "Détection des problèmes 10x plus rapide",
+        "secondary": "Réduction des pertes dues aux anomalies non détectées",
+        "tertiary": "Surveillance 24/7 sans effort humain"
+      },
+      "use_cases": [
+        "Détection de fraude sur les transactions",
+        "Alertes sur les dépenses hors budget",
+        "Identification des baisses de performance",
+        "Surveillance des ratios clés"
+      ],
+      "transformation_narrative": {
+        "alone": "Un gardien IA surveille vos données. Les anomalies sont détectées avant les dégâts.",
+        "with_banks": "Mouvements bancaires surveillés. Transaction suspecte = alerte instantanée.",
+        "with_ml": "Prédictions + Détection = anomalies détectées avant même qu'elles ne se produisent.",
+        "with_cashflow": "Flux de trésorerie anormal ? Vous le savez immédiatement."
+      }
+    }
+  }
+}

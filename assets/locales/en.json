@@ -1,0 +1,915 @@
+{
+  "nav": {
+    "products": "Products",
+    "industries": "Industries",
+    "resources": "Resources",
+    "pricing": "Pricing",
+    "playground": "Playground",
+    "contact": "Contact",
+    "demo": "Free Demo",
+    "requestDemo": "Request a Demo",
+    "backToSite": "Back to site",
+    "dropdown": {
+      "fleetops": {
+        "title": "FleetOps Pro",
+        "desc": "AI-Powered Fleet Management",
+        "badge": "Flagship"
+      },
+      "daedalia": {
+        "title": "Daedalia AI",
+        "desc": "AI Copilot for Odoo",
+        "badge": "New"
+      },
+      "modules": {
+        "title": "AI Modules",
+        "desc": "Marketing, BI, API, Cyber..."
+      },
+      "guides": "Guides",
+      "allGuides": "All Guides",
+      "guidesDesc": "12 digital transformation guides",
+      "clientAugmente": "Augmented Customer",
+      "dataIntelligence": "Data Intelligence",
+      "blog": "Blog",
+      "blogDesc": "AI articles and insights",
+      "caseStudies": "Case Studies",
+      "caseStudiesDesc": "Real client results",
+      "blogNews": "Blog & News"
+    },
+    "industries": {
+      "transport": "Transport & Logistics",
+      "btp": "Construction & Engineering",
+      "mines": "Mining & Energy",
+      "location": "Vehicle Rental"
+    },
+    "mobile": {
+      "featuredProducts": "Featured Products",
+      "navigation": "Navigation",
+      "resources": "Resources",
+      "guides": "Guides (12)"
+    }
+  },
+  "hero": {
+    "badge": "In Production",
+    "usedBy": "Used by",
+    "clients": "BEKS & TransMaroc & MineralCo",
+    "title": {
+      "line1": "Your fleet costs you",
+      "highlight": "30% too much",
+      "line3": "We fix that in 48h."
+    },
+    "subtitle": "Your managers juggle between <strong>5-10 different systems</strong>. FleetOps Pro unifies everything in one platform. <strong>Deployed in 2-4 weeks. ROI in 6-12 months.</strong>",
+    "metrics": {
+      "costs": {
+        "value": "-30%",
+        "label": "Operating Costs"
+      },
+      "downtime": {
+        "value": "-40%",
+        "label": "Downtime"
+      },
+      "utilization": {
+        "value": "+30%",
+        "label": "Fleet Utilization"
+      },
+      "admin": {
+        "value": "-50%",
+        "label": "Admin Time"
+      }
+    },
+    "cta": {
+      "primary": "Free Audit in 48h",
+      "primaryBadge": "3 spots left",
+      "secondary": "See FleetOps Pro in Action"
+    },
+    "socialProof": {
+      "rating": "4.9/5 - 50+ businesses transformed"
+    },
+    "scroll": "Discover"
+  },
+  "trustBadges": {
+    "rating": {
+      "value": "4.9/5",
+      "label": "Client Rating"
+    },
+    "top10": {
+      "value": "Top 10",
+      "label": "Fleet Software 2024"
+    },
+    "rgpd": {
+      "value": "GDPR",
+      "label": "Compliant"
+    },
+    "uptime": {
+      "value": "99.9%",
+      "label": "Uptime Guaranteed"
+    },
+    "madeIn": {
+      "value": "Made in",
+      "label": "Morocco"
+    },
+    "clients": {
+      "value": "50+",
+      "label": "Active Clients"
+    }
+  },
+  "problemSolution": {
+    "label": "The Reality",
+    "title": "Managing an industrial fleet is chaos",
+    "before": {
+      "title": "Before",
+      "items": [
+        "Equipment scattered across <strong>10+ job sites</strong> with no visibility",
+        "<strong>Reactive</strong> maintenance: surprise breakdowns costing $15,000",
+        "<strong>5-10 Excel files</strong> to track the fleet",
+        "Decisions based on <strong>outdated data</strong>",
+        "<strong>$50,000/year</strong> wasted on avoidable downtime"
+      ]
+    },
+    "after": {
+      "title": "With FleetOps Pro",
+      "items": [
+        "GPS location <strong>in 10 seconds</strong> max",
+        "<strong>Predictive</strong> AI: alerts 2 weeks before breakdown",
+        "<strong>1 unified platform</strong> for everything",
+        "<strong>Real-time</strong> dashboards, not end-of-month reports",
+        "ROI visible in <strong>6 months</strong>: -40% maintenance costs"
+      ]
+    },
+    "stats": {
+      "breakdowns": { "value": "-70%", "label": "Unexpected Breakdowns" },
+      "utilization": { "value": "+35%", "label": "Utilization Rate" },
+      "deployment": { "value": "2-4 wks", "label": "Deployment" },
+      "support": { "value": "24/7", "label": "Africa Support" }
+    }
+  },
+  "fleetopsShowcase": {
+    "badge": "#1 in North Africa",
+    "title": "FleetOps Pro",
+    "subtitle": "8 modules. 1 platform. 0 Excel spreadsheets.",
+    "modules": {
+      "parc": { "name": "Fleet", "desc": "Real-time tracking of all your vehicles and equipment", "benefit": "-60% location time" },
+      "planning": { "name": "Planning", "desc": "AI-optimized automatic assignments", "benefit": "+40% efficiency" },
+      "maintenance": { "name": "Maintenance", "desc": "Predictive and preventive with automatic alerts", "benefit": "-70% breakdowns" },
+      "supply": { "name": "Supply", "desc": "Centralized purchasing, inventory and suppliers", "benefit": "-30% purchasing costs" },
+      "chantiers": { "name": "Job Sites", "desc": "Multi-site tracking and real-time needs", "benefit": "+50% visibility" },
+      "effectif": { "name": "Workforce", "desc": "Staff assignment and skills management", "benefit": "-40% admin time" },
+      "produits": { "name": "Products", "desc": "Centralized catalog, pricing and inventory", "benefit": "+25% margin" },
+      "dashboard": { "name": "Dashboard", "desc": "Real-time KPIs and automated reports", "benefit": "0 Excel" }
+    },
+    "industryTags": {
+      "btp": "Construction",
+      "transport": "Transport",
+      "location": "Rental",
+      "mines": "Mining",
+      "industrie": "Industry"
+    },
+    "stats": {
+      "gestion": { "value": "-60%", "label": "Management Time" },
+      "maintenance": { "value": "-40%", "label": "Maintenance Costs" },
+      "productivite": { "value": "+35%", "label": "Productivity" },
+      "roi": { "value": "ROI", "label": "Visible in 6 months" }
+    },
+    "interfacePreview": "Interface Preview",
+    "pricing": "Starting at <strong>500 EUR/month</strong>",
+    "ctaDemo": "Request a FleetOps Pro Demo"
+  },
+  "modules": {
+    "label": "8 AI Modules",
+    "title": "One Platform, Endless Possibilities",
+    "subtitle": "Each module can be deployed standalone or combined. Result: a tailored solution that scales with you.",
+    "items": {
+      "fleetOps": {
+        "number": "01",
+        "title": "FleetOps Pro",
+        "desc": "<strong>ROI in 6 months guaranteed</strong> - Real-time geolocation, predictive maintenance, route optimization.",
+        "tags": ["GPS Live", "Predictive AI", "Smart Routes"]
+      },
+      "bi": {
+        "number": "02",
+        "title": "Business Intelligence",
+        "desc": "<strong>ROI visible in 30 days</strong> - Your KPIs in real-time, not end-of-month. No more spreadsheets.",
+        "tags": ["Smart Analytics", "Auto Reports", "Predictions"]
+      },
+      "growth": {
+        "number": "03",
+        "title": "Growth Engine",
+        "desc": "<strong>+40% lead conversion</strong> - WhatsApp bot that qualifies your prospects while you sleep.",
+        "tags": ["Smart CRM", "WhatsApp Bot", "Lead Scoring"]
+      },
+      "marketing": {
+        "number": "04",
+        "title": "Marketing Automation",
+        "desc": "<strong>3x more leads</strong> - Self-optimizing campaigns, AI-generated content.",
+        "tags": ["Auto Campaigns", "AI Content", "Real ROI"]
+      },
+      "brand": {
+        "number": "05",
+        "title": "Brand & Experience",
+        "desc": "<strong>Website in 2 weeks</strong> - Visual identity, websites, complete and coherent design system.",
+        "tags": ["Brand Design", "Web Creation", "Design System"]
+      },
+      "integration": {
+        "number": "06",
+        "title": "System Integration",
+        "desc": "<strong>50+ connectors</strong> - Odoo, SAP, Salesforce... All your systems finally talking.",
+        "tags": ["API Magic", "Real-time Sync", "Universal"]
+      },
+      "security": {
+        "number": "07",
+        "title": "Digital Defense",
+        "desc": "<strong>99.9% uptime</strong> - 24/7 AI protection, threat detection, auto GDPR compliance.",
+        "tags": ["AI Security", "Compliance", "24/7 Watch"]
+      },
+      "enterprise": {
+        "number": "08",
+        "title": "Enterprise Platform",
+        "desc": "<strong>Go-live in 6 weeks</strong> - Complete ERP, custom modules, migration included.",
+        "tags": ["Full Stack", "Custom Built", "Rapid Deploy"]
+      }
+    },
+    "watchVideo": "Watch video",
+    "playground": {
+      "title": "Build Your Ideal Architecture",
+      "desc": "Use our interactive Playground to visually assemble the modules you need.",
+      "cta": "Open Playground"
+    },
+    "industries": {
+      "label": "Target Industries:",
+      "btp": "Construction & Engineering",
+      "transport": "Transport & Logistics",
+      "location": "Equipment Rental",
+      "mines": "Mining & Quarries",
+      "industrie": "Manufacturing",
+      "services": "Services"
+    }
+  },
+  "howItWorks": {
+    "label": "How It Works",
+    "title": "Operational in 3 Steps",
+    "subtitle": "From demo to full deployment, we handle everything",
+    "steps": {
+      "audit": {
+        "number": "1",
+        "title": "Free Audit",
+        "desc": "We analyze your needs, current systems, and objectives. You receive a personalized action plan.",
+        "time": "48h"
+      },
+      "config": {
+        "number": "2",
+        "title": "Configuration",
+        "desc": "Our team configures your account, imports your data, and connects your existing systems.",
+        "time": "2-4 weeks"
+      },
+      "goLive": {
+        "number": "3",
+        "title": "Go Live",
+        "desc": "Team training and launch. Priority support for 3 months to guarantee success.",
+        "time": "ROI in 6 months"
+      }
+    }
+  },
+  "integrations": {
+    "label": "Integrations",
+    "title": "Connected to Your Existing Tools",
+    "subtitle": "FleetOps Pro integrates with your ecosystem. No need to change everything.",
+    "more": "+ 50 other integrations available via our open API"
+  },
+  "socialProof": {
+    "stats": {
+      "companies": {
+        "value": "50+",
+        "label": "Businesses Transformed"
+      },
+      "satisfaction": {
+        "value": "95%",
+        "label": "Client Satisfaction"
+      },
+      "roi": {
+        "value": "6 months",
+        "label": "Average ROI"
+      },
+      "support": {
+        "value": "24/7",
+        "label": "Support Available"
+      }
+    },
+    "testimonials": {
+      "label": "Testimonials",
+      "title": "What Our Clients Say",
+      "items": [
+        {
+          "quote": "I finally have complete visibility to make the right decisions. Our profitability increased by 35% by optimizing the fleet.",
+          "name": "Mohamed Benali",
+          "role": "CEO, Transport Express Casablanca",
+          "avatar": "MB"
+        },
+        {
+          "quote": "Maintenance costs reduced by 40%. Every expense is tracked, every saving is measured. My budget is finally under control.",
+          "name": "Sarah Kabbaj",
+          "role": "CFO, BTP Solutions Rabat",
+          "avatar": "SK"
+        },
+        {
+          "quote": "I saved 60% of my time. No more Excel files, everything is centralized. I manage my fleet in a few clicks.",
+          "name": "Karim Mansouri",
+          "role": "Fleet Manager, LocaMat Tangier",
+          "avatar": "KM"
+        },
+        {
+          "quote": "We divided our breakdowns by 3. The system calculates deadlines and alerts me before it's too late.",
+          "name": "Yassine Alaoui",
+          "role": "Maintenance Manager, MineralCo",
+          "avatar": "YA"
+        },
+        {
+          "quote": "Supply lead times cut in half. From need to delivery, the entire workflow is automated and tracked.",
+          "name": "Nadia Benjelloun",
+          "role": "Procurement Manager, Atlas BTP Group",
+          "avatar": "NB"
+        },
+        {
+          "quote": "I always have the right machines at the right time. I see availability in real-time and make requests in 2 clicks.",
+          "name": "Ahmed El Fassi",
+          "role": "Site Manager, Infra Plus",
+          "avatar": "AE"
+        }
+      ]
+    },
+    "clients": {
+      "title": "They Trust Us"
+    }
+  },
+  "cta": {
+    "title": "Ready to Transform Your Business?",
+    "subtitle": "Get a personalized free ROI report in 48h",
+    "benefits": [
+      "Analysis of your current situation",
+      "Tailored recommendations",
+      "Personalized ROI estimation",
+      "ROI report in PDF"
+    ],
+    "form": {
+      "name": "Your full name",
+      "email": "Professional email",
+      "phone": "Phone (optional)",
+      "company": "Company name",
+      "interest": {
+        "label": "What interests you",
+        "fleetops": "FleetOps Pro - Fleet Management",
+        "daedalia": "Daedalia AI - Odoo Assistant",
+        "modules": "Custom AI Modules",
+        "audit": "Audit of my existing fleet",
+        "other": "Other / I want to learn more"
+      },
+      "fleetSize": {
+        "label": "Fleet size (optional)",
+        "small": "1-10 vehicles/equipment",
+        "medium": "11-50 vehicles/equipment",
+        "large": "51-100 vehicles/equipment",
+        "enterprise": "More than 100 vehicles/equipment",
+        "na": "No fleet (other need)"
+      },
+      "submit": "Get My Free ROI Report"
+    },
+    "guarantees": {
+      "noCommitment": "No commitment",
+      "secureData": "Secure data",
+      "response": "Response within 48h"
+    },
+    "alternatives": {
+      "email": "contact@kaalytics.com",
+      "whatsapp": "WhatsApp - Response in 5 min"
+    }
+  },
+  "footer": {
+    "newsletter": {
+      "title": "Get our fleet management tips",
+      "desc": "Guides, case studies and best practices. 1 email/month, no spam.",
+      "placeholder": "your@email.com",
+      "submit": "Subscribe"
+    },
+    "tagline": "AI that transforms African businesses. Fleet management solutions and custom AI modules.",
+    "columns": {
+      "products": "Products",
+      "industries": "Industries",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "links": {
+      "fleetops": "FleetOps Pro",
+      "daedalia": "Daedalia AI",
+      "modules": "AI Modules",
+      "playground": "Playground",
+      "pricing": "Pricing",
+      "btp": "Construction & Engineering",
+      "transport": "Transport",
+      "location": "Rental",
+      "mines": "Mining & Quarries",
+      "industrie": "Manufacturing",
+      "agriculture": "Agriculture",
+      "guides": "Guides (12)",
+      "blog": "Blog",
+      "caseStudy": "BEKS Case Study",
+      "guideRoi": "ROI Guide",
+      "faq": "FAQ",
+      "email": "contact@kaalytics.com",
+      "whatsapp": "WhatsApp",
+      "phone": "+212 661 718 141",
+      "requestDemo": "Request a demo"
+    },
+    "badges": {
+      "ssl": "SSL 256-bit",
+      "rgpd": "GDPR Compliant",
+      "support": "24/7 Support",
+      "madeIn": "Made in Morocco",
+      "uptime": "99.9% Uptime"
+    },
+    "copyright": "All rights reserved.",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookies"
+    }
+  },
+  "whatsapp": {
+    "question": "Got a question? Write to us"
+  },
+  "products": {
+    "fleetops": {
+      "title": "FleetOps Pro",
+      "badge": "Flagship Product",
+      "subtitle": "The Complete AI-Powered Fleet Management Platform",
+      "desc": "Real-time geolocation, predictive maintenance, route optimization. Everything you need to manage your fleet.",
+      "stats": {
+        "uptime": { "value": "99.9%", "label": "Uptime" },
+        "savings": { "value": "-40%", "label": "Operating Costs" },
+        "efficiency": { "value": "+35%", "label": "Productivity" }
+      },
+      "modules": {
+        "parc": { "title": "Fleet Management", "desc": "Complete inventory, status tracking, documents" },
+        "planning": { "title": "AI Planning", "desc": "Optimized automatic assignments" },
+        "maintenance": { "title": "Maintenance", "desc": "Predictive and preventive, alerts" },
+        "supply": { "title": "Supply Chain", "desc": "Purchasing, inventory, suppliers" },
+        "chantiers": { "title": "Job Sites", "desc": "Multi-site tracking, requirements" },
+        "effectif": { "title": "Workforce", "desc": "Staff assignment, skills" },
+        "produits": { "title": "Products", "desc": "Catalog, pricing, inventory" },
+        "dashboard": { "title": "Dashboard", "desc": "Real-time KPIs, reports" }
+      },
+      "pricing": {
+        "starter": { "name": "Starter", "price": "500", "desc": "For fleets of 1-20 vehicles" },
+        "professional": { "name": "Professional", "price": "1500", "desc": "For fleets of 21-100 vehicles" },
+        "enterprise": { "name": "Enterprise", "price": "Custom", "desc": "Unlimited fleet, dedicated support" }
+      },
+      "cta": { "demo": "Watch Demo", "contact": "Request a Demo" }
+    },
+    "daedalia": {
+      "title": "Daedalia AI",
+      "badge": "New",
+      "subtitle": "Your AI Copilot for Odoo",
+      "desc": "Intelligent assistant that understands your ERP and helps you make the right decisions.",
+      "stats": {
+        "docs": { "value": "178k+", "label": "Indexed Documents" },
+        "response": { "value": "<3s", "label": "Response Time" },
+        "accuracy": { "value": "95%", "label": "Accuracy" }
+      },
+      "features": {
+        "query": { "title": "Natural Language Queries", "desc": "Ask questions in plain English, get instant answers" },
+        "actions": { "title": "Automated Actions", "desc": "Create quotes, send emails, generate reports" },
+        "insights": { "title": "Predictive Insights", "desc": "Anticipate trends, detect anomalies" }
+      },
+      "demo": {
+        "placeholder": "My top 10 clients this month?",
+        "suggestions": ["Critical stock to order?", "Revenue by region?", "Unpaid invoices > 30 days?"]
+      },
+      "pricing": {
+        "starter": { "name": "Starter", "price": "299", "desc": "Up to 5 users" },
+        "professional": { "name": "Professional", "price": "599", "desc": "Up to 20 users" },
+        "enterprise": { "name": "Enterprise", "price": "Custom", "desc": "Unlimited users" }
+      },
+      "cta": { "demo": "Try Now", "contact": "Request a Demo" }
+    }
+  },
+  "industriesSection": {
+    "label": "Industries",
+    "title": "A Solution for Every Sector",
+    "subtitle": "FleetOps Pro adapts to your industry's specificities",
+    "cards": {
+      "btp": {
+        "title": "Construction & Engineering",
+        "desc": "Equipment scattered across multiple job sites? Costly unexpected breakdowns? We centralize everything and anticipate problems.",
+        "benefits": ["-40% downtime", "+35% utilization"]
+      },
+      "transport": {
+        "title": "Transport & Logistics",
+        "desc": "Optimize fuel, maintenance and regulatory compliance. Your vehicles drive more, cost less.",
+        "benefits": ["-25% fuel", "Auto compliance"]
+      },
+      "location": {
+        "title": "Equipment Rental",
+        "desc": "Maximize your utilization rate with native multi-tenant. Manage multiple clients without friction.",
+        "benefits": ["+20% utilization", "Multi-tenant"]
+      },
+      "mines": {
+        "title": "Mining & Quarries",
+        "desc": "Critical equipment, harsh conditions. Complete traceability and multi-site management included.",
+        "benefits": ["-60% downtime", "Traceability"]
+      },
+      "industrie": {
+        "title": "Manufacturing",
+        "desc": "ISO compliance, ERP integration, automated reporting. Your internal fleet under control.",
+        "benefits": ["ISO ready", "Full API"]
+      },
+      "collectivites": {
+        "title": "Public Sector",
+        "desc": "Budget transparency, reporting for officials and citizens. Optimize public resources.",
+        "benefits": ["Traceability", "Auto reports"]
+      },
+      "agriculture": {
+        "title": "Agriculture",
+        "desc": "Tractors, harvesters, agricultural equipment. Optimized seasonal management.",
+        "benefits": ["Seasonal", "+25% availability"]
+      }
+    }
+  },
+  "personas": {
+    "label": "They use it daily",
+    "title": "Stories like yours",
+    "subtitle": "Discover how FleetOps Pro solves real problems for professionals like you"
+  },
+  "caseStudy": {
+    "badge": "Case Study",
+    "title": "How BEKS reduced costs by <span>-45%</span> in 6 months",
+    "description": "BEKS managed 120+ vehicles with Excel and phone calls. Unexpected breakdowns, zero visibility, 3h/day lost on admin. <strong>FleetOps Pro changed everything.</strong>",
+    "metrics": {
+      "maintenance": { "value": "-45%", "label": "Maintenance Costs" },
+      "admin": { "value": "-60%", "label": "Admin Time" },
+      "disponibilite": { "value": "+30%", "label": "Availability" },
+      "economies": { "value": "96K EUR", "label": "Savings/year" }
+    },
+    "quote": "Before FleetOps Pro, I spent my mornings calling drivers to find out where our equipment was. Now I open the app and I know exactly who is where, what needs maintenance, and how much each project costs us.",
+    "author": {
+      "name": "Youssef Bennani",
+      "role": "Operations Director, BEKS"
+    },
+    "cta": "Read full case study",
+    "roiNote": "ROI achieved in 4 months",
+    "company": {
+      "name": "BEKS",
+      "sector": "Construction & Rental - Casablanca"
+    },
+    "statsBar": {
+      "vehicles": { "value": "120+", "label": "Vehicles" },
+      "employees": { "value": "85", "label": "Employees" },
+      "users": { "value": "12", "label": "Users" },
+      "deployment": { "value": "3 wks", "label": "Deployment" }
+    }
+  },
+  "daedalia": {
+    "badge": "New",
+    "title": "Daedalia AI",
+    "subtitle": "Your AI copilot for Odoo",
+    "description": "No more navigating through 10 menus. <strong>Create quotes, find products, analyze sales</strong> - in one sentence.",
+    "features": {
+      "search": "Smart Search",
+      "searchDesc": "Describe, we find",
+      "quotes": "Quotes in 1 sentence",
+      "quotesDesc": "\"Create a quote for X...\"",
+      "analysis": "Instant Analysis",
+      "analysisDesc": "Sales, inventory, clients"
+    },
+    "stats": {
+      "response": { "value": "<3s", "label": "Response" },
+      "accuracy": { "value": "95%", "label": "Accuracy" },
+      "availability": { "value": "24/7", "label": "Available" }
+    },
+    "cta": "Try Daedalia AI",
+    "chat": {
+      "title": "Daedalia AI",
+      "status": "Online"
+    },
+    "demo": {
+      "placeholder": "E.g.: My top 10 clients this month",
+      "response": "Here are your top 10 clients by revenue this month..."
+    }
+  },
+  "personasCards": {
+    "ahmed": {
+      "role": "CEO",
+      "name": "Ahmed",
+      "title": "General Manager",
+      "company": "SME Construction - 35 employees, 18 machines",
+      "problem": "I waste too much time managing schedules and never know how much each job site really costs.",
+      "solution": "Real-time Dashboard + Visual Planning"
+    },
+    "responsableParc": {
+      "role": "FM",
+      "name": "Fatima",
+      "title": "Fleet Manager",
+      "company": "Transport - 60 employees, 40 vehicles",
+      "problem": "I spend my days searching for vehicles and handling emergencies.",
+      "solution": "Fleet + Planning + Real-time GPS Module"
+    },
+    "responsableMaintenance": {
+      "role": "MM",
+      "name": "Karim",
+      "title": "Maintenance Manager",
+      "company": "Rental - 25 employees, 80 machines",
+      "problem": "Breakdowns always happen at the worst time. I repair instead of prevent.",
+      "solution": "Maintenance Module + Predictive Alerts"
+    },
+    "responsableAchats": {
+      "role": "PM",
+      "name": "Nadia",
+      "title": "Procurement Manager",
+      "company": "Industry - 80 employees, 45 machines",
+      "problem": "Purchase requests get lost, delays explode, suppliers are poorly tracked.",
+      "solution": "Supply Chain Module + PR→RFQ→PO Workflow"
+    }
+  },
+  "pricing": {
+    "label": "Pricing",
+    "title": "Plans tailored to your size",
+    "subtitle": "Start small, grow with us",
+    "guarantee": "<strong style=\"color: var(--emerald);\">30-day satisfaction guarantee</strong> - If you're not satisfied, we'll refund you. No questions asked.",
+    "fleetops": {
+      "starter": {
+        "name": "Starter",
+        "price": "500",
+        "unit": "EUR/month",
+        "target": "1-20 vehicles",
+        "features": ["Fleet + Planning + Maintenance Modules", "Email support", "Training included"]
+      },
+      "professional": {
+        "name": "Professional",
+        "price": "1,500",
+        "unit": "EUR/month",
+        "target": "21-100 vehicles",
+        "badge": "Popular",
+        "features": ["All 8 modules", "Priority support", "API + Integrations", "Custom dashboards"]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "Custom",
+        "unit": "",
+        "target": "100+ vehicles",
+        "features": ["Unlimited users", "Multi-site / Multi-country", "Dedicated 24/7 support", "99.9% SLA guaranteed", "Full customization"]
+      }
+    },
+    "daedalia": {
+      "starter": {
+        "name": "Starter",
+        "price": "299",
+        "unit": "EUR/month",
+        "users": "5 users",
+        "requests": "1000 requests/month",
+        "features": ["Odoo 14-17 Integration"]
+      },
+      "professional": {
+        "name": "Professional",
+        "price": "599",
+        "unit": "EUR/month",
+        "users": "20 users",
+        "features": ["Unlimited queries", "API + White-label"]
+      },
+      "tryBtn": "Try",
+      "startBtn": "Start"
+    },
+    "cta": {
+      "starter": "Get Started",
+      "contact": "Contact Us"
+    }
+  },
+  "comparison": {
+    "label": "Comparison",
+    "title": "Why choose FleetOps Pro?",
+    "description": "Objectively compare market solutions",
+    "tableTitle": "Comparison",
+    "headers": {
+      "feature": "Feature",
+      "fleetops": "FleetOps Pro",
+      "erp": "ERP Solutions",
+      "excel": "Excel/Sheets"
+    },
+    "rows": {
+      "gps": "Real-time GPS",
+      "maintenance": "AI Predictive Maintenance",
+      "alerts": "Automatic Alerts",
+      "dashboards": "Real-time Dashboards",
+      "odoo": "Native Odoo Integration",
+      "multitenant": "Multi-tenant (rental)",
+      "support": "French-speaking Africa Support",
+      "deployment": "Deployment",
+      "roi": "Visible ROI"
+    },
+    "values": {
+      "immediate": "Immediate",
+      "none": "None",
+      "sixMonths": "6 months",
+      "monthsPlus": "6-18 months",
+      "paidModule": "Paid module",
+      "limited": "Limited",
+      "manual": "Manual",
+      "development": "Development",
+      "variable": "Variable",
+      "twoFourWeeks": "2-4 weeks",
+      "threeToTwelveMonths": "3-12 months",
+      "twelveToTwentyFourMonths": "12-24 months"
+    },
+    "cta": "Request a comparative demo"
+  },
+  "faq": {
+    "label": "Frequently Asked Questions",
+    "title": "Everything you need to know",
+    "items": [
+      {
+        "question": "How long does it take to deploy FleetOps Pro?",
+        "answer": "<strong>48 hours to be operational.</strong> Our team configures your account, imports your existing data, and trains your teams. No infrastructure needed - everything is cloud-based. For enterprise deployments with complex integrations, allow 2-4 weeks."
+      },
+      {
+        "question": "Does it work with my current system (Odoo, SAP, Excel)?",
+        "answer": "<strong>Yes, we integrate with everything.</strong> Odoo, SAP, Sage, Salesforce, and even your Excel files. Our Integration module connects your existing systems in real-time. No need to change everything - we adapt to you."
+      },
+      {
+        "question": "What ROI can I expect?",
+        "answer": "On average, our clients see a <strong>positive ROI within 6 months</strong>: -40% on maintenance costs, -60% on admin management time, +35% productivity. For a 50-vehicle fleet, that's about EUR 50,000 in annual savings."
+      },
+      {
+        "question": "Is my data secure?",
+        "answer": "<strong>Maximum security.</strong> Hosted on certified servers in Europe, AES-256 encryption, GDPR compliant, automatic daily backups. Your data belongs to you - full export available at any time."
+      },
+      {
+        "question": "Is there a minimum commitment?",
+        "answer": "<strong>No long-term commitment.</strong> Monthly subscription, cancellable at any time. We bet on the quality of our product, not on contracts that trap you. 14-day free trial available."
+      }
+    ]
+  },
+  "contactFinal": {
+    "title": "Free fleet audit",
+    "subtitle": "Results in 48h. <strong>No commitment.</strong>",
+    "steps": {
+      "form": "Fill out the form",
+      "call": "15-min call",
+      "report": "ROI Report in PDF"
+    },
+    "form": {
+      "interest": {
+        "label": "What interests you",
+        "fleetops": "FleetOps Pro - Fleet Management",
+        "daedalia": "Daedalia AI - Odoo Assistant",
+        "modules": "Custom AI Modules",
+        "audit": "Audit of my existing fleet",
+        "other": "Other / I want to learn more"
+      },
+      "fleetSize": {
+        "label": "Fleet size (optional)",
+        "100plus": "More than 100 vehicles/equipment",
+        "na": "No fleet (other need)"
+      }
+    },
+    "whatsapp": "WhatsApp - Response in 5 min"
+  },
+  "common": {
+    "month": "month",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "contactUs": "Contact Us",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "close": "Close",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success!",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous"
+  },
+  "blog": {
+    "backToSite": "Back to site",
+    "badge": "Blog & News",
+    "title": "Kaalytics Blog",
+    "subtitle": "Insights, analysis and news on AI and digital transformation in Africa.",
+    "filters": {
+      "all": "All",
+      "ai": "AI & Machine Learning",
+      "digital": "Digital Transformation",
+      "cases": "Case Studies",
+      "news": "News"
+    },
+    "empty": {
+      "title": "Articles coming soon",
+      "text": "Our experts are preparing quality content on AI and digital transformation. Come back soon to discover our first articles."
+    },
+    "cta": {
+      "title": "Stay informed",
+      "text": "Subscribe to our newsletter to receive our latest articles and insights.",
+      "button": "Subscribe"
+    }
+  },
+  "playground": {
+    "title": "FleetOps Playground",
+    "clearAll": "Clear all",
+    "requestQuote": "Request a quote",
+    "modulesTitle": "FleetOps Modules",
+    "emptyTitle": "Drag modules here",
+    "emptyDesc": "Connect them to create your FleetOps configuration",
+    "configTitle": "Your configuration",
+    "modules": "Modules",
+    "connections": "Connections",
+    "estimate": "Estimate",
+    "perMonth": "EUR/month"
+  },
+  "guides": {
+    "backToSite": "Back to site",
+    "badge": "12 Complete Guides",
+    "title": "Digital Transformation Guides",
+    "subtitle": "Master the key concepts of digitalization and AI. Practical guides to transform your business.",
+    "read": "Read",
+    "filters": {
+      "all": "All",
+      "strategy": "Strategy",
+      "dataAi": "Data & AI",
+      "client": "Client",
+      "finance": "Finance",
+      "leadership": "Leadership"
+    },
+    "items": {
+      "clientAugmente": {
+        "number": "01",
+        "title": "The Augmented Customer",
+        "desc": "Humans at the center of digital. Create experiences that transform your customers into ambassadors.",
+        "tag": "Client"
+      },
+      "commercial": {
+        "number": "02",
+        "title": "Sales Guide",
+        "desc": "Modern sales strategies. Increase your conversions with digital tools.",
+        "tag": "Sales"
+      },
+      "connectivite": {
+        "number": "03",
+        "title": "Connectivity",
+        "desc": "Integrate all your systems. Central hub to connect your tools and automate workflows.",
+        "tag": "Tech"
+      },
+      "dataIntelligence": {
+        "number": "04",
+        "title": "Data Intelligence",
+        "desc": "Transform your data into actionable insights. Dashboards and AI predictions.",
+        "tag": "Data & AI"
+      },
+      "entrepriseConnectee": {
+        "number": "05",
+        "title": "The Connected Enterprise",
+        "desc": "Integrated digital ecosystem. How to create a fluid and reactive organization.",
+        "tag": "Strategy"
+      },
+      "economiePlateforme": {
+        "number": "06",
+        "title": "Platform Economy",
+        "desc": "Digital business models. Understand and leverage the platform economy.",
+        "tag": "Strategy"
+      },
+      "finance": {
+        "number": "07",
+        "title": "Finance Guide",
+        "desc": "Digital finance and automation. Optimize your financial processes with AI.",
+        "tag": "Finance"
+      },
+      "leadershipDigital": {
+        "number": "08",
+        "title": "Digital Leadership",
+        "desc": "Leading in the digital age. Skills and mindset of the transformational leader.",
+        "tag": "Leadership"
+      },
+      "industriel": {
+        "number": "09",
+        "title": "Industrial Guide",
+        "desc": "Industry 4.0 and IoT. Modernize your operations with connected technologies.",
+        "tag": "Industry"
+      },
+      "penseeDigitale": {
+        "number": "10",
+        "title": "Digital Thinking",
+        "desc": "Digital mindset and culture. Adopt native digital thinking in your organization.",
+        "tag": "Culture"
+      },
+      "pourquoiDigitalisation": {
+        "number": "11",
+        "title": "Why Digitalization",
+        "desc": "The fundamental challenges. Understand why digital transformation is essential.",
+        "tag": "Strategy"
+      },
+      "roiTransformation": {
+        "number": "12",
+        "title": "Transformation ROI",
+        "desc": "Measure the return on investment. KPIs and metrics to justify your digital projects.",
+        "tag": "Finance"
+      }
+    },
+    "cta": {
+      "title": "Need guidance?",
+      "text": "Our experts accompany you in your digital transformation.",
+      "button": "Contact us"
+    }
+  }
+}

@@ -1,0 +1,312 @@
+<!--
+KAALYTICS - Magnetic Cursor Effect
+====================================
+Elements qui attirent le curseur magnetiquement
+-->
+
+<div class="magnetic-demo">
+    <h2>Magnetic Cursor Effect</h2>
+    <p>Les elements attirent le curseur comme un aimant</p>
+
+    <div class="magnetic-container">
+        <!-- Custom cursor -->
+        <div class="cursor" id="cursor">
+            <div class="cursor__dot"></div>
+            <div class="cursor__outline"></div>
+        </div>
+
+        <!-- Magnetic buttons -->
+        <div class="magnetic-buttons">
+            <button class="magnetic-btn" data-magnetic data-strength="0.5">
+                <span>Hover me</span>
+            </button>
+
+            <button class="magnetic-btn magnetic-btn--large" data-magnetic data-strength="0.4">
+                <span>Strong pull</span>
+            </button>
+
+            <button class="magnetic-btn magnetic-btn--outline" data-magnetic data-strength="0.3">
+                <span>Subtle</span>
+            </button>
+        </div>
+
+        <!-- Magnetic icons -->
+        <div class="magnetic-icons">
+            <a href="#" class="magnetic-icon" data-magnetic data-strength="0.6">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                </svg>
+            </a>
+            <a href="#" class="magnetic-icon" data-magnetic data-strength="0.6">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                </svg>
+            </a>
+            <a href="#" class="magnetic-icon" data-magnetic data-strength="0.6">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/>
+                    <circle cx="4" cy="4" r="2"/>
+                </svg>
+            </a>
+            <a href="#" class="magnetic-icon" data-magnetic data-strength="0.6">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+:root {
+    --emerald: #10b981;
+    --emerald-dim: #047857;
+    --teal: #0d9488;
+    --bg-void: #040a08;
+    --bg-card: #0d1f1a;
+    --text-primary: #f0fdf4;
+    --text-muted: #86efac;
+    --border: rgba(16, 185, 129, 0.3);
+}
+
+.magnetic-demo {
+    min-height: 100vh;
+    background: var(--bg-void);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    font-family: system-ui, -apple-system, sans-serif;
+    cursor: none;
+}
+
+.magnetic-demo h2 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.magnetic-demo p {
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+}
+
+/* Custom cursor */
+.cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+}
+
+.cursor__dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--emerald);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease, width 0.2s, height 0.2s;
+}
+
+.cursor__outline {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--emerald);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease-out, width 0.2s, height 0.2s, border-color 0.2s;
+    opacity: 0.5;
+}
+
+.cursor.hovering .cursor__dot {
+    transform: translate(-50%, -50%) scale(2);
+}
+
+.cursor.hovering .cursor__outline {
+    width: 60px;
+    height: 60px;
+    border-color: var(--teal);
+}
+
+/* Magnetic buttons */
+.magnetic-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.magnetic-buttons {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.magnetic-btn {
+    position: relative;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, var(--emerald-dim) 0%, var(--emerald) 100%);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: none;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.magnetic-btn span {
+    position: relative;
+    z-index: 2;
+    display: block;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.magnetic-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--emerald) 0%, var(--teal) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.magnetic-btn:hover::before {
+    opacity: 1;
+}
+
+.magnetic-btn:hover {
+    box-shadow: 0 10px 40px -10px rgba(16, 185, 129, 0.5);
+}
+
+.magnetic-btn--large {
+    padding: 1.25rem 3rem;
+    font-size: 1.125rem;
+}
+
+.magnetic-btn--outline {
+    background: transparent;
+    border: 2px solid var(--emerald);
+}
+
+.magnetic-btn--outline::before {
+    background: var(--emerald);
+}
+
+/* Magnetic icons */
+.magnetic-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.magnetic-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    color: var(--text-muted);
+    cursor: none;
+    transition: all 0.3s;
+}
+
+.magnetic-icon svg {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.magnetic-icon:hover {
+    background: var(--emerald);
+    border-color: var(--emerald);
+    color: white;
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
+}
+
+@media (max-width: 640px) {
+    .magnetic-demo {
+        cursor: auto;
+    }
+
+    .cursor {
+        display: none;
+    }
+
+    .magnetic-btn,
+    .magnetic-icon {
+        cursor: pointer;
+    }
+}
+</style>
+
+<script>
+(function() {
+    const cursor = document.getElementById('cursor');
+    const cursorDot = cursor.querySelector('.cursor__dot');
+    const cursorOutline = cursor.querySelector('.cursor__outline');
+    const magneticElements = document.querySelectorAll('[data-magnetic]');
+
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+
+    // Smooth cursor following
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animateCursor() {
+        const dx = mouseX - cursorX;
+        const dy = mouseY - cursorY;
+
+        cursorX += dx * 0.15;
+        cursorY += dy * 0.15;
+
+        cursorDot.style.left = mouseX + 'px';
+        cursorDot.style.top = mouseY + 'px';
+
+        cursorOutline.style.left = cursorX + 'px';
+        cursorOutline.style.top = cursorY + 'px';
+
+        requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Magnetic effect
+    magneticElements.forEach(el => {
+        const strength = parseFloat(el.dataset.strength) || 0.4;
+        const textEl = el.querySelector('span') || el.querySelector('svg');
+
+        el.addEventListener('mouseenter', () => {
+            cursor.classList.add('hovering');
+        });
+
+        el.addEventListener('mouseleave', () => {
+            cursor.classList.remove('hovering');
+            el.style.transform = '';
+            if (textEl) textEl.style.transform = '';
+        });
+
+        el.addEventListener('mousemove', (e) => {
+            const rect = el.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+
+            const deltaX = (e.clientX - centerX) * strength;
+            const deltaY = (e.clientY - centerY) * strength;
+
+            el.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+
+            if (textEl) {
+                textEl.style.transform = `translate(${deltaX * 0.3}px, ${deltaY * 0.3}px)`;
+            }
+        });
+    });
+})();
+</script>

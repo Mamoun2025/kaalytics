@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "version": "3.0",
+    "dimension": "security",
+    "description": "Synergies ULTRA-RICHES pour la dimension Sécurité & Conformité"
+  },
+
+  "connections": {
+    "sec-detect+sec-response": {
+      "name": "Défense Active",
+      "tagline": "Détection et réaction en secondes",
+      "story_paragraph": "L'intégration de la Détection Menaces avec la Réponse Auto crée un système de défense qui ne dort jamais et réagit à la vitesse de la machine. L'IA détecte une menace, les playbooks de réponse s'exécutent automatiquement en quelques secondes. La machine compromise est isolée avant que l'attaquant n'ait pu progresser. Les sessions suspectes sont coupées instantanément. Le confinement est automatique, la notification est immédiate. Votre système se défend lui-même pendant que l'équipe analyse.",
+      "impact_narrative": "Cette synergie transforme votre capacité de réaction. Le temps entre détection et confinement passe de minutes ou heures à quelques secondes. Les attaques sont stoppées avant de se propager. Les dégâts potentiels sont minimisés. L'équipe sécurité peut se concentrer sur l'analyse et l'amélioration plutôt que sur la réaction d'urgence."
+    },
+
+    "sec-audit+sec-compliance": {
+      "name": "Conformité Prouvable",
+      "tagline": "Chaque exigence documentée",
+      "story_paragraph": "Quand la Piste d'Audit rencontre la gestion de Conformité, la démonstration de votre conformité devient automatique et indiscutable. Les logs d'audit fournissent les preuves que les contrôles sont effectifs. Les rapports de conformité sont générés automatiquement avec les éléments probants. Les auditeurs trouvent tout ce dont ils ont besoin, organisé et accessible. La conformité n'est plus une déclaration mais un fait prouvé par les données.",
+      "impact_narrative": "Cette combinaison élimine le stress des audits. Les preuves sont collectées en continu. Les rapports sont générés instantanément. Les questions des auditeurs trouvent leurs réponses dans les données. La conformité devient un état permanent vérifiable à tout moment."
+    },
+
+    "sec-access+sec-audit": {
+      "name": "Accès Tracés",
+      "tagline": "Chaque entrée, chaque action, chaque sortie",
+      "story_paragraph": "L'alliance du Contrôle d'Accès avec la Piste d'Audit crée une traçabilité complète de qui accède à quoi et fait quoi. Chaque connexion est enregistrée. Chaque accès à une ressource sensible est tracé. Chaque modification est attribuée à son auteur. En cas d'incident, la reconstitution est précise : qui s'est connecté, quand, depuis où, et quelles actions ont été effectuées. La responsabilisation est totale.",
+      "impact_narrative": "Cette synergie renforce la gouvernance des accès. Les comportements suspects sont identifiables a posteriori. Les investigations sont précises. L'effet dissuasif est maximal car chacun sait que ses actions sont tracées. Les audits de droits sont alimentés par les données réelles d'usage."
+    },
+
+    "sec-encrypt+sec-backup": {
+      "name": "Données Blindées",
+      "tagline": "Protégées au repos, récupérables à coup sûr",
+      "story_paragraph": "L'intégration du Chiffrement avec la Sauvegarde Auto assure que vos données sont à la fois protégées et récupérables. Les sauvegardes sont chiffrées avec les mêmes standards que les données de production. Un vol de bandes de sauvegarde est inutile sans les clés. La restauration fonctionne car les tests incluent le déchiffrement. Vos données sont protégées contre le vol ET contre la perte.",
+      "impact_narrative": "Cette combinaison couvre tous les angles de protection des données. La confidentialité est assurée même sur les sauvegardes. La disponibilité est garantie par les restaurations testées. Le chiffrement n'empêche pas la récupération. Votre stratégie de protection des données est complète."
+    },
+
+    "sec-pentest+sec-detect": {
+      "name": "Sécurité Proactive",
+      "tagline": "Trouver avant d'être trouvé",
+      "story_paragraph": "Quand les Scans Vulnérabilités alimentent la Détection Menaces, votre défense s'améliore continuellement. Les vulnérabilités identifiées génèrent des règles de détection spécifiques. Les failles non encore corrigées sont surveillées de près. Les tentatives d'exploitation sont détectées immédiatement. La fenêtre entre découverte d'une faille et son exploitation par un attaquant est couverte par une vigilance renforcée.",
+      "impact_narrative": "Cette synergie crée un cercle vertueux de sécurité. Les scans révèlent les failles. La détection surveille leur exploitation potentielle. Les corrections sont priorisées par le risque réel. Le niveau de sécurité s'améliore continuellement."
+    },
+
+    "sec-access+sec-encrypt": {
+      "name": "Données Contrôlées",
+      "tagline": "Accès restreint, contenu protégé",
+      "story_paragraph": "L'alliance du Contrôle d'Accès avec le Chiffrement crée une double protection des données sensibles. Seuls les utilisateurs autorisés peuvent accéder aux données. Même en cas d'accès physique non autorisé, les données restent chiffrées. Les permissions et les clés de chiffrement sont gérées de concert. La confidentialité est assurée par des barrières complémentaires.",
+      "impact_narrative": "Cette combinaison maximise la protection des données. Les données sont inaccessibles aux non-autorisés. Les données sont illisibles même si les contrôles d'accès sont contournés. La défense en profondeur est effective. Les exigences réglementaires de protection sont satisfaites."
+    },
+
+    "sec-compliance+sec-pentest": {
+      "name": "Conformité Technique",
+      "tagline": "Vérification continue des standards",
+      "story_paragraph": "L'intégration de la Conformité avec les Scans Vulnérabilités garantit que vos standards de sécurité sont effectivement appliqués. Les exigences de conformité sont traduites en contrôles techniques. Les scans vérifient automatiquement leur application. Les non-conformités sont détectées immédiatement. Le gap entre politique de sécurité et réalité technique est éliminé.",
+      "impact_narrative": "Cette synergie assure l'effectivité de la conformité. Les contrôles ne sont pas que documentés mais vérifiés techniquement. Les écarts sont détectés en continu. La conformité est réelle, pas théorique. Les audits confirment ce que les scans ont déjà validé."
+    },
+
+    "sec-response+sec-backup": {
+      "name": "Résilience Totale",
+      "tagline": "Contenir et restaurer",
+      "story_paragraph": "Quand la Réponse Auto s'allie à la Sauvegarde Auto, vous disposez d'une stratégie de résilience complète. L'attaque est détectée et confinée automatiquement. Si des données ont été corrompues ou chiffrées par un ransomware, elles peuvent être restaurées rapidement. La réponse inclut l'isolation ET la capacité de restauration. La continuité d'activité est assurée même dans les pires scénarios.",
+      "impact_narrative": "Cette combinaison vous rend résilient face aux attaques. Les ransomwares perdent leur pouvoir car vous pouvez restaurer. Les attaques destructives sont limitées et récupérables. La pression des attaquants est réduite. Votre capacité à dire non aux demandes de rançon est réelle."
+    }
+  },
+
+  "multi_connections": {
+    "sec-detect+sec-response+sec-audit": {
+      "name": "Centre de Sécurité",
+      "tagline": "Détecter, réagir, tracer",
+      "story_paragraph": "La triple alliance Détection Menaces, Réponse Auto et Piste d'Audit crée un centre de sécurité opérationnel complet. Les menaces sont détectées par l'IA en temps réel. Les réponses automatiques contiennent les incidents immédiatement. Chaque événement est tracé pour l'analyse post-mortem et l'amélioration continue. L'équipe sécurité dispose d'une vision complète des incidents : détection, réaction, impact, et leçons à tirer.",
+      "cumulative_impact": "Ensemble, ces trois modules créent une capacité de défense mature. Les attaques sont détectées et contenues automatiquement. Les analyses sont possibles grâce aux traces. L'amélioration continue est alimentée par les données d'incidents. Votre sécurité opérationnelle atteint un niveau professionnel."
+    },
+
+    "sec-access+sec-encrypt+sec-compliance": {
+      "name": "Protection des Données",
+      "tagline": "Accès, chiffrement, conformité alignés",
+      "story_paragraph": "Quand Contrôle d'Accès, Chiffrement et Conformité fonctionnent ensemble, la protection de vos données sensibles est complète et prouvable. Les accès sont contrôlés selon les besoins métier. Les données sont chiffrées au repos et en transit. La conformité aux réglementations de protection des données est documentée et démontrable. Le RGPD, PCI-DSS et autres standards sont couverts de manière intégrée.",
+      "cumulative_impact": "Cette combinaison triple assure une protection des données de niveau entreprise. La confidentialité est technique et organisationnelle. La conformité est prouvable. Les audits sont préparés. Vos clients et régulateurs sont rassurés sur la protection de leurs données."
+    },
+
+    "sec-pentest+sec-detect+sec-response": {
+      "name": "Défense Proactive Complète",
+      "tagline": "Anticiper, détecter, réagir",
+      "story_paragraph": "L'intégration Scans Vulnérabilités, Détection Menaces et Réponse Auto crée une posture de sécurité proactive et réactive. Les vulnérabilités sont identifiées avant exploitation. Les tentatives d'exploitation sont détectées en temps réel. Les attaques réussies sont contenues automatiquement. Chaque couche de défense renforce les autres. Les failles alimentent la surveillance qui déclenche la réponse.",
+      "cumulative_impact": "Cette orchestration triple crée une sécurité en profondeur. Les attaquants font face à plusieurs lignes de défense. Chaque faiblesse est compensée par les autres couches. Le niveau de sécurité global dépasse la somme des parties. Votre posture de sécurité est réellement robuste."
+    }
+  }
+}

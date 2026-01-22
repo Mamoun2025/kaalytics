@@ -1,0 +1,191 @@
+{
+  "dimension": "integration",
+  "dimension_name": "Connectivité",
+  "version": "1.0",
+  "modules": {
+    "integ-universal": {
+      "name": "Connecteur Universel",
+      "tagline": "Connectez tout à tout",
+      "description_short": "Plateforme d'intégration qui connecte n'importe quel système à n'importe quel autre.",
+      "description_full": "Le Connecteur Universel est la pierre de Rosette de vos systèmes d'information. Peu importe les technologies, les formats, les protocoles : tout peut se connecter. Les données circulent entre vos applications comme si elles avaient été conçues ensemble. Fini les silos, fini les exports manuels, fini les ressaisies. Vos systèmes forment enfin un tout cohérent.",
+      "impact_business": {
+        "primary": "Élimination de 95% des ressaisies manuelles",
+        "secondary": "Temps d'intégration nouveau système -80%",
+        "tertiary": "ROI de chaque outil existant démultiplié"
+      },
+      "use_cases": [
+        "Connexion ERP-CRM",
+        "Intégration e-commerce-comptabilité",
+        "Synchronisation multi-outils",
+        "Pont entre systèmes legacy et modernes"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos silos tombent. Les systèmes qui s'ignoraient commencent à dialoguer.",
+        "with_sync": "Connecteur + Sync temps réel = données qui coulent instantanément entre systèmes.",
+        "with_api": "Le connecteur expose et consomme les APIs. Flexibilité maximale.",
+        "with_legacy": "Même vos vieux systèmes s'intègrent. Le passé rencontre le présent."
+      }
+    },
+    "integ-sync": {
+      "name": "Sync Temps Réel",
+      "tagline": "Les données coulent comme l'eau",
+      "description_short": "Synchronisation instantanée entre tous vos systèmes. Zéro latence, zéro décalage.",
+      "description_full": "Le Sync Temps Réel élimine le décalage entre vos systèmes. Une donnée change ici, elle se met à jour partout instantanément. Stock vendu sur le site ? Le ERP le sait immédiatement. Client créé dans le CRM ? La comptabilité le voit aussitôt. Vos équipes travaillent toujours avec les données les plus fraîches.",
+      "impact_business": {
+        "primary": "Décisions basées sur des données temps réel",
+        "secondary": "Fin des erreurs dues aux données obsolètes",
+        "tertiary": "Réactivité opérationnelle maximale"
+      },
+      "use_cases": [
+        "Sync stock multi-canaux",
+        "Mise à jour client cross-systèmes",
+        "Réplication base de données",
+        "Alertes temps réel cross-applications"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos données se synchronisent instantanément. Plus de décalage entre systèmes.",
+        "with_universal": "Le connecteur relie, le sync synchronise. Données unifiées et temps réel.",
+        "with_monitor": "Chaque flux est visible en temps réel. La synchronisation devient observable.",
+        "with_etl": "Les données sont transformées ET synchronisées. Qualité et fraîcheur."
+      }
+    },
+    "integ-api": {
+      "name": "Hub API",
+      "tagline": "Vos données accessibles partout",
+      "description_short": "Plateforme de gestion des APIs. Exposez, consommez et sécurisez vos interfaces.",
+      "description_full": "Le Hub API centralise toutes vos interfaces de programmation. Exposez vos données via des APIs REST sécurisées, consommez les APIs de vos partenaires, gérez les versions et les accès. Les développeurs internes et externes ont un point d'entrée unique, documenté et contrôlé. Votre système d'information devient une plateforme.",
+      "impact_business": {
+        "primary": "Time-to-market nouvelles intégrations -70%",
+        "secondary": "Sécurité des accès API renforcée",
+        "tertiary": "Documentation API automatique"
+      },
+      "use_cases": [
+        "Exposition de données métier",
+        "Intégration partenaires sécurisée",
+        "Gestion des clés et quotas API",
+        "Documentation développeur"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos données deviennent accessibles via APIs. L'ouverture contrôlée commence.",
+        "with_universal": "Le connecteur utilise les APIs du hub. Intégrations standardisées.",
+        "with_sync": "Les APIs alimentent le sync. Données fraîches par design.",
+        "with_monitor": "Chaque appel API est tracé et mesuré. Performance et sécurité visibles."
+      }
+    },
+    "integ-etl": {
+      "name": "Pipeline ETL",
+      "tagline": "Transformez vos données en vol",
+      "description_short": "Extraction, transformation et chargement automatisés. Les données arrivent propres et formatées.",
+      "description_full": "Le Pipeline ETL est la station d'épuration de vos données. Les données brutes sont extraites de multiples sources, transformées selon vos règles métier, et chargées dans les systèmes cibles. Nettoyage, enrichissement, agrégation : tout se fait automatiquement. Vos systèmes reçoivent des données prêtes à l'emploi.",
+      "impact_business": {
+        "primary": "Qualité des données +80%",
+        "secondary": "Temps de préparation data -90%",
+        "tertiary": "Règles métier appliquées automatiquement"
+      },
+      "use_cases": [
+        "Migration de données",
+        "Alimentation datawarehouse",
+        "Nettoyage et déduplication",
+        "Enrichissement de données"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos données se transforment automatiquement. Brut en entrée, propre en sortie.",
+        "with_sync": "ETL + Sync = données transformées ET temps réel.",
+        "with_universal": "Le connecteur extrait, l'ETL transforme. Pipeline complet.",
+        "with_monitor": "Chaque transformation est tracée. Audit de la qualité data."
+      }
+    },
+    "integ-iot": {
+      "name": "Passerelle IoT",
+      "tagline": "Le monde physique connecté",
+      "description_short": "Connexion des capteurs, appareils et équipements à votre système d'information.",
+      "description_full": "La Passerelle IoT fait entrer le monde physique dans votre SI. Capteurs de température, compteurs d'énergie, équipements industriels, véhicules : tout ce qui produit des données peut les envoyer à vos systèmes. Les protocoles industriels sont traduits, les données sont normalisées, les volumes sont gérés. L'industrie 4.0 devient réalité.",
+      "impact_business": {
+        "primary": "Visibilité temps réel sur les équipements",
+        "secondary": "Maintenance prédictive activée",
+        "tertiary": "Données terrain exploitables"
+      },
+      "use_cases": [
+        "Remontée capteurs industriels",
+        "Télémétrie véhicules",
+        "Monitoring équipements",
+        "Smart building"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos équipements parlent à votre SI. Le monde physique devient data.",
+        "with_sync": "Les données IoT se synchronisent en temps réel. Réactivité maximale.",
+        "with_api": "Les données capteurs sont exposées via API. Intégration facilitée.",
+        "with_monitor": "Chaque flux IoT est surveillé. Performance et disponibilité des capteurs."
+      }
+    },
+    "integ-legacy": {
+      "name": "Pont Legacy",
+      "tagline": "L'ancien et le nouveau réconciliés",
+      "description_short": "Connexion des systèmes legacy aux applications modernes. Modernisation sans rupture.",
+      "description_full": "Le Pont Legacy réconcilie le passé et le présent. Vos systèmes AS400, vos bases Access, vos applications DOS : tout peut être connecté aux technologies modernes. Pas besoin de tout reconstruire. Le legacy continue de fonctionner pendant que le moderne s'y connecte. La transformation digitale se fait sans Big Bang.",
+      "impact_business": {
+        "primary": "Protection de l'investissement legacy",
+        "secondary": "Modernisation progressive sans risque",
+        "tertiary": "Coût de migration -70%"
+      },
+      "use_cases": [
+        "Exposition de données AS400",
+        "Connexion bases Access/Excel",
+        "Interface avec logiciels métier anciens",
+        "Migration progressive vers le cloud"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos vieux systèmes s'ouvrent au monde moderne. Le legacy n'est plus un frein.",
+        "with_universal": "Le pont legacy + connecteur universel = tout communique avec tout.",
+        "with_api": "Le legacy expose des APIs modernes. L'ancien devient intégrable.",
+        "with_etl": "Les données legacy sont transformées vers les formats modernes."
+      }
+    },
+    "integ-queue": {
+      "name": "File de Messages",
+      "tagline": "Communication fiable entre systèmes",
+      "description_short": "Messaging asynchrone pour des échanges fiables même en cas de pic ou de panne.",
+      "description_full": "La File de Messages assure la fiabilité des échanges entre systèmes. Les messages sont stockés, garantis, délivrés même si le destinataire est temporairement indisponible. Les pics de charge sont absorbés, les pannes temporaires sont gérées. Aucune donnée n'est perdue, aucun ordre n'est compromis.",
+      "impact_business": {
+        "primary": "Zéro perte de données en transit",
+        "secondary": "Résilience aux pannes temporaires",
+        "tertiary": "Absorption des pics de charge"
+      },
+      "use_cases": [
+        "Commandes e-commerce vers ERP",
+        "Événements métier inter-services",
+        "Intégrations asynchrones",
+        "Découplage de systèmes"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos messages sont garantis. Plus de perte en cas de surcharge ou de panne.",
+        "with_sync": "Sync temps réel + File de messages = fraîcheur ET fiabilité.",
+        "with_universal": "Le connecteur envoie, la file garantit. Intégration robuste.",
+        "with_monitor": "Chaque message est tracé. Visibilité sur les files d'attente."
+      }
+    },
+    "integ-monitor": {
+      "name": "Monitoring Flux",
+      "tagline": "Visibilité sur vos échanges",
+      "description_short": "Surveillance en temps réel de tous les flux de données. Alertes et diagnostics.",
+      "description_full": "Le Monitoring Flux donne une visibilité totale sur la circulation des données. Chaque échange est tracé, mesuré, analysé. Les latences sont détectées, les erreurs sont signalées, les volumes sont suivis. Quand quelque chose ne va pas, vous le savez immédiatement. Le diagnostic est rapide, la résolution est ciblée.",
+      "impact_business": {
+        "primary": "Temps de détection des problèmes -90%",
+        "secondary": "MTTR (temps de résolution) -60%",
+        "tertiary": "SLA des intégrations respectés"
+      },
+      "use_cases": [
+        "Tableau de bord des flux",
+        "Alertes sur erreurs et latences",
+        "Historique des échanges",
+        "Analyse de performance des intégrations"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos flux deviennent visibles. Chaque échange, chaque erreur, chaque latence tracée.",
+        "with_sync": "Le monitoring surveille la synchronisation. Performance temps réel visible.",
+        "with_queue": "Les files de messages sont monitorées. Volume et santé visibles.",
+        "with_api": "Chaque appel API est mesuré. Performance et usage des APIs."
+      }
+    }
+  }
+}

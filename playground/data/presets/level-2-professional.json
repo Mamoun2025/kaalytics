@@ -1,0 +1,83 @@
+{
+    "id": "level-2-professional",
+    "name": "Professional",
+    "level": 2,
+    "version": "2.0",
+    "description": "Architecture professionnelle - Multi-dimensionnelle avec flux intelligents",
+    "modules": [
+        {
+            "templateId": "ent-erp",
+            "x": 400,
+            "y": 50
+        },
+        {
+            "templateId": "growth-crm",
+            "x": 150,
+            "y": 200
+        },
+        {
+            "templateId": "ops-fleet",
+            "x": 650,
+            "y": 200
+        },
+        {
+            "templateId": "intel-dashboards",
+            "x": 400,
+            "y": 200
+        },
+        {
+            "templateId": "growth-pipeline",
+            "x": 150,
+            "y": 380
+        },
+        {
+            "templateId": "integ-universal",
+            "x": 400,
+            "y": 380
+        },
+        {
+            "templateId": "ops-map",
+            "x": 650,
+            "y": 380
+        },
+        {
+            "templateId": "sec-detect",
+            "x": 150,
+            "y": 560
+        },
+        {
+            "templateId": "intel-forecast",
+            "x": 400,
+            "y": 560
+        },
+        {
+            "templateId": "engage-campaigns",
+            "x": 650,
+            "y": 560
+        }
+    ],
+    "connections": [
+        { "from": { "index": 0, "port": "left" }, "to": { "index": 1, "port": "top" } },
+        { "from": { "index": 0, "port": "bottom" }, "to": { "index": 3, "port": "top" } },
+        { "from": { "index": 0, "port": "right" }, "to": { "index": 2, "port": "top" } },
+
+        { "from": { "index": 1, "port": "right" }, "to": { "index": 3, "port": "left" } },
+        { "from": { "index": 1, "port": "bottom" }, "to": { "index": 4, "port": "top" } },
+
+        { "from": { "index": 2, "port": "left" }, "to": { "index": 3, "port": "right" } },
+        { "from": { "index": 2, "port": "bottom" }, "to": { "index": 6, "port": "top" } },
+
+        { "from": { "index": 3, "port": "bottom" }, "to": { "index": 5, "port": "top" } },
+
+        { "from": { "index": 4, "port": "right" }, "to": { "index": 5, "port": "left" } },
+        { "from": { "index": 4, "port": "bottom" }, "to": { "index": 7, "port": "top" } },
+
+        { "from": { "index": 5, "port": "right" }, "to": { "index": 6, "port": "left" } },
+        { "from": { "index": 5, "port": "bottom" }, "to": { "index": 8, "port": "top" } },
+
+        { "from": { "index": 6, "port": "bottom" }, "to": { "index": 9, "port": "top" } },
+
+        { "from": { "index": 7, "port": "right" }, "to": { "index": 8, "port": "left" } },
+        { "from": { "index": 8, "port": "right" }, "to": { "index": 9, "port": "left" } }
+    ]
+}

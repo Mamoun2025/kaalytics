@@ -1,0 +1,130 @@
+{
+  "_meta": {
+    "version": "3.0",
+    "dimension": "operations",
+    "description": "Synergies ULTRA-RICHES avec récits longs et immersifs pour chaque connexion"
+  },
+
+  "connections": {
+    "ops-fleet+ops-map": {
+      "name": "Centre de Contrôle Terrain",
+      "tagline": "Vision totale, contrôle total",
+      "story_paragraph": "La fusion de votre Suivi de Flotte avec la Carte Intelligente crée bien plus qu'une simple visualisation — elle établit un véritable centre de contrôle opérationnel. Chaque véhicule apparaît sur la carte non plus comme un simple point, mais comme une entité complète avec son identité, son conducteur, sa mission en cours, son statut technique. Le dispatch devient une expérience visuelle et intuitive : d'un simple glisser-déposer, vous réaffectez un véhicule à une nouvelle mission. Les zones de chaleur révèlent les patterns de déplacement que des tableaux chiffrés ne montreraient jamais. Les géo-alertes surveillent automatiquement les entrées et sorties de zones sensibles, vous informant instantanément de tout mouvement inhabituel. Cette synergie transforme votre rapport au terrain : vous ne gérez plus à l'aveugle, vous pilotez avec une visibilité parfaite.",
+      "impact_narrative": "L'impact de cette combinaison sur votre coordination terrain est spectaculaire. Le temps de réaction aux demandes et aux imprévus chute de 70%. La coordination entre le bureau et le terrain s'améliore de 60% car chacun dispose de la même information visuelle partagée. Les conflits de répartition des ressources disparaissent face à l'évidence cartographique. Vos clients peuvent être informés de l'arrivée imminente de vos équipes avec une précision inédite."
+    },
+
+    "ops-fleet+ops-routes": {
+      "name": "Logistique Dynamique",
+      "tagline": "Routes vivantes, flotte agile",
+      "story_paragraph": "Quand le Suivi de Flotte rencontre l'Optimisation des Trajets, la magie de la logistique dynamique opère. Les trajets ne sont plus calculés pour des véhicules théoriques partant du dépôt le matin — ils s'adaptent en temps réel à la position exacte de votre flotte. Un véhicule qui termine son intervention peut capter une urgence à proximité plutôt que de voir un collègue traverser la ville. Un embouteillage détecté déclenche un recalcul instantané de l'itinéraire. Cette intégration transforme votre flotte en un organisme réactif qui s'adapte aux conditions réelles du terrain minute par minute. Les kilomètres à vide — ces trajets de retour au dépôt, ces détours évitables — s'effondrent car le système raisonne globalement.",
+      "impact_narrative": "Cette synergie génère des gains opérationnels considérables. Les kilomètres parcourus à vide diminuent de 45%. Le nombre d'interventions réalisables par jour augmente de 22% car le temps passé sur la route se convertit en temps productif. La ponctualité client s'améliore grâce à des ETA (heures d'arrivée estimées) recalculés en continu. Votre flotte fait plus, avec moins, tout en étant plus fiable pour vos clients."
+    },
+
+    "ops-fleet+ops-maintenance": {
+      "name": "Actifs Pérennes",
+      "tagline": "Rouler plus, réparer moins",
+      "story_paragraph": "L'alliance du Suivi de Flotte et de la Maintenance Prédictive crée un système où chaque véhicule bénéficie d'une surveillance de santé personnalisée. Les données de télémétrie — kilomètres parcourus, heures moteur, températures, comportements de conduite — alimentent les algorithmes de prédiction avec une précision chirurgicale. La maintenance ne suit plus un calendrier rigide ignorant l'usage réel ; elle s'adapte à ce que chaque véhicule vit véritablement. Un véhicule utilisé intensivement sera surveillé de plus près. Un autre aux conditions d'utilisation douces pourra espacer ses révisions. Les signes avant-coureurs de défaillance — une consommation anormale, une température qui dérive, des vibrations inhabituelles — déclenchent des alertes avant que le problème ne devienne panne.",
+      "impact_narrative": "Cette combinaison prolonge significativement la vie de votre flotte. La durée de vie moyenne des véhicules augmente de 30% grâce à un entretien parfaitement calibré. Les pannes sur le terrain — ces immobilisations coûteuses qui perturbent les planning et mécontentent les clients — chutent de 75%. Le coût total de possession (TCO) diminue car la maintenance curative (toujours plus chère) cède la place à la maintenance préventive intelligente."
+    },
+
+    "ops-map+ops-sites": {
+      "name": "Cartographie Chantiers",
+      "tagline": "Chaque site sur votre radar",
+      "story_paragraph": "L'intégration de la Carte Intelligente avec la Gestion Chantiers transforme votre vision géographique de l'activité. Chaque chantier n'est plus un simple nom dans un tableau — il devient un territoire sur votre carte, une zone clairement délimitée avec son statut visuel (vert pour en avance, orange pour attention requise, rouge pour critique). En survolant un site, vous accédez instantanément à ses KPIs essentiels : avancement, budget consommé, équipes présentes. La dimension géographique de votre portefeuille projets devient enfin visible : concentration, dispersion, proximités potentiellement exploitables pour mutualiser des ressources.",
+      "impact_narrative": "Cette synergie améliore radicalement votre capacité de pilotage multi-sites. La prise de décision géographique — quel chantier prioriser pour une visite, comment répartir les ressources entre sites proches — devient intuitive car visuelle. Les temps de trajets inter-chantiers s'optimisent naturellement. La direction dispose d'un tableau de bord cartographique de l'activité qui révèle des opportunités invisibles dans les rapports tabulaires."
+    },
+
+    "ops-sites+ops-machines": {
+      "name": "Parc Machines Intelligent",
+      "tagline": "L'engin qu'il faut, là où il faut",
+      "story_paragraph": "Quand la Gestion Chantiers rencontre le Planning Machines, chaque engin trouve sa place dans son contexte réel : le projet qu'il sert. Les machines ne sont plus gérées comme un parc abstrait mais comme des ressources affectées à des besoins concrets. Les conflits d'affectation — deux chefs de chantier qui comptent sur la même grue — deviennent impossibles car le planning visuel révèle immédiatement les doubles réservations. La planification des transferts inter-sites intègre les besoins réels de chaque projet phase par phase. Les taux d'utilisation sont calculés par chantier, révélant les sites qui sur-consomment des ressources machines et ceux qui pourraient en libérer.",
+      "impact_narrative": "L'impact sur l'utilisation de votre parc machines est transformationnel. Le taux d'utilisation des engins progresse de 40% car chaque machine est visible dans son contexte d'emploi. Les conflits d'affectation qui créaient tensions et retards sont éliminés. Les décisions d'investissement (acheter une nouvelle machine vs mieux utiliser l'existant) deviennent éclairées par des données de consommation par projet."
+    },
+
+    "ops-field+ops-sites": {
+      "name": "Terrain Documenté",
+      "tagline": "Ce qui se fait se prouve",
+      "story_paragraph": "L'alliance du Suivi Interventions avec la Gestion Chantiers crée un flux d'information continu du terrain vers le pilotage projet. Chaque rapport d'intervention complété sur le terrain alimente automatiquement l'avancement du chantier correspondant. Les photos géolocalisées constituent une timeline visuelle du projet consultable à tout moment. Les temps passés par tâche permettent de comparer l'avancement physique à la consommation de ressources. Cette intégration élimine la double saisie : le technicien documente son travail une fois, l'information enrichit tous les systèmes concernés.",
+      "impact_narrative": "Cette synergie transforme la gestion de l'avancement projet. La mise à jour devient temps réel au lieu de l'habituel décalage hebdomadaire. Les écarts entre prévu et réalisé sont détectés plus tôt. Les preuves photo et les rapports d'intervention constituent une documentation irréfutable en cas de litige ou pour les réceptions de travaux. Le temps administratif de consolidation des avancements est économisé."
+    },
+
+    "ops-maintenance+ops-machines": {
+      "name": "Engins Fiables",
+      "tagline": "Zéro panne sur chantier",
+      "story_paragraph": "La connexion entre Maintenance Prédictive et Planning Machines crée un système où vos engins lourds bénéficient de la même intelligence prédictive que vos véhicules. Les données d'utilisation des machines — heures de marche, cycles de travail, alertes techniques — alimentent les algorithmes de prédiction. Les interventions de maintenance sont planifiées dans les créneaux de disponibilité machine, entre deux affectations chantier. Le carnet de santé de chaque engin s'enrichit de son historique complet : utilisations, maintenances, incidents. Cette synergie garantit que vos engins seront disponibles et fiables quand vos chantiers en auront besoin.",
+      "impact_narrative": "Les bénéfices pour vos opérations chantier sont considérables. La disponibilité des machines augmente de 25% car les pannes sont anticipées et traitées en amont. Les arrêts de chantier pour cause de panne machine — ces journées perdues extrêmement coûteuses — diminuent de 80%. La confiance des chefs de chantier dans la fiabilité du matériel affecté se renforce."
+    },
+
+    "ops-scheduling+ops-routes": {
+      "name": "Tournées Intelligentes",
+      "tagline": "Chaque trajet a un sens",
+      "story_paragraph": "La fusion du Planning Équipes avec l'Optimisation Trajets révolutionne l'affectation des missions. Le système ne cherche plus simplement qui est disponible et compétent — il intègre qui peut arriver le plus efficacement. Les tournées complètes sont optimisées, pas les missions isolées. Un technicien peut avoir plusieurs interventions proches géographiquement regroupées dans sa journée, tandis qu'un collègue légèrement moins proche mais sur un autre axe prend en charge d'autres missions. Cette intelligence géographique dans l'affectation maximise le temps productif et minimise le temps de trajet.",
+      "impact_narrative": "Cette combinaison démultiplie la productivité de vos équipes terrain. Le temps de trajet par technicien diminue de 35%, libérant du temps pour des interventions supplémentaires. Le nombre d'interventions par technicien et par jour progresse de 20%. La fatigue des équipes diminue car les journées sont mieux structurées avec moins de kilomètres parcourus."
+    },
+
+    "ops-alerts+ops-fleet": {
+      "name": "Vigilance Flotte",
+      "tagline": "Chaque anomalie détectée",
+      "story_paragraph": "L'intégration des Alertes Terrain avec le Suivi de Flotte établit une surveillance proactive de votre parc roulant. Chaque événement significatif génère une notification ciblée vers le bon interlocuteur : excès de vitesse vers le responsable sécurité, sortie de zone vers le dispatcher, temps d'arrêt anormal vers le superviseur, témoin moteur vers la maintenance. Les comportements de conduite à risque sont détectés et signalés avant qu'ils ne causent un accident. Les utilisations non autorisées des véhicules sont identifiées en temps réel. Cette synergie transforme votre flotte en un réseau de capteurs intelligents qui vous informent de tout ce qui mérite attention.",
+      "impact_narrative": "L'impact sur la gestion de votre flotte est majeur. Les comportements à risque détectés et corrigés diminuent de 60%. La réactivité face aux incidents véhicules s'améliore de 80%. Les utilisations frauduleuses ou non conformes sont identifiées et traitées. La sécurité globale de vos opérations routières progresse significativement."
+    },
+
+    "ops-inventory+ops-maintenance": {
+      "name": "Pièces Juste-à-Temps",
+      "tagline": "La pièce qu'il faut, quand il faut",
+      "story_paragraph": "Quand la Gestion des Stocks rencontre la Maintenance Prédictive, la chaîne d'approvisionnement maintenance devient intelligente. Une intervention planifiée déclenche automatiquement la réservation des pièces nécessaires dans le stock. Les prévisions de maintenance alimentent les prévisions de besoins en pièces détachées. Les pièces critiques — celles dont l'absence bloquerait une intervention urgente — sont identifiées et leur disponibilité est garantie. Cette intégration élimine le scénario cauchemardesque du technicien qui découvre le jour de l'intervention que la pièce n'est pas disponible.",
+      "impact_narrative": "Les résultats de cette synergie sont éloquents. Les interventions annulées ou reportées faute de pièce disponible chutent de 90%. Le stock de pièces détachées peut être réduit de 20% car les besoins sont mieux anticipés. Le taux de résolution au premier passage (first-time-fix) augmente significativement car le technicien a toujours ce qu'il faut."
+    },
+
+    "ops-kpi+ops-fleet": {
+      "name": "Performance Flotte Mesurée",
+      "tagline": "Chaque véhicule optimisé",
+      "story_paragraph": "L'alliance des KPIs Opérationnels avec le Suivi de Flotte transforme vos données de télémétrie en tableaux de bord de performance actionables. Chaque véhicule dispose de ses indicateurs : taux d'utilisation, consommation moyenne, kilomètres parcourus, coût total de possession calculé précisément. Les comparaisons entre véhicules révèlent les écarts : pourquoi le camion 7 consomme-t-il 15% de plus que le camion 8 ? Les tendances temporelles montrent les dérives : ce véhicule se dégrade-t-il plus vite que prévu ? Cette intelligence permet une gestion fine véhicule par véhicule.",
+      "impact_narrative": "Cette combinaison éclaire vos décisions de gestion de flotte. Le TCO (Total Cost of Ownership) devient transparent et pilotable. Les véhicules problématiques sont identifiés et traités. Les décisions de renouvellement sont basées sur des données réelles, pas des impressions. La performance globale de la flotte s'améliore par un pilotage fin."
+    },
+
+    "ops-weather+ops-scheduling": {
+      "name": "Planning Météo-Intelligent",
+      "tagline": "Travailler avec le ciel",
+      "story_paragraph": "La connexion entre Météo & Conditions et le Planning Équipes intègre les contraintes atmosphériques dans la planification des ressources humaines. Les tâches extérieures sensibles aux conditions météo sont automatiquement repositionnées quand les prévisions sont défavorables. Les équipes sont informées la veille si leur mission est maintenue, reportée ou modifiée. Le système suggère d'avancer des tâches intérieures lors des journées de mauvais temps. Cette intelligence météorologique évite les déplacements inutiles vers des chantiers où le travail sera impossible.",
+      "impact_narrative": "Les bénéfices de cette synergie touchent à la fois la productivité et le bien-être des équipes. Les heures improductives liées à la météo diminuent de 50%. La satisfaction des équipes terrain s'améliore de 30% car elles ne sont plus envoyées sur des missions impossibles. Les coûts de reprogrammation chutent car les ajustements sont faits en amont, pas dans l'urgence."
+    }
+  },
+
+  "multi_connections": {
+    "ops-fleet+ops-map+ops-routes": {
+      "name": "Centre de Commande Logistique",
+      "tagline": "Voir, suivre, optimiser en temps réel",
+      "story_paragraph": "La triple alliance Suivi de Flotte, Carte Intelligente et Optimisation Trajets constitue le cœur battant de votre logistique terrain. Vous visualisez en temps réel où se trouve chaque véhicule sur la carte, vous suivez leur progression vers leurs destinations, et le système recalcule continuellement les trajets optimaux en fonction des conditions réelles. Cette trinité transforme votre coordination terrain en une expérience de pilotage digne d'un centre de contrôle aérien. Les réaffectations en temps réel deviennent naturelles : un véhicule qui termine son intervention est immédiatement redirigé vers la prochaine mission optimale compte tenu de sa position. Les embouteillages déclenchent des recalculs automatiques. Les urgences trouvent le véhicule le mieux placé.",
+      "cumulative_impact": "Ensemble, ces trois modules génèrent des gains supérieurs à la somme de leurs parties. Les kilomètres à vide chutent de plus de 50%. La réactivité aux demandes urgentes passe sous les 15 minutes. Le taux d'utilisation de la flotte dépasse les 85%. Votre logistique devient un avantage compétitif qui impressionne vos clients par sa précision et sa réactivité."
+    },
+
+    "ops-sites+ops-machines+ops-scheduling": {
+      "name": "Orchestration Chantier Complète",
+      "tagline": "Ressources humaines et matérielles alignées",
+      "story_paragraph": "Quand Gestion Chantiers, Planning Machines et Planning Équipes fonctionnent ensemble, l'orchestration de vos ressources atteint un niveau de sophistication inédit. Chaque chantier dispose de ses besoins planifiés en machines ET en personnel, phase par phase. Les conflits de ressources — humaines ou matérielles — sont détectés et résolus en amont. Les transferts de machines entre sites sont coordonnés avec les affectations des équipes qui les utiliseront. Le chef de chantier visualise toutes les ressources prévues sur son site : qui arrive quand, avec quel matériel, pour quelle durée.",
+      "cumulative_impact": "Cette orchestration triple génère une efficacité projet remarquable. Les temps morts liés aux attentes de ressources diminuent de 70%. Les chantiers avancent selon le planning prévu car toutes les ressources sont synchronisées. La productivité par chantier s'améliore de 25%. Vos clients bénéficient de projets livrés dans les temps avec des ressources utilisées de façon optimale."
+    },
+
+    "ops-maintenance+ops-fleet+ops-alerts": {
+      "name": "Flotte Autonome Surveillée",
+      "tagline": "Des véhicules qui s'auto-diagnostiquent",
+      "story_paragraph": "L'alliance de la Maintenance Prédictive, du Suivi de Flotte et des Alertes Terrain crée un système où vos véhicules deviennent des entités quasi-autonomes en matière de santé technique. La télémétrie collectée par le suivi de flotte alimente les algorithmes de prédiction. Les anomalies détectées génèrent des alertes ciblées vers le service maintenance. Les interventions préventives sont planifiées et suivies. Le cercle vertueux s'installe : chaque donnée collectée améliore la prédiction, chaque alerte traitée renforce la fiabilité.",
+      "cumulative_impact": "Cette triple synergie transforme la fiabilité de votre flotte. Les pannes sur le terrain deviennent exceptionnelles. Le temps d'immobilisation pour maintenance est planifié et optimisé. La durée de vie des véhicules s'allonge significativement. Le coût total de possession atteint son optimum grâce à une maintenance parfaitement calibrée."
+    },
+
+    "ops-field+ops-inventory+ops-scheduling": {
+      "name": "Interventions Parfaitement Équipées",
+      "tagline": "La bonne personne, avec le bon matériel",
+      "story_paragraph": "Quand le Suivi Interventions, la Gestion des Stocks et le Planning Équipes s'interconnectent, chaque intervention devient une mission parfaitement préparée. Le technicien affecté dispose des compétences requises. Les pièces nécessaires sont réservées dans le stock et préparées. Le temps prévu intègre les contraintes réelles. Le rapport d'intervention mettra automatiquement à jour les niveaux de stock. Cette chaîne intégrée élimine les frictions qui font échouer les interventions : mauvaise personne, pièce manquante, temps insuffisant.",
+      "cumulative_impact": "Les résultats sur la qualité de vos interventions sont spectaculaires. Le taux de résolution au premier passage (first-time-fix) dépasse les 90%. Les retours clients pour intervention incomplète s'effondrent. La satisfaction client atteint des sommets car chaque visite résout le problème. Vos techniciens sont satisfaits car ils arrivent préparés et réussissent leurs missions."
+    },
+
+    "ops-kpi+ops-sites+ops-scheduling": {
+      "name": "Excellence Opérationnelle Mesurée",
+      "tagline": "Performance pilotée par les données",
+      "story_paragraph": "L'intégration des KPIs Opérationnels avec la Gestion Chantiers et le Planning Équipes crée un système de pilotage complet de votre performance terrain. Chaque chantier dispose de ses indicateurs : avancement, productivité, respect des délais. Chaque équipe voit sa performance mesurée objectivement. Les comparaisons révèlent les bonnes pratiques à diffuser et les points de friction à traiter. Le management dispose de tableaux de bord consolidés qui donnent le pouls de l'activité.",
+      "cumulative_impact": "Cette combinaison installe une culture de la performance dans votre organisation. Les écarts de performance entre équipes se réduisent car les bonnes pratiques sont identifiées et partagées. Les projets problématiques sont détectés plus tôt et traités. L'amélioration continue devient systématique car chaque métrique guide les actions correctives."
+    }
+  }
+}

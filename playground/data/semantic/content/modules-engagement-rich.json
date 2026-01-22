@@ -1,0 +1,105 @@
+{
+  "_meta": {
+    "version": "3.0",
+    "dimension": "engagement",
+    "description": "Contenu sémantique ULTRA-RICHE pour la dimension Marketing Automation"
+  },
+
+  "modules": {
+    "engage-campaigns": {
+      "name": "Campagnes IA",
+      "tagline": "Des campagnes qui apprennent et s'améliorent",
+      "description_short": "Orchestration de campagnes marketing multi-canaux optimisées par l'intelligence artificielle.",
+      "description_full": "Les Campagnes IA révolutionnent votre approche marketing en créant des campagnes qui s'auto-optimisent en temps réel. L'intelligence artificielle analyse les performances de chaque message, chaque visuel, chaque timing, et ajuste automatiquement les paramètres pour maximiser les résultats. Les audiences sont segmentées dynamiquement en fonction de leur comportement. Les canaux les plus performants reçoivent plus de budget automatiquement. Chaque campagne devient plus efficace que la précédente car le système apprend continuellement de ses résultats.",
+      "transformation_story": {
+        "intro": "Vos campagnes marketing entrent dans l'ère de l'intelligence artificielle. L'optimisation n'est plus un effort manuel ponctuel mais un processus continu et automatisé. Chaque euro investi travaille plus dur car il est dirigé vers ce qui fonctionne réellement.",
+        "deep_narrative": "Les Campagnes IA transforment votre marketing en machine apprenante. Les tests A/B deviennent automatiques et permanents. Les créatives sous-performantes sont retirées et remplacées. Les audiences les plus réceptives sont identifiées et ciblées prioritairement. Le marketing cesse d'être un art intuitif pour devenir une science pilotée par les données.",
+        "business_impact": "Les résultats sont spectaculaires : amélioration de 40% du ROI des campagnes, réduction de 50% du temps de gestion, et croissance continue de la performance grâce à l'apprentissage automatique."
+      }
+    },
+
+    "engage-content": {
+      "name": "Contenu Généré",
+      "tagline": "L'IA qui écrit pour vous",
+      "description_short": "Génération de contenu marketing assistée par IA : textes, visuels, vidéos.",
+      "description_full": "Le module Contenu Généré met la puissance de l'IA générative au service de votre production marketing. Articles de blog optimisés SEO, posts réseaux sociaux adaptés à chaque plateforme, emails personnalisés, scripts vidéo, visuels créatifs : l'IA produit du contenu de qualité en quelques secondes. Les briefs sont respectés, le tone of voice de votre marque est maintenu, et le contenu est optimisé pour la conversion. Votre équipe créative peut se concentrer sur la stratégie et la supervision plutôt que sur la production répétitive.",
+      "transformation_story": {
+        "intro": "La production de contenu cesse d'être un goulot d'étranglement. L'IA génère des ébauches de qualité que vos équipes affinent et valident. Le volume de contenu que vous pouvez produire explose sans augmenter les ressources.",
+        "deep_narrative": "Le Contenu Généré démultiplie votre capacité créative. Les variations de message sont produites instantanément pour des tests. La personnalisation à grande échelle devient possible. Les délais de production s'effondrent. La cohérence du tone of voice est assurée par les guidelines intégrées dans l'IA.",
+        "business_impact": "Les gains de productivité sont massifs : réduction de 70% du temps de production de contenu, multiplication par 5 du volume de contenus produits, et amélioration de la cohérence grâce à des templates IA calibrés sur votre marque."
+      }
+    },
+
+    "engage-budget": {
+      "name": "Budget Optimisé",
+      "tagline": "L'argent va vers ce qui marche",
+      "description_short": "Allocation dynamique du budget marketing vers les canaux et campagnes les plus performants.",
+      "description_full": "Le module Budget Optimisé transforme la gestion de votre investissement marketing en processus intelligent et dynamique. L'algorithme analyse en continu le ROI de chaque euro dépensé — par canal, par campagne, par audience — et réalloue automatiquement le budget vers ce qui performe le mieux. Les campagnes sous-performantes voient leur budget réduit. Les succès sont amplifiés par des investissements accrus. L'optimisation est continue, pas mensuelle ou hebdomadaire. Votre budget marketing travaille en permanence à son efficacité maximale.",
+      "transformation_story": {
+        "intro": "Votre budget marketing cesse d'être un plan figé pour devenir un flux intelligent qui s'adapte aux résultats. Chaque euro est constamment réaffecté vers là où il génère le plus de valeur.",
+        "deep_narrative": "L'optimisation budgétaire transforme votre approche de l'investissement marketing. Les discussions budgétaires passent de la politique à la performance. Les canaux prouvent leur valeur par les données. Les arbitrages sont objectifs et réactifs. Le gaspillage sur les initiatives non performantes est éliminé.",
+        "business_impact": "L'impact sur le ROI est significatif : amélioration de 30 à 50% du rendement du budget marketing, élimination du gaspillage sur les canaux non performants, et agilité pour saisir les opportunités émergentes."
+      }
+    },
+
+    "engage-attribution": {
+      "name": "Attribution",
+      "tagline": "Sachez d'où viennent vraiment vos clients",
+      "description_short": "Modélisation précise de la contribution de chaque touchpoint marketing à la conversion.",
+      "description_full": "Le module Attribution met fin au mystère de l'origine de vos clients. En analysant le parcours complet de chaque conversion — tous les touchpoints, tous les canaux, toutes les interactions — le système attribue précisément la contribution de chaque action marketing au résultat final. Les modèles d'attribution multi-touch révèlent la valeur réelle de chaque canal, bien au-delà du simpliste 'dernier clic'. Vous savez enfin quelles campagnes génèrent vraiment des clients et pouvez investir en conséquence.",
+      "transformation_story": {
+        "intro": "Vous percez le mystère du parcours client. Chaque point de contact révèle sa vraie contribution à la conversion. Les canaux qui semblaient inutiles se révèlent parfois essentiels, et inversement.",
+        "deep_narrative": "L'Attribution transforme votre compréhension du marketing. Le débat 'quel canal a généré ce client' devient une question mesurable. Les parcours multi-touch sont valorisés correctement. Les canaux d'awareness prouvent leur utilité. Les investissements marketing deviennent véritablement data-driven.",
+        "business_impact": "L'impact sur les décisions marketing est majeur : réallocation du budget vers les vrais drivers de conversion, amélioration de 25% du ROI grâce à une meilleure compréhension des parcours, et fin des guerres de chapelle entre canaux."
+      }
+    },
+
+    "engage-email": {
+      "name": "Emails Auto",
+      "tagline": "Des emails qui arrivent au bon moment",
+      "description_short": "Séquences email automatisées et personnalisées basées sur le comportement utilisateur.",
+      "description_full": "Les Emails Auto orchestrent des séquences email sophistiquées qui s'adaptent au comportement de chaque destinataire. Emails de bienvenue, séquences de nurturing, relances panier abandonné, réactivation clients dormants : chaque scenario est automatisé et personnalisé. Le timing d'envoi est optimisé par l'IA pour chaque destinataire. Le contenu s'adapte dynamiquement au profil et aux actions passées. Chaque email est une opportunité de conversion optimisée, envoyée sans intervention manuelle.",
+      "transformation_story": {
+        "intro": "Votre email marketing devient une machine de conversion automatisée. Chaque prospect et client reçoit le bon message au bon moment, sans que votre équipe n'ait à lever le petit doigt.",
+        "deep_narrative": "Les Emails Auto transforment l'email en canal hyper-efficace. Les séquences de nurturing éduquent les prospects automatiquement. Les paniers abandonnés sont récupérés systématiquement. Les clients dormants sont réactivés au bon moment. L'email devient un revenue driver prévisible et scalable.",
+        "business_impact": "Les résultats sur le canal email sont remarquables : augmentation de 45% du taux d'ouverture grâce à l'optimisation du timing, récupération de 20% des paniers abandonnés, et génération de revenus additionnels sans effort humain supplémentaire."
+      }
+    },
+
+    "engage-social": {
+      "name": "Réseaux Sociaux",
+      "tagline": "Présence multi-plateformes sans effort",
+      "description_short": "Gestion centralisée et automatisation de la présence sur tous les réseaux sociaux.",
+      "description_full": "Le module Réseaux Sociaux centralise et automatise votre présence sur toutes les plateformes sociales. Programmation des posts, adaptation du format à chaque réseau, monitoring des mentions, réponses automatisées aux questions courantes, analyse des performances cross-plateforme : tout est géré depuis une interface unique. L'IA suggère les meilleurs moments de publication, génère des variations de contenu adaptées à chaque réseau, et identifie les conversations où votre marque devrait intervenir.",
+      "transformation_story": {
+        "intro": "Votre présence sociale devient cohérente et continue sans mobiliser une équipe entière. Un calendrier éditorial s'exécute automatiquement sur tous vos réseaux depuis un point de contrôle unique.",
+        "deep_narrative": "L'automatisation sociale libère du temps pour la stratégie et l'engagement humain de qualité. Les tâches répétitives de publication sont automatisées. Les analytics sont consolidés. Les opportunités d'engagement sont identifiées par l'IA. Votre marque est présente partout sans effort proportionnel.",
+        "business_impact": "Les gains d'efficacité sont substantiels : réduction de 60% du temps de gestion sociale, augmentation de la fréquence de publication sans ressources additionnelles, et amélioration de l'engagement grâce à l'optimisation des horaires."
+      }
+    },
+
+    "engage-ab": {
+      "name": "Tests A/B",
+      "tagline": "Testez tout, optimisez tout",
+      "description_short": "Expérimentations automatisées pour optimiser continuellement vos conversions.",
+      "description_full": "Le module Tests A/B instaure une culture d'expérimentation systématique dans votre marketing. Chaque élément peut être testé : titres, visuels, CTAs, prix affichés, mises en page, séquences. Les tests sont configurés en quelques clics et les résultats sont analysés statistiquement pour garantir leur significativité. L'IA suggère les hypothèses à tester en priorité et identifie automatiquement les variations gagnantes. L'optimisation devient un processus continu plutôt qu'un projet occasionnel.",
+      "transformation_story": {
+        "intro": "L'expérimentation devient un réflexe organisationnel. Chaque hypothèse peut être testée scientifiquement. Les intuitions sont validées ou infirmées par les données. L'amélioration continue s'installe.",
+        "deep_narrative": "Les Tests A/B transforment votre approche marketing. Les débats subjectifs cèdent la place aux données. Les gagnants sont identifiés statistiquement. Les learnings s'accumulent et enrichissent les décisions futures. La performance s'améliore par itérations successives.",
+        "business_impact": "L'impact sur les conversions est cumulatif : amélioration de 2 à 5% par test réussi, ce qui représente des gains massifs sur le volume. La culture du test devient un avantage compétitif durable."
+      }
+    },
+
+    "engage-analytics": {
+      "name": "Analytics Marketing",
+      "tagline": "Mesurez ce qui compte vraiment",
+      "description_short": "Tableaux de bord de performance marketing unifiés et actionnables.",
+      "description_full": "Le module Analytics Marketing consolide toutes vos métriques marketing dans des dashboards unifiés et actionnables. ROI par canal, coût d'acquisition par segment, funnel de conversion, cohort analysis, customer lifetime value : tous les KPIs critiques sont calculés et visualisés. Les données de tous vos outils — ads, email, social, CRM — sont agrégées pour une vue complète. L'IA identifie les tendances significatives et les points d'action prioritaires.",
+      "transformation_story": {
+        "intro": "Vos performances marketing deviennent transparentes et mesurables. Un tableau de bord unifié remplace les exports Excel multiples. La vérité des chiffres guide vos décisions.",
+        "deep_narrative": "Les Analytics Marketing instaurent une culture de la mesure. Les campagnes sont évaluées objectivement. Les canaux sont comparés sur les mêmes métriques. Les tendances sont détectées tôt. Le marketing devient véritablement accountable et optimisable.",
+        "business_impact": "L'impact sur la prise de décision est majeur : visibilité complète sur le ROI marketing, identification rapide des leviers d'amélioration, et capacité à prouver la valeur du marketing avec des données fiables."
+      }
+    }
+  }
+}

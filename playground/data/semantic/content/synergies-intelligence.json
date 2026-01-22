@@ -1,0 +1,259 @@
+{
+  "dimension": "intelligence",
+  "dimension_name": "Intelligence Décisionnelle",
+  "version": "1.0",
+  "total_connections": 28,
+  "connections": {
+    "intel-banks+intel-ml": {
+      "name": "Trésorerie Prédictive",
+      "tagline": "Prédisez vos soldes de demain",
+      "description": "Les données bancaires nourrissent les modèles IA. Les prédictions de soldes deviennent précises à 95%.",
+      "impact": "Prévision trésorerie J+30 avec 95% de précision",
+      "narrative_short": "L'IA apprend vos patterns bancaires pour prédire vos soldes futurs.",
+      "narrative_full": "Chaque mouvement bancaire nourrit les algorithmes de prédiction. L'IA détecte les récurrences, les saisonnalités, les patterns. Elle vous dit quel sera votre solde dans 7 jours, 30 jours, 90 jours. Plus de mauvaises surprises de trésorerie."
+    },
+    "intel-banks+intel-reports": {
+      "name": "Reporting Bancaire Automatisé",
+      "tagline": "Des rapports bancaires qui s'écrivent",
+      "description": "Les mouvements bancaires alimentent automatiquement les rapports périodiques. Réconciliation et présentation automatiques.",
+      "impact": "Rapports de trésorerie générés sans intervention",
+      "narrative_short": "Vos rapports bancaires se génèrent automatiquement chaque semaine.",
+      "narrative_full": "Fini de compiler les relevés de 5 banques différentes. Multi-Banques agrège, les Rapports Auto formatent. Chaque lundi matin, la direction reçoit son rapport de trésorerie consolidé avec graphiques et analyse des tendances."
+    },
+    "intel-banks+intel-dashboards": {
+      "name": "Tableau de Bord Trésorerie",
+      "tagline": "Vos soldes en un coup d'œil",
+      "description": "Les soldes bancaires s'affichent en temps réel sur les tableaux de bord. Vue consolidée instantanée.",
+      "impact": "Visibilité trésorerie temps réel pour tous les décideurs",
+      "narrative_short": "Tous vos soldes bancaires s'affichent en temps réel sur un seul écran.",
+      "narrative_full": "Le tableau de bord affiche chaque compte, chaque solde, chaque tendance. Les jauges passent au rouge quand un seuil est franchi. Le DAF voit la situation en un clin d'œil, sans ouvrir une seule interface bancaire."
+    },
+    "intel-banks+intel-cashflow": {
+      "name": "Flux Bancaire Unifié",
+      "tagline": "L'argent qui coule, tracé à la source",
+      "description": "Les mouvements bancaires alimentent automatiquement l'analyse des flux. Catégorisation et suivi en temps réel.",
+      "impact": "100% des flux catégorisés automatiquement",
+      "narrative_short": "Chaque mouvement bancaire alimente automatiquement votre analyse de flux.",
+      "narrative_full": "Multi-Banques capture, le Flux de Trésorerie catégorise. Chaque entrée est classée par source, chaque sortie par nature. Les patterns émergent naturellement : saisonnalité des encaissements, récurrence des décaissements."
+    },
+    "intel-banks+intel-margins": {
+      "name": "Rentabilité Cash",
+      "tagline": "La marge en euros sonnants",
+      "description": "Les flux bancaires enrichissent l'analyse de marge. Rentabilité mesurée en cash réel, pas en comptable.",
+      "impact": "Marges calculées sur cash réel, pas sur facturé",
+      "narrative_short": "Vos marges sont calculées sur les encaissements réels, pas sur le facturé.",
+      "narrative_full": "La marge comptable dit une chose, le cash dit la vérité. En croisant mouvements bancaires et ventes, l'Analyse Marges calcule la rentabilité cash. Ce client qui paraît rentable mais paie à 120 jours ? Vous voyez enfin son vrai coût."
+    },
+    "intel-banks+intel-forecast": {
+      "name": "Prévisions Ancrées",
+      "tagline": "Des prévisions basées sur le réel",
+      "description": "L'historique bancaire réel ancre les prévisions. Projections basées sur les flux effectifs, pas sur les budgets.",
+      "impact": "Prévisions ancrées sur données réelles = +30% de précision",
+      "narrative_short": "Vos prévisions se basent sur les flux bancaires réels, pas sur des hypothèses.",
+      "narrative_full": "Les prévisions classiques partent du budget. Les vôtres partent du réel. L'historique bancaire des 24 derniers mois nourrit les projections. Les écarts budget/réel sont intégrés automatiquement. La prévision colle à la réalité."
+    },
+    "intel-banks+intel-alerts": {
+      "name": "Sentinelle Bancaire",
+      "tagline": "Chaque mouvement surveillé",
+      "description": "L'IA surveille tous les mouvements bancaires et alerte sur les anomalies. Détection de fraude temps réel.",
+      "impact": "Fraudes et anomalies détectées en temps réel",
+      "narrative_short": "L'IA surveille chaque transaction et alerte sur tout mouvement suspect.",
+      "narrative_full": "Un virement inhabituel à 3h du matin ? Alerte. Une dépense fournisseur 3x supérieure à la moyenne ? Alerte. Un prélèvement inconnu ? Alerte. La sentinelle IA ne dort jamais et connaît chaque pattern normal de vos comptes."
+    },
+    "intel-ml+intel-reports": {
+      "name": "Rapports Augmentés",
+      "tagline": "Des rapports qui prédisent",
+      "description": "L'IA enrichit les rapports automatiques de prédictions et d'insights. Le reporting devient prospectif.",
+      "impact": "Rapports incluant tendances et prédictions automatiques",
+      "narrative_short": "Vos rapports incluent maintenant les prédictions de l'IA sur les tendances.",
+      "narrative_full": "Le rapport mensuel ne se contente plus de présenter le passé. Il projette le futur. \"Le CA a progressé de 15% ce mois. L'IA prédit une continuation de cette tendance avec +12% le mois prochain.\" Le reporting devient un outil de pilotage prospectif."
+    },
+    "intel-ml+intel-dashboards": {
+      "name": "Tableaux Prédictifs",
+      "tagline": "Des KPIs qui voient l'avenir",
+      "description": "Les tableaux de bord affichent les prédictions IA à côté des données réelles. Vision passé-présent-futur.",
+      "impact": "Chaque KPI accompagné de sa prédiction à 30 jours",
+      "narrative_short": "Chaque indicateur affiche sa valeur actuelle ET sa prédiction à 30 jours.",
+      "narrative_full": "Le dashboard n'est plus un rétroviseur. À côté de chaque KPI réel s'affiche sa projection. Le CA actuel et le CA prédit. Le churn actuel et le churn prédit. Les décideurs voient où ils en sont ET où ils vont."
+    },
+    "intel-ml+intel-cashflow": {
+      "name": "Flux Prédictif",
+      "tagline": "L'argent de demain, visible aujourd'hui",
+      "description": "L'IA prédit les flux de trésorerie futurs avec précision. Anticipation des tensions de cash.",
+      "impact": "Prédiction des tensions de trésorerie 30 jours à l'avance",
+      "narrative_short": "L'IA projette vos flux de trésorerie pour les 30 prochains jours.",
+      "narrative_full": "L'IA analyse les patterns de flux passés et projette les 30, 60, 90 prochains jours. Elle détecte les creux de trésorerie avant qu'ils n'arrivent. Vous avez le temps de réagir : accélérer les encaissements, différer les dépenses, négocier une ligne de crédit."
+    },
+    "intel-ml+intel-margins": {
+      "name": "Marges Anticipées",
+      "tagline": "Prédisez votre rentabilité future",
+      "description": "L'IA prédit l'évolution des marges par produit et par client. Optimisation proactive du mix.",
+      "impact": "Anticipation des dérives de marge pour action préventive",
+      "narrative_short": "L'IA prédit l'évolution de vos marges pour chaque produit et client.",
+      "narrative_full": "L'IA ne se contente pas d'analyser les marges passées. Elle prédit leur évolution. \"La marge sur le produit X va baisser de 5% au prochain trimestre.\" Vous pouvez agir avant : renégocier les coûts, ajuster les prix, changer le mix."
+    },
+    "intel-ml+intel-forecast": {
+      "name": "Prévisions IA",
+      "tagline": "Le forecast qui apprend",
+      "description": "Le machine learning affine continuellement les prévisions. Plus le temps passe, plus elles sont précises.",
+      "impact": "Précision des prévisions qui s'améliore de 5% chaque mois",
+      "narrative_short": "Vos prévisions s'affinent automatiquement grâce à l'apprentissage continu.",
+      "narrative_full": "Les prévisions classiques sont statiques. Les vôtres apprennent. Chaque écart réel vs prévu est analysé, chaque pattern détecté affine le modèle. Au bout de 6 mois, vos prévisions atteignent une précision que les méthodes traditionnelles ne peuvent égaler."
+    },
+    "intel-ml+intel-alerts": {
+      "name": "Alertes Prédictives",
+      "tagline": "Alerté avant l'événement",
+      "description": "L'IA prédit les anomalies avant qu'elles ne se produisent. Alerte préventive plutôt que curative.",
+      "impact": "Anomalies prédites 48h avant qu'elles ne se matérialisent",
+      "narrative_short": "L'IA vous alerte sur les problèmes avant même qu'ils ne se produisent.",
+      "narrative_full": "La détection classique alerte quand l'anomalie est là. L'IA prédit qu'elle va arriver. \"Risque de tension de trésorerie dans 12 jours.\" \"Probabilité de 80% d'un défaut de paiement du client X.\" Vous intervenez avant le problème, pas après."
+    },
+    "intel-reports+intel-dashboards": {
+      "name": "BI Unifiée",
+      "tagline": "Une source de vérité",
+      "description": "Rapports et tableaux de bord partagent les mêmes données, les mêmes calculs, les mêmes visuels. Cohérence totale.",
+      "impact": "Fin des discussions sur les chiffres : une seule vérité",
+      "narrative_short": "Tableaux de bord et rapports affichent exactement les mêmes chiffres.",
+      "narrative_full": "Plus de débat en COMEX sur les chiffres. Le rapport mensuel et le dashboard utilisent les mêmes définitions, les mêmes formules, les mêmes données. Ce qui est sur l'écran est dans le rapport. La vérité est unique."
+    },
+    "intel-reports+intel-cashflow": {
+      "name": "Reporting Trésorerie",
+      "tagline": "L'état de votre cash, automatisé",
+      "description": "Les rapports de flux de trésorerie se génèrent automatiquement. Analyse des entrées/sorties prête chaque semaine.",
+      "impact": "Rapport de trésorerie hebdomadaire sans effort",
+      "narrative_short": "Votre rapport de trésorerie hebdomadaire se génère automatiquement.",
+      "narrative_full": "Chaque lundi, le rapport de flux atterrit dans les boîtes mail. Encaissements de la semaine, décaissements par catégorie, évolution du BFR, projection à 30 jours. Le trésorier ne compile plus, il analyse."
+    },
+    "intel-reports+intel-margins": {
+      "name": "Reporting Rentabilité",
+      "tagline": "Vos marges, rapportées automatiquement",
+      "description": "Les analyses de marge s'intègrent automatiquement aux rapports périodiques. Rentabilité suivie régulièrement.",
+      "impact": "Suivi mensuel automatique de la rentabilité par segment",
+      "narrative_short": "L'analyse des marges s'intègre automatiquement à vos rapports mensuels.",
+      "narrative_full": "Le rapport mensuel inclut maintenant la ventilation des marges. Top 10 produits rentables, top 10 clients rentables, évolution vs mois précédent. Le contrôleur de gestion ne passe plus 3 jours à compiler : tout est prêt."
+    },
+    "intel-reports+intel-forecast": {
+      "name": "Reporting Prévisionnel",
+      "tagline": "Réel vs prévu, automatisé",
+      "description": "Les rapports comparent automatiquement réel et prévisionnel. Analyse des écarts intégrée.",
+      "impact": "Analyse budget/réel automatique dans chaque rapport",
+      "narrative_short": "Chaque rapport compare automatiquement le réel aux prévisions.",
+      "narrative_full": "Le rapport ne se contente plus de présenter le réel. Il le compare au prévu. Écart de CA : +5%. Écart de marge : -2%. Causes identifiées par l'IA. Actions recommandées. Le pilotage budgétaire devient continu."
+    },
+    "intel-reports+intel-alerts": {
+      "name": "Rapports d'Alerte",
+      "tagline": "Les anomalies, documentées",
+      "description": "Les alertes détectées génèrent des rapports d'incident automatiques. Documentation et suivi des anomalies.",
+      "impact": "Chaque anomalie génère un rapport d'investigation",
+      "narrative_short": "Chaque alerte importante génère automatiquement un rapport d'investigation.",
+      "narrative_full": "Une anomalie significative est détectée ? Un rapport d'alerte est généré automatiquement. Nature de l'anomalie, données concernées, contexte, impact potentiel, actions recommandées. L'audit trail est automatique."
+    },
+    "intel-dashboards+intel-cashflow": {
+      "name": "Dashboard Trésorerie",
+      "tagline": "Le cash en temps réel",
+      "description": "Le flux de trésorerie s'affiche en temps réel sur le tableau de bord. Visualisation des entrées/sorties.",
+      "impact": "Pilotage visuel du cash en temps réel",
+      "narrative_short": "Vos flux de trésorerie s'affichent en graphiques temps réel.",
+      "narrative_full": "Le tableau de bord affiche le flux de cash comme une rivière. Les entrées en vert, les sorties en rouge, le solde qui ondule. Les projections à 30 jours s'affichent en pointillés. Le trésorier pilote visuellement."
+    },
+    "intel-dashboards+intel-margins": {
+      "name": "Dashboard Rentabilité",
+      "tagline": "Vos marges, visualisées",
+      "description": "Les marges par produit et client s'affichent sur le tableau de bord. Rentabilité visible en un coup d'œil.",
+      "impact": "Visibilité instantanée sur ce qui est rentable",
+      "narrative_short": "Vos marges par produit et par client s'affichent en temps réel.",
+      "narrative_full": "Le dashboard rentabilité montre les marges en heat map. Vert foncé : très rentable. Rouge : attention. Un drill-down révèle les détails. Le directeur commercial sait exactement quels produits pousser, quels clients choyer."
+    },
+    "intel-dashboards+intel-forecast": {
+      "name": "Dashboard Prévisionnel",
+      "tagline": "Réel et prévu sur un écran",
+      "description": "Les prévisions s'affichent à côté du réel sur le tableau de bord. Suivi de l'atterrissage en temps réel.",
+      "impact": "Suivi continu de l'atterrissage vs budget",
+      "narrative_short": "Chaque KPI affiche sa valeur réelle et sa prévision côte à côte.",
+      "narrative_full": "Deux courbes sur chaque graphique : le réel et le prévu. L'écart se voit instantanément. Le directeur financier sait à chaque instant si l'année sera au-dessus ou en-dessous du budget, et de combien."
+    },
+    "intel-dashboards+intel-alerts": {
+      "name": "Dashboard Alertes",
+      "tagline": "Les anomalies, visibles",
+      "description": "Les alertes s'affichent en temps réel sur le tableau de bord. Zone de notifications prioritaires.",
+      "impact": "Alertes critiques visibles dès l'ouverture du dashboard",
+      "narrative_short": "Les alertes critiques s'affichent en priorité sur votre tableau de bord.",
+      "narrative_full": "Le tableau de bord s'ouvre avec les alertes du jour. Badges rouges, notifications prioritaires, indicateurs clignotants. Avant de regarder les KPIs, vous voyez les problèmes qui nécessitent attention immédiate."
+    },
+    "intel-cashflow+intel-margins": {
+      "name": "Rentabilité Cash",
+      "tagline": "Marge réelle, cash réel",
+      "description": "Les marges sont calculées sur les flux de cash réels. Rentabilité mesurée à l'euro encaissé.",
+      "impact": "Vraie rentabilité = marge cash, pas marge comptable",
+      "narrative_short": "Vos marges sont calculées sur le cash réellement encaissé.",
+      "narrative_full": "La marge comptable peut mentir. Un client avec 40% de marge brute mais qui paie à 180 jours ? Sa vraie rentabilité est bien moindre. En croisant marges et flux de cash, vous calculez la rentabilité réelle, celle qui compte en banque."
+    },
+    "intel-cashflow+intel-forecast": {
+      "name": "Prévisions de Trésorerie",
+      "tagline": "Votre cash de demain",
+      "description": "Les flux de trésorerie passés nourrissent les prévisions. Projection précise des besoins de cash.",
+      "impact": "Prévision de trésorerie fiable à 60 jours",
+      "narrative_short": "Vos flux passés permettent des prévisions de trésorerie ultra-précises.",
+      "narrative_full": "L'historique de vos flux révèle les patterns. La saisonnalité des encaissements, la récurrence des décaissements, les pics de besoin. Les Prévisions projettent ces patterns dans le futur. Vous savez quand vous aurez besoin de cash."
+    },
+    "intel-cashflow+intel-alerts": {
+      "name": "Alertes de Trésorerie",
+      "tagline": "Le cash surveillé 24/7",
+      "description": "Les flux de trésorerie sont surveillés en continu. Alertes sur les anomalies et les seuils franchis.",
+      "impact": "Tensions de trésorerie détectées avant qu'elles ne soient critiques",
+      "narrative_short": "Chaque mouvement de trésorerie anormal déclenche une alerte.",
+      "narrative_full": "Le flux de cash est surveillé en permanence. Encaissement anormalement bas ? Alerte. Décaissement non budgété ? Alerte. Solde qui s'approche du seuil critique ? Alerte. Vous savez avant que le problème ne soit urgent."
+    },
+    "intel-margins+intel-forecast": {
+      "name": "Prévisions de Marge",
+      "tagline": "Votre rentabilité future",
+      "description": "Les marges actuelles nourrissent les prévisions de rentabilité. Projection de la marge à horizon 12 mois.",
+      "impact": "Prévision de marge brute à 12 mois",
+      "narrative_short": "Vos marges actuelles permettent de projeter votre rentabilité future.",
+      "narrative_full": "L'analyse des marges passées et des tendances permet de projeter la rentabilité future. \"Si les tendances se maintiennent, la marge brute sera de 32% à fin d'année, vs 35% budgetés.\" Vous pouvez agir avant la dérive."
+    },
+    "intel-margins+intel-alerts": {
+      "name": "Alertes Rentabilité",
+      "tagline": "Marges surveillées",
+      "description": "Les marges sont surveillées en continu. Alertes sur les dérives de rentabilité par produit ou client.",
+      "impact": "Détection précoce des dérives de marge",
+      "narrative_short": "Chaque dérive de marge significative déclenche une alerte.",
+      "narrative_full": "La marge du produit X a baissé de 3 points ce mois ? Alerte. Le client Y devient non rentable ? Alerte. Le canal Z érode les marges ? Alerte. Vous intervenez avant que la rentabilité globale ne soit impactée."
+    },
+    "intel-forecast+intel-alerts": {
+      "name": "Alertes Prévisionnelles",
+      "tagline": "Dérives détectées avant l'impact",
+      "description": "Les écarts prévisions vs réel déclenchent des alertes automatiques. Intervention précoce sur les dérives.",
+      "impact": "Écarts budget/réel signalés dès leur apparition",
+      "narrative_short": "Chaque écart significatif entre prévu et réel déclenche une alerte.",
+      "narrative_full": "L'atterrissage s'éloigne du budget ? L'alerte part immédiatement. \"Le CA réel est inférieur de 8% à la prévision à date. Si la tendance se maintient, l'atterrissage annuel sera de -5%.\" Vous avez le temps de réagir."
+    }
+  },
+  "multi_connections": {
+    "intel-banks+intel-cashflow+intel-forecast": {
+      "name": "Maîtrise de la Trésorerie",
+      "description": "Agrégation bancaire + Analyse des flux + Prévisions = pilotage complet de la trésorerie passée, présente et future.",
+      "impact": "Zéro surprise de trésorerie grâce à la triple vision"
+    },
+    "intel-ml+intel-forecast+intel-alerts": {
+      "name": "Intelligence Prédictive",
+      "description": "Machine learning + Prévisions + Alertes = système d'anticipation complet. Voir et agir avant les événements.",
+      "impact": "Capacité d'anticipation décuplée"
+    },
+    "intel-dashboards+intel-reports+intel-alerts": {
+      "name": "Tour de Contrôle BI",
+      "description": "Visualisation + Reporting + Alertes = système de pilotage complet. Voir, documenter, réagir.",
+      "impact": "Pilotage de l'entreprise sans angles morts"
+    },
+    "intel-cashflow+intel-margins+intel-forecast": {
+      "name": "Pilotage Financier Complet",
+      "description": "Flux + Marges + Prévisions = vision financière 360°. Cash, rentabilité et projection réunis.",
+      "impact": "Décisions financières éclairées par toutes les dimensions"
+    },
+    "intel-banks+intel-ml+intel-alerts": {
+      "name": "Surveillance Bancaire IA",
+      "description": "Agrégation + Prédiction + Alertes = surveillance intelligente de tous les comptes. Détection proactive des anomalies.",
+      "impact": "Sécurité et anticipation maximales sur les comptes"
+    }
+  }
+}

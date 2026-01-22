@@ -1,0 +1,541 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Unified semantic ontology - capabilities, values, transformation stages"
+  },
+
+  "capabilities": {
+    "ops-map": {
+      "provides": ["asset-visualization", "real-time-location", "spatial-intelligence"],
+      "enables": ["route-planning", "resource-allocation", "field-coordination"],
+      "value": "Visibilité terrain totale",
+      "category": "data_source"
+    },
+    "ops-routes": {
+      "provides": ["route-optimization", "distance-calculation", "traffic-awareness"],
+      "enables": ["fuel-savings", "time-optimization", "delivery-planning"],
+      "value": "Logistique optimisée",
+      "category": "data_processor"
+    },
+    "ops-maintenance": {
+      "provides": ["predictive-alerts", "maintenance-scheduling", "failure-prevention"],
+      "enables": ["zero-downtime", "cost-reduction", "asset-longevity"],
+      "value": "Zéro arrêt surprise",
+      "category": "data_processor"
+    },
+    "ops-inventory": {
+      "provides": ["stock-tracking", "reorder-automation", "demand-forecasting"],
+      "enables": ["just-in-time", "cost-optimization", "supply-continuity"],
+      "value": "Stock juste-à-temps",
+      "category": "internal_tool"
+    },
+    "ops-fleet": {
+      "provides": ["vehicle-tracking", "real-time-gps", "fleet-visibility"],
+      "enables": ["dispatch-optimization", "utilization-improvement", "theft-prevention"],
+      "value": "Flotte transparente",
+      "category": "data_source"
+    },
+    "ops-scheduling": {
+      "provides": ["resource-allocation", "skill-matching", "availability-tracking"],
+      "enables": ["team-coordination", "workload-balancing", "capacity-planning"],
+      "value": "Équipes synchronisées",
+      "category": "internal_tool"
+    },
+    "ops-alerts": {
+      "provides": ["event-detection", "instant-notifications", "escalation-rules"],
+      "enables": ["rapid-response", "issue-prevention", "stakeholder-awareness"],
+      "value": "Réactivité maximale",
+      "category": "data_output"
+    },
+    "ops-kpi": {
+      "provides": ["performance-metrics", "real-time-dashboards", "trend-analysis"],
+      "enables": ["data-driven-decisions", "performance-tracking", "goal-monitoring"],
+      "value": "Pilotage data-driven",
+      "category": "data_output"
+    },
+    "ops-sites": {
+      "provides": ["site-tracking", "progress-monitoring", "resource-allocation"],
+      "enables": ["project-visibility", "deadline-management", "cost-control"],
+      "value": "Chantiers maîtrisés",
+      "category": "data_source"
+    },
+    "ops-machines": {
+      "provides": ["equipment-scheduling", "availability-tracking", "utilization-metrics"],
+      "enables": ["optimal-allocation", "maintenance-planning", "cost-per-hour"],
+      "value": "Machines optimisées",
+      "category": "internal_tool"
+    },
+    "ops-field": {
+      "provides": ["field-reporting", "photo-documentation", "geolocation-tracking"],
+      "enables": ["traceability", "quality-control", "compliance-proof"],
+      "value": "Traçabilité terrain",
+      "category": "data_source"
+    },
+    "ops-weather": {
+      "provides": ["weather-forecasting", "condition-alerts", "impact-analysis"],
+      "enables": ["planning-adjustment", "risk-mitigation", "safety-management"],
+      "value": "Anticipation météo",
+      "category": "data_processor"
+    },
+
+    "intel-banks": {
+      "provides": ["bank-aggregation", "transaction-sync", "balance-consolidation"],
+      "enables": ["cash-visibility", "reconciliation", "multi-bank-view"],
+      "value": "Trésorerie unifiée",
+      "category": "data_source"
+    },
+    "intel-ml": {
+      "provides": ["pattern-detection", "predictive-models", "anomaly-detection"],
+      "enables": ["forecasting", "scoring", "intelligent-alerts"],
+      "value": "Anticipation stratégique",
+      "category": "data_processor"
+    },
+    "intel-reports": {
+      "provides": ["auto-generation", "template-management", "scheduling"],
+      "enables": ["time-savings", "consistency", "stakeholder-communication"],
+      "value": "Reporting automatisé",
+      "category": "data_output"
+    },
+    "intel-dashboards": {
+      "provides": ["data-visualization", "real-time-updates", "drill-down"],
+      "enables": ["executive-visibility", "quick-decisions", "performance-monitoring"],
+      "value": "Clarté décisionnelle",
+      "category": "data_output"
+    },
+    "intel-cashflow": {
+      "provides": ["cash-tracking", "flow-analysis", "projection"],
+      "enables": ["liquidity-management", "payment-planning", "investment-timing"],
+      "value": "Cash sous contrôle",
+      "category": "data_processor"
+    },
+    "intel-margins": {
+      "provides": ["profitability-analysis", "cost-allocation", "segment-breakdown"],
+      "enables": ["pricing-decisions", "portfolio-optimization", "client-prioritization"],
+      "value": "Rentabilité visible",
+      "category": "data_processor"
+    },
+    "intel-forecast": {
+      "provides": ["revenue-projection", "trend-extrapolation", "scenario-modeling"],
+      "enables": ["budget-planning", "resource-allocation", "investor-communication"],
+      "value": "Futur prévisible",
+      "category": "data_processor"
+    },
+    "intel-alerts": {
+      "provides": ["anomaly-detection", "threshold-monitoring", "fraud-detection"],
+      "enables": ["risk-mitigation", "compliance", "early-warning"],
+      "value": "Vigilance permanente",
+      "category": "data_output"
+    },
+
+    "growth-crm": {
+      "provides": ["contact-management", "interaction-history", "pipeline-tracking"],
+      "enables": ["relationship-building", "sales-efficiency", "customer-insights"],
+      "value": "Prospects qualifiés",
+      "category": "customer_facing"
+    },
+    "growth-whatsapp": {
+      "provides": ["instant-messaging", "bot-automation", "lead-qualification"],
+      "enables": ["24/7-availability", "instant-response", "scale-conversations"],
+      "value": "Disponibilité totale",
+      "category": "customer_facing"
+    },
+    "growth-pipeline": {
+      "provides": ["deal-tracking", "stage-management", "forecast-visibility"],
+      "enables": ["sales-predictability", "bottleneck-identification", "coaching"],
+      "value": "Ventes maîtrisées",
+      "category": "internal_tool"
+    },
+    "growth-insights": {
+      "provides": ["customer-360", "behavior-analysis", "preference-tracking"],
+      "enables": ["personalization", "upselling", "retention"],
+      "value": "Connaissance client",
+      "category": "data_processor"
+    },
+    "growth-scoring": {
+      "provides": ["lead-qualification", "priority-ranking", "conversion-prediction"],
+      "enables": ["focus-optimization", "resource-allocation", "efficiency"],
+      "value": "Priorisation intelligente",
+      "category": "data_processor"
+    },
+    "growth-followup": {
+      "provides": ["reminder-automation", "sequence-management", "timing-optimization"],
+      "enables": ["no-lead-left-behind", "persistence", "relationship-nurturing"],
+      "value": "Aucun oubli",
+      "category": "internal_tool"
+    },
+    "growth-quotes": {
+      "provides": ["quote-generation", "pricing-rules", "template-management"],
+      "enables": ["speed-to-quote", "accuracy", "professionalism"],
+      "value": "Réactivité commerciale",
+      "category": "customer_facing"
+    },
+    "growth-churn": {
+      "provides": ["risk-scoring", "early-warning", "intervention-triggers"],
+      "enables": ["proactive-retention", "save-campaigns", "loyalty"],
+      "value": "Rétention proactive",
+      "category": "data_processor"
+    },
+
+    "engage-campaigns": {
+      "provides": ["campaign-orchestration", "audience-targeting", "performance-tracking"],
+      "enables": ["marketing-automation", "roi-optimization", "scale"],
+      "value": "Marketing intelligent",
+      "category": "internal_tool"
+    },
+    "engage-content": {
+      "provides": ["content-generation", "personalization", "multi-format"],
+      "enables": ["scale-content", "relevance", "engagement"],
+      "value": "Contenu à la demande",
+      "category": "data_processor"
+    },
+    "engage-budget": {
+      "provides": ["spend-tracking", "allocation-optimization", "roi-analysis"],
+      "enables": ["efficiency", "waste-reduction", "performance-maximization"],
+      "value": "Investissement optimisé",
+      "category": "data_processor"
+    },
+    "engage-attribution": {
+      "provides": ["journey-tracking", "touchpoint-analysis", "conversion-attribution"],
+      "enables": ["channel-optimization", "budget-allocation", "true-roi"],
+      "value": "Source de vérité",
+      "category": "data_processor"
+    },
+    "engage-email": {
+      "provides": ["email-automation", "personalization", "deliverability"],
+      "enables": ["nurturing", "scale-communication", "engagement"],
+      "value": "Nurturing automatisé",
+      "category": "customer_facing"
+    },
+    "engage-social": {
+      "provides": ["multi-platform-management", "scheduling", "engagement-tracking"],
+      "enables": ["presence-consistency", "community-building", "brand-awareness"],
+      "value": "Présence sociale unifiée",
+      "category": "customer_facing"
+    },
+    "engage-ab": {
+      "provides": ["experiment-management", "statistical-analysis", "winner-selection"],
+      "enables": ["continuous-improvement", "data-driven-decisions", "optimization"],
+      "value": "Amélioration continue",
+      "category": "data_processor"
+    },
+    "engage-analytics": {
+      "provides": ["campaign-metrics", "funnel-analysis", "attribution"],
+      "enables": ["performance-visibility", "optimization", "reporting"],
+      "value": "Mesure précise",
+      "category": "data_output"
+    },
+
+    "brand-identity": {
+      "provides": ["visual-guidelines", "brand-assets", "consistency-rules"],
+      "enables": ["recognition", "trust", "premium-perception"],
+      "value": "Image premium",
+      "category": "internal_tool"
+    },
+    "brand-web": {
+      "provides": ["website-design", "conversion-optimization", "responsive-experience"],
+      "enables": ["digital-presence", "lead-generation", "credibility"],
+      "value": "Vitrine digitale",
+      "category": "customer_facing"
+    },
+    "brand-docs": {
+      "provides": ["document-templates", "branding-consistency", "professional-output"],
+      "enables": ["efficiency", "professionalism", "brand-reinforcement"],
+      "value": "Professionnalisme visible",
+      "category": "data_output"
+    },
+    "brand-system": {
+      "provides": ["component-library", "design-tokens", "usage-guidelines"],
+      "enables": ["consistency", "development-speed", "scalability"],
+      "value": "Cohérence garantie",
+      "category": "internal_tool"
+    },
+    "brand-ui": {
+      "provides": ["interface-design", "user-research", "usability-testing"],
+      "enables": ["user-satisfaction", "adoption", "efficiency"],
+      "value": "UX mémorable",
+      "category": "internal_tool"
+    },
+    "brand-motion": {
+      "provides": ["animation-design", "video-production", "motion-guidelines"],
+      "enables": ["engagement", "storytelling", "brand-personality"],
+      "value": "Contenu captivant",
+      "category": "data_output"
+    },
+    "brand-print": {
+      "provides": ["print-design", "production-management", "material-selection"],
+      "enables": ["physical-presence", "event-support", "memorability"],
+      "value": "Impact physique",
+      "category": "data_output"
+    },
+    "brand-social": {
+      "provides": ["social-assets", "format-optimization", "content-calendar"],
+      "enables": ["platform-performance", "engagement", "reach"],
+      "value": "Performance sociale",
+      "category": "data_output"
+    },
+
+    "integ-universal": {
+      "provides": ["api-abstraction", "protocol-translation", "connection-management"],
+      "enables": ["any-to-any-integration", "future-proofing", "flexibility"],
+      "value": "Interopérabilité totale",
+      "category": "connector"
+    },
+    "integ-sync": {
+      "provides": ["real-time-sync", "conflict-resolution", "consistency-guarantee"],
+      "enables": ["single-source-of-truth", "instant-updates", "reliability"],
+      "value": "Une seule vérité",
+      "category": "connector"
+    },
+    "integ-api": {
+      "provides": ["api-gateway", "documentation", "versioning"],
+      "enables": ["developer-experience", "extensibility", "ecosystem"],
+      "value": "Extensibilité native",
+      "category": "connector"
+    },
+    "integ-etl": {
+      "provides": ["data-extraction", "transformation-rules", "loading-automation"],
+      "enables": ["data-quality", "analytics-readiness", "migration"],
+      "value": "Données propres",
+      "category": "data_processor"
+    },
+    "integ-iot": {
+      "provides": ["device-connectivity", "protocol-support", "edge-processing"],
+      "enables": ["physical-digital-bridge", "automation", "real-time-data"],
+      "value": "Monde physique connecté",
+      "category": "data_source"
+    },
+    "integ-legacy": {
+      "provides": ["legacy-adapters", "data-mapping", "gradual-migration"],
+      "enables": ["investment-protection", "smooth-transition", "coexistence"],
+      "value": "Migration douce",
+      "category": "connector"
+    },
+    "integ-queue": {
+      "provides": ["message-queuing", "guaranteed-delivery", "async-processing"],
+      "enables": ["reliability", "scalability", "decoupling"],
+      "value": "Fiabilité garantie",
+      "category": "connector"
+    },
+    "integ-monitor": {
+      "provides": ["flow-visibility", "error-tracking", "performance-metrics"],
+      "enables": ["troubleshooting", "optimization", "sla-monitoring"],
+      "value": "Transparence des flux",
+      "category": "data_output"
+    },
+
+    "sec-detect": {
+      "provides": ["threat-detection", "behavior-analysis", "real-time-monitoring"],
+      "enables": ["early-warning", "incident-prevention", "security-posture"],
+      "value": "Protection proactive",
+      "category": "security_layer"
+    },
+    "sec-response": {
+      "provides": ["automated-response", "incident-management", "remediation"],
+      "enables": ["speed", "consistency", "24/7-protection"],
+      "value": "Réaction instantanée",
+      "category": "security_layer"
+    },
+    "sec-compliance": {
+      "provides": ["regulation-tracking", "control-mapping", "audit-preparation"],
+      "enables": ["risk-reduction", "certification", "trust"],
+      "value": "Conformité assurée",
+      "category": "internal_tool"
+    },
+    "sec-audit": {
+      "provides": ["activity-logging", "tamper-proof-storage", "search-capabilities"],
+      "enables": ["accountability", "forensics", "compliance-proof"],
+      "value": "Traçabilité totale",
+      "category": "security_layer"
+    },
+    "sec-access": {
+      "provides": ["role-management", "permission-control", "authentication"],
+      "enables": ["least-privilege", "security", "governance"],
+      "value": "Accès maîtrisé",
+      "category": "security_layer"
+    },
+    "sec-encrypt": {
+      "provides": ["data-encryption", "key-management", "secure-transmission"],
+      "enables": ["confidentiality", "compliance", "trust"],
+      "value": "Confidentialité absolue",
+      "category": "security_layer"
+    },
+    "sec-backup": {
+      "provides": ["automated-backup", "disaster-recovery", "geo-redundancy"],
+      "enables": ["business-continuity", "data-protection", "peace-of-mind"],
+      "value": "Résilience garantie",
+      "category": "internal_tool"
+    },
+    "sec-pentest": {
+      "provides": ["vulnerability-scanning", "penetration-testing", "risk-assessment"],
+      "enables": ["proactive-security", "compliance", "confidence"],
+      "value": "Sécurité proactive",
+      "category": "security_layer"
+    },
+
+    "ent-erp": {
+      "provides": ["process-integration", "data-centralization", "workflow-automation"],
+      "enables": ["operational-efficiency", "visibility", "scalability"],
+      "value": "Gestion unifiée",
+      "category": "internal_tool"
+    },
+    "ent-custom": {
+      "provides": ["custom-development", "process-fit", "unique-features"],
+      "enables": ["competitive-advantage", "perfect-fit", "flexibility"],
+      "value": "Solution sur mesure",
+      "category": "internal_tool"
+    },
+    "ent-deploy": {
+      "provides": ["rapid-implementation", "best-practices", "change-management"],
+      "enables": ["fast-time-to-value", "adoption", "success"],
+      "value": "Time-to-value court",
+      "category": "internal_tool"
+    },
+    "ent-support": {
+      "provides": ["expert-assistance", "24/7-availability", "proactive-monitoring"],
+      "enables": ["peace-of-mind", "rapid-resolution", "optimization"],
+      "value": "Accompagnement continu",
+      "category": "internal_tool"
+    },
+    "ent-hr": {
+      "provides": ["employee-management", "payroll", "talent-tracking"],
+      "enables": ["hr-efficiency", "compliance", "employee-experience"],
+      "value": "Capital humain optimisé",
+      "category": "internal_tool"
+    },
+    "ent-purchase": {
+      "provides": ["vendor-management", "procurement-automation", "spend-analysis"],
+      "enables": ["cost-savings", "efficiency", "supplier-relationships"],
+      "value": "Achats intelligents",
+      "category": "internal_tool"
+    },
+    "ent-project": {
+      "provides": ["task-management", "time-tracking", "resource-planning"],
+      "enables": ["project-success", "profitability", "visibility"],
+      "value": "Projets maîtrisés",
+      "category": "internal_tool"
+    },
+    "ent-docs": {
+      "provides": ["document-management", "version-control", "search"],
+      "enables": ["knowledge-management", "collaboration", "compliance"],
+      "value": "Information accessible",
+      "category": "internal_tool"
+    }
+  },
+
+  "transformation_stages": [
+    {
+      "id": "visibility",
+      "name": "Visibilité",
+      "description": "Voir ce qui se passe en temps réel",
+      "threshold": 0,
+      "icon": "👁️",
+      "color": "#6b7280"
+    },
+    {
+      "id": "control",
+      "name": "Contrôle",
+      "description": "Agir sur ce qu'on observe",
+      "threshold": 3,
+      "icon": "🎮",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "optimization",
+      "name": "Optimisation",
+      "description": "Améliorer automatiquement les processus",
+      "threshold": 6,
+      "icon": "⚡",
+      "color": "#10b981"
+    },
+    {
+      "id": "prediction",
+      "name": "Prédiction",
+      "description": "Anticiper les événements futurs",
+      "threshold": 10,
+      "icon": "🔮",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "autonomy",
+      "name": "Autonomie",
+      "description": "Systèmes auto-pilotés et adaptatifs",
+      "threshold": 15,
+      "icon": "🤖",
+      "color": "#8b5cf6"
+    }
+  ],
+
+  "industry_arcs": {
+    "btp": {
+      "name": "BTP & Construction",
+      "icon": "🏗️",
+      "description": "Maîtrise des chantiers et équipements",
+      "starter_modules": ["ops-sites", "ops-machines", "ops-field"],
+      "core_modules": ["ops-fleet", "ops-maintenance", "ops-scheduling", "ops-weather"],
+      "expansion_modules": ["intel-forecast", "ent-project", "sec-compliance"]
+    },
+    "logistics": {
+      "name": "Transport & Logistique",
+      "icon": "🚛",
+      "description": "Optimisation des flux et livraisons",
+      "starter_modules": ["ops-fleet", "ops-routes", "ops-map"],
+      "core_modules": ["ops-inventory", "ops-scheduling", "ops-alerts"],
+      "expansion_modules": ["intel-forecast", "growth-crm", "integ-iot"]
+    },
+    "services": {
+      "name": "Services & Interventions",
+      "icon": "🔧",
+      "description": "Excellence des interventions terrain",
+      "starter_modules": ["ops-field", "ops-scheduling", "growth-crm"],
+      "core_modules": ["ops-fleet", "ops-alerts", "growth-pipeline"],
+      "expansion_modules": ["intel-margins", "engage-email", "brand-docs"]
+    },
+    "commerce": {
+      "name": "Commerce & Distribution",
+      "icon": "🏪",
+      "description": "Croissance commerciale et fidélisation",
+      "starter_modules": ["growth-crm", "growth-pipeline", "intel-banks"],
+      "core_modules": ["growth-scoring", "engage-campaigns", "intel-margins"],
+      "expansion_modules": ["growth-churn", "brand-web", "engage-analytics"]
+    },
+    "industrie": {
+      "name": "Industrie & Production",
+      "icon": "🏭",
+      "description": "Performance industrielle",
+      "starter_modules": ["ops-inventory", "ops-maintenance", "ent-erp"],
+      "core_modules": ["ops-machines", "integ-iot", "intel-kpi"],
+      "expansion_modules": ["intel-ml", "sec-compliance", "ent-purchase"]
+    }
+  },
+
+  "module_categories": {
+    "data_sources": {
+      "description": "Modules qui collectent des données brutes",
+      "modules": ["ops-fleet", "ops-map", "ops-sites", "ops-field", "intel-banks", "integ-iot"]
+    },
+    "data_processors": {
+      "description": "Modules qui transforment et analysent les données",
+      "modules": ["intel-ml", "intel-forecast", "intel-cashflow", "intel-margins", "ops-routes", "ops-maintenance", "ops-weather", "growth-scoring", "growth-churn", "growth-insights", "engage-content", "engage-budget", "engage-attribution", "engage-ab", "integ-etl"]
+    },
+    "data_outputs": {
+      "description": "Modules qui présentent l'information",
+      "modules": ["intel-reports", "intel-dashboards", "intel-alerts", "ops-kpi", "ops-alerts", "engage-analytics", "brand-docs", "brand-motion", "brand-print", "brand-social", "integ-monitor"]
+    },
+    "customer_facing": {
+      "description": "Modules en contact direct avec les clients",
+      "modules": ["growth-crm", "growth-whatsapp", "growth-quotes", "brand-web", "engage-email", "engage-social"]
+    },
+    "internal_tools": {
+      "description": "Modules pour les processus internes",
+      "modules": ["ent-erp", "ent-hr", "ent-project", "ent-docs", "ent-custom", "ent-deploy", "ent-support", "ent-purchase", "ops-inventory", "ops-scheduling", "ops-machines", "growth-pipeline", "growth-followup", "engage-campaigns", "brand-identity", "brand-system", "brand-ui", "sec-compliance", "sec-backup"]
+    },
+    "security_layer": {
+      "description": "Modules de sécurité et protection",
+      "modules": ["sec-detect", "sec-response", "sec-audit", "sec-access", "sec-encrypt", "sec-pentest"]
+    },
+    "connectors": {
+      "description": "Modules d'intégration et connectivité",
+      "modules": ["integ-universal", "integ-sync", "integ-api", "integ-legacy", "integ-queue"]
+    }
+  }
+}

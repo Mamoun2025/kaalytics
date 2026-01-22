@@ -1,0 +1,130 @@
+{
+    "id": "full-digital",
+    "name": "Full Digital Transformation",
+    "version": "1.0",
+    "description": "Architecture complète multi-dimensions : ERP, CRM, Operations, Intelligence, Security",
+    "modules": [
+        {
+            "templateId": "ent-erp",
+            "x": 400,
+            "y": 50
+        },
+        {
+            "templateId": "growth-crm",
+            "x": 100,
+            "y": 180
+        },
+        {
+            "templateId": "ops-fleet",
+            "x": 700,
+            "y": 180
+        },
+        {
+            "templateId": "growth-pipeline",
+            "x": 100,
+            "y": 360
+        },
+        {
+            "templateId": "intel-dashboards",
+            "x": 400,
+            "y": 250
+        },
+        {
+            "templateId": "ops-map",
+            "x": 700,
+            "y": 360
+        },
+        {
+            "templateId": "integ-universal",
+            "x": 400,
+            "y": 450
+        },
+        {
+            "templateId": "sec-detect",
+            "x": 100,
+            "y": 540
+        },
+        {
+            "templateId": "intel-forecast",
+            "x": 400,
+            "y": 640
+        },
+        {
+            "templateId": "sec-compliance",
+            "x": 700,
+            "y": 540
+        },
+        {
+            "templateId": "engage-campaigns",
+            "x": 100,
+            "y": 720
+        },
+        {
+            "templateId": "brand-web",
+            "x": 700,
+            "y": 720
+        }
+    ],
+    "connections": [
+        {
+            "from": { "index": 0, "port": "left" },
+            "to": { "index": 1, "port": "top" }
+        },
+        {
+            "from": { "index": 0, "port": "right" },
+            "to": { "index": 2, "port": "top" }
+        },
+        {
+            "from": { "index": 0, "port": "bottom" },
+            "to": { "index": 4, "port": "top" }
+        },
+        {
+            "from": { "index": 1, "port": "bottom" },
+            "to": { "index": 3, "port": "top" }
+        },
+        {
+            "from": { "index": 1, "port": "right" },
+            "to": { "index": 4, "port": "left" }
+        },
+        {
+            "from": { "index": 2, "port": "bottom" },
+            "to": { "index": 5, "port": "top" }
+        },
+        {
+            "from": { "index": 2, "port": "left" },
+            "to": { "index": 4, "port": "right" }
+        },
+        {
+            "from": { "index": 4, "port": "bottom" },
+            "to": { "index": 6, "port": "top" }
+        },
+        {
+            "from": { "index": 6, "port": "left" },
+            "to": { "index": 7, "port": "right" }
+        },
+        {
+            "from": { "index": 6, "port": "right" },
+            "to": { "index": 9, "port": "left" }
+        },
+        {
+            "from": { "index": 6, "port": "bottom" },
+            "to": { "index": 8, "port": "top" }
+        },
+        {
+            "from": { "index": 3, "port": "bottom" },
+            "to": { "index": 10, "port": "top" }
+        },
+        {
+            "from": { "index": 5, "port": "bottom" },
+            "to": { "index": 11, "port": "top" }
+        },
+        {
+            "from": { "index": 10, "port": "right" },
+            "to": { "index": 8, "port": "left" }
+        },
+        {
+            "from": { "index": 8, "port": "right" },
+            "to": { "index": 11, "port": "left" }
+        }
+    ]
+}

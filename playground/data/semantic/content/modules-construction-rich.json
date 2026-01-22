@@ -1,0 +1,105 @@
+{
+  "_meta": {
+    "version": "3.0",
+    "dimension": "construction",
+    "description": "Contenu sémantique ULTRA-RICHE pour la dimension BTP & Construction"
+  },
+
+  "modules": {
+    "btp-tenders": {
+      "name": "Gestion Appels d'Offres",
+      "tagline": "Gagnez plus de marchés",
+      "description_short": "Suivi et réponse structurée aux appels d'offres publics et privés.",
+      "description_full": "Le module Gestion Appels d'Offres structure votre réponse commerciale aux marchés. Veille sur les opportunités, suivi des DCE téléchargés, gestion des délais de remise, collaboration sur les mémoires techniques, chiffrage collaboratif, suivi des questions/réponses avec la maîtrise d'ouvrage. Chaque appel d'offres est un projet avec son planning, ses contributeurs, ses documents. La go/no-go decision s'appuie sur des critères objectifs. Vos chances de gagner augmentent grâce à une réponse mieux préparée.",
+      "transformation_story": {
+        "intro": "Vous structurez votre réponse aux appels d'offres. Fini les dossiers préparés dans l'urgence la veille du dépôt. Chaque marché est traité comme un projet avec méthode.",
+        "deep_narrative": "La Gestion Appels d'Offres transforme votre approche commerciale BTP. Les opportunités sont identifiées en amont. Les dossiers sont préparés sereinement. Les mémoires techniques capitalisent sur les références passées. Le chiffrage est précis grâce aux retours d'expérience. Les décisions go/no-go sont rationnelles. Votre taux de transformation s'améliore significativement.",
+        "business_impact": "L'impact commercial est mesurable : augmentation de 30% du taux de transformation sur les marchés ciblés, réduction du temps de préparation des dossiers, et meilleure sélectivité sur les affaires rentables."
+      }
+    },
+
+    "btp-sites": {
+      "name": "Suivi de Chantier",
+      "tagline": "Chaque chantier sous contrôle",
+      "description_short": "Tableau de bord complet de l'avancement physique et financier des chantiers.",
+      "description_full": "Le module Suivi de Chantier offre une vision 360° de chaque opération. Avancement physique par lot et par phase, pointage des heures, consommation des ressources, photos géolocalisées, comptes-rendus de chantier, suivi des réserves. Le chef de chantier saisit sur mobile, le conducteur de travaux pilote sur écran, la direction a sa synthèse. Les dérives sont détectées tôt. Les décisions sont prises sur des données fraîches, pas sur des ressentis.",
+      "transformation_story": {
+        "intro": "Vous visualisez l'état réel de chaque chantier en temps réel. Plus de surprise à la fin du chantier sur l'écart entre prévu et réalisé.",
+        "deep_narrative": "Le Suivi de Chantier transforme le pilotage des opérations BTP. L'avancement n'est plus une estimation mais une mesure. Les heures pointées sont réconciliées avec le budget. Les photos documentent l'évolution. Les comptes-rendus sont générés automatiquement. Les réserves sont tracées jusqu'à leur levée. La maîtrise du chantier devient réelle.",
+        "business_impact": "L'impact opérationnel est direct : réduction de 40% des écarts budget/réalisé détectés tardivement, documentation complète en cas de litige, et meilleure réactivité face aux aléas de chantier."
+      }
+    },
+
+    "btp-safety": {
+      "name": "Sécurité Chantier",
+      "tagline": "Zéro accident, zéro compromis",
+      "description_short": "Gestion PPSPS, registres de sécurité et suivi des incidents.",
+      "description_full": "Le module Sécurité Chantier digitalise toute la gestion de la prévention. PPSPS personnalisés par chantier, registres de sécurité dématérialisés, causeries sécurité documentées, suivi des EPI, déclaration et analyse des presqu'accidents, gestion des AT. La sécurité devient traçable et auditable. Les bonnes pratiques sont diffusées. Les manquements sont détectés et corrigés. La culture sécurité se renforce par les outils.",
+      "transformation_story": {
+        "intro": "La sécurité n'est plus une contrainte administrative mais une priorité outillée. Chaque aspect de la prévention est digitalisé et traçable.",
+        "deep_narrative": "Le module Sécurité Chantier transforme la culture prévention. Les PPSPS sont vivants et mis à jour. Les causeries sont tracées et leurs thèmes pertinents. Les presqu'accidents sont analysés pour éviter les vrais accidents. La conformité aux exigences réglementaires est démontrable. Les auditeurs trouvent une documentation irréprochable.",
+        "business_impact": "L'impact sur la sinistralité est majeur : réduction de 50% des accidents grâce à la prévention active, conformité totale aux obligations réglementaires, et prime d'assurance optimisée grâce au track record."
+      }
+    },
+
+    "btp-subcontract": {
+      "name": "Gestion Sous-Traitants",
+      "tagline": "Partenaires fiables, chantiers réussis",
+      "description_short": "Référencement, contrats, suivi et évaluation des sous-traitants.",
+      "description_full": "Le module Gestion Sous-Traitants structure vos relations avec vos partenaires d'exécution. Référencement avec vérification des assurances et certifications, contrats de sous-traitance types personnalisables, commandes et avenants, suivi des situations, évaluation qualité après intervention. Vous savez qui sont vos meilleurs sous-traitants par corps de métier. Les documents administratifs sont à jour. Les litiges sont prévenus par des contrats clairs.",
+      "transformation_story": {
+        "intro": "Vos sous-traitants sont qualifiés, leurs documents sont à jour, leurs prestations sont évaluées. La relation partenariale est structurée.",
+        "deep_narrative": "La Gestion Sous-Traitants transforme la relation avec vos partenaires. Le référencement assure la conformité administrative. Les contrats protègent les deux parties. Les situations sont validées rapidement. L'évaluation objective guide les prochaines consultations. Vos meilleurs partenaires sont fidélisés par une relation professionnelle.",
+        "business_impact": "L'impact sur la qualité d'exécution est significatif : réduction de 60% des litiges sous-traitance, meilleure disponibilité des partenaires qualifiés, et conformité aux obligations de vigilance."
+      }
+    },
+
+    "btp-situations": {
+      "name": "Situations de Travaux",
+      "tagline": "Facturation progressive maîtrisée",
+      "description_short": "Établissement et suivi des situations mensuelles de travaux.",
+      "description_full": "Le module Situations de Travaux automatise la facturation progressive des chantiers. Décomposition en postes et sous-postes, saisie des avancements par ligne, calcul automatique des montants cumulés et du mois, gestion des révisions de prix, retenues de garantie, génération des situations au format standard. Le rapprochement avec les paiements est automatique. Les DGD sont préparées facilement. Votre facturation reflète précisément l'avancement.",
+      "transformation_story": {
+        "intro": "Vos situations de travaux sont précises, rapides à établir, et conformes aux attentes des maîtres d'ouvrage. La facturation suit l'avancement réel.",
+        "deep_narrative": "Les Situations de Travaux transforment votre processus de facturation BTP. L'établissement est rapide grâce à la liaison avec l'avancement chantier. Les révisions de prix sont calculées automatiquement. Les retenues et libérations sont tracées. Les DGD sont préparées sans erreur. Le cash est encaissé plus vite grâce à des situations incontestables.",
+        "business_impact": "L'impact sur la trésorerie est direct : réduction de 15 jours du délai de paiement moyen, diminution des litiges sur facturation, et cash-flow optimisé par des situations rapides et précises."
+      }
+    },
+
+    "btp-planning": {
+      "name": "Planning Travaux",
+      "tagline": "Gantt intelligent pour le BTP",
+      "description_short": "Planification des phases, jalons et enchaînement des corps de métier.",
+      "description_full": "Le module Planning Travaux offre une planification adaptée aux contraintes du BTP. Phases de gros œuvre, second œuvre, finitions avec leurs dépendances. Coordination des corps de métier avec détection des conflits. Intégration des délais d'approvisionnement. Suivi de l'avancement réel versus prévu. Re-planification rapide en cas d'aléa. Le planning devient un outil de pilotage vivant, pas un document figé créé en début de chantier.",
+      "transformation_story": {
+        "intro": "Votre planning de chantier est dynamique et reflète la réalité. Les retards sont détectés tôt, les re-planifications sont rapides.",
+        "deep_narrative": "Le Planning Travaux transforme la coordination des chantiers. Les corps de métier s'enchaînent logiquement. Les conflits de ressources sont identifiés. Les approvisionnements sont synchronisés avec le besoin. Les aléas sont absorbés par une re-planification agile. Le chemin critique est visible et surveillé.",
+        "business_impact": "L'impact sur les délais est significatif : réduction de 25% des dépassements de délai, meilleure coordination des intervenants, et anticipation des points de blocage."
+      }
+    },
+
+    "btp-materials": {
+      "name": "Approvisionnements",
+      "tagline": "Le bon matériau au bon moment",
+      "description_short": "Gestion des commandes matériaux et suivi des livraisons chantier.",
+      "description_full": "Le module Approvisionnements gère le flux de matériaux vers vos chantiers. Besoins générés depuis le chiffrage, consultations fournisseurs, commandes et confirmations, suivi des livraisons, réception sur chantier avec contrôle quantité/qualité. L'intégration avec le planning évite les ruptures et les sur-stocks. Les litiges livraison sont documentés. Les consommations réelles alimentent les prochains chiffrages.",
+      "transformation_story": {
+        "intro": "Vos approvisionnements sont synchronisés avec le planning chantier. Plus de rupture qui bloque le chantier, plus de sur-stock qui encombre.",
+        "deep_narrative": "Les Approvisionnements transforment la logistique chantier. Les besoins sont anticipés depuis le planning. Les commandes groupent intelligemment. Les livraisons sont tracées jusqu'à la réception. Les écarts sont documentés pour réclamation. Les stocks chantier sont connus et valorisés.",
+        "business_impact": "L'impact sur les coûts est direct : réduction de 20% des arrêts chantier pour rupture, diminution des pertes et vols grâce au suivi, et négociation fournisseurs améliorée par la visibilité."
+      }
+    },
+
+    "btp-quality": {
+      "name": "Contrôle Qualité",
+      "tagline": "Qualité prouvée, réserves évitées",
+      "description_short": "Autocontrôles, points d'arrêt et gestion des non-conformités.",
+      "description_full": "Le module Contrôle Qualité structure la démarche qualité chantier. Fiches d'autocontrôle par lot et par phase, points d'arrêt avec validation obligatoire, gestion des non-conformités et des actions correctives, traçabilité des essais et contrôles externes. La qualité est intégrée au processus de production. Les preuves sont documentées pour la réception. Les réserves à la livraison sont minimisées car les problèmes sont traités en cours de chantier.",
+      "transformation_story": {
+        "intro": "La qualité est construite et prouvée tout au long du chantier. Les fiches d'autocontrôle documentent la conformité. Les réserves à la réception sont minimales.",
+        "deep_narrative": "Le Contrôle Qualité transforme la démarche qualité BTP. Les autocontrôles sont intégrés au processus. Les non-conformités sont traitées immédiatement. Les points d'arrêt assurent les jalons critiques. Le dossier des ouvrages exécutés est complet. La réception se passe sereinement car tout est documenté.",
+        "business_impact": "L'impact sur la qualité livrée est majeur : réduction de 70% des réserves à la réception, diminution des reprises après livraison, et image de qualité renforcée auprès des maîtres d'ouvrage."
+      }
+    }
+  }
+}

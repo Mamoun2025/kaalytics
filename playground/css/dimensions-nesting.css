@@ -1,0 +1,124 @@
+/* ============================================
+   DIMENSIONS NESTING
+   Module Stacking & Nesting Visual Effects
+   ============================================ */
+
+/* Nesting target highlight */
+.placed-module.nesting-target {
+    border-color: #10b981 !important;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.3), 0 8px 32px rgba(0, 0, 0, 0.4);
+    transform: scale(1.02);
+    transition: all 0.2s ease;
+}
+
+.placed-module.nesting-target::after {
+    content: 'Drop to nest';
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #10b981;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+    animation: bounce-hint 0.5s ease infinite alternate;
+}
+
+@keyframes bounce-hint {
+    from { transform: translateX(-50%) translateY(0); }
+    to { transform: translateX(-50%) translateY(-4px); }
+}
+
+/* Nested child (hidden but in DOM) */
+.placed-module.nested-child {
+    display: none !important;
+}
+
+/* Module with nested children */
+.placed-module.has-nested {
+    position: relative;
+}
+
+/* Stacked layers effect behind module */
+.placed-module.has-nested::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: -6px;
+    bottom: -6px;
+    background: linear-gradient(145deg, rgba(30, 74, 56, 0.8) 0%, rgba(26, 61, 46, 0.8) 100%);
+    border: 2px solid rgba(237, 169, 6, 0.3);
+    border-radius: 12px;
+    z-index: -1;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Second stack layer for 2+ nested */
+.placed-module.has-nested[style*="--nested-count: 2"]::after,
+.placed-module.has-nested[style*="--nested-count: 3"]::after,
+.placed-module.has-nested[style*="--nested-count: 4"]::after,
+.placed-module.has-nested[style*="--nested-count: 5"]::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: -12px;
+    bottom: -12px;
+    background: linear-gradient(145deg, rgba(26, 61, 46, 0.6) 0%, rgba(22, 51, 38, 0.6) 100%);
+    border: 2px solid rgba(237, 169, 6, 0.2);
+    border-radius: 12px;
+    z-index: -2;
+}
+
+/* Nested badge */
+.nested-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    min-width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border: 2px solid var(--bg-dark);
+    border-radius: 12px;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+    animation: nested-badge-appear 0.3s ease-out;
+}
+
+@keyframes nested-badge-appear {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Nested modules list in tooltip/expanded view */
+.nested-list {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.nested-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    margin: 4px 0;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 6px;
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+.nested-item-emoji {
+    font-size: 14px;
+}

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BEKS: -45% couts maintenance, -60% temps admin, 96K EUR economies/an. Decouvrez comment FleetOps Pro a transforme leur gestion de flotte BTP.">
+    <meta name="keywords" content="Etude de cas, BEKS, FleetOps Pro, BTP, Gestion de flotte, ROI, Maintenance, Casablanca">
+    <meta name="author" content="Kaalytics">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#10b981">
+    <title>Etude de Cas BEKS : -45% Couts, 96K EUR Economies | Kaalytics</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kaalytics.com/case-studies/beks">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://kaalytics.com/case-studies/beks">
+    <meta property="og:title" content="BEKS : -45% couts maintenance avec FleetOps Pro">
+    <meta property="og:description" content="Comment BEKS a economise 96K EUR/an avec FleetOps Pro. -45% couts maintenance, -60% temps admin, +30% disponibilite.">
+    <meta property="og:image" content="https://kaalytics.com/assets/images/og-beks.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Kaalytics">
+    <meta property="article:published_time" content="2024-10-01">
+    <meta property="article:section" content="Case Studies">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://kaalytics.com/case-studies/beks">
+    <meta name="twitter:title" content="BEKS : -45% couts maintenance avec FleetOps Pro">
+    <meta name="twitter:description" content="Comment BEKS a economise 96K EUR/an avec FleetOps Pro. Etude de cas complete.">
+    <meta name="twitter:image" content="https://kaalytics.com/assets/images/og-beks.jpg">
+    <meta name="twitter:site" content="@kaalytics">
+
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Comment BEKS a reduit ses couts de maintenance de 45% avec FleetOps Pro",
+        "description": "Etude de cas: BEKS, entreprise BTP a Casablanca, a transforme sa gestion de flotte avec FleetOps Pro. Resultats: -45% couts, -60% temps admin, 96K EUR economies/an.",
+        "image": "https://kaalytics.com/assets/images/case-beks.jpg",
+        "author": {
+            "@type": "Organization",
+            "name": "Kaalytics"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Kaalytics",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://kaalytics.com/assets/images/logo.png"
+            }
+        },
+        "datePublished": "2024-10-01",
+        "dateModified": "2024-12-01",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://kaalytics.com/case-studies/beks"
+        },
+        "about": {
+            "@type": "Organization",
+            "name": "BEKS",
+            "description": "Entreprise BTP et Location a Casablanca"
+        }
+    }
+    </script>
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+    <style>
+        .case-hero {
+            background: var(--bg-void);
+            padding: var(--space-4xl) 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.15) 0%, transparent 50%);
+        }
+
+        .case-hero__content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .case-hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-xs) var(--space-md);
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid var(--emerald);
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            color: var(--emerald);
+            margin-bottom: var(--space-xl);
+        }
+
+        .case-hero__title {
+            font-size: var(--text-4xl);
+            font-weight: 800;
+            margin-bottom: var(--space-lg);
+            max-width: 700px;
+        }
+
+        .case-hero__subtitle {
+            font-size: var(--text-xl);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-2xl);
+            max-width: 600px;
+        }
+
+        .case-hero__metrics {
+            display: flex;
+            gap: var(--space-2xl);
+            flex-wrap: wrap;
+        }
+
+        .case-hero__metric {
+            text-align: left;
+        }
+
+        .case-hero__metric-value {
+            font-size: var(--text-4xl);
+            font-weight: 800;
+            color: var(--emerald);
+        }
+
+        .case-hero__metric-label {
+            font-size: var(--text-sm);
+            color: var(--text-muted);
+        }
+
+        .case-content {
+            background: var(--bg-primary);
+            padding: var(--space-4xl) 0;
+        }
+
+        .case-content__grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--space-3xl);
+        }
+
+        @media (max-width: 968px) {
+            .case-content__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .case-section {
+            margin-bottom: var(--space-3xl);
+        }
+
+        .case-section__title {
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            margin-bottom: var(--space-lg);
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .case-section__title-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(16, 185, 129, 0.15);
+            border-radius: var(--radius-lg);
+            font-size: 1.25rem;
+        }
+
+        .case-section__content {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .case-section__content p {
+            margin-bottom: var(--space-lg);
+        }
+
+        .case-section__content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .case-section__content li {
+            padding: var(--space-sm) 0;
+            padding-left: var(--space-xl);
+            position: relative;
+        }
+
+        .case-section__content li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--emerald);
+            font-weight: 600;
+        }
+
+        .case-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .case-sidebar__card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+
+        .case-sidebar__title {
+            font-size: var(--text-lg);
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+        }
+
+        .case-sidebar__item {
+            display: flex;
+            justify-content: space-between;
+            padding: var(--space-sm) 0;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .case-sidebar__item:last-child {
+            border-bottom: none;
+        }
+
+        .case-sidebar__label {
+            color: var(--text-muted);
+            font-size: var(--text-sm);
+        }
+
+        .case-sidebar__value {
+            font-weight: 600;
+            font-size: var(--text-sm);
+        }
+
+        .case-quote {
+            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(16, 185, 129, 0.05) 100%);
+            border: 1px solid var(--emerald);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+            margin: var(--space-2xl) 0;
+        }
+
+        .case-quote__text {
+            font-size: var(--text-xl);
+            font-style: italic;
+            color: var(--text-primary);
+            margin-bottom: var(--space-lg);
+            line-height: 1.6;
+        }
+
+        .case-quote__author {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .case-quote__avatar {
+            width: 48px;
+            height: 48px;
+            background: var(--emerald);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--bg-void);
+        }
+
+        .case-quote__name {
+            font-weight: 600;
+        }
+
+        .case-quote__role {
+            font-size: var(--text-sm);
+            color: var(--text-muted);
+        }
+
+        .case-results {
+            background: var(--bg-secondary);
+            padding: var(--space-4xl) 0;
+        }
+
+        .case-results__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-xl);
+        }
+
+        @media (max-width: 968px) {
+            .case-results__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .case-result-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            text-align: center;
+        }
+
+        .case-result-card__value {
+            font-size: var(--text-3xl);
+            font-weight: 800;
+            color: var(--emerald);
+            margin-bottom: var(--space-xs);
+        }
+
+        .case-result-card__label {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+        }
+
+        .case-cta {
+            background: var(--bg-void);
+            padding: var(--space-4xl) 0;
+            text-align: center;
+        }
+
+        .case-cta__title {
+            font-size: var(--text-3xl);
+            font-weight: 800;
+            margin-bottom: var(--space-lg);
+        }
+
+        .case-cta__description {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-2xl);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-container" data-navbar="full" data-navbar-style="solid"></div>
+
+    <!-- Hero -->
+    <section class="case-hero">
+        <div class="container case-hero__content">
+            <span class="case-hero__badge">
+                Case Study
+            </span>
+            <h1 class="case-hero__title">Comment BEKS a reduit ses couts de maintenance de 45% en 6 mois</h1>
+            <p class="case-hero__subtitle">
+                De la gestion Excel chaotique a une flotte 100% connectee avec FleetOps Pro.
+            </p>
+
+            <div class="case-hero__metrics">
+                <div class="case-hero__metric">
+                    <div class="case-hero__metric-value">-45%</div>
+                    <div class="case-hero__metric-label">Couts maintenance</div>
+                </div>
+                <div class="case-hero__metric">
+                    <div class="case-hero__metric-value">-60%</div>
+                    <div class="case-hero__metric-label">Temps admin</div>
+                </div>
+                <div class="case-hero__metric">
+                    <div class="case-hero__metric-value">+30%</div>
+                    <div class="case-hero__metric-label">Disponibilite flotte</div>
+                </div>
+                <div class="case-hero__metric">
+                    <div class="case-hero__metric-value">6 mois</div>
+                    <div class="case-hero__metric-label">ROI atteint</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="case-content">
+        <div class="container">
+            <div class="case-content__grid">
+                <div class="case-content__main">
+                    <!-- Le Defi -->
+                    <div class="case-section">
+                        <h2 class="case-section__title">
+                            <span class="case-section__title-icon">01</span>
+                            Le defi
+                        </h2>
+                        <div class="case-section__content">
+                            <p>
+                                BEKS, entreprise marocaine specialisee dans le BTP et la location d'equipements, gerait une flotte de <strong>120+ vehicules et engins</strong> avec des methodes traditionnelles : fichiers Excel, appels telephoniques et papier.
+                            </p>
+                            <p>Les problemes majeurs :</p>
+                            <ul>
+                                <li>Pannes imprevues coutant en moyenne 15 000€/mois</li>
+                                <li>3h/jour pour le responsable flotte a traquer les vehicules</li>
+                                <li>Aucune visibilite sur les couts reels par projet</li>
+                                <li>Planification des maintenances reactive, jamais preventive</li>
+                                <li>Conflits frequents sur l'allocation des ressources</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- La Solution -->
+                    <div class="case-section">
+                        <h2 class="case-section__title">
+                            <span class="case-section__title-icon">02</span>
+                            La solution
+                        </h2>
+                        <div class="case-section__content">
+                            <p>
+                                Deploiement de <strong>FleetOps Pro</strong> avec 5 modules actives :
+                            </p>
+                            <ul>
+                                <li><strong>Module Parc</strong> : GPS temps reel sur tous les vehicules</li>
+                                <li><strong>Module Planning</strong> : Timeline drag & drop pour l'allocation</li>
+                                <li><strong>Module Maintenance</strong> : Alertes preventives basees sur les kilometrages</li>
+                                <li><strong>Module Chantiers</strong> : Suivi des couts par projet</li>
+                                <li><strong>Module Dashboard</strong> : KPIs en temps reel pour la direction</li>
+                            </ul>
+                            <p>
+                                Le deploiement a ete realise en <strong>3 semaines</strong>, incluant la formation des 15 utilisateurs et l'import de toutes les donnees historiques.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Quote -->
+                    <div class="case-quote">
+                        <p class="case-quote__text">
+                            "Avant FleetOps Pro, je passais mes matinees a appeler les chauffeurs pour savoir ou etaient nos engins. Maintenant, j'ouvre l'app et je sais exactement qui est ou, ce qui doit etre maintenu, et combien chaque projet nous coute."
+                        </p>
+                        <div class="case-quote__author">
+                            <div class="case-quote__avatar">YB</div>
+                            <div>
+                                <div class="case-quote__name">Youssef Bennani</div>
+                                <div class="case-quote__role">Directeur Operations, BEKS</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Les Resultats -->
+                    <div class="case-section">
+                        <h2 class="case-section__title">
+                            <span class="case-section__title-icon">03</span>
+                            Les resultats apres 6 mois
+                        </h2>
+                        <div class="case-section__content">
+                            <ul>
+                                <li><strong>-45% de couts de maintenance</strong> grace a la maintenance preventive</li>
+                                <li><strong>-60% de temps administratif</strong> pour le responsable flotte</li>
+                                <li><strong>+30% de disponibilite</strong> des vehicules (moins de pannes)</li>
+                                <li><strong>0 conflit d'allocation</strong> grace au planning visuel</li>
+                                <li><strong>Visibilite complete</strong> sur les couts par chantier</li>
+                            </ul>
+                            <p>
+                                L'investissement dans FleetOps Pro a ete <strong>rentabilise en 4 mois</strong>. BEKS economise maintenant environ <strong>8 000€/mois</strong> en couts operationnels.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="case-sidebar">
+                    <div class="case-sidebar__card">
+                        <h3 class="case-sidebar__title">A propos de BEKS</h3>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__label">Secteur</span>
+                            <span class="case-sidebar__value">BTP & Location</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__label">Localisation</span>
+                            <span class="case-sidebar__value">Casablanca, Maroc</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__label">Taille flotte</span>
+                            <span class="case-sidebar__value">120+ vehicules</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__label">Employes</span>
+                            <span class="case-sidebar__value">85</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__label">Utilisateurs FleetOps</span>
+                            <span class="case-sidebar__value">15</span>
+                        </div>
+                    </div>
+
+                    <div class="case-sidebar__card">
+                        <h3 class="case-sidebar__title">Modules utilises</h3>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__value">01 Parc</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__value">02 Planning</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__value">03 Maintenance</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__value">05 Chantiers</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__value">08 Dashboard</span>
+                        </div>
+                    </div>
+
+                    <div class="case-sidebar__card" style="background: linear-gradient(135deg, var(--bg-card) 0%, rgba(16, 185, 129, 0.1) 100%); border-color: var(--emerald);">
+                        <h3 class="case-sidebar__title" style="color: var(--emerald);">Vous aussi ?</h3>
+                        <p style="color: var(--text-secondary); font-size: var(--text-sm); margin-bottom: var(--space-lg);">
+                            Decouvrez combien vous pourriez economiser avec FleetOps Pro.
+                        </p>
+                        <a href="../#contact" class="btn btn-primary btn-sm" style="width: 100%;">
+                            Demander un audit gratuit
+                        </a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Grid -->
+    <section class="case-results">
+        <div class="container">
+            <div class="section-header section-header--center" style="margin-bottom: var(--space-3xl);">
+                <span class="section-label">Resultats mesures</span>
+                <h2 class="section-title">L'impact en chiffres</h2>
+            </div>
+
+            <div class="case-results__grid">
+                <div class="case-result-card">
+                    <div class="case-result-card__value">-45%</div>
+                    <div class="case-result-card__label">Couts de maintenance</div>
+                </div>
+                <div class="case-result-card">
+                    <div class="case-result-card__value">-60%</div>
+                    <div class="case-result-card__label">Temps administratif</div>
+                </div>
+                <div class="case-result-card">
+                    <div class="case-result-card__value">+30%</div>
+                    <div class="case-result-card__label">Disponibilite flotte</div>
+                </div>
+                <div class="case-result-card">
+                    <div class="case-result-card__value">96K€</div>
+                    <div class="case-result-card__label">Economies annuelles</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="case-cta">
+        <div class="container">
+            <h2 class="case-cta__title">Pret a transformer votre flotte ?</h2>
+            <p class="case-cta__description">
+                Obtenez votre audit gratuit et decouvrez combien vous pourriez economiser avec FleetOps Pro.
+            </p>
+            <div class="btn-group" style="justify-content: center;">
+                <a href="../#contact" class="btn btn-primary btn-lg">
+                    Demander un audit gratuit
+                </a>
+                <a href="../" class="btn btn-secondary btn-lg">
+                    Voir tous les produits
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 Kaalytics. Tous droits reserves.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Sticky -->
+    <a href="https://wa.me/212661718141?text=Bonjour%2C%20j%27ai%20lu%20le%20case%20study%20BEKS%20et%20je%20souhaite%20en%20savoir%20plus"
+       target="_blank"
+       class="whatsapp-sticky"
+       style="position: fixed; bottom: 24px; right: 24px; z-index: 1000; display: flex; align-items: center; gap: 12px; padding: 12px 20px; background: #25D366; color: white; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 14px; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span>Discutons de votre projet</span>
+    </a>
+
+    <!-- Navbar Loader -->
+    <script src="../components/navbar/navbar-loader.js"></script>
+
+    <!-- i18n -->
+    <script src="../assets/js/i18n/i18n.js"></script>
+    <script>
+        if (window.i18n) {
+            window.i18n.localesPath = '../assets/locales';
+            window.i18n.init();
+        }
+    </script>
+</body>
+</html>

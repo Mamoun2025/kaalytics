@@ -1,0 +1,111 @@
+{
+    "services": [
+        {
+            "id": "fleet-management",
+            "name": "FleetOps Pro",
+            "tagline": "Le systeme nerveux de votre flotte",
+            "number": "01",
+            "featured": true,
+            "description": "Solution complete de gestion de flotte pour BTP, Transport et Location. 8 modules integres pour centraliser toutes vos operations.",
+            "pricing": {
+                "starter": {
+                    "price": 500,
+                    "currency": "EUR",
+                    "period": "mois",
+                    "vehicles": "10-50",
+                    "users": 5
+                },
+                "professional": {
+                    "price": 1500,
+                    "currency": "EUR",
+                    "period": "mois",
+                    "vehicles": "50-200",
+                    "users": 20
+                },
+                "enterprise": {
+                    "price": 5000,
+                    "currency": "EUR",
+                    "period": "mois",
+                    "vehicles": "200+",
+                    "users": "illimite"
+                }
+            },
+            "industries": ["btp", "transport", "location", "mining"],
+            "benefits": [
+                { "value": "-60%", "label": "Temps de gestion" },
+                { "value": "-40%", "label": "Couts maintenance" },
+                { "value": "+35%", "label": "Productivite" }
+            ]
+        },
+        {
+            "id": "daedalia",
+            "name": "Daedalia AI",
+            "tagline": "Votre copilote IA pour Odoo",
+            "number": "02",
+            "featured": false,
+            "description": "Assistant IA conversationnel connecte a Odoo. Creez des devis, recherchez des produits et analysez vos ventes en langage naturel.",
+            "features": [
+                "178k+ documents indexes",
+                "Recherche produits intelligente",
+                "Creation devis conversationnelle",
+                "Analyse ventes automatique"
+            ]
+        },
+        {
+            "id": "marketing-automation",
+            "name": "Marketing Automation",
+            "tagline": "L'IA qui accelere votre croissance",
+            "number": "03",
+            "featured": false,
+            "description": "Automatisez vos campagnes marketing avec l'IA. Generation de contenu, optimisation budget, attribution multi-touch.",
+            "features": [
+                "Campagnes IA",
+                "Contenu genere",
+                "Budget optimise",
+                "Attribution intelligente"
+            ]
+        },
+        {
+            "id": "business-intelligence",
+            "name": "Business Intelligence",
+            "tagline": "Des donnees aux decisions",
+            "number": "04",
+            "featured": false,
+            "description": "Dashboards temps reel, predictions IA et rapports automatises pour piloter votre entreprise.",
+            "features": [
+                "Dashboards personnalises",
+                "Predictions IA",
+                "Rapports automatiques",
+                "Alertes intelligentes"
+            ]
+        },
+        {
+            "id": "connectivity",
+            "name": "Connectivite API",
+            "tagline": "Tous vos systemes connectes",
+            "number": "05",
+            "featured": false,
+            "description": "Hub central pour connecter tous vos outils. Synchronisation temps reel, ETL automatise, monitoring.",
+            "features": [
+                "Connecteur universel",
+                "Sync temps reel",
+                "Pipeline ETL",
+                "Monitoring flux"
+            ]
+        },
+        {
+            "id": "cybersecurity",
+            "name": "Cybersecurite",
+            "tagline": "Protection IA de vos actifs",
+            "number": "06",
+            "featured": false,
+            "description": "Detection des menaces par IA, conformite automatisee et audit continu de votre securite.",
+            "features": [
+                "Detection menaces IA",
+                "Conformite auto",
+                "Audit continu",
+                "Reponse automatique"
+            ]
+        }
+    ]
+}

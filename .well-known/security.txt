@@ -1,0 +1,11 @@
+# Kaalytics Security Policy
+# https://kaalytics.com/.well-known/security.txt
+
+Contact: mailto:security@kaalytics.com
+Contact: https://wa.me/212661718141
+Expires: 2027-01-22T00:00:00.000Z
+Preferred-Languages: fr, en, ar
+Canonical: https://kaalytics.com/.well-known/security.txt
+
+# Our security team will respond within 48 hours
+# Please report any security vulnerabilities responsibly

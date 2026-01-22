@@ -1,0 +1,434 @@
+/**
+ * Kaalytics Micro-interactions
+ * Subtle animations and effects for enhanced UX
+ */
+
+/* ========================================
+   HOVER EFFECTS
+   ======================================== */
+
+/* Lift effect */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.2);
+}
+
+/* Scale effect */
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.02);
+}
+
+/* Glow effect */
+.hover-glow {
+    transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
+}
+
+.hover-glow--orange:hover {
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.3);
+}
+
+.hover-glow--purple:hover {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+.hover-glow--blue:hover {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+}
+
+/* Tilt effect (subtle 3D) */
+.hover-tilt {
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.hover-tilt:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(-2deg);
+}
+
+/* ========================================
+   FOCUS STATES
+   ======================================== */
+
+/* Custom focus ring */
+.focus-ring:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.4);
+}
+
+.focus-ring--orange:focus-visible {
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.4);
+}
+
+/* Input focus glow */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--emerald);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+/* ========================================
+   CLICK/ACTIVE EFFECTS
+   ======================================== */
+
+/* Press effect */
+.press-effect:active {
+    transform: scale(0.98);
+}
+
+/* Ripple effect base */
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+    opacity: 0;
+}
+
+.ripple:active::after {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+}
+
+/* ========================================
+   LOADING STATES
+   ======================================== */
+
+/* Skeleton loading */
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        var(--bg-secondary) 25%,
+        var(--bg-card) 50%,
+        var(--bg-secondary) 75%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s ease-in-out infinite;
+    border-radius: var(--radius-md);
+}
+
+@keyframes skeleton-loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Pulse loading */
+.pulse-loading {
+    animation: pulse-loading 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-loading {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Spinner */
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border);
+    border-top-color: var(--emerald);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ========================================
+   TEXT EFFECTS
+   ======================================== */
+
+/* Gradient text on hover */
+.hover-gradient-text {
+    transition: background 0.3s ease;
+}
+
+.hover-gradient-text:hover {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Underline animation */
+.underline-animate {
+    position: relative;
+}
+
+.underline-animate::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--emerald);
+    transition: width 0.3s ease;
+}
+
+.underline-animate:hover::after {
+    width: 100%;
+}
+
+/* Text reveal on hover */
+.text-reveal {
+    overflow: hidden;
+}
+
+.text-reveal span {
+    display: inline-block;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.text-reveal:hover span {
+    transform: translateY(0);
+}
+
+/* ========================================
+   ICON EFFECTS
+   ======================================== */
+
+/* Icon bounce */
+.icon-bounce:hover svg,
+.icon-bounce:hover i {
+    animation: icon-bounce 0.5s ease;
+}
+
+@keyframes icon-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Icon rotate */
+.icon-rotate:hover svg,
+.icon-rotate:hover i {
+    animation: icon-rotate 0.5s ease;
+}
+
+@keyframes icon-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Icon pulse */
+.icon-pulse:hover svg,
+.icon-pulse:hover i {
+    animation: icon-pulse 0.5s ease;
+}
+
+@keyframes icon-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* ========================================
+   BORDER EFFECTS
+   ======================================== */
+
+/* Animated border */
+.border-animate {
+    position: relative;
+}
+
+.border-animate::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(
+        45deg,
+        var(--emerald),
+        var(--teal),
+        var(--blue),
+        var(--purple),
+        var(--pink),
+        var(--orange),
+        var(--emerald)
+    );
+    background-size: 300% 300%;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.border-animate:hover::before {
+    opacity: 1;
+    animation: border-gradient 3s linear infinite;
+}
+
+@keyframes border-gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ========================================
+   CARD EFFECTS
+   ======================================== */
+
+/* Shine effect on hover */
+.card-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-shine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transition: left 0.5s ease;
+}
+
+.card-shine:hover::before {
+    left: 100%;
+}
+
+/* Glass morphism on hover */
+.hover-glass:hover {
+    background: rgba(30, 30, 30, 0.6);
+    backdrop-filter: blur(10px);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================
+   SCROLL ANIMATIONS (CSS only)
+   ======================================== */
+
+/* Fade in on scroll (requires JS to add .visible class) */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Scale in */
+.scale-in {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Stagger delay utilities */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+.stagger-6 { transition-delay: 0.6s; }
+
+/* ========================================
+   CURSOR EFFECTS
+   ======================================== */
+
+/* Custom cursor styles */
+.cursor-pointer { cursor: pointer; }
+.cursor-grab { cursor: grab; }
+.cursor-grabbing:active { cursor: grabbing; }
+
+/* Interactive cursor indicator */
+[data-cursor="expand"] {
+    cursor: none;
+}
+
+/* ========================================
+   ACCESSIBILITY: Reduced Motion
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .hover-lift,
+    .hover-scale,
+    .hover-tilt,
+    .press-effect,
+    .skeleton,
+    .spinner,
+    .icon-bounce,
+    .icon-rotate,
+    .icon-pulse,
+    .fade-in-up,
+    .fade-in-left,
+    .fade-in-right,
+    .scale-in {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .fade-in-up,
+    .fade-in-left,
+    .fade-in-right,
+    .scale-in {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}

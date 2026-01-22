@@ -1,0 +1,174 @@
+{
+    "industries": [
+        {
+            "id": "btp",
+            "name": "BTP & Construction",
+            "number": "01",
+            "description": "Entreprises de construction, travaux publics, terrassement",
+            "painPoints": [
+                "Machines dispersees sur plusieurs chantiers",
+                "Pannes imprevues couteuses",
+                "Difficulte de coordination entre equipes",
+                "Suivi manuel des heures machines"
+            ],
+            "benefits": [
+                "-40% temps d'arret",
+                "+35% utilisation equipements",
+                "Visibilite temps reel sur tous chantiers"
+            ],
+            "fleetSize": "15-200 machines",
+            "targetCompanies": "PME a grandes entreprises (20-500+ employes)",
+            "roi": "6-12 mois"
+        },
+        {
+            "id": "transport",
+            "name": "Transport & Logistique",
+            "number": "02",
+            "description": "Transporteurs routiers, messagerie, logistique",
+            "painPoints": [
+                "Gestion carburant non optimisee",
+                "Maintenance reactive vs preventive",
+                "Manque visibilite sur les couts par vehicule",
+                "Conformite reglementaire complexe"
+            ],
+            "benefits": [
+                "-25% couts carburant",
+                "-50% pannes imprevues",
+                "Conformite automatisee"
+            ],
+            "fleetSize": "30-200 vehicules",
+            "targetCompanies": "PME transport (20-300 employes)",
+            "roi": "4-8 mois"
+        },
+        {
+            "id": "location",
+            "name": "Location d'Equipements",
+            "number": "03",
+            "description": "Loueurs de materiel BTP, nacelles, groupes electrogenes",
+            "painPoints": [
+                "Taux d'utilisation non optimal",
+                "Maintenance entre locations difficile a planifier",
+                "Facturation au temps d'utilisation complexe",
+                "Gestion multi-clients chronophage"
+            ],
+            "benefits": [
+                "+20% taux utilisation",
+                "Multi-tenant natif",
+                "Facturation automatisee"
+            ],
+            "fleetSize": "50-500 machines",
+            "targetCompanies": "Loueurs (10-200 employes)",
+            "roi": "3-6 mois"
+        },
+        {
+            "id": "mining",
+            "name": "Mines & Carrieres",
+            "number": "04",
+            "description": "Sites miniers, carrieres, extraction",
+            "painPoints": [
+                "Equipements critiques, cout arret eleve",
+                "Conditions difficiles accelerent usure",
+                "Traçabilite pour certifications obligatoire",
+                "Gestion sites isoles"
+            ],
+            "benefits": [
+                "-60% arrets non planifies",
+                "Tracabilite complete",
+                "Gestion multi-sites"
+            ],
+            "fleetSize": "20-150 engins lourds",
+            "targetCompanies": "Operateurs miniers",
+            "roi": "6-9 mois"
+        },
+        {
+            "id": "industrie",
+            "name": "Industrie",
+            "number": "05",
+            "description": "Usines, sites de production, entrepots",
+            "painPoints": [
+                "Maintenance preventive stricte requise",
+                "Integration ERP necessaire",
+                "Reporting pour certifications ISO",
+                "Optimisation parc chariots/vehicules internes"
+            ],
+            "benefits": [
+                "Conformite ISO facilitee",
+                "Integration API complete",
+                "-30% couts maintenance"
+            ],
+            "fleetSize": "20-150 engins",
+            "targetCompanies": "Sites industriels (50-1000+ employes)",
+            "roi": "8-12 mois"
+        },
+        {
+            "id": "collectivites",
+            "name": "Collectivites & Services Publics",
+            "number": "06",
+            "description": "Mairies, services municipaux, voirie",
+            "painPoints": [
+                "Budget public = transparence obligatoire",
+                "Multi-services a coordonner",
+                "Reporting pour elus et citoyens",
+                "Optimisation des ressources publiques"
+            ],
+            "benefits": [
+                "Tracabilite totale",
+                "Reporting automatise",
+                "Economies budgetaires"
+            ],
+            "fleetSize": "15-100 vehicules/engins",
+            "targetCompanies": "Communes, conseils regionaux",
+            "roi": "6-12 mois"
+        }
+    ],
+    "personas": [
+        {
+            "id": "dg",
+            "title": "Directeur General / CEO",
+            "initials": "DG",
+            "concerns": ["ROI et rentabilite", "Reduction des couts", "Competitivite", "Vision globale"],
+            "benefits": ["Dashboards decisionnels", "Reduction couts 30-40%", "Vision temps reel"],
+            "quote": "Augmentez votre rentabilite de 35% en optimisant votre flotte."
+        },
+        {
+            "id": "daf",
+            "title": "Directeur Financier / DAF",
+            "initials": "DAF",
+            "concerns": ["Controle des depenses", "Budget maintenance", "Amortissement", "Reporting financier"],
+            "benefits": ["Suivi couts par machine/chantier", "Previsions budgetaires", "Export comptable"],
+            "quote": "Reduisez vos couts de maintenance de 40% et maitrisez votre budget."
+        },
+        {
+            "id": "fleet-manager",
+            "title": "Responsable de Parc",
+            "initials": "RP",
+            "concerns": ["Gestion quotidienne flotte", "Planification affectations", "Etat des machines", "Coordination chefs chantier"],
+            "benefits": ["Gain de temps 60%", "Fini les Excel", "Alertes automatiques"],
+            "quote": "Gagnez 60% de votre temps. Fini les fichiers Excel desorganises."
+        },
+        {
+            "id": "maintenance-manager",
+            "title": "Responsable Maintenance",
+            "initials": "RM",
+            "concerns": ["Planification maintenances", "Interventions", "Commande pieces", "Couts maintenance"],
+            "benefits": ["Echeances automatiques", "Alertes predictives", "Historique complet", "Reduction pannes 70%"],
+            "quote": "Divisez vos pannes par 3 avec les alertes predictives."
+        },
+        {
+            "id": "purchasing",
+            "title": "Responsable Achats",
+            "initials": "RA",
+            "concerns": ["Demandes achat", "Negociation fournisseurs", "Suivi commandes", "Gestion stock"],
+            "benefits": ["Workflow automatise DA→RFQ→PO", "Comparaison devis auto", "Delais -50%"],
+            "quote": "Divisez vos delais d'approvisionnement par 2."
+        },
+        {
+            "id": "site-manager",
+            "title": "Chef de Chantier",
+            "initials": "CC",
+            "concerns": ["Gestion chantier", "Demande machines/personnel", "Respect budget", "Avancement"],
+            "benefits": ["Visibilite ressources disponibles", "Demandes en 2 clics", "Couts temps reel"],
+            "quote": "Ayez toujours les bonnes machines au bon moment."
+        }
+    ]
+}

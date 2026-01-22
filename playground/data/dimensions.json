@@ -1,0 +1,212 @@
+{
+  "dimensions": [
+    {
+      "id": "operations",
+      "title": "Opérations Terrain",
+      "emoji": "🏗️",
+      "color": "#3b82f6",
+      "description": "Transformez le chaos en précision horlogère",
+      "modules": [
+        { "id": "ops-map", "name": "Carte Intelligente", "desc": "Tous vos véhicules et actifs sur une carte interactive" },
+        { "id": "ops-routes", "name": "Optimisation Trajets", "desc": "L'IA optimise les routes avant le réveil des chauffeurs" },
+        { "id": "ops-maintenance", "name": "Maintenance Prédictive", "desc": "Anticipez les pannes avant qu'elles n'arrivent" },
+        { "id": "ops-inventory", "name": "Gestion des Stocks", "desc": "Sachez ce dont vous avez besoin avant la rupture" },
+        { "id": "ops-fleet", "name": "Suivi de Flotte", "desc": "GPS temps réel pour tous les véhicules" },
+        { "id": "ops-scheduling", "name": "Planning Équipes", "desc": "Affectation automatique des ressources" },
+        { "id": "ops-alerts", "name": "Alertes Terrain", "desc": "Notifications instantanées sur les incidents" },
+        { "id": "ops-kpi", "name": "KPIs Opérationnels", "desc": "Tableaux de bord performance en temps réel" },
+        { "id": "ops-sites", "name": "Gestion Chantiers", "desc": "Suivi des sites actifs, avancement et ressources" },
+        { "id": "ops-machines", "name": "Planning Machines", "desc": "Planification engins lourds et disponibilité" },
+        { "id": "ops-field", "name": "Suivi Interventions", "desc": "Rapports terrain, photos géolocalisées" },
+        { "id": "ops-weather", "name": "Météo & Conditions", "desc": "Impact météo sur planning et alertes" }
+      ]
+    },
+    {
+      "id": "growth",
+      "title": "Croissance Commerciale",
+      "emoji": "🚀",
+      "color": "#f59e0b",
+      "description": "Transformez votre équipe commerciale en machine à closer",
+      "modules": [
+        { "id": "growth-crm", "name": "CRM Intelligent", "desc": "L'IA vous dit qui appeler maintenant" },
+        { "id": "growth-whatsapp", "name": "Bot WhatsApp", "desc": "Qualifiez vos leads pendant votre sommeil" },
+        { "id": "growth-pipeline", "name": "Pipeline Commercial", "desc": "Visualisez où les deals se bloquent" },
+        { "id": "growth-insights", "name": "Vision Client 360", "desc": "Connaissez vos clients en profondeur" },
+        { "id": "growth-scoring", "name": "Scoring Leads", "desc": "Qualification automatique par IA" },
+        { "id": "growth-followup", "name": "Relances Auto", "desc": "Ne ratez plus jamais un suivi" },
+        { "id": "growth-quotes", "name": "Devis Dynamiques", "desc": "Tarification et propositions intelligentes" },
+        { "id": "growth-churn", "name": "Anti-Attrition", "desc": "Prédisez et prévenez la perte de clients" }
+      ]
+    },
+    {
+      "id": "engagement",
+      "title": "Marketing Automation",
+      "emoji": "🎯",
+      "color": "#ec4899",
+      "description": "Un marketing qui tourne tout seul",
+      "modules": [
+        { "id": "engage-campaigns", "name": "Campagnes IA", "desc": "Des campagnes qui apprennent et s'améliorent" },
+        { "id": "engage-content", "name": "Contenu Généré", "desc": "Contenu IA qui convertit" },
+        { "id": "engage-budget", "name": "Budget Optimisé", "desc": "L'argent va vers ce qui marche" },
+        { "id": "engage-attribution", "name": "Attribution", "desc": "Sachez d'où viennent vos clients" },
+        { "id": "engage-email", "name": "Emails Auto", "desc": "Séquences email intelligentes" },
+        { "id": "engage-social", "name": "Réseaux Sociaux", "desc": "Automation multi-plateformes" },
+        { "id": "engage-ab", "name": "Tests A/B", "desc": "Expérimentations automatisées" },
+        { "id": "engage-analytics", "name": "Analytics Marketing", "desc": "Performance en temps réel" }
+      ]
+    },
+    {
+      "id": "brand",
+      "title": "Identité & Design",
+      "emoji": "🎨",
+      "color": "#8b5cf6",
+      "description": "Votre marque mérite de briller comme un million",
+      "modules": [
+        { "id": "brand-identity", "name": "Identité Visuelle", "desc": "Logo, couleurs, typographie" },
+        { "id": "brand-web", "name": "Site Web", "desc": "Sites magnifiques qui convertissent" },
+        { "id": "brand-docs", "name": "Documents Pro", "desc": "Factures et documents premium" },
+        { "id": "brand-system", "name": "Design System", "desc": "Langage visuel cohérent" },
+        { "id": "brand-ui", "name": "UI/UX Design", "desc": "Interfaces centrées utilisateur" },
+        { "id": "brand-motion", "name": "Motion Design", "desc": "Animations et contenu vidéo" },
+        { "id": "brand-print", "name": "Supports Print", "desc": "Brochures, cartes, signalétique" },
+        { "id": "brand-social", "name": "Assets Sociaux", "desc": "Contenu optimisé par plateforme" }
+      ]
+    },
+    {
+      "id": "integration",
+      "title": "Connectivité",
+      "emoji": "🔌",
+      "color": "#06b6d4",
+      "description": "Tous vos systèmes qui communiquent enfin",
+      "modules": [
+        { "id": "integ-universal", "name": "Connecteur Universel", "desc": "Connectez tout à tout" },
+        { "id": "integ-sync", "name": "Sync Temps Réel", "desc": "Les données coulent comme l'eau" },
+        { "id": "integ-api", "name": "Hub API", "desc": "APIs REST et webhooks" },
+        { "id": "integ-etl", "name": "Pipeline ETL", "desc": "Transformation automatique des données" },
+        { "id": "integ-iot", "name": "Passerelle IoT", "desc": "Connectez capteurs et appareils" },
+        { "id": "integ-legacy", "name": "Pont Legacy", "desc": "Anciens systèmes vers le nouveau monde" },
+        { "id": "integ-queue", "name": "File de Messages", "desc": "Messaging asynchrone fiable" },
+        { "id": "integ-monitor", "name": "Monitoring Flux", "desc": "Visibilité temps réel des échanges" }
+      ]
+    },
+    {
+      "id": "enterprise",
+      "title": "Gestion d'Entreprise",
+      "emoji": "🏢",
+      "color": "#6366f1",
+      "description": "Le système d'exploitation business que vous méritiez",
+      "modules": [
+        { "id": "ent-erp", "name": "ERP Complet", "desc": "Tous les processus en harmonie" },
+        { "id": "ent-custom", "name": "Modules Sur-Mesure", "desc": "Construits juste pour vous" },
+        { "id": "ent-deploy", "name": "Déploiement Rapide", "desc": "En semaines, pas en années" },
+        { "id": "ent-support", "name": "Support Expert", "desc": "Équipe dédiée 24/7" },
+        { "id": "ent-hr", "name": "Gestion RH", "desc": "Cycle de vie employé et paie" },
+        { "id": "ent-purchase", "name": "Achats", "desc": "Gestion fournisseurs" },
+        { "id": "ent-project", "name": "Gestion Projets", "desc": "Tâches, temps, facturation" },
+        { "id": "ent-docs", "name": "GED", "desc": "Stockage centralisé des fichiers" }
+      ]
+    },
+    {
+      "id": "intelligence",
+      "title": "Intelligence Décisionnelle",
+      "emoji": "📊",
+      "color": "#10b981",
+      "description": "Transformez vos données en décisions éclairées",
+      "modules": [
+        { "id": "intel-banks", "name": "Multi-Banques", "desc": "Toutes vos banques dans une seule vue" },
+        { "id": "intel-ml", "name": "Prédictions IA", "desc": "Détectez les opportunités des semaines à l'avance" },
+        { "id": "intel-reports", "name": "Rapports Auto", "desc": "Des rapports qui s'écrivent tout seuls" },
+        { "id": "intel-dashboards", "name": "Tableaux de Bord", "desc": "Visuels clairs pour direction et investisseurs" },
+        { "id": "intel-cashflow", "name": "Flux de Trésorerie", "desc": "Suivi temps réel des entrées et sorties" },
+        { "id": "intel-margins", "name": "Analyse Marges", "desc": "Rentabilité par produit et par client" },
+        { "id": "intel-forecast", "name": "Prévisions", "desc": "Projections financières fiables à 95%" },
+        { "id": "intel-alerts", "name": "Détection Anomalies", "desc": "L'IA repère les patterns inhabituels" }
+      ]
+    },
+    {
+      "id": "security",
+      "title": "Sécurité & Conformité",
+      "emoji": "🛡️",
+      "color": "#ef4444",
+      "description": "Dormez tranquille avec des gardiens IA",
+      "modules": [
+        { "id": "sec-detect", "name": "Détection Menaces", "desc": "L'IA repère les menaces instantanément" },
+        { "id": "sec-response", "name": "Réponse Auto", "desc": "Plus rapide qu'un humain" },
+        { "id": "sec-compliance", "name": "Conformité", "desc": "Les auditeurs vont sourire" },
+        { "id": "sec-audit", "name": "Piste d'Audit", "desc": "Journal complet des activités" },
+        { "id": "sec-access", "name": "Contrôle d'Accès", "desc": "Permissions basées sur les rôles" },
+        { "id": "sec-encrypt", "name": "Chiffrement", "desc": "Protection de bout en bout" },
+        { "id": "sec-backup", "name": "Sauvegarde Auto", "desc": "Backups automatiques et chiffrés" },
+        { "id": "sec-pentest", "name": "Scan Vulnérabilités", "desc": "Tests de sécurité continus" }
+      ]
+    },
+    {
+      "id": "construction",
+      "title": "BTP & Construction",
+      "emoji": "🏗️",
+      "color": "#d97706",
+      "description": "Maîtrisez vos chantiers de A à Z",
+      "modules": [
+        { "id": "btp-tenders", "name": "Appels d'Offres", "desc": "Gagnez plus de marchés" },
+        { "id": "btp-sites", "name": "Suivi Chantier", "desc": "Avancement physique et financier" },
+        { "id": "btp-safety", "name": "Sécurité Chantier", "desc": "PPSPS et prévention" },
+        { "id": "btp-subcontract", "name": "Sous-Traitants", "desc": "Partenaires qualifiés et suivis" },
+        { "id": "btp-situations", "name": "Situations Travaux", "desc": "Facturation progressive" },
+        { "id": "btp-planning", "name": "Planning Travaux", "desc": "Gantt et coordination" },
+        { "id": "btp-materials", "name": "Approvisionnements", "desc": "Matériaux au bon moment" },
+        { "id": "btp-quality", "name": "Contrôle Qualité", "desc": "Autocontrôles et conformité" }
+      ]
+    },
+    {
+      "id": "logistics",
+      "title": "Logistique & Distribution",
+      "emoji": "📦",
+      "color": "#0891b2",
+      "description": "Du stock au client en toute fluidité",
+      "modules": [
+        { "id": "log-wms", "name": "Gestion Entrepôt", "desc": "Chaque article à sa place" },
+        { "id": "log-tms", "name": "Transport", "desc": "Tournées optimisées" },
+        { "id": "log-tracking", "name": "Traçabilité", "desc": "Du fournisseur au client" },
+        { "id": "log-picking", "name": "Préparation Commandes", "desc": "Picking guidé sans erreur" },
+        { "id": "log-returns", "name": "Gestion Retours", "desc": "Flux inverse maîtrisé" },
+        { "id": "log-inventory", "name": "Inventaire Permanent", "desc": "Stock fiable en continu" },
+        { "id": "log-crossdock", "name": "Cross-Docking", "desc": "Transit express" },
+        { "id": "log-forecast", "name": "Prévisions Demande", "desc": "Anticiper pour mieux servir" }
+      ]
+    },
+    {
+      "id": "mining",
+      "title": "Mines & Carrières",
+      "emoji": "⛏️",
+      "color": "#78716c",
+      "description": "Extraction optimisée et responsable",
+      "modules": [
+        { "id": "mine-deposits", "name": "Gestion Gisements", "desc": "Réserves modélisées" },
+        { "id": "mine-planning", "name": "Planification Extraction", "desc": "Zones et équipes coordonnées" },
+        { "id": "mine-weighing", "name": "Pesage & Facturation", "desc": "Chaque tonne comptée" },
+        { "id": "mine-quality", "name": "Contrôle Qualité", "desc": "Granulométrie et conformité" },
+        { "id": "mine-environment", "name": "Environnement", "desc": "ICPE et réhabilitation" },
+        { "id": "mine-explosives", "name": "Gestion Explosifs", "desc": "Traçabilité réglementaire" },
+        { "id": "mine-production", "name": "Suivi Production", "desc": "Tonnages temps réel" },
+        { "id": "mine-maintenance", "name": "Maintenance Engins", "desc": "Disponibilité maximale" }
+      ]
+    },
+    {
+      "id": "manufacturing",
+      "title": "Industrie & Production",
+      "emoji": "🏭",
+      "color": "#64748b",
+      "description": "L'usine 4.0 à portée de main",
+      "modules": [
+        { "id": "mfg-mes", "name": "Pilotage Atelier", "desc": "Production temps réel" },
+        { "id": "mfg-planning", "name": "Ordonnancement", "desc": "Séquence optimale" },
+        { "id": "mfg-mrp", "name": "Calcul des Besoins", "desc": "Composants au bon moment" },
+        { "id": "mfg-quality", "name": "Qualité Production", "desc": "Zéro défaut en sortie" },
+        { "id": "mfg-traceability", "name": "Traçabilité Lots", "desc": "Du composant au client" },
+        { "id": "mfg-maintenance", "name": "GMAO", "desc": "Équipements disponibles" },
+        { "id": "mfg-bom", "name": "Nomenclatures", "desc": "Définition produits" },
+        { "id": "mfg-costing", "name": "Prix de Revient", "desc": "Coûts réels connus" }
+      ]
+    }
+  ]
+}

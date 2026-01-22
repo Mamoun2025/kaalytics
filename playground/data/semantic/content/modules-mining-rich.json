@@ -1,0 +1,105 @@
+{
+  "_meta": {
+    "version": "3.0",
+    "dimension": "mining",
+    "description": "Contenu sémantique ULTRA-RICHE pour la dimension Mines & Carrières"
+  },
+
+  "modules": {
+    "mine-deposits": {
+      "name": "Gestion Gisements",
+      "tagline": "Connaître ses réserves",
+      "description_short": "Cartographie et suivi des réserves exploitables avec projection d'épuisement.",
+      "description_full": "Le module Gestion Gisements cartographie et valorise vos ressources minérales. Modélisation 3D des gisements, calcul des volumes exploitables, qualité par zone, projection des réserves dans le temps. Chaque tir, chaque extraction réduit les réserves de manière traçable. Les autorisations d'exploitation sont liées aux volumes restants. Vous savez exactement ce qui reste à extraire, où, et pour combien de temps à production constante.",
+      "transformation_story": {
+        "intro": "Vos gisements sont modélisés et suivis en temps réel. Les réserves ne sont plus une estimation mais une mesure actualisée.",
+        "deep_narrative": "La Gestion Gisements transforme votre vision des ressources. Le potentiel est quantifié précisément. L'extraction est optimisée par zone. Les projections d'épuisement sont fiables. Les investissements de développement sont guidés par les données. La valeur de vos actifs miniers est documentée.",
+        "business_impact": "L'impact sur la planification est majeur : visibilité à long terme sur les réserves, optimisation de l'extraction par qualité, et valorisation précise des actifs pour les investisseurs ou acquéreurs potentiels."
+      }
+    },
+
+    "mine-planning": {
+      "name": "Planification Extraction",
+      "tagline": "Extraire au bon moment",
+      "description_short": "Planification des zones d'extraction et coordination des équipes terrain.",
+      "description_full": "Le module Planification Extraction orchestre l'activité quotidienne de la carrière ou de la mine. Plan d'extraction à court et moyen terme, coordination des engins, gestion des tirs, planification des équipes. Les zones sont exploitées dans l'ordre optimal pour la qualité et la rentabilité. Les contraintes environnementales et de sécurité sont intégrées. Le planning est vivant et s'adapte aux aléas terrain.",
+      "transformation_story": {
+        "intro": "L'extraction est planifiée et coordonnée. Les équipes savent quoi faire, où et quand. Les ressources sont utilisées efficacement.",
+        "deep_narrative": "La Planification Extraction transforme le pilotage du site. Les zones sont exploitées stratégiquement. Les engins sont affectés de manière optimale. Les tirs sont coordonnés avec la production. Les aléas sont absorbés par une planification agile. Le rendement du site s'améliore.",
+        "business_impact": "L'impact sur la productivité est significatif : augmentation de 20% du rendement d'extraction, meilleure utilisation des engins, et réduction des temps morts."
+      }
+    },
+
+    "mine-weighing": {
+      "name": "Pesage & Facturation",
+      "tagline": "Chaque tonne comptée",
+      "description_short": "Intégration des ponts-bascules avec facturation automatique.",
+      "description_full": "Le module Pesage & Facturation automatise le flux commercial de la carrière. Intégration directe avec les ponts-bascules. Ticket de pesée automatique. Identification du client, du produit, du transporteur. Bon de livraison généré instantanément. Facturation automatique selon les contrats clients. Analyse des ventes par produit, client, période. Plus d'erreur de saisie, plus de ticket perdu, plus de litige sur les quantités.",
+      "transformation_story": {
+        "intro": "Chaque camion pesé génère automatiquement sa facture. La chaîne du ticket de pesée à la comptabilité est fluide.",
+        "deep_narrative": "Le Pesage & Facturation transforme le flux commercial. Les pesées sont fiabilisées par l'intégration directe. Les bons de livraison sont immédiats. La facturation est quotidienne et sans erreur. Les litiges quantité disparaissent. Le cash est encaissé plus vite.",
+        "business_impact": "L'impact sur le cash-flow est direct : facturation le jour même, élimination des erreurs de saisie, et réduction de 90% des litiges sur quantités."
+      }
+    },
+
+    "mine-quality": {
+      "name": "Contrôle Qualité",
+      "tagline": "Granulométrie parfaite",
+      "description_short": "Suivi des caractéristiques produits et conformité aux normes.",
+      "description_full": "Le module Contrôle Qualité assure la conformité de vos produits aux spécifications. Analyses granulométriques, tests de résistance, contrôle des fines. Suivi par lot et par zone d'extraction. Alertes en cas de dérive qualité. Certificats de conformité automatiques. Traçabilité du produit de l'extraction jusqu'au client. Vos clients reçoivent des produits conformes et documentés.",
+      "transformation_story": {
+        "intro": "La qualité de vos produits est mesurée et documentée. Chaque lot est traçable, chaque livraison est certifiable.",
+        "deep_narrative": "Le Contrôle Qualité transforme votre assurance qualité. Les analyses sont systématisées. Les dérives sont détectées rapidement. Les lots non conformes sont isolés. Les certificats sont générés automatiquement. La confiance client est renforcée par la documentation.",
+        "business_impact": "L'impact sur la qualité livrée est majeur : réduction de 80% des réclamations qualité, conformité aux normes prouvable, et positionnement premium possible."
+      }
+    },
+
+    "mine-environment": {
+      "name": "Environnement",
+      "tagline": "Exploiter responsable",
+      "description_short": "Suivi environnemental, réhabilitation et conformité réglementaire.",
+      "description_full": "Le module Environnement gère tous les aspects environnementaux de l'exploitation. Suivi des émissions de poussières, du bruit, des rejets. Gestion des plans de réhabilitation et de leur avancement. Conformité aux arrêtés préfectoraux et aux ICPE. Reporting réglementaire automatisé. Relations avec les riverains documentées. L'exploitation responsable est prouvée par les données.",
+      "transformation_story": {
+        "intro": "Votre impact environnemental est mesuré et maîtrisé. La conformité réglementaire est documentée. La réhabilitation est planifiée.",
+        "deep_narrative": "Le module Environnement transforme votre relation à la réglementation. Le suivi est continu, pas ponctuel. Les alertes préviennent les dépassements. Les plans de réhabilitation avancent. Les inspections sont préparées. L'acceptabilité sociale s'améliore.",
+        "business_impact": "L'impact sur la licence d'exploitation est critique : conformité continue aux exigences ICPE, relations apaisées avec les autorités et riverains, et pérennité de l'exploitation assurée."
+      }
+    },
+
+    "mine-explosives": {
+      "name": "Gestion Explosifs",
+      "tagline": "Traçabilité réglementaire",
+      "description_short": "Stock, consommation et traçabilité des explosifs conformes à la réglementation.",
+      "description_full": "Le module Gestion Explosifs assure la traçabilité complète des matières explosives. Réception et stock sécurisé, sorties attribuées aux tirs, consommation tracée au gramme près, registres réglementaires automatiques. Les mouvements sont horodatés et signés. Les inventaires sont facilités. La conformité aux exigences réglementaires strictes est assurée sans paperasse supplémentaire.",
+      "transformation_story": {
+        "intro": "Vos explosifs sont tracés du fournisseur au tir. Chaque gramme est comptabilisé. Les registres sont toujours à jour.",
+        "deep_narrative": "La Gestion Explosifs transforme la conformité réglementaire. Les mouvements sont tracés automatiquement. Les registres se remplissent seuls. Les inventaires sont rapides et précis. Les contrôles sont sereins. La responsabilité est documentée.",
+        "business_impact": "L'impact sur la conformité est total : respect des obligations légales sans effort supplémentaire, traçabilité parfaite en cas d'incident, et audits réglementaires maîtrisés."
+      }
+    },
+
+    "mine-production": {
+      "name": "Suivi Production",
+      "tagline": "Tonnages en temps réel",
+      "description_short": "Mesure de la production par produit, par zone, par équipe.",
+      "description_full": "Le module Suivi Production mesure en temps réel les volumes extraits et transformés. Production par produit fini, par ligne de traitement, par équipe. Rendements calculés automatiquement. Comparaison prévu/réalisé. Analyse des pertes et rebuts. Les responsables pilotent avec des données fraîches. Les dérives sont détectées immédiatement. L'amélioration continue est alimentée par les faits.",
+      "transformation_story": {
+        "intro": "Votre production est mesurée en temps réel. Les rendements sont connus. Les écarts sont visibles immédiatement.",
+        "deep_narrative": "Le Suivi Production transforme le pilotage industriel. La production n'est plus estimée mais mesurée. Les rendements par équipe sont comparables. Les pertes sont identifiées et réduites. Les objectifs sont suivis en temps réel. La performance s'améliore par la mesure.",
+        "business_impact": "L'impact sur la productivité est direct : augmentation de 15% du rendement grâce à l'identification des pertes, pilotage temps réel des équipes, et atteinte des objectifs de production."
+      }
+    },
+
+    "mine-maintenance": {
+      "name": "Maintenance Engins",
+      "tagline": "Machines toujours prêtes",
+      "description_short": "Maintenance préventive et curative des engins et installations.",
+      "description_full": "Le module Maintenance Engins maximise la disponibilité de vos équipements lourds. Planification des maintenances préventives basées sur les heures ou kilomètres. Gestion des interventions curatives. Stock de pièces détachées. Historique complet par engin. Analyse des pannes récurrentes. Vos chargeuses, dumpers, concasseurs sont maintenus optimalement pour minimiser les arrêts non planifiés.",
+      "transformation_story": {
+        "intro": "Vos engins sont maintenus proactivement. Les pannes sont anticipées. La disponibilité est maximale.",
+        "deep_narrative": "La Maintenance Engins transforme la fiabilité de votre parc. Les maintenances préventives sont planifiées intelligemment. Les pannes récurrentes sont éliminées. Le stock de pièces est optimisé. Les coûts de maintenance sont maîtrisés. La disponibilité des engins augmente significativement.",
+        "business_impact": "L'impact sur la disponibilité est majeur : augmentation de 20% de la disponibilité des engins, réduction de 30% des coûts de maintenance, et élimination des arrêts de production pour panne."
+      }
+    }
+  }
+}

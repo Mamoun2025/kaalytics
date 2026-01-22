@@ -1,0 +1,337 @@
+<!--
+KAALYTICS - Spotlight Effect
+=============================
+Effet projecteur qui suit la souris
+-->
+
+<div class="spotlight-demo">
+    <div class="spotlight" id="spotlight"></div>
+
+    <div class="spotlight-content">
+        <h2>Spotlight Effect</h2>
+        <p>Deplacez votre souris pour reveler le contenu cache</p>
+
+        <div class="spotlight-cards">
+            <div class="spotlight-card">
+                <div class="spotlight-card__icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                </div>
+                <h3>Temps Reel</h3>
+                <p>Donnees actualisees en permanence</p>
+            </div>
+
+            <div class="spotlight-card">
+                <div class="spotlight-card__icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </div>
+                <h3>Securise</h3>
+                <p>Protection de niveau entreprise</p>
+            </div>
+
+            <div class="spotlight-card">
+                <div class="spotlight-card__icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                </div>
+                <h3>Rapide</h3>
+                <p>Performance optimisee</p>
+            </div>
+        </div>
+
+        <div class="spotlight-cta">
+            <button class="spotlight-btn">Decouvrir FleetOps</button>
+        </div>
+    </div>
+
+    <!-- Hidden elements revealed by spotlight -->
+    <div class="spotlight-hidden" id="hiddenElements">
+        <div class="hidden-particle" style="--x: 10%; --y: 20%; --delay: 0s;"></div>
+        <div class="hidden-particle" style="--x: 80%; --y: 15%; --delay: 0.5s;"></div>
+        <div class="hidden-particle" style="--x: 25%; --y: 70%; --delay: 1s;"></div>
+        <div class="hidden-particle" style="--x: 70%; --y: 60%; --delay: 1.5s;"></div>
+        <div class="hidden-particle" style="--x: 50%; --y: 40%; --delay: 2s;"></div>
+        <div class="hidden-particle" style="--x: 90%; --y: 80%; --delay: 0.3s;"></div>
+        <div class="hidden-particle" style="--x: 5%; --y: 50%; --delay: 0.8s;"></div>
+    </div>
+</div>
+
+<style>
+:root {
+    --emerald: #10b981;
+    --emerald-dim: #047857;
+    --teal: #0d9488;
+    --bg-void: #040a08;
+    --bg-card: #0d1f1a;
+    --text-primary: #f0fdf4;
+    --text-muted: #86efac;
+    --border: rgba(16, 185, 129, 0.2);
+}
+
+.spotlight-demo {
+    position: relative;
+    min-height: 100vh;
+    background: var(--bg-void);
+    font-family: system-ui, -apple-system, sans-serif;
+    overflow: hidden;
+}
+
+/* Spotlight circle */
+.spotlight {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    pointer-events: none;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+}
+
+.spotlight::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle,
+        rgba(16, 185, 129, 0.15) 0%,
+        rgba(16, 185, 129, 0.05) 40%,
+        transparent 70%
+    );
+    border-radius: 50%;
+}
+
+.spotlight::after {
+    content: '';
+    position: absolute;
+    inset: 50px;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 50%;
+    animation: spotlightPulse 2s ease-in-out infinite;
+}
+
+@keyframes spotlightPulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 0.3; }
+}
+
+/* Content */
+.spotlight-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.spotlight-content h2 {
+    color: var(--text-primary);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.spotlight-content > p {
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Cards */
+.spotlight-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 900px;
+    margin-bottom: 3rem;
+}
+
+.spotlight-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.spotlight-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(16, 185, 129, 0.1) 0%,
+        transparent 50%
+    );
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.spotlight-card:hover::before {
+    opacity: 1;
+}
+
+.spotlight-card:hover {
+    border-color: var(--emerald);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(16, 185, 129, 0.3);
+}
+
+.spotlight-card__icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--emerald-dim) 0%, var(--emerald) 100%);
+    border-radius: 12px;
+    margin: 0 auto 1rem;
+    color: white;
+}
+
+.spotlight-card h3 {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.spotlight-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* CTA */
+.spotlight-cta {
+    position: relative;
+}
+
+.spotlight-btn {
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, var(--emerald-dim) 0%, var(--emerald) 100%);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.spotlight-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--emerald) 0%, var(--teal) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.spotlight-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px -10px rgba(16, 185, 129, 0.5);
+}
+
+.spotlight-btn:hover::before {
+    opacity: 1;
+}
+
+.spotlight-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hidden particles revealed by spotlight */
+.spotlight-hidden {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.hidden-particle {
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: 8px;
+    height: 8px;
+    background: var(--emerald);
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0);
+    animation: particleFloat 4s ease-in-out infinite;
+    animation-delay: var(--delay);
+}
+
+.spotlight-demo:hover .hidden-particle {
+    opacity: 0.6;
+    transform: scale(1);
+    transition: all 0.5s ease;
+}
+
+@keyframes particleFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-20px) scale(1.2); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .spotlight-cards {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .spotlight-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .spotlight {
+        width: 250px;
+        height: 250px;
+    }
+}
+</style>
+
+<script>
+(function() {
+    const spotlight = document.getElementById('spotlight');
+    const cards = document.querySelectorAll('.spotlight-card');
+
+    document.addEventListener('mousemove', (e) => {
+        spotlight.style.left = e.clientX + 'px';
+        spotlight.style.top = e.clientY + 'px';
+    });
+
+    // Card spotlight effect
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+            card.style.setProperty('--mouse-x', x + '%');
+            card.style.setProperty('--mouse-y', y + '%');
+        });
+    });
+
+    // Hide spotlight when mouse leaves
+    document.addEventListener('mouseleave', () => {
+        spotlight.style.opacity = '0';
+    });
+
+    document.addEventListener('mouseenter', () => {
+        spotlight.style.opacity = '1';
+    });
+})();
+</script>

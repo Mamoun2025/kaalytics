@@ -1,0 +1,408 @@
+/**
+ * Kaalytics Visual Effects
+ * Advanced backgrounds, gradients, and visual enhancements
+ */
+
+/* ========================================
+   ANIMATED BACKGROUNDS
+   ======================================== */
+
+/* Gradient mesh background */
+.bg-gradient-mesh {
+    background:
+        radial-gradient(ellipse 80% 50% at 20% 30%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse 60% 40% at 80% 70%, rgba(13, 148, 136, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse 40% 60% at 50% 50%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+        var(--bg-void);
+}
+
+/* Animated gradient background */
+.bg-gradient-animated {
+    background: linear-gradient(-45deg,
+        var(--bg-void),
+        rgba(16, 185, 129, 0.1),
+        var(--bg-void),
+        rgba(139, 92, 246, 0.1)
+    );
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Grid pattern background */
+.bg-grid {
+    background-image:
+        linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+.bg-grid--animated {
+    animation: grid-pulse 8s ease-in-out infinite;
+}
+
+@keyframes grid-pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* Dot pattern */
+.bg-dots {
+    background-image: radial-gradient(rgba(16, 185, 129, 0.15) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Noise texture overlay */
+.bg-noise::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+/* ========================================
+   GLOW EFFECTS
+   ======================================== */
+
+/* Emerald glow */
+.glow-emerald {
+    box-shadow:
+        0 0 20px rgba(16, 185, 129, 0.3),
+        0 0 40px rgba(16, 185, 129, 0.2),
+        0 0 60px rgba(16, 185, 129, 0.1);
+}
+
+.glow-emerald--pulse {
+    animation: glow-pulse-emerald 2s ease-in-out infinite;
+}
+
+@keyframes glow-pulse-emerald {
+    0%, 100% {
+        box-shadow:
+            0 0 20px rgba(16, 185, 129, 0.3),
+            0 0 40px rgba(16, 185, 129, 0.2);
+    }
+    50% {
+        box-shadow:
+            0 0 30px rgba(16, 185, 129, 0.4),
+            0 0 60px rgba(16, 185, 129, 0.3);
+    }
+}
+
+/* Orange glow */
+.glow-orange {
+    box-shadow:
+        0 0 20px rgba(249, 115, 22, 0.3),
+        0 0 40px rgba(249, 115, 22, 0.2);
+}
+
+/* Purple glow */
+.glow-purple {
+    box-shadow:
+        0 0 20px rgba(139, 92, 246, 0.3),
+        0 0 40px rgba(139, 92, 246, 0.2);
+}
+
+/* Multi-color glow */
+.glow-rainbow {
+    box-shadow:
+        0 0 20px rgba(16, 185, 129, 0.2),
+        0 0 40px rgba(139, 92, 246, 0.2),
+        0 0 60px rgba(249, 115, 22, 0.1);
+}
+
+/* ========================================
+   BLUR EFFECTS
+   ======================================== */
+
+/* Glass morphism */
+.glass {
+    background: rgba(30, 30, 30, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass--light {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.glass--dark {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Blur overlay */
+.blur-overlay {
+    position: relative;
+}
+
+.blur-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    pointer-events: none;
+}
+
+/* ========================================
+   ORB DECORATIONS
+   ======================================== */
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+}
+
+.orb--emerald {
+    background: rgba(16, 185, 129, 0.3);
+}
+
+.orb--purple {
+    background: rgba(139, 92, 246, 0.3);
+}
+
+.orb--orange {
+    background: rgba(249, 115, 22, 0.3);
+}
+
+.orb--blue {
+    background: rgba(59, 130, 246, 0.3);
+}
+
+/* Animated orb */
+.orb--animated {
+    animation: orb-float 10s ease-in-out infinite;
+}
+
+@keyframes orb-float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -30px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+/* ========================================
+   GRADIENT TEXT
+   ======================================== */
+
+.gradient-text {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-text--orange {
+    background: linear-gradient(135deg, var(--orange) 0%, #fbbf24 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-text--purple {
+    background: linear-gradient(135deg, var(--purple) 0%, var(--blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-text--rainbow {
+    background: linear-gradient(
+        90deg,
+        var(--emerald) 0%,
+        var(--teal) 20%,
+        var(--blue) 40%,
+        var(--purple) 60%,
+        var(--pink) 80%,
+        var(--orange) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-text-shift 3s linear infinite;
+}
+
+@keyframes gradient-text-shift {
+    to { background-position: 200% center; }
+}
+
+/* ========================================
+   BORDER GRADIENTS
+   ======================================== */
+
+.border-gradient {
+    position: relative;
+    background: var(--bg-card);
+    border: none;
+}
+
+.border-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--gradient-brand);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.border-gradient--orange::before {
+    background: var(--gradient-orange);
+}
+
+.border-gradient--purple::before {
+    background: linear-gradient(135deg, var(--purple) 0%, var(--blue) 100%);
+}
+
+/* Animated border gradient */
+.border-gradient--animated::before {
+    background: linear-gradient(
+        90deg,
+        var(--emerald),
+        var(--teal),
+        var(--blue),
+        var(--purple),
+        var(--emerald)
+    );
+    background-size: 300% 100%;
+    animation: border-flow 4s linear infinite;
+}
+
+@keyframes border-flow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 300% 50%; }
+}
+
+/* ========================================
+   PARTICLE EFFECTS (CSS only)
+   ======================================== */
+
+.particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--emerald);
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: particle-float 15s linear infinite;
+}
+
+.particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 12s; }
+.particle:nth-child(2) { left: 20%; animation-delay: 2s; animation-duration: 14s; }
+.particle:nth-child(3) { left: 30%; animation-delay: 4s; animation-duration: 16s; }
+.particle:nth-child(4) { left: 40%; animation-delay: 1s; animation-duration: 13s; }
+.particle:nth-child(5) { left: 50%; animation-delay: 3s; animation-duration: 15s; }
+.particle:nth-child(6) { left: 60%; animation-delay: 5s; animation-duration: 11s; }
+.particle:nth-child(7) { left: 70%; animation-delay: 2s; animation-duration: 17s; }
+.particle:nth-child(8) { left: 80%; animation-delay: 4s; animation-duration: 14s; }
+.particle:nth-child(9) { left: 90%; animation-delay: 1s; animation-duration: 12s; }
+
+@keyframes particle-float {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.5;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1);
+        opacity: 0;
+    }
+}
+
+/* ========================================
+   SHINE EFFECTS
+   ======================================== */
+
+.shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.shine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 40%,
+        rgba(255, 255, 255, 0.05) 50%,
+        transparent 60%
+    );
+    animation: shine-sweep 3s ease-in-out infinite;
+}
+
+@keyframes shine-sweep {
+    0% { transform: translateX(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) rotate(45deg); }
+}
+
+/* ========================================
+   SHADOW EFFECTS
+   ======================================== */
+
+.shadow-soft {
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.3);
+}
+
+.shadow-medium {
+    box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.4);
+}
+
+.shadow-hard {
+    box-shadow: 0 25px 80px -20px rgba(0, 0, 0, 0.5);
+}
+
+.shadow-colored-emerald {
+    box-shadow: 0 20px 60px -15px rgba(16, 185, 129, 0.4);
+}
+
+.shadow-colored-orange {
+    box-shadow: 0 20px 60px -15px rgba(249, 115, 22, 0.4);
+}
+
+.shadow-colored-purple {
+    box-shadow: 0 20px 60px -15px rgba(139, 92, 246, 0.4);
+}
+
+/* ========================================
+   ACCESSIBILITY: Reduced Motion
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .bg-gradient-animated,
+    .bg-grid--animated,
+    .glow-emerald--pulse,
+    .orb--animated,
+    .gradient-text--rainbow,
+    .border-gradient--animated,
+    .particle,
+    .shine::after {
+        animation: none !important;
+    }
+}

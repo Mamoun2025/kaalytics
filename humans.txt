@@ -1,0 +1,36 @@
+/* TEAM */
+Company: Kaalytics
+Location: Casablanca, Morocco
+Contact: contact@kaalytics.com
+WhatsApp: +212 661 718 141
+Twitter: @kaalytics
+
+Founder & CEO: Mamoun Ben Moussa
+Role: AI Solutions Architect
+Contact: mbenmoussa@kaalytics.com
+
+/* THANKS */
+Claude AI - Anthropic (Development Partner)
+Odoo Community (ERP Integration)
+Our amazing clients: BEKS, TransMaroc, MineralCo
+
+/* SITE */
+Last update: 2026-01-22
+Language: French, English, Arabic
+Standards: HTML5, CSS3, ES6+
+Framework: Vanilla JS, GSAP
+Fonts: Inter (Google Fonts)
+Software: VSCode, Claude Code
+
+/* PRODUCTS */
+FleetOps Pro - AI Fleet Management
+Daedalia AI - LLM Copilot for Odoo
+
+/* MISSION */
+Transforming African industries with practical,
+results-driven AI solutions. Making enterprise
+AI accessible and affordable for businesses
+across Africa and beyond.
+
+/* MADE WITH */
+<3 in Casablanca, Morocco

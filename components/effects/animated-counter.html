@@ -1,0 +1,439 @@
+<!--
+KAALYTICS - Animated Counter Effect
+=====================================
+Compteurs animes au scroll avec plusieurs variantes
+-->
+
+<div class="counter-demo">
+    <h2>Animated Counters</h2>
+    <p>Les compteurs s'animent lorsqu'ils entrent dans la vue</p>
+
+    <!-- Stats row -->
+    <div class="counter-section">
+        <h3>Stats Principales</h3>
+        <div class="counter-grid">
+            <div class="counter-item">
+                <div class="counter-value" data-target="2500" data-suffix="+">0</div>
+                <div class="counter-label">Vehicules geres</div>
+            </div>
+            <div class="counter-item counter-item--accent">
+                <div class="counter-value" data-target="98" data-suffix="%">0</div>
+                <div class="counter-label">Taux de satisfaction</div>
+            </div>
+            <div class="counter-item">
+                <div class="counter-value" data-target="45" data-suffix="M" data-prefix="$">0</div>
+                <div class="counter-label">Economies generees</div>
+            </div>
+            <div class="counter-item counter-item--highlight">
+                <div class="counter-value" data-target="24" data-suffix="/7">0</div>
+                <div class="counter-label">Support disponible</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress counters -->
+    <div class="counter-section">
+        <h3>Progression Annuelle</h3>
+        <div class="progress-counters">
+            <div class="progress-counter">
+                <div class="progress-counter__header">
+                    <span class="progress-counter__label">Reduction des couts</span>
+                    <span class="progress-counter__value" data-target="35" data-suffix="%">0</span>
+                </div>
+                <div class="progress-counter__bar">
+                    <div class="progress-counter__fill" data-progress="35"></div>
+                </div>
+            </div>
+
+            <div class="progress-counter">
+                <div class="progress-counter__header">
+                    <span class="progress-counter__label">Efficacite operationnelle</span>
+                    <span class="progress-counter__value" data-target="72" data-suffix="%">0</span>
+                </div>
+                <div class="progress-counter__bar">
+                    <div class="progress-counter__fill" data-progress="72"></div>
+                </div>
+            </div>
+
+            <div class="progress-counter">
+                <div class="progress-counter__header">
+                    <span class="progress-counter__label">Temps de maintenance</span>
+                    <span class="progress-counter__value" data-target="50" data-suffix="%" data-prefix="-">0</span>
+                </div>
+                <div class="progress-counter__bar">
+                    <div class="progress-counter__fill" data-progress="50"></div>
+                </div>
+            </div>
+
+            <div class="progress-counter">
+                <div class="progress-counter__header">
+                    <span class="progress-counter__label">Adoption utilisateur</span>
+                    <span class="progress-counter__value" data-target="94" data-suffix="%">0</span>
+                </div>
+                <div class="progress-counter__bar">
+                    <div class="progress-counter__fill" data-progress="94"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Circle counters -->
+    <div class="counter-section">
+        <h3>Performance Globale</h3>
+        <div class="circle-counters">
+            <div class="circle-counter">
+                <svg viewBox="0 0 100 100">
+                    <circle class="circle-counter__bg" cx="50" cy="50" r="45"/>
+                    <circle class="circle-counter__progress" cx="50" cy="50" r="45" data-progress="87"/>
+                </svg>
+                <div class="circle-counter__content">
+                    <span class="circle-counter__value" data-target="87" data-suffix="%">0</span>
+                    <span class="circle-counter__label">Uptime</span>
+                </div>
+            </div>
+
+            <div class="circle-counter">
+                <svg viewBox="0 0 100 100">
+                    <circle class="circle-counter__bg" cx="50" cy="50" r="45"/>
+                    <circle class="circle-counter__progress circle-counter__progress--blue" cx="50" cy="50" r="45" data-progress="65"/>
+                </svg>
+                <div class="circle-counter__content">
+                    <span class="circle-counter__value" data-target="65" data-suffix="%">0</span>
+                    <span class="circle-counter__label">ROI</span>
+                </div>
+            </div>
+
+            <div class="circle-counter">
+                <svg viewBox="0 0 100 100">
+                    <circle class="circle-counter__bg" cx="50" cy="50" r="45"/>
+                    <circle class="circle-counter__progress circle-counter__progress--purple" cx="50" cy="50" r="45" data-progress="92"/>
+                </svg>
+                <div class="circle-counter__content">
+                    <span class="circle-counter__value" data-target="92" data-suffix="%">0</span>
+                    <span class="circle-counter__label">NPS</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+:root {
+    --emerald: #10b981;
+    --emerald-dim: #047857;
+    --teal: #0d9488;
+    --blue: #3b82f6;
+    --purple: #8b5cf6;
+    --bg-void: #040a08;
+    --bg-card: #0d1f1a;
+    --bg-tertiary: #1a312d;
+    --text-primary: #f0fdf4;
+    --text-muted: #86efac;
+    --border: rgba(16, 185, 129, 0.2);
+}
+
+.counter-demo {
+    min-height: 100vh;
+    background: var(--bg-void);
+    padding: 4rem 2rem;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.counter-demo > h2 {
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.counter-demo > p {
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.counter-section {
+    max-width: 1000px;
+    margin: 0 auto 4rem;
+}
+
+.counter-section h3 {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--emerald);
+}
+
+/* Stats grid */
+.counter-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.counter-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.counter-item:hover {
+    transform: translateY(-4px);
+    border-color: var(--emerald);
+    box-shadow: 0 20px 40px -15px rgba(16, 185, 129, 0.2);
+}
+
+.counter-item--accent {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, var(--bg-card) 100%);
+    border-color: var(--emerald);
+}
+
+.counter-item--highlight .counter-value {
+    background: linear-gradient(135deg, var(--purple) 0%, var(--blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.counter-value {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--emerald);
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    margin-bottom: 0.5rem;
+    transition: transform 0.2s;
+}
+
+.counter-value.counting {
+    animation: countPulse 0.3s ease;
+}
+
+@keyframes countPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.counter-label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Progress counters */
+.progress-counters {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.progress-counter {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.progress-counter__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.progress-counter__label {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.progress-counter__value {
+    color: var(--emerald);
+    font-weight: 700;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+.progress-counter__bar {
+    height: 8px;
+    background: var(--bg-tertiary);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-counter__fill {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, var(--emerald-dim) 0%, var(--emerald) 100%);
+    border-radius: 4px;
+    transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Circle counters */
+.circle-counters {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.circle-counter {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.circle-counter svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.circle-counter__bg {
+    fill: none;
+    stroke: var(--bg-tertiary);
+    stroke-width: 8;
+}
+
+.circle-counter__progress {
+    fill: none;
+    stroke: var(--emerald);
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.circle-counter__progress--blue {
+    stroke: var(--blue);
+}
+
+.circle-counter__progress--purple {
+    stroke: var(--purple);
+}
+
+.circle-counter__content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-counter__value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+.circle-counter__label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .counter-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .counter-value {
+        font-size: 2rem;
+    }
+
+    .circle-counters {
+        gap: 1.5rem;
+    }
+
+    .circle-counter {
+        width: 120px;
+        height: 120px;
+    }
+
+    .circle-counter__value {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .counter-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<script>
+(function() {
+    // Counter animation
+    function animateCounter(el) {
+        const target = parseInt(el.dataset.target);
+        const prefix = el.dataset.prefix || '';
+        const suffix = el.dataset.suffix || '';
+        const duration = 2000;
+        const startTime = performance.now();
+
+        el.classList.add('counting');
+
+        function update(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easeOut = 1 - Math.pow(1 - progress, 3);
+            const current = Math.floor(target * easeOut);
+
+            el.textContent = prefix + current.toLocaleString() + suffix;
+
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            } else {
+                el.textContent = prefix + target.toLocaleString() + suffix;
+                el.classList.remove('counting');
+            }
+        }
+
+        requestAnimationFrame(update);
+    }
+
+    // Progress bar animation
+    function animateProgress(el) {
+        const progress = parseInt(el.dataset.progress);
+        el.style.width = progress + '%';
+    }
+
+    // Circle progress animation
+    function animateCircle(el) {
+        const progress = parseInt(el.dataset.progress);
+        const circumference = 2 * Math.PI * 45; // r = 45
+        const offset = circumference - (progress / 100) * circumference;
+        el.style.strokeDashoffset = offset;
+    }
+
+    // Intersection Observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+
+                if (el.classList.contains('counter-value') || el.classList.contains('progress-counter__value') || el.classList.contains('circle-counter__value')) {
+                    animateCounter(el);
+                }
+
+                if (el.classList.contains('progress-counter__fill')) {
+                    setTimeout(() => animateProgress(el), 200);
+                }
+
+                if (el.classList.contains('circle-counter__progress')) {
+                    setTimeout(() => animateCircle(el), 200);
+                }
+
+                observer.unobserve(el);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    // Observe all animated elements
+    document.querySelectorAll('[data-target]').forEach(el => observer.observe(el));
+    document.querySelectorAll('[data-progress]').forEach(el => observer.observe(el));
+})();
+</script>

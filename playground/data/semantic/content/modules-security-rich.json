@@ -1,0 +1,105 @@
+{
+  "_meta": {
+    "version": "3.0",
+    "dimension": "security",
+    "description": "Contenu sémantique ULTRA-RICHE pour la dimension Sécurité & Conformité"
+  },
+
+  "modules": {
+    "sec-detect": {
+      "name": "Détection Menaces",
+      "tagline": "L'IA repère les menaces instantanément",
+      "description_short": "Surveillance continue et détection en temps réel des cybermenaces par intelligence artificielle.",
+      "description_full": "Le module Détection Menaces déploie une intelligence artificielle spécialisée qui surveille en permanence votre infrastructure et vos applications. Tentatives d'intrusion, comportements suspects, anomalies de trafic, malwares : chaque menace est détectée en temps réel grâce à des algorithmes entraînés sur des millions de patterns d'attaque. Le système apprend en continu et s'adapte aux nouvelles menaces. Vous êtes alerté instantanément quand quelque chose d'anormal se produit, avant que les dégâts ne soient faits.",
+      "transformation_story": {
+        "intro": "Une sentinelle IA veille sur votre système 24 heures sur 24. Les menaces sont détectées dès leur apparition, pas des jours ou des semaines après. Votre sécurité passe de réactive à proactive.",
+        "deep_narrative": "La Détection Menaces transforme votre posture de sécurité. Les attaques sont identifiées en minutes, pas en jours. Les faux positifs sont réduits grâce à l'IA qui comprend votre contexte. Les nouvelles menaces sont détectées car le système apprend en continu. Votre équipe sécurité se concentre sur la réponse, pas sur le monitoring.",
+        "business_impact": "L'impact sur la sécurité est majeur : réduction de 90% du temps de détection des incidents, couverture 24/7 sans équipe de nuit, et protection contre les menaces émergentes grâce à l'apprentissage continu."
+      }
+    },
+
+    "sec-response": {
+      "name": "Réponse Auto",
+      "tagline": "Plus rapide qu'un humain",
+      "description_short": "Réaction automatique aux menaces détectées selon des playbooks prédéfinis.",
+      "description_full": "Le module Réponse Auto transforme la détection en action immédiate. Quand une menace est identifiée, des playbooks de réponse automatisée s'exécutent en quelques secondes. Isolation de la machine compromise, blocage de l'adresse IP malveillante, révocation des sessions suspectes, notification des équipes : les actions de confinement se déclenchent automatiquement, sans attendre qu'un humain analyse et réagisse. Le temps de réponse passe de minutes ou heures à quelques secondes.",
+      "transformation_story": {
+        "intro": "Votre système se défend automatiquement. Les menaces détectées sont confinées immédiatement, avant qu'un analyste n'ait eu le temps de prendre son café. La fenêtre d'exposition est réduite au minimum.",
+        "deep_narrative": "La Réponse Auto change la dynamique des incidents de sécurité. Les attaques sont contenues avant de se propager. Les dégâts sont limités par l'isolation rapide. Les équipes arrivent sur un incident déjà sous contrôle. La pression du temps de réaction disparaît.",
+        "business_impact": "L'impact sur la résilience est significatif : réduction de 95% du temps de confinement, limitation des dégâts grâce à l'intervention immédiate, et libération des équipes pour l'analyse plutôt que la réaction d'urgence."
+      }
+    },
+
+    "sec-compliance": {
+      "name": "Conformité",
+      "tagline": "Les auditeurs vont sourire",
+      "description_short": "Gestion et preuve de conformité aux réglementations et standards de sécurité.",
+      "description_full": "Le module Conformité automatise la gestion et la démonstration de votre conformité aux réglementations (RGPD, PCI-DSS, ISO 27001, SOC 2, etc.). Un référentiel centralise toutes les exigences applicables. Des contrôles automatisés vérifient en continu votre niveau de conformité. Les gaps sont identifiés et les plans de remédiation sont suivis. Les preuves de conformité sont collectées automatiquement. Lors des audits, tout est prêt, organisé et documenté.",
+      "transformation_story": {
+        "intro": "La conformité n'est plus une corvée annuelle mais un état permanent vérifié en continu. Les audits deviennent des formalités car tout est documenté et prouvable. Vous dormez sur vos deux oreilles.",
+        "deep_narrative": "La gestion de la Conformité transforme votre relation aux régulateurs. Les gaps sont identifiés et traités en continu. Les preuves sont collectées automatiquement. La préparation d'audit ne mobilise plus des semaines. La conformité devient un avantage compétitif affichable.",
+        "business_impact": "L'impact sur les coûts de conformité est majeur : réduction de 70% du temps de préparation d'audit, visibilité continue sur le niveau de conformité, et capacité à répondre rapidement aux nouvelles exigences réglementaires."
+      }
+    },
+
+    "sec-audit": {
+      "name": "Piste d'Audit",
+      "tagline": "Qui a fait quoi, quand, où",
+      "description_short": "Journal complet et inaltérable de toutes les activités du système.",
+      "description_full": "Le module Piste d'Audit enregistre chaque action significative de votre système dans un journal inaltérable. Connexions utilisateurs, modifications de données, accès aux ressources sensibles, changements de configuration : tout est tracé avec horodatage précis et contexte complet. Les logs sont protégés contre la falsification. Les recherches sont rapides et flexibles. En cas d'incident ou d'investigation, vous pouvez reconstituer exactement ce qui s'est passé.",
+      "transformation_story": {
+        "intro": "Rien n'échappe à votre journal d'audit. Chaque action est enregistrée, chaque accès est tracé. La transparence est totale et la reconstitution des événements est toujours possible.",
+        "deep_narrative": "La Piste d'Audit transforme vos capacités d'investigation. Les incidents sont analysables en détail. Les comportements suspects sont identifiables rétroactivement. La dissuasion fonctionne car chacun sait que ses actions sont tracées. Les litiges sont tranchés par les faits.",
+        "business_impact": "L'impact sur la traçabilité est complet : capacité de reconstitution parfaite des événements, conformité aux exigences d'audit légales et réglementaires, et effet dissuasif sur les comportements inappropriés."
+      }
+    },
+
+    "sec-access": {
+      "name": "Contrôle d'Accès",
+      "tagline": "Chaque permission justifiée",
+      "description_short": "Gestion fine des droits d'accès basée sur les rôles et le principe du moindre privilège.",
+      "description_full": "Le module Contrôle d'Accès implémente une gestion rigoureuse des permissions basée sur le principe du moindre privilège. Chaque utilisateur dispose exactement des droits nécessaires à sa fonction, pas plus. Les rôles sont définis et les permissions sont héritées. Les accès sensibles nécessitent des validations. Les droits sont révisés périodiquement. L'identité est vérifiée par authentification multi-facteurs. Personne n'accède à ce qu'il ne devrait pas voir.",
+      "transformation_story": {
+        "intro": "Vos permissions sont enfin sous contrôle. Chaque accès est justifié par un besoin métier. Les droits excessifs sont éliminés. La surface d'attaque interne est minimisée.",
+        "deep_narrative": "Le Contrôle d'Accès transforme votre gestion des identités. Les comptes orphelins disparaissent. Les cumuls de droits sont détectés. L'onboarding et l'offboarding sont automatisés. La segmentation des accès limite les impacts en cas de compromission. La sécurité par le moindre privilège devient réalité.",
+        "business_impact": "L'impact sur la sécurité interne est significatif : réduction de 80% des comptes avec privilèges excessifs, automatisation de la gestion des accès, et conformité avec les exigences de séparation des responsabilités."
+      }
+    },
+
+    "sec-encrypt": {
+      "name": "Chiffrement",
+      "tagline": "Protection de bout en bout",
+      "description_short": "Chiffrement des données au repos et en transit avec gestion centralisée des clés.",
+      "description_full": "Le module Chiffrement protège vos données sensibles par des algorithmes de chiffrement robustes. Les données sont chiffrées au repos dans les bases de données et les fichiers. Les communications sont chiffrées en transit par TLS. Les clés de chiffrement sont gérées centralement avec rotation automatique. Le chiffrement est transparent pour les utilisateurs autorisés et impénétrable pour les autres. Même en cas de vol de données, elles restent inutilisables.",
+      "transformation_story": {
+        "intro": "Vos données sensibles sont protégées par le chiffrement. Même si quelqu'un accède aux fichiers ou aux bases, il ne peut rien en faire sans les clés. La confidentialité est garantie techniquement.",
+        "deep_narrative": "Le Chiffrement transforme la protection de vos données. Le vol de données devient inutile car les données sont illisibles. Les communications sont protégées des interceptions. La gestion des clés est professionnelle et sécurisée. La conformité aux exigences de protection des données est assurée.",
+        "business_impact": "L'impact sur la confidentialité est total : protection contre l'exploitation des données volées, conformité aux exigences réglementaires de chiffrement, et confiance renforcée des clients sur la protection de leurs données."
+      }
+    },
+
+    "sec-backup": {
+      "name": "Sauvegarde Auto",
+      "tagline": "Vos données, toujours récupérables",
+      "description_short": "Sauvegardes automatiques, chiffrées et testées régulièrement.",
+      "description_full": "Le module Sauvegarde Auto protège vos données contre la perte et permet la restauration rapide en cas de sinistre. Les sauvegardes sont automatiques et fréquentes selon vos besoins de RPO. Les données sont chiffrées et stockées sur des sites distants. Les restaurations sont testées régulièrement pour garantir leur fonctionnement. En cas de ransomware, de panne matérielle ou d'erreur humaine, vous pouvez restaurer vos données rapidement et avec confiance.",
+      "transformation_story": {
+        "intro": "Vos données sont sauvegardées automatiquement et de façon sécurisée. En cas de sinistre, vous pouvez restaurer votre système rapidement. La perte de données n'est plus une menace existentielle.",
+        "deep_narrative": "La Sauvegarde Auto transforme votre résilience. Les ransomwares perdent leur pouvoir car vous pouvez restaurer. Les pannes matérielles sont gérées sereinement. Les erreurs humaines sont rattrapables. Les tests réguliers garantissent que la restauration fonctionnera le jour J.",
+        "business_impact": "L'impact sur la continuité d'activité est majeur : capacité de restauration en heures au lieu de jours, protection contre les ransomwares, et confiance dans la récupération testée régulièrement."
+      }
+    },
+
+    "sec-pentest": {
+      "name": "Scan Vulnérabilités",
+      "tagline": "Trouvez les failles avant les hackers",
+      "description_short": "Scans automatiques et tests de pénétration pour identifier les vulnérabilités.",
+      "description_full": "Le module Scan Vulnérabilités identifie proactivement les failles de sécurité de votre système. Des scans automatiques analysent régulièrement vos applications et infrastructures pour détecter les vulnérabilités connues. Des tests de pénétration simulent des attaques réelles pour identifier les faiblesses exploitables. Les résultats sont priorisés par risque et assortis de recommandations de remédiation. Vous corrigez les failles avant qu'un attaquant ne les exploite.",
+      "transformation_story": {
+        "intro": "Vous connaissez vos vulnérabilités avant les attaquants. Les scans réguliers révèlent les failles. Les tests de pénétration valident votre posture. La sécurité proactive remplace l'attente passive.",
+        "deep_narrative": "Les Scans Vulnérabilités transforment votre approche de la sécurité. Les failles sont identifiées et corrigées en continu. Les nouvelles vulnérabilités sont détectées rapidement. La priorisation permet de traiter les risques les plus critiques en premier. Le niveau de sécurité s'améliore continuellement.",
+        "business_impact": "L'impact sur la posture de sécurité est significatif : réduction de 85% des vulnérabilités critiques exposées, temps de correction réduit grâce à la priorisation, et amélioration continue du niveau de sécurité."
+      }
+    }
+  }
+}

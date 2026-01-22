@@ -1,0 +1,114 @@
+/* ============================================
+   DIMENSIONS CONNECTIONS
+   SVG Connection Lines & Animations
+   ============================================ */
+
+.connections-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 150; /* Above modules (z-index: 10-100) to receive click events */
+    overflow: visible;
+    pointer-events: none;
+    /* GPU acceleration */
+    will-change: contents;
+    contain: layout style;
+    transform: translateZ(0);
+}
+
+/* === CONNECTION GROUP === */
+.connection-group {
+    transition: opacity 0.2s ease;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+/* === HIT AREA (invisible, for clicks) === */
+.connection-hit-area {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.001); /* Nearly invisible but renders */
+    stroke-width: 30;
+    stroke-linecap: round;
+    pointer-events: stroke;
+    cursor: pointer;
+}
+
+/* === VISIBLE PATH (main yellow line) === */
+.connection-path-visible {
+    fill: none;
+    stroke: var(--brand-yellow);
+    stroke-width: 3;
+    stroke-linecap: round;
+    pointer-events: none;
+    transition: opacity 0.2s ease, filter 0.2s ease;
+    animation: connection-pulse 3s ease-in-out infinite;
+}
+
+@keyframes connection-pulse {
+    0%, 100% { filter: drop-shadow(0 0 6px var(--brand-yellow-glow)); }
+    50% { filter: drop-shadow(0 0 10px var(--brand-yellow)); }
+}
+
+/* === FLOW ANIMATION === */
+.connection-flow {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.8);
+    stroke-width: 2;
+    stroke-dasharray: 6 14;
+    stroke-linecap: round;
+    animation: flow-animation 1s linear infinite;
+    pointer-events: none;
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+    transition: opacity 0.2s ease;
+}
+
+@keyframes flow-animation {
+    from { stroke-dashoffset: 0; }
+    to { stroke-dashoffset: -20; }
+}
+
+/* === REDUCED MOTION SUPPORT === */
+@media (prefers-reduced-motion: reduce) {
+    .connection-path-visible {
+        animation: none;
+    }
+
+    .connection-flow {
+        animation: none;
+        opacity: 0.5;
+    }
+}
+
+/* === HOVER STATE (dimmed) === */
+.connection-group.hover {
+    opacity: 0.4;
+}
+
+.connection-group.hover .connection-path-visible {
+    animation: none;
+    filter: none;
+}
+
+.connection-group.hover .connection-flow {
+    opacity: 0.3;
+}
+
+/* === TEMP CONNECTION (during drag) === */
+.temp-connection {
+    fill: none;
+    stroke: rgba(237, 169, 6, 0.5);
+    stroke-width: 3;
+    stroke-dasharray: 10 8;
+    stroke-linecap: round;
+    pointer-events: none;
+    transition: stroke 0.15s ease, stroke-width 0.15s ease;
+}
+
+.temp-connection.snapped {
+    stroke: var(--brand-yellow);
+    stroke-width: 4;
+    stroke-dasharray: none;
+    filter: drop-shadow(0 0 8px var(--brand-yellow));
+}

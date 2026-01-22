@@ -1,0 +1,285 @@
+<!--
+KAALYTICS - Typewriter Effect
+==============================
+Effet machine a ecrire moderne avec curseur
+Source: css-tricks.com/typewriter-effect
+-->
+
+<div class="typewriter-demo">
+    <div class="typewriter-container">
+        <div class="typewriter-terminal">
+            <div class="typewriter-terminal__header">
+                <span class="typewriter-dot typewriter-dot--red"></span>
+                <span class="typewriter-dot typewriter-dot--yellow"></span>
+                <span class="typewriter-dot typewriter-dot--green"></span>
+                <span class="typewriter-terminal__title">terminal</span>
+            </div>
+            <div class="typewriter-terminal__body">
+                <div class="typewriter-line">
+                    <span class="typewriter-prompt">$</span>
+                    <span class="typewriter-command" id="command1"></span>
+                </div>
+                <div class="typewriter-line typewriter-line--output" id="output1"></div>
+                <div class="typewriter-line">
+                    <span class="typewriter-prompt">$</span>
+                    <span class="typewriter-command" id="command2"></span>
+                </div>
+                <div class="typewriter-line typewriter-line--output" id="output2"></div>
+                <div class="typewriter-line typewriter-line--active">
+                    <span class="typewriter-prompt">$</span>
+                    <span class="typewriter-command" id="command3"></span>
+                    <span class="typewriter-cursor"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="typewriter-hero">
+            <h1>
+                <span class="typewriter-static">Nous creons des </span>
+                <span class="typewriter-dynamic" id="dynamicText"></span>
+                <span class="typewriter-cursor typewriter-cursor--hero"></span>
+            </h1>
+        </div>
+    </div>
+</div>
+
+<style>
+:root {
+    --emerald: #10b981;
+    --emerald-dim: rgba(16, 185, 129, 0.2);
+    --teal: #0d9488;
+    --bg-void: #030a08;
+    --bg-terminal: #0d1117;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.typewriter-demo {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg-void);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.typewriter-container {
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Terminal Style */
+.typewriter-terminal {
+    background: var(--bg-terminal);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    margin-bottom: 3rem;
+}
+
+.typewriter-terminal__header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.typewriter-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.typewriter-dot--red { background: #ff5f56; }
+.typewriter-dot--yellow { background: #ffbd2e; }
+.typewriter-dot--green { background: #27ca40; }
+
+.typewriter-terminal__title {
+    flex: 1;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.875rem;
+}
+
+.typewriter-terminal__body {
+    padding: 1.5rem;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.typewriter-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.typewriter-line--output {
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 1.5rem;
+    font-size: 0.85rem;
+}
+
+.typewriter-line--active {
+    margin-bottom: 0;
+}
+
+.typewriter-prompt {
+    color: var(--emerald);
+    margin-right: 0.75rem;
+    font-weight: 600;
+}
+
+.typewriter-command {
+    color: white;
+}
+
+.typewriter-cursor {
+    display: inline-block;
+    width: 10px;
+    height: 1.2em;
+    background: var(--emerald);
+    margin-left: 2px;
+    animation: cursorBlink 1s step-end infinite;
+}
+
+@keyframes cursorBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Hero Typewriter */
+.typewriter-hero {
+    text-align: center;
+}
+
+.typewriter-hero h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 600;
+    color: white;
+}
+
+.typewriter-static {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.typewriter-dynamic {
+    color: var(--emerald);
+    font-weight: 700;
+}
+
+.typewriter-cursor--hero {
+    height: 1em;
+    vertical-align: text-bottom;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .typewriter-terminal__body {
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+}
+</style>
+
+<script>
+(function() {
+    // Configuration
+    const terminalCommands = [
+        { cmd: 'kaalytics init --project=fleet', output: 'Initializing FleetOps Pro...', delay: 100 },
+        { cmd: 'kaalytics analyze --vehicles=50', output: 'Analysis complete: 32% savings potential detected', delay: 80 },
+        { cmd: 'kaalytics deploy --env=production', output: '', delay: 60 }
+    ];
+
+    const heroWords = ['solutions innovantes', 'experiences uniques', 'systemes intelligents', 'flottes optimisees'];
+
+    // Fonction typewriter
+    function typeWriter(element, text, speed = 50, callback) {
+        let i = 0;
+        element.textContent = '';
+
+        function type() {
+            if (i < text.length) {
+                element.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, speed);
+            } else if (callback) {
+                setTimeout(callback, 500);
+            }
+        }
+        type();
+    }
+
+    // Fonction effacer
+    function eraseText(element, speed = 30, callback) {
+        let text = element.textContent;
+
+        function erase() {
+            if (text.length > 0) {
+                text = text.slice(0, -1);
+                element.textContent = text;
+                setTimeout(erase, speed);
+            } else if (callback) {
+                setTimeout(callback, 300);
+            }
+        }
+        erase();
+    }
+
+    // Animation terminal
+    function animateTerminal() {
+        const cmd1 = document.getElementById('command1');
+        const out1 = document.getElementById('output1');
+        const cmd2 = document.getElementById('command2');
+        const out2 = document.getElementById('output2');
+        const cmd3 = document.getElementById('command3');
+
+        // Sequence
+        typeWriter(cmd1, terminalCommands[0].cmd, terminalCommands[0].delay, () => {
+            out1.textContent = terminalCommands[0].output;
+            out1.style.color = '#27ca40';
+
+            setTimeout(() => {
+                typeWriter(cmd2, terminalCommands[1].cmd, terminalCommands[1].delay, () => {
+                    out2.textContent = terminalCommands[1].output;
+                    out2.style.color = var(--teal);
+
+                    setTimeout(() => {
+                        typeWriter(cmd3, terminalCommands[2].cmd, terminalCommands[2].delay);
+                    }, 800);
+                });
+            }, 600);
+        });
+    }
+
+    // Animation hero
+    function animateHero() {
+        const dynamicText = document.getElementById('dynamicText');
+        let wordIndex = 0;
+
+        function cycleWords() {
+            typeWriter(dynamicText, heroWords[wordIndex], 80, () => {
+                setTimeout(() => {
+                    eraseText(dynamicText, 40, () => {
+                        wordIndex = (wordIndex + 1) % heroWords.length;
+                        cycleWords();
+                    });
+                }, 2000);
+            });
+        }
+
+        cycleWords();
+    }
+
+    // Demarrer les animations
+    setTimeout(animateTerminal, 500);
+    setTimeout(animateHero, 100);
+})();
+</script>

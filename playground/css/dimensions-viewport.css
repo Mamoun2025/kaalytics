@@ -1,0 +1,196 @@
+/* ============================================
+   DIMENSIONS VIEWPORT
+   Zoom Controls & Navigation
+   ============================================ */
+
+/* Zoom Controls */
+.zoom-controls {
+    position: fixed;
+    bottom: 20px;
+    left: calc(var(--sidebar-width) + 20px);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(26, 61, 46, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-active);
+    border-radius: 10px;
+    padding: 6px 10px;
+    z-index: 100;
+}
+
+.zoom-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.zoom-btn:hover {
+    background: var(--brand-green);
+    color: var(--brand-yellow);
+}
+
+.zoom-btn:active {
+    transform: scale(0.95);
+}
+
+.zoom-display {
+    min-width: 50px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-primary);
+    padding: 0 8px;
+}
+
+.zoom-separator {
+    width: 1px;
+    height: 20px;
+    background: var(--border-subtle);
+    margin: 0 4px;
+}
+
+/* Keyboard shortcut hints */
+.shortcut-hint {
+    position: fixed;
+    bottom: 70px;
+    left: calc(var(--sidebar-width) + 20px);
+    display: flex;
+    gap: 16px;
+    font-size: 11px;
+    color: var(--text-muted);
+    opacity: 0.6;
+}
+
+.shortcut-hint kbd {
+    display: inline-block;
+    padding: 2px 6px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 10px;
+    margin-right: 4px;
+}
+
+/* Mini-map (optional future feature) */
+.minimap {
+    position: fixed;
+    bottom: 20px;
+    right: 220px;
+    width: 150px;
+    height: 100px;
+    background: rgba(13, 21, 18, 0.9);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 100;
+    display: none;
+}
+
+.minimap.visible {
+    display: block;
+}
+
+.minimap-viewport {
+    position: absolute;
+    border: 2px solid var(--brand-yellow);
+    background: rgba(237, 169, 6, 0.1);
+    pointer-events: none;
+}
+
+.minimap-module {
+    position: absolute;
+    background: var(--brand-green-light);
+    border-radius: 2px;
+}
+
+/* === VIEW TOGGLE BUTTONS === */
+.zoom-btn.view-toggle {
+    position: relative;
+}
+
+.zoom-btn.view-toggle svg {
+    width: 16px;
+    height: 16px;
+}
+
+.zoom-btn.view-toggle.active {
+    color: var(--brand-yellow);
+    background: rgba(237, 169, 6, 0.15);
+}
+
+/* === PANEL VISIBILITY STATES === */
+
+/* Sidebar hidden */
+body.sidebar-hidden .sidebar {
+    transform: translateX(-100%);
+}
+
+body.sidebar-hidden .workspace {
+    left: 0;
+}
+
+body.sidebar-hidden .zoom-controls {
+    left: 20px;
+}
+
+body.sidebar-hidden .shortcut-hint {
+    left: 20px;
+}
+
+/* Right panels hidden */
+body.panels-hidden .right-panel {
+    transform: translateX(calc(100% + 20px));
+    opacity: 0;
+    pointer-events: none;
+}
+
+body.panels-hidden .info-panel {
+    right: 16px;
+}
+
+/* Focus mode (everything hidden) */
+body.focus-mode .sidebar {
+    transform: translateX(-100%);
+}
+
+body.focus-mode .right-panel {
+    transform: translateX(calc(100% + 20px));
+    opacity: 0;
+    pointer-events: none;
+}
+
+body.focus-mode .workspace {
+    left: 0;
+}
+
+body.focus-mode .zoom-controls {
+    left: 20px;
+}
+
+body.focus-mode .shortcut-hint {
+    left: 20px;
+}
+
+body.focus-mode .info-panel {
+    right: 16px;
+}
+
+/* Smooth transitions for panels */
+.sidebar,
+.right-panel,
+.workspace,
+.zoom-controls,
+.shortcut-hint,
+.info-panel {
+    transition: all 0.3s ease;
+}

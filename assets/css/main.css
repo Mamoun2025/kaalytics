@@ -1,0 +1,145 @@
+/**
+ * Kaalytics Main Stylesheet
+ * Imports all modular CSS files
+ * Version: 1.0
+ */
+
+/* ========================================
+   BASE
+   ======================================== */
+@import 'base/_variables.css';
+@import 'base/_reset.css';
+@import 'base/_typography.css';
+
+/* ========================================
+   LAYOUT
+   ======================================== */
+@import 'layout/_grid.css';
+@import 'layout/_navbar.css';
+@import 'layout/_footer.css';
+@import 'layout/_responsive.css';
+
+/* ========================================
+   COMPONENTS
+   ======================================== */
+@import 'components/_buttons.css';
+@import 'components/_cards.css';
+@import 'components/_micro-interactions.css';
+@import 'components/_visual-effects.css';
+
+/* ========================================
+   SECTIONS
+   ======================================== */
+@import 'sections/_hero.css';
+@import 'sections/_hero-premium.css';
+@import 'sections/_fleetops.css';
+@import 'sections/_playground.css';
+@import 'sections/_services.css';
+@import 'sections/_social-proof.css';
+@import 'sections/_daedalia.css';
+@import 'sections/_cta-premium.css';
+@import 'sections/_case-study-highlight.css';
+@import 'sections/_premium-sections.css';
+@import 'sections/_index-inline.css';
+@import 'sections/_modules-enhanced.css';
+
+/* ========================================
+   CTA FINAL SECTION (legacy - override by _cta-premium.css)
+   ======================================== */
+.cta-section {
+    position: relative;
+    background: var(--gradient-dark);
+    padding: var(--space-4xl) 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--emerald-glow) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.cta-section__content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 var(--space-xl);
+}
+
+.cta-section__icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-lg);
+}
+
+.cta-section__title {
+    margin-bottom: var(--space-md);
+}
+
+.cta-section__description {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-lg);
+}
+
+.cta-section__steps {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-2xl);
+    flex-wrap: wrap;
+}
+
+.cta-section__step {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
+
+.cta-section__step-number {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--emerald);
+    border-radius: 50%;
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--bg-void);
+}
+
+.cta-section__actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    align-items: center;
+}
+
+.cta-section__btn {
+    min-width: 280px;
+}
+
+/* ========================================
+   UTILITIES
+   ======================================== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

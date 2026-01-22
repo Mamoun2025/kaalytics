@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "version": "3.0",
+    "dimension": "enterprise",
+    "description": "Synergies ULTRA-RICHES pour la dimension Gestion d'Entreprise"
+  },
+
+  "connections": {
+    "ent-erp+ent-hr": {
+      "name": "Entreprise Intégrée",
+      "tagline": "Processus et ressources humaines unifiés",
+      "story_paragraph": "L'intégration de l'ERP Complet avec la Gestion RH crée une vue unifiée de l'entreprise où les ressources humaines sont pleinement intégrées aux processus métier. Les coûts salariaux sont automatiquement imputés aux projets et centres de coût. Les compétences disponibles sont connues pour la planification des ressources. Les absences impactent automatiquement la capacité planifiable. La paie s'appuie sur les temps passés saisis dans l'ERP. Les collaborateurs et les processus sont enfin connectés.",
+      "impact_narrative": "Cette synergie crée une vision complète de l'entreprise. Les coûts sont imputés précisément. La planification intègre la disponibilité réelle des ressources. Les décisions opérationnelles tiennent compte des contraintes RH. L'entreprise fonctionne comme un tout cohérent."
+    },
+
+    "ent-erp+ent-purchase": {
+      "name": "Chaîne d'Approvisionnement Intégrée",
+      "tagline": "Du besoin à la réception, sans couture",
+      "story_paragraph": "Quand l'ERP Complet se connecte au module Achats, la chaîne d'approvisionnement devient fluide et traçable. Les besoins générés par les ventes ou la production déclenchent automatiquement des demandes d'achat. Les commandes fournisseurs sont créées et suivies. Les réceptions alimentent les stocks et la comptabilité. Le rapprochement factures est automatique. Du besoin initial à la comptabilisation, tout s'enchaîne sans ressaisie ni rupture.",
+      "impact_narrative": "Cette combinaison élimine les frictions d'approvisionnement. Les ruptures de stock deviennent rares car les besoins sont anticipés. Les cycles d'achat sont accélérés. Les erreurs de rapprochement disparaissent. Le BFR est optimisé grâce à une gestion fluide."
+    },
+
+    "ent-project+ent-hr": {
+      "name": "Ressources Projets Optimisées",
+      "tagline": "Les bonnes compétences sur les bons projets",
+      "story_paragraph": "L'alliance de la Gestion Projets avec la Gestion RH permet une affectation des ressources éclairée par les compétences et la disponibilité. Chaque projet puise dans un pool de ressources dont les compétences sont connues. Les affectations tiennent compte de la charge globale et des congés. Le développement des compétences s'oriente vers les besoins projets. Les chefs de projet pilotent avec une vision complète de leurs équipes.",
+      "impact_narrative": "Cette synergie améliore la qualité de la planification projet. Les ressources sont affectées selon leurs compétences réelles. Les surcharges sont évitées. Les besoins en recrutement ou formation émergent des gaps identifiés. La satisfaction des équipes projet s'améliore."
+    },
+
+    "ent-erp+ent-docs": {
+      "name": "Documents Métier Intégrés",
+      "tagline": "Chaque document rattaché à son contexte",
+      "story_paragraph": "L'intégration de l'ERP Complet avec la GED rattache chaque document à son contexte métier. Les contrats sont liés aux clients et fournisseurs. Les factures sont archivées avec leur pièce comptable. Les documents projet sont organisés par affaire. La recherche peut partir du contexte métier pour trouver les documents associés. La documentation n'est plus isolée mais intégrée aux processus.",
+      "impact_narrative": "Cette combinaison contextualise les documents. Trouver la documentation d'un client ou d'un projet prend quelques secondes. La conformité documentaire est garantie. Les audits sont facilités. La connaissance est organisée et accessible."
+    },
+
+    "ent-custom+ent-erp": {
+      "name": "ERP Personnalisé",
+      "tagline": "Standard enrichi de votre métier",
+      "story_paragraph": "Quand les Modules Sur-Mesure s'intègrent à l'ERP Complet, vous bénéficiez du meilleur des deux mondes. Les fondations robustes et éprouvées de l'ERP standard. Les fonctionnalités spécifiques qui font votre différenciation. Les modules sur-mesure s'appuient sur les données et processus ERP. L'ensemble forme un tout cohérent et maintenable. Vous n'avez plus à choisir entre standard et spécifique.",
+      "impact_narrative": "Cette synergie élimine le dilemme ERP. Le standard assure les fondamentaux. Le sur-mesure apporte la différenciation. L'intégration garantit la cohérence. L'évolution reste possible. Votre système est à la fois solide et adapté."
+    },
+
+    "ent-support+ent-deploy": {
+      "name": "Accompagnement Continu",
+      "tagline": "Du déploiement au quotidien",
+      "story_paragraph": "L'alliance du Support Expert avec le Déploiement Rapide assure une continuité d'accompagnement du projet au run. L'équipe qui déploie transmet sa connaissance au support. Les experts qui vous assistent connaissent votre configuration et son histoire. L'évolution du système est portée par des professionnels qui comprennent votre contexte. Le partenariat s'inscrit dans la durée.",
+      "impact_narrative": "Cette combinaison garantit la qualité de l'accompagnement. Pas de rupture entre projet et run. La connaissance est préservée. L'évolution est guidée par des experts qui vous connaissent. Le ROI continue de croître après le déploiement."
+    },
+
+    "ent-project+ent-purchase": {
+      "name": "Budget Projet Maîtrisé",
+      "tagline": "Achats et projets alignés",
+      "story_paragraph": "L'intégration de la Gestion Projets avec le module Achats permet un pilotage budgétaire complet des projets. Les achats sont imputés aux projets. Le budget prévisionnel inclut les dépenses externes. Les écarts entre prévu et engagé sont visibles en temps réel. Les validations d'achat intègrent la situation budgétaire du projet. La rentabilité projet est calculée avec tous les coûts.",
+      "impact_narrative": "Cette synergie donne une vision économique complète des projets. Les dépassements budgétaires sont évités. La rentabilité réelle est connue. Les décisions d'investissement projet sont éclairées. Le pilotage financier des projets devient possible."
+    },
+
+    "ent-hr+ent-docs": {
+      "name": "Dossiers RH Numériques",
+      "tagline": "Chaque document collaborateur centralisé",
+      "story_paragraph": "Quand la Gestion RH se connecte à la GED, les dossiers des collaborateurs deviennent numériques et organisés. Contrats, avenants, évaluations, formations, bulletins de paie : tout est archivé et accessible selon les droits. Les processus RH génèrent automatiquement les documents dans les bons dossiers. La conformité RGPD est facilitée. L'administration RH devient paperless.",
+      "impact_narrative": "Cette combinaison modernise l'administration RH. Les dossiers papier disparaissent. La recherche de documents RH est instantanée. La conformité est garantie. Les processus RH sont fluides. Les collaborateurs accèdent à leurs documents facilement."
+    }
+  },
+
+  "multi_connections": {
+    "ent-erp+ent-hr+ent-project": {
+      "name": "Pilotage 360",
+      "tagline": "Processus, ressources humaines et projets unifiés",
+      "story_paragraph": "La triple alliance ERP Complet, Gestion RH et Gestion Projets crée une vue à 360° de votre entreprise. Les processus opérationnels sont intégrés. Les ressources humaines sont planifiées et suivies. Les projets sont pilotés avec toutes leurs composantes. Les coûts sont imputés précisément. Les décisions s'appuient sur une vision complète. L'entreprise devient véritablement pilotable.",
+      "cumulative_impact": "Ensemble, ces trois modules créent un système de pilotage complet. La visibilité est totale. Les décisions sont éclairées. Les ressources sont optimisées. La performance est mesurable. Votre entreprise gagne en maîtrise et en agilité."
+    },
+
+    "ent-erp+ent-purchase+ent-docs": {
+      "name": "Flux Achats Dématérialisé",
+      "tagline": "Du besoin à l'archive, zéro papier",
+      "story_paragraph": "Quand ERP Complet, Achats et GED fonctionnent ensemble, le processus achat devient entièrement dématérialisé et traçable. Les besoins naissent dans l'ERP. Les consultations et commandes sont gérées dans le module Achats. Tous les documents — devis, commandes, bons de livraison, factures — sont archivés dans la GED avec leur contexte. L'audit est facilité. La conformité est garantie.",
+      "cumulative_impact": "Cette combinaison triple modernise vos achats. Le cycle est accéléré car dématérialisé. La traçabilité est parfaite. Les audits sont facilités. Les coûts administratifs chutent. La fonction achats devient stratégique."
+    },
+
+    "ent-custom+ent-deploy+ent-support": {
+      "name": "Solution Clé en Main",
+      "tagline": "Sur-mesure, déployé vite, supporté durablement",
+      "story_paragraph": "L'intégration Modules Sur-Mesure, Déploiement Rapide et Support Expert offre une solution complète et sans compromis. Le système est adapté à vos besoins spécifiques. Le déploiement est rapide grâce à une méthodologie éprouvée. Le support dans la durée garantit l'évolution et la maintenance. Vous bénéficiez d'une solution sur-mesure avec l'accompagnement d'un éditeur de logiciel standard.",
+      "cumulative_impact": "Cette orchestration triple garantit le succès de votre projet ERP. La solution est adaptée. Le déploiement est maîtrisé. L'accompagnement est durable. Le ROI est atteint et maintenu. Votre système évolue avec votre entreprise."
+    }
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "dimension": "security",
+  "dimension_name": "Sécurité & Conformité",
+  "version": "1.0",
+  "modules": {
+    "sec-detect": {
+      "name": "Détection Menaces",
+      "tagline": "L'IA qui voit les attaques",
+      "description_short": "Détection en temps réel des comportements suspects et des tentatives d'intrusion par IA.",
+      "description_full": "La Détection Menaces utilise l'intelligence artificielle pour surveiller votre infrastructure en continu. Chaque connexion, chaque action, chaque flux est analysé en temps réel. Les comportements anormaux sont détectés en millisecondes : tentative de brute force, exfiltration de données, mouvement latéral. Vous voyez l'attaque avant qu'elle ne réussisse.",
+      "impact_business": {
+        "primary": "Temps de détection des menaces < 1 seconde",
+        "secondary": "99% des attaques détectées avant impact",
+        "tertiary": "Réduction du risque cyber de 80%"
+      },
+      "use_cases": [
+        "Détection d'intrusion réseau",
+        "Analyse comportementale utilisateurs",
+        "Détection d'exfiltration de données",
+        "Identification des comptes compromis"
+      ],
+      "transformation_narrative": {
+        "alone": "Une sentinelle IA surveille votre infrastructure. Les menaces sont vues en temps réel.",
+        "with_response": "Détection + Réponse = les menaces sont non seulement vues mais neutralisées.",
+        "with_audit": "Chaque alerte est tracée. L'historique des menaces est documenté.",
+        "with_access": "Les comportements anormaux par compte sont détectés. Compromission identifiée."
+      }
+    },
+    "sec-response": {
+      "name": "Réponse Auto",
+      "tagline": "Plus rapide qu'un humain",
+      "description_short": "Réactions automatisées aux menaces détectées. Isolation, blocage, alertes en millisecondes.",
+      "description_full": "La Réponse Auto neutralise les menaces avant qu'un humain n'ait le temps de réagir. Une tentative d'intrusion détectée ? L'IP est bloquée instantanément. Un compte compromis identifié ? Session terminée et mot de passe révoqué. Les playbooks automatisés exécutent les bonnes actions au bon moment. La sécurité fonctionne à la vitesse des attaques.",
+      "impact_business": {
+        "primary": "Temps de réaction aux incidents < 1 seconde",
+        "secondary": "Impact des attaques réduit de 95%",
+        "tertiary": "SOC libéré des tâches répétitives"
+      },
+      "use_cases": [
+        "Blocage automatique des IP malveillantes",
+        "Isolation des systèmes compromis",
+        "Révocation des sessions suspectes",
+        "Quarantaine des fichiers dangereux"
+      ],
+      "transformation_narrative": {
+        "alone": "Les menaces sont neutralisées en temps réel. Pas d'attente humaine.",
+        "with_detect": "Détection + Réponse = chaîne de défense complète et automatique.",
+        "with_audit": "Chaque action automatique est tracée. Justification documentée.",
+        "with_compliance": "Les réponses respectent les procédures de conformité. Sécurité ET réglementation."
+      }
+    },
+    "sec-compliance": {
+      "name": "Conformité",
+      "tagline": "Les auditeurs vont sourire",
+      "description_short": "Suivi automatisé de la conformité réglementaire. RGPD, ISO, SOC2 : preuves générées.",
+      "description_full": "Le module Conformité automatise le suivi réglementaire. RGPD, ISO 27001, SOC2, PCI-DSS : chaque exigence est mappée à des contrôles techniques. Les preuves sont générées automatiquement, les écarts sont signalés, les rapports d'audit sont prêts. La conformité n'est plus une corvée annuelle mais un état permanent et prouvable.",
+      "impact_business": {
+        "primary": "Temps de préparation audit -80%",
+        "secondary": "Conformité continue vs ponctuelle",
+        "tertiary": "Risque de non-conformité éliminé"
+      },
+      "use_cases": [
+        "Suivi RGPD automatisé",
+        "Préparation audits ISO 27001",
+        "Génération de rapports SOC2",
+        "Contrôles PCI-DSS continus"
+      ],
+      "transformation_narrative": {
+        "alone": "La conformité devient continue. Les preuves sont toujours prêtes.",
+        "with_audit": "Conformité + Audit = preuves complètes et traçabilité totale.",
+        "with_access": "Les contrôles d'accès sont conformes aux exigences. Preuves automatiques.",
+        "with_encrypt": "Le chiffrement est conforme aux standards. Attestations générées."
+      }
+    },
+    "sec-audit": {
+      "name": "Piste d'Audit",
+      "tagline": "Chaque action tracée",
+      "description_short": "Journal complet de toutes les activités. Qui a fait quoi, quand, sur quelles données.",
+      "description_full": "La Piste d'Audit capture chaque action dans votre système. Connexions, accès aux données, modifications, suppressions : tout est tracé avec horodatage et contexte. En cas d'incident ou d'audit, vous pouvez reconstituer exactement ce qui s'est passé. L'historique est immuable et protégé contre la falsification.",
+      "impact_business": {
+        "primary": "Traçabilité 100% des actions sensibles",
+        "secondary": "Investigation d'incidents en minutes vs jours",
+        "tertiary": "Conformité aux exigences de traçabilité"
+      },
+      "use_cases": [
+        "Logs de connexion et déconnexion",
+        "Trace des accès aux données sensibles",
+        "Historique des modifications",
+        "Investigation forensique"
+      ],
+      "transformation_narrative": {
+        "alone": "Chaque action laisse une trace. Rien n'est oublié, rien n'est falsifiable.",
+        "with_detect": "Les alertes sont corrélées aux actions tracées. Contexte complet.",
+        "with_compliance": "Les preuves de conformité sont basées sur les logs. Vérifiable.",
+        "with_access": "Qui a accédé à quoi et quand. Réponse instantanée."
+      }
+    },
+    "sec-access": {
+      "name": "Contrôle d'Accès",
+      "tagline": "Le bon accès aux bonnes personnes",
+      "description_short": "Gestion des permissions basée sur les rôles. Qui peut voir et faire quoi, finement contrôlé.",
+      "description_full": "Le Contrôle d'Accès garantit que chaque utilisateur n'a accès qu'à ce dont il a besoin. Les permissions sont basées sur les rôles, les contextes, les données. Le principe du moindre privilège est appliqué automatiquement. Les accès sont révisés régulièrement, les anomalies sont signalées. La surface d'attaque est réduite au minimum.",
+      "impact_business": {
+        "primary": "Surface d'attaque réduite de 70%",
+        "secondary": "Conformité au principe du moindre privilège",
+        "tertiary": "Onboarding/offboarding sécurisé"
+      },
+      "use_cases": [
+        "Gestion des rôles et permissions",
+        "Contrôle d'accès aux données sensibles",
+        "Révision périodique des accès",
+        "Gestion des comptes à privilèges"
+      ],
+      "transformation_narrative": {
+        "alone": "Chaque utilisateur a exactement les accès nécessaires. Pas plus, pas moins.",
+        "with_audit": "Les accès sont tracés. Qui a vu quoi, documenté.",
+        "with_detect": "Les accès anormaux sont détectés. Comportement suspect alerté.",
+        "with_compliance": "Les accès sont conformes aux exigences. Principe du moindre privilège prouvé."
+      }
+    },
+    "sec-encrypt": {
+      "name": "Chiffrement",
+      "tagline": "Données protégées, toujours",
+      "description_short": "Protection des données par chiffrement. Au repos, en transit, partout.",
+      "description_full": "Le module Chiffrement protège vos données les plus sensibles. Chiffrement au repos pour les bases de données, chiffrement en transit pour les communications, chiffrement de bout en bout pour les données critiques. Les clés sont gérées de façon sécurisée, la rotation est automatique. Même en cas de vol de données, elles restent inexploitables.",
+      "impact_business": {
+        "primary": "Données inutilisables même en cas de vol",
+        "secondary": "Conformité aux exigences de protection des données",
+        "tertiary": "Protection contre les menaces internes"
+      },
+      "use_cases": [
+        "Chiffrement des bases de données",
+        "TLS/SSL pour les communications",
+        "Chiffrement des backups",
+        "Gestion des clés cryptographiques"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos données sont chiffrées. Volées, elles sont inutilisables.",
+        "with_backup": "Les backups sont chiffrés. Protection même des sauvegardes.",
+        "with_compliance": "Le chiffrement est conforme aux standards. AES-256, TLS 1.3.",
+        "with_access": "Chiffrement + Accès = données accessibles uniquement aux autorisés."
+      }
+    },
+    "sec-backup": {
+      "name": "Sauvegarde Auto",
+      "tagline": "Jamais de données perdues",
+      "description_short": "Sauvegardes automatiques, régulières et testées. Récupération garantie.",
+      "description_full": "La Sauvegarde Auto protège contre la perte de données. Sauvegardes incrémentales toutes les heures, complètes chaque nuit, répliquées sur site distant. Les restaurations sont testées régulièrement pour garantir la récupérabilité. En cas de ransomware, d'erreur humaine ou de panne : vos données sont récupérables, rapidement.",
+      "impact_business": {
+        "primary": "RPO < 1 heure (perte de données maximale)",
+        "secondary": "RTO < 4 heures (temps de restauration)",
+        "tertiary": "Protection contre ransomware complète"
+      },
+      "use_cases": [
+        "Sauvegardes automatiques planifiées",
+        "Réplication sur site distant",
+        "Tests de restauration périodiques",
+        "Rétention longue durée"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos données sont sauvegardées. Ransomware ou erreur : récupération garantie.",
+        "with_encrypt": "Les backups sont chiffrés. Protection complète.",
+        "with_compliance": "Les sauvegardes respectent les exigences de rétention. Conformité prouvée.",
+        "with_audit": "Chaque sauvegarde est tracée. Historique complet."
+      }
+    },
+    "sec-pentest": {
+      "name": "Scan Vulnérabilités",
+      "tagline": "Trouvez-les avant les hackers",
+      "description_short": "Scans de sécurité automatisés et continus. Vulnérabilités détectées et priorisées.",
+      "description_full": "Le Scan Vulnérabilités identifie les failles avant les attaquants. Scans automatisés sur l'infrastructure, les applications, les configurations. Chaque vulnérabilité est classée par criticité, corrélée aux menaces connues, et accompagnée de recommandations de correction. La surface d'attaque est connue et maîtrisée.",
+      "impact_business": {
+        "primary": "Vulnérabilités critiques détectées en < 24h",
+        "secondary": "Surface d'attaque visible et réduite",
+        "tertiary": "Conformité aux exigences de tests de sécurité"
+      },
+      "use_cases": [
+        "Scans d'infrastructure automatisés",
+        "Tests de vulnérabilités applicatives",
+        "Audit de configuration",
+        "Rapport de posture de sécurité"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos failles sont connues avant les hackers. Vision claire de votre posture.",
+        "with_detect": "Vulnérabilités connues + Détection = défense informée.",
+        "with_response": "Vulnérabilité critique ? Patch ou compensation automatique.",
+        "with_compliance": "Les scans réguliers prouvent la diligence. Conformité continue."
+      }
+    }
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Unified milestones and achievements for storytelling"
+  },
+
+  "milestones": {
+    "first_module": {
+      "id": "first_module",
+      "label": "Première pierre posée",
+      "description": "Vous avez placé votre premier module",
+      "icon": "🎯",
+      "category": "foundation",
+      "xp_reward": 10,
+      "condition": {
+        "type": "module_count",
+        "value": 1
+      },
+      "narrative": "Le voyage de mille lieues commence par un premier pas. Votre transformation digitale vient de débuter."
+    },
+    "first_connection": {
+      "id": "first_connection",
+      "label": "Premier flux établi",
+      "description": "Vous avez créé votre première connexion",
+      "icon": "⚡",
+      "category": "synergy",
+      "xp_reward": 15,
+      "condition": {
+        "type": "connection_count",
+        "value": 1
+      },
+      "narrative": "Les systèmes communiquent. L'information commence à circuler."
+    },
+    "multi_dimension": {
+      "id": "multi_dimension",
+      "label": "Vision multi-axes",
+      "description": "Vous utilisez 2 dimensions différentes",
+      "icon": "🔮",
+      "category": "diversity",
+      "xp_reward": 25,
+      "condition": {
+        "type": "dimension_count",
+        "value": 2
+      },
+      "narrative": "Votre vision s'élargit au-delà d'un seul axe. L'approche holistique émerge."
+    },
+    "cross_connect": {
+      "id": "cross_connect",
+      "label": "Pont inter-dimensions",
+      "description": "Connexion entre deux dimensions différentes",
+      "icon": "🌉",
+      "category": "synergy",
+      "xp_reward": 30,
+      "condition": {
+        "type": "cross_dimension_connections",
+        "value": 1
+      },
+      "narrative": "Les silos tombent. Vos dimensions commencent à se renforcer mutuellement."
+    },
+    "five_modules": {
+      "id": "five_modules",
+      "label": "Infrastructure solide",
+      "description": "5 modules déployés",
+      "icon": "🏗️",
+      "category": "scale",
+      "xp_reward": 30,
+      "condition": {
+        "type": "module_count",
+        "value": 5
+      },
+      "narrative": "Une infrastructure significative prend forme. Les fondations sont posées."
+    },
+    "ten_modules": {
+      "id": "ten_modules",
+      "label": "Écosystème actif",
+      "description": "10 modules en synergie",
+      "icon": "🌐",
+      "category": "scale",
+      "xp_reward": 50,
+      "condition": {
+        "type": "module_count",
+        "value": 10
+      },
+      "narrative": "Un véritable écosystème digital est en place. La transformation est bien engagée."
+    },
+    "dimension_mastery": {
+      "id": "dimension_mastery",
+      "label": "Maîtrise dimensionnelle",
+      "description": "6+ modules dans une même dimension",
+      "icon": "👑",
+      "category": "mastery",
+      "xp_reward": 40,
+      "condition": {
+        "type": "max_dimension_modules",
+        "value": 6
+      },
+      "narrative": "Vous avez atteint l'excellence dans une dimension. Cette maîtrise rayonne sur l'ensemble."
+    },
+    "network_effect": {
+      "id": "network_effect",
+      "label": "Effet réseau",
+      "description": "Autant de connexions que de modules",
+      "icon": "🕸️",
+      "category": "synergy",
+      "xp_reward": 35,
+      "condition": {
+        "type": "connection_ratio",
+        "value": 1
+      },
+      "narrative": "L'effet réseau s'active. Chaque module amplifie la valeur des autres."
+    },
+    "full_coverage": {
+      "id": "full_coverage",
+      "label": "Couverture totale",
+      "description": "6+ dimensions actives",
+      "icon": "🏆",
+      "category": "diversity",
+      "xp_reward": 60,
+      "condition": {
+        "type": "dimension_count",
+        "value": 6
+      },
+      "narrative": "Votre transformation couvre presque tous les axes. Une vision véritablement complète."
+    },
+    "architect": {
+      "id": "architect",
+      "label": "Architecte digital",
+      "description": "Atteignez le niveau Expert",
+      "icon": "🎖️",
+      "category": "mastery",
+      "xp_reward": 100,
+      "condition": {
+        "type": "level",
+        "value": 6
+      },
+      "narrative": "Vous avez acquis la maîtrise de l'architecture digitale. Votre entreprise opère au niveau supérieur."
+    },
+    "field_master": {
+      "id": "field_master",
+      "label": "Maître du terrain",
+      "description": "Chantiers + Machines + Interventions connectés",
+      "icon": "🏗️",
+      "category": "mastery",
+      "xp_reward": 45,
+      "condition": {
+        "type": "modules_present",
+        "value": ["ops-sites", "ops-machines", "ops-field"]
+      },
+      "narrative": "Vos opérations terrain sont sous contrôle total. Du planning à l'exécution, rien n'échappe à votre visibilité."
+    },
+    "predictive_ops": {
+      "id": "predictive_ops",
+      "label": "Opérations prédictives",
+      "description": "Maintenance + IoT + Météo connectés",
+      "icon": "🔮",
+      "category": "mastery",
+      "xp_reward": 45,
+      "condition": {
+        "type": "modules_present",
+        "value": ["ops-maintenance", "integ-iot", "ops-weather"]
+      },
+      "narrative": "Vous anticipez les événements avant qu'ils ne se produisent. La maintenance devient proactive."
+    }
+  },
+
+  "milestone_categories": {
+    "foundation": {
+      "name": "Fondation",
+      "description": "Premiers pas de la transformation",
+      "color": "#6b7280"
+    },
+    "synergy": {
+      "name": "Synergie",
+      "description": "Connexions et flux d'information",
+      "color": "#3b82f6"
+    },
+    "diversity": {
+      "name": "Diversité",
+      "description": "Couverture multi-dimensionnelle",
+      "color": "#10b981"
+    },
+    "scale": {
+      "name": "Échelle",
+      "description": "Croissance de l'infrastructure",
+      "color": "#f59e0b"
+    },
+    "mastery": {
+      "name": "Maîtrise",
+      "description": "Excellence et expertise",
+      "color": "#8b5cf6"
+    }
+  }
+}

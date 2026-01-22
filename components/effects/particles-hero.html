@@ -1,0 +1,284 @@
+<!--
+KAALYTICS - Particles Hero Effect
+==================================
+Hero section avec particules interactives
+Source: github.com/tsparticles/tsparticles
+-->
+
+<div class="particles-demo">
+    <canvas id="particlesCanvas"></canvas>
+    <div class="particles-content">
+        <span class="particles-badge">Nouveau</span>
+        <h1 class="particles-title">
+            Transformez vos
+            <span class="particles-gradient">donnees</span>
+        </h1>
+        <p class="particles-subtitle">
+            Plateforme IA de nouvelle generation pour l'analyse predictive et l'optimisation de flotte
+        </p>
+        <div class="particles-buttons">
+            <button class="particles-btn particles-btn--primary">Commencer</button>
+            <button class="particles-btn particles-btn--secondary">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+                Demo
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+:root {
+    --emerald: #10b981;
+    --emerald-dim: rgba(16, 185, 129, 0.3);
+    --teal: #0d9488;
+    --bg-void: #030a08;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.particles-demo {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg-void);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#particlesCanvas {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.particles-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+}
+
+.particles-badge {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background: var(--emerald-dim);
+    border: 1px solid var(--emerald);
+    border-radius: 50px;
+    color: var(--emerald);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 var(--emerald-dim); }
+    50% { box-shadow: 0 0 0 10px transparent; }
+}
+
+.particles-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.particles-gradient {
+    background: linear-gradient(135deg, var(--emerald) 0%, var(--teal) 50%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.particles-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+}
+
+.particles-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.particles-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.particles-btn--primary {
+    background: linear-gradient(135deg, var(--emerald), var(--teal));
+    color: white;
+    border: none;
+    box-shadow: 0 4px 20px var(--emerald-dim);
+}
+
+.particles-btn--primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px var(--emerald-dim);
+}
+
+.particles-btn--secondary {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.particles-btn--secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--emerald);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .particles-subtitle {
+        font-size: 1rem;
+    }
+    .particles-btn {
+        padding: 0.875rem 1.5rem;
+    }
+}
+</style>
+
+<script>
+(function() {
+    const canvas = document.getElementById('particlesCanvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let mouse = { x: null, y: null, radius: 150 };
+
+    // Configuration
+    const config = {
+        particleCount: 80,
+        particleSize: { min: 1, max: 3 },
+        speed: 0.5,
+        lineDistance: 120,
+        emerald: '#10b981',
+        teal: '#0d9488'
+    };
+
+    function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+
+    function createParticle() {
+        return {
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            size: Math.random() * (config.particleSize.max - config.particleSize.min) + config.particleSize.min,
+            speedX: (Math.random() - 0.5) * config.speed,
+            speedY: (Math.random() - 0.5) * config.speed,
+            color: Math.random() > 0.5 ? config.emerald : config.teal
+        };
+    }
+
+    function init() {
+        resize();
+        particles = [];
+        for (let i = 0; i < config.particleCount; i++) {
+            particles.push(createParticle());
+        }
+    }
+
+    function drawParticle(p) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.fill();
+    }
+
+    function drawLines() {
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < config.lineDistance) {
+                    const opacity = 1 - (distance / config.lineDistance);
+                    ctx.beginPath();
+                    ctx.strokeStyle = `rgba(16, 185, 129, ${opacity * 0.3})`;
+                    ctx.lineWidth = 1;
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.stroke();
+                }
+            }
+        }
+    }
+
+    function updateParticle(p) {
+        // Mouvement de base
+        p.x += p.speedX;
+        p.y += p.speedY;
+
+        // Rebond sur les bords
+        if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+
+        // Interaction souris
+        if (mouse.x !== null) {
+            const dx = p.x - mouse.x;
+            const dy = p.y - mouse.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < mouse.radius) {
+                const force = (mouse.radius - distance) / mouse.radius;
+                p.x += dx * force * 0.02;
+                p.y += dy * force * 0.02;
+            }
+        }
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach(p => {
+            updateParticle(p);
+            drawParticle(p);
+        });
+
+        drawLines();
+        requestAnimationFrame(animate);
+    }
+
+    // Events
+    window.addEventListener('resize', init);
+
+    canvas.addEventListener('mousemove', (e) => {
+        mouse.x = e.x;
+        mouse.y = e.y;
+    });
+
+    canvas.addEventListener('mouseleave', () => {
+        mouse.x = null;
+        mouse.y = null;
+    });
+
+    // Start
+    init();
+    animate();
+})();
+</script>

@@ -1,0 +1,191 @@
+{
+  "dimension": "brand",
+  "dimension_name": "Identité & Design",
+  "version": "1.0",
+  "modules": {
+    "brand-identity": {
+      "name": "Identité Visuelle",
+      "tagline": "Votre ADN visuel",
+      "description_short": "Logo, couleurs, typographie : les fondations visuelles de votre marque définies avec précision.",
+      "description_full": "L'Identité Visuelle pose les fondations de votre marque. Un logo qui marque les esprits, une palette de couleurs qui évoque les bonnes émotions, une typographie qui porte votre personnalité. Ces éléments fondamentaux, définis avec soin, deviennent le langage visuel que reconnaîtront vos clients au premier regard.",
+      "impact_business": {
+        "primary": "Reconnaissance de marque immédiate",
+        "secondary": "Cohérence visuelle sur tous les supports",
+        "tertiary": "Professionnalisme perçu augmenté de 40%"
+      },
+      "use_cases": [
+        "Création de logo et variantes",
+        "Définition de la palette de couleurs",
+        "Sélection typographique",
+        "Charte graphique fondamentale"
+      ],
+      "transformation_narrative": {
+        "alone": "Votre marque prend forme. Un logo, des couleurs, une typographie : l'ADN visuel est posé.",
+        "with_system": "L'identité s'intègre dans un système complet. Chaque usage est prévu et documenté.",
+        "with_docs": "Vos documents portent votre identité. Professionnalisme dans chaque page.",
+        "with_web": "L'identité prend vie sur le web. Votre site respire votre marque."
+      }
+    },
+    "brand-web": {
+      "name": "Site Web",
+      "tagline": "Votre vitrine digitale",
+      "description_short": "Sites web magnifiques qui convertissent. Design premium et performance optimale.",
+      "description_full": "Le Site Web est votre ambassadeur 24/7. Un design qui captive, une expérience qui guide, une performance qui convertit. Chaque page est optimisée pour l'utilisateur et les moteurs de recherche. Votre site ne se contente pas d'exister : il travaille pour vous, attirant, convainquant et convertissant.",
+      "impact_business": {
+        "primary": "Taux de conversion x3 vs site standard",
+        "secondary": "Temps passé sur site +60%",
+        "tertiary": "Référencement naturel optimisé dès le départ"
+      },
+      "use_cases": [
+        "Sites vitrines premium",
+        "Landing pages optimisées",
+        "Sites e-commerce",
+        "Portails et applications web"
+      ],
+      "transformation_narrative": {
+        "alone": "Votre présence digitale prend forme. Un site qui impressionne et qui convertit.",
+        "with_identity": "Le site incarne parfaitement votre identité. Chaque pixel est aligné avec votre marque.",
+        "with_ui": "UX pensée pour l'utilisateur, UI qui enchante. L'expérience est fluide.",
+        "with_motion": "Le site prend vie avec des animations. L'engagement augmente."
+      }
+    },
+    "brand-docs": {
+      "name": "Documents Pro",
+      "tagline": "Chaque document impressionne",
+      "description_short": "Factures, propositions, rapports : des documents qui portent votre professionnalisme.",
+      "description_full": "Les Documents Pro transforment chaque touchpoint documentaire en moment de marque. Vos factures ne sont plus des papiers administratifs mais des rappels de votre professionnalisme. Vos propositions commerciales ne se contentent pas d'informer : elles impressionnent. Chaque document devient un ambassadeur de votre marque.",
+      "impact_business": {
+        "primary": "Perception de professionnalisme +50%",
+        "secondary": "Taux d'acceptation des propositions +25%",
+        "tertiary": "Cohérence de marque sur tous les supports"
+      },
+      "use_cases": [
+        "Templates de factures premium",
+        "Propositions commerciales impactantes",
+        "Rapports et présentations",
+        "Contrats et documents légaux"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos documents deviennent des ambassadeurs. Chaque facture, chaque devis porte votre image.",
+        "with_identity": "L'identité visuelle se décline dans chaque document. Cohérence totale.",
+        "with_system": "Chaque document respecte le design system. Uniformité garantie.",
+        "with_print": "Papier et digital alignés. La même qualité partout."
+      }
+    },
+    "brand-system": {
+      "name": "Design System",
+      "tagline": "Le langage de votre marque",
+      "description_short": "Bibliothèque de composants et guidelines pour une cohérence parfaite sur tous les supports.",
+      "description_full": "Le Design System est le livre de lois de votre marque visuelle. Chaque composant, chaque interaction, chaque état est documenté et standardisé. Les équipes créent vite et bien, sans réinventer la roue. La cohérence est garantie, que le design soit fait par un junior ou un senior, en interne ou en agence.",
+      "impact_business": {
+        "primary": "Temps de création design -60%",
+        "secondary": "Cohérence de marque 100% garantie",
+        "tertiary": "Onboarding designer 3x plus rapide"
+      },
+      "use_cases": [
+        "Bibliothèque de composants UI",
+        "Guidelines d'utilisation",
+        "Tokens de design",
+        "Documentation interactive"
+      ],
+      "transformation_narrative": {
+        "alone": "Votre marque a son manuel. Chaque usage, chaque règle documentée.",
+        "with_identity": "L'identité se structure en système. Du logo aux micro-interactions.",
+        "with_ui": "Le design system alimente l'UI. Cohérence et rapidité.",
+        "with_web": "Le site utilise les composants du system. Maintenance simplifiée."
+      }
+    },
+    "brand-ui": {
+      "name": "UI/UX Design",
+      "tagline": "Interfaces qui enchantent",
+      "description_short": "Design d'interfaces centrées utilisateur. Beauté et usabilité en harmonie.",
+      "description_full": "L'UI/UX Design crée des expériences digitales qui enchantent. L'UX anticipe les besoins, l'UI les magnifie. Chaque écran est pensé pour l'utilisateur : fluide, intuitif, agréable. Les interfaces ne sont plus des barrières mais des facilitateurs. L'utilisateur accomplit ses tâches avec plaisir.",
+      "impact_business": {
+        "primary": "Satisfaction utilisateur +70%",
+        "secondary": "Taux de complétion des tâches +45%",
+        "tertiary": "Support client -40% grâce à l'intuitivité"
+      },
+      "use_cases": [
+        "Design d'applications métier",
+        "Parcours utilisateur optimisés",
+        "Prototypes interactifs",
+        "Tests utilisateurs"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos interfaces deviennent intuitives. L'utilisateur trouve ce qu'il cherche naturellement.",
+        "with_web": "Le site offre une expérience utilisateur premium. Navigation fluide.",
+        "with_system": "L'UI s'appuie sur le design system. Cohérence et efficacité.",
+        "with_motion": "Les animations renforcent l'UX. Feedback et guidage subtils."
+      }
+    },
+    "brand-motion": {
+      "name": "Motion Design",
+      "tagline": "Des visuels qui bougent",
+      "description_short": "Animations, vidéos et contenus dynamiques qui captivent et engagent.",
+      "description_full": "Le Motion Design donne vie à votre marque. Les animations attirent l'œil, les vidéos racontent des histoires, les transitions guident l'utilisateur. Le mouvement n'est pas un gadget : c'est un langage qui communique, explique, convainc. Votre marque passe de statique à vivante.",
+      "impact_business": {
+        "primary": "Engagement contenu +80%",
+        "secondary": "Taux de mémorisation +65%",
+        "tertiary": "Temps passé sur page +50%"
+      },
+      "use_cases": [
+        "Vidéos explicatives",
+        "Animations de logo",
+        "Contenus sociaux animés",
+        "Micro-interactions UI"
+      ],
+      "transformation_narrative": {
+        "alone": "Votre marque s'anime. Les visuels captent l'attention, les vidéos racontent.",
+        "with_social": "Contenus sociaux animés qui se démarquent dans les feeds.",
+        "with_web": "Le site s'anime subtilement. L'expérience devient mémorable.",
+        "with_ui": "Les micro-animations améliorent l'UX. Feedback instantané et élégant."
+      }
+    },
+    "brand-print": {
+      "name": "Supports Print",
+      "tagline": "Tangible et mémorable",
+      "description_short": "Brochures, cartes de visite, signalétique : le monde physique porte votre marque.",
+      "description_full": "Les Supports Print rappellent que le tangible a un pouvoir unique. Une carte de visite de qualité, une brochure bien pensée, une signalétique impactante : ces objets physiques créent des impressions durables. Dans un monde digital, le print devient un différenciateur. On vous touche, on vous garde.",
+      "impact_business": {
+        "primary": "Mémorabilité +60% vs digital seul",
+        "secondary": "Perception de qualité renforcée",
+        "tertiary": "Points de contact physiques optimisés"
+      },
+      "use_cases": [
+        "Cartes de visite premium",
+        "Brochures et catalogues",
+        "Signalétique et PLV",
+        "Packaging produit"
+      ],
+      "transformation_narrative": {
+        "alone": "Votre marque se touche. Du digital au tangible, l'impression est complète.",
+        "with_identity": "Le print respecte l'identité visuelle. Même qualité, même impact.",
+        "with_docs": "Documents digitaux et print alignés. Cohérence multicanale.",
+        "with_system": "Le design system guide le print. Règles respectées sur tous supports."
+      }
+    },
+    "brand-social": {
+      "name": "Assets Sociaux",
+      "tagline": "Brillez sur chaque feed",
+      "description_short": "Contenus visuels optimisés pour chaque plateforme sociale. Format, ton et impact adaptés.",
+      "description_full": "Les Assets Sociaux arment votre présence sur les réseaux. Chaque plateforme a ses codes : LinkedIn demande du professionnel, Instagram du visuel, TikTok du dynamique. Vos contenus sont créés spécifiquement pour chaque feed, avec les bons formats, les bonnes dimensions, le bon ton. Vous ne postez plus : vous brillez.",
+      "impact_business": {
+        "primary": "Engagement social +100%",
+        "secondary": "Temps de création contenu -50%",
+        "tertiary": "Cohérence de marque sur tous les réseaux"
+      },
+      "use_cases": [
+        "Templates par plateforme",
+        "Kits de publication",
+        "Stories et Reels templates",
+        "Couvertures et profils"
+      ],
+      "transformation_narrative": {
+        "alone": "Vos réseaux brillent. Chaque post est calibré pour son feed.",
+        "with_identity": "L'identité se décline sur chaque plateforme. Reconnaissable partout.",
+        "with_motion": "Contenus animés qui captent l'attention dans les feeds saturés.",
+        "with_system": "Chaque template suit le design system. Cohérence automatique."
+      }
+    }
+  }
+}

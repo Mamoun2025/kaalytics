@@ -1,0 +1,259 @@
+{
+  "dimension": "enterprise",
+  "dimension_name": "Gestion d'Entreprise",
+  "version": "1.0",
+  "total_connections": 28,
+  "connections": {
+    "ent-erp+ent-custom": {
+      "name": "ERP Personnalisé",
+      "tagline": "Le standard plus le sur-mesure",
+      "description": "L'ERP standard enrichi de modules spécifiques. Le meilleur des deux mondes.",
+      "impact": "Couverture fonctionnelle 100% de vos besoins",
+      "narrative_short": "Votre ERP combine fonctions standards et modules sur-mesure parfaitement intégrés.",
+      "narrative_full": "L'ERP apporte les fonctions éprouvées : ventes, stocks, compta. Les modules sur-mesure ajoutent vos spécificités : calcul de prix particulier, workflow validation unique, interface métier dédiée. Tout fonctionne ensemble comme un seul système."
+    },
+    "ent-erp+ent-deploy": {
+      "name": "ERP en Production",
+      "tagline": "Opérationnel rapidement",
+      "description": "L'ERP déployé avec la méthodologie accélérée. Valeur business en semaines.",
+      "impact": "Time-to-value réduit de 60%",
+      "narrative_short": "Votre ERP est opérationnel en semaines, pas en mois.",
+      "narrative_full": "La méthodologie de Déploiement Rapide s'applique parfaitement à l'ERP. Templates préconfigurés, migrations automatisées, formations accélérées. En quelques semaines, les équipes travaillent sur le nouveau système. Le ROI commence immédiatement."
+    },
+    "ent-erp+ent-support": {
+      "name": "ERP Accompagné",
+      "tagline": "Jamais seul avec votre ERP",
+      "description": "L'ERP couvert par le support expert. Questions et problèmes résolus rapidement.",
+      "impact": "Disponibilité ERP > 99.9%, support réactif",
+      "narrative_short": "Votre ERP est accompagné par une équipe support dédiée.",
+      "narrative_full": "L'ERP est le cœur de votre activité. Le Support Expert garantit qu'il bat sans interruption. Question sur une fonctionnalité ? Réponse immédiate. Bug détecté ? Résolution prioritaire. L'ERP est non seulement puissant mais aussi fiable."
+    },
+    "ent-erp+ent-hr": {
+      "name": "Gestion Unifiée",
+      "tagline": "Ressources humaines et matérielles",
+      "description": "L'ERP intègre la gestion RH. Coûts salariaux, congés et compta en cohérence.",
+      "impact": "Vision complète des ressources de l'entreprise",
+      "narrative_short": "RH et ERP ne font qu'un : salaires, congés et compta parfaitement alignés.",
+      "narrative_full": "Les congés posés dans le module RH impactent la planification ERP. Les coûts salariaux s'intègrent à la comptabilité. Les ressources humaines et les ressources matérielles sont gérées dans un système unifié. Une seule vérité pour toute l'entreprise."
+    },
+    "ent-erp+ent-purchase": {
+      "name": "Chaîne Approvisionnement",
+      "tagline": "Des achats aux stocks fluides",
+      "description": "Les achats sont intégrés à l'ERP. Commandes, réceptions, stocks en cohérence.",
+      "impact": "Flux d'approvisionnement optimisé de bout en bout",
+      "narrative_short": "Vos achats s'intègrent parfaitement aux stocks et à la comptabilité.",
+      "narrative_full": "Une demande d'achat crée une commande fournisseur. La réception met à jour les stocks. La facture fournisseur est rapprochée automatiquement. Chaque étape déclenche la suivante naturellement. La chaîne d'approvisionnement devient fluide."
+    },
+    "ent-erp+ent-project": {
+      "name": "ERP Projet",
+      "tagline": "Projets intégrés à la gestion",
+      "description": "La gestion de projets s'intègre à l'ERP. Temps, ressources, facturation en cohérence.",
+      "impact": "Rentabilité projet visible et intégrée",
+      "narrative_short": "Vos projets sont intégrés à l'ERP : temps, coûts et facturation alignés.",
+      "narrative_full": "Le temps saisi sur le projet génère la facturation client. Les achats sont imputés au bon projet. Les ressources sont planifiées en tenant compte des autres activités. Le projet n'est plus une entité séparée : il fait partie du système global."
+    },
+    "ent-erp+ent-docs": {
+      "name": "ERP Documenté",
+      "tagline": "Données et documents liés",
+      "description": "La GED s'intègre à l'ERP. Documents attachés aux enregistrements métier.",
+      "impact": "Chaque donnée ERP a ses documents associés",
+      "narrative_short": "Les documents sont liés aux données ERP : facture attachée à la commande.",
+      "narrative_full": "La facture PDF est attachée à l'écriture comptable. Le contrat est lié à la fiche fournisseur. Le bon de livraison est rattaché à l'expédition. La GED ne fonctionne pas en silo : elle enrichit chaque donnée ERP de sa documentation."
+    },
+    "ent-custom+ent-deploy": {
+      "name": "Sur-Mesure Rapide",
+      "tagline": "Spécifique mais pas long",
+      "description": "Même les modules sur-mesure sont déployés rapidement. Développement agile.",
+      "impact": "Modules customs livrés en semaines",
+      "narrative_short": "Vos modules sur-mesure sont développés et déployés rapidement.",
+      "narrative_full": "Le sur-mesure n'est plus synonyme de projet interminable. La méthodologie agile, les composants réutilisables, l'expérience accumulée : même les développements spécifiques sont livrés en semaines. Vous n'attendez plus des mois pour vos fonctionnalités clés."
+    },
+    "ent-custom+ent-support": {
+      "name": "Custom Supporté",
+      "tagline": "Même le sur-mesure est couvert",
+      "description": "Les modules spécifiques sont supportés par l'équipe. Pas de zone non couverte.",
+      "impact": "Support unifié standard et sur-mesure",
+      "narrative_short": "Vos modules sur-mesure sont couverts par le même support que le standard.",
+      "narrative_full": "L'équipe support connaît vos développements spécifiques aussi bien que le standard. Pas de ping-pong entre équipes, pas de 'ce n'est pas notre module'. Un point de contact unique qui maîtrise l'ensemble de votre installation."
+    },
+    "ent-custom+ent-hr": {
+      "name": "RH Sur-Mesure",
+      "tagline": "Vos process RH digitalisés",
+      "description": "Des modules RH spécifiques pour vos processus uniques. Workflows RH adaptés.",
+      "impact": "Processus RH uniques digitalisés",
+      "narrative_short": "Vos processus RH spécifiques sont digitalisés dans des modules dédiés.",
+      "narrative_full": "Votre processus d'évaluation est unique ? Votre gestion des formations suit des règles métier ? Le sur-mesure adapte le module RH à vos pratiques exactes. Le système s'adapte à vous, pas l'inverse."
+    },
+    "ent-custom+ent-purchase": {
+      "name": "Achats Sur-Mesure",
+      "tagline": "Vos règles d'achat appliquées",
+      "description": "Des workflows d'achat adaptés à vos processus. Validation et conformité personnalisées.",
+      "impact": "Processus achat conforme à vos règles",
+      "narrative_short": "Vos règles d'achat spécifiques sont appliquées automatiquement.",
+      "narrative_full": "Votre circuit de validation dépend du montant ET du type d'achat ? Vos règles d'habilitation sont complexes ? Le sur-mesure implémente exactement vos processus. La conformité est garantie par le système."
+    },
+    "ent-custom+ent-project": {
+      "name": "Projets Sur-Mesure",
+      "tagline": "Votre méthodologie projet implémentée",
+      "description": "Des modules projet adaptés à votre façon de travailler. Phases, jalons, livrables personnalisés.",
+      "impact": "Gestion projet alignée sur vos pratiques",
+      "narrative_short": "Votre méthodologie projet est implémentée dans le système.",
+      "narrative_full": "Votre entreprise a sa propre méthodologie projet ? Ses phases spécifiques ? Ses indicateurs clés ? Le sur-mesure construit l'outil qui correspond exactement à votre façon de gérer les projets."
+    },
+    "ent-custom+ent-docs": {
+      "name": "Documents Sur-Mesure",
+      "tagline": "Vos processus documentaires",
+      "description": "Des workflows documentaires adaptés. Validation, publication, archivage personnalisés.",
+      "impact": "Gestion documentaire conforme à vos processus",
+      "narrative_short": "Vos workflows de validation documentaire sont implémentés sur-mesure.",
+      "narrative_full": "Le circuit de validation de vos documents qualité est complexe ? L'archivage suit des règles réglementaires spécifiques ? Le sur-mesure construit les workflows exacts dont vous avez besoin."
+    },
+    "ent-deploy+ent-support": {
+      "name": "Accompagnement Continu",
+      "tagline": "Du projet au quotidien",
+      "description": "Le déploiement passe naturellement au support. Continuité d'accompagnement.",
+      "impact": "Transition projet-run sans rupture",
+      "narrative_short": "L'équipe de déploiement passe le relais au support sans rupture.",
+      "narrative_full": "L'équipe qui a déployé transmet sa connaissance au support. Les spécificités de votre installation sont documentées. Le support reprend là où le projet s'arrête. Vous ne repartez jamais de zéro avec une nouvelle équipe."
+    },
+    "ent-deploy+ent-hr": {
+      "name": "RH Déployé",
+      "tagline": "RH opérationnel rapidement",
+      "description": "Le module RH déployé avec la méthodologie accélérée. Paie et congés en semaines.",
+      "impact": "Module RH opérationnel en 4-6 semaines",
+      "narrative_short": "Votre gestion RH est opérationnelle en quelques semaines.",
+      "narrative_full": "La paie est un sujet sensible. La méthodologie de déploiement rapide s'y adapte : migration des données prudente, double run de validation, formation intensive des gestionnaires. En quelques semaines, le module RH tourne en production."
+    },
+    "ent-deploy+ent-purchase": {
+      "name": "Achats Déployés",
+      "tagline": "Achats sous contrôle rapidement",
+      "description": "Le module Achats déployé rapidement. Fournisseurs et commandes en semaines.",
+      "impact": "Processus achat digitalisé en 3-4 semaines",
+      "narrative_short": "Votre gestion des achats est opérationnelle en quelques semaines.",
+      "narrative_full": "Les templates de déploiement couvrent les processus achats standards. Migration du fichier fournisseurs, paramétrage des circuits de validation, formation des acheteurs : en quelques semaines, les commandes passent par le système."
+    },
+    "ent-deploy+ent-project": {
+      "name": "Projets Déployés",
+      "tagline": "Gestion projet opérationnelle",
+      "description": "Le module Projet déployé rapidement. Planification et temps en semaines.",
+      "impact": "Suivi projet digitalisé en 2-3 semaines",
+      "narrative_short": "Votre gestion de projets est opérationnelle en quelques semaines.",
+      "narrative_full": "La gestion de projets est souvent le module le plus rapide à déployer. Structure de projets, saisie des temps, planification de base : en 2-3 semaines, les équipes saisissent leurs temps et les chefs de projet ont leur visibilité."
+    },
+    "ent-deploy+ent-docs": {
+      "name": "GED Déployée",
+      "tagline": "Documents centralisés rapidement",
+      "description": "La GED déployée rapidement. Arborescence et droits en semaines.",
+      "impact": "GED opérationnelle en 2-3 semaines",
+      "narrative_short": "Votre GED est opérationnelle en quelques semaines.",
+      "narrative_full": "La GED est souvent le quick win du déploiement. Créer l'arborescence, définir les droits, migrer les documents critiques : en 2-3 semaines, les équipes ont un endroit centralisé pour stocker et retrouver leurs documents."
+    },
+    "ent-support+ent-hr": {
+      "name": "Support RH",
+      "tagline": "RH toujours assistée",
+      "description": "Le module RH est couvert par le support. Questions paie et congés résolues rapidement.",
+      "impact": "Support dédié aux questions RH critiques",
+      "narrative_short": "Vos questions RH trouvent des réponses rapides auprès du support.",
+      "narrative_full": "La paie ne peut pas attendre. Les questions sur les congés sont urgentes. Le support connaît le module RH et ses subtilités. Les gestionnaires ne restent jamais bloqués sur un problème RH sans réponse."
+    },
+    "ent-support+ent-purchase": {
+      "name": "Support Achats",
+      "tagline": "Achats toujours assistés",
+      "description": "Le module Achats est couvert par le support. Questions commandes résolues.",
+      "impact": "Support pour le cycle d'approvisionnement",
+      "narrative_short": "Vos questions sur les achats trouvent des réponses rapides.",
+      "narrative_full": "Une commande bloquée, un rapprochement qui ne passe pas, un workflow de validation qui coince : le support connaît les subtilités du module Achats et débloque rapidement les situations."
+    },
+    "ent-support+ent-project": {
+      "name": "Support Projet",
+      "tagline": "Projets toujours assistés",
+      "description": "Le module Projet est couvert par le support. Questions planification résolues.",
+      "impact": "Support dédié gestion de projets",
+      "narrative_short": "Vos questions sur la gestion de projets trouvent des réponses rapides.",
+      "narrative_full": "Un planning qui ne s'affiche pas correctement, un calcul de rentabilité qui semble faux, une facturation bloquée : le support maîtrise le module Projet et aide les chefs de projet à résoudre leurs problèmes."
+    },
+    "ent-support+ent-docs": {
+      "name": "Support Documentaire",
+      "tagline": "GED toujours assistée",
+      "description": "La GED est couverte par le support. Questions droits et workflows résolues.",
+      "impact": "Support pour la gestion documentaire",
+      "narrative_short": "Vos questions sur la GED trouvent des réponses rapides.",
+      "narrative_full": "Un document introuvable, un droit d'accès mal paramétré, un workflow de validation bloqué : le support connaît la GED et aide à résoudre les problèmes documentaires rapidement."
+    },
+    "ent-hr+ent-purchase": {
+      "name": "Ressources & Achats",
+      "tagline": "RH et approvisionnement liés",
+      "description": "Les achats liés aux RH sont intégrés. Formations, matériel employé tracés.",
+      "impact": "Cycle de vie employé incluant ses achats",
+      "narrative_short": "Les achats liés aux employés (formations, matériel) sont intégrés aux RH.",
+      "narrative_full": "L'achat du laptop d'un nouvel employé est lié à sa fiche RH. Les formations sont commandées via le module Achats mais imputées au plan de formation RH. Les deux dimensions de la gestion des ressources humaines sont liées."
+    },
+    "ent-hr+ent-project": {
+      "name": "RH & Projets",
+      "tagline": "Temps RH et temps projet alignés",
+      "description": "Les temps projet s'intègrent aux RH. Congés et planification en cohérence.",
+      "impact": "Une seule vérité sur les temps",
+      "narrative_short": "Les temps projet et les données RH sont parfaitement synchronisés.",
+      "narrative_full": "Le collaborateur pose un congé : il n'est plus planifiable sur les projets ce jour-là. Il saisit son temps projet : c'est cohérent avec son temps de travail RH. Une seule source de vérité sur le temps de chaque collaborateur."
+    },
+    "ent-hr+ent-docs": {
+      "name": "Dossiers Employés",
+      "tagline": "Documents RH centralisés",
+      "description": "Les documents RH sont gérés dans la GED. Contrats, bulletins, attestations accessibles.",
+      "impact": "Dossier employé complet et accessible",
+      "narrative_short": "Tous les documents de chaque employé sont centralisés dans son dossier.",
+      "narrative_full": "Le contrat de travail, les avenants, les bulletins de paie, les attestations : tout est dans la GED, lié à la fiche employé. Plus de documents éparpillés, plus de fichier introuvable. Le dossier employé est complet et accessible en un clic."
+    },
+    "ent-purchase+ent-project": {
+      "name": "Achats Projet",
+      "tagline": "Dépenses projet tracées",
+      "description": "Les achats sont imputés aux projets. Coût complet projet calculé.",
+      "impact": "Rentabilité projet incluant tous les achats",
+      "narrative_short": "Chaque achat peut être imputé à un projet pour un calcul de coût complet.",
+      "narrative_full": "L'achat de matériel pour le projet X est imputé à ce projet. Les sous-traitances, les déplacements, les fournitures : tout est tracé par projet. La rentabilité projet intègre tous les coûts, pas seulement les temps."
+    },
+    "ent-purchase+ent-docs": {
+      "name": "Documents Achats",
+      "tagline": "Contrats fournisseurs accessibles",
+      "description": "Les documents fournisseurs sont centralisés. Contrats, conditions, certifications accessibles.",
+      "impact": "Dossier fournisseur complet",
+      "narrative_short": "Les contrats et conditions de chaque fournisseur sont centralisés et accessibles.",
+      "narrative_full": "Le contrat cadre, les conditions tarifaires, les certifications qualité : tout est dans la GED, lié à la fiche fournisseur. Avant de passer une commande, l'acheteur vérifie les conditions en un clic. Plus de clause oubliée."
+    },
+    "ent-project+ent-docs": {
+      "name": "Documentation Projet",
+      "tagline": "Livrables projet gérés",
+      "description": "Les documents projet sont centralisés. Specs, livrables, comptes-rendus accessibles.",
+      "impact": "Documentation projet complète et traçable",
+      "narrative_short": "Tous les documents de chaque projet sont centralisés dans son dossier.",
+      "narrative_full": "Le cahier des charges, les spécifications, les livrables, les comptes-rendus de réunion : tout est dans la GED, lié au projet. L'historique est complet, les livrables sont versionnés, l'audit est facilité."
+    }
+  },
+  "multi_connections": {
+    "ent-erp+ent-custom+ent-support": {
+      "name": "ERP Complet Accompagné",
+      "description": "ERP standard + sur-mesure + support = système adapté et toujours opérationnel.",
+      "impact": "Solution ERP complète et maintenue"
+    },
+    "ent-deploy+ent-support+ent-erp": {
+      "name": "Projet ERP Réussi",
+      "description": "Déploiement rapide + support + ERP = projet maîtrisé du début au quotidien.",
+      "impact": "Projet ERP sans risque"
+    },
+    "ent-hr+ent-project+ent-erp": {
+      "name": "Gestion des Ressources",
+      "description": "RH + Projets + ERP = vision complète des ressources humaines et leur allocation.",
+      "impact": "Optimisation des ressources humaines"
+    },
+    "ent-purchase+ent-project+ent-docs": {
+      "name": "Achats Projet Documentés",
+      "description": "Achats + Projets + GED = cycle achat projet complet avec documentation.",
+      "impact": "Traçabilité complète des dépenses projet"
+    },
+    "ent-hr+ent-docs+ent-erp": {
+      "name": "Dossiers Employés Complets",
+      "description": "RH + GED + ERP = gestion employés avec tous les documents associés.",
+      "impact": "Dossier employé numérique complet"
+    }
+  }
+}

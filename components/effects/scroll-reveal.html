@@ -1,0 +1,327 @@
+<!--
+KAALYTICS - Scroll Reveal Effects
+==================================
+Animations de revelation au scroll
+Source: scrollrevealjs.org, github.com/jlmakes/scrollreveal
+-->
+
+<div class="reveal-demo">
+    <section class="reveal-hero">
+        <h1>Scroll Reveal</h1>
+        <p>Faites defiler pour voir la magie</p>
+        <div class="reveal-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <section class="reveal-section">
+        <div class="reveal-card reveal-fade-up">
+            <h3>Fade Up</h3>
+            <p>Apparition depuis le bas avec fondu</p>
+        </div>
+    </section>
+
+    <section class="reveal-section">
+        <div class="reveal-grid">
+            <div class="reveal-card reveal-fade-left" style="--delay: 0s">
+                <span class="reveal-number">01</span>
+                <h4>Slide Left</h4>
+            </div>
+            <div class="reveal-card reveal-fade-left" style="--delay: 0.1s">
+                <span class="reveal-number">02</span>
+                <h4>Staggered</h4>
+            </div>
+            <div class="reveal-card reveal-fade-left" style="--delay: 0.2s">
+                <span class="reveal-number">03</span>
+                <h4>Animation</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal-section">
+        <div class="reveal-card reveal-zoom">
+            <h3>Zoom In</h3>
+            <p>Effet de zoom progressif</p>
+        </div>
+    </section>
+
+    <section class="reveal-section">
+        <div class="reveal-card reveal-flip">
+            <h3>Flip Effect</h3>
+            <p>Rotation 3D spectaculaire</p>
+        </div>
+    </section>
+
+    <section class="reveal-section">
+        <div class="reveal-text-container">
+            <h2 class="reveal-text-word">
+                <span class="reveal-word">Chaque</span>
+                <span class="reveal-word">mot</span>
+                <span class="reveal-word">apparait</span>
+                <span class="reveal-word">un</span>
+                <span class="reveal-word">par</span>
+                <span class="reveal-word">un</span>
+            </h2>
+        </div>
+    </section>
+
+    <section class="reveal-section reveal-section--final">
+        <div class="reveal-card reveal-bounce">
+            <h3>Fin du parcours!</h3>
+            <p>Effet bounce pour conclure</p>
+        </div>
+    </section>
+</div>
+
+<style>
+:root {
+    --emerald: #10b981;
+    --emerald-dim: rgba(16, 185, 129, 0.2);
+    --teal: #0d9488;
+    --bg-void: #030a08;
+    --bg-card: rgba(255, 255, 255, 0.03);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.reveal-demo {
+    background: var(--bg-void);
+    min-height: 100vh;
+}
+
+/* Hero */
+.reveal-hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.reveal-hero h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.reveal-hero p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 2rem;
+}
+
+.reveal-arrow {
+    animation: bounce 2s infinite;
+}
+
+.reveal-arrow svg {
+    width: 32px;
+    height: 32px;
+    color: var(--emerald);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+/* Sections */
+.reveal-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+}
+
+.reveal-section--final {
+    min-height: 60vh;
+}
+
+/* Cards */
+.reveal-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 3rem;
+    max-width: 500px;
+    text-align: center;
+}
+
+.reveal-card h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.reveal-card h4 {
+    font-size: 1.25rem;
+    color: white;
+}
+
+.reveal-card p {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Grid */
+.reveal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+}
+
+.reveal-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--emerald);
+    margin-bottom: 0.5rem;
+}
+
+/* Animations de base (etat initial) */
+.reveal-fade-up,
+.reveal-fade-left,
+.reveal-zoom,
+.reveal-flip,
+.reveal-bounce,
+.reveal-word {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: var(--delay, 0s);
+}
+
+.reveal-fade-up {
+    transform: translateY(60px);
+}
+
+.reveal-fade-left {
+    transform: translateX(-60px);
+}
+
+.reveal-zoom {
+    transform: scale(0.8);
+}
+
+.reveal-flip {
+    transform: perspective(1000px) rotateX(-60deg);
+    transform-origin: center top;
+}
+
+.reveal-bounce {
+    transform: translateY(100px) scale(0.9);
+}
+
+.reveal-word {
+    display: inline-block;
+    transform: translateY(30px);
+}
+
+/* Etat visible */
+.reveal-fade-up.visible,
+.reveal-fade-left.visible,
+.reveal-zoom.visible,
+.reveal-flip.visible,
+.reveal-bounce.visible,
+.reveal-word.visible {
+    opacity: 1;
+    transform: none;
+}
+
+.reveal-bounce.visible {
+    animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes bounceIn {
+    0% { transform: translateY(100px) scale(0.9); opacity: 0; }
+    60% { transform: translateY(-10px) scale(1.02); opacity: 1; }
+    100% { transform: translateY(0) scale(1); }
+}
+
+/* Text reveal */
+.reveal-text-container {
+    text-align: center;
+}
+
+.reveal-text-word {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: white;
+}
+
+.reveal-word {
+    margin-right: 0.3em;
+}
+
+.reveal-word.visible {
+    color: var(--emerald);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .reveal-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<script>
+(function() {
+    // Observer pour detecter les elements visibles
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+
+                // Si c'est un conteneur de mots, animer chaque mot
+                if (entry.target.classList.contains('reveal-text-word')) {
+                    const words = entry.target.querySelectorAll('.reveal-word');
+                    words.forEach((word, index) => {
+                        setTimeout(() => {
+                            word.classList.add('visible');
+                        }, index * 150);
+                    });
+                }
+            }
+        });
+    }, observerOptions);
+
+    // Observer tous les elements animables
+    const animatedElements = document.querySelectorAll(
+        '.reveal-fade-up, .reveal-fade-left, .reveal-zoom, .reveal-flip, .reveal-bounce, .reveal-text-word'
+    );
+
+    animatedElements.forEach(el => {
+        observer.observe(el);
+    });
+
+    // Animation parallaxe legere sur le hero
+    const hero = document.querySelector('.reveal-hero');
+    if (hero) {
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroContent = hero.querySelector('h1');
+            if (heroContent && scrolled < window.innerHeight) {
+                heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+                heroContent.style.opacity = 1 - (scrolled / window.innerHeight);
+            }
+        });
+    }
+})();
+</script>

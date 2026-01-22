@@ -1,0 +1,105 @@
+{
+    "id": "diamond-architecture",
+    "name": "Diamond Architecture",
+    "version": "2.0",
+    "description": "Structure en diamant - Flux stratégique du sommet vers la base avec synergie maximale",
+    "modules": [
+        {
+            "templateId": "intel-ml",
+            "x": 450,
+            "y": 50
+        },
+        {
+            "templateId": "intel-dashboards",
+            "x": 250,
+            "y": 180
+        },
+        {
+            "templateId": "intel-forecast",
+            "x": 650,
+            "y": 180
+        },
+        {
+            "templateId": "growth-crm",
+            "x": 100,
+            "y": 340
+        },
+        {
+            "templateId": "ent-erp",
+            "x": 450,
+            "y": 340
+        },
+        {
+            "templateId": "ops-fleet",
+            "x": 800,
+            "y": 340
+        },
+        {
+            "templateId": "growth-pipeline",
+            "x": 250,
+            "y": 500
+        },
+        {
+            "templateId": "integ-universal",
+            "x": 650,
+            "y": 500
+        },
+        {
+            "templateId": "sec-detect",
+            "x": 450,
+            "y": 660
+        },
+        {
+            "templateId": "engage-campaigns",
+            "x": 100,
+            "y": 500
+        },
+        {
+            "templateId": "ops-map",
+            "x": 800,
+            "y": 500
+        },
+        {
+            "templateId": "brand-web",
+            "x": 250,
+            "y": 820
+        },
+        {
+            "templateId": "sec-compliance",
+            "x": 650,
+            "y": 820
+        }
+    ],
+    "connections": [
+        { "from": { "index": 0, "port": "left" }, "to": { "index": 1, "port": "top" } },
+        { "from": { "index": 0, "port": "right" }, "to": { "index": 2, "port": "top" } },
+        { "from": { "index": 0, "port": "bottom" }, "to": { "index": 4, "port": "top" } },
+
+        { "from": { "index": 1, "port": "left" }, "to": { "index": 3, "port": "top" } },
+        { "from": { "index": 1, "port": "right" }, "to": { "index": 4, "port": "left" } },
+        { "from": { "index": 1, "port": "bottom" }, "to": { "index": 6, "port": "top" } },
+
+        { "from": { "index": 2, "port": "right" }, "to": { "index": 5, "port": "top" } },
+        { "from": { "index": 2, "port": "left" }, "to": { "index": 4, "port": "right" } },
+        { "from": { "index": 2, "port": "bottom" }, "to": { "index": 7, "port": "top" } },
+
+        { "from": { "index": 3, "port": "bottom" }, "to": { "index": 9, "port": "top" } },
+        { "from": { "index": 3, "port": "right" }, "to": { "index": 6, "port": "left" } },
+
+        { "from": { "index": 4, "port": "bottom" }, "to": { "index": 8, "port": "top" } },
+
+        { "from": { "index": 5, "port": "bottom" }, "to": { "index": 10, "port": "top" } },
+        { "from": { "index": 5, "port": "left" }, "to": { "index": 7, "port": "right" } },
+
+        { "from": { "index": 6, "port": "right" }, "to": { "index": 7, "port": "left" } },
+        { "from": { "index": 6, "port": "bottom" }, "to": { "index": 8, "port": "left" } },
+
+        { "from": { "index": 7, "port": "bottom" }, "to": { "index": 8, "port": "right" } },
+
+        { "from": { "index": 8, "port": "left" }, "to": { "index": 11, "port": "top" } },
+        { "from": { "index": 8, "port": "right" }, "to": { "index": 12, "port": "top" } },
+
+        { "from": { "index": 9, "port": "bottom" }, "to": { "index": 11, "port": "left" } },
+        { "from": { "index": 10, "port": "bottom" }, "to": { "index": 12, "port": "right" } }
+    ]
+}

@@ -1,0 +1,105 @@
+{
+  "_meta": {
+    "version": "3.0",
+    "dimension": "logistics",
+    "description": "Contenu sémantique ULTRA-RICHE pour la dimension Logistique & Distribution"
+  },
+
+  "modules": {
+    "log-wms": {
+      "name": "Gestion Entrepôt",
+      "tagline": "Chaque article à sa place",
+      "description_short": "Système de gestion d'entrepôt complet pour optimiser stockage et préparation.",
+      "description_full": "Le module Gestion Entrepôt (WMS) optimise chaque mètre carré de votre espace de stockage. Cartographie des emplacements, affectation intelligente des articles, gestion multi-zones (picking, réserve, froid, dangereux), inventaires tournants automatisés. Le système guide les opérateurs vers le bon emplacement. Les mouvements sont tracés en temps réel. Le taux de remplissage est optimisé. Les erreurs de préparation disparaissent grâce au guidage pas à pas.",
+      "transformation_story": {
+        "intro": "Votre entrepôt devient intelligent. Chaque article est localisé précisément. Les préparateurs sont guidés. L'espace est optimisé.",
+        "deep_narrative": "La Gestion Entrepôt transforme vos opérations logistiques. Les temps de préparation chutent grâce au guidage optimisé. Les erreurs de picking sont éliminées par le contrôle. L'espace est utilisé de manière optimale. Les inventaires sont fiables et rapides. L'entrepôt devient un avantage compétitif.",
+        "business_impact": "L'impact opérationnel est majeur : réduction de 40% des temps de préparation, taux d'erreur inférieur à 0.1%, et augmentation de 30% de la capacité de stockage à surface égale."
+      }
+    },
+
+    "log-tms": {
+      "name": "Transport",
+      "tagline": "Livrer plus, rouler moins",
+      "description_short": "Optimisation des tournées et gestion de la flotte de livraison.",
+      "description_full": "Le module Transport (TMS) optimise chaque kilomètre parcouru. Planification des tournées avec contraintes horaires, capacités véhicules et priorités. Calcul automatique des itinéraires optimaux. Affectation intelligente des chauffeurs. Suivi temps réel des livraisons. Gestion des preuves de livraison dématérialisées. Analyse des coûts au colis et à la tournée. Vos livraisons sont plus rapides, moins chères, plus fiables.",
+      "transformation_story": {
+        "intro": "Vos tournées sont optimisées par l'IA. Les kilomètres inutiles disparaissent. Les créneaux de livraison sont respectés. Les clients sont satisfaits.",
+        "deep_narrative": "Le module Transport transforme votre distribution. Les tournées sont calculées pour minimiser les kilomètres. Les chauffeurs disposent d'itinéraires optimisés. Les clients reçoivent à l'heure promise. Les preuves de livraison sont instantanées. Le coût logistique par colis diminue significativement.",
+        "business_impact": "Les gains sont mesurables : réduction de 25% des kilomètres parcourus, augmentation de 30% des livraisons par tournée, et taux de service supérieur à 98%."
+      }
+    },
+
+    "log-tracking": {
+      "name": "Traçabilité",
+      "tagline": "Du fournisseur au client final",
+      "description_short": "Suivi bout en bout des produits avec historique complet.",
+      "description_full": "Le module Traçabilité assure le suivi complet de chaque produit dans la supply chain. Identification par lot, numéro de série ou SSCC. Historique complet des mouvements. Chaîne de température pour les produits sensibles. Rappels ciblés possibles grâce à la traçabilité aval. Conformité aux exigences réglementaires (alimentaire, pharmaceutique, etc.). En cas de problème, vous savez exactement où se trouvent les produits concernés.",
+      "transformation_story": {
+        "intro": "Chaque produit a son histoire traçable. De l'entrée en stock jusqu'au client final, vous savez tout ce qui s'est passé.",
+        "deep_narrative": "La Traçabilité transforme votre maîtrise de la supply chain. Les rappels sont ciblés au lieu d'être massifs. Les litiges client trouvent leur réponse dans les données. La conformité réglementaire est documentée. La confiance des clients et partenaires se renforce. La responsabilité est traçable.",
+        "business_impact": "L'impact sur la gestion des risques est majeur : réduction de 90% des coûts de rappel grâce au ciblage, conformité réglementaire prouvable, et résolution rapide des litiges."
+      }
+    },
+
+    "log-picking": {
+      "name": "Préparation Commandes",
+      "tagline": "Le bon produit, la bonne quantité",
+      "description_short": "Optimisation du picking avec guidage opérateur et contrôle qualité.",
+      "description_full": "Le module Préparation Commandes optimise le picking en entrepôt. Organisation des vagues de préparation, chemins de picking optimisés, guidage vocal ou terminal, contrôle par scan ou pesée, gestion du multi-commandes et du batch picking. Les préparateurs sont guidés pour minimiser leurs déplacements. Les erreurs sont détectées avant expédition. La productivité augmente sans augmenter les erreurs. Vos clients reçoivent exactement ce qu'ils ont commandé.",
+      "transformation_story": {
+        "intro": "La préparation de commandes devient fluide et sans erreur. Les préparateurs sont guidés pas à pas. Chaque colis est parfait.",
+        "deep_narrative": "La Préparation Commandes transforme le cœur de votre logistique. Les vagues sont organisées intelligemment. Les chemins de picking sont optimisés. Les contrôles détectent les erreurs. La productivité des préparateurs augmente. La satisfaction client s'améliore grâce à des livraisons parfaites.",
+        "business_impact": "L'impact sur la performance est direct : augmentation de 50% de la productivité picking, taux d'erreur divisé par 10, et réduction des réclamations client."
+      }
+    },
+
+    "log-returns": {
+      "name": "Gestion Retours",
+      "tagline": "Retours sans friction",
+      "description_short": "Traitement efficace des retours avec réintégration ou destruction traçable.",
+      "description_full": "Le module Gestion Retours structure le flux inverse de la supply chain. Portail retour pour les clients, étiquettes prépayées, réception et tri des retours, contrôle qualité, décision de remise en stock, reconditionnement ou destruction. Le crédit client est automatique selon l'état du produit. Les retours sont une source d'information sur la qualité. Le flux retour devient aussi maîtrisé que le flux aller.",
+      "transformation_story": {
+        "intro": "Les retours deviennent une opportunité plutôt qu'un problème. Le processus est fluide pour le client et maîtrisé pour vous.",
+        "deep_narrative": "La Gestion Retours transforme cette contrainte en processus maîtrisé. Les clients retournent facilement. Les produits sont triés efficacement. La valeur récupérable est maximisée. Les données alimentent l'amélioration produit. La satisfaction client augmente malgré le retour.",
+        "business_impact": "L'impact est multiple : réduction de 60% du temps de traitement des retours, récupération de 30% de valeur supplémentaire, et amélioration de la fidélité client."
+      }
+    },
+
+    "log-inventory": {
+      "name": "Inventaire Permanent",
+      "tagline": "Stock juste, stock fiable",
+      "description_short": "Comptage cyclique et réconciliation automatique des écarts.",
+      "description_full": "Le module Inventaire Permanent assure la fiabilité continue de vos stocks. Comptages tournants programmés selon la valeur et la rotation des articles. Réconciliation automatique des écarts mineurs. Alertes sur les écarts significatifs. Analyse des causes d'écart. Plus besoin d'inventaire annuel qui paralyse l'activité. La fiabilité stock est maintenue en continu sans interruption d'exploitation.",
+      "transformation_story": {
+        "intro": "Votre stock est fiable en permanence. Fini les mauvaises surprises de l'inventaire annuel. La précision est maintenue au quotidien.",
+        "deep_narrative": "L'Inventaire Permanent transforme la gestion des stocks. Les comptages sont intégrés au flux opérationnel. Les écarts sont détectés et corrigés rapidement. Les causes racines sont analysées. L'inventaire annuel devient une formalité de validation. La confiance dans les données stock est totale.",
+        "business_impact": "Les bénéfices sont tangibles : précision stock supérieure à 99.5%, élimination de l'inventaire annuel bloquant, et réduction des pertes et démarques inconnues."
+      }
+    },
+
+    "log-crossdock": {
+      "name": "Cross-Docking",
+      "tagline": "Transit express sans stockage",
+      "description_short": "Réception et réexpédition directe sans mise en stock.",
+      "description_full": "Le module Cross-Docking optimise les flux de transit. Réception des marchandises et allocation directe aux commandes en attente. Pas de mise en stock, transfert direct vers les quais d'expédition. Gestion des rendez-vous fournisseurs synchronisés avec les départs. Le stock immobilisé est minimisé. Le temps de traversée de l'entrepôt est réduit au minimum. Idéal pour les produits frais et les flux tendus.",
+      "transformation_story": {
+        "intro": "Les flux de transit traversent votre entrepôt sans s'arrêter. Les produits arrivent et repartent dans la journée.",
+        "deep_narrative": "Le Cross-Docking transforme votre logistique des flux rapides. Le stock immobilisé est minimisé. Les délais de livraison client sont raccourcis. L'espace de stockage est libéré pour d'autres usages. Les produits à DLC courte sont gérés sereinement. La réactivité de la supply chain atteint un nouveau niveau.",
+        "business_impact": "L'impact sur les flux est significatif : réduction de 50% du temps de traversée entrepôt, diminution du stock immobilisé, et amélioration de la fraîcheur des produits livrés."
+      }
+    },
+
+    "log-forecast": {
+      "name": "Prévisions Demande",
+      "tagline": "Anticiper pour mieux servir",
+      "description_short": "Prévisions de vente et planification des approvisionnements.",
+      "description_full": "Le module Prévisions Demande utilise l'IA pour anticiper les besoins. Analyse des historiques de vente, détection des tendances et saisonnalités, intégration des événements exceptionnels (promotions, météo, etc.). Les prévisions alimentent le réapprovisionnement automatique. Les stocks de sécurité sont calculés dynamiquement. Ni rupture, ni sur-stock : le juste stock pour servir les clients sans immobiliser du capital inutilement.",
+      "transformation_story": {
+        "intro": "Vous anticipez la demande plutôt que de la subir. L'IA prédit les ventes. Vos stocks suivent la demande future, pas le passé.",
+        "deep_narrative": "Les Prévisions Demande transforment votre planification. Les ruptures sont anticipées et évitées. Les sur-stocks sont identifiés et écoulés. Les promotions sont préparées avec le bon stock. Les saisonnalités sont gérées proactivement. Le capital investi en stock est optimisé.",
+        "business_impact": "L'impact financier est majeur : réduction de 30% du stock moyen à service égal, diminution de 80% des ruptures, et amélioration du cash-flow."
+      }
+    }
+  }
+}

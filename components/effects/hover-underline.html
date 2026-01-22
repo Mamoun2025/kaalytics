@@ -1,0 +1,606 @@
+<!--
+KAALYTICS - Hover Underline Effect
+====================================
+Effets de soulignement animes au survol
+-->
+
+<div class="underline-demo">
+    <h2>Hover Underline Effects</h2>
+    <p>Differents styles de soulignement animes</p>
+
+    <!-- Basic underlines -->
+    <section class="underline-section">
+        <h3>Animations Basiques</h3>
+        <div class="underline-grid">
+            <a href="#" class="underline-link underline-link--left">
+                <span>De gauche a droite</span>
+            </a>
+            <a href="#" class="underline-link underline-link--right">
+                <span>De droite a gauche</span>
+            </a>
+            <a href="#" class="underline-link underline-link--center">
+                <span>Du centre</span>
+            </a>
+            <a href="#" class="underline-link underline-link--edges">
+                <span>Des bords</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Gradient underlines -->
+    <section class="underline-section">
+        <h3>Soulignements Gradient</h3>
+        <div class="underline-grid">
+            <a href="#" class="underline-link underline-link--gradient">
+                <span>Gradient Emerald</span>
+            </a>
+            <a href="#" class="underline-link underline-link--gradient-blue">
+                <span>Gradient Blue</span>
+            </a>
+            <a href="#" class="underline-link underline-link--gradient-rainbow">
+                <span>Gradient Rainbow</span>
+            </a>
+            <a href="#" class="underline-link underline-link--gradient-animate">
+                <span>Gradient Anime</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Thick underlines -->
+    <section class="underline-section">
+        <h3>Soulignements Epais</h3>
+        <div class="underline-grid">
+            <a href="#" class="underline-link underline-link--thick">
+                <span>Style Highlight</span>
+            </a>
+            <a href="#" class="underline-link underline-link--marker">
+                <span>Style Marker</span>
+            </a>
+            <a href="#" class="underline-link underline-link--box">
+                <span>Style Box</span>
+            </a>
+            <a href="#" class="underline-link underline-link--strikethrough">
+                <span>Strikethrough</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Creative underlines -->
+    <section class="underline-section">
+        <h3>Styles Creatifs</h3>
+        <div class="underline-grid">
+            <a href="#" class="underline-link underline-link--wave">
+                <span>Vague</span>
+            </a>
+            <a href="#" class="underline-link underline-link--dotted">
+                <span>Pointilles</span>
+            </a>
+            <a href="#" class="underline-link underline-link--double">
+                <span>Double ligne</span>
+            </a>
+            <a href="#" class="underline-link underline-link--brackets">
+                <span>Crochets</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Navigation example -->
+    <section class="underline-section">
+        <h3>Navigation</h3>
+        <nav class="underline-nav">
+            <a href="#" class="nav-link nav-link--active">Accueil</a>
+            <a href="#" class="nav-link">Produits</a>
+            <a href="#" class="nav-link">Solutions</a>
+            <a href="#" class="nav-link">Tarifs</a>
+            <a href="#" class="nav-link">Contact</a>
+        </nav>
+    </section>
+
+    <!-- CTA Links -->
+    <section class="underline-section">
+        <h3>Liens CTA</h3>
+        <div class="cta-links">
+            <a href="#" class="cta-link">
+                <span>En savoir plus</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+            <a href="#" class="cta-link cta-link--outline">
+                <span>Voir la demo</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polygon points="10 8 16 12 10 16 10 8"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+</div>
+
+<style>
+:root {
+    --emerald: #10b981;
+    --emerald-dim: #047857;
+    --teal: #0d9488;
+    --blue: #3b82f6;
+    --purple: #8b5cf6;
+    --pink: #ec4899;
+    --orange: #f97316;
+    --bg-void: #040a08;
+    --bg-card: #0d1f1a;
+    --text-primary: #f0fdf4;
+    --text-muted: #86efac;
+    --border: rgba(16, 185, 129, 0.2);
+}
+
+.underline-demo {
+    min-height: 100vh;
+    background: var(--bg-void);
+    padding: 4rem 2rem;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.underline-demo > h2 {
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.underline-demo > p {
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.underline-section {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.underline-section h3 {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--emerald);
+}
+
+.underline-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* Base link styles */
+.underline-link {
+    position: relative;
+    display: inline-block;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+.underline-link span {
+    position: relative;
+    z-index: 2;
+}
+
+/* Left to right */
+.underline-link--left::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--emerald);
+    transition: width 0.3s ease;
+}
+
+.underline-link--left:hover::after {
+    width: 100%;
+}
+
+/* Right to left */
+.underline-link--right::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background: var(--emerald);
+    transition: width 0.3s ease;
+}
+
+.underline-link--right:hover::after {
+    width: 100%;
+}
+
+/* Center */
+.underline-link--center::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--emerald);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.underline-link--center:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* From edges */
+.underline-link--edges::before,
+.underline-link--edges::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--emerald);
+    transition: width 0.3s ease;
+}
+
+.underline-link--edges::before {
+    left: 0;
+}
+
+.underline-link--edges::after {
+    right: 0;
+}
+
+.underline-link--edges:hover::before,
+.underline-link--edges:hover::after {
+    width: 50%;
+}
+
+/* Gradient underlines */
+.underline-link--gradient::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--emerald-dim), var(--emerald), var(--teal));
+    transition: width 0.3s ease;
+}
+
+.underline-link--gradient:hover::after {
+    width: 100%;
+}
+
+.underline-link--gradient-blue::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--blue), var(--purple));
+    transition: width 0.3s ease;
+}
+
+.underline-link--gradient-blue:hover::after {
+    width: 100%;
+}
+
+.underline-link--gradient-rainbow::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--pink), var(--orange), var(--emerald), var(--blue), var(--purple));
+    transition: width 0.3s ease;
+}
+
+.underline-link--gradient-rainbow:hover::after {
+    width: 100%;
+}
+
+.underline-link--gradient-animate::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--emerald), var(--teal), var(--blue), var(--emerald));
+    background-size: 200% 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.underline-link--gradient-animate:hover::after {
+    transform: scaleX(1);
+    animation: gradientMove 2s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 200% 0%; }
+}
+
+/* Thick underlines */
+.underline-link--thick::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: rgba(16, 185, 129, 0.3);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.underline-link--thick:hover::after {
+    transform: scaleX(1);
+}
+
+.underline-link--marker::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: -4px;
+    right: -4px;
+    height: 40%;
+    background: rgba(16, 185, 129, 0.4);
+    transform: scaleX(0) skewX(-10deg);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.underline-link--marker:hover::after {
+    transform: scaleX(1) skewX(-10deg);
+}
+
+.underline-link--box::before {
+    content: '';
+    position: absolute;
+    inset: -4px -8px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.underline-link--box:hover::before {
+    border-color: var(--emerald);
+}
+
+.underline-link--strikethrough::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--emerald);
+    transition: width 0.3s ease;
+}
+
+.underline-link--strikethrough:hover::after {
+    width: 100%;
+}
+
+/* Creative underlines */
+.underline-link--wave::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cpath d='M0 2 Q5 0 10 2 T20 2' stroke='%2310b981' fill='none' stroke-width='1.5'/%3E%3C/svg%3E") repeat-x;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.underline-link--wave:hover::after {
+    transform: scaleX(1);
+}
+
+.underline-link--dotted::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--emerald) 0,
+        var(--emerald) 4px,
+        transparent 4px,
+        transparent 8px
+    );
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.underline-link--dotted:hover::after {
+    transform: scaleX(1);
+}
+
+.underline-link--double::before,
+.underline-link--double::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--emerald);
+    transition: width 0.3s ease;
+}
+
+.underline-link--double::before {
+    bottom: 4px;
+    transition-delay: 0.1s;
+}
+
+.underline-link--double::after {
+    bottom: 0;
+}
+
+.underline-link--double:hover::before,
+.underline-link--double:hover::after {
+    width: 100%;
+}
+
+.underline-link--brackets::before,
+.underline-link--brackets::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--emerald);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.underline-link--brackets::before {
+    content: '[';
+    left: -15px;
+}
+
+.underline-link--brackets::after {
+    content: ']';
+    right: -15px;
+}
+
+.underline-link--brackets:hover::before {
+    opacity: 1;
+    left: -20px;
+}
+
+.underline-link--brackets:hover::after {
+    opacity: 1;
+    right: -20px;
+}
+
+/* Navigation */
+.underline-nav {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.nav-link {
+    position: relative;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--emerald);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link--active {
+    color: var(--text-primary);
+}
+
+.nav-link:hover::after,
+.nav-link--active::after {
+    transform: scaleX(1);
+}
+
+/* CTA Links */
+.cta-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--emerald);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.75rem 0;
+    position: relative;
+}
+
+.cta-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--emerald);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.cta-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.cta-link svg {
+    transition: transform 0.3s ease;
+}
+
+.cta-link:hover svg {
+    transform: translateX(4px);
+}
+
+.cta-link--outline {
+    color: var(--text-primary);
+}
+
+.cta-link--outline::after {
+    background: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .underline-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .underline-nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .cta-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
