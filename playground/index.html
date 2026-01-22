@@ -33,6 +33,9 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" href="../assets/css/layout/_navbar.css">
+
     <!-- Modular CSS -->
     <link rel="stylesheet" href="css/dimensions-main.css">
     <link rel="stylesheet" href="css/smart-connect.css">
@@ -125,17 +128,111 @@
             width: 16px;
             height: 16px;
         }
+
+        /* === NAVBAR INTEGRATION === */
+        /* Navbar container positioning */
+        #navbar-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 2000;
+        }
+
+        #navbar-container .navbar {
+            background: rgba(4, 10, 8, 0.98) !important;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(16, 185, 129, 0.15);
+        }
+
+        /* Playground toolbar (ancien header) */
+        .playground-toolbar {
+            position: fixed;
+            top: 70px; /* Sous la navbar */
+            left: 0;
+            right: 0;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            background: rgba(10, 20, 18, 0.95);
+            border-bottom: 1px solid rgba(16, 185, 129, 0.1);
+            z-index: 1500;
+            backdrop-filter: blur(8px);
+        }
+
+        .playground-toolbar .toolbar-title {
+            color: #a7f3d0;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .playground-toolbar .toolbar-title svg {
+            width: 18px;
+            height: 18px;
+            color: #10b981;
+        }
+
+        /* Ajuster le layout pour la navbar + toolbar */
+        .header {
+            display: none; /* Cacher l'ancien header */
+        }
+
+        .sidebar {
+            top: 120px !important; /* navbar (70px) + toolbar (50px) */
+            height: calc(100vh - 120px) !important;
+        }
+
+        .workspace {
+            top: 120px !important;
+            height: calc(100vh - 120px) !important;
+        }
+
+        .right-panel {
+            top: 120px !important;
+            height: calc(100vh - 120px) !important;
+        }
+
+        /* Hide back-to-site link since navbar has navigation */
+        .back-to-site {
+            display: none;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .playground-toolbar {
+                top: 60px;
+                padding: 0 12px;
+            }
+
+            .sidebar,
+            .workspace,
+            .right-panel {
+                top: 110px !important;
+                height: calc(100vh - 110px) !important;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- ═══════════════════════════════════════════
-         HEADER
+         NAVBAR (Site Navigation)
          ═══════════════════════════════════════════ -->
-    <header class="header">
-        <div class="logo">
-            <a href="../index.html" style="text-decoration: none;">
-                <div class="logo-text">Kaalytics <span>Playground</span></div>
-            </a>
+    <div id="navbar-container" data-navbar="full" data-navbar-style="solid"></div>
+
+    <!-- ═══════════════════════════════════════════
+         PLAYGROUND TOOLBAR
+         ═══════════════════════════════════════════ -->
+    <div class="playground-toolbar">
+        <div class="toolbar-title">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+            </svg>
+            Architecture Builder
         </div>
         <div class="header-actions">
             <!-- Preset Selector -->
@@ -150,7 +247,12 @@
                 Exporter
             </button>
         </div>
-    </header>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         HEADER (Hidden - kept for compatibility)
+         ═══════════════════════════════════════════ -->
+    <header class="header" style="display:none;"></header>
 
     <!-- ═══════════════════════════════════════════
          SIDEBAR - Dimensions & Modules
@@ -225,7 +327,10 @@
             </div>
             <div class="empty-state-title">Construisez votre Architecture</div>
             <div class="empty-state-desc">
-                Glissez des modules depuis la barre laterale et connectez-les pour creer votre systeme
+                Glissez des modules depuis la barre latérale ou cliquez dessus pour les ajouter au canvas, puis connectez-les pour créer votre système
+            </div>
+            <div class="empty-state-hint">
+                <kbd>Tab</kbd> pour naviguer • <kbd>Enter</kbd> pour ajouter • <kbd>Suppr</kbd> pour retirer
             </div>
         </div>
     </main>
@@ -350,6 +455,11 @@
         </svg>
         Retour au site
     </a>
+
+    <!-- ═══════════════════════════════════════════
+         NAVBAR LOADER
+         ═══════════════════════════════════════════ -->
+    <script src="../components/navbar/navbar-loader.js"></script>
 
     <!-- ═══════════════════════════════════════════
          MODULAR JAVASCRIPT
