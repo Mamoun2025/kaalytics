@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="FleetOps Pro: -30% couts, -40% pannes, ROI en 6 mois. Gestion de flotte IA pour BTP, Transport, Location. 8 modules integres. Demo gratuite.">
+    <meta name="description" content="FleetOps Pro: reduction des couts et pannes, ROI rapide. Gestion de flotte IA pour BTP, Transport, Location. 8 modules integres. Demo gratuite.">
     <meta name="keywords" content="FleetOps Pro, Gestion de flotte, Fleet Management, BTP, Transport, Location, Maintenance predictive, GPS, IA">
     <meta name="author" content="Kaalytics">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#10b981">
-    <title>FleetOps Pro | Gestion de Flotte IA -30% Couts | Kaalytics</title>
+    <title>FleetOps Pro | Gestion de Flotte IA | Kaalytics</title>
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://kaalytics.com/products/fleetops">
@@ -16,8 +16,8 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://kaalytics.com/products/fleetops">
-    <meta property="og:title" content="FleetOps Pro | Gestion de Flotte IA - Reduisez vos couts de 30%">
-    <meta property="og:description" content="Solution complete de gestion de flotte IA. 8 modules integres, maintenance predictive, ROI en 6 mois. Demo gratuite.">
+    <meta property="og:title" content="FleetOps Pro | Gestion de Flotte IA - Reduisez vos couts">
+    <meta property="og:description" content="Solution complete de gestion de flotte IA. 8 modules integres, maintenance predictive, ROI rapide. Demo gratuite.">
     <meta property="og:image" content="https://kaalytics.com/assets/images/og-fleetops.jpg">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="Kaalytics">
@@ -27,8 +27,8 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://kaalytics.com/products/fleetops">
-    <meta name="twitter:title" content="FleetOps Pro | Gestion de Flotte IA -30% Couts">
-    <meta name="twitter:description" content="Solution complete de gestion de flotte IA. 8 modules integres, ROI en 6 mois.">
+    <meta name="twitter:title" content="FleetOps Pro | Gestion de Flotte IA">
+    <meta name="twitter:description" content="Solution complete de gestion de flotte IA. 8 modules integres, ROI rapide.">
     <meta name="twitter:image" content="https://kaalytics.com/assets/images/og-fleetops.jpg">
     <meta name="twitter:site" content="@kaalytics">
 
@@ -672,6 +672,237 @@
             color: var(--text-secondary);
             margin-bottom: var(--space-xl);
         }
+
+        /* Video Dashboard Preview */
+        .video-dashboard {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-2xl);
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-dashboard__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-md) var(--space-lg);
+            background: var(--bg-tertiary);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .video-dashboard__tabs {
+            display: flex;
+            gap: var(--space-xs);
+        }
+
+        .video-dashboard__tab {
+            padding: var(--space-sm) var(--space-lg);
+            background: transparent;
+            border: none;
+            border-radius: var(--radius-lg);
+            font-size: var(--text-sm);
+            font-weight: 600;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .video-dashboard__tab:hover {
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+        }
+
+        .video-dashboard__tab--active {
+            background: var(--emerald);
+            color: white;
+        }
+
+        .video-dashboard__tab--active:hover {
+            background: var(--emerald);
+            color: white;
+        }
+
+        .video-dashboard__live {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            font-size: var(--text-xs);
+            color: var(--emerald);
+            font-weight: 600;
+        }
+
+        .video-dashboard__live-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--emerald);
+            border-radius: 50%;
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
+        }
+
+        .video-dashboard__body {
+            position: relative;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .video-dashboard__video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: all 0.6s ease;
+        }
+
+        .video-dashboard__video--active {
+            opacity: 1;
+        }
+
+        .video-dashboard__body:hover .video-dashboard__video--active {
+            transform: scale(1.05);
+        }
+
+        /* Overlay avec infos */
+        .video-dashboard__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.95) 0%,
+                rgba(0, 0, 0, 0.85) 35%,
+                rgba(0, 0, 0, 0.6) 60%,
+                rgba(0, 0, 0, 0.3) 100%
+            );
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: var(--space-2xl);
+            opacity: 0;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(4px);
+        }
+
+        .video-dashboard__body:hover .video-dashboard__overlay {
+            opacity: 1;
+        }
+
+        .video-dashboard__info {
+            transform: translateY(20px);
+            transition: transform 0.4s ease;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            padding: var(--space-xl);
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 550px;
+        }
+
+        .video-dashboard__body:hover .video-dashboard__info {
+            transform: translateY(0);
+        }
+
+        .video-dashboard__title {
+            font-size: var(--text-2xl);
+            font-weight: 800;
+            color: white;
+            margin-bottom: var(--space-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-dashboard__desc {
+            font-size: var(--text-base);
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: var(--space-lg);
+            line-height: 1.6;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-dashboard__cta {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-md) var(--space-xl);
+            background: var(--emerald);
+            color: white;
+            font-weight: 700;
+            font-size: var(--text-sm);
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            width: fit-content;
+        }
+
+        .video-dashboard__cta:hover {
+            background: #059669;
+            transform: translateX(5px);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+        }
+
+        /* Play button center */
+        .video-dashboard__play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(16, 185, 129, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s ease;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .video-dashboard__body:hover .video-dashboard__play {
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 0 40px rgba(16, 185, 129, 0.6);
+        }
+
+        .video-dashboard__play svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+            margin-left: 4px;
+        }
+
+        /* Stats bar */
+        .video-dashboard__stats {
+            display: flex;
+            gap: var(--space-xl);
+            padding: var(--space-lg) var(--space-xl);
+            background: var(--bg-tertiary);
+            border-top: 1px solid var(--border);
+        }
+
+        .video-dashboard__stat {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .video-dashboard__stat-value {
+            font-size: var(--text-xl);
+            font-weight: 800;
+            color: var(--emerald);
+        }
+
+        .video-dashboard__stat-label {
+            font-size: var(--text-xs);
+            color: var(--text-muted);
+        }
     </style>
 </head>
 <body>
@@ -712,25 +943,25 @@
                 </h1>
 
                 <p class="hero-fleet__subtitle">
-                    Vos gestionnaires jonglent entre <strong>5-10 systemes</strong> differents.
-                    FleetOps Pro unifie tout en une plateforme. <strong>Deploye en 2-4 semaines. ROI en 6 mois.</strong>
+                    Vos gestionnaires jonglent entre <strong>plusieurs systemes</strong> differents.
+                    FleetOps Pro unifie tout en une plateforme. <strong>Deploiement rapide. ROI rapide.</strong>
                 </p>
 
                 <div class="hero-fleet__stats">
                     <div class="hero-fleet__stat">
-                        <div class="hero-fleet__stat-value">-30%</div>
+                        <div class="hero-fleet__stat-value">↓</div>
                         <div class="hero-fleet__stat-label">Couts operationnels</div>
                     </div>
                     <div class="hero-fleet__stat">
-                        <div class="hero-fleet__stat-value">-40%</div>
+                        <div class="hero-fleet__stat-value">↓</div>
                         <div class="hero-fleet__stat-label">Temps d'arret</div>
                     </div>
                     <div class="hero-fleet__stat">
-                        <div class="hero-fleet__stat-value">+30%</div>
+                        <div class="hero-fleet__stat-value">↑</div>
                         <div class="hero-fleet__stat-label">Utilisation flotte</div>
                     </div>
                     <div class="hero-fleet__stat">
-                        <div class="hero-fleet__stat-value">-50%</div>
+                        <div class="hero-fleet__stat-value">↓</div>
                         <div class="hero-fleet__stat-label">Temps admin</div>
                     </div>
                 </div>
@@ -758,41 +989,160 @@
                 </div>
             </div>
 
-            <!-- Dashboard Preview -->
-            <div class="dashboard-preview">
-                <div class="dashboard-preview__header">
-                    <div class="dashboard-preview__tabs">
-                        <button class="dashboard-preview__tab dashboard-preview__tab--active">Carte</button>
-                        <button class="dashboard-preview__tab">Planning</button>
-                        <button class="dashboard-preview__tab">Alertes</button>
+            <!-- Video Dashboard Preview -->
+            <div class="video-dashboard">
+                <div class="video-dashboard__header">
+                    <div class="video-dashboard__tabs">
+                        <button class="video-dashboard__tab video-dashboard__tab--active" data-video="presentation">📍 Carte</button>
+                        <button class="video-dashboard__tab" data-video="planning">📅 Planning</button>
+                        <button class="video-dashboard__tab" data-video="supply">⚡ Supply Chain</button>
                     </div>
-                    <span style="font-size: var(--text-xs); color: var(--text-muted);">Live</span>
+                    <div class="video-dashboard__live">
+                        <span class="video-dashboard__live-dot"></span>
+                        Live Demo
+                    </div>
                 </div>
-                <div class="dashboard-preview__body">
-                    <div class="mini-map">
-                        <div class="mini-map__africa"></div>
-                        <div class="mini-map__vehicle"></div>
-                        <div class="mini-map__vehicle"></div>
-                        <div class="mini-map__vehicle"></div>
-                        <div class="mini-map__vehicle"></div>
-                        <div class="mini-map__vehicle"></div>
+
+                <div class="video-dashboard__body">
+                    <!-- Video 1: Présentation -->
+                    <video class="video-dashboard__video video-dashboard__video--active" data-video="presentation" autoplay muted loop playsinline>
+                        <source src="../assets/videos/modules/fleetop-pro/01_presentation.mp4" type="video/mp4">
+                    </video>
+                    <!-- Video 2: Planning -->
+                    <video class="video-dashboard__video" data-video="planning" muted loop playsinline>
+                        <source src="../assets/videos/modules/fleetop-pro/02_planning.mp4" type="video/mp4">
+                    </video>
+                    <!-- Video 3: Supply Chain -->
+                    <video class="video-dashboard__video" data-video="supply" muted loop playsinline>
+                        <source src="../assets/videos/modules/fleetop-pro/03_supply_chain.mp4" type="video/mp4">
+                    </video>
+
+                    <!-- Play button -->
+                    <div class="video-dashboard__play">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <div class="mini-stats">
-                        <div class="mini-stat">
-                            <div class="mini-stat__value">127</div>
-                            <div class="mini-stat__label">Vehicules actifs</div>
+
+                    <!-- Overlay avec infos (change selon onglet actif) -->
+                    <div class="video-dashboard__overlay">
+                        <div class="video-dashboard__info" data-info="presentation">
+                            <h3 class="video-dashboard__title">📍 Gestion de Parc & Géolocalisation</h3>
+                            <p class="video-dashboard__desc">Visualisez l'ensemble de votre flotte sur une carte interactive avec tracking GPS temps réel. Statut, heures moteur, affectation chantier — tout en un coup d'œil. Historique complet et traçabilité garantie.</p>
+                            <a href="#contact" class="video-dashboard__cta">
+                                Demander une démo gratuite
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
                         </div>
-                        <div class="mini-stat">
-                            <div class="mini-stat__value">98%</div>
-                            <div class="mini-stat__label">Disponibilite</div>
+                        <div class="video-dashboard__info" data-info="planning" style="display: none;">
+                            <h3 class="video-dashboard__title">📅 Planning Visuel & Affectations</h3>
+                            <p class="video-dashboard__desc">Timeline Gantt interactive : glissez-déposez machines et personnel sur vos chantiers. Détection automatique des conflits, vue par zone géographique. Optimisez l'utilisation de vos ressources et éliminez les temps morts.</p>
+                            <a href="#contact" class="video-dashboard__cta">
+                                Demander une démo gratuite
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
                         </div>
-                        <div class="mini-stat">
-                            <div class="mini-stat__value">3</div>
-                            <div class="mini-stat__label">Alertes</div>
+                        <div class="video-dashboard__info" data-info="supply" style="display: none;">
+                            <h3 class="video-dashboard__title">⚡ Supply Chain & Achats</h3>
+                            <p class="video-dashboard__desc">Workflow complet : Demande d'Achat → Appel d'Offres → Bon de Commande en quelques clics. Comparaison automatique des fournisseurs, gestion de stock temps réel, alertes de seuil. Économisez 25% sur vos achats.</p>
+                            <a href="#contact" class="video-dashboard__cta">
+                                Demander une démo gratuite
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
                         </div>
+                    </div>
+                </div>
+
+                <div class="video-dashboard__stats" data-stats="presentation">
+                    <div class="video-dashboard__stat">
+                        <span class="video-dashboard__stat-value">GPS</span>
+                        <span class="video-dashboard__stat-label">Tracking temps réel</span>
+                    </div>
+                    <div class="video-dashboard__stat">
+                        <span class="video-dashboard__stat-value">∞</span>
+                        <span class="video-dashboard__stat-label">Véhicules illimités</span>
+                    </div>
+                    <div class="video-dashboard__stat">
+                        <span class="video-dashboard__stat-value">Multi</span>
+                        <span class="video-dashboard__stat-label">Sites & Chantiers</span>
+                    </div>
+                    <div class="video-dashboard__stat">
+                        <span class="video-dashboard__stat-value">24/7</span>
+                        <span class="video-dashboard__stat-label">Visibilité totale</span>
+                    </div>
+                </div>
+                <div class="video-dashboard__stats" data-stats="planning" style="display: none;">
+                    <div class="video-dashboard__stat">
+                        <span class="video-dashboard__stat-value">Gantt</span>
+                        <span class="video-dashboard__stat-label">Timeline visuelle</span>
+                    </div>
+                    <div class="video-dashboard__stat">
+                        <span class="video-dashboard__stat-value">Auto</span>
+                        <span class="video-dashboard__stat-label">Détection conflits</span>
+                    </div>
+                    <div class="video-dashboard__stat">
+                        <span class="video-dashboard__stat-value">Drag</span>
+                        <span class="video-dashboard__stat-label">Drop & Affecter</span>
+                    </div>
+                    <div class="video-dashboard__stat">
+                        <span class="video-dashboard__stat-value">Sync</span>
+                        <span class="video-dashboard__stat-label">Temps réel</span>
+                    </div>
+                </div>
+                <div class="video-dashboard__stats" data-stats="supply" style="display: none;">
+                    <div class="video-dashboard__stat">
+                        <span class="video-dashboard__stat-value">DA</span>
+                        <span class="video-dashboard__stat-label">Demande d'achat</span>
+                    </div>
+                    <div class="video-dashboard__stat">
+                        <span class="video-dashboard__stat-value">RFQ</span>
+                        <span class="video-dashboard__stat-label">Appel d'offres</span>
+                    </div>
+                    <div class="video-dashboard__stat">
+                        <span class="video-dashboard__stat-value">PO</span>
+                        <span class="video-dashboard__stat-label">Bon de commande</span>
+                    </div>
+                    <div class="video-dashboard__stat">
+                        <span class="video-dashboard__stat-value">Stock</span>
+                        <span class="video-dashboard__stat-label">Gestion intégrée</span>
                     </div>
                 </div>
             </div>
+
+            <!-- Script pour switch entre onglets -->
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const tabs = document.querySelectorAll('.video-dashboard__tab');
+                    const videos = document.querySelectorAll('.video-dashboard__video');
+                    const infos = document.querySelectorAll('.video-dashboard__info');
+                    const stats = document.querySelectorAll('.video-dashboard__stats');
+
+                    tabs.forEach(tab => {
+                        tab.addEventListener('click', function() {
+                            const videoId = this.dataset.video;
+
+                            // Update tabs
+                            tabs.forEach(t => t.classList.remove('video-dashboard__tab--active'));
+                            this.classList.add('video-dashboard__tab--active');
+
+                            // Update videos
+                            videos.forEach(v => {
+                                v.classList.remove('video-dashboard__video--active');
+                                v.pause();
+                            });
+                            const activeVideo = document.querySelector(`.video-dashboard__video[data-video="${videoId}"]`);
+                            activeVideo.classList.add('video-dashboard__video--active');
+                            activeVideo.play();
+
+                            // Update infos
+                            infos.forEach(i => i.style.display = 'none');
+                            document.querySelector(`.video-dashboard__info[data-info="${videoId}"]`).style.display = 'block';
+
+                            // Update stats
+                            stats.forEach(s => s.style.display = 'none');
+                            document.querySelector(`.video-dashboard__stats[data-stats="${videoId}"]`).style.display = 'flex';
+                        });
+                    });
+                });
+            </script>
         </div>
     </section>
 
@@ -814,15 +1164,15 @@
                     <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-md);">
                         <li style="display: flex; align-items: flex-start; gap: var(--space-sm); color: var(--text-secondary);">
                             <span style="color: #ef4444; font-weight: bold;">✗</span>
-                            <span>Equipements disperses sur <strong>10+ chantiers</strong> sans visibilite</span>
+                            <span>Equipements disperses sur <strong>plusieurs chantiers</strong> sans visibilite</span>
                         </li>
                         <li style="display: flex; align-items: flex-start; gap: var(--space-sm); color: var(--text-secondary);">
                             <span style="color: #ef4444; font-weight: bold;">✗</span>
-                            <span>Maintenance <strong>reactive</strong> : pannes surprises a 15 000€</span>
+                            <span>Maintenance <strong>reactive</strong> : pannes surprises couteuses</span>
                         </li>
                         <li style="display: flex; align-items: flex-start; gap: var(--space-sm); color: var(--text-secondary);">
                             <span style="color: #ef4444; font-weight: bold;">✗</span>
-                            <span><strong>5-10 fichiers Excel</strong> pour suivre le parc</span>
+                            <span><strong>Multiples fichiers Excel</strong> pour suivre le parc</span>
                         </li>
                         <li style="display: flex; align-items: flex-start; gap: var(--space-sm); color: var(--text-secondary);">
                             <span style="color: #ef4444; font-weight: bold;">✗</span>
@@ -830,7 +1180,7 @@
                         </li>
                         <li style="display: flex; align-items: flex-start; gap: var(--space-sm); color: var(--text-secondary);">
                             <span style="color: #ef4444; font-weight: bold;">✗</span>
-                            <span><strong>50 000€/an</strong> gaspilles en temps d'arret evitables</span>
+                            <span><strong>Budget gaspille</strong> en temps d'arret evitables</span>
                         </li>
                     </ul>
                 </div>
@@ -853,23 +1203,23 @@
                     <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-md);">
                         <li style="display: flex; align-items: flex-start; gap: var(--space-sm); color: var(--text-secondary);">
                             <span style="color: var(--emerald); font-weight: bold;">✓</span>
-                            <span>Localisation <strong>GPS en 10 secondes</strong> max</span>
+                            <span>Localisation <strong>GPS instantanee</strong> de tout le parc</span>
                         </li>
                         <li style="display: flex; align-items: flex-start; gap: var(--space-sm); color: var(--text-secondary);">
                             <span style="color: var(--emerald); font-weight: bold;">✓</span>
-                            <span>IA <strong>predictive</strong> : alertes 2 semaines avant panne</span>
+                            <span>Maintenance <strong>predictive</strong> : alertes avant la panne</span>
                         </li>
                         <li style="display: flex; align-items: flex-start; gap: var(--space-sm); color: var(--text-secondary);">
                             <span style="color: var(--emerald); font-weight: bold;">✓</span>
-                            <span><strong>1 seule plateforme</strong> unifiee pour tout</span>
+                            <span><strong>Une seule plateforme</strong> unifiee pour tout gerer</span>
                         </li>
                         <li style="display: flex; align-items: flex-start; gap: var(--space-sm); color: var(--text-secondary);">
                             <span style="color: var(--emerald); font-weight: bold;">✓</span>
-                            <span>Tableaux de bord <strong>temps reel</strong>, pas fin de mois</span>
+                            <span>Tableaux de bord <strong>temps reel</strong>, decisions eclairees</span>
                         </li>
                         <li style="display: flex; align-items: flex-start; gap: var(--space-sm); color: var(--text-secondary);">
                             <span style="color: var(--emerald); font-weight: bold;">✓</span>
-                            <span>ROI visible en <strong>6 mois</strong> : -40% couts maintenance</span>
+                            <span>ROI rapide : <strong>reduction significative</strong> des couts</span>
                         </li>
                     </ul>
                 </div>
@@ -878,20 +1228,20 @@
             <!-- Stats impact -->
             <div style="display: flex; justify-content: center; gap: var(--space-3xl); margin-top: var(--space-3xl); flex-wrap: wrap;">
                 <div style="text-align: center;">
-                    <div style="font-size: var(--text-4xl); font-weight: 800; color: var(--emerald);">-70%</div>
+                    <div style="font-size: var(--text-4xl); font-weight: 800; color: var(--emerald);">↓</div>
                     <div style="font-size: var(--text-sm); color: var(--text-muted);">Pannes imprevues</div>
                 </div>
                 <div style="text-align: center;">
-                    <div style="font-size: var(--text-4xl); font-weight: 800; color: var(--emerald);">+35%</div>
+                    <div style="font-size: var(--text-4xl); font-weight: 800; color: var(--emerald);">↑</div>
                     <div style="font-size: var(--text-sm); color: var(--text-muted);">Taux utilisation</div>
                 </div>
                 <div style="text-align: center;">
-                    <div style="font-size: var(--text-4xl); font-weight: 800; color: var(--emerald);">2-4 sem</div>
+                    <div style="font-size: var(--text-4xl); font-weight: 800; color: var(--emerald);">Rapide</div>
                     <div style="font-size: var(--text-sm); color: var(--text-muted);">Deploiement</div>
                 </div>
                 <div style="text-align: center;">
                     <div style="font-size: var(--text-4xl); font-weight: 800; color: var(--emerald);">24/7</div>
-                    <div style="font-size: var(--text-sm); color: var(--text-muted);">Support Afrique</div>
+                    <div style="font-size: var(--text-sm); color: var(--text-muted);">Support disponible</div>
                 </div>
             </div>
         </div>
@@ -912,7 +1262,7 @@
                     <div class="module-card__number">01</div>
                     <h3 class="module-card__title">Parc</h3>
                     <p class="module-card__desc">Suivi temps reel de tous vos vehicules et equipements sur une carte interactive.</p>
-                    <span class="module-card__benefit">-60% temps localisation</span>
+                    <span class="module-card__benefit">Localisation instantanee</span>
                 </div>
 
                 <!-- Module 2: Planning -->
@@ -920,7 +1270,7 @@
                     <div class="module-card__number">02</div>
                     <h3 class="module-card__title">Planning</h3>
                     <p class="module-card__desc">Timeline visuelle drag & drop pour planifier vos ressources et detecter les conflits.</p>
-                    <span class="module-card__benefit">+35% productivite</span>
+                    <span class="module-card__benefit">Zero conflit planning</span>
                 </div>
 
                 <!-- Module 3: Maintenance -->
@@ -928,7 +1278,7 @@
                     <div class="module-card__number">03</div>
                     <h3 class="module-card__title">Maintenance</h3>
                     <p class="module-card__desc">Maintenance preventive intelligente basee sur l'usage reel de vos machines.</p>
-                    <span class="module-card__benefit">-40% couts maintenance</span>
+                    <span class="module-card__benefit">Anticiper les pannes</span>
                 </div>
 
                 <!-- Module 4: Supply Chain -->
@@ -936,7 +1286,7 @@
                     <div class="module-card__number">04</div>
                     <h3 class="module-card__title">Supply Chain</h3>
                     <p class="module-card__desc">Workflow automatise des achats et gestion des stocks en temps reel.</p>
-                    <span class="module-card__benefit">-30% couts achat</span>
+                    <span class="module-card__benefit">Achats optimises</span>
                 </div>
 
                 <!-- Module 5: Chantiers -->
@@ -944,7 +1294,7 @@
                     <div class="module-card__number">05</div>
                     <h3 class="module-card__title">Chantiers</h3>
                     <p class="module-card__desc">Suivi projets, budgets et ressources par chantier avec reporting client.</p>
-                    <span class="module-card__benefit">ROI visible par projet</span>
+                    <span class="module-card__benefit">Visibilite totale</span>
                 </div>
 
                 <!-- Module 6: Effectif -->
@@ -952,7 +1302,7 @@
                     <div class="module-card__number">06</div>
                     <h3 class="module-card__title">Effectif</h3>
                     <p class="module-card__desc">Allocation des competences et suivi productivite de vos equipes.</p>
-                    <span class="module-card__benefit">Meilleure allocation RH</span>
+                    <span class="module-card__benefit">Equipes optimisees</span>
                 </div>
 
                 <!-- Module 7: Produits -->
@@ -960,7 +1310,7 @@
                     <div class="module-card__number">07</div>
                     <h3 class="module-card__title">Produits</h3>
                     <p class="module-card__desc">Catalogue pieces detachees et compatibilites machines automatiques.</p>
-                    <span class="module-card__benefit">6000+ references</span>
+                    <span class="module-card__benefit">Catalogue complet</span>
                 </div>
 
                 <!-- Module 8: Dashboard -->
