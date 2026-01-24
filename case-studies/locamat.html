@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LocaMat: gestion optimisee de la location d'engins. Decouvrez comment FleetOps Pro a transforme leur activite de location de materiel BTP.">
+    <meta name="keywords" content="Etude de cas, LocaMat, FleetOps Pro, Location engins, Gestion de flotte, ROI, BTP">
+    <meta name="author" content="Kaalytics">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#10b981">
+    <title>Etude de Cas LocaMat : Location d'Engins Optimisee | Kaalytics</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kaalytics.com/case-studies/locamat">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://kaalytics.com/case-studies/locamat">
+    <meta property="og:title" content="LocaMat : Optimisation location avec FleetOps Pro">
+    <meta property="og:description" content="Comment LocaMat a optimise sa gestion de location d'engins BTP avec FleetOps Pro.">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Kaalytics">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+    <style>
+        .case-hero {
+            background: var(--bg-void);
+            padding: var(--space-4xl) 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .case-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(245, 158, 11, 0.15) 0%, transparent 50%);
+        }
+        .case-hero__content { position: relative; z-index: 1; }
+        .case-hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-xs) var(--space-md);
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid #f59e0b;
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            color: #f59e0b;
+            margin-bottom: var(--space-xl);
+        }
+        .case-hero__title { font-size: var(--text-4xl); font-weight: 800; margin-bottom: var(--space-lg); max-width: 700px; }
+        .case-hero__subtitle { font-size: var(--text-xl); color: var(--text-secondary); margin-bottom: var(--space-2xl); max-width: 600px; }
+        .case-hero__metrics { display: flex; gap: var(--space-2xl); flex-wrap: wrap; }
+        .case-hero__metric { text-align: left; }
+        .case-hero__metric-value { font-size: var(--text-4xl); font-weight: 800; color: #f59e0b; }
+        .case-hero__metric-label { font-size: var(--text-sm); color: var(--text-muted); }
+        .case-content { background: var(--bg-primary); padding: var(--space-4xl) 0; }
+        .case-content__grid { display: grid; grid-template-columns: 2fr 1fr; gap: var(--space-3xl); }
+        @media (max-width: 968px) { .case-content__grid { grid-template-columns: 1fr; } }
+        .case-section { margin-bottom: var(--space-3xl); }
+        .case-section__title { font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg); display: flex; align-items: center; gap: var(--space-md); }
+        .case-section__title-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: rgba(245, 158, 11, 0.15); border-radius: var(--radius-lg); font-size: 1.25rem; }
+        .case-section__content { color: var(--text-secondary); line-height: 1.8; }
+        .case-section__content p { margin-bottom: var(--space-lg); }
+        .case-section__content ul { list-style: none; padding: 0; }
+        .case-section__content li { padding: var(--space-sm) 0; padding-left: var(--space-xl); position: relative; }
+        .case-section__content li::before { content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 8px; height: 8px; background: #f59e0b; border-radius: 50%; }
+        .case-sidebar { position: sticky; top: 100px; }
+        .case-sidebar__card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-2xl); padding: var(--space-xl); margin-bottom: var(--space-xl); }
+        .case-sidebar__title { font-size: var(--text-lg); font-weight: 600; margin-bottom: var(--space-lg); }
+        .case-sidebar__item { display: flex; justify-content: space-between; padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-subtle); }
+        .case-sidebar__item:last-child { border-bottom: none; }
+        .case-sidebar__label { color: var(--text-muted); font-size: var(--text-sm); }
+        .case-sidebar__value { font-weight: 600; font-size: var(--text-sm); }
+        .case-quote { background: linear-gradient(135deg, var(--bg-card) 0%, rgba(245, 158, 11, 0.05) 100%); border: 1px solid #f59e0b; border-radius: var(--radius-2xl); padding: var(--space-2xl); margin: var(--space-2xl) 0; }
+        .case-quote__text { font-size: var(--text-xl); font-style: italic; color: var(--text-primary); margin-bottom: var(--space-lg); line-height: 1.6; }
+        .case-quote__author { display: flex; align-items: center; gap: var(--space-md); }
+        .case-quote__avatar { width: 48px; height: 48px; background: #f59e0b; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: white; }
+        .case-quote__name { font-weight: 600; }
+        .case-quote__role { font-size: var(--text-sm); color: var(--text-muted); }
+        .case-results { background: var(--bg-secondary); padding: var(--space-4xl) 0; }
+        .case-results__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-xl); }
+        @media (max-width: 968px) { .case-results__grid { grid-template-columns: repeat(2, 1fr); } }
+        .case-result-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-xl); text-align: center; }
+        .case-result-card__value { font-size: var(--text-3xl); font-weight: 800; color: #f59e0b; margin-bottom: var(--space-xs); }
+        .case-result-card__label { font-size: var(--text-sm); color: var(--text-secondary); }
+        .case-cta { background: var(--bg-void); padding: var(--space-4xl) 0; text-align: center; }
+        .case-cta__title { font-size: var(--text-3xl); font-weight: 800; margin-bottom: var(--space-lg); }
+        .case-cta__description { color: var(--text-secondary); margin-bottom: var(--space-2xl); max-width: 500px; margin-left: auto; margin-right: auto; }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-container" data-navbar="full" data-navbar-style="solid"></div>
+
+    <!-- Hero -->
+    <section class="case-hero">
+        <div class="container case-hero__content">
+            <span class="case-hero__badge">Case Study - Location</span>
+            <h1 class="case-hero__title">Comment LocaMat a ameliore son taux d'utilisation et reduit les litiges clients</h1>
+            <p class="case-hero__subtitle">
+                D'une gestion papier a une plateforme digitale complete pour la location d'engins BTP.
+            </p>
+            <div class="case-hero__metrics">
+                <div class="case-hero__metric">
+                    <div class="case-hero__metric-value">Amelioration</div>
+                    <div class="case-hero__metric-label">Taux d'utilisation</div>
+                </div>
+                <div class="case-hero__metric">
+                    <div class="case-hero__metric-value">Reduction</div>
+                    <div class="case-hero__metric-label">Litiges facturation</div>
+                </div>
+                <div class="case-hero__metric">
+                    <div class="case-hero__metric-value">Reduction</div>
+                    <div class="case-hero__metric-label">Vols / utilisations abusives</div>
+                </div>
+                <div class="case-hero__metric">
+                    <div class="case-hero__metric-value">Rapide</div>
+                    <div class="case-hero__metric-label">ROI atteint</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="case-content">
+        <div class="container">
+            <div class="case-content__grid">
+                <div class="case-content__main">
+                    <!-- Le Defi -->
+                    <div class="case-section">
+                        <h2 class="case-section__title">
+                            <span class="case-section__title-icon">01</span>
+                            Le defi
+                        </h2>
+                        <div class="case-section__content">
+                            <p>
+                                LocaMat, specialiste de la location d'engins et de materiel BTP dans la region de Rabat-Sale-Kenitra, gerait un parc de <strong>85 equipements</strong> (pelles, chargeuses, nacelles, compresseurs) avec des processus manuels.
+                            </p>
+                            <p>Les problemes rencontres :</p>
+                            <ul>
+                                <li>Pas de visibilite sur l'emplacement des engins loues</li>
+                                <li>Litiges frequents sur les heures d'utilisation facturees</li>
+                                <li>Vols et utilisations non autorisees (nuits, week-ends)</li>
+                                <li>Engins inutilises pendant que d'autres clients attendent</li>
+                                <li>Retours d'engins non signales, immobilisation du parc</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- La Solution -->
+                    <div class="case-section">
+                        <h2 class="case-section__title">
+                            <span class="case-section__title-icon">02</span>
+                            La solution
+                        </h2>
+                        <div class="case-section__content">
+                            <p>
+                                Deploiement de <strong>FleetOps Pro</strong> avec des fonctionnalites specifiques a la location :
+                            </p>
+                            <ul>
+                                <li><strong>Localisation GPS</strong> : Savoir ou sont tous les engins en temps reel</li>
+                                <li><strong>Compteur horaire connecte</strong> : Heures moteur exactes pour la facturation</li>
+                                <li><strong>Geofencing</strong> : Alertes si l'engin quitte le chantier autorise</li>
+                                <li><strong>Alertes horaires</strong> : Detection des utilisations hors contrat (nuit, week-end)</li>
+                                <li><strong>Planning de reservation</strong> : Visualisation des disponibilites</li>
+                            </ul>
+                            <p>
+                                Chaque engin a ete equipe d'un boitier autonome (batterie longue duree) adapte aux conditions de chantier.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Quote -->
+                    <div class="case-quote">
+                        <p class="case-quote__text">
+                            "Nos clients savent maintenant que nous suivons les heures exactes. Fini les discussions sur la facturation. Et surtout, nous avons recupere des engins qui etaient 'oublies' sur des chantiers depuis des semaines."
+                        </p>
+                        <div class="case-quote__author">
+                            <div class="case-quote__avatar">KM</div>
+                            <div>
+                                <div class="case-quote__name">Karim Mansouri</div>
+                                <div class="case-quote__role">Gerant, LocaMat</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Les Resultats -->
+                    <div class="case-section">
+                        <h2 class="case-section__title">
+                            <span class="case-section__title-icon">03</span>
+                            Les resultats apres 6 mois
+                        </h2>
+                        <div class="case-section__content">
+                            <ul>
+                                <li><strong>Amelioration du taux d'utilisation</strong> grace a une meilleure visibilite sur les disponibilites</li>
+                                <li><strong>Reduction significative des litiges</strong> grace aux donnees objectives (heures, localisation)</li>
+                                <li><strong>Elimination des utilisations abusives</strong> (vols, usages hors contrat)</li>
+                                <li><strong>Recuperation d'engins</strong> oublies sur d'anciens chantiers</li>
+                                <li><strong>Facturation automatisee</strong> basee sur les heures reelles</li>
+                            </ul>
+                            <p>
+                                Le chiffre d'affaires a augmente grace a une meilleure rotation des equipements, et les pertes liees aux litiges et vols ont ete considerablement reduites.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="case-sidebar">
+                    <div class="case-sidebar__card">
+                        <h3 class="case-sidebar__title">A propos de LocaMat</h3>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__label">Secteur</span>
+                            <span class="case-sidebar__value">Location BTP</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__label">Localisation</span>
+                            <span class="case-sidebar__value">Rabat-Sale-Kenitra</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__label">Parc</span>
+                            <span class="case-sidebar__value">85 equipements</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__label">Employes</span>
+                            <span class="case-sidebar__value">22</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__label">Clients actifs</span>
+                            <span class="case-sidebar__value">150+</span>
+                        </div>
+                    </div>
+
+                    <div class="case-sidebar__card">
+                        <h3 class="case-sidebar__title">Fonctionnalites cles</h3>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__value">GPS temps reel</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__value">Compteur horaire</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__value">Geofencing</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__value">Alertes utilisation</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__value">Planning reservations</span>
+                        </div>
+                    </div>
+
+                    <div class="case-sidebar__card" style="background: linear-gradient(135deg, var(--bg-card) 0%, rgba(245, 158, 11, 0.1) 100%); border-color: #f59e0b;">
+                        <h3 class="case-sidebar__title" style="color: #f59e0b;">Loueur d'engins ?</h3>
+                        <p style="color: var(--text-secondary); font-size: var(--text-sm); margin-bottom: var(--space-lg);">
+                            Decouvrez comment optimiser votre activite de location.
+                        </p>
+                        <a href="../demo.html" class="btn btn-primary btn-sm" style="width: 100%;">
+                            Demander une demo
+                        </a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Grid -->
+    <section class="case-results">
+        <div class="container">
+            <div class="section-header section-header--center" style="margin-bottom: var(--space-3xl);">
+                <span class="section-label">Resultats mesures</span>
+                <h2 class="section-title">L'impact en chiffres</h2>
+            </div>
+            <div class="case-results__grid">
+                <div class="case-result-card">
+                    <div class="case-result-card__value">Amelioration</div>
+                    <div class="case-result-card__label">Taux d'utilisation</div>
+                </div>
+                <div class="case-result-card">
+                    <div class="case-result-card__value">Reduction</div>
+                    <div class="case-result-card__label">Litiges facturation</div>
+                </div>
+                <div class="case-result-card">
+                    <div class="case-result-card__value">Zero</div>
+                    <div class="case-result-card__label">Vol depuis deploiement</div>
+                </div>
+                <div class="case-result-card">
+                    <div class="case-result-card__value">Significatives</div>
+                    <div class="case-result-card__label">Economies annuelles</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="case-cta">
+        <div class="container">
+            <h2 class="case-cta__title">Optimisez votre activite de location</h2>
+            <p class="case-cta__description">
+                Demandez une demonstration et decouvrez comment FleetOps Pro peut transformer votre gestion de parc locatif.
+            </p>
+            <div class="btn-group" style="justify-content: center;">
+                <a href="../demo.html" class="btn btn-primary btn-lg">Demander une demo</a>
+                <a href="../industries/location.html" class="btn btn-secondary btn-lg">En savoir plus</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 Kaalytics. Tous droits reserves.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Navbar Loader -->
+    <script src="../components/navbar/navbar-loader.js"></script>
+</body>
+</html>

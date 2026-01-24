@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Checklist complete de maintenance preventive pour flottes de vehicules. Points de controle, periodicites et bonnes pratiques.">
+    <meta name="keywords" content="checklist maintenance, maintenance preventive, entretien vehicule, controle flotte, maintenance flotte">
+    <meta name="author" content="Kaalytics">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#10b981">
+    <title>Checklist Maintenance Preventive | Kaalytics</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kaalytics.com/guides/checklist-maintenance">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://kaalytics.com/guides/checklist-maintenance">
+    <meta property="og:title" content="Checklist Maintenance Preventive">
+    <meta property="og:description" content="Checklist complete pour la maintenance preventive de votre flotte.">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Kaalytics">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/industries.css">
+
+    <style>
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+            padding: var(--space-md);
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-sm);
+        }
+        .checklist-item__checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-sm);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .checklist-item__content {
+            flex: 1;
+        }
+        .checklist-item__title {
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+        }
+        .checklist-item__desc {
+            color: var(--text-secondary);
+            font-size: var(--text-sm);
+        }
+        .checklist-section {
+            margin-bottom: var(--space-3xl);
+        }
+        .checklist-section__header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+        .checklist-section__badge {
+            padding: var(--space-xs) var(--space-sm);
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--emerald);
+            border-radius: var(--radius-sm);
+            font-size: var(--text-xs);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-container" data-navbar="full" data-navbar-style="solid"></div>
+
+    <!-- Hero -->
+    <header class="industry-hero" style="--industry-color: #10b981; min-height: auto; padding: var(--space-4xl) 0;">
+        <div class="container">
+            <div style="max-width: 800px;">
+                <a href="index.html" style="display: inline-flex; align-items: center; gap: var(--space-xs); color: var(--text-muted); text-decoration: none; margin-bottom: var(--space-lg);">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    Retour aux guides
+                </a>
+                <span class="industry-hero__badge">Outil pratique</span>
+                <h1 style="font-size: var(--text-4xl); font-weight: 800; line-height: 1.2; margin-bottom: var(--space-lg);">
+                    Checklist Maintenance Preventive
+                </h1>
+                <p style="color: var(--text-secondary); font-size: var(--text-lg); margin-bottom: var(--space-xl);">
+                    Liste complete des points de controle pour assurer la maintenance preventive de votre flotte. Utilisez cette checklist pour vos inspections quotidiennes, hebdomadaires et mensuelles.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <article style="padding: var(--space-4xl) 0; background: var(--bg-secondary);">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+
+                <!-- Controles quotidiens -->
+                <section class="checklist-section">
+                    <div class="checklist-section__header">
+                        <h2 style="font-size: var(--text-2xl); font-weight: 700;">Controles quotidiens</h2>
+                        <span class="checklist-section__badge">Avant chaque depart</span>
+                    </div>
+                    <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-xl);">
+                        Ces verifications doivent etre effectuees chaque jour par le conducteur avant de prendre la route.
+                    </p>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Niveau d'huile moteur</div>
+                            <div class="checklist-item__desc">Verifier le niveau a froid, completer si necessaire. Controler la couleur (noircissement anormal = vidange a prevoir).</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Niveau liquide de refroidissement</div>
+                            <div class="checklist-item__desc">Verifier dans le vase d'expansion a froid. Ne jamais ouvrir a chaud.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Etat des pneumatiques</div>
+                            <div class="checklist-item__desc">Pression visuelle, usure, dommages apparents (coupures, hernies). Controler aussi la roue de secours.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Eclairage</div>
+                            <div class="checklist-item__desc">Feux de position, croisement, route, clignotants, feux stop, feux de recul.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Vitrage et retroviseurs</div>
+                            <div class="checklist-item__desc">Proprete, absence de fissures, reglage des retroviseurs.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Niveau lave-glace</div>
+                            <div class="checklist-item__desc">Completer si necessaire, verifier le fonctionnement des essuie-glaces.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Fuites sous le vehicule</div>
+                            <div class="checklist-item__desc">Verifier l'absence de traces d'huile, de liquide de refroidissement ou de carburant.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Documents de bord</div>
+                            <div class="checklist-item__desc">Carte grise, assurance, controle technique, carnet d'entretien.</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Controles hebdomadaires -->
+                <section class="checklist-section">
+                    <div class="checklist-section__header">
+                        <h2 style="font-size: var(--text-2xl); font-weight: 700;">Controles hebdomadaires</h2>
+                        <span class="checklist-section__badge">Chaque semaine</span>
+                    </div>
+                    <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-xl);">
+                        Verifications plus approfondies a effectuer une fois par semaine.
+                    </p>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Pression des pneumatiques</div>
+                            <div class="checklist-item__desc">Controler a froid avec un manometre. Se referer aux preconisations constructeur (etiquette portiere).</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Niveau liquide de frein</div>
+                            <div class="checklist-item__desc">Doit etre entre min et max. Une baisse importante peut indiquer une fuite ou une usure des plaquettes.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Niveau liquide de direction assistee</div>
+                            <div class="checklist-item__desc">Si applicable (certains vehicules ont une direction electrique).</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Etat de la batterie</div>
+                            <div class="checklist-item__desc">Bornes propres, absence de corrosion, fixation correcte.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Courroies</div>
+                            <div class="checklist-item__desc">Etat visuel, tension, absence de craquelures ou d'effilochage.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Filtre a air</div>
+                            <div class="checklist-item__desc">Verification visuelle. Nettoyer ou remplacer si encrassement important.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Proprete generale</div>
+                            <div class="checklist-item__desc">Interieur et exterieur du vehicule. Un vehicule propre reflete une image professionnelle.</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Controles mensuels -->
+                <section class="checklist-section">
+                    <div class="checklist-section__header">
+                        <h2 style="font-size: var(--text-2xl); font-weight: 700;">Controles mensuels</h2>
+                        <span class="checklist-section__badge">Chaque mois</span>
+                    </div>
+                    <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-xl);">
+                        Inspections mensuelles pour prevenir les problemes avant qu'ils ne deviennent critiques.
+                    </p>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Epaisseur des plaquettes de frein</div>
+                            <div class="checklist-item__desc">Minimum 3mm. Prevoir remplacement si proche du temoin d'usure.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Profondeur de sculpture des pneus</div>
+                            <div class="checklist-item__desc">Minimum legal : 1,6mm. Recommande : remplacement a 3mm. Utiliser un temoin d'usure ou une jauge.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Suspension</div>
+                            <div class="checklist-item__desc">Test de rebond aux quatre coins. Verification visuelle des amortisseurs (fuites).</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Direction</div>
+                            <div class="checklist-item__desc">Jeu dans le volant, bruits anormaux, durete.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Climatisation</div>
+                            <div class="checklist-item__desc">Fonctionnement, odeurs anormales, efficacite du refroidissement.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Equipements de securite</div>
+                            <div class="checklist-item__desc">Triangle, gilet, extincteur (date de validite), trousse de secours.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Carrosserie</div>
+                            <div class="checklist-item__desc">Relever les dommages (rayures, bosses), verifier l'absence de rouille.</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Periodicites entretien -->
+                <section class="checklist-section">
+                    <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg);">Periodicites d'entretien</h2>
+                    <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-xl);">
+                        Rappel des intervalles d'entretien standards (a adapter selon les preconisations constructeur).
+                    </p>
+
+                    <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-xl);">
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr style="border-bottom: 1px solid var(--border);">
+                                    <th style="text-align: left; padding: var(--space-md); font-weight: 600;">Operation</th>
+                                    <th style="text-align: left; padding: var(--space-md); font-weight: 600;">Periodicite</th>
+                                </tr>
+                            </thead>
+                            <tbody style="color: var(--text-secondary);">
+                                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                    <td style="padding: var(--space-md);">Vidange huile moteur</td>
+                                    <td style="padding: var(--space-md);">15 000 - 30 000 km ou 1 an</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                    <td style="padding: var(--space-md);">Filtre a huile</td>
+                                    <td style="padding: var(--space-md);">A chaque vidange</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                    <td style="padding: var(--space-md);">Filtre a air</td>
+                                    <td style="padding: var(--space-md);">30 000 - 60 000 km</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                    <td style="padding: var(--space-md);">Filtre a carburant</td>
+                                    <td style="padding: var(--space-md);">40 000 - 80 000 km</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                    <td style="padding: var(--space-md);">Filtre habitacle</td>
+                                    <td style="padding: var(--space-md);">15 000 - 30 000 km ou 1 an</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                    <td style="padding: var(--space-md);">Liquide de frein</td>
+                                    <td style="padding: var(--space-md);">2 ans</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                    <td style="padding: var(--space-md);">Liquide de refroidissement</td>
+                                    <td style="padding: var(--space-md);">4 - 5 ans ou 100 000 km</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                    <td style="padding: var(--space-md);">Courroie de distribution</td>
+                                    <td style="padding: var(--space-md);">80 000 - 160 000 km ou 5-10 ans</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: var(--space-md);">Batterie</td>
+                                    <td style="padding: var(--space-md);">4 - 5 ans</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Conseils -->
+                <section>
+                    <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg);">Conseils pratiques</h2>
+                    <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-xl);">
+                        <ul style="color: var(--text-secondary); line-height: 1.8; padding-left: var(--space-xl);">
+                            <li style="margin-bottom: var(--space-sm);">Conservez un carnet de bord pour chaque vehicule</li>
+                            <li style="margin-bottom: var(--space-sm);">Photographiez les anomalies constatees</li>
+                            <li style="margin-bottom: var(--space-sm);">Signalez immediatement tout probleme au responsable de flotte</li>
+                            <li style="margin-bottom: var(--space-sm);">Respectez les preconisations constructeur</li>
+                            <li>Utilisez un logiciel de gestion pour automatiser les rappels</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </article>
+
+    <!-- CTA -->
+    <section class="industry-cta">
+        <div class="container">
+            <h2 class="industry-cta__title">Automatisez votre maintenance</h2>
+            <p class="industry-cta__desc">
+                FleetOps Pro genere automatiquement les alertes de maintenance en fonction des kilometres et des heures moteur.
+            </p>
+            <div class="btn-group" style="justify-content: center;">
+                <a href="../demo.html" class="btn btn-primary btn-lg">Demander une demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 Kaalytics. Tous droits reserves.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Navbar Loader -->
+    <script src="../components/navbar/navbar-loader.js"></script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TransMaroc: optimisation des tournees et reduction du carburant. Decouvrez comment FleetOps Pro a transforme leur flotte de transport routier.">
+    <meta name="keywords" content="Etude de cas, TransMaroc, FleetOps Pro, Transport, Gestion de flotte, ROI, Carburant">
+    <meta name="author" content="Kaalytics">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#10b981">
+    <title>Etude de Cas TransMaroc : Optimisation Transport | Kaalytics</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kaalytics.com/case-studies/transmaroc">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://kaalytics.com/case-studies/transmaroc">
+    <meta property="og:title" content="TransMaroc : Optimisation flotte avec FleetOps Pro">
+    <meta property="og:description" content="Comment TransMaroc a optimise ses tournees et reduit sa consommation de carburant avec FleetOps Pro.">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Kaalytics">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+    <style>
+        .case-hero {
+            background: var(--bg-void);
+            padding: var(--space-4xl) 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .case-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+        }
+        .case-hero__content { position: relative; z-index: 1; }
+        .case-hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-xs) var(--space-md);
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid #3b82f6;
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            color: #3b82f6;
+            margin-bottom: var(--space-xl);
+        }
+        .case-hero__title { font-size: var(--text-4xl); font-weight: 800; margin-bottom: var(--space-lg); max-width: 700px; }
+        .case-hero__subtitle { font-size: var(--text-xl); color: var(--text-secondary); margin-bottom: var(--space-2xl); max-width: 600px; }
+        .case-hero__metrics { display: flex; gap: var(--space-2xl); flex-wrap: wrap; }
+        .case-hero__metric { text-align: left; }
+        .case-hero__metric-value { font-size: var(--text-4xl); font-weight: 800; color: #3b82f6; }
+        .case-hero__metric-label { font-size: var(--text-sm); color: var(--text-muted); }
+        .case-content { background: var(--bg-primary); padding: var(--space-4xl) 0; }
+        .case-content__grid { display: grid; grid-template-columns: 2fr 1fr; gap: var(--space-3xl); }
+        @media (max-width: 968px) { .case-content__grid { grid-template-columns: 1fr; } }
+        .case-section { margin-bottom: var(--space-3xl); }
+        .case-section__title { font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg); display: flex; align-items: center; gap: var(--space-md); }
+        .case-section__title-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: rgba(59, 130, 246, 0.15); border-radius: var(--radius-lg); font-size: 1.25rem; }
+        .case-section__content { color: var(--text-secondary); line-height: 1.8; }
+        .case-section__content p { margin-bottom: var(--space-lg); }
+        .case-section__content ul { list-style: none; padding: 0; }
+        .case-section__content li { padding: var(--space-sm) 0; padding-left: var(--space-xl); position: relative; }
+        .case-section__content li::before { content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 8px; height: 8px; background: #3b82f6; border-radius: 50%; }
+        .case-sidebar { position: sticky; top: 100px; }
+        .case-sidebar__card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-2xl); padding: var(--space-xl); margin-bottom: var(--space-xl); }
+        .case-sidebar__title { font-size: var(--text-lg); font-weight: 600; margin-bottom: var(--space-lg); }
+        .case-sidebar__item { display: flex; justify-content: space-between; padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-subtle); }
+        .case-sidebar__item:last-child { border-bottom: none; }
+        .case-sidebar__label { color: var(--text-muted); font-size: var(--text-sm); }
+        .case-sidebar__value { font-weight: 600; font-size: var(--text-sm); }
+        .case-quote { background: linear-gradient(135deg, var(--bg-card) 0%, rgba(59, 130, 246, 0.05) 100%); border: 1px solid #3b82f6; border-radius: var(--radius-2xl); padding: var(--space-2xl); margin: var(--space-2xl) 0; }
+        .case-quote__text { font-size: var(--text-xl); font-style: italic; color: var(--text-primary); margin-bottom: var(--space-lg); line-height: 1.6; }
+        .case-quote__author { display: flex; align-items: center; gap: var(--space-md); }
+        .case-quote__avatar { width: 48px; height: 48px; background: #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: white; }
+        .case-quote__name { font-weight: 600; }
+        .case-quote__role { font-size: var(--text-sm); color: var(--text-muted); }
+        .case-results { background: var(--bg-secondary); padding: var(--space-4xl) 0; }
+        .case-results__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-xl); }
+        @media (max-width: 968px) { .case-results__grid { grid-template-columns: repeat(2, 1fr); } }
+        .case-result-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-xl); text-align: center; }
+        .case-result-card__value { font-size: var(--text-3xl); font-weight: 800; color: #3b82f6; margin-bottom: var(--space-xs); }
+        .case-result-card__label { font-size: var(--text-sm); color: var(--text-secondary); }
+        .case-cta { background: var(--bg-void); padding: var(--space-4xl) 0; text-align: center; }
+        .case-cta__title { font-size: var(--text-3xl); font-weight: 800; margin-bottom: var(--space-lg); }
+        .case-cta__description { color: var(--text-secondary); margin-bottom: var(--space-2xl); max-width: 500px; margin-left: auto; margin-right: auto; }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-container" data-navbar="full" data-navbar-style="solid"></div>
+
+    <!-- Hero -->
+    <section class="case-hero">
+        <div class="container case-hero__content">
+            <span class="case-hero__badge">Case Study - Transport</span>
+            <h1 class="case-hero__title">Comment TransMaroc a optimise ses tournees et reduit sa consommation carburant</h1>
+            <p class="case-hero__subtitle">
+                D'une gestion approximative a une flotte de transport 100% tracee et optimisee avec FleetOps Pro.
+            </p>
+            <div class="case-hero__metrics">
+                <div class="case-hero__metric">
+                    <div class="case-hero__metric-value">Reduction</div>
+                    <div class="case-hero__metric-label">Consommation carburant</div>
+                </div>
+                <div class="case-hero__metric">
+                    <div class="case-hero__metric-value">Amelioration</div>
+                    <div class="case-hero__metric-label">Ponctualite livraisons</div>
+                </div>
+                <div class="case-hero__metric">
+                    <div class="case-hero__metric-value">Reduction</div>
+                    <div class="case-hero__metric-label">Kilometres a vide</div>
+                </div>
+                <div class="case-hero__metric">
+                    <div class="case-hero__metric-value">Rapide</div>
+                    <div class="case-hero__metric-label">ROI atteint</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="case-content">
+        <div class="container">
+            <div class="case-content__grid">
+                <div class="case-content__main">
+                    <!-- Le Defi -->
+                    <div class="case-section">
+                        <h2 class="case-section__title">
+                            <span class="case-section__title-icon">01</span>
+                            Le defi
+                        </h2>
+                        <div class="case-section__content">
+                            <p>
+                                TransMaroc, entreprise de transport routier operant sur l'axe Casablanca-Tanger-Agadir, gerait une flotte de <strong>45 camions et semi-remorques</strong> sans visibilite en temps reel sur ses operations.
+                            </p>
+                            <p>Les problemes rencontres :</p>
+                            <ul>
+                                <li>Consommation de carburant excessive et difficilement explicable</li>
+                                <li>Impossibilite de donner un ETA precis aux clients</li>
+                                <li>Kilometres a vide importants entre les missions</li>
+                                <li>Comportements de conduite non optimaux (vitesse, ralenti)</li>
+                                <li>Retards frequents impactant la satisfaction client</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- La Solution -->
+                    <div class="case-section">
+                        <h2 class="case-section__title">
+                            <span class="case-section__title-icon">02</span>
+                            La solution
+                        </h2>
+                        <div class="case-section__content">
+                            <p>
+                                Deploiement de <strong>FleetOps Pro</strong> avec une approche centree sur l'optimisation des operations :
+                            </p>
+                            <ul>
+                                <li><strong>GPS temps reel</strong> : Localisation de tous les camions avec mise a jour continue</li>
+                                <li><strong>Score eco-conduite</strong> : Notation des conducteurs sur accelerations, freinages, vitesse</li>
+                                <li><strong>Optimisation itineraires</strong> : Calcul des trajets les plus efficaces</li>
+                                <li><strong>ETA dynamique</strong> : Heure d'arrivee estimee mise a jour en temps reel</li>
+                                <li><strong>Alertes carburant</strong> : Detection des anomalies de consommation</li>
+                            </ul>
+                            <p>
+                                L'installation des boitiers telematiques a ete realisee progressivement sur 3 semaines, sans interruption d'activite.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Quote -->
+                    <div class="case-quote">
+                        <p class="case-quote__text">
+                            "Nos clients nous appellent maintenant pour nous feliciter sur notre ponctualite. Ils recoivent des notifications automatiques avec l'ETA de leur livraison. C'est un vrai avantage concurrentiel."
+                        </p>
+                        <div class="case-quote__author">
+                            <div class="case-quote__avatar">AE</div>
+                            <div>
+                                <div class="case-quote__name">Ahmed El Fassi</div>
+                                <div class="case-quote__role">Directeur General, TransMaroc</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Les Resultats -->
+                    <div class="case-section">
+                        <h2 class="case-section__title">
+                            <span class="case-section__title-icon">03</span>
+                            Les resultats apres 8 mois
+                        </h2>
+                        <div class="case-section__content">
+                            <ul>
+                                <li><strong>Reduction significative du carburant</strong> grace a l'eco-conduite et l'optimisation des itineraires</li>
+                                <li><strong>Amelioration de la ponctualite</strong> des livraisons</li>
+                                <li><strong>Reduction des kilometres a vide</strong> grace a une meilleure planification</li>
+                                <li><strong>Meilleure satisfaction client</strong> avec les ETA dynamiques</li>
+                                <li><strong>Primes conducteurs</strong> basees sur les scores eco-conduite</li>
+                            </ul>
+                            <p>
+                                Les economies realisees sur le carburant ont permis de rentabiliser l'investissement rapidement. TransMaroc a egalement gagne de nouveaux contrats grace a sa capacite de tracking en temps reel.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="case-sidebar">
+                    <div class="case-sidebar__card">
+                        <h3 class="case-sidebar__title">A propos de TransMaroc</h3>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__label">Secteur</span>
+                            <span class="case-sidebar__value">Transport routier</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__label">Couverture</span>
+                            <span class="case-sidebar__value">National (Maroc)</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__label">Taille flotte</span>
+                            <span class="case-sidebar__value">45 vehicules</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__label">Employes</span>
+                            <span class="case-sidebar__value">65</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__label">Conducteurs</span>
+                            <span class="case-sidebar__value">52</span>
+                        </div>
+                    </div>
+
+                    <div class="case-sidebar__card">
+                        <h3 class="case-sidebar__title">Fonctionnalites cles</h3>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__value">GPS temps reel</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__value">Score eco-conduite</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__value">ETA dynamique</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__value">Alertes carburant</span>
+                        </div>
+                        <div class="case-sidebar__item">
+                            <span class="case-sidebar__value">Rapports consommation</span>
+                        </div>
+                    </div>
+
+                    <div class="case-sidebar__card" style="background: linear-gradient(135deg, var(--bg-card) 0%, rgba(59, 130, 246, 0.1) 100%); border-color: #3b82f6;">
+                        <h3 class="case-sidebar__title" style="color: #3b82f6;">Transporteur ?</h3>
+                        <p style="color: var(--text-secondary); font-size: var(--text-sm); margin-bottom: var(--space-lg);">
+                            Decouvrez comment optimiser vos operations de transport.
+                        </p>
+                        <a href="../demo.html" class="btn btn-primary btn-sm" style="width: 100%;">
+                            Demander une demo
+                        </a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Grid -->
+    <section class="case-results">
+        <div class="container">
+            <div class="section-header section-header--center" style="margin-bottom: var(--space-3xl);">
+                <span class="section-label">Resultats mesures</span>
+                <h2 class="section-title">L'impact en chiffres</h2>
+            </div>
+            <div class="case-results__grid">
+                <div class="case-result-card">
+                    <div class="case-result-card__value">Reduction</div>
+                    <div class="case-result-card__label">Consommation carburant</div>
+                </div>
+                <div class="case-result-card">
+                    <div class="case-result-card__value">Amelioration</div>
+                    <div class="case-result-card__label">Ponctualite</div>
+                </div>
+                <div class="case-result-card">
+                    <div class="case-result-card__value">Reduction</div>
+                    <div class="case-result-card__label">Kilometres a vide</div>
+                </div>
+                <div class="case-result-card">
+                    <div class="case-result-card__value">Significatives</div>
+                    <div class="case-result-card__label">Economies annuelles</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="case-cta">
+        <div class="container">
+            <h2 class="case-cta__title">Optimisez votre flotte de transport</h2>
+            <p class="case-cta__description">
+                Demandez une demonstration et decouvrez comment FleetOps Pro peut transformer vos operations.
+            </p>
+            <div class="btn-group" style="justify-content: center;">
+                <a href="../demo.html" class="btn btn-primary btn-lg">Demander une demo</a>
+                <a href="../industries/transport.html" class="btn btn-secondary btn-lg">En savoir plus</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 Kaalytics. Tous droits reserves.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Navbar Loader -->
+    <script src="../components/navbar/navbar-loader.js"></script>
+</body>
+</html>
