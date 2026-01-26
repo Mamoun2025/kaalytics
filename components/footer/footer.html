@@ -19,9 +19,16 @@ Variantes supportees:
                     <h3 data-i18n="footer.newsletter.title">Restez informe</h3>
                     <p data-i18n="footer.newsletter.desc">Recevez nos conseils IA et actualites fleet management</p>
                 </div>
-                <form class="footer__newsletter-form" id="newsletterForm">
-                    <input type="email" placeholder="votre@email.com" data-i18n-placeholder="footer.newsletter.placeholder" required>
-                    <button type="submit" class="btn btn-primary" data-i18n="footer.newsletter.btn">S'abonner</button>
+                <form class="footer__newsletter-form" id="newsletterForm" action="https://formspree.io/f/xpwzgvqe" method="POST">
+                    <input type="hidden" name="_subject" value="[Newsletter] Nouvel abonne">
+                    <input type="hidden" name="source" value="footer_newsletter">
+                    <div class="footer__newsletter-inputs">
+                        <input type="email" name="email" placeholder="votre@email.com" data-i18n-placeholder="footer.newsletter.placeholder" required>
+                        <button type="submit" class="btn btn-primary" data-i18n="footer.newsletter.btn">S'abonner</button>
+                    </div>
+                    <p class="footer__newsletter-consent">
+                        En vous inscrivant, vous acceptez de recevoir nos actualites. <a href="{{ROOT}}legal/privacy.html">Politique de confidentialite</a>
+                    </p>
                 </form>
             </div>
         </div>

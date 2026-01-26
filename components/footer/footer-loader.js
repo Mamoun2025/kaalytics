@@ -95,28 +95,62 @@
             yearEl.textContent = new Date().getFullYear();
         }
 
-        // Newsletter form
+        // Newsletter form with Formspree
         const form = container.querySelector('#newsletterForm');
         if (form) {
-            form.addEventListener('submit', (e) => {
+            form.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 const email = form.querySelector('input[type="email"]').value;
-                console.log('[Footer] Newsletter subscription:', email);
-
-                // Animation feedback
                 const btn = form.querySelector('button');
                 const originalText = btn.textContent;
-                btn.textContent = '✓';
+
+                // Loading state
+                btn.textContent = 'Envoi...';
                 btn.disabled = true;
 
-                setTimeout(() => {
-                    btn.textContent = originalText;
-                    btn.disabled = false;
-                    form.reset();
-                }, 2000);
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: { 'Accept': 'application/json' }
+                    });
 
-                // Dispatch event
-                window.dispatchEvent(new CustomEvent('newsletterSubscribe', { detail: { email } }));
+                    if (response.ok) {
+                        // Success
+                        form.innerHTML = `
+                            <div class="footer__newsletter-success">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                                <span>Merci ! Vous recevrez bientot nos actualites.</span>
+                            </div>
+                        `;
+
+                        // GA4 tracking
+                        if (typeof gtag === 'function') {
+                            gtag('event', 'newsletter_signup', {
+                                'event_category': 'Newsletter',
+                                'event_label': 'Footer Form',
+                                'email_domain': email.split('@')[1]
+                            });
+                        }
+
+                        // Dispatch event
+                        window.dispatchEvent(new CustomEvent('newsletterSubscribe', { detail: { email } }));
+                    } else {
+                        throw new Error('Server error');
+                    }
+                } catch (error) {
+                    console.error('[Footer] Newsletter error:', error);
+                    btn.textContent = 'Erreur';
+                    btn.style.background = '#ef4444';
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.style.background = '';
+                        btn.disabled = false;
+                    }, 2000);
+                }
             });
         }
     }
