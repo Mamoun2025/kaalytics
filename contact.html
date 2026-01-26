@@ -13,6 +13,53 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://kaalytics.com/contact">
 
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://kaalytics.com/#localbusiness",
+        "name": "Kaalytics",
+        "description": "Solutions IA pour gestion de flotte et transformation digitale en Afrique",
+        "url": "https://kaalytics.com",
+        "telephone": "+212-673-736-611",
+        "email": "contact@kaalytics.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Casablanca",
+            "addressRegion": "Casablanca-Settat",
+            "postalCode": "20000",
+            "addressCountry": "MA"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 33.5731,
+            "longitude": -7.5898
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "13:00"
+            }
+        ],
+        "priceRange": "$$",
+        "image": "https://kaalytics.com/assets/images/og-image.jpg",
+        "sameAs": [
+            "https://wa.me/212673736611",
+            "https://twitter.com/kaalytics",
+            "https://linkedin.com/company/kaalytics"
+        ]
+    }
+    </script>
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kaalytics.com/contact">
@@ -34,6 +81,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/industries.css">
+    <link rel="stylesheet" href="assets/css/components/cookie-consent.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -64,26 +112,40 @@
                 <!-- Formulaire -->
                 <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-2xl); padding: var(--space-2xl);">
                     <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg);">Envoyez-nous un message</h2>
-                    <form id="contactForm" style="display: flex; flex-direction: column; gap: var(--space-lg);">
+
+                    <!-- Message de succes -->
+                    <div id="formSuccess" style="display: none; background: rgba(16, 185, 129, 0.15); border: 1px solid var(--emerald); border-radius: var(--radius-lg); padding: var(--space-lg); margin-bottom: var(--space-lg);">
+                        <p style="color: var(--emerald); font-weight: 600; margin-bottom: var(--space-xs);">Message envoye avec succes !</p>
+                        <p style="color: var(--text-secondary); font-size: var(--text-sm);">Notre equipe vous repondra sous 24h.</p>
+                    </div>
+
+                    <!-- Formspree: remplacer YOUR_FORM_ID par l'ID Formspree -->
+                    <form id="contactForm" action="https://formspree.io/f/xpwzgvqe" method="POST" style="display: flex; flex-direction: column; gap: var(--space-lg);">
+                        <!-- Honeypot anti-spam -->
+                        <input type="text" name="_gotcha" style="display: none;">
+                        <!-- Page de redirection apres envoi -->
+                        <input type="hidden" name="_next" value="https://kaalytics.com/contact?success=true">
+                        <input type="hidden" name="_subject" value="Nouveau contact depuis kaalytics.com">
+
                         <div>
-                            <label style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);">Nom complet</label>
-                            <input type="text" name="name" required style="width: 100%; padding: var(--space-md); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-primary); font-size: var(--text-base);">
+                            <label for="name" style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);">Nom complet</label>
+                            <input type="text" id="name" name="name" required style="width: 100%; padding: var(--space-md); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-primary); font-size: var(--text-base);">
                         </div>
                         <div>
-                            <label style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);">Email professionnel</label>
-                            <input type="email" name="email" required style="width: 100%; padding: var(--space-md); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-primary); font-size: var(--text-base);">
+                            <label for="email" style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);">Email professionnel</label>
+                            <input type="email" id="email" name="email" required style="width: 100%; padding: var(--space-md); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-primary); font-size: var(--text-base);">
                         </div>
                         <div>
-                            <label style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);">Entreprise</label>
-                            <input type="text" name="company" style="width: 100%; padding: var(--space-md); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-primary); font-size: var(--text-base);">
+                            <label for="company" style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);">Entreprise</label>
+                            <input type="text" id="company" name="company" style="width: 100%; padding: var(--space-md); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-primary); font-size: var(--text-base);">
                         </div>
                         <div>
-                            <label style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);">Telephone</label>
-                            <input type="tel" name="phone" style="width: 100%; padding: var(--space-md); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-primary); font-size: var(--text-base);">
+                            <label for="phone" style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);">Telephone</label>
+                            <input type="tel" id="phone" name="phone" style="width: 100%; padding: var(--space-md); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-primary); font-size: var(--text-base);">
                         </div>
                         <div>
-                            <label style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);">Sujet</label>
-                            <select name="subject" style="width: 100%; padding: var(--space-md); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-primary); font-size: var(--text-base);">
+                            <label for="subject" style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);">Sujet</label>
+                            <select id="subject" name="subject" style="width: 100%; padding: var(--space-md); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-primary); font-size: var(--text-base);">
                                 <option value="">Selectionnez un sujet</option>
                                 <option value="demo">Demande de demo</option>
                                 <option value="devis">Demande de devis</option>
@@ -93,8 +155,16 @@
                             </select>
                         </div>
                         <div>
-                            <label style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);">Message</label>
-                            <textarea name="message" rows="5" required style="width: 100%; padding: var(--space-md); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-primary); font-size: var(--text-base); resize: vertical;"></textarea>
+                            <label for="message" style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);">Message</label>
+                            <textarea id="message" name="message" rows="5" required style="width: 100%; padding: var(--space-md); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-primary); font-size: var(--text-base); resize: vertical;"></textarea>
+                        </div>
+                        <div>
+                            <label style="display: flex; align-items: flex-start; gap: var(--space-sm); cursor: pointer;">
+                                <input type="checkbox" name="consent" required style="margin-top: 4px;">
+                                <span style="font-size: var(--text-sm); color: var(--text-secondary);">
+                                    J'accepte la <a href="/legal/privacy" target="_blank" style="color: var(--emerald);">politique de confidentialite</a> et le traitement de mes donnees.
+                                </span>
+                            </label>
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Envoyer le message</button>
                     </form>
@@ -195,5 +265,24 @@
 
     <!-- Navbar Loader -->
     <script src="components/navbar/navbar-loader.js"></script>
+
+    <!-- Cookie Consent -->
+    <script src="assets/js/components/cookie-consent.js"></script>
+
+    <!-- Form Success Handler -->
+    <script>
+        // Afficher message de succes si redirection
+        if (window.location.search.includes('success=true')) {
+            document.getElementById('formSuccess').style.display = 'block';
+            document.getElementById('contactForm').style.display = 'none';
+            // Tracking GA4 conversion
+            if (typeof gtag === 'function') {
+                gtag('event', 'generate_lead', {
+                    'event_category': 'Contact',
+                    'event_label': 'Form Submission'
+                });
+            }
+        }
+    </script>
 </body>
 </html>
