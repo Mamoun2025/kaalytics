@@ -251,8 +251,8 @@
 
             <div class="error-page__code">404</div>
 
-            <h1 class="error-page__title">Page introuvable</h1>
-            <p class="error-page__text">
+            <h1 class="error-page__title" data-i18n="errorPage.title">Page introuvable</h1>
+            <p class="error-page__text" data-i18n="errorPage.text">
                 Oups ! La page que vous recherchez semble avoir disparu dans le cloud.
                 Pas de panique, notre IA n'a pas encore tout indexe.
             </p>
@@ -263,20 +263,20 @@
                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                         <polyline points="9 22 9 12 15 12 15 22"/>
                     </svg>
-                    Retour a l'accueil
+                    <span data-i18n="errorPage.homeButton">Retour a l'accueil</span>
                 </a>
-                <a href="/#contact" class="btn btn-secondary btn-lg">
+                <a href="/#contact" class="btn btn-secondary btn-lg" data-i18n="errorPage.contactButton">
                     Nous contacter
                 </a>
             </div>
 
             <div class="error-page__links">
-                <p class="error-page__links-title">Pages populaires</p>
+                <p class="error-page__links-title" data-i18n="errorPage.popularPages">Pages populaires</p>
                 <div class="error-page__links-grid">
                     <a href="/products/fleetops.html" class="error-page__link">FleetOps Pro</a>
                     <a href="/products/daedalia.html" class="error-page__link">Daedalia AI</a>
-                    <a href="/guides/" class="error-page__link">Guides</a>
-                    <a href="/blog/" class="error-page__link">Blog</a>
+                    <a href="/guides/" class="error-page__link" data-i18n="footer.links.guides">Guides</a>
+                    <a href="/blog/" class="error-page__link" data-i18n="footer.links.blog">Blog</a>
                     <a href="/playground/" class="error-page__link">Playground</a>
                 </div>
             </div>
@@ -301,6 +301,9 @@
             window.location.replace(redirects[path]);
         }
     </script>
+
+    <!-- i18n -->
+    <script src="assets/js/i18n/i18n.js"></script>
 
     <!-- Navbar Loader -->
     <script src="components/navbar/navbar-loader.js"></script>

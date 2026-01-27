@@ -48,6 +48,237 @@
       "guides": "Guides (12)"
     }
   },
+  "pricingPage": {
+    "badge": "Pricing",
+    "title": "Simple and <span>transparent pricing</span>",
+    "subtitle": "No hidden fees. No surprises. Choose the plan that fits your fleet.",
+    "recommended": "RECOMMENDED",
+    "included": "Included",
+    "starter": {
+      "name": "Starter",
+      "desc": "For small fleets",
+      "range": "1 to 20 vehicles",
+      "perVehicle": "$25/vehicle/month",
+      "features": {
+        "0": "Fleet & GPS Module",
+        "1": "Maintenance Module",
+        "2": "Standard Dashboard",
+        "3": "Email support",
+        "4": "Training included"
+      }
+    },
+    "professional": {
+      "name": "Professional",
+      "desc": "For medium fleets",
+      "range": "21 to 100 vehicles",
+      "perVehicle": "$15/vehicle/month",
+      "features": {
+        "0": "All Starter +",
+        "1": "Planning Module",
+        "2": "Supply Chain Module",
+        "3": "Predictive AI Maintenance",
+        "4": "Phone support",
+        "5": "API access"
+      }
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "desc": "For large fleets",
+      "range": "Custom",
+      "perVehicle": "Volume pricing",
+      "features": {
+        "0": "All Professional +",
+        "1": "8 complete modules",
+        "2": "ERP Integration",
+        "3": "Dedicated account manager",
+        "4": "24/7 support",
+        "5": "Guaranteed SLA"
+      }
+    },
+    "cta": "Request a demo",
+    "ctaContact": "Contact us",
+    "faq": {
+      "title": "Pricing questions",
+      "q1": {
+        "question": "Are there hidden fees?",
+        "answer": "No. The displayed price includes everything: hosting, updates, basic support. Only additional training and custom development are charged separately."
+      },
+      "q2": {
+        "question": "Can I change plans?",
+        "answer": "Yes, you can upgrade at any time. Downgrading is possible at the end of your commitment period."
+      },
+      "q3": {
+        "question": "What is the minimum commitment?",
+        "answer": "12-month commitment with monthly or annual payment option (-10% for annual payment)."
+      }
+    }
+  },
+  "demoPage": {
+    "badge": "Free Demo",
+    "title": "See <span>FleetOps Pro</span> in action",
+    "subtitle": "30 minutes personalized presentation with an expert. Discover how to reduce costs and optimize your fleet.",
+    "formTitle": "Book your demo",
+    "labels": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Professional email",
+      "phone": "Phone",
+      "company": "Company",
+      "fleetSize": "Fleet size",
+      "industry": "Industry",
+      "product": "Product of interest",
+      "select": "Select",
+      "vehicles1": "1 to 10 vehicles",
+      "vehicles2": "11 to 50 vehicles",
+      "vehicles3": "51 to 100 vehicles",
+      "vehicles4": "Over 100 vehicles"
+    },
+    "submit": "Request my free demo",
+    "noCommitment": "No commitment. An expert will contact you within 24h.",
+    "benefits": {
+      "title": "What you'll get",
+      "item1": "Personalized presentation for your industry",
+      "item2": "Key modules demonstration",
+      "item3": "ROI calculation with your data",
+      "item4": "Live Q&A session"
+    }
+  },
+  "faqPage": {
+    "badge": "FAQ",
+    "title": "Frequently Asked <span>Questions</span>",
+    "subtitle": "Quickly find answers to your questions about our solutions.",
+    "sections": {
+      "general": {
+        "title": "General Questions",
+        "q1": {
+          "question": "What is FleetOps Pro?",
+          "answer": "FleetOps Pro is a complete fleet management solution. It includes 8 integrated modules: Fleet & GPS, Planning, Maintenance, Supply Chain, Job Sites, Workforce, Products, and Dashboard. Everything is designed to reduce your costs and optimize your fleet utilization."
+        },
+        "q2": {
+          "question": "What is Daedalia AI?",
+          "answer": "Daedalia AI is an intelligent copilot for Odoo. It allows you to interact with your ERP in natural language: create quotes, search for products, analyze your sales, all in one sentence. No more navigating through complex menus."
+        },
+        "q3": {
+          "question": "Which industries are your solutions suited for?",
+          "answer": "FleetOps Pro is suited for 6 main industries: Transport & Logistics, Construction, Vehicle Rental, Mining & Quarries, Manufacturing, and Public Sector. Each industry benefits from features specific to its needs."
+        }
+      },
+      "implementation": {
+        "title": "Implementation",
+        "q1": {
+          "question": "How long does it take to deploy FleetOps Pro?",
+          "answer": "Deployment typically takes 2 to 4 weeks depending on your fleet size. This includes configuration, data import, GPS hardware installation, and team training."
+        },
+        "q2": {
+          "question": "Do you provide GPS hardware?",
+          "answer": "Yes, we offer different GPS tracking solutions suited to your vehicles (cars, trucks, construction equipment). Hardware is billed separately. If you already have compatible trackers, we can integrate them."
+        },
+        "q3": {
+          "question": "Is training included?",
+          "answer": "Yes, initial training is included in your subscription. We train your administrators and users on how to use the platform. Additional training sessions are available on request."
+        },
+        "q4": {
+          "question": "Can I integrate FleetOps Pro with my existing ERP?",
+          "answer": "Yes, FleetOps Pro has a complete API that allows integration with most market ERPs (Odoo, SAP, Sage, etc.). Integration is included in the Enterprise plan."
+        }
+      },
+      "pricing": {
+        "title": "Pricing and Billing",
+        "q1": {
+          "question": "What is the price of FleetOps Pro?",
+          "answer": "Pricing starts at EUR 500/month for small fleets (1-20 vehicles). For fleets of 21 to 100 vehicles, the price is EUR 1,500/month. Above 100 vehicles, we offer custom pricing."
+        },
+        "q2": {
+          "question": "Are there any hidden fees?",
+          "answer": "No, our pricing is transparent. The subscription includes platform access, updates, initial training, and support. The only additional costs are GPS hardware (if needed) and any custom integrations."
+        },
+        "q3": {
+          "question": "What is the commitment period?",
+          "answer": "The minimum commitment is 12 months to benefit from standard pricing. No-commitment plans are available with a 20% surcharge. You can cancel with 3 months notice."
+        }
+      },
+      "support": {
+        "title": "Support and Assistance",
+        "q1": {
+          "question": "How do I contact support?",
+          "answer": "You can contact us by email, phone, or WhatsApp. Professional and Enterprise plan customers benefit from priority phone support. Support is available Monday to Friday, 9am-6pm. 24/7 support for Enterprise customers."
+        },
+        "q2": {
+          "question": "Do you offer additional training?",
+          "answer": "Yes, we offer advanced training sessions for your teams, whether for new users or to deepen knowledge of certain features. These trainings can be conducted on-site or remotely."
+        },
+        "q3": {
+          "question": "What is the platform availability?",
+          "answer": "FleetOps Pro guarantees 99.9% availability. The platform is hosted on secure servers with daily automatic backups. An SLA is available for Enterprise customers."
+        }
+      },
+      "security": {
+        "title": "Security and Compliance",
+        "q1": {
+          "question": "Is my data secure?",
+          "answer": "Yes, security is our priority. All data is encrypted in transit (TLS) and at rest. Servers are hosted in certified data centers. Automatic backups are performed daily."
+        },
+        "q2": {
+          "question": "Are you GDPR compliant?",
+          "answer": "Yes, FleetOps Pro is GDPR compliant. You maintain full control of your data. We can provide a DPA (Data Processing Agreement) on request."
+        },
+        "q3": {
+          "question": "What happens if I cancel my subscription?",
+          "answer": "You can export all your data before your subscription ends. We retain your data for 30 days after cancellation, then it is permanently deleted. A complete export is provided on request."
+        }
+      }
+    },
+    "cta": {
+      "title": "Didn't find your answer?",
+      "desc": "Contact us directly, our team will respond within 24 hours.",
+      "button": "Contact us",
+      "whatsapp": "WhatsApp"
+    },
+    "whatsappSticky": "Question?"
+  },
+  "contactPage": {
+    "badge": "Contact",
+    "title": "Let's talk about your <span>project</span>",
+    "subtitle": "Our team responds within 24h. Call us, write to us or send a WhatsApp.",
+    "formTitle": "Send us a message",
+    "success": {
+      "title": "Message sent successfully!",
+      "desc": "We will respond within 24 hours."
+    },
+    "labels": {
+      "name": "Your name",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "subject": "Subject",
+      "message": "Your message"
+    },
+    "subjects": {
+      "demo": "Demo request",
+      "info": "Information request",
+      "support": "Technical support",
+      "partnership": "Partnership",
+      "other": "Other"
+    },
+    "submit": "Send message",
+    "channels": {
+      "title": "Other ways to contact us",
+      "email": {
+        "title": "Email",
+        "desc": "For detailed questions",
+        "value": "contact@kaalytics.com"
+      },
+      "phone": {
+        "title": "Phone",
+        "desc": "Mon-Fri: 9am-6pm",
+        "value": "+212 673 736 611"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "desc": "Fast response",
+        "cta": "Open WhatsApp"
+      }
+    }
+  },
   "hero": {
     "badge": "In Production",
     "usedBy": "Used by",
@@ -337,6 +568,14 @@
     },
     "clients": {
       "title": "They Trust Us"
+    },
+    "testimonialRoles": {
+      "role1": "CEO, Transport Express Casablanca",
+      "role2": "CFO, BTP Solutions Rabat",
+      "role3": "Fleet Manager, LocaMat Tangier",
+      "role4": "Maintenance Manager, MineralCo",
+      "role5": "Procurement Manager, Atlas BTP Group",
+      "role6": "Site Manager, Infra Plus"
     }
   },
   "cta": {
@@ -599,7 +838,8 @@
       "title": "General Manager",
       "company": "SME Construction - 35 employees, 18 machines",
       "problem": "I waste too much time managing schedules and never know how much each job site really costs.",
-      "solution": "Real-time Dashboard + Visual Planning"
+      "solution": "Real-time Dashboard + Visual Planning",
+      "roi": "Quick ROI"
     },
     "responsableParc": {
       "role": "FM",
@@ -607,7 +847,8 @@
       "title": "Fleet Manager",
       "company": "Transport - 60 employees, 40 vehicles",
       "problem": "I spend my days searching for vehicles and handling emergencies.",
-      "solution": "Fleet + Planning + Real-time GPS Module"
+      "solution": "Fleet + Planning + Real-time GPS Module",
+      "roi": "Immediate time savings"
     },
     "responsableMaintenance": {
       "role": "MM",
@@ -615,7 +856,8 @@
       "title": "Maintenance Manager",
       "company": "Rental - 25 employees, 80 machines",
       "problem": "Breakdowns always happen at the worst time. I repair instead of prevent.",
-      "solution": "Maintenance Module + Predictive Alerts"
+      "solution": "Maintenance Module + Predictive Alerts",
+      "roi": "ROI in 3 months"
     },
     "responsableAchats": {
       "role": "PM",
@@ -623,7 +865,8 @@
       "title": "Procurement Manager",
       "company": "Industry - 80 employees, 45 machines",
       "problem": "Purchase requests get lost, delays explode, suppliers are poorly tracked.",
-      "solution": "Supply Chain Module + PR→RFQ→PO Workflow"
+      "solution": "Supply Chain Module + PR→RFQ→PO Workflow",
+      "roi": "ROI in 4 months"
     }
   },
   "pricing": {
@@ -911,5 +1154,399 @@
       "text": "Our experts accompany you in your digital transformation.",
       "button": "Contact us"
     }
+  },
+  "heroAlt": {
+    "badge": "Made in Morocco",
+    "trustText": "Deployed in production",
+    "title": {
+      "line1": "AI that elevates",
+      "highlight": "African industry."
+    },
+    "subtitle": "Unlock your company's hidden potential. <strong>Fleet management. Intelligent copilots. Custom automation.</strong>",
+    "metrics": {
+      "products": { "value": "3", "label": "AI Products" },
+      "clients": { "value": "50+", "label": "Active clients" },
+      "vehicles": { "value": "5000+", "label": "Vehicles managed" },
+      "industries": { "value": "6", "label": "Industries" }
+    },
+    "cta": {
+      "primary": "Discover our solutions",
+      "secondary": "Talk to an expert"
+    },
+    "socialProof": "4.9/5 - Businesses transformed",
+    "scroll": "Our solutions"
+  },
+  "productsOverview": {
+    "label": "Our solutions",
+    "title": "Elevate your operations",
+    "subtitle": "Concrete AI tools that unlock your company's hidden potential.",
+    "fleetops": {
+      "badge": "FLAGSHIP PRODUCT",
+      "title": "FleetOps Pro",
+      "desc": "Complete fleet management. 8 integrated modules. AI predictive maintenance.",
+      "stats": {
+        "costs": { "value": "-40%", "label": "Costs" },
+        "breakdowns": { "value": "-70%", "label": "Breakdowns" },
+        "roi": { "value": "Fast", "sublabel": "ROI" }
+      },
+      "cta": "Discover FleetOps"
+    },
+    "daedalia": {
+      "badge": "AI COPILOT",
+      "title": "Daedalia AI",
+      "desc": "AI copilot for Odoo. Automates repetitive tasks. Conversational interface.",
+      "stats": {
+        "time": { "value": "<3s", "label": "Time" },
+        "availability": { "value": "24/7", "label": "Available" },
+        "languages": { "value": "3", "label": "Languages" }
+      },
+      "cta": "Discover Daedalia"
+    },
+    "custom": {
+      "badge": "CUSTOM",
+      "title": "AI Modules",
+      "desc": "Specific need? We build your custom solution.",
+      "features": {
+        "0": "Predictive analysis",
+        "1": "Workflow automation",
+        "2": "Intelligent chatbots",
+        "3": "API & Integrations"
+      },
+      "cta": "Discuss your project"
+    },
+    "industries": {
+      "label": "Industries we transform",
+      "transport": "Transport",
+      "btp": "Construction",
+      "agriculture": "Agriculture",
+      "energy": "Energy",
+      "retail": "Retail",
+      "health": "Healthcare"
+    }
+  },
+  "playgroundPreview": {
+    "label": "Interactive Configurator",
+    "title": "8 modules. Infinite possibilities.",
+    "subtitle": "Assemble your modules like Legos. Connect them. Get your price in real-time.",
+    "modules": {
+      "operations": "Operations",
+      "intelligence": "Intelligence",
+      "growth": "Growth",
+      "security": "Security"
+    },
+    "stats": {
+      "available": { "value": "8", "label": "Available modules" },
+      "combinations": { "value": "∞", "label": "Combinations" },
+      "configTime": { "value": "30s", "label": "To configure" },
+      "quote": { "value": "$0", "label": "Instant quote" }
+    },
+    "cta": "Launch Playground",
+    "ctaDesc": "Drag and drop modules, connect them visually, get your estimate."
+  },
+  "daedaliaCopilot": {
+    "badge": "New",
+    "chatDemo": {
+      "question1": "What is the price of the oil filter for CAT 349D?",
+      "answer1": "The CAT 1R-0751 oil filter for your 349D costs $89 excl. tax. Stock: 12 units available.",
+      "question2": "Create a quote for TerraFleet with 3 units",
+      "answer2": "Quote #QT-2024-0847 created for TerraFleet. Total: $267 excl. tax. Link sent by email.",
+      "placeholder": "Ask your question..."
+    },
+    "cta": "See Daedalia in action",
+    "videoFallback": "Your browser does not support video playback."
+  },
+  "personasNarrative": {
+    "roi": {
+      "ahmed": "Fast ROI",
+      "fatima": "Immediate time savings",
+      "karim": "ROI in 3 months",
+      "nadia": "ROI in 4 months"
+    },
+    "cta": {
+      "text": "Do you recognize yourself? Let's talk about your situation.",
+      "button": "I want the same result"
+    }
+  },
+  "pricingExtended": {
+    "toggle": {
+      "monthly": "Monthly",
+      "annual": "Annual",
+      "savings": "Savings"
+    },
+    "fleetops": {
+      "starter": {
+        "name": "Starter",
+        "desc": "For small fleets",
+        "vehicles": "10-50 vehicles",
+        "users": "5 users included"
+      },
+      "professional": {
+        "name": "Professional",
+        "desc": "For medium fleets",
+        "vehicles": "50-200 vehicles",
+        "users": "20 users included"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "desc": "For large fleets",
+        "vehicles": "200+ vehicles"
+      }
+    },
+    "roiCalculator": {
+      "label": "ROI Calculator",
+      "title": "Estimate your savings",
+      "subtitle": "Adjust parameters to see your return on investment",
+      "labels": {
+        "vehicles": "Number of vehicles",
+        "maintenanceCost": "Maintenance cost/month",
+        "kmPerMonth": "Km traveled/month"
+      },
+      "results": {
+        "annualSavings": "Annual savings",
+        "roiTime": "ROI achieved",
+        "breakdownReduction": "Breakdown reduction"
+      },
+      "cta": "Get my estimate"
+    },
+    "daedalia": {
+      "starter": {
+        "name": "Starter",
+        "users": "5 users",
+        "requests": "1000 requests/month"
+      },
+      "professional": {
+        "name": "Professional",
+        "users": "20 users",
+        "unlimited": "Unlimited requests"
+      }
+    }
+  },
+  "resourcesSection": {
+    "label": "Resources",
+    "title": "Guides and best practices",
+    "subtitle": "Learn to get the most out of your fleet with our experts",
+    "badges": {
+      "popular": "Popular",
+      "new": "New"
+    },
+    "types": {
+      "guide": "Guide",
+      "checklist": "Checklist",
+      "caseStudy": "Case Study",
+      "webinar": "Webinar"
+    },
+    "cards": {
+      "roi": {
+        "title": "Calculate your digital transformation ROI",
+        "desc": "5-step method to evaluate the return on investment of your project.",
+        "cta": "Download the guide"
+      },
+      "checklist": {
+        "title": "Checklist: Is your fleet ready?",
+        "desc": "15 points to check before digitizing your fleet.",
+        "cta": "View checklist"
+      },
+      "terrafleet": {
+        "title": "TerraFleet: -45% costs in 6 months",
+        "desc": "How a construction company transformed its fleet management.",
+        "cta": "Read the study"
+      },
+      "maintenance": {
+        "title": "Predictive maintenance: The complete guide",
+        "desc": "Go from reactive to predictive. Anticipate breakdowns before they cost you.",
+        "cta": "Download"
+      },
+      "webinar": {
+        "type": "Webinar",
+        "title": "FleetOps Pro live demo",
+        "desc": "Watch a complete 30-minute demo with live Q&A every Thursday.",
+        "cta": "Register"
+      },
+      "btpGuide": {
+        "type": "Industry guide",
+        "title": "Fleet Management for Construction",
+        "desc": "Specific guide for construction companies with use cases and best practices.",
+        "cta": "Download"
+      }
+    }
+  },
+  "trustSection": {
+    "title": "They trust us",
+    "badges": {
+      "ssl": "SSL Secured",
+      "uptime": "99.9% Uptime",
+      "rgpd": "GDPR Compliant",
+      "support": "24/7 Support",
+      "madeIn": "Made in Morocco"
+    }
+  },
+  "chatWidget": {
+    "close": "Close",
+    "title": "Kaalytics Assistant",
+    "status": "Online",
+    "greeting": "Hello! How can I help you?",
+    "buttons": {
+      "pricing": "Pricing?",
+      "demo": "Demo",
+      "roi": "ROI?",
+      "whatsapp": "WhatsApp"
+    },
+    "quickActions": {
+      "demo": "Request a demo",
+      "pricing": "View pricing",
+      "contact": "Talk to an expert"
+    },
+    "responses": {
+      "pricing": "Our pricing: Starter $500/month, Pro $1500/month depending on your fleet.",
+      "contact": "Fill out the contact form, we'll call you back within 24h!",
+      "roi": "Fast ROI. Significant maintenance and fuel reduction."
+    }
+  },
+  "formLabels": {
+    "name": "Your full name",
+    "email": "Professional email",
+    "phone": "Phone (optional)",
+    "company": "Company name",
+    "subject": "[Kaalytics] New ROI audit request"
+  },
+  "stickyCta": {
+    "text": "Ready to optimize your fleet?",
+    "button": "Free demo"
+  },
+  "ariaLabels": {
+    "close": "Close",
+    "previous": "Previous",
+    "next": "Next",
+    "chat": "Chat"
+  },
+  "newsletter": {
+    "placeholder": "your@email.com"
+  },
+  "ctaSection": {
+    "valueEstimate": "Estimated value: €2000 - Free this month"
+  },
+  "aboutPage": {
+    "badge": "About",
+    "title": "AI that transforms <span>African industry</span>",
+    "subtitle": "Kaalytics develops concrete AI solutions for African businesses. Our mission: make artificial intelligence accessible and useful, with measurable ROI.",
+    "story": {
+      "label": "Our story",
+      "title": "Born from a simple observation",
+      "p1": "In 2024, while AI was revolutionizing businesses in Europe and the United States, African companies were left behind. Not for lack of interest, but for lack of solutions adapted to their realities.",
+      "p2": "Existing tools were either too expensive, too complex, or simply not suited to local constraints: intermittent connectivity, multilingualism, specific business processes.",
+      "p3": "<strong>Kaalytics was born from this observation</strong>: creating AI solutions that really work for African businesses, with local support and measurable ROI from the first months."
+    },
+    "values": {
+      "label": "Our values",
+      "title": "What guides us",
+      "impact": {
+        "title": "Measurable impact",
+        "desc": "No vague promises. Every solution we deploy must demonstrate concrete and measurable ROI for our clients."
+      },
+      "simplicity": {
+        "title": "Simplicity",
+        "desc": "AI should be invisible. Our users don't need to understand machine learning to benefit from it daily."
+      },
+      "proximity": {
+        "title": "Proximity",
+        "desc": "We are present on the ground. Training, support, guidance: we don't leave our clients alone facing technology."
+      }
+    },
+    "team": {
+      "label": "The team",
+      "title": "A passionate team",
+      "desc": "Kaalytics is driven by a team of engineers and business experts passionate about AI and its concrete application to African industrial challenges. Our goal: make technology accessible and impactful for businesses on the continent."
+    },
+    "stats": {
+      "label": "Key figures",
+      "title": "Our impact in numbers",
+      "vehicles": { "value": "500+", "label": "Vehicles managed" },
+      "industries": { "value": "6", "label": "Industries" },
+      "products": { "value": "3", "label": "AI Products" },
+      "support": { "value": "24/7", "label": "Support" }
+    },
+    "cta": {
+      "title": "Ready to transform your business?",
+      "desc": "Let's discuss your challenges and discover together how AI can help you.",
+      "contact": "Contact us",
+      "demo": "Request a demo"
+    },
+    "whatsappSticky": "Let's talk"
+  },
+  "supportPage": {
+    "badge": "Support",
+    "title": "How can we help you?",
+    "subtitle": "Our support team is here to assist you. Quickly find answers or contact us directly.",
+    "options": {
+      "faq": {
+        "title": "FAQ",
+        "desc": "Answers to frequently asked questions about our products and services.",
+        "cta": "View FAQ"
+      },
+      "docs": {
+        "title": "Documentation",
+        "desc": "Guides, tutorials and resources to master FleetOps Pro.",
+        "cta": "Access guides"
+      },
+      "contact": {
+        "title": "Contact support",
+        "desc": "Our team is available to answer your questions.",
+        "cta": "Contact us"
+      }
+    },
+    "channels": {
+      "title": "Our support channels",
+      "email": {
+        "title": "Email",
+        "desc": "For technical and sales questions.",
+        "response": "Response within 24 business hours"
+      },
+      "phone": {
+        "title": "Phone",
+        "desc": "For emergencies and priority requests.",
+        "hours": "Mon-Fri: 9am-6pm"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "desc": "For quick and convenient exchange.",
+        "cta": "Open WhatsApp",
+        "response": "Quick response"
+      }
+    },
+    "sla": {
+      "title": "Service levels",
+      "headers": {
+        "plan": "Plan",
+        "hours": "Support hours",
+        "response": "Response time"
+      },
+      "starter": {
+        "name": "Starter",
+        "hours": "Email only",
+        "response": "48 business hours"
+      },
+      "professional": {
+        "name": "Professional",
+        "hours": "Mon-Fri 9am-6pm",
+        "response": "24 business hours"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "hours": "24/7",
+        "response": "4h (critical)"
+      }
+    },
+    "cta": {
+      "title": "Need a demonstration?",
+      "desc": "Discover FleetOps Pro with one of our experts.",
+      "button": "Request a demo"
+    }
+  },
+  "errorPage": {
+    "title": "Page not found",
+    "text": "Oops! The page you're looking for seems to have vanished into the cloud. Don't panic, our AI hasn't indexed everything yet.",
+    "homeButton": "Back to home",
+    "contactButton": "Contact us",
+    "popularPages": "Popular pages"
   }
 }
