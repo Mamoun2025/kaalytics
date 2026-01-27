@@ -250,8 +250,15 @@
         display: none;
     }
 
+    /* Lang switcher visible on mobile - compact style */
     .lang-switcher {
-        display: none;
+        display: flex;
+        padding: var(--space-2xs) var(--space-xs);
+        font-size: var(--text-xs);
+    }
+
+    .lang-switcher__option {
+        padding: 0.2rem 0.4rem;
     }
 }
 
