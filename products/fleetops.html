@@ -866,7 +866,7 @@
             box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
         }
 
-        /* Play button center */
+        /* Play button center - hidden by default since videos autoplay */
         .video-dashboard__play {
             position: absolute;
             top: 50%;
@@ -876,7 +876,7 @@
             height: 80px;
             background: rgba(16, 185, 129, 0.9);
             border-radius: 50%;
-            display: flex;
+            display: none; /* Hidden - videos autoplay */
             align-items: center;
             justify-content: center;
             transition: all 0.4s ease;
