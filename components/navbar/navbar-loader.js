@@ -208,6 +208,8 @@
 
     /**
      * Initialise le language switcher
+     * Note: Les event listeners sont gérés par i18n.js setupLangSwitcher()
+     * Cette fonction prépare juste les éléments pour l'accessibilité
      */
     function initLangSwitcher(container) {
         const switcher = container.querySelector('.lang-switcher');
@@ -215,22 +217,18 @@
 
         const options = switcher.querySelectorAll('.lang-switcher__option');
         options.forEach(option => {
-            option.addEventListener('click', () => {
-                const lang = option.dataset.lang;
-
-                // Update active state
-                options.forEach(o => o.classList.remove('lang-switcher__option--active'));
-                option.classList.add('lang-switcher__option--active');
-
-                // Dispatch event for i18n system
-                window.dispatchEvent(new CustomEvent('languageChange', { detail: { lang } }));
-
-                // Call i18n if available
-                if (window.i18n && typeof window.i18n.setLanguage === 'function') {
-                    window.i18n.setLanguage(lang);
-                }
-            });
+            // Add accessibility attributes
+            option.setAttribute('role', 'button');
+            option.setAttribute('tabindex', '0');
+            option.style.cursor = 'pointer';
+            // Add touch-action for better mobile support
+            option.style.touchAction = 'manipulation';
         });
+
+        // If i18n is already loaded, setup the switcher immediately
+        if (window.i18n && typeof setupLangSwitcher === 'function') {
+            setupLangSwitcher();
+        }
     }
 
     // ========================================

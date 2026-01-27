@@ -294,7 +294,7 @@ class I18n {
 
 // Create global instance
 const i18n = new I18n({
-    defaultLang: 'fr',
+    defaultLang: 'en',
     supportedLangs: ['fr', 'en'],
     localesPath: '/assets/locales'
 });
@@ -313,13 +313,35 @@ function setupLangSwitcher() {
     // Re-select and add listeners
     document.querySelectorAll('.lang-switcher__option').forEach(option => {
         option.style.cursor = 'pointer';
-        option.addEventListener('click', function(e) {
+        // Add accessibility attributes
+        option.setAttribute('role', 'button');
+        option.setAttribute('tabindex', '0');
+
+        // Handler function
+        const handleLangSwitch = function(e) {
             e.preventDefault();
             e.stopPropagation();
             const lang = this.getAttribute('data-lang');
             console.log('[i18n] Switching to:', lang);
             if (lang && window.i18n) {
                 window.i18n.setLanguage(lang);
+            }
+        };
+
+        // Click event (desktop + mobile)
+        option.addEventListener('click', handleLangSwitch);
+
+        // Touch event for mobile (backup)
+        option.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            handleLangSwitch.call(this, e);
+        }, { passive: false });
+
+        // Keyboard support
+        option.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                handleLangSwitch.call(this, e);
             }
         });
     });
@@ -352,6 +374,16 @@ if (document.readyState === 'loading') {
 } else {
     autoInit();
 }
+
+// Re-setup lang switcher when navbar is dynamically loaded
+window.addEventListener('navbarLoaded', () => {
+    console.log('[i18n] Navbar loaded, setting up lang switcher');
+    setupLangSwitcher();
+    // Update switcher UI to reflect current language
+    if (window.i18n && window.i18n.isReady()) {
+        window.i18n.updateLangSwitcher();
+    }
+});
 
 // Export for module usage
 if (typeof module !== 'undefined' && module.exports) {
