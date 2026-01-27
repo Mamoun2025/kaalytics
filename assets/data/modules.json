@@ -4,7 +4,7 @@
       "id": "operations-excellence",
       "number": "01",
       "color": "emerald",
-      "video": "assets/videos/industrial/industrial-1.mp4",
+      "video": "assets/videos/modules/fleetop-pro/01_presentation.mp4",
       "icon": "cog",
       "fr": {
         "title": "Operations Excellence",
@@ -51,7 +51,7 @@
       "id": "business-intelligence",
       "number": "02",
       "color": "purple",
-      "video": "assets/videos/industrial/industrial-2.mp4",
+      "video": "assets/videos/modules/fleetop-pro/02_planning.mp4",
       "icon": "chart-bar",
       "fr": {
         "title": "Business Intelligence",
@@ -98,7 +98,7 @@
       "id": "growth-engine",
       "number": "03",
       "color": "orange",
-      "video": "assets/videos/sales/sales-1.mp4",
+      "video": "assets/videos/modules/fleetop-pro/03_supply_chain.mp4",
       "icon": "trending-up",
       "fr": {
         "title": "Growth Engine",
@@ -145,7 +145,7 @@
       "id": "marketing-automation",
       "number": "04",
       "color": "pink",
-      "video": "assets/videos/marketing/marketing-1.mp4",
+      "video": "assets/videos/modules/fleetop-pro/01_presentation.mp4",
       "icon": "megaphone",
       "fr": {
         "title": "Marketing Automation",
@@ -192,7 +192,7 @@
       "id": "brand-experience",
       "number": "05",
       "color": "blue",
-      "video": "assets/videos/connectivity/connectivity-1.mp4",
+      "video": "assets/videos/modules/fleetop-pro/02_planning.mp4",
       "icon": "palette",
       "fr": {
         "title": "Brand & Experience",
@@ -239,7 +239,7 @@
       "id": "system-integration",
       "number": "06",
       "color": "teal",
-      "video": "assets/videos/connectivity/connectivity-3.mp4",
+      "video": "assets/videos/modules/fleetop-pro/03_supply_chain.mp4",
       "icon": "link",
       "fr": {
         "title": "System Integration",
@@ -286,7 +286,7 @@
       "id": "digital-defense",
       "number": "07",
       "color": "red",
-      "video": "assets/videos/cyber/cyber-1.mp4",
+      "video": "assets/videos/modules/Ecosysteme+Maintenance.mp4",
       "icon": "shield",
       "fr": {
         "title": "Digital Defense",
@@ -333,7 +333,7 @@
       "id": "enterprise-platform",
       "number": "08",
       "color": "gold",
-      "video": "assets/videos/industrial/industrial-3.mp4",
+      "video": "assets/videos/modules/fleetop-pro/01_presentation.mp4",
       "icon": "building",
       "fr": {
         "title": "Enterprise Platform",
