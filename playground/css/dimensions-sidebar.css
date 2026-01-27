@@ -102,7 +102,8 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 14px 16px;
+    padding: 12px 14px;
+    height: 60px;
     cursor: pointer;
     transition: var(--transition-fast);
     user-select: none;
@@ -190,7 +191,7 @@
     align-items: center;
     gap: 10px;
     padding: 10px 12px;
-    min-height: 54px;
+    height: 58px;
     background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(10, 20, 18, 0.95) 100%);
     border: 1px solid rgba(16, 185, 129, 0.2);
     border-radius: 8px;
@@ -225,6 +226,7 @@
 .module-content {
     flex: 1;
     min-width: 0;
+    overflow: hidden;
 }
 
 .module-name {
