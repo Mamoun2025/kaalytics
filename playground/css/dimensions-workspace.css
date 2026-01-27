@@ -120,14 +120,8 @@ body.is-panning .canvas-container {
 /* ---------- Placed Module ---------- */
 .placed-module {
     position: absolute;
-    background:
-        linear-gradient(
-            135deg,
-            color-mix(in srgb, var(--dimension-color, var(--brand-yellow)) 15%, var(--brand-green)) 0%,
-            var(--brand-green) 60%,
-            color-mix(in srgb, var(--dimension-color, var(--brand-yellow)) 8%, #0a1a14) 100%
-        );
-    border: 1px solid color-mix(in srgb, var(--dimension-color, var(--brand-yellow)) 30%, var(--border-subtle));
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, #0f1c1a 60%, #0a1a14 100%);
+    border: 1px solid rgba(16, 185, 129, 0.3);
     border-radius: 12px;
     padding: 14px 18px;
     width: 200px;
@@ -135,9 +129,7 @@ body.is-panning .canvas-container {
     cursor: move;
     z-index: 10;
     transition: box-shadow var(--transition-normal), border-color var(--transition-normal);
-    box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.4),
-        inset 0 1px 0 color-mix(in srgb, var(--dimension-color, var(--brand-yellow)) 10%, transparent);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(16, 185, 129, 0.1);
     overflow: hidden;
     /* GPU layer for smooth dragging */
     will-change: transform, left, top;
@@ -173,9 +165,9 @@ body.is-panning .canvas-container {
 
 .placed-module:hover {
     border-color: var(--border-active);
-    border-left-color: var(--dimension-color, var(--brand-yellow));
+    border-left-color: var(--emerald);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
-                -4px 0 20px color-mix(in srgb, var(--dimension-color) 30%, transparent);
+                -4px 0 20px rgba(16, 185, 129, 0.3);
 }
 
 .placed-module.selected {
