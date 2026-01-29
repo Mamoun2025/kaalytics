@@ -10,6 +10,11 @@ class CookieConsent {
         this.consent = this.getConsent();
 
         this.init();
+
+        // Ecouter les changements de langue pour recréer le banner
+        document.addEventListener('i18nLanguageChanged', () => {
+            this.recreateBanner();
+        });
     }
 
     init() {
@@ -98,6 +103,22 @@ class CookieConsent {
 
     hideBanner() {
         document.querySelector('.cookie-consent')?.classList.remove('is-visible');
+    }
+
+    recreateBanner() {
+        // Recréer le banner et modal avec les nouvelles traductions
+        const oldBanner = document.querySelector('.cookie-consent');
+        const oldModal = document.querySelector('.cookie-settings-modal');
+        const wasVisible = oldBanner?.classList.contains('is-visible');
+        if (oldBanner) oldBanner.remove();
+        if (oldModal) oldModal.remove();
+        // Seulement recréer si pas de consentement enregistré
+        if (!this.consent) {
+            this.createBanner();
+            if (wasVisible) {
+                document.querySelector('.cookie-consent')?.classList.add('is-visible');
+            }
+        }
     }
 
     t(key) {
@@ -303,9 +324,26 @@ class CookieConsent {
     }
 }
 
-// Initialiser au chargement
+// Initialiser au chargement - attendre i18n si disponible
 document.addEventListener('DOMContentLoaded', () => {
-    window.cookieConsent = new CookieConsent();
+    // Si i18n est deja pret, initialiser directement
+    if (window.i18n && window.i18n.isReady()) {
+        window.cookieConsent = new CookieConsent();
+    } else {
+        // Attendre l'evenement i18n ready
+        const handler = () => {
+            window.cookieConsent = new CookieConsent();
+            document.removeEventListener('i18nReady', handler);
+        };
+        document.addEventListener('i18nReady', handler);
+        // Fallback: si i18n ne se charge pas apres 3s, initialiser quand meme
+        setTimeout(() => {
+            if (!window.cookieConsent) {
+                window.cookieConsent = new CookieConsent();
+                document.removeEventListener('i18nReady', handler);
+            }
+        }, 3000);
+    }
 });
 
 // Export pour usage externe

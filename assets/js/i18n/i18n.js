@@ -55,6 +55,7 @@ class I18n {
         }
 
         console.log(`[i18n] Initialized with language: ${this.currentLang}`);
+        document.dispatchEvent(new CustomEvent('i18nReady', { detail: { lang: this.currentLang } }));
         return this;
     }
 
@@ -131,6 +132,7 @@ class I18n {
         this.notifyObservers('change', lang);
 
         console.log(`[i18n] Language changed to: ${lang}`);
+        document.dispatchEvent(new CustomEvent('i18nLanguageChanged', { detail: { lang } }));
     }
 
     /**

@@ -869,6 +869,10 @@
       "roi": "ROI in 4 months"
     }
   },
+  "personasCta": {
+    "text": "Do you recognize yourself? Let's talk about your situation.",
+    "button": "I want the same result"
+  },
   "pricing": {
     "label": "Pricing",
     "title": "Plans tailored to your size",

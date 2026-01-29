@@ -869,6 +869,10 @@
       "roi": "ROI en 4 mois"
     }
   },
+  "personasCta": {
+    "text": "Vous vous reconnaissez ? Parlons de votre situation.",
+    "button": "Je veux le meme resultat"
+  },
   "pricing": {
     "label": "Tarifs",
     "title": "Des plans adaptes a votre taille",
