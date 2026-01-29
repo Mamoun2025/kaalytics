@@ -83,7 +83,7 @@ class I18n {
      */
     async loadTranslations(lang) {
         try {
-            const cacheBuster = 'v=20260128';
+            const cacheBuster = 'v=20260129';
             const response = await fetch(`${this.localesPath}/${lang}.json?${cacheBuster}`);
             if (!response.ok) {
                 throw new Error(`Failed to load ${lang}.json: ${response.status}`);
@@ -147,6 +147,12 @@ class I18n {
 
         if (translation === undefined) {
             console.warn(`[i18n] Missing translation for: ${key}`);
+            return key;
+        }
+
+        // If translation is not a string (e.g. nested object), return key
+        if (typeof translation !== 'string') {
+            console.warn(`[i18n] Translation for "${key}" is not a string (got ${typeof translation})`);
             return key;
         }
 

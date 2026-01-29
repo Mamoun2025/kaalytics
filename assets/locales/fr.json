@@ -35,7 +35,7 @@
       "caseStudiesDesc": "Resultats clients concrets",
       "blogNews": "Blog & Actualites"
     },
-    "industries": {
+    "industriesList": {
       "transport": "Transport & Logistique",
       "btp": "BTP & Construction",
       "mines": "Mines & Energie",
@@ -1548,5 +1548,23 @@
     "homeButton": "Retour a l'accueil",
     "contactButton": "Nous contacter",
     "popularPages": "Pages populaires"
+  },
+  "cookieConsent": {
+    "title": "Nous respectons votre vie privee",
+    "text": "Nous utilisons des cookies pour ameliorer votre experience et analyser le trafic.",
+    "privacyLink": "Politique de confidentialite",
+    "decline": "Refuser",
+    "customize": "Personnaliser",
+    "acceptAll": "Accepter tout",
+    "settingsTitle": "Parametres des cookies",
+    "close": "Fermer",
+    "essential": "Cookies essentiels",
+    "essentialDesc": "Necessaires au fonctionnement du site. Ils ne peuvent pas etre desactives.",
+    "analytics": "Cookies analytiques",
+    "analyticsDesc": "Nous aident a comprendre comment vous utilisez le site (Google Analytics).",
+    "marketing": "Cookies marketing",
+    "marketingDesc": "Utilises pour vous montrer des publicites pertinentes sur d'autres sites.",
+    "saveChoices": "Enregistrer mes choix",
+    "acceptAllBtn": "Tout accepter"
   }
 }

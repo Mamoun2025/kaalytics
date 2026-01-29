@@ -100,11 +100,18 @@ class CookieConsent {
         document.querySelector('.cookie-consent')?.classList.remove('is-visible');
     }
 
+    t(key) {
+        if (window.i18n && window.i18n.isReady()) {
+            return window.i18n.t(key);
+        }
+        return key;
+    }
+
     createBanner() {
         const banner = document.createElement('div');
         banner.className = 'cookie-consent';
         banner.setAttribute('role', 'dialog');
-        banner.setAttribute('aria-label', 'Gestion des cookies');
+        banner.setAttribute('aria-label', this.t('cookieConsent.title'));
 
         banner.innerHTML = `
             <div class="cookie-consent__container">
@@ -115,22 +122,22 @@ class CookieConsent {
                             <path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/>
                             <path d="M11 17v.01"/><path d="M7 14v.01"/>
                         </svg>
-                        Nous respectons votre vie privee
+                        ${this.t('cookieConsent.title')}
                     </h3>
                     <p class="cookie-consent__text">
-                        Nous utilisons des cookies pour ameliorer votre experience et analyser le trafic.
-                        <a href="/legal/privacy" target="_blank">Politique de confidentialite</a>
+                        ${this.t('cookieConsent.text')}
+                        <a href="/legal/privacy" target="_blank">${this.t('cookieConsent.privacyLink')}</a>
                     </p>
                 </div>
                 <div class="cookie-consent__actions">
                     <button class="cookie-consent__btn cookie-consent__btn--decline" data-action="decline">
-                        Refuser
+                        ${this.t('cookieConsent.decline')}
                     </button>
                     <button class="cookie-consent__btn cookie-consent__btn--settings" data-action="settings">
-                        Personnaliser
+                        ${this.t('cookieConsent.customize')}
                     </button>
                     <button class="cookie-consent__btn cookie-consent__btn--accept" data-action="accept">
-                        Accepter tout
+                        ${this.t('cookieConsent.acceptAll')}
                     </button>
                 </div>
             </div>
@@ -144,13 +151,13 @@ class CookieConsent {
         const modal = document.createElement('div');
         modal.className = 'cookie-settings-modal';
         modal.setAttribute('role', 'dialog');
-        modal.setAttribute('aria-label', 'Parametres des cookies');
+        modal.setAttribute('aria-label', this.t('cookieConsent.settingsTitle'));
 
         modal.innerHTML = `
             <div class="cookie-settings-modal__content">
                 <div class="cookie-settings-modal__header">
-                    <h3 class="cookie-settings-modal__title">Parametres des cookies</h3>
-                    <button class="cookie-settings-modal__close" data-action="close-modal" aria-label="Fermer">
+                    <h3 class="cookie-settings-modal__title">${this.t('cookieConsent.settingsTitle')}</h3>
+                    <button class="cookie-settings-modal__close" data-action="close-modal" aria-label="${this.t('cookieConsent.close')}">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
                         </svg>
@@ -159,49 +166,49 @@ class CookieConsent {
 
                 <div class="cookie-setting">
                     <div class="cookie-setting__header">
-                        <span class="cookie-setting__name">Cookies essentiels</span>
+                        <span class="cookie-setting__name">${this.t('cookieConsent.essential')}</span>
                         <label class="cookie-toggle">
                             <input type="checkbox" checked disabled>
                             <span class="cookie-toggle__slider"></span>
                         </label>
                     </div>
                     <p class="cookie-setting__desc">
-                        Necessaires au fonctionnement du site. Ils ne peuvent pas etre desactives.
+                        ${this.t('cookieConsent.essentialDesc')}
                     </p>
                 </div>
 
                 <div class="cookie-setting">
                     <div class="cookie-setting__header">
-                        <span class="cookie-setting__name">Cookies analytiques</span>
+                        <span class="cookie-setting__name">${this.t('cookieConsent.analytics')}</span>
                         <label class="cookie-toggle">
                             <input type="checkbox" id="cookie-analytics" checked>
                             <span class="cookie-toggle__slider"></span>
                         </label>
                     </div>
                     <p class="cookie-setting__desc">
-                        Nous aident a comprendre comment vous utilisez le site (Google Analytics).
+                        ${this.t('cookieConsent.analyticsDesc')}
                     </p>
                 </div>
 
                 <div class="cookie-setting">
                     <div class="cookie-setting__header">
-                        <span class="cookie-setting__name">Cookies marketing</span>
+                        <span class="cookie-setting__name">${this.t('cookieConsent.marketing')}</span>
                         <label class="cookie-toggle">
                             <input type="checkbox" id="cookie-marketing">
                             <span class="cookie-toggle__slider"></span>
                         </label>
                     </div>
                     <p class="cookie-setting__desc">
-                        Utilises pour vous montrer des publicites pertinentes sur d'autres sites.
+                        ${this.t('cookieConsent.marketingDesc')}
                     </p>
                 </div>
 
                 <div class="cookie-settings-modal__footer">
                     <button class="cookie-consent__btn cookie-consent__btn--decline" data-action="save-settings">
-                        Enregistrer mes choix
+                        ${this.t('cookieConsent.saveChoices')}
                     </button>
                     <button class="cookie-consent__btn cookie-consent__btn--accept" data-action="accept-all">
-                        Tout accepter
+                        ${this.t('cookieConsent.acceptAllBtn')}
                     </button>
                 </div>
             </div>
