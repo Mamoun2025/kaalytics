@@ -1664,31 +1664,31 @@
                 <div style="text-align: center; margin-bottom: var(--space-xl);">
                     <span style="display: inline-flex; align-items: center; gap: 8px; background: var(--emerald-dim); color: var(--emerald); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: var(--space-md);">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                        <span data-i18n="roiCalculator.label">Calculateur ROI</span>
+                        <span data-i18n="pricingExtended.roiCalculator.label">Calculateur ROI</span>
                     </span>
-                    <h3 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: 8px;" data-i18n="roiCalculator.title">Estimez vos economies</h3>
-                    <p style="color: var(--text-muted);" data-i18n="roiCalculator.subtitle">Ajustez les parametres pour voir votre retour sur investissement</p>
+                    <h3 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: 8px;" data-i18n="pricingExtended.roiCalculator.title">Estimez vos economies</h3>
+                    <p style="color: var(--text-muted);" data-i18n="pricingExtended.roiCalculator.subtitle">Ajustez les parametres pour voir votre retour sur investissement</p>
                 </div>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2xl);" class="roi-grid">
                     <!-- Inputs -->
                     <div style="display: flex; flex-direction: column; gap: var(--space-lg);">
                         <div>
                             <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                                <label style="color: var(--text-secondary); font-size: 14px;" data-i18n="roiCalculator.labels.vehicles">Nombre de vehicules</label>
+                                <label style="color: var(--text-secondary); font-size: 14px;" data-i18n="pricingExtended.roiCalculator.labels.vehicles">Nombre de vehicules</label>
                                 <span id="roiVehicles" style="color: var(--emerald); font-weight: 600;">25</span>
                             </div>
                             <input type="range" id="roiVehiclesSlider" min="5" max="200" value="25" step="5" style="width: 100%; accent-color: var(--emerald);">
                         </div>
                         <div>
                             <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                                <label style="color: var(--text-secondary); font-size: 14px;" data-i18n="roiCalculator.labels.maintenanceCost">Cout maintenance/mois</label>
+                                <label style="color: var(--text-secondary); font-size: 14px;" data-i18n="pricingExtended.roiCalculator.labels.maintenanceCost">Cout maintenance/mois</label>
                                 <span id="roiMaintenance" style="color: var(--emerald); font-weight: 600;">15 000 EUR</span>
                             </div>
                             <input type="range" id="roiMaintenanceSlider" min="2000" max="100000" value="15000" step="1000" style="width: 100%; accent-color: var(--emerald);">
                         </div>
                         <div>
                             <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                                <label style="color: var(--text-secondary); font-size: 14px;" data-i18n="roiCalculator.labels.kmPerMonth">Km parcourus/mois</label>
+                                <label style="color: var(--text-secondary); font-size: 14px;" data-i18n="pricingExtended.roiCalculator.labels.kmPerMonth">Km parcourus/mois</label>
                                 <span id="roiKm" style="color: var(--emerald); font-weight: 600;">50 000 km</span>
                             </div>
                             <input type="range" id="roiKmSlider" min="10000" max="500000" value="50000" step="5000" style="width: 100%; accent-color: var(--emerald);">
@@ -1697,20 +1697,20 @@
                     <!-- Results -->
                     <div style="background: var(--bg-void); border-radius: var(--radius-lg); padding: var(--space-xl); display: flex; flex-direction: column; justify-content: center;">
                         <div style="text-align: center; margin-bottom: var(--space-lg); padding-bottom: var(--space-lg); border-bottom: 1px solid var(--border);">
-                            <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 4px;" data-i18n="roiCalculator.results.annualSavings">Economies annuelles</p>
+                            <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 4px;" data-i18n="pricingExtended.roiCalculator.results.annualSavings">Economies annuelles</p>
                             <p id="roiSavings" style="font-size: 36px; font-weight: 800; color: var(--emerald);">54 000 EUR</p>
                         </div>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); text-align: center;">
                             <div>
-                                <p style="color: var(--text-muted); font-size: 11px;" data-i18n="roiCalculator.results.roiTime">ROI atteint</p>
+                                <p style="color: var(--text-muted); font-size: 11px;" data-i18n="pricingExtended.roiCalculator.results.roiTime">ROI atteint</p>
                                 <p id="roiMonthsCalc" style="font-size: 18px; font-weight: 700;">4 mois</p>
                             </div>
                             <div>
-                                <p style="color: var(--text-muted); font-size: 11px;" data-i18n="roiCalculator.results.breakdownReduction">Reduction pannes</p>
+                                <p style="color: var(--text-muted); font-size: 11px;" data-i18n="pricingExtended.roiCalculator.results.breakdownReduction">Reduction pannes</p>
                                 <p style="font-size: 18px; font-weight: 700; color: var(--teal);">↓</p>
                             </div>
                         </div>
-                        <a href="#contact" class="btn btn-primary" style="width: 100%; margin-top: var(--space-lg); text-align: center;" data-i18n="roiCalculator.cta">Obtenir mon estimation</a>
+                        <a href="#contact" class="btn btn-primary" style="width: 100%; margin-top: var(--space-lg); text-align: center;" data-i18n="pricingExtended.roiCalculator.cta">Obtenir mon estimation</a>
                     </div>
                 </div>
             </div>
