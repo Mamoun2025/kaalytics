@@ -132,19 +132,9 @@
         }
 
         /* === NAVBAR INTEGRATION === */
-        /* Navbar container positioning */
+        /* Only z-index needed — style comes from _navbar.css via data-navbar-style="solid" */
         #navbar-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
             z-index: 2000;
-        }
-
-        #navbar-container .navbar {
-            background: rgba(4, 10, 8, 0.98) !important;
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(16, 185, 129, 0.15);
         }
 
         /* Playground toolbar (ancien header) */
@@ -204,18 +194,53 @@
             display: none;
         }
 
-        /* Mobile adjustments */
-        @media (max-width: 768px) {
+        /* === TABLET: Toolbar compact === */
+        @media (pointer: coarse), (max-width: 1024px) {
             .playground-toolbar {
                 top: 60px;
-                padding: 0 12px;
+                height: 44px;
+                padding: 0 10px;
             }
 
+            .playground-toolbar .toolbar-title {
+                display: none;
+            }
+
+            .playground-toolbar .header-actions {
+                width: 100%;
+                justify-content: flex-end;
+            }
+
+            .playground-toolbar .header-actions .btn {
+                min-height: 38px;
+                min-width: 38px;
+                padding: 6px 10px;
+                font-size: 12px;
+            }
+
+            /* navbar(60) + toolbar(44) = 104px */
             .sidebar,
             .workspace,
             .right-panel {
-                top: 110px !important;
-                height: calc(100vh - 110px) !important;
+                top: 104px !important;
+                height: calc(100vh - 104px) !important;
+            }
+        }
+
+        /* Phone */
+        @media (max-width: 600px) {
+            .playground-toolbar {
+                top: 56px;
+                height: 40px;
+                padding: 0 8px;
+            }
+
+            /* navbar(56) + toolbar(40) = 96px */
+            .sidebar,
+            .workspace,
+            .right-panel {
+                top: 96px !important;
+                height: calc(100vh - 96px) !important;
             }
         }
     </style>

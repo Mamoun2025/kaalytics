@@ -54,7 +54,7 @@ body.is-panning * {
 
     /* === ROOT VARIABLES FOR TABLET === */
     :root {
-        --tablet-header-height: 50px;
+        --tablet-header-height: 104px; /* navbar(60) + toolbar(44) */
         --tablet-sidebar-height: 50vh;
         --tablet-right-panel-width: 280px;
         --tablet-font-scale: 0.85;
@@ -96,52 +96,46 @@ body.is-panning * {
 
 
     /* ───────────────────────────────────────
-       HEADER - Compact & Touch-Friendly
+       PLAYGROUND TOOLBAR - Compact & Touch-Friendly
        ─────────────────────────────────────── */
-    .header {
-        height: var(--tablet-header-height);
-        padding: 8px 12px;
-        flex-wrap: nowrap;
+    .playground-toolbar {
+        top: 60px !important;
+        height: 44px;
+        padding: 0 10px;
         gap: 8px;
     }
 
-    .logo {
-        flex-shrink: 0;
+    .playground-toolbar .toolbar-title {
+        display: none;
     }
 
-    .logo-text {
-        font-size: 14px;
-    }
-
-    .logo-text span {
-        display: none; /* Hide "Playground" text */
-    }
-
-    .header-actions {
+    .playground-toolbar .header-actions {
+        width: 100%;
+        justify-content: flex-end;
         gap: 6px;
         flex-wrap: nowrap;
     }
 
     /* Preset selector - compact */
-    .preset-selector {
-        max-width: 120px;
+    .playground-toolbar .preset-selector {
+        max-width: 140px;
     }
 
-    .preset-selector select {
-        font-size: 11px;
-        padding: 6px 8px;
-        min-height: 36px;
+    .playground-toolbar .preset-selector select {
+        font-size: 12px;
+        padding: 6px 10px;
+        min-height: 38px;
     }
 
-    .header-actions .btn {
-        padding: 8px 10px;
-        font-size: 11px;
-        min-height: 36px;
-        min-width: 36px;
+    .playground-toolbar .header-actions .btn {
+        padding: 8px 12px;
+        font-size: 12px;
+        min-height: 38px;
+        min-width: 38px;
     }
 
     /* Icon-only buttons on small tablets */
-    .header-actions .btn span:not(.icon-sm):not([data-lucide]) {
+    .playground-toolbar .header-actions .btn span:not(.icon-sm):not([data-lucide]) {
         display: none;
     }
 
@@ -291,10 +285,11 @@ body.is-panning * {
        ─────────────────────────────────────── */
     .workspace {
         position: fixed !important;
-        top: var(--tablet-header-height) !important;
+        top: 104px !important; /* navbar(60) + toolbar(44) */
         left: 0 !important;
         right: 0 !important;
         bottom: 56px !important; /* Space for collapsed sidebar */
+        height: auto !important;
     }
 
     .workspace-grid {
@@ -396,7 +391,7 @@ body.is-panning * {
     .right-panel {
         display: flex !important; /* Override display:none at 768px */
         position: fixed !important;
-        top: var(--tablet-header-height) !important;
+        top: 104px !important; /* navbar(60) + toolbar(44) */
         right: 0 !important;
         bottom: 56px !important;
         left: auto !important;
@@ -728,7 +723,7 @@ body.is-panning * {
     /* Connection Indicator */
     .tablet-connection-indicator {
         position: fixed;
-        top: calc(var(--tablet-header-height) + 10px);
+        top: 114px; /* navbar(60) + toolbar(44) + 10px */
         left: 50%;
         transform: translateX(-50%);
         background: var(--brand-yellow);
@@ -827,19 +822,16 @@ body.is-panning * {
 @media (pointer: coarse) and (orientation: landscape) {
 
     :root {
-        --tablet-header-height: 44px;
+        --tablet-header-height: 98px; /* navbar(54) + toolbar(44) */
         --tablet-sidebar-height: 40vh;
         --tablet-right-panel-width: 240px;
     }
 
-    /* Header even more compact */
-    .header {
-        height: var(--tablet-header-height);
-        padding: 6px 10px;
-    }
-
-    .logo-text {
-        font-size: 13px;
+    /* Toolbar compact in landscape */
+    .playground-toolbar {
+        top: 54px !important;
+        height: 44px;
+        padding: 0 10px;
     }
 
     /* Sidebar - smaller in landscape */
@@ -927,9 +919,15 @@ body.is-panning * {
 @media (pointer: coarse) and (orientation: portrait) {
 
     :root {
-        --tablet-header-height: 50px;
+        --tablet-header-height: 104px; /* navbar(60) + toolbar(44) */
         --tablet-sidebar-height: 50vh;
         --tablet-right-panel-width: 100%;
+    }
+
+    /* Toolbar under navbar in portrait */
+    .playground-toolbar {
+        top: 60px !important;
+        height: 44px;
     }
 
     /* Sidebar takes more space in portrait */
@@ -1006,32 +1004,29 @@ body.is-panning * {
 @media (max-width: 600px) {
 
     :root {
-        --tablet-header-height: 44px;
+        --tablet-header-height: 96px; /* navbar(56) + toolbar(40) */
         --tablet-font-scale: 0.8;
     }
 
-    /* Header ultra-compact */
-    .header {
-        height: var(--tablet-header-height);
-        padding: 6px 8px;
+    /* Toolbar ultra-compact on phone */
+    .playground-toolbar {
+        top: 56px !important;
+        height: 40px;
+        padding: 0 8px;
         gap: 4px;
     }
 
-    .logo-text {
-        font-size: 12px;
-    }
-
-    .preset-selector {
+    .playground-toolbar .preset-selector {
         max-width: 90px;
     }
 
-    .preset-selector select {
+    .playground-toolbar .preset-selector select {
         font-size: 10px;
         padding: 4px 6px;
         min-height: 32px;
     }
 
-    .header-actions .btn {
+    .playground-toolbar .header-actions .btn {
         padding: 6px 8px;
         min-height: 32px;
         min-width: 32px;
@@ -1252,19 +1247,15 @@ body.is-panning * {
    ═══════════════════════════════════════════════════════════ */
 @media (max-width: 400px) {
 
-    .header {
-        padding: 4px 6px;
+    .playground-toolbar {
+        padding: 0 6px;
     }
 
-    .logo-text {
-        font-size: 11px;
-    }
-
-    .preset-selector {
+    .playground-toolbar .preset-selector {
         display: none; /* Hide on very small screens */
     }
 
-    .header-actions .btn {
+    .playground-toolbar .header-actions .btn {
         padding: 5px 6px;
         min-height: 30px;
         min-width: 30px;
