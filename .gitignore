@@ -25,3 +25,13 @@ npm-debug.log
 
 # Session reports (dev only)
 RAPPORT-SESSION.md
+
+# Videos (too large for git)
+assets/videos/
+
+# Proposals (drafts)
+PROPOSALS/
+proposals/
+
+# Editor tool (dev only)
+sections/modules-ia/editor.html

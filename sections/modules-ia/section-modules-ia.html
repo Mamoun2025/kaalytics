@@ -1,0 +1,269 @@
+<!-- =============================================
+     SECTION: MODULES IA - Hub Interactif
+     Version: 2.0 (Production Ready)
+
+     Integration:
+     1. Inclure modules-ia.css dans le <head>
+     2. Inclure ce HTML dans le body
+     3. Inclure modules-ia.js avant </body>
+
+     Customization:
+     - Modifier les liens dans modules-ia.js (config.link)
+     - Le JS expose window.ModulesIA pour controle externe
+     ============================================= -->
+
+<section class="section-modules-ia" id="modules-ia">
+    <div class="container">
+        <!-- Header -->
+        <header class="modules-ia__header">
+            <div class="modules-ia__badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/>
+                </svg>
+                Ecosysteme IA Connecte
+            </div>
+            <h2 class="modules-ia__title">8 Modules IA pour transformer votre entreprise</h2>
+            <p class="modules-ia__subtitle">Cliquez sur un module pour explorer ses fonctionnalites. Touches 1-8 pour naviguer.</p>
+        </header>
+
+        <!-- Hub Container -->
+        <div class="modules-ia__hub">
+            <!-- Orbit Rings (decorative) -->
+            <div class="modules-ia__orbits">
+                <div class="orbit-ring orbit-ring--inner"></div>
+                <div class="orbit-ring orbit-ring--outer"></div>
+            </div>
+
+            <!-- Radar Effect -->
+            <div class="modules-ia__radar">
+                <div class="radar-pulse"></div>
+                <div class="radar-pulse"></div>
+                <div class="radar-pulse"></div>
+                <div class="radar-sweep"></div>
+            </div>
+
+            <!-- Connection Lines SVG - COORDONNEES EDITEUR V2 -->
+            <svg class="modules-ia__connections" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid meet">
+
+                <!-- Daedalia AI -->
+                <line class="connection-line" data-module="daedalia" x1="400" y1="400" x2="400" y2="40"/>
+                <circle class="connection-dot" data-module="daedalia" cx="400" cy="40" r="5"/>
+
+                <!-- Industrial -->
+                <line class="connection-line" data-module="industrial" x1="401" y1="398" x2="667" y2="161"/>
+                <circle class="connection-dot" data-module="industrial" cx="667" cy="161" r="5"/>
+
+                <!-- Connectivity -->
+                <line class="connection-line" data-module="connectivity" x1="399" y1="399" x2="759" y2="400"/>
+                <circle class="connection-dot" data-module="connectivity" cx="759" cy="400" r="5"/>
+
+                <!-- Odoo ERP -->
+                <line class="connection-line" data-module="odoo" x1="400" y1="400" x2="653" y2="660"/>
+                <circle class="connection-dot" data-module="odoo" cx="653" cy="660" r="5"/>
+
+                <!-- Supply Chain -->
+                <line class="connection-line" data-module="supply-chain" x1="400" y1="400" x2="400" y2="760"/>
+                <circle class="connection-dot" data-module="supply-chain" cx="400" cy="760" r="5"/>
+
+                <!-- Sales -->
+                <line class="connection-line" data-module="sales" x1="400" y1="400" x2="155" y2="655"/>
+                <circle class="connection-dot" data-module="sales" cx="155" cy="655" r="5"/>
+
+                <!-- Security -->
+                <line class="connection-line" data-module="cyber" x1="400" y1="400" x2="40" y2="400"/>
+                <circle class="connection-dot" data-module="cyber" cx="40" cy="400" r="5"/>
+
+                <!-- Marketing -->
+                <line class="connection-line" data-module="marketing" x1="400" y1="400" x2="145" y2="150"/>
+                <circle class="connection-dot" data-module="marketing" cx="145" cy="150" r="5"/>
+
+                <!-- Point central -->
+                <circle class="connection-dot-center" cx="400" cy="400" r="6" fill="rgba(16, 185, 129, 0.2)" stroke="rgba(16, 185, 129, 0.5)" stroke-width="2"/>
+            </svg>
+
+            <!-- Particules flottantes (effet fun) -->
+            <div class="modules-ia__particles">
+                <div class="particle particle--1"></div>
+                <div class="particle particle--2"></div>
+                <div class="particle particle--3"></div>
+                <div class="particle particle--4"></div>
+                <div class="particle particle--5"></div>
+                <div class="particle particle--6"></div>
+                <div class="particle particle--7"></div>
+                <div class="particle particle--8"></div>
+            </div>
+
+            <!-- Central Video Player -->
+            <div class="modules-ia__center">
+                <video class="modules-ia__video" id="modules-ia-video" autoplay muted loop playsinline>
+                    <source src="assets/videos/daedalia/daedalia-1.mp4" type="video/mp4">
+                </video>
+                <div class="modules-ia__nav">
+                    <button class="modules-ia__nav-btn" id="modules-ia-prev" aria-label="Video precedente">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    <button class="modules-ia__nav-btn" id="modules-ia-next" aria-label="Video suivante">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modules-ia__video-info">
+                    <div class="modules-ia__video-title" id="modules-ia-title">Daedalia AI</div>
+                    <div class="modules-ia__video-counter" id="modules-ia-counter">Demo 1/4</div>
+                </div>
+            </div>
+
+            <!-- Module Nodes (Octagon layout) -->
+
+            <!-- Position 1: Top center - DAEDALIA -->
+            <div class="module-node active" data-module="daedalia" data-position="1">
+                <div class="module-node__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+                    </svg>
+                </div>
+                <span class="module-node__label">Daedalia AI</span>
+                <span class="module-node__count">4 demos</span>
+            </div>
+
+            <!-- Position 2: Top right - INDUSTRIAL -->
+            <div class="module-node" data-module="industrial" data-position="2">
+                <div class="module-node__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                        <path d="M2 20h20M5 20V8l7-5 7 5v12M9 20v-6h6v6"/>
+                    </svg>
+                </div>
+                <span class="module-node__label">Industrial</span>
+                <span class="module-node__count">6 demos</span>
+            </div>
+
+            <!-- Position 3: Right center - CONNECTIVITY -->
+            <div class="module-node" data-module="connectivity" data-position="3">
+                <div class="module-node__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                        <circle cx="12" cy="12" r="2"/>
+                        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83"/>
+                    </svg>
+                </div>
+                <span class="module-node__label">Connectivity</span>
+                <span class="module-node__count">5 demos</span>
+            </div>
+
+            <!-- Position 4: Bottom right - ODOO -->
+            <div class="module-node" data-module="odoo" data-position="4">
+                <div class="module-node__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <path d="M3 9h18M9 21V9"/>
+                    </svg>
+                </div>
+                <span class="module-node__label">Odoo ERP</span>
+                <span class="module-node__count">4 demos</span>
+            </div>
+
+            <!-- Position 5: Bottom center - SUPPLY CHAIN -->
+            <div class="module-node" data-module="supply-chain" data-position="5">
+                <div class="module-node__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                        <rect x="1" y="6" width="6" height="6" rx="1"/>
+                        <rect x="9" y="6" width="6" height="6" rx="1"/>
+                        <rect x="17" y="6" width="6" height="6" rx="1"/>
+                        <path d="M4 12v4a2 2 0 002 2h12a2 2 0 002-2v-4"/>
+                    </svg>
+                </div>
+                <span class="module-node__label">Supply Chain</span>
+                <span class="module-node__count">3 demos</span>
+            </div>
+
+            <!-- Position 6: Bottom left - SALES -->
+            <div class="module-node" data-module="sales" data-position="6">
+                <div class="module-node__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+                    </svg>
+                </div>
+                <span class="module-node__label">Sales</span>
+                <span class="module-node__count">3 demos</span>
+            </div>
+
+            <!-- Position 7: Left center - CYBER SECURITY -->
+            <div class="module-node" data-module="cyber" data-position="7">
+                <div class="module-node__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </div>
+                <span class="module-node__label">Security</span>
+                <span class="module-node__count">2 demos</span>
+            </div>
+
+            <!-- Position 8: Top left - MARKETING -->
+            <div class="module-node" data-module="marketing" data-position="8">
+                <div class="module-node__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                    </svg>
+                </div>
+                <span class="module-node__label">Marketing</span>
+                <span class="module-node__count">1 demo</span>
+            </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="modules-ia__stats">
+            <div class="modules-ia__stat">
+                <div class="modules-ia__stat-value">28</div>
+                <div class="modules-ia__stat-label">Videos Demo</div>
+            </div>
+            <div class="modules-ia__stat">
+                <div class="modules-ia__stat-value">8</div>
+                <div class="modules-ia__stat-label">Modules IA</div>
+            </div>
+            <div class="modules-ia__stat">
+                <div class="modules-ia__stat-value">∞</div>
+                <div class="modules-ia__stat-label">Combinaisons</div>
+            </div>
+            <div class="modules-ia__stat">
+                <div class="modules-ia__stat-value">24/7</div>
+                <div class="modules-ia__stat-label">Support</div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="modules-ia__cta">
+            <a href="#contact" class="modules-ia__cta-btn">
+                Configurer mes modules
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Info Panel (Lateral) -->
+    <aside class="module-info-panel" id="modules-ia-panel">
+        <button class="module-info-panel__close" id="modules-ia-panel-close" aria-label="Fermer">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+        </button>
+        <div class="module-info-panel__header">
+            <div class="module-info-panel__icon" id="modules-ia-panel-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"/>
+                </svg>
+            </div>
+            <h3 class="module-info-panel__title" id="modules-ia-panel-title">Module</h3>
+        </div>
+        <span class="module-info-panel__badge" id="modules-ia-panel-badge">0 videos demo</span>
+        <p class="module-info-panel__desc" id="modules-ia-panel-desc">Description du module.</p>
+        <ul class="module-info-panel__features" id="modules-ia-panel-features"></ul>
+        <div class="module-info-panel__stats" id="modules-ia-panel-stats"></div>
+        <a href="#contact" class="module-info-panel__cta" id="modules-ia-panel-cta">En savoir plus</a>
+    </aside>
+</section>
