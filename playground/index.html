@@ -134,11 +134,15 @@
         /* === NAVBAR INTEGRATION === */
         /* Reset standard variables on navbar so playground's dimensions-base.css overrides don't affect it */
         #navbar-container {
-            z-index: 2000;
             --border-subtle: rgba(255, 255, 255, 0.06);
             --text-secondary: #6ee7b7;
             --bg-card: #1a312d;
             --bg-elevated: #213d39;
+        }
+
+        /* Navbar must be above toolbar (1500) and sidebar (100) so dropdowns are never hidden */
+        #navbar-container .navbar {
+            z-index: 2000;
         }
 
         /* Playground toolbar (ancien header) */
