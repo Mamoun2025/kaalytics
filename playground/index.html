@@ -132,9 +132,13 @@
         }
 
         /* === NAVBAR INTEGRATION === */
-        /* Only z-index needed — style comes from _navbar.css via data-navbar-style="solid" */
+        /* Reset standard variables on navbar so playground's dimensions-base.css overrides don't affect it */
         #navbar-container {
             z-index: 2000;
+            --border-subtle: rgba(255, 255, 255, 0.06);
+            --text-secondary: #6ee7b7;
+            --bg-card: #1a312d;
+            --bg-elevated: #213d39;
         }
 
         /* Playground toolbar (ancien header) */
