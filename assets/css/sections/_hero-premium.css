@@ -111,14 +111,11 @@
 }
 
 .hero__title-highlight {
-    display: inline-block;
-    padding: 0.1em 0.3em;
-    background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(13, 148, 136, 0.2) 100%);
-    border-radius: var(--radius-md);
-    color: var(--emerald-bright);
+    display: inline;
+    background: none;
     position: relative;
     opacity: 0;
-    animation: slideUp 0.8s ease-out 0.4s forwards, glowPulse 3s ease-in-out 1s infinite;
+    animation: slideUp 0.8s ease-out 0.4s forwards;
 }
 
 @keyframes slideUp {
