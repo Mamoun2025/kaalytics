@@ -95,7 +95,8 @@
 }
 
 /* Full width */
-.btn-block {
+.btn-block,
+.btn--fullwidth {
     width: 100%;
 }
 

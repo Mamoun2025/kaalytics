@@ -1,0 +1,390 @@
+/**
+ * Kaalytics Pricing Section
+ * Responsive pricing cards, ROI calculator, and guarantee section
+ */
+
+/* ========================================
+   PRICING SECTION - MAIN
+   ======================================== */
+
+.pricing-section {
+    padding: var(--space-4xl) 0;
+}
+
+/* ========================================
+   PRICING TOGGLE (Monthly/Annual)
+   ======================================== */
+
+.pricing-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-2xl);
+    flex-wrap: wrap;
+}
+
+.pricing-toggle__label {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: var(--text-base);
+    transition: color var(--transition-fast);
+}
+
+.pricing-toggle__label[data-billing="annual"] {
+    color: var(--text-muted);
+}
+
+.pricing-toggle__switch {
+    position: relative;
+    width: 60px;
+    height: 32px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.pricing-toggle__switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.pricing-toggle__switch span:first-of-type {
+    position: absolute;
+    inset: 0;
+    background: var(--bg-card);
+    border-radius: 16px;
+    border: 2px solid var(--border);
+    transition: all 0.3s;
+}
+
+.pricing-toggle__slider {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 24px;
+    height: 24px;
+    background: var(--emerald);
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.pricing-toggle__switch input:checked + span:first-of-type {
+    background: var(--emerald);
+    border-color: var(--emerald);
+}
+
+.pricing-toggle__switch input:checked ~ .pricing-toggle__slider {
+    transform: translateX(28px);
+}
+
+.pricing-toggle__badge {
+    background: var(--emerald);
+    color: var(--bg-void);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-left: 4px;
+    white-space: nowrap;
+}
+
+/* ========================================
+   FLEETOPS PRO SECTION HEADER
+   ======================================== */
+
+.pricing-section__heading {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-xl);
+    font-size: var(--text-lg);
+    font-weight: 600;
+}
+
+/* ========================================
+   PRICING GRID
+   ======================================== */
+
+.pricing-section__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+    margin-bottom: var(--space-4xl);
+}
+
+@media (max-width: 1024px) {
+    .pricing-section__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .pricing-section__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   ROI CALCULATOR SECTION
+   ======================================== */
+
+.pricing-section__roi {
+    margin: var(--space-3xl) 0;
+    padding: var(--space-2xl);
+    background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+}
+
+.pricing-section__roi-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.pricing-section__roi-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--emerald-dim);
+    color: var(--emerald);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+}
+
+.pricing-section__roi-label svg {
+    width: 14px;
+    height: 14px;
+}
+
+.pricing-section__roi-title {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.pricing-section__roi-subtitle {
+    color: var(--text-muted);
+    font-size: var(--text-base);
+}
+
+.pricing-section__roi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+}
+
+@media (max-width: 768px) {
+    .pricing-section__roi-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+}
+
+/* ROI Calculator Inputs */
+
+.pricing-section__roi-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.pricing-section__roi-input {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.pricing-section__roi-input-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.pricing-section__roi-input-label {
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.pricing-section__roi-input-value {
+    color: var(--emerald);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.pricing-section__roi-input input[type="range"] {
+    width: 100%;
+    accent-color: var(--emerald);
+    cursor: pointer;
+}
+
+/* ROI Calculator Results */
+
+.pricing-section__roi-results {
+    background: var(--bg-void);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pricing-section__roi-results-main {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--border);
+}
+
+.pricing-section__roi-results-label {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.pricing-section__roi-results-value {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--emerald);
+}
+
+.pricing-section__roi-results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.pricing-section__roi-results-item-label {
+    color: var(--text-muted);
+    font-size: 11px;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.pricing-section__roi-results-item-value {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.pricing-section__roi-results-item-value.accent {
+    color: var(--teal);
+}
+
+.pricing-section__roi-results-cta {
+    width: 100%;
+    text-align: center;
+}
+
+/* ========================================
+   DAEDALIA AI PRICING SECTION
+   ======================================== */
+
+.pricing-section__daedalia {
+    padding-top: var(--space-2xl);
+    border-top: 1px solid var(--border);
+}
+
+.pricing-section__daedalia-heading {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-xl);
+    font-size: var(--text-lg);
+    font-weight: 600;
+}
+
+.pricing-section__daedalia-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+    .pricing-section__daedalia-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+}
+
+/* ========================================
+   GUARANTEE SECTION
+   ======================================== */
+
+.pricing-section__guarantee {
+    text-align: center;
+    margin-top: var(--space-3xl);
+    padding: var(--space-xl);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-xl);
+}
+
+.pricing-section__guarantee-text {
+    color: var(--text-secondary);
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+}
+
+.pricing-section__guarantee-highlight {
+    color: var(--emerald);
+    font-weight: 600;
+}
+
+/* ========================================
+   FLEETOPS PRO SECTION WRAPPER
+   ======================================== */
+
+.pricing-section__fleetops-wrapper {
+    margin-bottom: var(--space-4xl);
+}
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 640px) {
+    .pricing-section {
+        padding: var(--space-2xl) 0;
+    }
+
+    .pricing-toggle {
+        gap: var(--space-sm);
+        margin-bottom: var(--space-xl);
+    }
+
+    .pricing-toggle__label {
+        font-size: var(--text-sm);
+    }
+
+    .pricing-section__roi {
+        padding: var(--space-lg);
+        margin: var(--space-2xl) 0;
+    }
+
+    .pricing-section__roi-title {
+        font-size: var(--text-xl);
+    }
+
+    .pricing-section__roi-subtitle {
+        font-size: var(--text-sm);
+    }
+
+    .pricing-section__roi-results-value {
+        font-size: 28px;
+    }
+
+    .pricing-section__guarantee {
+        padding: var(--space-lg);
+        margin-top: var(--space-2xl);
+    }
+
+    .pricing-section__guarantee-text {
+        font-size: var(--text-base);
+    }
+}

@@ -115,7 +115,7 @@ class KaalyticsAnimations {
         });
 
         // Stats animation
-        gsap.utils.toArray('.fleetops-showcase__stats, .social-proof__stats').forEach(stats => {
+        gsap.utils.toArray('.fleetops-showcase__stats').forEach(stats => {
             gsap.from(stats.children, {
                 scrollTrigger: {
                     trigger: stats,
@@ -167,7 +167,7 @@ class KaalyticsAnimations {
     animateCounters() {
         if (typeof ScrollTrigger === 'undefined') return;
 
-        const statValues = document.querySelectorAll('.social-proof__stat-value, .fleetops-showcase__stat-value');
+        const statValues = document.querySelectorAll('.fleetops-showcase__stat-value');
 
         statValues.forEach(stat => {
             const text = stat.textContent;

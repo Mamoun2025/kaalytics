@@ -36,10 +36,12 @@
 @import 'sections/_playground.css';
 @import 'sections/_services.css';
 @import 'sections/_social-proof.css';
+@import 'sections/_products-overview.css';
 @import 'sections/_daedalia.css';
 @import 'sections/_cta-premium.css';
 @import 'sections/_case-study-highlight.css';
 @import 'sections/_premium-sections.css';
+@import 'sections/_pricing.css';
 @import 'sections/_index-inline.css';
 @import 'sections/_modules-enhanced.css';
 
