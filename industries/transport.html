@@ -3,367 +3,369 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gestion de flotte Transport: optimisation carburant, conformite auto. Optimisez vos tournees, suivez vos chauffeurs en temps reel. Demo gratuite.">
-    <meta name="keywords" content="FleetOps Transport, Gestion flotte Transport, Logistique, GPS camion, Optimisation tournees, Carburant">
-    <meta name="author" content="Kaalytics">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#10b981">
-    <title>Gestion de Flotte Transport | Optimisation Carburant | Kaalytics</title>
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://kaalytics.com/industries/transport">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kaalytics.com/industries/transport">
-    <meta property="og:title" content="FleetOps Pro pour le Transport | Optimisation Carburant">
-    <meta property="og:description" content="Optimisez vos tournees, reduisez votre carburant, conformite reglementaire automatique.">
-    <meta property="og:image" content="https://kaalytics.com/assets/images/og-transport.jpg">
-    <meta property="og:locale" content="fr_FR">
-    <meta property="og:site_name" content="Kaalytics">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="FleetOps Pro Transport | Optimisation Carburant">
-    <meta name="twitter:description" content="Gestion de flotte Transport intelligente. Optimisez tournees et carburant.">
-    <meta name="twitter:image" content="https://kaalytics.com/assets/images/og-transport.jpg">
-    <meta name="twitter:site" content="@kaalytics">
-
-    <!-- Structured Data JSON-LD -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "FleetOps Pro pour le Transport",
-        "description": "Solution de gestion de flotte specialisee pour le secteur Transport et Logistique",
-        "url": "https://kaalytics.com/industries/transport",
-        "provider": {
-            "@type": "Organization",
-            "name": "Kaalytics"
-        },
-        "areaServed": "Afrique",
-        "serviceType": "Fleet Management Software"
-    }
-    </script>
-
-    <!-- PWA -->
-    <link rel="manifest" href="/manifest.json">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
-
-    <!-- Fonts -->
+    <title>Transport & Logistique | Kaalytics</title>
+    <meta name="description" content="Chaque kilometre compte. Chaque livraison aussi. Marges fines, clients exigeants, reglementation stricte. Kaalytics optimise votre rentabilite.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
     <link rel="stylesheet" href="../assets/css/main.css">
-    <link rel="stylesheet" href="../assets/css/industries.css">
+    <style>
+        :root {
+            --bg-void: #040a08;
+            --bg-card: #0f1f1b;
+            --bg-secondary: #132a24;
+            --emerald: #10b981;
+            --emerald-dim: rgba(16, 185, 129, 0.1);
+            --text-primary: #ecfdf5;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: rgba(16, 185, 129, 0.12);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg-void); color: var(--text-primary); }
+
+        .industry-hero {
+            background: var(--bg-void);
+            padding: 120px 24px 60px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .industry-hero__badge {
+            display: inline-block;
+            background: var(--emerald-dim);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            color: var(--emerald);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .industry-hero__title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .industry-hero__subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .challenges {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        .challenges__title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .challenges__subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            font-size: 0.95rem;
+        }
+
+        .challenge-card {
+            border-left: 3px solid var(--emerald);
+            background: var(--bg-card);
+            padding: 24px 28px;
+            margin-bottom: 16px;
+            border-radius: 0 12px 12px 0;
+            transition: all 0.2s;
+        }
+
+        .challenge-card:hover {
+            background: rgba(16, 185, 129, 0.06);
+            border-left-color: #34d399;
+            transform: translateX(4px);
+        }
+
+        .challenge-card__title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+
+        .challenge-card__desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .solutions {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 24px 60px;
+            border-top: 1px solid var(--border);
+        }
+
+        .solutions__title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .solutions__subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            font-size: 0.95rem;
+        }
+
+        .solution-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .solution-item:last-child {
+            border-bottom: none;
+        }
+
+        .solution-item__number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--emerald);
+            opacity: 0.3;
+            min-width: 40px;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .solution-item__content {
+            flex: 1;
+        }
+
+        .solution-item__name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--emerald);
+            margin-bottom: 4px;
+        }
+
+        .solution-item__name a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .solution-item__name a:hover {
+            color: #34d399;
+        }
+
+        .solution-item__desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .industry-cta {
+            text-align: center;
+            padding: 60px 24px;
+            background: var(--bg-void);
+            border-top: 1px solid var(--border);
+        }
+
+        .industry-cta__title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .industry-cta__subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            font-size: 0.95rem;
+        }
+
+        .industry-cta__btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 40px;
+            background: var(--emerald);
+            color: var(--bg-void);
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .industry-cta__btn:hover {
+            background: #0dd9a8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        @media (max-width: 640px) {
+            .industry-hero {
+                padding: 100px 16px 40px;
+            }
+
+            .challenges,
+            .solutions {
+                padding: 40px 16px;
+            }
+
+            .solution-item {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .industry-cta {
+                padding: 40px 16px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navbar -->
     <div id="navbar-container" data-navbar="full" data-navbar-style="solid"></div>
 
-    <!-- Hero -->
-    <section class="industry-hero" style="--industry-color: #3b82f6;">
-        <div class="container">
-            <div class="industry-hero__content">
-                <div>
-                    <span class="industry-hero__badge">Solution Transport</span>
-                    <h1 class="industry-hero__title">
-                        Optimisez chaque <span>kilometre</span> de votre flotte
-                    </h1>
-                    <p class="industry-hero__subtitle">
-                        FleetOps Pro pour le Transport : suivi temps reel, optimisation carburant, maintenance predictive, conformite automatisee. Reduisez vos couts et eliminez les pannes imprevues.
-                    </p>
-                    <div class="industry-hero__cta">
-                        <a href="../#contact" class="btn btn-primary btn-lg">Demander une demo Transport</a>
-                        <a href="#roi" class="btn btn-secondary btn-lg">Calculer mes economies</a>
-                    </div>
-                </div>
-                <div class="industry-hero__visual">
-                    <div class="industry-hero__stats">
-                        <div class="industry-hero__stat">
-                            <div class="industry-hero__stat-value">Reduction</div>
-                            <div class="industry-hero__stat-label">Couts carburant</div>
-                        </div>
-                        <div class="industry-hero__stat">
-                            <div class="industry-hero__stat-value">Reduction</div>
-                            <div class="industry-hero__stat-label">Pannes imprevues</div>
-                        </div>
-                        <div class="industry-hero__stat">
-                            <div class="industry-hero__stat-value">Total</div>
-                            <div class="industry-hero__stat-label">Conformite</div>
-                        </div>
-                        <div class="industry-hero__stat">
-                            <div class="industry-hero__stat-value">Rapide</div>
-                            <div class="industry-hero__stat-label">ROI</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="industry-hero">
+        <div class="industry-hero__content">
+            <div class="industry-hero__badge">Transport & Logistique</div>
+            <h1 class="industry-hero__title">Chaque kilometre compte. Chaque livraison aussi.</h1>
+            <p class="industry-hero__subtitle">Marges fines, clients exigeants, reglementation stricte. L'optimisation n'est pas un luxe — c'est une necessite.</p>
         </div>
     </section>
 
-    <!-- Pain Points -->
-    <section class="pain-points">
-        <div class="container">
-            <div class="section-header section-header--center" style="margin-bottom: var(--space-3xl);">
-                <span class="section-label">Les defis du Transport</span>
-                <h2 class="section-title">On connait vos problemes</h2>
-            </div>
-            <div class="pain-points__grid">
-                <div class="pain-card">
-                    <div class="pain-card__icon">01</div>
-                    <h3 class="pain-card__title">Carburant non optimise</h3>
-                    <p class="pain-card__desc">Le carburant represente une part majeure de vos couts. Sans suivi precis, les comportements de conduite inefficaces et les detours vous coutent une fortune.</p>
-                </div>
-                <div class="pain-card">
-                    <div class="pain-card__icon">02</div>
-                    <h3 class="pain-card__title">Maintenance reactive</h3>
-                    <p class="pain-card__desc">Chaque panne sur la route = livraison en retard = client mecontent = penalites. La maintenance preventive existe, mais sans les bons outils...</p>
-                </div>
-                <div class="pain-card">
-                    <div class="pain-card__icon">03</div>
-                    <h3 class="pain-card__title">Couts par vehicule flous</h3>
-                    <p class="pain-card__desc">Impossible de savoir quel vehicule est rentable et lequel devrait etre remplace. Les couts sont dilues, les decisions sont a l'aveugle.</p>
-                </div>
-                <div class="pain-card">
-                    <div class="pain-card__icon">04</div>
-                    <h3 class="pain-card__title">Conformite complexe</h3>
-                    <p class="pain-card__desc">Chronotachygraphe, temps de conduite, visites techniques... La reglementation est stricte et les amendes salees. Le suivi manuel est un cauchemar.</p>
-                </div>
-                <div class="pain-card">
-                    <div class="pain-card__icon">05</div>
-                    <h3 class="pain-card__title">Chauffeurs disperses</h3>
-                    <p class="pain-card__desc">Communication difficile avec les conducteurs sur la route. Pas de visibilite sur leur position ni sur l'avancement des livraisons.</p>
-                </div>
-                <div class="pain-card">
-                    <div class="pain-card__icon">06</div>
-                    <h3 class="pain-card__title">Marges qui s'erosent</h3>
-                    <p class="pain-card__desc">Concurrence des plateformes, clients qui negocient, couts qui augmentent. Sans optimisation, la rentabilite s'effrite.</p>
-                </div>
-            </div>
+    <section class="challenges">
+        <h2 class="challenges__title">Vos defis</h2>
+        <p class="challenges__subtitle">Problemes qui erodent la marge</p>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Optimisation des tournees et du carburant</div>
+            <div class="challenge-card__desc">Les trajets non optimises coutent cher. Chaque detour, chaque vehicule sous-utilise grignote la marge. Les plans de tournee se font au feeling, pas par algorithme. L'essence gaspillee se translate directement en perte.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Suivi des livraisons en temps reel</div>
+            <div class="challenge-card__desc">Les clients veulent savoir ou est leur commande. Le service client passe ses journees au telephone a dire "on ne sait pas". Pas de tracabilite, pas de preuve de livraison, disputes avec les clients.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Conformite et documentation</div>
+            <div class="challenge-card__desc">Heures de conduite, controles techniques, assurances, carburant. La documentation reglementaire est un cauchemar administratif. Les contraventions pour paperasse mal remplie coutent cher.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Marges sous pression</div>
+            <div class="challenge-card__desc">Entre le carburant qui augmente et les clients qui negocient, la rentabilite par trajet est difficile a maintenir. La marge moyenne baisse chaque trimestre sans qu'on comprenne pourquoi.</div>
         </div>
     </section>
 
-    <!-- Solutions -->
     <section class="solutions">
-        <div class="container">
-            <div class="section-header section-header--center" style="margin-bottom: var(--space-3xl);">
-                <span class="section-label">FleetOps Pro pour le Transport</span>
-                <h2 class="section-title">La solution complete</h2>
-                <p class="section-description">6 modules conçus pour les transporteurs</p>
+        <h2 class="solutions__title">Nos reponses</h2>
+        <p class="solutions__subtitle">Modules qui protegent la rentabilite</p>
+
+        <div class="solution-item">
+            <span class="solution-item__number">01</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">
+                    <a href="../modules/fleetops.html">FleetOps</a>
+                </div>
+                <div class="solution-item__desc">GPS tracking en temps reel, optimisation routes basee IA, maintenance predictive, et analyse couts par expedition. Tournees optimales, carburant maitrise, marges protegees.</div>
             </div>
-            <div class="solutions__grid">
-                <div class="solution-card">
-                    <div class="solution-card__header">
-                        <span class="solution-card__icon">01</span>
-                        <div>
-                            <h3 class="solution-card__title">Suivi GPS temps reel</h3>
-                            <span class="solution-card__benefit">Visibilite 100%</span>
-                        </div>
-                    </div>
-                    <p class="solution-card__desc">Position de tous vos vehicules en temps reel. ETA automatique pour vos clients, historique des trajets, alertes de deviation.</p>
-                    <ul class="solution-card__features">
-                        <li class="solution-card__feature">Carte en temps reel de la flotte</li>
-                        <li class="solution-card__feature">Partage de position avec clients</li>
-                        <li class="solution-card__feature">Historique des trajets</li>
-                        <li class="solution-card__feature">Geofencing et alertes</li>
-                    </ul>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">02</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">
+                    <a href="../modules/supply-chain.html">Supply Chain Command</a>
                 </div>
-                <div class="solution-card">
-                    <div class="solution-card__header">
-                        <span class="solution-card__icon">02</span>
-                        <div>
-                            <h3 class="solution-card__title">Optimisation carburant</h3>
-                            <span class="solution-card__benefit">Moins de consommation</span>
-                        </div>
-                    </div>
-                    <p class="solution-card__desc">Analyse du comportement de conduite, detection des pleins suspects, suivi consommation par vehicule et par chauffeur.</p>
-                    <ul class="solution-card__features">
-                        <li class="solution-card__feature">Score eco-conduite</li>
-                        <li class="solution-card__feature">Alertes surconsommation</li>
-                        <li class="solution-card__feature">Detection vols carburant</li>
-                        <li class="solution-card__feature">Rapport par chauffeur</li>
-                    </ul>
+                <div class="solution-item__desc">Delivery desk avec tracking expeditions, gestion multi-points de livraison, et alertes preuve de delivery. Clients informes, preuves documentees, disputes eliminees.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">03</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">
+                    <a href="../modules/marketing-automation.html">Marketing Automation</a>
                 </div>
-                <div class="solution-card">
-                    <div class="solution-card__header">
-                        <span class="solution-card__icon">03</span>
-                        <div>
-                            <h3 class="solution-card__title">Maintenance predictive</h3>
-                            <span class="solution-card__benefit">Moins de pannes</span>
-                        </div>
-                    </div>
-                    <p class="solution-card__desc">L'IA analyse les kilometres, heures moteur et codes OBD pour predire les pannes avant qu'elles n'arrivent.</p>
-                    <ul class="solution-card__features">
-                        <li class="solution-card__feature">Alertes preventives automatiques</li>
-                        <li class="solution-card__feature">Planification ateliers</li>
-                        <li class="solution-card__feature">Historique complet vehicule</li>
-                        <li class="solution-card__feature">Gestion pieces detachees</li>
-                    </ul>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-card__header">
-                        <span class="solution-card__icon">04</span>
-                        <div>
-                            <h3 class="solution-card__title">Conformite automatisee</h3>
-                            <span class="solution-card__benefit">0 amende</span>
-                        </div>
-                    </div>
-                    <p class="solution-card__desc">Suivi automatique des temps de conduite, alertes avant depassement, rappels visites techniques, documentation toujours a jour.</p>
-                    <ul class="solution-card__features">
-                        <li class="solution-card__feature">Temps de conduite en temps reel</li>
-                        <li class="solution-card__feature">Alertes avant infraction</li>
-                        <li class="solution-card__feature">Calendrier visites techniques</li>
-                        <li class="solution-card__feature">Export pour controles</li>
-                    </ul>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-card__header">
-                        <span class="solution-card__icon">05</span>
-                        <div>
-                            <h3 class="solution-card__title">Cout par vehicule</h3>
-                            <span class="solution-card__benefit">Rentabilite claire</span>
-                        </div>
-                    </div>
-                    <p class="solution-card__desc">Chaque vehicule devient transparent : carburant, maintenance, assurance, amortissement. Identifiez les vehicules a remplacer.</p>
-                    <ul class="solution-card__features">
-                        <li class="solution-card__feature">TCO par vehicule</li>
-                        <li class="solution-card__feature">Cout au kilometre</li>
-                        <li class="solution-card__feature">Comparaison flotte</li>
-                        <li class="solution-card__feature">Aide a la decision renouvellement</li>
-                    </ul>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-card__header">
-                        <span class="solution-card__icon">06</span>
-                        <div>
-                            <h3 class="solution-card__title">Dashboard direction</h3>
-                            <span class="solution-card__benefit">Decisions eclairees</span>
-                        </div>
-                    </div>
-                    <p class="solution-card__desc">Tous vos KPIs transport sur un ecran : taux utilisation, couts, ponctualite, incidents. Rapports automatiques hebdo/mensuels.</p>
-                    <ul class="solution-card__features">
-                        <li class="solution-card__feature">KPIs personnalisables</li>
-                        <li class="solution-card__feature">Rapports automatiques</li>
-                        <li class="solution-card__feature">Alertes configurables</li>
-                        <li class="solution-card__feature">Export Excel/PDF</li>
-                    </ul>
-                </div>
+                <div class="solution-item__desc">Prospection ciblee par potentiel, fidélisation clients inactifs, et campagnes de rétention. Volume de commandes augmente, marge sauvegardee.</div>
             </div>
         </div>
     </section>
 
-    <!-- ROI Section -->
-    <section class="roi-section" id="roi">
-        <div class="container">
-            <div class="roi-section__content">
-                <div>
-                    <span class="section-label">ROI garanti</span>
-                    <h2 class="section-title" style="margin-bottom: var(--space-lg);">ROI rapide</h2>
-                    <p style="color: var(--text-secondary); margin-bottom: var(--space-xl); line-height: 1.7;">
-                        Pour une flotte transport de 30 vehicules, voici les economies moyennes constatees chez nos clients apres 12 mois d'utilisation de FleetOps Pro.
-                    </p>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="display: flex; align-items: center; gap: var(--space-md); padding: var(--space-sm) 0; color: var(--text-secondary);">
-                            <span style="color: var(--emerald);">✓</span> ROI positif rapide
-                        </li>
-                        <li style="display: flex; align-items: center; gap: var(--space-md); padding: var(--space-sm) 0; color: var(--text-secondary);">
-                            <span style="color: var(--emerald);">✓</span> Installation sans arret d'exploitation
-                        </li>
-                        <li style="display: flex; align-items: center; gap: var(--space-md); padding: var(--space-sm) 0; color: var(--text-secondary);">
-                            <span style="color: var(--emerald);">✓</span> Formation chauffeurs incluse
-                        </li>
-                    </ul>
-                </div>
-                <div class="roi-calculator">
-                    <h3 class="roi-calculator__title">Economies estimees (30 vehicules)</h3>
-                    <div class="roi-calculator__row">
-                        <span class="roi-calculator__label">Optimisation carburant</span>
-                        <span class="roi-calculator__value">-15 000€/an</span>
-                    </div>
-                    <div class="roi-calculator__row">
-                        <span class="roi-calculator__label">Maintenance preventive</span>
-                        <span class="roi-calculator__value">-8 000€/an</span>
-                    </div>
-                    <div class="roi-calculator__row">
-                        <span class="roi-calculator__label">Amendes evitees</span>
-                        <span class="roi-calculator__value">-3 000€/an</span>
-                    </div>
-                    <div class="roi-calculator__row">
-                        <span class="roi-calculator__label">Productivite admin</span>
-                        <span class="roi-calculator__value">-6 000€/an</span>
-                    </div>
-                    <div class="roi-calculator__row">
-                        <span class="roi-calculator__label">Cout FleetOps Pro</span>
-                        <span class="roi-calculator__value" style="color: #ef4444;">-7 200€/an</span>
-                    </div>
-                    <div class="roi-calculator__total">
-                        <div class="roi-calculator__total-label">Economies nettes annuelles</div>
-                        <div class="roi-calculator__total-value">+24 800€</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
     <section class="industry-cta">
-        <div class="container">
-            <h2 class="industry-cta__title">Pret a optimiser votre flotte transport ?</h2>
-            <p class="industry-cta__desc">
-                Demandez votre audit gratuit et decouvrez combien vous pourriez economiser avec FleetOps Pro.
-            </p>
-            <div class="btn-group" style="justify-content: center;">
-                <a href="../#contact" class="btn btn-primary btn-lg">Demander un audit gratuit</a>
-                <a href="https://wa.me/212673736611?text=Bonjour%2C%20je%20suis%20transporteur%20et%20je%20souhaite%20une%20demo%20de%20FleetOps%20Pro" target="_blank" class="btn btn-secondary btn-lg">WhatsApp direct</a>
-            </div>
-        </div>
+        <h2 class="industry-cta__title">Pret a augmenter vos marges ?</h2>
+        <p class="industry-cta__subtitle">Contactez notre equipe pour une demo personnalisee</p>
+        <a href="https://wa.me/212673736611" class="industry-cta__btn">Nous contacter sur WhatsApp</a>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer__container">
-            <div class="footer__bottom">
-                <p class="footer__copyright">© 2026 Kaalytics. Tous droits reserves.</p>
+    <footer style="background: var(--bg-void); border-top: 1px solid rgba(16,185,129,0.12); padding: 48px 0 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 48px;">
+                <div>
+                    <a href="../" style="display: flex; align-items: center; gap: 10px; text-decoration: none; margin-bottom: 16px;">
+                        <svg width="32" height="32" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#10b981" stroke-width="2"/><path d="M12 20l6 6 10-12" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span style="font-size: 1.25rem; font-weight: 800; color: #ecfdf5;">Kaal<span style="color: #10b981;">ytics</span></span>
+                    </a>
+                    <p style="color: #64748b; font-size: 0.85rem; line-height: 1.7; margin-bottom: 20px; max-width: 280px;">Modules IA connectes a votre ERP. Dashboards intelligents et automatisation sur-mesure.</p>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Industries</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="btp.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">BTP & Construction</a>
+                        <a href="mines.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Mines & Carrieres</a>
+                        <a href="transport.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Transport & Logistique</a>
+                        <a href="distribution.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Distribution & Negoce</a>
+                        <a href="industrie.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Industrie & Production</a>
+                        <a href="location.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Location d'Equipements</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Modules</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="../modules/sales-intelligence.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Sales Intelligence</a>
+                        <a href="../modules/marketing-automation.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Marketing Automation</a>
+                        <a href="../modules/fleetops.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">FleetOps</a>
+                        <a href="../modules/supply-chain.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Supply Chain</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Ressources</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="../blog/" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Blog</a>
+                        <a href="../guides/" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Guides</a>
+                        <a href="../faq.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">FAQ</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Contact</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="https://wa.me/212673736611" target="_blank" rel="noopener" style="color: #10b981; text-decoration: none; font-size: 0.85rem; font-weight: 600;">WhatsApp</a>
+                        <a href="tel:+212673736611" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">+212 673 736 611</a>
+                    </div>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(16,185,129,0.12); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                <p style="color: #64748b; font-size: 0.8rem;">© 2026 Kaalytics. Tous droits reserves. Made in Morocco.</p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Sticky -->
-    <a href="https://wa.me/212673736611?text=Bonjour%2C%20je%20suis%20transporteur%20et%20je%20souhaite%20en%20savoir%20plus%20sur%20FleetOps%20Pro" target="_blank" class="whatsapp-sticky">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
-        <span>Discutons de votre flotte transport</span>
-    </a>
-
-    <!-- Navbar Loader -->
-    <script src="../components/navbar/navbar-loader.js"></script>
-
-    <!-- i18n -->
-    <script src="../assets/js/i18n/i18n.js?v=20260129b"></script>
-    <script>
-        if (window.i18n) {
-            window.i18n.localesPath = '../assets/locales';
-            window.i18n.init();
-        }
-    </script>
-
-
-    <!-- Breadcrumbs -->
-    <script src="../assets/js/components/breadcrumbs.js"></script>
-
-    <!-- GA4 Event Tracking -->
-    <script src="../assets/js/components/ga4-events.js"></script>
-
-    <!-- Marketing Pixels -->
-    <script src="../assets/js/components/marketing-pixels.js"></script>
-
-    <!-- Exit Intent Popup -->
-    <script src="../assets/js/components/exit-popup.js"></script>
+    <script src="../components/navbar/navbar-loader.js" defer></script>
 </body>
 </html>
