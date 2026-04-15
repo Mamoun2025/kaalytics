@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Supply Chain Command | Kaalytics</title>
+    <meta name="description" content="Planning achats, previsions de ventes, tracking logistique, orchestration multi-agents. Chaque maillon de la chaine visible en temps reel.">
+    <meta name="keywords" content="supply chain, logistics, planning, inventory, delivery, procurement, supply chain visibility">
+    <meta name="author" content="Kaalytics">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+    <!-- Module Page Styles -->
+    <style>
+        /* Module Hero */
+        .module-hero {
+            position: relative;
+            background: var(--bg-void);
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-4xl) var(--space-2xl);
+            overflow: hidden;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .module-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .module-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(13, 148, 136, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .module-hero__content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .module-hero__badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-full);
+            padding: var(--space-sm) var(--space-lg);
+            font-size: var(--text-sm);
+            color: var(--emerald);
+            margin-bottom: var(--space-lg);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+        }
+
+        .module-hero__title {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 800;
+            line-height: var(--leading-tight);
+            color: var(--text-primary);
+            margin-bottom: var(--space-lg);
+            letter-spacing: var(--tracking-tight);
+        }
+
+        .module-hero__subtitle {
+            font-size: var(--text-lg);
+            color: var(--text-secondary);
+            line-height: var(--leading-relaxed);
+            margin-bottom: var(--space-2xl);
+        }
+
+        .module-hero__cta {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Accordion Section */
+        .accordion-section {
+            padding: var(--section-padding) var(--space-2xl);
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .accordion-section__header {
+            max-width: 800px;
+            margin: 0 auto var(--space-4xl);
+            text-align: center;
+        }
+
+        .accordion-section__title {
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-md);
+        }
+
+        .accordion-section__subtitle {
+            font-size: var(--text-base);
+            color: var(--text-secondary);
+            line-height: var(--leading-relaxed);
+        }
+
+        /* Accordion Container */
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .accordion-item__header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 24px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .accordion-item__header:hover {
+            padding-left: 8px;
+        }
+
+        .accordion-item__number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--emerald);
+            opacity: 0.4;
+            min-width: 40px;
+            transition: opacity 0.3s;
+        }
+        .accordion-item[open] .accordion-item__number {
+            opacity: 1;
+        }
+
+        .accordion-item__title-group {
+            flex: 1;
+        }
+        .accordion-item__title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+            color: var(--text-primary);
+        }
+        .accordion-item__tagline {
+            font-size: 0.85rem;
+            color: var(--emerald);
+            font-weight: 500;
+        }
+
+        .accordion-item__toggle {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--emerald);
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            flex-shrink: 0;
+        }
+        .accordion-item[open] .accordion-item__toggle {
+            background: var(--emerald);
+            color: var(--bg-void);
+            border-color: var(--emerald);
+            transform: rotate(45deg);
+        }
+
+        .accordion-item__body {
+            padding: 0 0 24px 60px;
+        }
+        .accordion-item__desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            max-width: 600px;
+        }
+        .accordion-item__highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 16px;
+            padding: 8px 16px;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--emerald);
+            font-weight: 600;
+        }
+
+        /* CTA Section */
+        .module-cta-section {
+            padding: var(--section-padding) var(--space-2xl);
+            background: var(--bg-void);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .module-cta {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .module-cta__title {
+            font-size: clamp(1.75rem, 5vw, 2.5rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-md);
+        }
+
+        .module-cta__subtitle {
+            font-size: var(--text-lg);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-2xl);
+        }
+
+        .module-cta__buttons {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: var(--space-md) var(--space-xl);
+            border-radius: var(--radius-lg);
+            font-size: var(--text-base);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition-base);
+            border: none;
+            cursor: pointer;
+            font-family: var(--font-primary);
+        }
+
+        .btn-primary {
+            background: var(--emerald);
+            color: var(--bg-void);
+        }
+
+        .btn-primary:hover {
+            background: var(--emerald-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--emerald);
+            border: 1px solid var(--emerald);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: var(--emerald-bright);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 640px) {
+            .module-hero {
+                padding: var(--space-3xl) var(--space-md);
+                min-height: 50vh;
+            }
+
+            .accordion-section {
+                padding: var(--space-3xl) var(--space-md);
+            }
+
+            .module-cta-section {
+                padding: var(--space-3xl) var(--space-md);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-container" data-navbar="full" data-navbar-style="solid"></div>
+
+    <!-- Hero Section -->
+    <section class="module-hero">
+        <div class="module-hero__content">
+            <div class="module-hero__badge">Supply Chain Command</div>
+            <h1 class="module-hero__title">Du fournisseur au client final, chaque maillon est visible</h1>
+            <p class="module-hero__subtitle">
+                Planning achats, previsions de ventes, tracking logistique. Les goulots sont detectes avant qu'ils ne bloquent votre activite.
+            </p>
+            <div class="module-hero__cta">
+                <a href="#contact-module" class="btn btn-primary">Demander une demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accordion Section -->
+    <section class="accordion-section">
+        <div class="accordion-section__header">
+            <h2 class="accordion-section__title">7 modules de supply chain</h2>
+            <p class="accordion-section__subtitle">Chaque implementation est adaptee a votre metier. Voici les fonctionnalites les plus demandees.</p>
+        </div>
+
+        <div class="accordion">
+            <!-- 01 -->
+            <details class="accordion-item" open>
+                <summary class="accordion-item__header">
+                    <span class="accordion-item__number">01</span>
+                    <div class="accordion-item__title-group">
+                        <div class="accordion-item__title">Delivery Desk</div>
+                        <div class="accordion-item__tagline">La logistique en temps reel</div>
+                    </div>
+                    <span class="accordion-item__toggle">+</span>
+                </summary>
+                <div class="accordion-item__body">
+                    <p class="accordion-item__desc">Dashboard operationnel couvrant le picking, le packing et le tracking des expeditions. Confirmation de livraison avec notification client. Indicateurs de performance par entrepot et par zone.</p>
+                    <div class="accordion-item__highlight">Picking → packing → tracking — tout est trace</div>
+                </div>
+            </details>
+
+            <!-- 02 -->
+            <details class="accordion-item">
+                <summary class="accordion-item__header">
+                    <span class="accordion-item__number">02</span>
+                    <div class="accordion-item__title-group">
+                        <div class="accordion-item__title">Stock Multi-Entites</div>
+                        <div class="accordion-item__tagline">Un inventaire consolide, meme sur plusieurs sites</div>
+                    </div>
+                    <span class="accordion-item__toggle">+</span>
+                </summary>
+                <div class="accordion-item__body">
+                    <p class="accordion-item__desc">Vision unifiee des stocks de toutes vos entites. Creation de produits en batch, mouvements inter-entrepots traces, rapprochement comptable automatise entre filiales.</p>
+                    <div class="accordion-item__highlight">Multi-sites — rapprochement comptable automatique</div>
+                </div>
+            </details>
+
+            <!-- 03 -->
+            <details class="accordion-item">
+                <summary class="accordion-item__header">
+                    <span class="accordion-item__number">03</span>
+                    <div class="accordion-item__title-group">
+                        <div class="accordion-item__title">Hub Orchestrateur</div>
+                        <div class="accordion-item__tagline">Le centre nerveux de vos operations</div>
+                    </div>
+                    <span class="accordion-item__toggle">+</span>
+                </summary>
+                <div class="accordion-item__body">
+                    <p class="accordion-item__desc">Architecture multi-agents avec pool de connexions partage, scheduling centralise et monitoring de sante en temps reel. Chaque service est supervise et redemarrable independamment.</p>
+                    <div class="accordion-item__highlight">Multi-agents orchestre — monitoring 24/7</div>
+                </div>
+            </details>
+
+            <!-- 04 -->
+            <details class="accordion-item">
+                <summary class="accordion-item__header">
+                    <span class="accordion-item__number">04</span>
+                    <div class="accordion-item__title-group">
+                        <div class="accordion-item__title">Planning Achats</div>
+                        <div class="accordion-item__tagline">Commander la bonne quantite, au bon moment</div>
+                    </div>
+                    <span class="accordion-item__toggle">+</span>
+                </summary>
+                <div class="accordion-item__body">
+                    <p class="accordion-item__desc">Previsions d'achat par fournisseur avec planning mensuel. Stock actuel, seuil minimum, consommation moyenne et quantite suggeree calcules automatiquement par produit.</p>
+                    <div class="accordion-item__highlight">Forecast par produit — commande suggeree auto</div>
+                </div>
+            </details>
+
+            <!-- 05 -->
+            <details class="accordion-item">
+                <summary class="accordion-item__header">
+                    <span class="accordion-item__number">05</span>
+                    <div class="accordion-item__title-group">
+                        <div class="accordion-item__title">Previsions de Ventes</div>
+                        <div class="accordion-item__tagline">Anticiper la demande avec precision</div>
+                    </div>
+                    <span class="accordion-item__toggle">+</span>
+                </summary>
+                <div class="accordion-item__body">
+                    <p class="accordion-item__desc">Modele previsionnel base sur l'historique et la saisonnalite. Ecart prevision versus reel suivi mois par mois. Les previsions alimentent directement le planning achats.</p>
+                    <div class="accordion-item__highlight">Historique + saisonnalite — previsions fiables</div>
+                </div>
+            </details>
+
+            <!-- 06 -->
+            <details class="accordion-item">
+                <summary class="accordion-item__header">
+                    <span class="accordion-item__number">06</span>
+                    <div class="accordion-item__title-group">
+                        <div class="accordion-item__title">Chaine de Valeur</div>
+                        <div class="accordion-item__tagline">Cinq etapes, zero zone d'ombre</div>
+                    </div>
+                    <span class="accordion-item__toggle">+</span>
+                </summary>
+                <div class="accordion-item__body">
+                    <p class="accordion-item__desc">Suivi complet du flux Prospection, Vente, Livraison, Facturation, Recouvrement. Detection automatique des goulots d'etranglement. Quand une etape bloque, le systeme alerte avant que ca n'impacte le reste.</p>
+                    <div class="accordion-item__highlight">5 etapes tracees — goulots detectes en temps reel</div>
+                </div>
+            </details>
+
+            <!-- 07 -->
+            <details class="accordion-item">
+                <summary class="accordion-item__header">
+                    <span class="accordion-item__number">07</span>
+                    <div class="accordion-item__title-group">
+                        <div class="accordion-item__title">Revue Tarifaire</div>
+                        <div class="accordion-item__tagline">Des prix toujours a jour, sans mauvaise surprise</div>
+                    </div>
+                    <span class="accordion-item__toggle">+</span>
+                </summary>
+                <div class="accordion-item__body">
+                    <p class="accordion-item__desc">Comparaison automatique entre les prix dans votre ERP et les tarifs fournisseur actualises. Detection des anomalies : marge negative, prix obsolete, ecart inexplique. Workflow de validation avant mise a jour.</p>
+                    <div class="accordion-item__highlight">Comparaison auto ERP vs fournisseur — anomalies flaggees</div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="module-cta-section" id="contact-module">
+        <div class="module-cta">
+            <h2 class="module-cta__title">Pret a fluidifier votre chaine d'approvisionnement ?</h2>
+            <p class="module-cta__subtitle">
+                Audit gratuit de votre supply chain. Plan d'optimisation en 48h.
+            </p>
+            <div class="module-cta__buttons">
+                <a href="mailto:contact@kaalytics.com" class="btn btn-primary">Demander une demo</a>
+                <a href="../index.html#modules-ia" class="btn btn-secondary">Retour aux modules</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 40px 24px; text-align: center; border-top: 1px solid rgba(16,185,129,0.12);">
+        <p style="color: #64748b; font-size: 14px;">© 2026 Kaalytics. <a href="../index.html" style="color: #10b981; text-decoration: none;">Retour a l'accueil</a></p>
+    </footer>
+
+    <!-- Navbar Script -->
+    <script src="../components/navbar/navbar-loader.js" defer></script>
+</body>
+</html>

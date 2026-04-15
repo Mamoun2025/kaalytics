@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>FleetOps | Kaalytics</title>
+    <meta name="description" content="GPS temps reel, maintenance predictive, circuit achats complet, planning ressources. La rentabilite de chaque machine et chantier, visible en un clic.">
+    <meta name="keywords" content="fleet management, GPS tracking, maintenance, procurement, project planning, cost analysis, fleet analytics">
+    <meta name="author" content="Kaalytics">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+    <!-- Module Page Styles -->
+    <style>
+        /* Module Hero */
+        .module-hero {
+            position: relative;
+            background: var(--bg-void);
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-4xl) var(--space-2xl);
+            overflow: hidden;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .module-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .module-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(13, 148, 136, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .module-hero__content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .module-hero__badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-full);
+            padding: var(--space-sm) var(--space-lg);
+            font-size: var(--text-sm);
+            color: var(--emerald);
+            margin-bottom: var(--space-lg);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+        }
+
+        .module-hero__title {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 800;
+            line-height: var(--leading-tight);
+            color: var(--text-primary);
+            margin-bottom: var(--space-lg);
+            letter-spacing: var(--tracking-tight);
+        }
+
+        .module-hero__subtitle {
+            font-size: var(--text-lg);
+            color: var(--text-secondary);
+            line-height: var(--leading-relaxed);
+            margin-bottom: var(--space-2xl);
+        }
+
+        .module-hero__cta {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Accordion Section */
+        .accordion-section {
+            padding: var(--section-padding) var(--space-2xl);
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .accordion-section__header {
+            max-width: 800px;
+            margin: 0 auto var(--space-4xl);
+            text-align: center;
+        }
+
+        .accordion-section__title {
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-md);
+        }
+
+        .accordion-section__subtitle {
+            font-size: var(--text-base);
+            color: var(--text-secondary);
+            line-height: var(--leading-relaxed);
+        }
+
+        /* Accordion Container */
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .accordion-item__header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 24px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .accordion-item__header:hover {
+            padding-left: 8px;
+        }
+
+        .accordion-item__number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--emerald);
+            opacity: 0.4;
+            min-width: 40px;
+            transition: opacity 0.3s;
+        }
+        .accordion-item[open] .accordion-item__number {
+            opacity: 1;
+        }
+
+        .accordion-item__title-group {
+            flex: 1;
+        }
+        .accordion-item__title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+            color: var(--text-primary);
+        }
+        .accordion-item__tagline {
+            font-size: 0.85rem;
+            color: var(--emerald);
+            font-weight: 500;
+        }
+
+        .accordion-item__toggle {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--emerald);
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            flex-shrink: 0;
+        }
+        .accordion-item[open] .accordion-item__toggle {
+            background: var(--emerald);
+            color: var(--bg-void);
+            border-color: var(--emerald);
+            transform: rotate(45deg);
+        }
+
+        .accordion-item__body {
+            padding: 0 0 24px 60px;
+        }
+        .accordion-item__desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            max-width: 600px;
+        }
+        .accordion-item__highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 16px;
+            padding: 8px 16px;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--emerald);
+            font-weight: 600;
+        }
+
+        /* CTA Section */
+        .module-cta-section {
+            padding: var(--section-padding) var(--space-2xl);
+            background: var(--bg-void);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .module-cta {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .module-cta__title {
+            font-size: clamp(1.75rem, 5vw, 2.5rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-md);
+        }
+
+        .module-cta__subtitle {
+            font-size: var(--text-lg);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-2xl);
+        }
+
+        .module-cta__buttons {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: var(--space-md) var(--space-xl);
+            border-radius: var(--radius-lg);
+            font-size: var(--text-base);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition-base);
+            border: none;
+            cursor: pointer;
+            font-family: var(--font-primary);
+        }
+
+        .btn-primary {
+            background: var(--emerald);
+            color: var(--bg-void);
+        }
+
+        .btn-primary:hover {
+            background: var(--emerald-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--emerald);
+            border: 1px solid var(--emerald);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: var(--emerald-bright);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 640px) {
+            .module-hero {
+                padding: var(--space-3xl) var(--space-md);
+                min-height: 50vh;
+            }
+
+            .accordion-section {
+                padding: var(--space-3xl) var(--space-md);
+            }
+
+            .module-cta-section {
+                padding: var(--space-3xl) var(--space-md);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-container" data-navbar="full" data-navbar-style="solid"></div>
+
+    <!-- Hero Section -->
+    <section class="module-hero">
+        <div class="module-hero__content">
+            <div class="module-hero__badge">FleetOps</div>
+            <h1 class="module-hero__title">Chaque machine tracee, chaque intervention anticipee</h1>
+            <p class="module-hero__subtitle">
+                GPS temps reel, maintenance predictive, circuit achats complet. La rentabilite de chaque engin et de chaque chantier, visible en un clic.
+            </p>
+            <div class="module-hero__cta">
+                <a href="#contact-module" class="btn btn-primary">Demander une demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accordion Section -->
+    <section class="accordion-section">
+        <div class="accordion-section__header">
+            <h2 class="accordion-section__title">10 modules fleet operations</h2>
+            <p class="accordion-section__subtitle">Chaque implementation est adaptee a votre metier. Voici les fonctionnalites les plus demandees.</p>
+        </div>
+
+        <div class="accordion">
+            <!-- 01 -->
+            <details class="accordion-item" open>
+                <summary class="accordion-item__header">
+                    <span class="accordion-item__number">01</span>
+                    <div class="accordion-item__title-group">
+                        <div class="accordion-item__title">Gestion de Parc</div>
+                        <div class="accordion-item__tagline">Tous vos equipements dans un seul referentiel</div>
+                    </div>
+                    <span class="accordion-item__toggle">+</span>
+                </summary>
+                <div class="accordion-item__body">
+                    <p class="accordion-item__desc">Enregistrement de chaque vehicule et machine avec donnees flexibles adaptees a votre metier. Fiche historisee par equipement, affectations en temps reel, documents techniques attaches. Architecture multi-tenant native.</p>
+                    <div class="accordion-item__highlight">Referentiel unique — multi-tenant natif</div>
+                </div>
+            </details>
+
+            <!-- 02 -->
+            <details class="accordion-item">
+                <summary class="accordion-item__header">
+                    <span class="accordion-item__number">02</span>
+                    <div class="accordion-item__title-group">
+                        <div class="accordion-item__title">GPS Tracking</div>
+                        <div class="accordion-item__tagline">Savoir ou sont vos engins, en temps reel</div>
+                    </div>
+                    <span class="accordion-item__toggle">+</span>
+                </summary>
+                <div class="accordion-item__body">
+                    <p class="accordion-item__desc">Position live de chaque vehicule sur une carte interactive. Historique des trajets, geofencing avec alertes de zone, suivi de la consommation carburant. Les rapports kilometriques sont generes automatiquement.</p>
+                    <div class="accordion-item__highlight">Position live — geofencing — rapports auto</div>
+                </div>
+            </details>
+
+            <!-- 03 -->
+            <details class="accordion-item">
+                <summary class="accordion-item__header">
+                    <span class="accordion-item__number">03</span>
+                    <div class="accordion-item__title-group">
+                        <div class="accordion-item__title">Maintenance Predictive</div>
+                        <div class="accordion-item__tagline">Anticiper les pannes avant qu'elles ne coutent cher</div>
+                    </div>
+                    <span class="accordion-item__toggle">+</span>
+                </summary>
+                <div class="accordion-item__body">
+                    <p class="accordion-item__desc">Planification preventive par heures, kilometres ou mois calendaire. Suivi des interventions curatives et d'urgence. Cout par intervention decompose en pieces et main d'oeuvre. Le systeme alerte avant chaque echeance.</p>
+                    <div class="accordion-item__highlight">Preventive + curative — alertes avant echeance</div>
+                </div>
+            </details>
+
+            <!-- 04 -->
+            <details class="accordion-item">
+                <summary class="accordion-item__header">
+                    <span class="accordion-item__number">04</span>
+                    <div class="accordion-item__title-group">
+                        <div class="accordion-item__title">Procurement</div>
+                        <div class="accordion-item__tagline">Du besoin terrain au bon de commande, un seul flux</div>
+                    </div>
+                    <span class="accordion-item__toggle">+</span>
+                </summary>
+                <div class="accordion-item__body">
+                    <p class="accordion-item__desc">Workflow complet Demande d'Achat, Demande de Prix multi-fournisseurs, Bon de Commande. Comparaison des reponses fournisseur, grille de notation automatique. Suivi jusqu'a la reception.</p>
+                    <div class="accordion-item__highlight">DA → RFQ → PO — circuit achats complet</div>
+                </div>
+            </details>
+
+            <!-- 05 -->
+            <details class="accordion-item">
+                <summary class="accordion-item__header">
+                    <span class="accordion-item__number">05</span>
+                    <div class="accordion-item__title-group">
+                        <div class="accordion-item__title">Projets & Chantiers</div>
+                        <div class="accordion-item__tagline">La rentabilite de chaque chantier, en temps reel</div>
+                    </div>
+                    <span class="accordion-item__toggle">+</span>
+                </summary>
+                <div class="accordion-item__body">
+                    <p class="accordion-item__desc">Cycle de vie complet du projet : budget alloue, depenses reelles, ecart budget. Allocation des ressources machines et personnel. Localisation GPS du chantier.</p>
+                    <div class="accordion-item__highlight">Budget vs reel — rentabilite par chantier</div>
+                </div>
+            </details>
+
+            <!-- 06 -->
+            <details class="accordion-item">
+                <summary class="accordion-item__header">
+                    <span class="accordion-item__number">06</span>
+                    <div class="accordion-item__title-group">
+                        <div class="accordion-item__title">Analyse Couts</div>
+                        <div class="accordion-item__tagline">Savoir exactement ce que coute chaque machine</div>
+                    </div>
+                    <span class="accordion-item__toggle">+</span>
+                </summary>
+                <div class="accordion-item__body">
+                    <p class="accordion-item__desc">TCO par equipement avec decomposition par categorie : carburant, maintenance, assurance, amortissement. Workflow d'approbation des depenses. Benchmark entre machines similaires.</p>
+                    <div class="accordion-item__highlight">TCO par machine — benchmark automatique</div>
+                </div>
+            </details>
+
+            <!-- 07 -->
+            <details class="accordion-item">
+                <summary class="accordion-item__header">
+                    <span class="accordion-item__number">07</span>
+                    <div class="accordion-item__title-group">
+                        <div class="accordion-item__title">Personnel</div>
+                        <div class="accordion-item__tagline">Les bonnes competences au bon endroit</div>
+                    </div>
+                    <span class="accordion-item__toggle">+</span>
+                </summary>
+                <div class="accordion-item__body">
+                    <p class="accordion-item__desc">Fiches salaries avec qualifications, certifications et historique d'affectation. Statut en temps reel : actif, conge, mission. Matching competences-besoins pour chaque projet.</p>
+                    <div class="accordion-item__highlight">Qualifications tracees — matching projet</div>
+                </div>
+            </details>
+
+            <!-- 08 -->
+            <details class="accordion-item">
+                <summary class="accordion-item__header">
+                    <span class="accordion-item__number">08</span>
+                    <div class="accordion-item__title-group">
+                        <div class="accordion-item__title">Planning Ressources</div>
+                        <div class="accordion-item__tagline">Planifier sans conflits, optimiser l'utilisation</div>
+                    </div>
+                    <span class="accordion-item__toggle">+</span>
+                </summary>
+                <div class="accordion-item__body">
+                    <p class="accordion-item__desc">Vue Gantt interactive des affectations machines, vehicules et personnel par projet. Detection automatique des conflits de ressources. Taux d'utilisation visible en temps reel.</p>
+                    <div class="accordion-item__highlight">Gantt interactif — conflits detectes auto</div>
+                </div>
+            </details>
+
+            <!-- 09 -->
+            <details class="accordion-item">
+                <summary class="accordion-item__header">
+                    <span class="accordion-item__number">09</span>
+                    <div class="accordion-item__title-group">
+                        <div class="accordion-item__title">Audit & Tracabilite</div>
+                        <div class="accordion-item__tagline">Qui a fait quoi, quand, et ou</div>
+                    </div>
+                    <span class="accordion-item__toggle">+</span>
+                </summary>
+                <div class="accordion-item__body">
+                    <p class="accordion-item__desc">Journal complet de chaque modification avec detail champ par champ. Geolocalisation des actions. Documentation de conformite generee automatiquement pour vos audits.</p>
+                    <div class="accordion-item__highlight">Journal champ par champ — conformite audit</div>
+                </div>
+            </details>
+
+            <!-- 10 -->
+            <details class="accordion-item">
+                <summary class="accordion-item__header">
+                    <span class="accordion-item__number">10</span>
+                    <div class="accordion-item__title-group">
+                        <div class="accordion-item__title">Analytics</div>
+                        <div class="accordion-item__tagline">Des decisions basees sur des donnees, pas des intuitions</div>
+                    </div>
+                    <span class="accordion-item__toggle">+</span>
+                </summary>
+                <div class="accordion-item__body">
+                    <p class="accordion-item__desc">Tableaux de bord avec indicateurs de performance fleet : taux d'utilisation, MTBF, tendances pannes, previsions budget sur 12 mois. Export PDF et PowerPoint en un clic.</p>
+                    <div class="accordion-item__highlight">KPIs fleet — export PDF/PPT instantane</div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="module-cta-section" id="contact-module">
+        <div class="module-cta">
+            <h2 class="module-cta__title">Pret a reprendre le controle de votre flotte ?</h2>
+            <p class="module-cta__subtitle">
+                Audit gratuit de votre operationnel fleet. Plan d'optimisation en 48h.
+            </p>
+            <div class="module-cta__buttons">
+                <a href="mailto:contact@kaalytics.com" class="btn btn-primary">Demander une demo</a>
+                <a href="../index.html#modules-ia" class="btn btn-secondary">Retour aux modules</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 40px 24px; text-align: center; border-top: 1px solid rgba(16,185,129,0.12);">
+        <p style="color: #64748b; font-size: 14px;">© 2026 Kaalytics. <a href="../index.html" style="color: #10b981; text-decoration: none;">Retour a l'accueil</a></p>
+    </footer>
+
+    <!-- Navbar Script -->
+    <script src="../components/navbar/navbar-loader.js" defer></script>
+</body>
+</html>
