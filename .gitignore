@@ -35,3 +35,5 @@ proposals/
 
 # Editor tool (dev only)
 sections/modules-ia/editor.html
+.vercel
+.env*.local
