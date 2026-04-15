@@ -97,9 +97,9 @@
                 { value: '5', label: 'Etapes tracees' }
             ],
             videos: [
-                'assets/videos/supply-chain/supply-chain-1.mp4',
-                'assets/videos/supply-chain/supply-chain-2.mp4',
-                'assets/videos/supply-chain/supply-chain-3.mp4'
+                'assets/videos/industrial/industrial-2.mp4',
+                'assets/videos/connectivity/connectivity-3.mp4',
+                'assets/videos/odoo/odoo-2.mp4'
             ],
             link: 'modules/supply-chain.html'
         },
