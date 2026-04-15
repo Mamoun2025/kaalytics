@@ -247,18 +247,18 @@
     }
 
     .navbar__cta-desktop {
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    .lang-switcher {
         display: none;
     }
+}
 
-    /* Lang switcher visible on mobile - compact style */
-    .lang-switcher {
-        display: flex;
-        padding: var(--space-2xs) var(--space-xs);
-        font-size: var(--text-xs);
-    }
-
-    .lang-switcher__option {
-        padding: 0.2rem 0.4rem;
+@media (max-width: 480px) {
+    .navbar__cta-desktop {
+        display: none;
     }
 }
 
