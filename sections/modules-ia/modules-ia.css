@@ -448,10 +448,15 @@
 
 .module-node.active .module-node__icon {
     box-shadow:
-        0 0 20px rgba(16, 185, 129, 0.6),
-        0 0 40px rgba(16, 185, 129, 0.3);
+        0 0 24px rgba(16, 185, 129, 0.6),
+        0 0 48px rgba(16, 185, 129, 0.25);
     border-color: var(--emerald);
     background: linear-gradient(135deg, var(--emerald), var(--emerald-dim));
+    transform: scale(1.1);
+}
+
+.module-node.active .module-node__label {
+    color: var(--emerald);
 }
 
 .module-node.active .module-node__icon svg {
@@ -473,14 +478,27 @@
 
 .module-node:hover .module-node__icon {
     border-color: var(--emerald);
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(15, 23, 42, 0.9));
+    box-shadow:
+        0 0 20px rgba(16, 185, 129, 0.4),
+        0 0 40px rgba(16, 185, 129, 0.2),
+        inset 0 0 12px rgba(16, 185, 129, 0.1);
+    transform: scale(1.15);
+}
+
+.module-node:hover .module-node__icon svg {
+    stroke: white;
+}
+
+.module-node:hover .module-node__label {
+    color: var(--emerald);
 }
 
 .module-node__icon svg {
     width: 22px;
     height: 22px;
     stroke: var(--emerald);
-    transition: stroke 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .module-node__label {
@@ -489,6 +507,7 @@
     color: var(--text-primary);
     text-align: center;
     white-space: nowrap;
+    transition: color 0.3s ease;
 }
 
 .module-node__count {
