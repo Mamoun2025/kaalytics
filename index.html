@@ -709,7 +709,7 @@
         <div style="max-width: 1200px; margin: 0 auto; padding: 0 var(--space-2xl);">
 
             <!-- Footer Grid -->
-            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: var(--space-2xl); margin-bottom: var(--space-3xl);">
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: var(--space-2xl); margin-bottom: var(--space-3xl);" class="footer__grid-responsive">
 
                 <!-- Brand -->
                 <div>
@@ -783,6 +783,22 @@
         </div>
     </footer>
 
+
+    <!-- Footer Responsive Styles -->
+    <style>
+        @media (max-width: 1024px) {
+            .footer__grid-responsive {
+                grid-template-columns: 1fr 1fr !important;
+                gap: var(--space-xl) !important;
+            }
+        }
+        @media (max-width: 640px) {
+            .footer__grid-responsive {
+                grid-template-columns: 1fr !important;
+                gap: var(--space-lg) !important;
+            }
+        }
+    </style>
 
     <!-- Video Modal -->
     <div class="video-modal" id="videoModal">

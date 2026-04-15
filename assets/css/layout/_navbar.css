@@ -645,6 +645,35 @@
     .navbar__dropdown-menu {
         display: none;
     }
+
+    .navbar__container {
+        padding: 0 var(--space-md);
+    }
+
+    .navbar__logo-text {
+        font-size: var(--text-lg);
+    }
+
+    .lang-switcher {
+        font-size: 10px;
+        padding: 2px 4px;
+    }
+}
+
+@media (max-width: 640px) {
+    .navbar__logo-text {
+        font-size: var(--text-base);
+    }
+
+    .navbar__logo-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .navbar__mobile-toggle {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 /* ========================================

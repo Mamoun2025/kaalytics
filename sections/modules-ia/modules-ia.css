@@ -952,7 +952,11 @@
     }
 
     .module-node__label {
-        font-size: 9px;
+        font-size: 8px;
+        max-width: 50px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .module-node__count {
@@ -961,6 +965,7 @@
 
     .modules-ia__center {
         width: 50%;
+        min-width: 120px;
     }
 
     .modules-ia__video-title {
@@ -980,6 +985,8 @@
         flex-wrap: wrap;
         gap: var(--space-lg);
         padding: var(--space-md);
+        max-width: 100%;
+        overflow-x: auto;
     }
 
     .modules-ia__stat-value {
@@ -996,12 +1003,24 @@
 
     .modules-ia__subtitle {
         font-size: var(--text-sm);
+        padding: 0 var(--space-sm);
     }
 
     .module-info-panel {
         width: 100%;
         max-width: 300px;
         right: -100%;
+    }
+
+    /* Hide particles on mobile for performance */
+    .modules-ia__particles {
+        display: none;
+    }
+
+    /* Reduce glow effects on mobile */
+    .section-modules-ia::before,
+    .section-modules-ia::after {
+        opacity: 0.5;
     }
 }
 
@@ -1022,10 +1041,20 @@
     }
 
     .module-node__label {
-        font-size: 8px;
+        font-size: 7px;
+        max-width: 45px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .modules-ia__stats {
         gap: var(--space-md);
+    }
+
+    /* Hide info panel on very small screens */
+    .module-info-panel {
+        width: 100% !important;
+        max-width: 280px;
     }
 }

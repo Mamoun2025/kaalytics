@@ -124,13 +124,17 @@
     }
 
     .hero__title {
-        font-size: clamp(1.75rem, 8vw, 2.5rem);
+        font-size: clamp(1.5rem, 7vw, 2.5rem);
         margin-bottom: var(--space-lg);
+        line-height: 1.2;
+        word-wrap: break-word;
     }
 
     .hero__description {
         font-size: var(--text-base);
         margin-bottom: var(--space-xl);
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .hero__metrics {
@@ -773,6 +777,83 @@
     .industries__list {
         flex-direction: column;
         align-items: center;
+    }
+}
+
+/* ========================================
+   ULTRA-SMALL MOBILE (375px)
+   ======================================== */
+
+@media (max-width: 375px) {
+    :root {
+        --space-2xl: 1.5rem;
+        --text-base: 0.95rem;
+    }
+
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .hero__title {
+        font-size: clamp(1.3rem, 6vw, 2rem);
+    }
+
+    .section-header h2,
+    .section-title {
+        font-size: var(--text-xl);
+    }
+
+    .btn {
+        padding: 10px 16px;
+        font-size: var(--text-sm);
+    }
+}
+
+/* ========================================
+   HOW IT WORKS / STEPS CARDS
+   ======================================== */
+
+@media (max-width: 640px) {
+    /* Ensure step cards stack properly */
+    .steps-grid,
+    .services__grid,
+    .how-it-works__grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-lg) !important;
+    }
+
+    /* Cards should have proper spacing */
+    .step-card,
+    .service-card,
+    .how-item {
+        padding: var(--space-lg) !important;
+    }
+
+    /* Ensure numbering/icons are visible */
+    .step-number,
+    .service-icon,
+    .how-icon {
+        flex-shrink: 0;
+    }
+}
+
+/* ========================================
+   INTEGRATIONS LOGO GRID
+   ======================================== */
+
+@media (max-width: 640px) {
+    .integrations__grid,
+    .clients__grid,
+    .logos-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--space-md) !important;
+    }
+
+    .integration-logo,
+    .client-logo,
+    .logo-item {
+        min-height: 60px;
     }
 }
 
