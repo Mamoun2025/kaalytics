@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposition B — Accordion / Expandable</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-void: #040a08;
+            --bg-card: #0f1f1b;
+            --bg-secondary: #132a24;
+            --emerald: #10b981;
+            --emerald-dim: rgba(16, 185, 129, 0.1);
+            --text-primary: #ecfdf5;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: rgba(16, 185, 129, 0.12);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg-void); color: var(--text-primary); }
+
+        .header {
+            text-align: center;
+            padding: 80px 24px 40px;
+        }
+        .header__badge {
+            display: inline-block;
+            background: var(--emerald-dim);
+            border: 1px solid rgba(16,185,129,0.25);
+            color: var(--emerald);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        .header h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        .header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ACCORDION */
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 24px 80px;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .accordion-item__header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 24px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .accordion-item__header:hover {
+            padding-left: 8px;
+        }
+
+        .accordion-item__number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--emerald);
+            opacity: 0.4;
+            min-width: 40px;
+            transition: opacity 0.3s;
+        }
+        .accordion-item[open] .accordion-item__number {
+            opacity: 1;
+        }
+
+        .accordion-item__title-group {
+            flex: 1;
+        }
+        .accordion-item__title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        .accordion-item__tagline {
+            font-size: 0.85rem;
+            color: var(--emerald);
+            font-weight: 500;
+        }
+
+        .accordion-item__toggle {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--emerald);
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            flex-shrink: 0;
+        }
+        .accordion-item[open] .accordion-item__toggle {
+            background: var(--emerald);
+            color: var(--bg-void);
+            border-color: var(--emerald);
+            transform: rotate(45deg);
+        }
+
+        .accordion-item__body {
+            padding: 0 0 24px 60px;
+        }
+        .accordion-item__desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            max-width: 600px;
+        }
+        .accordion-item__highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 16px;
+            padding: 8px 16px;
+            background: var(--emerald-dim);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--emerald);
+            font-weight: 600;
+        }
+
+        .label { text-align: center; padding: 40px; color: var(--text-muted); font-size: 14px; border-top: 1px solid var(--border); margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header__badge">Proposition B — Accordion</div>
+        <h2>Tout ce dont votre equipe commerciale a besoin</h2>
+        <p>7 briques logicielles qui s'assemblent. Cliquez pour explorer chaque composant.</p>
+    </div>
+
+    <div class="accordion">
+        <details class="accordion-item" open>
+            <summary class="accordion-item__header">
+                <span class="accordion-item__number">01</span>
+                <div class="accordion-item__title-group">
+                    <div class="accordion-item__title">Command Center</div>
+                    <div class="accordion-item__tagline">Pilotage commercial temps reel</div>
+                </div>
+                <span class="accordion-item__toggle">+</span>
+            </summary>
+            <div class="accordion-item__body">
+                <p class="accordion-item__desc">6 KPIs live, pipeline visuel avec escalade automatique, leaderboard equipe avec podium et radar multi-axes. Le directeur commercial voit ou en est chaque membre de son equipe en un coup d'oeil. Objectifs mensuels avec progression Bronze, Silver, Gold.</p>
+                <div class="accordion-item__highlight">Pipeline, leaderboard, objectifs — tout en temps reel</div>
+            </div>
+        </details>
+
+        <details class="accordion-item">
+            <summary class="accordion-item__header">
+                <span class="accordion-item__number">02</span>
+                <div class="accordion-item__title-group">
+                    <div class="accordion-item__title">Matching Engine</div>
+                    <div class="accordion-item__tagline">L'algorithme qui identifie vos meilleures opportunites</div>
+                </div>
+                <span class="accordion-item__toggle">+</span>
+            </summary>
+            <div class="accordion-item__body">
+                <p class="accordion-item__desc">Trois niveaux de scoring croises en temps reel. Historique : ce client a deja achete ce produit. Machines : son equipement est compatible. Cross-sell : il achete dans cette categorie mais pas ce produit. Score 0-100 par opportunite, potentiel en euros calcule automatiquement.</p>
+                <div class="accordion-item__highlight">Algorithme 3 niveaux — scoring automatique 0-100</div>
+            </div>
+        </details>
+
+        <details class="accordion-item">
+            <summary class="accordion-item__header">
+                <span class="accordion-item__number">03</span>
+                <div class="accordion-item__title-group">
+                    <div class="accordion-item__title">Carte Interactive</div>
+                    <div class="accordion-item__tagline">Moins de kilometres, plus de visites</div>
+                </div>
+                <span class="accordion-item__toggle">+</span>
+            </summary>
+            <div class="accordion-item__body">
+                <p class="accordion-item__desc">Vos clients geocodes sur une carte interactive avec code couleur par commercial. L'optimiseur calcule la tournee ideale en tenant compte de la geographie. Sauvegardez vos plans de tournee pour les reutiliser.</p>
+                <div class="accordion-item__highlight">Optimisation route automatique — distance + temps</div>
+            </div>
+        </details>
+
+        <details class="accordion-item">
+            <summary class="accordion-item__header">
+                <span class="accordion-item__number">04</span>
+                <div class="accordion-item__title-group">
+                    <div class="accordion-item__title">Agent Devis</div>
+                    <div class="accordion-item__tagline">Du texte libre au devis PDF en 30 secondes</div>
+                </div>
+                <span class="accordion-item__toggle">+</span>
+            </summary>
+            <div class="accordion-item__body">
+                <p class="accordion-item__desc">Le commercial dicte ou tape sa demande. L'agent parse le texte, identifie le client et les references produits dans l'ERP par matching flou, genere le devis PDF et l'envoie au client par email ou WhatsApp. Zero ressaisie, zero erreur.</p>
+                <div class="accordion-item__highlight">Email ou texte → devis PDF → envoi automatique</div>
+            </div>
+        </details>
+
+        <details class="accordion-item">
+            <summary class="accordion-item__header">
+                <span class="accordion-item__number">05</span>
+                <div class="accordion-item__title-group">
+                    <div class="accordion-item__title">Portail B2B</div>
+                    <div class="accordion-item__tagline">Vos clients commandent en autonomie, 24h/24</div>
+                </div>
+                <span class="accordion-item__toggle">+</span>
+            </summary>
+            <div class="accordion-item__body">
+                <p class="accordion-item__desc">Chaque client accede a son espace personnalise : parc machines avec compatibilites pieces, catalogue filtre par equipement, historique commandes et factures, panier avec soumission directe dans votre ERP.</p>
+                <div class="accordion-item__highlight">Self-service client — connecte a l'ERP en temps reel</div>
+            </div>
+        </details>
+
+        <details class="accordion-item">
+            <summary class="accordion-item__header">
+                <span class="accordion-item__number">06</span>
+                <div class="accordion-item__title-group">
+                    <div class="accordion-item__title">Recommandations</div>
+                    <div class="accordion-item__tagline">Le bon produit, au bon client, au bon moment</div>
+                </div>
+                <span class="accordion-item__toggle">+</span>
+            </summary>
+            <div class="accordion-item__body">
+                <p class="accordion-item__desc">Moteur de suggestion base sur trois criteres : compatibilite machine du client, historique d'achats, et promotions actives. Les recommandations sont calculees automatiquement et augmentent le panier moyen par pertinence.</p>
+                <div class="accordion-item__highlight">Suggestions automatiques — panier moyen en hausse</div>
+            </div>
+        </details>
+
+        <details class="accordion-item">
+            <summary class="accordion-item__header">
+                <span class="accordion-item__number">07</span>
+                <div class="accordion-item__title-group">
+                    <div class="accordion-item__title">KPI Executive</div>
+                    <div class="accordion-item__tagline">Le DG demarre informe, chaque matin a 6h</div>
+                </div>
+                <span class="accordion-item__toggle">+</span>
+            </summary>
+            <div class="accordion-item__body">
+                <p class="accordion-item__desc">Email automatique quotidien a 6h : CA de la veille, marge, cumul mois en cours vs objectif, liste des devis en attente. Code couleur : vert si marge superieure a 25%, orange entre 15-25%, rouge en dessous. Lisible en 10 secondes sur mobile.</p>
+                <div class="accordion-item__highlight">Rapport quotidien automatique — zero reunion necessaire</div>
+            </div>
+        </details>
+    </div>
+
+    <div class="label">Proposition B — Accordion expandable. Compact par defaut, detail au clic. Ideal mobile.</div>
+</body>
+</html>

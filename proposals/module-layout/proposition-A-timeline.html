@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposition A — Timeline Verticale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-void: #040a08;
+            --bg-primary: #0a1612;
+            --bg-card: #0f1f1b;
+            --bg-secondary: #132a24;
+            --emerald: #10b981;
+            --emerald-dim: rgba(16, 185, 129, 0.1);
+            --text-primary: #ecfdf5;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: rgba(16, 185, 129, 0.12);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg-void); color: var(--text-primary); }
+
+        .header {
+            text-align: center;
+            padding: 80px 24px 40px;
+        }
+        .header__badge {
+            display: inline-block;
+            background: var(--emerald-dim);
+            border: 1px solid rgba(16,185,129,0.25);
+            color: var(--emerald);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        .header h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        .header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* TIMELINE LAYOUT */
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+            position: relative;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 40px;
+            bottom: 80px;
+            width: 2px;
+            background: linear-gradient(180deg, var(--emerald), rgba(16,185,129,0.1));
+        }
+        @media (min-width: 768px) {
+            .timeline::before { left: 50%; transform: translateX(-50%); }
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 56px;
+            margin-bottom: 48px;
+        }
+        @media (min-width: 768px) {
+            .timeline-item { width: 50%; padding-left: 0; padding-right: 48px; }
+            .timeline-item:nth-child(even) { margin-left: 50%; padding-left: 48px; padding-right: 0; }
+        }
+
+        .timeline-item__dot {
+            position: absolute;
+            left: 16px;
+            top: 8px;
+            width: 18px;
+            height: 18px;
+            background: var(--bg-void);
+            border: 3px solid var(--emerald);
+            border-radius: 50%;
+            z-index: 2;
+        }
+        @media (min-width: 768px) {
+            .timeline-item__dot { left: auto; right: -9px; }
+            .timeline-item:nth-child(even) .timeline-item__dot { left: -9px; right: auto; }
+        }
+
+        .timeline-item__number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--emerald);
+            opacity: 0.3;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .timeline-item__title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .timeline-item__tagline {
+            color: var(--emerald);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .timeline-item__desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .label { text-align: center; padding: 40px; color: var(--text-muted); font-size: 14px; border-top: 1px solid var(--border); margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header__badge">Proposition A — Timeline</div>
+        <h2>Le parcours commercial, etape par etape</h2>
+        <p>Chaque sous-module intervient a un moment precis du cycle de vente. De l'identification du prospect jusqu'au rapport de direction.</p>
+    </div>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-item__dot"></div>
+            <div class="timeline-item__number">01</div>
+            <div class="timeline-item__title">Command Center</div>
+            <div class="timeline-item__tagline">Pilotage commercial temps reel</div>
+            <p class="timeline-item__desc">6 KPIs live, pipeline visuel, leaderboard equipe. Le directeur commercial voit ou en est chaque membre de son equipe en un coup d'oeil.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-item__dot"></div>
+            <div class="timeline-item__number">02</div>
+            <div class="timeline-item__title">Matching Engine</div>
+            <div class="timeline-item__tagline">L'algorithme qui identifie vos meilleures opportunites</div>
+            <p class="timeline-item__desc">Croisement automatique de 3 sources : historique achats, parc machines client, et opportunites cross-sell. Chaque prospect recoit un score 0-100.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-item__dot"></div>
+            <div class="timeline-item__number">03</div>
+            <div class="timeline-item__title">Carte Interactive</div>
+            <div class="timeline-item__tagline">Moins de kilometres, plus de visites</div>
+            <p class="timeline-item__desc">Vos clients geocodes sur une carte interactive. L'optimiseur calcule la tournee ideale : ordre des visites, distance totale, temps estime.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-item__dot"></div>
+            <div class="timeline-item__number">04</div>
+            <div class="timeline-item__title">Agent Devis</div>
+            <div class="timeline-item__tagline">Du texte libre au devis PDF en 30 secondes</div>
+            <p class="timeline-item__desc">Le commercial dicte ou tape sa demande. L'agent parse, matche les references dans l'ERP, genere le PDF et l'envoie au client. Zero ressaisie.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-item__dot"></div>
+            <div class="timeline-item__number">05</div>
+            <div class="timeline-item__title">Portail B2B</div>
+            <div class="timeline-item__tagline">Vos clients commandent en autonomie, 24h/24</div>
+            <p class="timeline-item__desc">Chaque client accede a son parc machines, son catalogue filtre, ses commandes et factures. Il passe commande directement dans votre ERP.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-item__dot"></div>
+            <div class="timeline-item__number">06</div>
+            <div class="timeline-item__title">Recommandations</div>
+            <div class="timeline-item__tagline">Le bon produit, au bon client, au bon moment</div>
+            <p class="timeline-item__desc">Moteur de suggestion base sur la compatibilite machine, l'historique et les promotions en cours. Le panier moyen augmente naturellement.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-item__dot"></div>
+            <div class="timeline-item__number">07</div>
+            <div class="timeline-item__title">KPI Executive</div>
+            <div class="timeline-item__tagline">Le DG demarre informe, chaque matin a 6h</div>
+            <p class="timeline-item__desc">Email automatique avec CA veille, marge, cumul mois, devis en attente. Code couleur performance. Lisible en 10 secondes sur mobile.</p>
+        </div>
+    </div>
+
+    <div class="label">Proposition A — Timeline verticale alternee. Le flux raconte une histoire : du prospect au reporting.</div>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposition D — Split Feature List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-void: #040a08;
+            --bg-card: #0f1f1b;
+            --bg-secondary: #132a24;
+            --emerald: #10b981;
+            --emerald-dim: rgba(16, 185, 129, 0.1);
+            --text-primary: #ecfdf5;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: rgba(16, 185, 129, 0.12);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg-void); color: var(--text-primary); }
+
+        .header {
+            text-align: center;
+            padding: 80px 24px 24px;
+        }
+        .header__badge {
+            display: inline-block;
+            background: var(--emerald-dim);
+            border: 1px solid rgba(16,185,129,0.25);
+            color: var(--emerald);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        .header h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        .header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* SPLIT FEATURE LIST */
+        .features {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        .feature-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        .feature-row:hover {
+            background: rgba(16, 185, 129, 0.03);
+        }
+
+        @media (max-width: 768px) {
+            .feature-row { grid-template-columns: 1fr; }
+        }
+
+        .feature-row__left {
+            padding: 32px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            border-right: 1px solid var(--border);
+        }
+        @media (max-width: 768px) {
+            .feature-row__left { border-right: none; padding-bottom: 0; }
+        }
+
+        .feature-row__number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--emerald);
+            opacity: 0.3;
+            line-height: 1;
+            min-width: 48px;
+            transition: opacity 0.3s;
+        }
+        .feature-row:hover .feature-row__number { opacity: 0.8; }
+
+        .feature-row__title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .feature-row__tagline {
+            color: var(--emerald);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .feature-row__right {
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .feature-row__desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .feature-row__tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .feature-row__tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--emerald-dim);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            color: var(--emerald);
+            font-weight: 600;
+        }
+
+        .label { text-align: center; padding: 40px; color: var(--text-muted); font-size: 14px; border-top: 1px solid var(--border); margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header__badge">Proposition D — Split Feature List</div>
+        <h2>De l'identification au closing, chaque etape est couverte</h2>
+        <p>Une suite de 7 outils qui transforment votre equipe commerciale en machine de precision.</p>
+    </div>
+
+    <div class="features">
+        <div class="feature-row">
+            <div class="feature-row__left">
+                <div class="feature-row__number">01</div>
+                <div>
+                    <div class="feature-row__title">Command Center</div>
+                    <div class="feature-row__tagline">Pilotage commercial temps reel</div>
+                </div>
+            </div>
+            <div class="feature-row__right">
+                <p class="feature-row__desc">Tableau de bord centralise avec indicateurs live, pipeline de conversion et leaderboard equipe. Le directeur commercial pilote sa force de vente sans demander un seul rapport.</p>
+                <div class="feature-row__tags">
+                    <span class="feature-row__tag">Dashboard</span>
+                    <span class="feature-row__tag">Pipeline</span>
+                    <span class="feature-row__tag">Objectifs</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-row">
+            <div class="feature-row__left">
+                <div class="feature-row__number">02</div>
+                <div>
+                    <div class="feature-row__title">Matching Engine</div>
+                    <div class="feature-row__tagline">L'algorithme qui qualifie vos prospects</div>
+                </div>
+            </div>
+            <div class="feature-row__right">
+                <p class="feature-row__desc">Croisement intelligent de trois sources : historique client, compatibilite equipement et potentiel cross-sell. Chaque opportunite recoit un score et un potentiel de revenu calcule automatiquement.</p>
+                <div class="feature-row__tags">
+                    <span class="feature-row__tag">Algorithme 3 niveaux</span>
+                    <span class="feature-row__tag">Score 0-100</span>
+                    <span class="feature-row__tag">Cross-sell</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-row">
+            <div class="feature-row__left">
+                <div class="feature-row__number">03</div>
+                <div>
+                    <div class="feature-row__title">Carte Interactive</div>
+                    <div class="feature-row__tagline">Moins de route, plus de rendez-vous</div>
+                </div>
+            </div>
+            <div class="feature-row__right">
+                <p class="feature-row__desc">Vos clients geolocalises sur une carte interactive. L'optimiseur de tournee calcule l'itineraire ideal en tenant compte des distances et du potentiel commercial de chaque arret.</p>
+                <div class="feature-row__tags">
+                    <span class="feature-row__tag">Geolocalisation</span>
+                    <span class="feature-row__tag">Route optimale</span>
+                    <span class="feature-row__tag">Territoires</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-row">
+            <div class="feature-row__left">
+                <div class="feature-row__number">04</div>
+                <div>
+                    <div class="feature-row__title">Agent Devis</div>
+                    <div class="feature-row__tagline">Texte libre, devis PDF, 30 secondes</div>
+                </div>
+            </div>
+            <div class="feature-row__right">
+                <p class="feature-row__desc">Le commercial envoie un email ou dicte sa demande. L'agent identifie le client, matche les references dans l'ERP, genere le devis et l'envoie. Le commercial ne touche a rien.</p>
+                <div class="feature-row__tags">
+                    <span class="feature-row__tag">Parsing NLP</span>
+                    <span class="feature-row__tag">Matching flou</span>
+                    <span class="feature-row__tag">PDF auto</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-row">
+            <div class="feature-row__left">
+                <div class="feature-row__number">05</div>
+                <div>
+                    <div class="feature-row__title">Portail B2B</div>
+                    <div class="feature-row__tagline">Vos clients commandent en autonomie</div>
+                </div>
+            </div>
+            <div class="feature-row__right">
+                <p class="feature-row__desc">Espace client personnalise : parc machines avec compatibilites pieces, catalogue filtre, historique commandes et factures. Chaque commande se cree directement dans votre ERP.</p>
+                <div class="feature-row__tags">
+                    <span class="feature-row__tag">Self-service</span>
+                    <span class="feature-row__tag">24/7</span>
+                    <span class="feature-row__tag">ERP temps reel</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-row">
+            <div class="feature-row__left">
+                <div class="feature-row__number">06</div>
+                <div>
+                    <div class="feature-row__title">Recommandations</div>
+                    <div class="feature-row__tagline">Le bon produit, au bon client</div>
+                </div>
+            </div>
+            <div class="feature-row__right">
+                <p class="feature-row__desc">Suggestions automatiques basees sur trois criteres : machine compatible, historique d'achat, promotions actives. Le panier moyen augmente par la pertinence, pas par la pression.</p>
+                <div class="feature-row__tags">
+                    <span class="feature-row__tag">Moteur IA</span>
+                    <span class="feature-row__tag">Compatibilite</span>
+                    <span class="feature-row__tag">Upsell</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-row">
+            <div class="feature-row__left">
+                <div class="feature-row__number">07</div>
+                <div>
+                    <div class="feature-row__title">KPI Executive</div>
+                    <div class="feature-row__tagline">6h, chaque matin, sans rien demander</div>
+                </div>
+            </div>
+            <div class="feature-row__right">
+                <p class="feature-row__desc">Email automatique au dirigeant : CA, marge, devis en attente, comparaison mois. Code couleur performance. Dix secondes de lecture sur mobile. Zero reunion de reporting.</p>
+                <div class="feature-row__tags">
+                    <span class="feature-row__tag">Quotidien</span>
+                    <span class="feature-row__tag">Mobile-ready</span>
+                    <span class="feature-row__tag">Automatique</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="label">Proposition D — Split feature list. Titre a gauche, detail a droite. Clean, pro, scannable. Tags en bas de chaque item.</div>
+</body>
+</html>
