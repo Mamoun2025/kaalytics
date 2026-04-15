@@ -50,11 +50,13 @@
                 'Matrices compatibilite produits'
             ],
             stats: [
-                { value: 'x3', label: 'Conversion' },
-                { value: '5', label: 'Sous-modules' }
+                { value: '8', label: 'Composants' },
+                { value: 'x3', label: 'Conversion' }
             ],
             videos: [
-                'assets/videos/marketing/marketing-1.mp4'
+                'assets/videos/marketing/marketing-1.mp4',
+                'assets/videos/odoo/odoo-1.mp4',
+                'assets/videos/connectivity/connectivity-1.mp4'
             ],
             link: 'modules/marketing-automation.html'
         },
@@ -69,14 +71,13 @@
                 'Detection non-factures temps reel'
             ],
             stats: [
-                { value: '+15%', label: 'Recouvrement' },
-                { value: '4', label: 'Sous-modules' }
+                { value: '7', label: 'Composants' },
+                { value: '24/7', label: 'Suivi' }
             ],
             videos: [
                 'assets/videos/odoo/odoo-1.mp4',
                 'assets/videos/odoo/odoo-2.mp4',
-                'assets/videos/odoo/odoo-3.mp4',
-                'assets/videos/odoo/odoo-4.mp4'
+                'assets/videos/connectivity/connectivity-4.mp4'
             ],
             link: 'modules/financial-operations.html'
         },
@@ -92,8 +93,8 @@
                 'Revue tarifaire automatisee'
             ],
             stats: [
-                { value: '5', label: 'Etapes tracees' },
-                { value: '7', label: 'Sous-modules' }
+                { value: '9', label: 'Composants' },
+                { value: '5', label: 'Etapes tracees' }
             ],
             videos: [
                 'assets/videos/supply-chain/supply-chain-1.mp4',
@@ -115,8 +116,8 @@
                 'Planning ressources'
             ],
             stats: [
-                { value: '+15%', label: 'Disponibilite' },
-                { value: '10', label: 'Sous-modules' }
+                { value: '12', label: 'Composants' },
+                { value: 'GPS', label: 'Temps reel' }
             ],
             videos: [
                 'assets/videos/industrial/industrial-1.mp4',
@@ -139,15 +140,13 @@
                 'Mobile & terrain'
             ],
             stats: [
-                { value: '4+', label: 'ERP supportes' },
-                { value: '15', label: 'Modules deployes' }
+                { value: '4+', label: 'ERP' },
+                { value: '6', label: 'Composants' }
             ],
             videos: [
                 'assets/videos/connectivity/connectivity-1.mp4',
                 'assets/videos/connectivity/connectivity-2.mp4',
-                'assets/videos/connectivity/connectivity-3.mp4',
-                'assets/videos/connectivity/connectivity-4.mp4',
-                'assets/videos/connectivity/connectivity-5.mp4'
+                'assets/videos/connectivity/connectivity-3.mp4'
             ],
             link: 'modules/erp-connect.html'
         },
@@ -164,11 +163,12 @@
             ],
             stats: [
                 { value: '95+', label: 'Lighthouse' },
-                { value: '5', label: 'Sous-modules' }
+                { value: '7', label: 'Composants' }
             ],
             videos: [
-                'assets/videos/daedalia/daedalia-1.mp4',
-                'assets/videos/daedalia/daedalia-2.mp4'
+                'assets/videos/odoo/odoo-2.mp4',
+                'assets/videos/sales/sales-1.mp4',
+                'assets/videos/connectivity/connectivity-2.mp4'
             ],
             link: 'modules/digital-platform.html'
         },
@@ -185,11 +185,12 @@
             ],
             stats: [
                 { value: '24/7', label: 'Autonome' },
-                { value: '5', label: 'Sous-modules' }
+                { value: '8', label: 'Composants' }
             ],
             videos: [
                 'assets/videos/cyber/cyber-1.mp4',
-                'assets/videos/cyber/cyber-2.mp4'
+                'assets/videos/cyber/cyber-2.mp4',
+                'assets/videos/architecture/ai-infrastructure-showcase.mp4'
             ],
             link: 'modules/ai-engine.html'
         }
