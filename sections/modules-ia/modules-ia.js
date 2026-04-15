@@ -27,10 +27,6 @@
                 'Portail B2B client',
                 'KPI Executive quotidien'
             ],
-            stats: [
-                { value: '30s', label: 'Devis' },
-                { value: '7', label: 'Sous-modules' }
-            ],
             videos: [
                 'assets/videos/sales/sales-1.mp4',
                 'assets/videos/sales/sales-2.mp4',
@@ -49,10 +45,6 @@
                 'Enrichissement contacts auto',
                 'Matrices compatibilite produits'
             ],
-            stats: [
-                { value: '8', label: 'Composants' },
-                { value: 'x3', label: 'Conversion' }
-            ],
             videos: [
                 'assets/videos/marketing/marketing-1.mp4',
                 'assets/videos/odoo/odoo-1.mp4',
@@ -69,10 +61,6 @@
                 'Pipeline facturation sans ecarts',
                 'Agent Recouvrement escalade',
                 'Detection non-factures temps reel'
-            ],
-            stats: [
-                { value: '7', label: 'Composants' },
-                { value: '24/7', label: 'Suivi' }
             ],
             videos: [
                 'assets/videos/odoo/odoo-1.mp4',
@@ -92,10 +80,6 @@
                 'Chaine de valeur complete',
                 'Revue tarifaire automatisee'
             ],
-            stats: [
-                { value: '9', label: 'Composants' },
-                { value: '5', label: 'Etapes tracees' }
-            ],
             videos: [
                 'assets/videos/industrial/industrial-2.mp4',
                 'assets/videos/connectivity/connectivity-3.mp4',
@@ -114,10 +98,6 @@
                 'Gestion projets & chantiers',
                 'Analyse couts TCO',
                 'Planning ressources'
-            ],
-            stats: [
-                { value: '12', label: 'Composants' },
-                { value: 'GPS', label: 'Temps reel' }
             ],
             videos: [
                 'assets/videos/industrial/industrial-1.mp4',
@@ -139,10 +119,6 @@
                 'Dashboards connectes VPS',
                 'Mobile & terrain'
             ],
-            stats: [
-                { value: '4+', label: 'ERP' },
-                { value: '6', label: 'Composants' }
-            ],
             videos: [
                 'assets/videos/connectivity/connectivity-1.mp4',
                 'assets/videos/connectivity/connectivity-2.mp4',
@@ -161,10 +137,6 @@
                 'E-Commerce B2B connecte ERP',
                 'Scraping donnees produits'
             ],
-            stats: [
-                { value: '95+', label: 'Lighthouse' },
-                { value: '7', label: 'Composants' }
-            ],
             videos: [
                 'assets/videos/odoo/odoo-2.mp4',
                 'assets/videos/sales/sales-1.mp4',
@@ -182,10 +154,6 @@
                 'Etudes de marche auto',
                 'Business plans multi-scenarios',
                 'Pricing intelligence'
-            ],
-            stats: [
-                { value: '24/7', label: 'Autonome' },
-                { value: '8', label: 'Composants' }
             ],
             videos: [
                 'assets/videos/cyber/cyber-1.mp4',
@@ -283,7 +251,7 @@
         }
         if (elements.panelTitle) elements.panelTitle.textContent = config.title;
         if (elements.panelBadge) {
-            elements.panelBadge.textContent = `${config.features.length} fonctionnalites`;
+            elements.panelBadge.textContent = '';
         }
         if (elements.panelDesc) elements.panelDesc.textContent = config.description;
 
@@ -301,15 +269,13 @@
         }
 
         if (elements.panelStats) {
-            elements.panelStats.innerHTML = config.stats.map(s => `
-                <div class="module-info-panel__stat">
-                    <div class="module-info-panel__stat-value">${s.value}</div>
-                    <div class="module-info-panel__stat-label">${s.label}</div>
-                </div>
-            `).join('');
+            elements.panelStats.innerHTML = '';
         }
 
-        if (elements.panelCta) elements.panelCta.href = config.link || '#contact';
+        if (elements.panelCta) {
+            elements.panelCta.href = config.link || '#contact';
+            elements.panelCta.textContent = 'Voir le module';
+        }
         if (elements.infoPanel) elements.infoPanel.classList.add('visible');
     }
 
@@ -405,6 +371,17 @@
         }
         if (elements.center) elements.center.addEventListener('click', () => updateInfoPanel(currentModule));
         document.addEventListener('keydown', handleKeydown);
+
+        // Auto-hide panel when scrolling away from section
+        window.addEventListener('scroll', function() {
+            const section = document.querySelector('.section-modules-ia');
+            if (section && elements.infoPanel && elements.infoPanel.classList.contains('visible')) {
+                const rect = section.getBoundingClientRect();
+                if (rect.bottom < 0 || rect.top > window.innerHeight) {
+                    elements.infoPanel.classList.remove('visible');
+                }
+            }
+        });
     }
 
     function initModulesIA(options = {}) {

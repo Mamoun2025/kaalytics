@@ -185,8 +185,45 @@
             transform: rotate(45deg);
         }
 
+                /* Smooth accordion animation */
         .accordion-item__body {
             padding: 0 0 24px 60px;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Chevron rotation instead of + */
+        .accordion-item__toggle::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid #10b981;
+            border-bottom: 2px solid #10b981;
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease;
+            margin-top: -2px;
+            display: block;
+        }
+
+        .accordion-item[open] .accordion-item__toggle {
+            background: #10b981;
+            border-color: #10b981;
+        }
+
+        .accordion-item[open] .accordion-item__toggle::after {
+            border-color: #040a08;
+            transform: rotate(45deg);
+            margin-top: -4px;
         }
 
         .accordion-item__desc {
@@ -302,9 +339,46 @@
                 padding: 20px 16px 60px;
             }
 
-            .accordion-item__body {
-                padding: 0 0 24px 40px;
+                    /* Smooth accordion animation */
+        .accordion-item__body {
+            padding: 0 0 24px 60px;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
             }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Chevron rotation instead of + */
+        .accordion-item__toggle::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid #10b981;
+            border-bottom: 2px solid #10b981;
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease;
+            margin-top: -2px;
+            display: block;
+        }
+
+        .accordion-item[open] .accordion-item__toggle {
+            background: #10b981;
+            border-color: #10b981;
+        }
+
+        .accordion-item[open] .accordion-item__toggle::after {
+            border-color: #040a08;
+            transform: rotate(45deg);
+            margin-top: -4px;
+        }
 
             .accordion-item__number {
                 min-width: 30px;
@@ -334,7 +408,7 @@
     <div class="accordion">
         <p class="accordion-subtitle">Voici des exemples de composants disponibles. Chaque solution est modulaire et s'adapte a vos besoins specifiques.</p>
 
-        <details class="accordion-item" open>
+        <details class="accordion-item">
             <summary class="accordion-item__header">
                 <span class="accordion-item__number">01</span>
                 <div class="accordion-item__title-group">
@@ -342,7 +416,7 @@
                     <div class="accordion-item__tagline">Des extensions qui parlent votre metier</div>
                     <div class="accordion-item__tagline accordion-item__tagline--alt">Votre metier, nos solutions</div>
                 </div>
-                <span class="accordion-item__toggle">+</span>
+                <span class="accordion-item__toggle"></span>
             </summary>
             <div class="accordion-item__body">
                 <p class="accordion-item__desc">Developpement de modules natifs adaptes a vos processus, quel que soit votre ERP. Templates de devis personnalises, recherche intelligente multi-criteres, historique de prix dynamique, suggestions de destockage par algorithme. 15 modules deja deployes en production sur Odoo.</p>
@@ -358,7 +432,7 @@
                     <div class="accordion-item__tagline">Lecture et ecriture dans votre ERP, en temps reel</div>
                     <div class="accordion-item__tagline accordion-item__tagline--alt">Connectez tout a tout</div>
                 </div>
-                <span class="accordion-item__toggle">+</span>
+                <span class="accordion-item__toggle"></span>
             </summary>
             <div class="accordion-item__body">
                 <p class="accordion-item__desc">Synchronisation bidirectionnelle avec votre base de donnees. Connecteur natif Odoo via XML-RPC et PostgreSQL. Architecture REST extensible pour SAP, Sage et Dynamics. Import CSV, FTP et API proprietaire pour les systemes legacy.</p>
@@ -374,7 +448,7 @@
                     <div class="accordion-item__tagline">Vos indicateurs, deployes sur serveur dedie</div>
                     <div class="accordion-item__tagline accordion-item__tagline--alt">La verite en un regard</div>
                 </div>
-                <span class="accordion-item__toggle">+</span>
+                <span class="accordion-item__toggle"></span>
             </summary>
             <div class="accordion-item__body">
                 <p class="accordion-item__desc">Tableaux de bord connectes en direct a votre ERP, deployes sur un serveur dedie avec isolation multi-tenant. Chaque filiale ou equipe voit uniquement ses propres donnees. Les actions du dashboard creent directement dans l'ERP.</p>
@@ -390,7 +464,7 @@
                     <div class="accordion-item__tagline">L'ERP dans la poche de vos equipes terrain</div>
                     <div class="accordion-item__tagline accordion-item__tagline--alt">Le terrain connecte</div>
                 </div>
-                <span class="accordion-item__toggle">+</span>
+                <span class="accordion-item__toggle"></span>
             </summary>
             <div class="accordion-item__body">
                 <p class="accordion-item__desc">Interfaces responsive optimisees pour tablette et smartphone. Saisie de rapports de visite, photos et notes directement depuis le terrain. Notifications push par WhatsApp ou email. Mode hors-ligne avec synchronisation automatique.</p>
@@ -407,7 +481,7 @@
                     <div class="accordion-item__tagline">Transformez vos donnees en vol</div>
                     <div class="accordion-item__tagline accordion-item__tagline--alt">Des donnees propres, pretes a l'emploi</div>
                 </div>
-                <span class="accordion-item__toggle">+</span>
+                <span class="accordion-item__toggle"></span>
             </summary>
             <div class="accordion-item__body">
                 <p class="accordion-item__desc">Extraction, transformation et chargement automatiques depuis vos differentes sources. Nettoyage, enrichissement et normalisation en temps reel. Vos donnees arrivent propres et exploitables dans vos tableaux de bord.</p>
@@ -423,7 +497,7 @@
                     <div class="accordion-item__tagline">L'ancien et le nouveau reconcilies</div>
                     <div class="accordion-item__tagline accordion-item__tagline--alt">Modernisez sans tout reconstruire</div>
                 </div>
-                <span class="accordion-item__toggle">+</span>
+                <span class="accordion-item__toggle"></span>
             </summary>
             <div class="accordion-item__body">
                 <p class="accordion-item__desc">Connexion de vos systemes anciens (AS400, Access, applications DOS) a vos outils modernes. Pas besoin de reconstruction complete ni de Big Bang risque. Migration progressive, donnees accessibles immediatement.</p>

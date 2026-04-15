@@ -206,8 +206,45 @@
             transform: rotate(45deg);
         }
 
+                /* Smooth accordion animation */
         .accordion-item__body {
             padding: 0 0 24px 60px;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Chevron rotation instead of + */
+        .accordion-item__toggle::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid #10b981;
+            border-bottom: 2px solid #10b981;
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease;
+            margin-top: -2px;
+            display: block;
+        }
+
+        .accordion-item[open] .accordion-item__toggle {
+            background: #10b981;
+            border-color: #10b981;
+        }
+
+        .accordion-item[open] .accordion-item__toggle::after {
+            border-color: #040a08;
+            transform: rotate(45deg);
+            margin-top: -4px;
         }
         .accordion-item__desc {
             color: var(--text-secondary);
@@ -341,7 +378,7 @@
 
         <div class="accordion">
             <!-- 01 -->
-            <details class="accordion-item" open>
+            <details class="accordion-item">
                 <summary class="accordion-item__header">
                     <span class="accordion-item__number">01</span>
                     <div class="accordion-item__title-group">
@@ -349,7 +386,7 @@
                         <div class="accordion-item__tagline">Tous vos equipements dans un seul referentiel</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Chaque vehicule compte</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Enregistrement de chaque vehicule et machine avec donnees flexibles adaptees a votre metier. Fiche historisee par equipement, affectations en temps reel, documents techniques attaches. Architecture multi-tenant native.</p>
@@ -366,7 +403,7 @@
                         <div class="accordion-item__tagline">Savoir ou sont vos engins, en temps reel</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Le terrain, enfin visible</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Position live de chaque vehicule sur une carte interactive. Historique des trajets, geofencing avec alertes de zone, suivi de la consommation carburant. Les rapports kilometriques sont generes automatiquement.</p>
@@ -383,7 +420,7 @@
                         <div class="accordion-item__tagline">Anticiper les pannes avant qu'elles ne coutent cher</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Anticiper plutot que subir</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Planification preventive par heures, kilometres ou mois calendaire. Suivi des interventions curatives et d'urgence. Cout par intervention decompose en pieces et main d'oeuvre. Le systeme alerte avant chaque echeance.</p>
@@ -400,7 +437,7 @@
                         <div class="accordion-item__tagline">Du besoin terrain au bon de commande, un seul flux</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Du besoin terrain au bon de commande</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Workflow complet Demande d'Achat, Demande de Prix multi-fournisseurs, Bon de Commande. Comparaison des reponses fournisseur, grille de notation automatique. Suivi jusqu'a la reception.</p>
@@ -417,7 +454,7 @@
                         <div class="accordion-item__tagline">La rentabilite de chaque chantier, en temps reel</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Chaque site sous controle</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Cycle de vie complet du projet : budget alloue, depenses reelles, ecart budget. Allocation des ressources machines et personnel. Localisation GPS du chantier.</p>
@@ -434,7 +471,7 @@
                         <div class="accordion-item__tagline">Savoir exactement ce que coute chaque machine</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Sachez ce qui coute vraiment</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">TCO par equipement avec decomposition par categorie : carburant, maintenance, assurance, amortissement. Workflow d'approbation des depenses. Benchmark entre machines similaires.</p>
@@ -451,7 +488,7 @@
                         <div class="accordion-item__tagline">Les bonnes competences au bon endroit</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Les bonnes competences au bon endroit</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Fiches salaries avec qualifications, certifications et historique d'affectation. Statut en temps reel : actif, conge, mission. Matching competences-besoins pour chaque projet.</p>
@@ -468,7 +505,7 @@
                         <div class="accordion-item__tagline">Planifier sans conflits, optimiser l'utilisation</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Chaque engin au bon endroit</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Vue Gantt interactive des affectations machines, vehicules et personnel par projet. Detection automatique des conflits de ressources. Taux d'utilisation visible en temps reel.</p>
@@ -485,7 +522,7 @@
                         <div class="accordion-item__tagline">Qui a fait quoi, quand, et ou</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Chaque action tracee</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Journal complet de chaque modification avec detail champ par champ. Geolocalisation des actions. Documentation de conformite generee automatiquement pour vos audits.</p>
@@ -502,7 +539,7 @@
                         <div class="accordion-item__tagline">Des decisions basees sur des donnees, pas des intuitions</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Des decisions basees sur des donnees</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Tableaux de bord avec indicateurs de performance fleet : taux d'utilisation, MTBF, tendances pannes, previsions budget sur 12 mois. Export PDF et PowerPoint en un clic.</p>
@@ -520,7 +557,7 @@
                         <div class="accordion-item__tagline">Anticiper les elements</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">La meteo integree dans vos operations</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Integration des previsions meteorologiques dans la planification des chantiers et des interventions. Alertes automatiques quand les conditions sont incompatibles avec certaines operations. Replanification suggeree en cas d'intemperies.</p>
@@ -537,7 +574,7 @@
                         <div class="accordion-item__tagline">Le terrain connecte</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Chaque intervention documentee, geolocalisee</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Application mobile pour les rapports d'intervention avec geolocalisation, photos avant-apres, check-lists et signatures client. L'historique est automatiquement rattache a la fiche machine. La tracabilite est complete, les litiges reduits.</p>

@@ -206,8 +206,45 @@
             transform: rotate(45deg);
         }
 
+                /* Smooth accordion animation */
         .accordion-item__body {
             padding: 0 0 24px 60px;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Chevron rotation instead of + */
+        .accordion-item__toggle::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid #10b981;
+            border-bottom: 2px solid #10b981;
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease;
+            margin-top: -2px;
+            display: block;
+        }
+
+        .accordion-item[open] .accordion-item__toggle {
+            background: #10b981;
+            border-color: #10b981;
+        }
+
+        .accordion-item[open] .accordion-item__toggle::after {
+            border-color: #040a08;
+            transform: rotate(45deg);
+            margin-top: -4px;
         }
         .accordion-item__desc {
             color: var(--text-secondary);
@@ -341,7 +378,7 @@
 
         <div class="accordion">
             <!-- 01 -->
-            <details class="accordion-item" open>
+            <details class="accordion-item">
                 <summary class="accordion-item__header">
                     <span class="accordion-item__number">01</span>
                     <div class="accordion-item__title-group">
@@ -349,7 +386,7 @@
                         <div class="accordion-item__tagline">La logistique en temps reel</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Du stock au client en fluidite</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Dashboard operationnel couvrant le picking, le packing et le tracking des expeditions. Confirmation de livraison avec notification client. Indicateurs de performance par entrepot et par zone.</p>
@@ -366,7 +403,7 @@
                         <div class="accordion-item__tagline">Un inventaire consolide, meme sur plusieurs sites</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Un referentiel, plusieurs sites</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Vision unifiee des stocks de toutes vos entites. Creation de produits en batch, mouvements inter-entrepots traces, rapprochement comptable automatise entre filiales.</p>
@@ -383,7 +420,7 @@
                         <div class="accordion-item__tagline">Le centre nerveux de vos operations</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Le systeme nerveux de vos operations</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Architecture multi-agents avec pool de connexions partage, scheduling centralise et monitoring de sante en temps reel. Chaque service est supervise et redemarrable independamment.</p>
@@ -400,7 +437,7 @@
                         <div class="accordion-item__tagline">Commander la bonne quantite, au bon moment</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Achetez mieux, depensez moins</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Previsions d'achat par fournisseur avec planning mensuel. Stock actuel, seuil minimum, consommation moyenne et quantite suggeree calcules automatiquement par produit.</p>
@@ -417,7 +454,7 @@
                         <div class="accordion-item__tagline">Anticiper la demande avec precision</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">L'avenir, calcule</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Modele previsionnel base sur l'historique et la saisonnalite. Ecart prevision versus reel suivi mois par mois. Les previsions alimentent directement le planning achats.</p>
@@ -434,7 +471,7 @@
                         <div class="accordion-item__tagline">Cinq etapes, zero zone d'ombre</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Chaque maillon compte</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Suivi complet du flux Prospection, Vente, Livraison, Facturation, Recouvrement. Detection automatique des goulots d'etranglement. Quand une etape bloque, le systeme alerte avant que ca n'impacte le reste.</p>
@@ -451,7 +488,7 @@
                         <div class="accordion-item__tagline">Des prix toujours a jour, sans mauvaise surprise</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Des prix justes, toujours</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Comparaison automatique entre les prix dans votre ERP et les tarifs fournisseur actualises. Detection des anomalies : marge negative, prix obsolete, ecart inexplique. Workflow de validation avant mise a jour.</p>
@@ -469,7 +506,7 @@
                         <div class="accordion-item__tagline">Chaque produit suivi de bout en bout</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Du fournisseur au client final, zero zone d'ombre</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Tracabilite complete de chaque lot, chaque reference, chaque mouvement. Numerisation des bons de livraison, historique des transferts entre entrepots, preuve de livraison avec horodatage et signature.</p>
@@ -486,7 +523,7 @@
                         <div class="accordion-item__tagline">Anticiper ce que vos clients vont commander</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">L'avenir, calcule</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Modele previsionnel qui anticipe la demande par produit et par client en croisant historique, saisonnalite et tendances de marche. Les previsions alimentent automatiquement le planning achats pour eviter les ruptures.</p>

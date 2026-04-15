@@ -206,8 +206,45 @@
             transform: rotate(45deg);
         }
 
+                /* Smooth accordion animation */
         .accordion-item__body {
             padding: 0 0 24px 60px;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Chevron rotation instead of + */
+        .accordion-item__toggle::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid #10b981;
+            border-bottom: 2px solid #10b981;
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease;
+            margin-top: -2px;
+            display: block;
+        }
+
+        .accordion-item[open] .accordion-item__toggle {
+            background: #10b981;
+            border-color: #10b981;
+        }
+
+        .accordion-item[open] .accordion-item__toggle::after {
+            border-color: #040a08;
+            transform: rotate(45deg);
+            margin-top: -4px;
         }
         .accordion-item__desc {
             color: var(--text-secondary);
@@ -341,7 +378,7 @@
 
         <div class="accordion">
             <!-- 01 -->
-            <details class="accordion-item" open>
+            <details class="accordion-item">
                 <summary class="accordion-item__header">
                     <span class="accordion-item__number">01</span>
                     <div class="accordion-item__title-group">
@@ -349,7 +386,7 @@
                         <div class="accordion-item__tagline">Vision financiere 360 en temps reel</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Toutes vos banques, une seule vue</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Compte de produits et charges multi-annuel, cash flow previsionnel sur 24 mois, scenarios de business plan, ratios bancaires. Data room investisseur generee automatiquement avec acces securise par token.</p>
@@ -366,7 +403,7 @@
                         <div class="accordion-item__tagline">De la commande a l'encaissement, zero angle mort</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">L'argent qui coule, visible</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Pipeline visuel commande-livraison-facture avec detection automatique des ecarts. Aging par commercial et par client. Les factures sont envoyees automatiquement des que la livraison est confirmee.</p>
@@ -383,7 +420,7 @@
                         <div class="accordion-item__tagline">Des relances qui s'adaptent a chaque situation</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Ne ratez plus jamais un suivi</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Quatre niveaux d'escalade programmes : rappel pre-echeance a J-5, notification a J+0, relance ferme a J+15, mise en demeure a J+45. Chaque email est genere avec le contexte de la facture. L'aging analysis identifie les priorites.</p>
@@ -400,7 +437,7 @@
                         <div class="accordion-item__tagline">Les commandes livrees sans facture, reperees instantanement</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">L'IA qui veille sur vos revenus</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Dashboard temps reel qui remonte toutes les livraisons sans facture correspondante. Segmentation par tranche d'age : 0-30, 31-60, 61-90 et plus de 90 jours. Alertes prioritaires pour les retards critiques.</p>
@@ -418,7 +455,7 @@
                         <div class="accordion-item__tagline">L'argent qui entre et qui sort, en temps reel</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Votre cash flow, limpide</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Suivi en direct des encaissements et decaissements par categorie. Detection des schemas recurrents, identification des fuites de tresorerie cachees. Alertes quand les tensions de tresorerie approchent.</p>
@@ -435,7 +472,7 @@
                         <div class="accordion-item__tagline">Sachez ce qui rapporte vraiment</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">La rentabilite produit par produit</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Rentabilite calculee par produit, par client, par projet et par canal. Le systeme identifie les 20 pour cent de produits qui generent 80 pour cent de la marge — et les clients qui coutent plus qu'ils ne rapportent.</p>
@@ -452,7 +489,7 @@
                         <div class="accordion-item__tagline">Des rapports qui s'ecrivent seuls</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Le reporting sans les reunions</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Generation automatique de rapports mensuels avec analyse narrative et visualisations. Chaque rapport est structure, ponctuel et distribue aux bons destinataires. Le temps passe en reporting est reinvesti en decisions.</p>

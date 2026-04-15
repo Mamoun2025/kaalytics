@@ -185,8 +185,45 @@
             transform: rotate(45deg);
         }
 
+                /* Smooth accordion animation */
         .accordion-item__body {
             padding: 0 0 24px 60px;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Chevron rotation instead of + */
+        .accordion-item__toggle::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid #10b981;
+            border-bottom: 2px solid #10b981;
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease;
+            margin-top: -2px;
+            display: block;
+        }
+
+        .accordion-item[open] .accordion-item__toggle {
+            background: #10b981;
+            border-color: #10b981;
+        }
+
+        .accordion-item[open] .accordion-item__toggle::after {
+            border-color: #040a08;
+            transform: rotate(45deg);
+            margin-top: -4px;
         }
 
         .accordion-item__desc {
@@ -302,9 +339,46 @@
                 padding: 20px 16px 60px;
             }
 
-            .accordion-item__body {
-                padding: 0 0 24px 40px;
+                    /* Smooth accordion animation */
+        .accordion-item__body {
+            padding: 0 0 24px 60px;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
             }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Chevron rotation instead of + */
+        .accordion-item__toggle::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid #10b981;
+            border-bottom: 2px solid #10b981;
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease;
+            margin-top: -2px;
+            display: block;
+        }
+
+        .accordion-item[open] .accordion-item__toggle {
+            background: #10b981;
+            border-color: #10b981;
+        }
+
+        .accordion-item[open] .accordion-item__toggle::after {
+            border-color: #040a08;
+            transform: rotate(45deg);
+            margin-top: -4px;
+        }
 
             .accordion-item__number {
                 min-width: 30px;
@@ -334,7 +408,7 @@
     <div class="accordion">
         <p class="accordion-subtitle">Voici des exemples de composants disponibles. Chaque solution est modulaire et s'adapte a vos besoins specifiques.</p>
 
-        <details class="accordion-item" open>
+        <details class="accordion-item">
             <summary class="accordion-item__header">
                 <span class="accordion-item__number">01</span>
                 <div class="accordion-item__title-group">
@@ -342,7 +416,7 @@
                     <div class="accordion-item__tagline">Un site qui inspire confiance des la premiere seconde</div>
                     <div class="accordion-item__tagline accordion-item__tagline--alt">Votre vitrine digitale</div>
                 </div>
-                <span class="accordion-item__toggle">+</span>
+                <span class="accordion-item__toggle"></span>
             </summary>
             <div class="accordion-item__body">
                 <p class="accordion-item__desc">Design premium avec les standards 2026 : dark mode, animations fluides, responsive parfait sur mobile, tablette et desktop. Progressive Web App installable. Score Lighthouse superieur a 95. Chaque page est pensee pour la conversion.</p>
@@ -358,7 +432,7 @@
                     <div class="accordion-item__tagline">Etre trouve par les clients qui vous cherchent</div>
                     <div class="accordion-item__tagline accordion-item__tagline--alt">Etre trouve par ceux qui vous cherchent</div>
                 </div>
-                <span class="accordion-item__toggle">+</span>
+                <span class="accordion-item__toggle"></span>
             </summary>
             <div class="accordion-item__body">
                 <p class="accordion-item__desc">Audit technique complet, donnees structurees Schema.org, meta tags optimises, sitemap dynamique. Support multi-langue avec hreflang. Objectif : position zero sur vos mots-cles sectoriels. Trafic organique en hausse mesurable.</p>
@@ -374,7 +448,7 @@
                     <div class="accordion-item__tagline">Du contenu qui positionne et qui convertit</div>
                     <div class="accordion-item__tagline accordion-item__tagline--alt">Du contenu qui positionne et qui convertit</div>
                 </div>
-                <span class="accordion-item__toggle">+</span>
+                <span class="accordion-item__toggle"></span>
             </summary>
             <div class="accordion-item__body">
                 <p class="accordion-item__desc">Articles SEO par secteur d'activite, guides techniques, etudes de cas, landing pages de conversion. Calendrier editorial integre. Chaque contenu est un outil d'acquisition de leads qualifies.</p>
@@ -390,7 +464,7 @@
                     <div class="accordion-item__tagline">Votre catalogue en ligne, connecte a votre stock</div>
                     <div class="accordion-item__tagline accordion-item__tagline--alt">Vendez pendant que vous dormez</div>
                 </div>
-                <span class="accordion-item__toggle">+</span>
+                <span class="accordion-item__toggle"></span>
             </summary>
             <div class="accordion-item__body">
                 <p class="accordion-item__desc">Plateforme e-commerce avec catalogue synchronise a votre ERP en temps reel. Stock disponible affiche, pricing dynamique par client et par volume. Checkout rapide avec creation automatique de commande dans l'ERP.</p>
@@ -406,7 +480,7 @@
                     <div class="accordion-item__tagline">Un catalogue produit toujours complet et a jour</div>
                     <div class="accordion-item__tagline accordion-item__tagline--alt">Des donnees fraiches, sans effort</div>
                 </div>
-                <span class="accordion-item__toggle">+</span>
+                <span class="accordion-item__toggle"></span>
             </summary>
             <div class="accordion-item__body">
                 <p class="accordion-item__desc">Collecte automatisee de donnees produit depuis vos sources fournisseur. Normalisation, deduplication et enrichissement continu du catalogue. Vos fiches produits restent completes sans effort manuel.</p>
@@ -423,7 +497,7 @@
                     <div class="accordion-item__tagline">Le langage visuel de votre marque</div>
                     <div class="accordion-item__tagline accordion-item__tagline--alt">Coherence a chaque point de contact</div>
                 </div>
-                <span class="accordion-item__toggle">+</span>
+                <span class="accordion-item__toggle"></span>
             </summary>
             <div class="accordion-item__body">
                 <p class="accordion-item__desc">Bibliotheque de composants visuels et regles d'utilisation de votre identite. Logos, couleurs, typographies, espacements normalises. Chaque document, chaque page, chaque email respecte votre charte sans effort.</p>
@@ -439,7 +513,7 @@
                     <div class="accordion-item__tagline">Chaque document impressionne</div>
                     <div class="accordion-item__tagline accordion-item__tagline--alt">Vos devis et factures deviennent des outils de marque</div>
                 </div>
-                <span class="accordion-item__toggle">+</span>
+                <span class="accordion-item__toggle"></span>
             </summary>
             <div class="accordion-item__body">
                 <p class="accordion-item__desc">Templates de devis, factures, propositions commerciales et rapports aux couleurs de votre marque. Chaque document envoye renforce votre image professionnelle et votre credibilite.</p>

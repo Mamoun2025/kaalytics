@@ -185,8 +185,45 @@
             transform: rotate(45deg);
         }
 
+                /* Smooth accordion animation */
         .accordion-item__body {
             padding: 0 0 24px 60px;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Chevron rotation instead of + */
+        .accordion-item__toggle::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid #10b981;
+            border-bottom: 2px solid #10b981;
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease;
+            margin-top: -2px;
+            display: block;
+        }
+
+        .accordion-item[open] .accordion-item__toggle {
+            background: #10b981;
+            border-color: #10b981;
+        }
+
+        .accordion-item[open] .accordion-item__toggle::after {
+            border-color: #040a08;
+            transform: rotate(45deg);
+            margin-top: -4px;
         }
 
         .accordion-item__desc {
@@ -302,9 +339,46 @@
                 padding: 20px 16px 60px;
             }
 
-            .accordion-item__body {
-                padding: 0 0 24px 40px;
+                    /* Smooth accordion animation */
+        .accordion-item__body {
+            padding: 0 0 24px 60px;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
             }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Chevron rotation instead of + */
+        .accordion-item__toggle::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid #10b981;
+            border-bottom: 2px solid #10b981;
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease;
+            margin-top: -2px;
+            display: block;
+        }
+
+        .accordion-item[open] .accordion-item__toggle {
+            background: #10b981;
+            border-color: #10b981;
+        }
+
+        .accordion-item[open] .accordion-item__toggle::after {
+            border-color: #040a08;
+            transform: rotate(45deg);
+            margin-top: -4px;
+        }
 
             .accordion-item__number {
                 min-width: 30px;
@@ -334,7 +408,7 @@
     <div class="accordion">
         <p class="accordion-subtitle">Voici des exemples de composants disponibles. Chaque solution est modulaire et s'adapte a vos besoins specifiques.</p>
 
-        <details class="accordion-item" open>
+        <details class="accordion-item">
             <summary class="accordion-item__header">
                 <span class="accordion-item__number">01</span>
                 <div class="accordion-item__title-group">
@@ -342,7 +416,7 @@
                     <div class="accordion-item__tagline">Des agents specialises qui executent sans supervision</div>
                     <div class="accordion-item__tagline accordion-item__tagline--alt">L'IA qui execute sans supervision</div>
                 </div>
-                <span class="accordion-item__toggle">+</span>
+                <span class="accordion-item__toggle"></span>
             </summary>
             <div class="accordion-item__body">
                 <p class="accordion-item__desc">Hub multi-agents ou chaque agent a une mission precise : generer des devis, relancer les impayes, calculer les KPIs, enrichir les contacts. Scheduling orchestre, monitoring de sante en temps reel. Les agents travaillent 24/7, vous recuperez les resultats.</p>
@@ -358,7 +432,7 @@
                     <div class="accordion-item__tagline">Du texte non structure aux actions concretes</div>
                     <div class="accordion-item__tagline accordion-item__tagline--alt">Du texte brut aux actions concretes</div>
                 </div>
-                <span class="accordion-item__toggle">+</span>
+                <span class="accordion-item__toggle"></span>
             </summary>
             <div class="accordion-item__body">
                 <p class="accordion-item__desc">Vos emails commerciaux, vos messages WhatsApp, vos SMS sont transformes en actions structurees dans votre ERP. Le matching flou identifie les clients et les references produits meme avec des fautes ou des abbreviations.</p>
@@ -374,7 +448,7 @@
                     <div class="accordion-item__tagline">Des analyses sectorielles generees a la demande</div>
                     <div class="accordion-item__tagline accordion-item__tagline--alt">L'avenir, calcule</div>
                 </div>
-                <span class="accordion-item__toggle">+</span>
+                <span class="accordion-item__toggle"></span>
             </summary>
             <div class="accordion-item__body">
                 <p class="accordion-item__desc">Analyses automatisees par famille de produits : taille de marche, positionnement concurrentiel, tendances. Les donnees sont agreges depuis vos sources internes et les references sectorielles disponibles.</p>
@@ -390,7 +464,7 @@
                     <div class="accordion-item__tagline">Des scenarios financiers structures en quelques minutes</div>
                     <div class="accordion-item__tagline accordion-item__tagline--alt">Des scenarios financiers en minutes</div>
                 </div>
-                <span class="accordion-item__toggle">+</span>
+                <span class="accordion-item__toggle"></span>
             </summary>
             <div class="accordion-item__body">
                 <p class="accordion-item__desc">Generation de plans d'affaires multi-scenarios avec consolidation groupe. Cash flow previsionnel sur 36 mois, memos investisseurs structures, pitch decks prets. Chaque scenario est ajustable en temps reel.</p>
@@ -406,7 +480,7 @@
                     <div class="accordion-item__tagline">Des prix optimises par les donnees, pas par l'intuition</div>
                     <div class="accordion-item__tagline accordion-item__tagline--alt">Sachez ce qui rapporte vraiment</div>
                 </div>
-                <span class="accordion-item__toggle">+</span>
+                <span class="accordion-item__toggle"></span>
             </summary>
             <div class="accordion-item__body">
                 <p class="accordion-item__desc">Revue tarifaire semi-automatisee avec detection des anomalies de prix. Suggestions de repricing basees sur l'elasticite observee, les marges et la concurrence. Optimisation de marge sans perte de competitivite.</p>
@@ -423,7 +497,7 @@
                     <div class="accordion-item__tagline">L'avenir, calcule</div>
                     <div class="accordion-item__tagline accordion-item__tagline--alt">Des tendances detectees des semaines a l'avance</div>
                 </div>
-                <span class="accordion-item__toggle">+</span>
+                <span class="accordion-item__toggle"></span>
             </summary>
             <div class="accordion-item__body">
                 <p class="accordion-item__desc">Modeles d'apprentissage automatique qui detectent les schemas invisibles dans vos donnees. Prevision des tendances plusieurs semaines a l'avance. Detection d'anomalies et d'opportunites avant qu'elles ne soient evidentes.</p>
@@ -439,7 +513,7 @@
                     <div class="accordion-item__tagline">L'IA qui veille en permanence</div>
                     <div class="accordion-item__tagline accordion-item__tagline--alt">Les problemes reperes avant qu'ils ne coutent cher</div>
                 </div>
-                <span class="accordion-item__toggle">+</span>
+                <span class="accordion-item__toggle"></span>
             </summary>
             <div class="accordion-item__body">
                 <p class="accordion-item__desc">Surveillance continue de vos indicateurs avec detection automatique des deviations significatives. Alertes en temps reel quand un ratio, une depense ou un comportement sort de la normale. Les problemes sont identifies avant d'impacter l'activite.</p>
@@ -455,7 +529,7 @@
                     <div class="accordion-item__tagline">Des analyses qui s'ecrivent seules</div>
                     <div class="accordion-item__tagline accordion-item__tagline--alt">L'IA qui explique, pas juste qui calcule</div>
                 </div>
-                <span class="accordion-item__toggle">+</span>
+                <span class="accordion-item__toggle"></span>
             </summary>
             <div class="accordion-item__body">
                 <p class="accordion-item__desc">Generation automatique d'analyses narratives a partir de vos donnees. Le systeme ne se contente pas de produire des chiffres — il les explique, identifie les causes et suggere des actions. Des rapports lisibles par tous, pas seulement par les data analysts.</p>

@@ -206,8 +206,45 @@
             transform: rotate(45deg);
         }
 
+                /* Smooth accordion animation */
         .accordion-item__body {
             padding: 0 0 24px 60px;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Chevron rotation instead of + */
+        .accordion-item__toggle::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid #10b981;
+            border-bottom: 2px solid #10b981;
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease;
+            margin-top: -2px;
+            display: block;
+        }
+
+        .accordion-item[open] .accordion-item__toggle {
+            background: #10b981;
+            border-color: #10b981;
+        }
+
+        .accordion-item[open] .accordion-item__toggle::after {
+            border-color: #040a08;
+            transform: rotate(45deg);
+            margin-top: -4px;
         }
         .accordion-item__desc {
             color: var(--text-secondary);
@@ -341,7 +378,7 @@
 
         <div class="accordion">
             <!-- 01 -->
-            <details class="accordion-item" open>
+            <details class="accordion-item">
                 <summary class="accordion-item__header">
                     <span class="accordion-item__number">01</span>
                     <div class="accordion-item__title-group">
@@ -349,7 +386,7 @@
                         <div class="accordion-item__tagline">Scoring audience intelligent</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Des campagnes qui apprennent</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Segmentation automatique par historique achats, compatibilite equipement et zone geographique. Score 0-100 par destinataire, templates personnalises, envoi programme avec A/B testing. Taux d'ouverture et clics mesures en temps reel.</p>
@@ -366,7 +403,7 @@
                         <div class="accordion-item__tagline">Chaque interaction alimente vos commerciaux</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Du clic au closing, un seul flux</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Un prospect ouvre votre email, clique sur un lien, telecharge un document — votre commercial le voit instantanement dans son dashboard. Les leads qualifies sont automatiquement achemines au bon interlocuteur.</p>
@@ -383,7 +420,7 @@
                         <div class="accordion-item__tagline">Des donnees clients toujours a jour</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Des donnees qui travaillent pour vous</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Consolidation automatique depuis votre ERP, deduplication par matching flou, gestion des bounces et desabonnements. Vos listes de contacts restent propres et exploitables sans effort manuel.</p>
@@ -400,7 +437,7 @@
                         <div class="accordion-item__tagline">Le bon produit pour le bon equipement</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">La credibilite technique, formalisee</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Generation automatique des matrices de compatibilite entre vos produits et les equipements de vos clients. Export PDF pret pour le terrain. Un asset marketing qui renforce votre credibilite technique.</p>
@@ -417,7 +454,7 @@
                         <div class="accordion-item__tagline">Votre visibilite B2B a l'international</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Visible partout, sans effort</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Presence structuree sur Alibaba, Europages, TradeKey. Fiches produits optimisees par plateforme, campagnes Google Ads avec 70+ mots-cles cibles. Pipeline d'acquisition international.</p>
@@ -435,7 +472,7 @@
                         <div class="accordion-item__tagline">Du contenu qui travaille pour vous</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">L'IA qui ecrit pour vous</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Generation automatique de textes marketing : descriptions produits, posts sociaux, emails personnalises. Le contenu s'adapte a chaque segment et chaque plateforme. Production multipliee sans recrutement supplementaire.</p>
@@ -452,7 +489,7 @@
                         <div class="accordion-item__tagline">Sachez d'ou viennent vos clients</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">Chaque point de contact mesure</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Modele d'attribution qui trace le parcours complet du prospect : premier clic, interactions intermediaires, conversion finale. Chaque canal recoit sa juste contribution. Les budgets sont alloues sur des donnees, pas des intuitions.</p>
@@ -469,7 +506,7 @@
                         <div class="accordion-item__tagline">Testez tout, tout le temps</div>
                         <div class="accordion-item__tagline accordion-item__tagline--alt">L'amelioration qui ne s'arrete jamais</div>
                     </div>
-                    <span class="accordion-item__toggle">+</span>
+                    <span class="accordion-item__toggle"></span>
                 </summary>
                 <div class="accordion-item__body">
                     <p class="accordion-item__desc">Experimentation automatisee sur chaque element : objets d'email, visuels, appels a l'action, horaires d'envoi. Les variantes gagnantes sont deployees automatiquement. L'amelioration est continue et composee.</p>
