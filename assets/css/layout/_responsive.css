@@ -53,16 +53,9 @@
         font-size: var(--text-sm);
     }
 
-    /* Lang switcher stays visible on mobile - even more compact */
+    /* Lang switcher hidden on mobile */
     .lang-switcher {
-        display: flex;
-        padding: 2px 4px;
-        font-size: 11px;
-        gap: 2px;
-    }
-
-    .lang-switcher__option {
-        padding: 2px 6px;
+        display: none;
     }
 
     /* Mobile menu overlay */
@@ -108,75 +101,64 @@
         padding: 0 var(--space-md);
     }
 
-    .hero__badge {
-        font-size: var(--text-xs);
-        padding: var(--space-xs) var(--space-md);
-        margin-bottom: var(--space-lg);
-    }
-
-    .hero__badge-text {
-        display: none;
-    }
-
-    .hero__badge-status::after {
-        content: '50+ entreprises';
-        margin-left: var(--space-xs);
-    }
-
     .hero__title {
-        font-size: clamp(1.5rem, 7vw, 2.5rem);
+        font-size: clamp(1.5rem, 8vw, 2.5rem);
+        margin-bottom: var(--space-md);
+        line-height: 1.15;
+    }
+
+    .hero__subtitle {
+        font-size: var(--text-sm);
         margin-bottom: var(--space-lg);
-        line-height: 1.2;
-        word-wrap: break-word;
+        line-height: 1.6;
     }
 
-    .hero__description {
-        font-size: var(--text-base);
-        margin-bottom: var(--space-xl);
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-
-    .hero__metrics {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--space-md);
-        margin-bottom: var(--space-xl);
-    }
-
-    .hero__metric {
-        padding: var(--space-md);
-        background: rgba(16, 185, 129, 0.05);
-        border-radius: var(--radius-lg);
-        border: 1px solid var(--border-subtle);
-    }
-
-    .hero__metric-value {
-        font-size: var(--text-xl);
-    }
-
-    .hero__metric-label {
-        font-size: var(--text-xs);
-    }
-
-    .hero__actions {
+    .hero__cta-group {
         flex-direction: column;
+        align-items: center;
         gap: var(--space-sm);
     }
 
-    .hero__actions .btn {
+    .hero__cta-main,
+    .hero__cta-secondary {
         width: 100%;
         justify-content: center;
+        text-align: center;
     }
 
-    .hero__scroll {
+    .hero__scroll-indicator {
         display: none;
     }
 
     /* Hero visual effects - reduce on mobile */
     .hero__particles,
     .hero__orb {
-        opacity: 0.3;
+        opacity: 0.2;
+    }
+
+    /* How It Works mobile */
+    .how-it-works__steps {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+
+    /* Integrations mobile */
+    .integrations-section__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+
+    /* Footer mobile */
+    .footer__grid-responsive,
+    [style*="grid-template-columns: 2fr 1fr 1fr 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-xl) !important;
+    }
+
+    /* Footer bottom bar mobile */
+    [style*="justify-content: space-between"] {
+        flex-direction: column;
+        text-align: center;
     }
 
     /* =====================

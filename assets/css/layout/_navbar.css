@@ -247,18 +247,24 @@
     }
 
     .navbar__cta-desktop {
-        font-size: 12px;
-        padding: 8px 14px;
+        display: none;
     }
 
     .lang-switcher {
         display: none;
     }
-}
 
-@media (max-width: 480px) {
-    .navbar__cta-desktop {
-        display: none;
+    .navbar__container {
+        padding: 0 var(--space-md);
+    }
+
+    .navbar__logo-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .navbar__logo-text {
+        font-size: var(--text-base);
     }
 }
 
