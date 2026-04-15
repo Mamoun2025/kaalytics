@@ -24,34 +24,81 @@ Variantes supportees:
 
         <!-- Navigation Desktop -->
         <div class="navbar__nav" id="navbarNav">
-            <!-- Produits Dropdown -->
+            <!-- Modules Dropdown -->
             <div class="navbar__dropdown" data-navbar-full>
-                <a href="#products" class="navbar__link navbar__link--dropdown" data-i18n="nav.products">Produits</a>
+                <a href="#modules" class="navbar__link navbar__link--dropdown" data-i18n="nav.modules">Modules</a>
                 <div class="navbar__dropdown-menu">
-                    <a href="{{ROOT}}products/fleetops.html" class="navbar__dropdown-item navbar__dropdown-item--featured">
-                        <div class="navbar__dropdown-icon navbar__dropdown-icon--fleet">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+                    <a href="{{ROOT}}modules/sales-intelligence.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
                         </div>
                         <div>
-                            <div class="navbar__dropdown-title" data-i18n="nav.dropdown.fleetops.title">FleetOps Pro</div>
-                            <div class="navbar__dropdown-desc" data-i18n="nav.dropdown.fleetops.desc">Gestion de flotte IA complete</div>
+                            <div class="navbar__dropdown-title" data-i18n="nav.modules.salesIntelligence">Sales Intelligence</div>
+                            <div class="navbar__dropdown-desc" data-i18n="nav.modules.salesDesc">Insights et prévisions</div>
                         </div>
-                        <span class="navbar__dropdown-badge" data-i18n="nav.dropdown.fleetops.badge">Phare</span>
                     </a>
-                    <a href="{{ROOT}}products/daedalia.html" class="navbar__dropdown-item navbar__dropdown-item--featured">
-                        <div class="navbar__dropdown-icon navbar__dropdown-icon--ai">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                    <a href="{{ROOT}}modules/marketing-automation.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                         </div>
                         <div>
-                            <div class="navbar__dropdown-title" data-i18n="nav.dropdown.daedalia.title">Daedalia AI</div>
-                            <div class="navbar__dropdown-desc" data-i18n="nav.dropdown.daedalia.desc">Copilote IA pour Odoo</div>
+                            <div class="navbar__dropdown-title" data-i18n="nav.modules.marketingAutomation">Marketing Automation</div>
+                            <div class="navbar__dropdown-desc" data-i18n="nav.modules.marketingDesc">Campagnes intelligentes</div>
                         </div>
-                        <span class="navbar__dropdown-badge navbar__dropdown-badge--new" data-i18n="nav.dropdown.daedalia.badge">New</span>
                     </a>
-                    <div class="navbar__dropdown-divider"></div>
-                    <a href="{{ROOT}}#modules" class="navbar__dropdown-item">
-                        <div class="navbar__dropdown-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
-                        <div><div class="navbar__dropdown-title" data-i18n="nav.dropdown.modules.title">Modules IA</div><div class="navbar__dropdown-desc" data-i18n="nav.dropdown.modules.desc">Marketing, BI, API, Cyber...</div></div>
+                    <a href="{{ROOT}}modules/financial-operations.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                        </div>
+                        <div>
+                            <div class="navbar__dropdown-title" data-i18n="nav.modules.financialOperations">Financial Operations</div>
+                            <div class="navbar__dropdown-desc" data-i18n="nav.modules.financialDesc">Comptabilité automatisee</div>
+                        </div>
+                    </a>
+                    <a href="{{ROOT}}modules/supply-chain.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="6" height="6" rx="1"/><rect x="9" y="6" width="6" height="6" rx="1"/><rect x="17" y="6" width="6" height="6" rx="1"/><path d="M4 12v4a2 2 0 002 2h12a2 2 0 002-2v-4"/></svg>
+                        </div>
+                        <div>
+                            <div class="navbar__dropdown-title" data-i18n="nav.modules.supplyChain">Supply Chain Command</div>
+                            <div class="navbar__dropdown-desc" data-i18n="nav.modules.supplyDesc">Logistique optimisee</div>
+                        </div>
+                    </a>
+                    <a href="{{ROOT}}modules/fleetops.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        </div>
+                        <div>
+                            <div class="navbar__dropdown-title" data-i18n="nav.modules.fleetops">FleetOps</div>
+                            <div class="navbar__dropdown-desc" data-i18n="nav.modules.fleetopsDesc">Gestion de flotte</div>
+                        </div>
+                    </a>
+                    <a href="{{ROOT}}modules/erp-connect.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg>
+                        </div>
+                        <div>
+                            <div class="navbar__dropdown-title" data-i18n="nav.modules.erpConnect">ERP Connect</div>
+                            <div class="navbar__dropdown-desc" data-i18n="nav.modules.erpDesc">Integrations seamless</div>
+                        </div>
+                    </a>
+                    <a href="{{ROOT}}modules/digital-platform.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                        </div>
+                        <div>
+                            <div class="navbar__dropdown-title" data-i18n="nav.modules.digitalPlatform">Digital Platform</div>
+                            <div class="navbar__dropdown-desc" data-i18n="nav.modules.digitalDesc">Portail client</div>
+                        </div>
+                    </a>
+                    <a href="{{ROOT}}modules/ai-engine.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10"/><circle cx="12" cy="12" r="3"/></svg>
+                        </div>
+                        <div>
+                            <div class="navbar__dropdown-title" data-i18n="nav.modules.aiEngine">AI Engine</div>
+                            <div class="navbar__dropdown-desc" data-i18n="nav.modules.aiDesc">Moteur IA central</div>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -170,34 +217,37 @@ Variantes supportees:
                 <span class="lang-switcher__option lang-switcher__option--active" data-lang="en" style="padding: var(--space-sm) var(--space-lg); font-size: var(--text-base);">EN</span>
             </div>
 
-            <!-- Produits phares -->
-            <div class="navbar__mobile-section-title" data-i18n="nav.mobile.featuredProducts">Produits Phares</div>
-            <a href="{{ROOT}}products/fleetops.html" class="navbar__link navbar__link--featured-mobile">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
-                <span data-i18n="nav.dropdown.fleetops.title">FleetOps Pro</span>
-                <span class="navbar__badge-phare" data-i18n="nav.dropdown.fleetops.badge">Phare</span>
+            <!-- Modules -->
+            <div class="navbar__mobile-section-title" data-i18n="nav.mobile.modules">Modules</div>
+            <a href="{{ROOT}}modules/sales-intelligence.html" class="navbar__link">
+                <span data-i18n="nav.modules.salesIntelligence">Sales Intelligence</span>
             </a>
-            <a href="{{ROOT}}products/daedalia.html" class="navbar__link navbar__link--special">
-                <svg class="navbar__ai-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                </svg>
-                <span data-i18n="nav.dropdown.daedalia.title">Daedalia AI</span>
-                <span class="navbar__badge-new" data-i18n="nav.dropdown.daedalia.badge">New</span>
+            <a href="{{ROOT}}modules/marketing-automation.html" class="navbar__link">
+                <span data-i18n="nav.modules.marketingAutomation">Marketing Automation</span>
+            </a>
+            <a href="{{ROOT}}modules/financial-operations.html" class="navbar__link">
+                <span data-i18n="nav.modules.financialOperations">Financial Operations</span>
+            </a>
+            <a href="{{ROOT}}modules/supply-chain.html" class="navbar__link">
+                <span data-i18n="nav.modules.supplyChain">Supply Chain Command</span>
+            </a>
+            <a href="{{ROOT}}modules/fleetops.html" class="navbar__link">
+                <span data-i18n="nav.modules.fleetops">FleetOps</span>
+            </a>
+            <a href="{{ROOT}}modules/erp-connect.html" class="navbar__link">
+                <span data-i18n="nav.modules.erpConnect">ERP Connect</span>
+            </a>
+            <a href="{{ROOT}}modules/digital-platform.html" class="navbar__link">
+                <span data-i18n="nav.modules.digitalPlatform">Digital Platform</span>
+            </a>
+            <a href="{{ROOT}}modules/ai-engine.html" class="navbar__link">
+                <span data-i18n="nav.modules.aiEngine">AI Engine</span>
             </a>
 
             <!-- Navigation principale -->
             <div class="navbar__mobile-section-title" data-i18n="nav.mobile.navigation">Navigation</div>
-            <a href="{{ROOT}}#modules" class="navbar__link" data-i18n="nav.dropdown.modules.title">Modules IA</a>
-            <a href="{{ROOT}}#industries" class="navbar__link" data-i18n="nav.industries">Industries</a>
             <a href="{{ROOT}}pricing.html" class="navbar__link" data-i18n="nav.pricing">Tarifs</a>
             <a href="{{ROOT}}playground/" class="navbar__link" data-i18n="nav.playground">Playground</a>
-
-            <!-- Ressources -->
-            <div class="navbar__mobile-section-title" data-i18n="nav.mobile.resources">Ressources</div>
-            <a href="{{ROOT}}resources/" class="navbar__link">Centre de Ressources</a>
-            <a href="{{ROOT}}guides/" class="navbar__link">Guides Pratiques</a>
-            <a href="{{ROOT}}blog/" class="navbar__link">Blog</a>
-            <a href="{{ROOT}}case-studies/" class="navbar__link">Etudes de Cas</a>
 
             <!-- Entreprise -->
             <div class="navbar__mobile-section-title">Entreprise</div>
