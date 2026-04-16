@@ -155,7 +155,7 @@
         // Mobile menu toggle
         if (mobileToggle && mobileMenu) {
             mobileToggle.addEventListener('click', () => {
-                const isOpen = mobileMenu.classList.toggle('is-open');
+                const isOpen = mobileMenu.classList.toggle('active');
                 mobileToggle.setAttribute('aria-expanded', isOpen);
                 document.body.classList.toggle('menu-open', isOpen);
             });
@@ -163,7 +163,7 @@
             // Fermer au clic sur un lien
             mobileMenu.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
-                    mobileMenu.classList.remove('is-open');
+                    mobileMenu.classList.remove('active');
                     mobileToggle.setAttribute('aria-expanded', 'false');
                     document.body.classList.remove('menu-open');
                 });
@@ -176,11 +176,11 @@
             if (!menu) return;
 
             dropdown.addEventListener('mouseenter', () => {
-                menu.classList.add('is-open');
+                menu.classList.add('active');
             });
 
             dropdown.addEventListener('mouseleave', () => {
-                menu.classList.remove('is-open');
+                menu.classList.remove('active');
             });
         });
 
