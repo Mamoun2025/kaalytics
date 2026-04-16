@@ -180,41 +180,44 @@ Variantes supportees:
     <!-- Mobile Menu Overlay -->
     <div class="navbar__mobile-menu">
         <nav class="navbar__mobile-nav">
-            <a href="/" class="navbar__link" style="font-weight: 700; margin-bottom: var(--space-md);">Accueil</a>
+            <a href="/" class="mobile-link mobile-link--top">Accueil</a>
 
-            <!-- Modules -->
-            <div class="navbar__mobile-section-title" data-i18n="nav.mobile.modules">Modules</div>
-            <a href="{{ROOT}}modules/sales-intelligence.html" class="navbar__link">
-                <span data-i18n="nav.modules.salesIntelligence">Sales Intelligence</span>
-            </a>
-            <a href="{{ROOT}}modules/marketing-automation.html" class="navbar__link">
-                <span data-i18n="nav.modules.marketingAutomation">Marketing Automation</span>
-            </a>
-            <a href="{{ROOT}}modules/financial-operations.html" class="navbar__link">
-                <span data-i18n="nav.modules.financialOperations">Financial Operations</span>
-            </a>
-            <a href="{{ROOT}}modules/supply-chain.html" class="navbar__link">
-                <span data-i18n="nav.modules.supplyChain">Supply Chain Command</span>
-            </a>
-            <a href="{{ROOT}}modules/fleetops.html" class="navbar__link">
-                <span data-i18n="nav.modules.fleetops">FleetOps</span>
-            </a>
-            <a href="{{ROOT}}modules/erp-connect.html" class="navbar__link">
-                <span data-i18n="nav.modules.erpConnect">ERP Connect</span>
-            </a>
-            <a href="{{ROOT}}modules/digital-platform.html" class="navbar__link">
-                <span data-i18n="nav.modules.digitalPlatform">Digital Platform</span>
-            </a>
-            <a href="{{ROOT}}modules/ai-engine.html" class="navbar__link">
-                <span data-i18n="nav.modules.aiEngine">AI Engine</span>
-            </a>
+            <details class="mobile-group">
+                <summary class="mobile-group__title">Modules</summary>
+                <div class="mobile-group__items">
+                    <a href="{{ROOT}}modules/sales-intelligence.html" class="mobile-link">Sales Intelligence</a>
+                    <a href="{{ROOT}}modules/marketing-automation.html" class="mobile-link">Marketing Automation</a>
+                    <a href="{{ROOT}}modules/financial-operations.html" class="mobile-link">Financial Operations</a>
+                    <a href="{{ROOT}}modules/supply-chain.html" class="mobile-link">Supply Chain</a>
+                    <a href="{{ROOT}}modules/fleetops.html" class="mobile-link">FleetOps</a>
+                    <a href="{{ROOT}}modules/erp-connect.html" class="mobile-link">ERP Connect</a>
+                    <a href="{{ROOT}}modules/digital-platform.html" class="mobile-link">Digital Platform</a>
+                    <a href="{{ROOT}}modules/ai-engine.html" class="mobile-link">AI Engine</a>
+                </div>
+            </details>
 
-            <!-- Ressources -->
-            <div class="navbar__mobile-section-title">Ressources</div>
-            <a href="{{ROOT}}faq.html" class="navbar__link">FAQ</a>
-            <a href="{{ROOT}}guides/" class="navbar__link">Guides</a>
-            <a href="{{ROOT}}pricing.html" class="navbar__link">Tarifs</a>
-            <a href="{{ROOT}}about.html" class="navbar__link">A propos</a>
+            <details class="mobile-group">
+                <summary class="mobile-group__title">Industries</summary>
+                <div class="mobile-group__items">
+                    <a href="{{ROOT}}industries/btp.html" class="mobile-link">BTP & Construction</a>
+                    <a href="{{ROOT}}industries/mines.html" class="mobile-link">Mines & Carrieres</a>
+                    <a href="{{ROOT}}industries/transport.html" class="mobile-link">Transport & Logistique</a>
+                    <a href="{{ROOT}}industries/distribution.html" class="mobile-link">Distribution & Negoce</a>
+                    <a href="{{ROOT}}industries/industrie.html" class="mobile-link">Industrie & Production</a>
+                    <a href="{{ROOT}}industries/location.html" class="mobile-link">Location d'Equipements</a>
+                </div>
+            </details>
+
+            <details class="mobile-group">
+                <summary class="mobile-group__title">Ressources</summary>
+                <div class="mobile-group__items">
+                    <a href="{{ROOT}}guides/" class="mobile-link">Guides</a>
+                    <a href="{{ROOT}}faq.html" class="mobile-link">FAQ</a>
+                    <a href="{{ROOT}}pricing.html" class="mobile-link">Tarifs</a>
+                </div>
+            </details>
+
+            <a href="{{ROOT}}about.html" class="mobile-link mobile-link--top">A propos</a>
         </nav>
         <div class="navbar__mobile-actions">
             <a href="https://wa.me/212673736611" target="_blank" rel="noopener" class="btn btn-primary btn-lg" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
