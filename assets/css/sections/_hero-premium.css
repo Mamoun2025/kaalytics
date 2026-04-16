@@ -112,10 +112,20 @@
 
 .hero__title-highlight {
     display: inline;
-    background: none;
+    color: var(--emerald);
+    background: none !important;
+    -webkit-text-fill-color: initial;
     position: relative;
     opacity: 0;
     animation: slideUp 0.8s ease-out 0.4s forwards;
+}
+
+.hero__title-highlight.text-gradient {
+    background: var(--gradient-brand) !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
 @keyframes slideUp {
