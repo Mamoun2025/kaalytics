@@ -1,4 +1,30 @@
 {
+  "redirects": [
+    { "source": "/checklist-maintenance", "destination": "/guides/checklist-maintenance", "permanent": true },
+    { "source": "/comparatif-fleet-management", "destination": "/guides/comparatif-fleet-management", "permanent": true },
+    { "source": "/guide-flotte-btp", "destination": "/guides/guide-flotte-btp", "permanent": true },
+    { "source": "/ai-engine", "destination": "/modules/ai-engine", "permanent": true },
+    { "source": "/digital-platform", "destination": "/modules/digital-platform", "permanent": true },
+    { "source": "/erp-connect", "destination": "/modules/erp-connect", "permanent": true },
+    { "source": "/financial-operations", "destination": "/modules/financial-operations", "permanent": true },
+    { "source": "/fleetops", "destination": "/modules/fleetops", "permanent": true },
+    { "source": "/marketing-automation", "destination": "/modules/marketing-automation", "permanent": true },
+    { "source": "/sales-intelligence", "destination": "/modules/sales-intelligence", "permanent": true },
+    { "source": "/supply-chain", "destination": "/modules/supply-chain", "permanent": true },
+    { "source": "/btp", "destination": "/industries/btp", "permanent": true },
+    { "source": "/distribution", "destination": "/industries/distribution", "permanent": true },
+    { "source": "/industrie", "destination": "/industries/industrie", "permanent": true },
+    { "source": "/location", "destination": "/industries/location", "permanent": true },
+    { "source": "/mines", "destination": "/industries/mines", "permanent": true },
+    { "source": "/transport", "destination": "/industries/transport", "permanent": true },
+    { "source": "/locamat", "destination": "/case-studies/locamat", "permanent": true },
+    { "source": "/terrafleet", "destination": "/case-studies/terrafleet", "permanent": true },
+    { "source": "/transmaroc", "destination": "/case-studies/transmaroc", "permanent": true },
+    { "source": "/privacy", "destination": "/legal/privacy", "permanent": true },
+    { "source": "/terms", "destination": "/legal/terms", "permanent": true },
+    { "source": "/mentions", "destination": "/legal/mentions", "permanent": true },
+    { "source": "/cookies", "destination": "/legal/cookies", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",
