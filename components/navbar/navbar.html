@@ -141,13 +141,25 @@ Variantes supportees:
             <div class="navbar__dropdown" data-navbar-full>
                 <a href="#ressources" class="navbar__link navbar__link--dropdown">Ressources</a>
                 <div class="navbar__dropdown-menu">
-                    <a href="{{ROOT}}faq.html" class="navbar__dropdown-item">
-                        <div class="navbar__dropdown-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-                        <div><div class="navbar__dropdown-title">FAQ</div><div class="navbar__dropdown-desc">Questions frequentes</div></div>
+                    <a href="{{ROOT}}blog/" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+                        <div><div class="navbar__dropdown-title">Blog</div><div class="navbar__dropdown-desc">Articles et actualites</div></div>
+                    </a>
+                    <a href="{{ROOT}}case-studies/" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                        <div><div class="navbar__dropdown-title">Etudes de cas</div><div class="navbar__dropdown-desc">Resultats clients reels</div></div>
                     </a>
                     <a href="{{ROOT}}guides/" class="navbar__dropdown-item">
                         <div class="navbar__dropdown-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
                         <div><div class="navbar__dropdown-title">Guides</div><div class="navbar__dropdown-desc">Guides pratiques par secteur</div></div>
+                    </a>
+                    <a href="{{ROOT}}faq.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+                        <div><div class="navbar__dropdown-title">FAQ</div><div class="navbar__dropdown-desc">Questions frequentes</div></div>
+                    </a>
+                    <a href="{{ROOT}}integrations.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg></div>
+                        <div><div class="navbar__dropdown-title">Integrations</div><div class="navbar__dropdown-desc">ERP, CRM, outils tiers</div></div>
                     </a>
                     <a href="{{ROOT}}pricing.html" class="navbar__dropdown-item">
                         <div class="navbar__dropdown-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
@@ -155,6 +167,9 @@ Variantes supportees:
                     </a>
                 </div>
             </div>
+
+            <!-- Demo -->
+            <a href="{{ROOT}}demo.html" class="navbar__link">Demo</a>
 
             <!-- A propos -->
             <a href="{{ROOT}}about.html" class="navbar__link">A propos</a>
@@ -211,12 +226,16 @@ Variantes supportees:
             <details class="mobile-group">
                 <summary class="mobile-group__title">Ressources</summary>
                 <div class="mobile-group__items">
+                    <a href="{{ROOT}}blog/" class="mobile-link">Blog</a>
+                    <a href="{{ROOT}}case-studies/" class="mobile-link">Etudes de cas</a>
                     <a href="{{ROOT}}guides/" class="mobile-link">Guides</a>
                     <a href="{{ROOT}}faq.html" class="mobile-link">FAQ</a>
+                    <a href="{{ROOT}}integrations.html" class="mobile-link">Integrations</a>
                     <a href="{{ROOT}}pricing.html" class="mobile-link">Tarifs</a>
                 </div>
             </details>
 
+            <a href="{{ROOT}}demo.html" class="mobile-link mobile-link--top">Demo</a>
             <a href="{{ROOT}}about.html" class="mobile-link mobile-link--top">A propos</a>
         </nav>
         <div class="navbar__mobile-actions">
