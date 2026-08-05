@@ -122,6 +122,8 @@ def main():
         out = re.sub(r'<html([^>]*)\blang="fr"', r'<html\1lang="en"', out)
         out = fix_links(out)
         out = add_hreflang(out, rel)
+        # variantes EN des JS partagés à contenu FR (radar des modules)
+        out = out.replace('modules-ia/modules-ia.js', 'modules-ia/modules-ia.en.js')
         cov = f"{rel}: {len(report)} chaînes FR non traduites"
         print(cov)
         for r in report[:200]: print("   ·", r)
