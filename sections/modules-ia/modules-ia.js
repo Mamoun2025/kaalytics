@@ -18,7 +18,7 @@
         'sales-intelligence': {
             title: 'Sales Intelligence',
             icon: '<path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>',
-            description: 'Dashboard KPIs connecte ERP, scoring prospect par algorithme 3 niveaux, carte interactive avec tournées optimisées, génération de devis en 30 secondes. Vos commerciaux savent quoi vendre, a qui, et quand.',
+            description: 'Dashboard KPIs connecte ERP, scoring prospect par algorithme 3 niveaux, carte interactive avec tournées optimisées, génération de devis en 30 secondes. Vos commerciaux savent quoi vendre, à qui, et quand.',
             features: [
                 'Command Center temps réel',
                 'Matching Engine 3 niveaux',

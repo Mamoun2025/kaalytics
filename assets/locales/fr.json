@@ -57,7 +57,7 @@
     "starter": {
       "name": "Starter",
       "desc": "Pour les petites flottes",
-      "range": "1 a 20 véhicules",
+      "range": "1 à 20 véhicules",
       "perVehicle": "25 EUR/véhicule/mois",
       "features": {
         "0": "Module Parc & GPS",
@@ -70,7 +70,7 @@
     "professional": {
       "name": "Professional",
       "desc": "Pour les flottes moyennes",
-      "range": "21 a 100 véhicules",
+      "range": "21 à 100 véhicules",
       "perVehicle": "15 EUR/véhicule/mois",
       "features": {
         "0": "Tout Starter +",
@@ -101,11 +101,11 @@
       "title": "Questions sur les tarifs",
       "q1": {
         "question": "Y a-t-il des frais caches ?",
-        "answer": "Non. Le prix affiche inclut tout : hébergement, mises a jour, support de base. Seules les formations supplémentaires et développements spécifiques sont factures en plus."
+        "answer": "Non. Le prix affiche inclut tout : hébergement, mises à jour, support de base. Seules les formations supplémentaires et développements spécifiques sont factures en plus."
       },
       "q2": {
         "question": "Puis-je changer de formule ?",
-        "answer": "Oui, vous pouvez upgrader a tout moment. Le passage a une formule inférieure est possible a la fin de votre période d'engagement."
+        "answer": "Oui, vous pouvez upgrader a tout moment. Le passage à une formule inférieure est possible à la fin de votre période d'engagement."
       },
       "q3": {
         "question": "Quel est l'engagement minimum ?",
@@ -128,9 +128,9 @@
       "industry": "Secteur d'activité",
       "product": "Produit qui vous intéresse",
       "select": "Sélectionnez",
-      "vehicles1": "1 a 10 véhicules",
-      "vehicles2": "11 a 50 véhicules",
-      "vehicles3": "51 a 100 véhicules",
+      "vehicles1": "1 à 10 véhicules",
+      "vehicles2": "11 à 50 véhicules",
+      "vehicles3": "51 à 100 véhicules",
       "vehicles4": "Plus de 100 véhicules"
     },
     "submit": "Demander ma démo gratuite",
@@ -146,7 +146,7 @@
   "faqPage": {
     "badge": "FAQ",
     "title": "Questions <span>fréquentes</span>",
-    "subtitle": "Trouvez rapidement des réponses a vos questions sur nos solutions.",
+    "subtitle": "Trouvez rapidement des réponses à vos questions sur nos solutions.",
     "sections": {
       "general": {
         "title": "Questions générales",
@@ -160,25 +160,25 @@
         },
         "q3": {
           "question": "Pour quels secteurs sont adaptées vos solutions ?",
-          "answer": "FleetOps Pro est adapte a 6 secteurs principaux : Transport & Logistique, BTP & Construction, Location de véhicules, Mines & Carrières, Industrie, et Collectivités. Chaque secteur bénéficie de fonctionnalités spécifiques a ses besoins."
+          "answer": "FleetOps Pro est adapte à 6 secteurs principaux : Transport & Logistique, BTP & Construction, Location de véhicules, Mines & Carrières, Industrie, et Collectivités. Chaque secteur bénéficie de fonctionnalités spécifiques a ses besoins."
         }
       },
       "implementation": {
         "title": "Mise en place",
         "q1": {
           "question": "Combien de temps pour déployer FleetOps Pro ?",
-          "answer": "Le déploiement prend généralement 2 a 4 semaines selon la taille de votre flotte. Cela inclut la configuration, l'import de vos données, l'installation du matériel GPS et la formation de vos équipes."
+          "answer": "Le déploiement prend généralement 2 à 4 semaines selon la taille de votre flotte. Cela inclut la configuration, l'import de vos données, l'installation du matériel GPS et la formation de vos équipes."
         },
         "q2": {
           "question": "Fournissez-vous le matériel GPS ?",
-          "answer": "Oui, nous proposons différentes solutions de tracking GPS adaptées a vos véhicules (voitures, camions, engins de chantier). Le matériel est facture séparément. Si vous avez déjà des trackers compatibles, nous pouvons les intégrer."
+          "answer": "Oui, nous proposons différentes solutions de tracking GPS adaptées à vos véhicules (voitures, camions, engins de chantier). Le matériel est facture séparément. Si vous avez déjà des trackers compatibles, nous pouvons les intégrer."
         },
         "q3": {
           "question": "La formation est-elle incluse ?",
-          "answer": "Oui, la formation initiale est incluse dans votre abonnement. Nous formons vos administrateurs et utilisateurs a l'utilisation de la plateforme. Des sessions de formation complémentaires sont disponibles sur demande."
+          "answer": "Oui, la formation initiale est incluse dans votre abonnement. Nous formons vos administrateurs et utilisateurs à l'utilisation de la plateforme. Des sessions de formation complémentaires sont disponibles sur demande."
         },
         "q4": {
-          "question": "Puis-je intégrer FleetOps Pro a mon ERP existant ?",
+          "question": "Puis-je intégrer FleetOps Pro à mon ERP existant ?",
           "answer": "Oui, FleetOps Pro dispose d'une API complète qui permet l'intégration avec la plupart des ERP du marche (Odoo, SAP, Sage, etc.). L'intégration est incluse dans la formule Enterprise."
         }
       },
@@ -186,11 +186,11 @@
         "title": "Tarifs et facturation",
         "q1": {
           "question": "Quel est le prix de FleetOps Pro ?",
-          "answer": "Les tarifs commencent a 500 EUR/mois pour les petites flottes (1-20 véhicules). Pour les flottes de 21 a 100 véhicules, le tarif est de 1500 EUR/mois. Au-delà de 100 véhicules, nous proposons des tarifs sur mesure."
+          "answer": "Les tarifs commencent à 500 EUR/mois pour les petites flottes (1-20 véhicules). Pour les flottes de 21 à 100 véhicules, le tarif est de 1500 EUR/mois. Au-delà de 100 véhicules, nous proposons des tarifs sur mesure."
         },
         "q2": {
           "question": "Y a-t-il des frais caches ?",
-          "answer": "Non, nos tarifs sont transparents. L'abonnement inclut l'accès a la plateforme, les mises a jour, la formation initiale et le support. Les seuls coûts additionnels sont le matériel GPS (si nécessaire) et les éventuelles intégrations sur mesure."
+          "answer": "Non, nos tarifs sont transparents. L'abonnement inclut l'accès à la plateforme, les mises à jour, la formation initiale et le support. Les seuls coûts additionnels sont le matériel GPS (si nécessaire) et les éventuelles intégrations sur mesure."
         },
         "q3": {
           "question": "Quelle est la durée d'engagement ?",
@@ -205,7 +205,7 @@
         },
         "q2": {
           "question": "Proposez-vous des formations complémentaires ?",
-          "answer": "Oui, nous proposons des sessions de formation avancées pour vos équipes, que ce soit pour de nouveaux utilisateurs ou pour approfondir certaines fonctionnalités. Ces formations peuvent être réalisées sur site ou a distance."
+          "answer": "Oui, nous proposons des sessions de formation avancées pour vos équipes, que ce soit pour de nouveaux utilisateurs ou pour approfondir certaines fonctionnalités. Ces formations peuvent être réalisées sur site ou à distance."
         },
         "q3": {
           "question": "Quelle est la disponibilité de la plateforme ?",
@@ -350,7 +350,7 @@
       "title": "Avant",
       "items": [
         "Équipements dispersés sur <strong>10+ chantiers</strong> sans visibilité",
-        "Maintenance <strong>réactive</strong> : pannes surprises a 15 000 euros",
+        "Maintenance <strong>réactive</strong> : pannes surprises à 15 000 euros",
         "<strong>5-10 fichiers Excel</strong> pour suivre le parc",
         "Décisions basées sur des <strong>données obsolètes</strong>",
         "<strong>50 000 euros/an</strong> gaspilles en temps d'arrêt évitables"
@@ -641,7 +641,7 @@
           "avatar": "YA"
         },
         {
-          "quote": "Délais d'approvisionnement divisés par 2. Du besoin a la livraison, tout le workflow est automatisé et trace.",
+          "quote": "Délais d'approvisionnement divisés par 2. Du besoin à la livraison, tout le workflow est automatisé et trace.",
           "name": "Nadia Benjelloun",
           "role": "Resp. Achats, Groupe Atlas BTP",
           "avatar": "NB"
@@ -882,12 +882,12 @@
         "starter": {
           "name": "Starter",
           "price": "299",
-          "desc": "Jusqu'a 5 utilisateurs"
+          "desc": "Jusqu'à 5 utilisateurs"
         },
         "professional": {
           "name": "Professional",
           "price": "599",
-          "desc": "Jusqu'a 20 utilisateurs"
+          "desc": "Jusqu'à 20 utilisateurs"
         },
         "enterprise": {
           "name": "Enterprise",
@@ -1221,7 +1221,7 @@
       },
       {
         "question": "Est-ce que ca marche avec mon système actuel (Odoo, SAP, Excel) ?",
-        "answer": "<strong>Oui, on s'intégré a tout.</strong> Odoo, SAP, Sage, Salesforce, et même vos fichiers Excel. Notre module Intégration connecte vos systèmes existants en temps réel. Pas besoin de tout changer - on s'adapte a vous."
+        "answer": "<strong>Oui, on s'intégré a tout.</strong> Odoo, SAP, Sage, Salesforce, et même vos fichiers Excel. Notre module Intégration connecte vos systèmes existants en temps réel. Pas besoin de tout changer - on s'adapte à vous."
       },
       {
         "question": "Quel ROI puis-je attendre ?",
@@ -1372,7 +1372,7 @@
       "leadershipDigital": {
         "number": "08",
         "title": "Leadership Digital",
-        "desc": "Diriger a l'ere numérique. Compétences et mindset du leader transformationnel.",
+        "desc": "Diriger à l'ere numérique. Compétences et mindset du leader transformationnel.",
         "tag": "Leadership"
       },
       "industriel": {
@@ -1434,7 +1434,7 @@
     },
     "cta": {
       "primary": "Découvrir nos solutions",
-      "secondary": "Parler a un expert"
+      "secondary": "Parler à un expert"
     },
     "socialProof": "4.9/5 - Entreprises transformées",
     "scroll": "Nos solutions"
@@ -1539,8 +1539,8 @@
   "daedaliaCopilot": {
     "badge": "Nouveau",
     "chatDemo": {
-      "question1": "Quel est le prix du filtre a huile pour CAT 349D ?",
-      "answer1": "Le filtre a huile CAT 1R-0751 pour votre 349D coûte 89 EUR HT. Stock: 12 unités disponibles.",
+      "question1": "Quel est le prix du filtre à huile pour CAT 349D ?",
+      "answer1": "Le filtre à huile CAT 1R-0751 pour votre 349D coûte 89 EUR HT. Stock: 12 unités disponibles.",
       "question2": "Créé un devis pour TerraFleet avec 3 unités",
       "answer2": "Devis #DV-2024-0847 créé pour TerraFleet. Total: 267 EUR HT. Lien envoyé par email.",
       "placeholder": "Posez votre question..."
@@ -1641,7 +1641,7 @@
       },
       "terrafleet": {
         "title": "TerraFleet: -45% de coûts en 6 mois",
-        "desc": "Comment une entreprise de BTP a transforme sa gestion de flotte.",
+        "desc": "Comment une entreprise de BTP à transforme sa gestion de flotte.",
         "cta": "Lire l'étude"
       },
       "maintenance": {
@@ -1652,7 +1652,7 @@
       "webinar": {
         "type": "Webinar",
         "title": "Démo live FleetOps Pro",
-        "desc": "Regardez une démo complète de 30 minutes avec Q&A en direct chaque jeudi.",
+        "desc": "Regardez une démo complète de 30 minutes avec Q&À en direct chaque jeudi.",
         "cta": "S'inscrire"
       },
       "btpGuide": {
@@ -1687,7 +1687,7 @@
     "quickActions": {
       "demo": "Demander une démo",
       "pricing": "Voir les tarifs",
-      "contact": "Parler a un expert"
+      "contact": "Parler à un expert"
     },
     "responses": {
       "pricing": "Nos tarifs: Starter 500EUR/mois, Pro 1500EUR/mois selon votre flotte.",
@@ -1719,13 +1719,13 @@
     "valueEstimate": "Valeur estimée : 2000€ - Offert ce mois-ci"
   },
   "aboutPage": {
-    "badge": "A propos",
+    "badge": "À propos",
     "title": "L'IA qui transforme <span>l'industrie africaine</span>",
     "subtitle": "Kaalytics développé des solutions IA concrètes pour les entreprises africaines. Notre mission : rendre l'intelligence artificielle accessible et utile, avec un ROI mesurable.",
     "story": {
       "label": "Notre histoire",
       "title": "Nee d'un constat simple",
-      "p1": "En 2024, alors que l'IA révolutionnait les entreprises en Europe et aux Etats-Unis, les entreprises africaines restaient a l'écart. Non pas par manque d'intérêt, mais par manque de solutions adaptées a leurs réalités.",
+      "p1": "En 2024, alors que l'IA révolutionnait les entreprises en Europe et aux Etats-Unis, les entreprises africaines restaient à l'écart. Non pas par manque d'intérêt, mais par manque de solutions adaptées à leurs réalités.",
       "p2": "Les outils existants étaient soit trop chers, soit trop complexes, soit simplement pas adaptés aux contraintes locales : connectivité intermittente, multilinguisme, processus métier spécifiques.",
       "p3": "<strong>Kaalytics est nee de ce constat</strong> : créer des solutions IA qui fonctionnent vraiment pour les entreprises africaines, avec un accompagnement de proximité et un ROI mesurable des les premiers mois."
     },
@@ -1795,7 +1795,7 @@
       },
       "contact": {
         "title": "Contacter le support",
-        "desc": "Notre équipe est disponible pour répondre a vos questions.",
+        "desc": "Notre équipe est disponible pour répondre à vos questions.",
         "cta": "Nous contacter"
       }
     },
@@ -1850,7 +1850,7 @@
   "errorPage": {
     "title": "Page introuvable",
     "text": "Oups ! La page que vous recherchez semble avoir disparu dans le cloud. Pas de panique, notre IA n'a pas encore tout indexé.",
-    "homeButton": "Retour a l'accueil",
+    "homeButton": "Retour à l'accueil",
     "contactButton": "Nous contacter",
     "popularPages": "Pages populaires"
   },
