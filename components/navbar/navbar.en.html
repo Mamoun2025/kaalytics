@@ -1,0 +1,239 @@
+<!--
+KAALYTICS - Navbar Component
+=============================
+Composant navbar modulaire et reutilisable
+Usage: Inclure via navbar-loader.js
+
+Variantes supportees:
+- data-navbar="full" (defaut) - Navigation complete avec dropdowns
+- data-navbar="simple" - Navigation simplifiee sans dropdowns
+- data-navbar-style="transparent" - Fond transparent
+- data-navbar-style="solid" - Fond solide
+-->
+
+<nav class="navbar" id="mainNavbar">
+    <div class="navbar__container">
+        <!-- Logo -->
+        <a href="/" class="navbar__logo">
+            <svg class="navbar__logo-icon" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <circle cx="20" cy="20" r="18" stroke="#10b981" stroke-width="2"/>
+                <path d="M12 20l6 6 10-12" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="navbar__logo-text">Kaal<span>ytics</span></span>
+        </a>
+
+        <!-- Navigation Desktop -->
+        <div class="navbar__nav" id="navbarNav">
+            <!-- Accueil -->
+            <a href="/" class="navbar__link">Home</a>
+
+            <!-- Modules Dropdown -->
+            <div class="navbar__dropdown" data-navbar-full>
+                <a href="#modules" class="navbar__link navbar__link--dropdown" data-i18n="nav.modules">Modules</a>
+                <div class="navbar__dropdown-menu">
+                    <a href="{{ROOT}}modules/sales-intelligence.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                        </div>
+                        <div>
+                            <div class="navbar__dropdown-title" data-i18n="nav.modules.salesIntelligence">Sales Intelligence</div>
+                            <div class="navbar__dropdown-desc" data-i18n="nav.modules.salesDesc">Analytics & forecasts</div>
+                        </div>
+                    </a>
+                    <a href="{{ROOT}}modules/marketing-automation.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        </div>
+                        <div>
+                            <div class="navbar__dropdown-title" data-i18n="nav.modules.marketingAutomation">Marketing Automation</div>
+                            <div class="navbar__dropdown-desc" data-i18n="nav.modules.marketingDesc">Smart campaigns</div>
+                        </div>
+                    </a>
+                    <a href="{{ROOT}}modules/financial-operations.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                        </div>
+                        <div>
+                            <div class="navbar__dropdown-title" data-i18n="nav.modules.financialOperations">Financial Operations</div>
+                            <div class="navbar__dropdown-desc" data-i18n="nav.modules.financialDesc">Automated accounting</div>
+                        </div>
+                    </a>
+                    <a href="{{ROOT}}modules/supply-chain.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="6" height="6" rx="1"/><rect x="9" y="6" width="6" height="6" rx="1"/><rect x="17" y="6" width="6" height="6" rx="1"/><path d="M4 12v4a2 2 0 002 2h12a2 2 0 002-2v-4"/></svg>
+                        </div>
+                        <div>
+                            <div class="navbar__dropdown-title" data-i18n="nav.modules.supplyChain">Supply Chain Command</div>
+                            <div class="navbar__dropdown-desc" data-i18n="nav.modules.supplyDesc">Optimized logistics</div>
+                        </div>
+                    </a>
+                    <a href="{{ROOT}}modules/fleetops.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        </div>
+                        <div>
+                            <div class="navbar__dropdown-title" data-i18n="nav.modules.fleetops">FleetOps</div>
+                            <div class="navbar__dropdown-desc" data-i18n="nav.modules.fleetopsDesc">Fleet management</div>
+                        </div>
+                    </a>
+                    <a href="{{ROOT}}modules/erp-connect.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg>
+                        </div>
+                        <div>
+                            <div class="navbar__dropdown-title" data-i18n="nav.modules.erpConnect">ERP Connect</div>
+                            <div class="navbar__dropdown-desc" data-i18n="nav.modules.erpDesc">Seamless integrations</div>
+                        </div>
+                    </a>
+                    <a href="{{ROOT}}modules/digital-platform.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                        </div>
+                        <div>
+                            <div class="navbar__dropdown-title" data-i18n="nav.modules.digitalPlatform">Digital Platform</div>
+                            <div class="navbar__dropdown-desc" data-i18n="nav.modules.digitalDesc">Client portal</div>
+                        </div>
+                    </a>
+                    <a href="{{ROOT}}modules/ai-engine.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10"/><circle cx="12" cy="12" r="3"/></svg>
+                        </div>
+                        <div>
+                            <div class="navbar__dropdown-title" data-i18n="nav.modules.aiEngine">AI Engine</div>
+                            <div class="navbar__dropdown-desc" data-i18n="nav.modules.aiDesc">Central AI engine</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Industries Dropdown -->
+            <div class="navbar__dropdown" data-navbar-full>
+                <a href="#industries" class="navbar__link navbar__link--dropdown" data-i18n="nav.industries">Industries</a>
+                <div class="navbar__dropdown-menu">
+                    <a href="{{ROOT}}industries/btp.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M5 20V8l7-4 7 4v12"/><path d="M9 20v-6h6v6"/></svg></div>
+                        <div><div class="navbar__dropdown-title">Construction & Engineering</div></div>
+                    </a>
+                    <a href="{{ROOT}}industries/mines.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v8l4 4-4 4v4"/><path d="M8 2v8l-4 4 4 4v4"/></svg></div>
+                        <div><div class="navbar__dropdown-title">Mining & Quarries</div></div>
+                    </a>
+                    <a href="{{ROOT}}industries/transport.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+                        <div><div class="navbar__dropdown-title">Transport & Logistics</div></div>
+                    </a>
+                    <a href="{{ROOT}}industries/distribution.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
+                        <div><div class="navbar__dropdown-title">Distribution & Trade</div></div>
+                    </a>
+                    <a href="{{ROOT}}industries/industrie.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M5 20V8l7-5 7 5v12M9 20v-6h6v6"/></svg></div>
+                        <div><div class="navbar__dropdown-title">Industry & Manufacturing</div></div>
+                    </a>
+                    <a href="{{ROOT}}industries/location.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+                        <div><div class="navbar__dropdown-title">Equipment Rental</div></div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Ressources Dropdown -->
+            <div class="navbar__dropdown" data-navbar-full>
+                <a href="#ressources" class="navbar__link navbar__link--dropdown">Resources</a>
+                <div class="navbar__dropdown-menu">
+                    <a href="{{ROOT}}blog/" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+                        <div><div class="navbar__dropdown-title">Blog</div><div class="navbar__dropdown-desc">Articles & news</div></div>
+                    </a>
+                    <a href="{{ROOT}}guides/" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+                        <div><div class="navbar__dropdown-title">Guides</div><div class="navbar__dropdown-desc">Practical guides by industry</div></div>
+                    </a>
+                    <a href="{{ROOT}}faq.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+                        <div><div class="navbar__dropdown-title">FAQ</div><div class="navbar__dropdown-desc">Frequently asked questions</div></div>
+                    </a>
+                    <a href="{{ROOT}}pricing.html" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+                        <div><div class="navbar__dropdown-title">Pricing</div><div class="navbar__dropdown-desc">Our plans by module</div></div>
+                    </a>
+                    <a href="{{ROOT}}portail-client/" class="navbar__dropdown-item">
+                        <div class="navbar__dropdown-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+                        <div><div class="navbar__dropdown-title">Client Portal</div><div class="navbar__dropdown-desc">Your project space in real time</div></div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- A propos -->
+            <a href="{{ROOT}}about.html" class="navbar__link">About</a>
+        </div>
+
+        <!-- Actions -->
+        <div class="navbar__actions">
+            <a href="https://wa.me/212673736611" target="_blank" rel="noopener" class="btn btn-primary btn-sm navbar__cta-desktop" style="display: inline-flex; align-items: center; gap: 6px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Contact us
+            </a>
+            <!-- Mobile hamburger -->
+            <button class="navbar__mobile-toggle" aria-label="Menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6" class="hamburger-top"/>
+                    <line x1="3" y1="12" x2="21" y2="12" class="hamburger-middle"/>
+                    <line x1="3" y1="18" x2="21" y2="18" class="hamburger-bottom"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="navbar__mobile-menu">
+        <nav class="navbar__mobile-nav">
+            <a href="/" class="mobile-link mobile-link--top">Home</a>
+
+            <details class="mobile-group">
+                <summary class="mobile-group__title">Modules</summary>
+                <div class="mobile-group__items">
+                    <a href="{{ROOT}}modules/sales-intelligence.html" class="mobile-link">Sales Intelligence</a>
+                    <a href="{{ROOT}}modules/marketing-automation.html" class="mobile-link">Marketing Automation</a>
+                    <a href="{{ROOT}}modules/financial-operations.html" class="mobile-link">Financial Operations</a>
+                    <a href="{{ROOT}}modules/supply-chain.html" class="mobile-link">Supply Chain</a>
+                    <a href="{{ROOT}}modules/fleetops.html" class="mobile-link">FleetOps</a>
+                    <a href="{{ROOT}}modules/erp-connect.html" class="mobile-link">ERP Connect</a>
+                    <a href="{{ROOT}}modules/digital-platform.html" class="mobile-link">Digital Platform</a>
+                    <a href="{{ROOT}}modules/ai-engine.html" class="mobile-link">AI Engine</a>
+                </div>
+            </details>
+
+            <details class="mobile-group">
+                <summary class="mobile-group__title">Industries</summary>
+                <div class="mobile-group__items">
+                    <a href="{{ROOT}}industries/btp.html" class="mobile-link">Construction & Engineering</a>
+                    <a href="{{ROOT}}industries/mines.html" class="mobile-link">Mining & Quarries</a>
+                    <a href="{{ROOT}}industries/transport.html" class="mobile-link">Transport & Logistics</a>
+                    <a href="{{ROOT}}industries/distribution.html" class="mobile-link">Distribution & Trade</a>
+                    <a href="{{ROOT}}industries/industrie.html" class="mobile-link">Industry & Manufacturing</a>
+                    <a href="{{ROOT}}industries/location.html" class="mobile-link">Equipment Rental</a>
+                </div>
+            </details>
+
+            <details class="mobile-group">
+                <summary class="mobile-group__title">Resources</summary>
+                <div class="mobile-group__items">
+                    <a href="{{ROOT}}blog/" class="mobile-link">Blog</a>
+                    <a href="{{ROOT}}guides/" class="mobile-link">Guides</a>
+                    <a href="{{ROOT}}faq.html" class="mobile-link">FAQ</a>
+                    <a href="{{ROOT}}pricing.html" class="mobile-link">Pricing</a>
+                    <a href="{{ROOT}}portail-client/" class="mobile-link">Client Portal</a>
+                </div>
+            </details>
+
+            <a href="{{ROOT}}about.html" class="mobile-link mobile-link--top">About</a>
+        </nav>
+        <div class="navbar__mobile-actions">
+            <a href="https://wa.me/212673736611" target="_blank" rel="noopener" class="btn btn-primary" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Talk to an expert
+            </a>
+        </div>
+    </div>
+</nav>

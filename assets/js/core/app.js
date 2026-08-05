@@ -34,9 +34,9 @@ const Kaalytics = {
             document.documentElement.classList.add('reduced-motion');
         }
 
-        // Langue : FR canonique. La bascule EN est geree exclusivement par i18n.js
-        // (cf. EN_READINESS.md pour l'activation du bilingue complet).
-        this.config.lang = 'fr';
+        // Langue pilotée par l'URL (path-based) : /en/... -> anglais, sinon FR.
+        const p = location.pathname;
+        this.config.lang = (p === '/en' || p.startsWith('/en/')) ? 'en' : 'fr';
         document.documentElement.lang = this.config.lang;
     },
 

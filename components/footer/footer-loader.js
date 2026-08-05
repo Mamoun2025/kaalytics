@@ -28,19 +28,9 @@
     // ========================================
 
     function detectRootPath() {
-        const scripts = document.querySelectorAll('script[src*="footer-loader"]');
-        if (scripts.length > 0) {
-            const src = scripts[0].getAttribute('src');
-            const depth = (src.match(/\.\.\//g) || []).length;
-            return '../'.repeat(depth);
-        }
-
-        const path = window.location.pathname;
-        const segments = path.split('/').filter(s => s && !s.includes('.'));
-        const projectRoot = ['kaalytics'];
-        const relevantSegments = segments.filter(s => !projectRoot.includes(s));
-
-        return relevantSegments.length === 0 ? '' : '../'.repeat(relevantSegments.length);
+        // Racine absolue, path-based : pages EN sous /en/ -> liens vers /en/, sinon /.
+        const p = window.location.pathname;
+        return (p === '/en' || p.startsWith('/en/')) ? '/en/' : '/';
     }
 
     function replaceRootPlaceholders(html, rootPath) {
@@ -52,7 +42,9 @@
     // ========================================
 
     async function loadFooterTemplate(rootPath) {
-        const templateUrl = rootPath + 'components/footer/footer.html';
+        const _p = window.location.pathname;
+        const _en = (_p === '/en' || _p.startsWith('/en/'));
+        const templateUrl = _en ? '/components/footer/footer.en.html' : '/components/footer/footer.html';
 
         try {
             const response = await fetch(templateUrl);

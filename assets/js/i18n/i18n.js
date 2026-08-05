@@ -23,12 +23,10 @@ class I18n {
      * Detects language preference and loads translations
      */
     async init() {
-        // Determine language: localStorage > default
-        // FR-only pour l'instant : auto-détection navigateur désactivée jusqu'a ce que
-        // le dictionnaire EN soit complet (cf. EN_READINESS.md). Reactiver browserLang ensuite.
-        const savedLang = localStorage.getItem(this.storageKey);
-
-        this.currentLang = savedLang || this.defaultLang;
+        // Langue pilotée par l'URL (path-based) : /en/... -> anglais, sinon FR canonique.
+        // L'URL est la source de vérité (SEO + pas de mélange). localStorage ignoré.
+        const p = location.pathname;
+        this.currentLang = (p === '/en' || p.startsWith('/en/')) ? 'en' : this.defaultLang;
 
         // Ensure language is supported
         if (!this.supportedLangs.includes(this.currentLang)) {
@@ -85,7 +83,7 @@ class I18n {
      */
     async loadTranslations(lang) {
         try {
-            const cacheBuster = 'v=20260805';
+            const cacheBuster = 'v=20260807';
             const response = await fetch(`${this.localesPath}/${lang}.json?${cacheBuster}`);
             if (!response.ok) {
                 throw new Error(`Failed to load ${lang}.json: ${response.status}`);

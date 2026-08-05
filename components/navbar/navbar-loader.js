@@ -40,32 +40,10 @@
      * en analysant le chemin du script actuel
      */
     function detectRootPath() {
-        // Methode 1: Chercher le script navbar-loader.js
-        const scripts = document.querySelectorAll('script[src*="navbar-loader"]');
-        if (scripts.length > 0) {
-            const src = scripts[0].getAttribute('src');
-            // Ex: "../components/navbar/navbar-loader.js" -> "../"
-            // Ex: "components/navbar/navbar-loader.js" -> ""
-            const match = src.match(/^(\.\.\/)*(?:\.\/)?/);
-            if (match) {
-                const depth = (src.match(/\.\.\//g) || []).length;
-                return '../'.repeat(depth);
-            }
-        }
-
-        // Methode 2: Analyser l'URL de la page
-        const path = window.location.pathname;
-        const segments = path.split('/').filter(s => s && !s.includes('.'));
-
-        // Ignorer le segment racine du projet si present
-        const projectRoot = ['kaalytics'];
-        const relevantSegments = segments.filter(s => !projectRoot.includes(s));
-
-        if (relevantSegments.length === 0) {
-            return '';
-        }
-
-        return '../'.repeat(relevantSegments.length);
+        // Chemin racine ABSOLU, piloté par l'URL (path-based i18n) :
+        // pages EN sous /en/ -> liens {{ROOT}} vers /en/ ; sinon racine /.
+        const p = window.location.pathname;
+        return (p === '/en' || p.startsWith('/en/')) ? '/en/' : '/';
     }
 
     /**
@@ -83,7 +61,10 @@
      * Charge le template navbar depuis le fichier HTML
      */
     async function loadNavbarTemplate(rootPath) {
-        const templateUrl = rootPath + 'components/navbar/navbar.html';
+        // Template absolu ; variante .en sur les pages /en/
+        const _p = window.location.pathname;
+        const _en = (_p === '/en' || _p.startsWith('/en/'));
+        const templateUrl = _en ? '/components/navbar/navbar.en.html' : '/components/navbar/navbar.html';
 
         try {
             const response = await fetch(templateUrl);
