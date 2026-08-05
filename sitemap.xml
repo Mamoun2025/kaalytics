@@ -161,4 +161,120 @@
     <priority>0.6</priority>
   </url>
 
+
+  <!-- ENGLISH VERSION /en/ -->
+  <url>
+    <loc>https://kaalytics.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/about"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/contact"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/en/faq</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/faq"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/en/pricing</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/pricing"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/pricing"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/en/modules/sales-intelligence</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/sales-intelligence"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/sales-intelligence"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/en/modules/marketing-automation</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/marketing-automation"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/marketing-automation"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/en/modules/financial-operations</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/financial-operations"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/financial-operations"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/en/modules/supply-chain</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/supply-chain"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/supply-chain"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/en/modules/fleetops</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/fleetops"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/fleetops"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/en/modules/erp-connect</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/erp-connect"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/erp-connect"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/en/modules/digital-platform</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/digital-platform"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/digital-platform"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/en/modules/ai-engine</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/ai-engine"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/ai-engine"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/en/industries/btp</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/industries/btp"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/industries/btp"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/en/industries/distribution</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/industries/distribution"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/industries/distribution"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/en/industries/industrie</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/industries/industrie"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/industries/industrie"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/en/industries/location</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/industries/location"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/industries/location"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/en/industries/mines</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/industries/mines"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/industries/mines"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/en/industries/transport</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/industries/transport"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/industries/transport"/>
+    <priority>0.8</priority>
+  </url>
 </urlset>

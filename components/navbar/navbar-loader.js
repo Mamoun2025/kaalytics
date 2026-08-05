@@ -193,23 +193,17 @@
      * Cette fonction prépare juste les éléments pour l'accessibilité
      */
     function initLangSwitcher(container) {
-        const switcher = container.querySelector('.lang-switcher');
-        if (!switcher) return;
-
-        const options = switcher.querySelectorAll('.lang-switcher__option');
-        options.forEach(option => {
-            // Add accessibility attributes
-            option.setAttribute('role', 'button');
-            option.setAttribute('tabindex', '0');
-            option.style.cursor = 'pointer';
-            // Add touch-action for better mobile support
-            option.style.touchAction = 'manipulation';
-        });
-
-        // If i18n is already loaded, setup the switcher immediately
-        if (window.i18n && typeof setupLangSwitcher === 'function') {
-            setupLangSwitcher();
-        }
+        // Switcher pilule FR/EN piloté par l'URL (path-based). Pointe vers l'URL équivalente.
+        const lang = container.querySelector('.navbar__lang');
+        if (!lang) return;
+        const p = window.location.pathname;
+        const isEN = (p === '/en' || p.startsWith('/en/'));
+        const frPath = isEN ? (p.replace(/^\/en/, '') || '/') : p;
+        const enPath = isEN ? p : ('/en' + (p === '/' ? '/' : p));
+        const fr = lang.querySelector('[data-lang="fr"]');
+        const en = lang.querySelector('[data-lang="en"]');
+        if (fr) { fr.setAttribute('href', frPath); fr.classList.toggle('navbar__lang-btn--active', !isEN); }
+        if (en) { en.setAttribute('href', enPath); en.classList.toggle('navbar__lang-btn--active', isEN); }
     }
 
     // ========================================

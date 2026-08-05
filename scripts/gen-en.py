@@ -60,7 +60,7 @@ def translate_page(html, d, report):
         if key in d:
             parts[i] = seg.replace(seg.strip(), d[key], 1) if seg.strip() else seg
         elif looks_french(key):
-            report.append(key[:90])
+            report.append(key)
     return ''.join(parts)
 
 RESOURCE = re.compile(r'\.(css|js|png|jpe?g|svg|ico|webp|gif|woff2?|ttf|mp4|webm|json|xml|txt|pdf)(\?|$)', re.I)

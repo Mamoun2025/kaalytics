@@ -818,3 +818,34 @@ body.menu-open {
     background: var(--emerald);
     border-radius: var(--radius-full);
 }
+
+/* ===== Language switcher FR/EN ===== */
+.navbar__lang {
+    display: inline-flex;
+    align-items: center;
+    gap: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+    padding: 2px;
+    background: rgba(255, 255, 255, 0.05);
+}
+.navbar__lang-btn {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 4px 11px;
+    border-radius: 999px;
+    color: var(--text-muted, #94a3b8);
+    text-decoration: none;
+    line-height: 1;
+    transition: color 0.18s ease, background 0.18s ease;
+}
+.navbar__lang-btn:hover { color: var(--text-primary, #e2e8f0); }
+.navbar__lang-btn--active {
+    background: var(--color-primary, #6366f1);
+    color: #fff;
+}
+.navbar--scrolled .navbar__lang { border-color: rgba(0, 0, 0, 0.12); }
+.navbar--scrolled .navbar__lang-btn { color: var(--text-secondary, #475569); }
+.navbar--scrolled .navbar__lang-btn--active { color: #fff; }
+@media (max-width: 768px) { .navbar__lang { margin-right: 6px; } }

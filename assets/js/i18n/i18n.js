@@ -83,7 +83,7 @@ class I18n {
      */
     async loadTranslations(lang) {
         try {
-            const cacheBuster = 'v=20260807';
+            const cacheBuster = 'v=20260808';
             const response = await fetch(`${this.localesPath}/${lang}.json?${cacheBuster}`);
             if (!response.ok) {
                 throw new Error(`Failed to load ${lang}.json: ${response.status}`);

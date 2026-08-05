@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Platform | Kaalytics</title>
+    <meta name="description" content="Site web premium, référencement naturel, catalogue e-commerce connecte à votre ERP. Une présence en ligne qui génère des leads.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/../assets/css/main.css?v=20260808">
+    <style>
+        :root {
+            --bg-void: #040a08;
+            --bg-card: #0f1f1b;
+            --bg-secondary: #132a24;
+            --emerald: #10b981;
+            --emerald-dim: rgba(16, 185, 129, 0.1);
+            --text-primary: #ecfdf5;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: rgba(16, 185, 129, 0.12);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg-void); color: var(--text-primary); }
+
+        /* Module Hero */
+        .module-hero {
+            text-align: center;
+            padding: 80px 24px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .module-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .module-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(13, 148, 136, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .module-hero__content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .module-hero__badge {
+            display: inline-block;
+            background: var(--emerald-dim);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            color: var(--emerald);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .module-hero h1 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .module-hero p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+
+        .module-hero__cta {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Accordion */
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 24px 80px;
+        }
+
+        .accordion-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 40px;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .accordion-item__header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 24px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-item__header:hover {
+            padding-left: 8px;
+        }
+
+        .accordion-item__number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--emerald);
+            opacity: 0.4;
+            min-width: 40px;
+            transition: opacity 0.3s;
+        }
+
+        .accordion-item[open] .accordion-item__number {
+            opacity: 1;
+        }
+
+        .accordion-item__title-group {
+            flex: 1;
+        }
+
+        .accordion-item__title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .accordion-item__tagline {
+            font-size: 0.85rem;
+            color: var(--emerald);
+            font-weight: 500;
+        }
+
+        .accordion-item__tagline--alt {
+            font-style: italic;
+            opacity: 0.7;
+            font-size: 0.8rem;
+            margin-top: 2px;
+        }
+
+        .accordion-item__toggle {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--emerald);
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            flex-shrink: 0;
+        }
+
+        .accordion-item[open] .accordion-item__toggle {
+            background: var(--emerald);
+            color: var(--bg-void);
+            border-color: var(--emerald);
+            transform: rotate(45deg);
+        }
+
+                /* Smooth accordion animation */
+        .accordion-item__body {
+            padding: 0 0 24px 60px;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Chevron rotation instead of + */
+        .accordion-item__toggle::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid #10b981;
+            border-bottom: 2px solid #10b981;
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease;
+            margin-top: -2px;
+            display: block;
+        }
+
+        .accordion-item[open] .accordion-item__toggle {
+            background: #10b981;
+            border-color: #10b981;
+        }
+
+        .accordion-item[open] .accordion-item__toggle::after {
+            border-color: #040a08;
+            transform: rotate(45deg);
+            margin-top: -4px;
+        }
+
+        .accordion-item__desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            max-width: 600px;
+        }
+
+        .accordion-item__highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 16px;
+            padding: 8px 16px;
+            background: var(--emerald-dim);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--emerald);
+            font-weight: 600;
+        }
+
+        /* CTA Section */
+        .module-cta-section {
+            padding: 60px 24px 80px;
+            background: var(--bg-void);
+        }
+
+        .module-cta {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .module-cta__title {
+            font-size: clamp(1.75rem, 5vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .module-cta__buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--emerald);
+            color: var(--bg-void);
+        }
+
+        .btn-primary:hover {
+            background: #0dd9a8;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--emerald);
+            border: 1px solid var(--emerald);
+        }
+
+        .btn-secondary:hover {
+            background: var(--emerald-dim);
+        }
+
+        /* Minimal Footer */
+        .module-footer {
+            padding: 40px 24px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .module-footer__text {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
+
+        .module-footer__link {
+            color: var(--emerald);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .module-footer__link:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .module-hero {
+                padding: 60px 16px 30px;
+            }
+
+            .accordion {
+                padding: 20px 16px 60px;
+            }
+
+                    /* Smooth accordion animation */
+        .accordion-item__body {
+            padding: 0 0 24px 60px;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Chevron rotation instead of + */
+        .accordion-item__toggle::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid #10b981;
+            border-bottom: 2px solid #10b981;
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease;
+            margin-top: -2px;
+            display: block;
+        }
+
+        .accordion-item[open] .accordion-item__toggle {
+            background: #10b981;
+            border-color: #10b981;
+        }
+
+        .accordion-item[open] .accordion-item__toggle::after {
+            border-color: #040a08;
+            transform: rotate(45deg);
+            margin-top: -4px;
+        }
+
+            .accordion-item__number {
+                min-width: 30px;
+            }
+
+            .module-cta-section {
+                padding: 60px 16px;
+            }
+
+            .module-footer {
+                padding: 30px 16px;
+            }
+        }
+    </style>
+
+    <link rel="canonical" href="https://kaalytics.com/en/modules/digital-platform">
+    <link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/digital-platform">
+    <link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/digital-platform">
+    <link rel="alternate" hreflang="x-default" href="https://kaalytics.com/modules/digital-platform">
+</head>
+<body>
+    <div id="navbar-container" data-navbar="full" data-navbar-style="solid"></div>
+
+    <section class="module-hero">
+        <div class="module-hero__content">
+            <div class="module-hero__badge">Digital Platform</div>
+            <h1>Your digital storefront, connected to your business</h1>
+            <p>Premium website, natural search optimization, e-commerce catalog connected to your ERP. An online presence that generates leads.</p>
+        </div>
+    </section>
+
+    <div class="accordion">
+        <p class="accordion-subtitle">Here are examples of available components. Each solution is modular and adapts to your specific needs.</p>
+
+        <details class="accordion-item">
+            <summary class="accordion-item__header">
+                <span class="accordion-item__number">01</span>
+                <div class="accordion-item__title-group">
+                    <div class="accordion-item__title">Professional Website</div>
+                    <div class="accordion-item__tagline">A website that inspires trust from the first second</div>
+                    <div class="accordion-item__tagline accordion-item__tagline--alt">Your digital storefront</div>
+                </div>
+                <span class="accordion-item__toggle"></span>
+            </summary>
+            <div class="accordion-item__body">
+                <p class="accordion-item__desc">Premium design with 2026 standards: dark mode, fluid animations, perfect responsiveness across mobile, tablet, and desktop. Installable Progressive Web App. Lighthouse score above 95. Every page built for conversion.</p>
+                <div class="accordion-item__highlight">2026 design — responsive — Lighthouse 95+</div>
+            </div>
+        </details>
+
+        <details class="accordion-item">
+            <summary class="accordion-item__header">
+                <span class="accordion-item__number">02</span>
+                <div class="accordion-item__title-group">
+                    <div class="accordion-item__title">SEO & Search Engine Optimization</div>
+                    <div class="accordion-item__tagline">Be found by customers who search for you</div>
+                    <div class="accordion-item__tagline accordion-item__tagline--alt">Be found by those who search for you</div>
+                </div>
+                <span class="accordion-item__toggle"></span>
+            </summary>
+            <div class="accordion-item__body">
+                <p class="accordion-item__desc">Complete technical audit, structured Schema.org data, optimized meta tags, dynamic sitemap. Multi-language support with hreflang. Goal: position zero on your industry keywords. Measurable organic traffic growth.</p>
+                <div class="accordion-item__highlight">Schema.org + sitemap + hreflang — improved organic traffic</div>
+            </div>
+        </details>
+
+        <details class="accordion-item">
+            <summary class="accordion-item__header">
+                <span class="accordion-item__number">03</span>
+                <div class="accordion-item__title-group">
+                    <div class="accordion-item__title">Blog & Content</div>
+                    <div class="accordion-item__tagline">Content that positions and converts</div>
+                    <div class="accordion-item__tagline accordion-item__tagline--alt">Content that positions and converts</div>
+                </div>
+                <span class="accordion-item__toggle"></span>
+            </summary>
+            <div class="accordion-item__body">
+                <p class="accordion-item__desc">SEO articles by industry, technical guides, case studies, conversion landing pages. Integrated editorial calendar. Every piece of content is a qualified lead acquisition tool.</p>
+                <div class="accordion-item__highlight">SEO articles + guides + landing pages — lead generation</div>
+            </div>
+        </details>
+
+        <details class="accordion-item">
+            <summary class="accordion-item__header">
+                <span class="accordion-item__number">04</span>
+                <div class="accordion-item__title-group">
+                    <div class="accordion-item__title">B2B E-Commerce</div>
+                    <div class="accordion-item__tagline">Your online catalog, connected to your inventory</div>
+                    <div class="accordion-item__tagline accordion-item__tagline--alt">Sell while you sleep</div>
+                </div>
+                <span class="accordion-item__toggle"></span>
+            </summary>
+            <div class="accordion-item__body">
+                <p class="accordion-item__desc">E-commerce platform with catalog synchronized to your ERP in real time. Available inventory displayed, dynamic pricing by customer and volume. Fast checkout with automatic order creation in your ERP.</p>
+                <div class="accordion-item__highlight">Real-time ERP catalog — dynamic pricing — fast checkout</div>
+            </div>
+        </details>
+
+        <details class="accordion-item">
+            <summary class="accordion-item__header">
+                <span class="accordion-item__number">05</span>
+                <div class="accordion-item__title-group">
+                    <div class="accordion-item__title">Scraping & Enrichment</div>
+                    <div class="accordion-item__tagline">A product catalog always complete and up-to-date</div>
+                    <div class="accordion-item__tagline accordion-item__tagline--alt">Fresh data, zero effort</div>
+                </div>
+                <span class="accordion-item__toggle"></span>
+            </summary>
+            <div class="accordion-item__body">
+                <p class="accordion-item__desc">Automated product data collection from your supplier sources. Normalization, deduplication, continuous catalog enrichment. Your product specs stay complete without manual effort.</p>
+                <div class="accordion-item__highlight">Multi-source — automatic normalization — zero re-entry</div>
+            </div>
+        </details>
+
+        <!-- Composants additionnels -->
+        <details class="accordion-item">
+            <summary class="accordion-item__header">
+                <span class="accordion-item__number">06</span>
+                <div class="accordion-item__title-group">
+                    <div class="accordion-item__title">Design System</div>
+                    <div class="accordion-item__tagline">Your brand's visual language</div>
+                    <div class="accordion-item__tagline accordion-item__tagline--alt">Consistency at every touchpoint</div>
+                </div>
+                <span class="accordion-item__toggle"></span>
+            </summary>
+            <div class="accordion-item__body">
+                <p class="accordion-item__desc">Visual component library and brand identity usage guidelines. Logos, colors, typefaces, normalized spacing. Every document, page, and email respects your brand standards effortlessly.</p>
+                <div class="accordion-item__highlight">Standardized components — consistency guaranteed</div>
+            </div>
+        </details>
+
+        <details class="accordion-item">
+            <summary class="accordion-item__header">
+                <span class="accordion-item__number">07</span>
+                <div class="accordion-item__title-group">
+                    <div class="accordion-item__title">Documents Pro</div>
+                    <div class="accordion-item__tagline">Every document impresses</div>
+                    <div class="accordion-item__tagline accordion-item__tagline--alt">Your quotes and invoices become brand tools</div>
+                </div>
+                <span class="accordion-item__toggle"></span>
+            </summary>
+            <div class="accordion-item__body">
+                <p class="accordion-item__desc">Quote, invoice, proposal, and report templates in your brand colors. Every document sent reinforces your professional image and credibility.</p>
+                <div class="accordion-item__highlight">Brand templates — professional perception</div>
+            </div>
+        </details>
+    </div>
+
+    <section class="module-cta-section">
+        <div class="module-cta">
+            <h2 class="module-cta__title">Ready to launch your digital presence?</h2>
+            <div class="module-cta__buttons">
+                <a href="https://wa.me/212673736611" target="_blank" rel="noopener" class="btn btn-primary">Contact us</a>
+                <a href="../index.html#modules-ia" class="btn btn-secondary">Back to modules</a>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: var(--bg-void); border-top: 1px solid rgba(16,185,129,0.12); padding: 48px 0 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 48px;">
+                <div>
+                    <a href="../" style="display: flex; align-items: center; gap: 10px; text-decoration: none; margin-bottom: 16px;">
+                        <svg width="32" height="32" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#10b981" stroke-width="2"/><path d="M12 20l6 6 10-12" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span style="font-size: 1.25rem; font-weight: 800; color: #ecfdf5;">Kaal<span style="color: #10b981;">ytics</span></span>
+                    </a>
+                    <p style="color: #64748b; font-size: 0.85rem; line-height: 1.7; margin-bottom: 20px; max-width: 280px;">AI modules connected to your ERP. Smart dashboards and custom automation.</p>
+                    <div style="display: flex; gap: 12px;">
+                        <a href="https://wa.me/212673736611" target="_blank" rel="noopener" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: #0f1f1b; border: 1px solid rgba(16,185,129,0.12); border-radius: 8px; color: #64748b;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Modules</h4>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Industries</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="../industries/btp.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Construction & Engineering</a>
+                        <a href="../industries/mines.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Mining & Quarries</a>
+                        <a href="../industries/transport.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Transport & Logistics</a>
+                        <a href="../industries/distribution.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Distribution & Trade</a>
+                        <a href="../industries/industrie.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Industry & Manufacturing</a>
+                        <a href="../industries/location.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Equipment Rental</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Modules</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="sales-intelligence.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Sales Intelligence</a>
+                        <a href="marketing-automation.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Marketing Automation</a>
+                        <a href="financial-operations.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Financial Operations</a>
+                        <a href="supply-chain.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Supply Chain</a>
+                        <a href="fleetops.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">FleetOps</a>
+                        <a href="erp-connect.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">ERP Connect</a>
+                        <a href="digital-platform.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Digital Platform</a>
+                        <a href="ai-engine.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">AI Engine</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Resources</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="../guides/" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Guides</a>
+                        <a href="../faq.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">FAQ</a>
+                        <a href="../pricing.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Pricing</a>
+                        <a href="../about.html" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">About</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Contact</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="https://wa.me/212673736611" target="_blank" rel="noopener" style="color: #10b981; text-decoration: none; font-size: 0.85rem; font-weight: 600;">WhatsApp</a>
+                        <a href="tel:+212673736611" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">+212 673 736 611</a>
+                    </div>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(16,185,129,0.12); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                <p style="color: #64748b; font-size: 0.8rem;">© 2026 Kaalytics. All rights reserved. Made in Morocco.</p>
+                <div style="display: flex; gap: 24px; font-size: 0.8rem;">
+                    <a href="../legal/privacy.html" style="color: #64748b; text-decoration: none;">Privacy</a>
+                    <a href="../legal/terms.html" style="color: #64748b; text-decoration: none;">Terms of Service</a>
+                    <a href="../legal/cookies.html" style="color: #64748b; text-decoration: none;">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/../components/navbar/navbar-loader.js?v=20260808" defer></script>
+</body>
+</html>
