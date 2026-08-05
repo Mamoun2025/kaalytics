@@ -18,11 +18,11 @@
         'sales-intelligence': {
             title: 'Sales Intelligence',
             icon: '<path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>',
-            description: 'Dashboard KPIs connecte ERP, scoring prospect par algorithme 3 niveaux, carte interactive avec tournees optimisees, generation de devis en 30 secondes. Vos commerciaux savent quoi vendre, a qui, et quand.',
+            description: 'Dashboard KPIs connecte ERP, scoring prospect par algorithme 3 niveaux, carte interactive avec tournées optimisées, génération de devis en 30 secondes. Vos commerciaux savent quoi vendre, a qui, et quand.',
             features: [
-                'Command Center temps reel',
+                'Command Center temps réel',
                 'Matching Engine 3 niveaux',
-                'Carte interactive + tournees',
+                'Carte interactive + tournées',
                 'Agent Devis automatique',
                 'Portail B2B client',
                 'KPI Executive quotidien'
@@ -37,13 +37,13 @@
         'marketing-automation': {
             title: 'Marketing Automation',
             icon: '<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>',
-            description: 'Campagnes email ciblees avec scoring audience, pixel tracking natif, relances programmees. Chaque clic alimente votre pipeline commercial. ROI mesurable en temps reel.',
+            description: 'Campagnes email ciblées avec scoring audience, pixel tracking natif, relances programmées. Chaque clic alimente votre pipeline commercial. ROI mesurable en temps réel.',
             features: [
-                'Campagnes ciblees IA',
+                'Campagnes ciblées IA',
                 'Pipeline Marketing → Ventes',
                 'Pixel tracking ouvertures/clics',
                 'Enrichissement contacts auto',
-                'Matrices compatibilite produits'
+                'Matrices compatibilité produits'
             ],
             videos: [
                 'assets/videos/marketing/marketing-1.mp4',
@@ -55,12 +55,12 @@
         'financial-operations': {
             title: 'Financial Operations',
             icon: '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>',
-            description: 'Tresorerie sous controle. Suivi facturation commande-livraison-facture, agent recouvrement avec relances escaladees automatiques, detection des ordres non factures en temps reel.',
+            description: 'Trésorerie sous contrôle. Suivi facturation commande-livraison-facture, agent recouvrement avec relances escaladees automatiques, détection des ordres non factures en temps réel.',
             features: [
                 'Finance Dashboard multi-annuel',
-                'Pipeline facturation sans ecarts',
+                'Pipeline facturation sans écarts',
                 'Agent Recouvrement escalade',
-                'Detection non-factures temps reel'
+                'Détection non-factures temps réel'
             ],
             videos: [
                 'assets/videos/odoo/odoo-1.mp4',
@@ -72,13 +72,13 @@
         'supply-chain': {
             title: 'Supply Chain Command',
             icon: '<rect x="1" y="6" width="6" height="6" rx="1"/><rect x="9" y="6" width="6" height="6" rx="1"/><rect x="17" y="6" width="6" height="6" rx="1"/><path d="M4 12v4a2 2 0 002 2h12a2 2 0 002-2v-4"/>',
-            description: 'Du fournisseur au client final, chaque maillon est visible. Planning achats, previsions de ventes, detection automatique des goulots, stock consolide multi-entites.',
+            description: 'Du fournisseur au client final, chaque maillon est visible. Planning achats, prévisions de ventes, détection automatique des goulots, stock consolide multi-entités.',
             features: [
-                'Delivery Desk operationnel',
+                'Delivery Desk opérationnel',
                 'Planning achats fournisseur',
-                'Previsions de ventes',
-                'Chaine de valeur complete',
-                'Revue tarifaire automatisee'
+                'Prévisions de ventes',
+                'Chaîne de valeur complète',
+                'Revue tarifaire automatisée'
             ],
             videos: [
                 'assets/videos/industrial/industrial-2.mp4',
@@ -90,13 +90,13 @@
         'fleetops': {
             title: 'FleetOps',
             icon: '<rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>',
-            description: 'Gestion de flotte complete. Position GPS temps reel, maintenance predictive, circuit achats DA-RFQ-PO, rentabilite par machine et par chantier. Chaque engin trace, chaque intervention anticipee.',
+            description: 'Gestion de flotte complète. Position GPS temps réel, maintenance prédictive, circuit achats DA-RFQ-PO, rentabilité par machine et par chantier. Chaque engin trace, chaque intervention anticipée.',
             features: [
-                'GPS Tracking temps reel',
-                'Maintenance predictive IA',
+                'GPS Tracking temps réel',
+                'Maintenance prédictive IA',
                 'Procurement DA→RFQ→PO',
                 'Gestion projets & chantiers',
-                'Analyse couts TCO',
+                'Analyse coûts TCO',
                 'Planning ressources'
             ],
             videos: [
@@ -112,11 +112,11 @@
         'erp-connect': {
             title: 'ERP Connect',
             icon: '<circle cx="12" cy="12" r="2"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/>',
-            description: 'On se branche sur votre ERP existant. Lecture et ecriture temps reel, connecteurs bidirectionnels Odoo, SAP, Sage, Dynamics. Modules sur-mesure, dashboards deployes, interfaces mobile terrain.',
+            description: 'On se branche sur votre ERP existant. Lecture et écriture temps réel, connecteurs bidirectionnels Odoo, SAP, Sage, Dynamics. Modules sur-mesure, dashboards déployés, interfaces mobile terrain.',
             features: [
                 'Connecteurs bidirectionnels',
                 'Modules ERP sur-mesure',
-                'Dashboards connectes VPS',
+                'Dashboards connectés VPS',
                 'Mobile & terrain'
             ],
             videos: [
@@ -129,13 +129,13 @@
         'digital-platform': {
             title: 'Digital Platform',
             icon: '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>',
-            description: 'Presence digitale complete. Site web premium responsive, SEO et referencement naturel, blog et contenu, e-commerce B2B connecte a votre ERP avec stock temps reel et pricing dynamique.',
+            description: 'Présence digitale complète. Site web premium responsive, SEO et référencement naturel, blog et contenu, e-commerce B2B connecte à votre ERP avec stock temps réel et pricing dynamique.',
             features: [
                 'Site Web Pro design 2026',
                 'SEO & referencement complet',
                 'Blog & content marketing',
                 'E-Commerce B2B connecte ERP',
-                'Scraping donnees produits'
+                'Scraping données produits'
             ],
             videos: [
                 'assets/videos/odoo/odoo-2.mp4',
@@ -151,8 +151,8 @@
             features: [
                 'Agents IA autonomes',
                 'Parsing intelligent NLP',
-                'Etudes de marche auto',
-                'Business plans multi-scenarios',
+                'Études de marche auto',
+                'Business plans multi-scénarios',
                 'Pricing intelligence'
             ],
             videos: [

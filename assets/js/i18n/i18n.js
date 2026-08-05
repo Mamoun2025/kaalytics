@@ -24,7 +24,7 @@ class I18n {
      */
     async init() {
         // Determine language: localStorage > default
-        // FR-only pour l'instant : auto-detection navigateur desactivee jusqu'a ce que
+        // FR-only pour l'instant : auto-détection navigateur désactivée jusqu'a ce que
         // le dictionnaire EN soit complet (cf. EN_READINESS.md). Reactiver browserLang ensuite.
         const savedLang = localStorage.getItem(this.storageKey);
 

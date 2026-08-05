@@ -36,7 +36,7 @@
         },
         'location.html': {
             parent: { name: 'Industries', url: '/industries/' },
-            current: 'Location de vehicules'
+            current: 'Location de véhicules'
         },
         'mines.html': {
             parent: { name: 'Industries', url: '/industries/' },
@@ -53,7 +53,7 @@
         },
         // Case studies
         'terrafleet.html': {
-            parent: { name: 'Etudes de cas', url: '/case-studies/' },
+            parent: { name: 'Études de cas', url: '/case-studies/' },
             current: 'TerraFleet'
         }
     };

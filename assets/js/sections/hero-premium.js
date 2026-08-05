@@ -23,9 +23,9 @@ class HeroPremium {
 
         const problems = [
             '30% de trop',
-            '5-10 systemes',
-            'des pannes imprevues',
-            'zero visibilite',
+            '5-10 systèmes',
+            'des pannes imprévues',
+            'zéro visibilité',
             'trop de temps admin'
         ];
 
