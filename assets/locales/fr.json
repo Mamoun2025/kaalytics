@@ -589,7 +589,7 @@
   },
   "integrations": {
     "label": "Intégrations",
-    "title": "Connecte a vos outils existants",
+    "title": "Connecté à vos outils existants",
     "subtitle": "FleetOps Pro s'intégré avec votre écosystème. Pas besoin de tout changer.",
     "more": "+ 50 autres intégrations disponibles via notre API ouverte"
   },
