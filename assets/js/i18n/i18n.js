@@ -11,7 +11,7 @@ class I18n {
         this.defaultLang = options.defaultLang || 'fr';
         this.supportedLangs = options.supportedLangs || ['fr', 'en'];
         this.localesPath = options.localesPath || '/assets/locales';
-        this.storageKey = 'kaalytics_lang';
+        this.storageKey = 'kaalytics_lang_v2'; // v2 : reinitialise les anciennes preferences 'en' (site FR canonique)
         this.translations = {};
         this.currentLang = null;
         this.isLoaded = false;
@@ -23,11 +23,12 @@ class I18n {
      * Detects language preference and loads translations
      */
     async init() {
-        // Determine language: localStorage > browser > default
+        // Determine language: localStorage > default
+        // FR-only pour l'instant : auto-detection navigateur desactivee jusqu'a ce que
+        // le dictionnaire EN soit complet (cf. EN_READINESS.md). Reactiver browserLang ensuite.
         const savedLang = localStorage.getItem(this.storageKey);
-        const browserLang = this.detectBrowserLanguage();
 
-        this.currentLang = savedLang || browserLang || this.defaultLang;
+        this.currentLang = savedLang || this.defaultLang;
 
         // Ensure language is supported
         if (!this.supportedLangs.includes(this.currentLang)) {
@@ -84,7 +85,7 @@ class I18n {
      */
     async loadTranslations(lang) {
         try {
-            const cacheBuster = 'v=20260129b';
+            const cacheBuster = 'v=20260805';
             const response = await fetch(`${this.localesPath}/${lang}.json?${cacheBuster}`);
             if (!response.ok) {
                 throw new Error(`Failed to load ${lang}.json: ${response.status}`);
@@ -194,6 +195,9 @@ class I18n {
         // Update text content
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');
+            // Cle absente du dictionnaire -> garder le texte HTML par defaut (ne jamais afficher la cle brute)
+            const raw = this.getNestedValue(this.translations[this.currentLang], key);
+            if (typeof raw !== 'string') return;
             const translation = this.translate(key);
 
             // Check for HTML content flag
@@ -207,30 +211,40 @@ class I18n {
         // Update placeholders
         document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
             const key = element.getAttribute('data-i18n-placeholder');
+            const raw = this.getNestedValue(this.translations[this.currentLang], key);
+            if (typeof raw !== 'string') return;
             element.placeholder = this.translate(key);
         });
 
         // Update titles/tooltips
         document.querySelectorAll('[data-i18n-title]').forEach(element => {
             const key = element.getAttribute('data-i18n-title');
+            const raw = this.getNestedValue(this.translations[this.currentLang], key);
+            if (typeof raw !== 'string') return;
             element.title = this.translate(key);
         });
 
         // Update aria-labels
         document.querySelectorAll('[data-i18n-aria]').forEach(element => {
             const key = element.getAttribute('data-i18n-aria');
+            const raw = this.getNestedValue(this.translations[this.currentLang], key);
+            if (typeof raw !== 'string') return;
             element.setAttribute('aria-label', this.translate(key));
         });
 
         // Update alt attributes
         document.querySelectorAll('[data-i18n-alt]').forEach(element => {
             const key = element.getAttribute('data-i18n-alt');
+            const raw = this.getNestedValue(this.translations[this.currentLang], key);
+            if (typeof raw !== 'string') return;
             element.alt = this.translate(key);
         });
 
         // Update value attributes (for buttons)
         document.querySelectorAll('[data-i18n-value]').forEach(element => {
             const key = element.getAttribute('data-i18n-value');
+            const raw = this.getNestedValue(this.translations[this.currentLang], key);
+            if (typeof raw !== 'string') return;
             element.value = this.translate(key);
         });
     }
@@ -303,7 +317,7 @@ class I18n {
 
 // Create global instance
 const i18n = new I18n({
-    defaultLang: 'en',
+    defaultLang: 'fr',
     supportedLangs: ['fr', 'en'],
     localesPath: '/assets/locales'
 });
@@ -388,8 +402,9 @@ if (document.readyState === 'loading') {
 window.addEventListener('navbarLoaded', () => {
     console.log('[i18n] Navbar loaded, setting up lang switcher');
     setupLangSwitcher();
-    // Update switcher UI to reflect current language
+    // Update switcher UI + traduire la navbar injectee dynamiquement (sinon ses cles ne sont pas appliquees)
     if (window.i18n && window.i18n.isReady()) {
+        window.i18n.updateDOM();
         window.i18n.updateLangSwitcher();
     }
 });

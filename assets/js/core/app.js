@@ -17,7 +17,9 @@ const Kaalytics = {
         this.initNavbar();
         this.initAnimations();
         this.initLazyLoading();
-        this.initI18n();
+        // i18n gere par un systeme unique (assets/js/i18n/i18n.js + /assets/locales).
+        // Ancien systeme (/i18n, dico incomplet) desactive pour eviter le melange FR/EN.
+        // this.initI18n();
 
         if (this.config.debug) {
             console.log('Kaalytics initialized', this.config);
@@ -32,14 +34,9 @@ const Kaalytics = {
             document.documentElement.classList.add('reduced-motion');
         }
 
-        // Language from localStorage or browser
-        const savedLang = localStorage.getItem('kaalytics-lang');
-        if (savedLang) {
-            this.config.lang = savedLang;
-        } else {
-            const browserLang = navigator.language.split('-')[0];
-            this.config.lang = ['fr', 'en'].includes(browserLang) ? browserLang : 'fr';
-        }
+        // Langue : FR canonique. La bascule EN est geree exclusivement par i18n.js
+        // (cf. EN_READINESS.md pour l'activation du bilingue complet).
+        this.config.lang = 'fr';
         document.documentElement.lang = this.config.lang;
     },
 

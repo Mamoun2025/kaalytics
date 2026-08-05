@@ -1,98 +1,107 @@
 {
-    "product": {
-        "id": "daedalia-ai",
-        "name": "Daedalia AI",
-        "tagline": "Votre copilote IA pour Odoo",
-        "description": "Assistant IA conversationnel connecte a Odoo. Creez des devis, recherchez des produits et analysez vos ventes en langage naturel.",
-        "heroDescription": "Posez vos questions en francais, Daedalia interroge votre Odoo et vous repond en temps reel. Plus besoin de naviguer dans 10 menus.",
-        "video": "assets/videos/ai/daedalia-demo.mp4"
+  "product": {
+    "id": "daedalia-ai",
+    "name": "Daedalia AI",
+    "tagline": "Votre copilote IA pour Odoo",
+    "description": "Assistant IA conversationnel connecte a Odoo. Créez des devis, recherchez des produits et analysez vos ventes en langage naturel.",
+    "heroDescription": "Posez vos questions en français, Daedalia interroge votre Odoo et vous répond en temps réel. Plus besoin de naviguer dans 10 menus.",
+    "video": "assets/vidéos/ai/daedalia-démo.mp4"
+  },
+  "features": [
+    {
+      "id": "rag",
+      "name": "178k+ Documents Indexés",
+      "number": "01",
+      "description": "Base de connaissances massive indexée pour des réponses précises instantanées"
     },
-    "features": [
-        {
-            "id": "rag",
-            "name": "178k+ Documents Indexes",
-            "number": "01",
-            "description": "Base de connaissances massive indexee pour des reponses precises instantanees"
-        },
-        {
-            "id": "search",
-            "name": "Recherche Produits Intelligente",
-            "number": "02",
-            "description": "Trouvez n'importe quel produit en decrivant ce que vous cherchez"
-        },
-        {
-            "id": "quotes",
-            "name": "Creation Devis Conversationnelle",
-            "number": "03",
-            "description": "Dites 'Cree un devis pour Client X avec 5 units de Produit Y' et c'est fait"
-        },
-        {
-            "id": "analytics",
-            "name": "Analyse Ventes Automatique",
-            "number": "04",
-            "description": "Demandez 'Quelles sont mes meilleures ventes ce mois?' et obtenez la reponse"
-        }
-    ],
-    "stats": [
-        {
-            "value": "178k+",
-            "label": "Documents indexes"
-        },
-        {
-            "value": "<3s",
-            "label": "Temps de reponse"
-        },
-        {
-            "value": "95%",
-            "label": "Precision"
-        },
-        {
-            "value": "24/7",
-            "label": "Disponibilite"
-        }
-    ],
-    "useCases": [
-        {
-            "query": "Quel est le prix du filtre a huile pour CAT 349D?",
-            "response": "Le filtre a huile reference FIL-349D-OIL est a 245 EUR HT. 12 en stock."
-        },
-        {
-            "query": "Cree un devis pour TerraFleet avec 3 trains de chaines D8R",
-            "response": "Devis #QO-2026-0142 cree pour TerraFleet. Total: 18,750 EUR HT. Lien: [Voir le devis]"
-        },
-        {
-            "query": "Quelles sont les ventes du mois dernier par categorie?",
-            "response": "Pieces detachees: 125k EUR (+12%), Services: 45k EUR (-3%), Location: 32k EUR (+8%)"
-        }
-    ],
-    "integration": {
-        "platforms": ["Odoo 14+", "Odoo 15", "Odoo 16", "Odoo 17"],
-        "deployment": "Cloud ou On-premise",
-        "setupTime": "1 semaine",
-        "training": "Formation incluse"
+    {
+      "id": "search",
+      "name": "Recherche Produits Intelligente",
+      "number": "02",
+      "description": "Trouvez n'importe quel produit en décrivant ce que vous cherchez"
     },
-    "pricing": {
-        "starter": {
-            "price": 299,
-            "currency": "EUR",
-            "period": "mois",
-            "users": 5,
-            "queries": "1000/mois"
-        },
-        "professional": {
-            "price": 599,
-            "currency": "EUR",
-            "period": "mois",
-            "users": 20,
-            "queries": "Illimite"
-        },
-        "enterprise": {
-            "price": "Sur devis",
-            "currency": "EUR",
-            "period": "mois",
-            "users": "Illimite",
-            "queries": "Illimite",
-            "features": ["API", "White-label", "Support dedie"]
-        }
+    {
+      "id": "quotes",
+      "name": "Création Devis Conversationnelle",
+      "number": "03",
+      "description": "Dites 'Créé un devis pour Client X avec 5 units de Produit Y' et c'est fait"
+    },
+    {
+      "id": "analytics",
+      "name": "Analyse Ventes Automatique",
+      "number": "04",
+      "description": "Demandez 'Quelles sont mes meilleures ventes ce mois?' et obtenez la réponse"
     }
+  ],
+  "stats": [
+    {
+      "value": "178k+",
+      "label": "Documents indexés"
+    },
+    {
+      "value": "<3s",
+      "label": "Temps de réponse"
+    },
+    {
+      "value": "95%",
+      "label": "Précision"
+    },
+    {
+      "value": "24/7",
+      "label": "Disponibilité"
+    }
+  ],
+  "useCases": [
+    {
+      "query": "Quel est le prix du filtre a huile pour CAT 349D?",
+      "response": "Le filtre a huile référence FIL-349D-OIL est a 245 EUR HT. 12 en stock."
+    },
+    {
+      "query": "Créé un devis pour TerraFleet avec 3 trains de chaînes D8R",
+      "response": "Devis #QO-2026-0142 créé pour TerraFleet. Total: 18,750 EUR HT. Lien: [Voir le devis]"
+    },
+    {
+      "query": "Quelles sont les ventes du mois dernier par catégorie?",
+      "response": "Pièces détachées: 125k EUR (+12%), Services: 45k EUR (-3%), Location: 32k EUR (+8%)"
+    }
+  ],
+  "integration": {
+    "platforms": [
+      "Odoo 14+",
+      "Odoo 15",
+      "Odoo 16",
+      "Odoo 17"
+    ],
+    "deployment": "Cloud ou On-premise",
+    "setupTime": "1 semaine",
+    "training": "Formation incluse"
+  },
+  "pricing": {
+    "starter": {
+      "price": 299,
+      "currency": "EUR",
+      "period": "mois",
+      "users": 5,
+      "queries": "1000/mois"
+    },
+    "professional": {
+      "price": 599,
+      "currency": "EUR",
+      "period": "mois",
+      "users": 20,
+      "queries": "Illimité"
+    },
+    "enterprise": {
+      "price": "Sur devis",
+      "currency": "EUR",
+      "period": "mois",
+      "users": "Illimité",
+      "queries": "Illimité",
+      "features": [
+        "API",
+        "White-label",
+        "Support dédié"
+      ]
+    }
+  }
 }
