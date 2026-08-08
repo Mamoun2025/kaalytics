@@ -1,4 +1,8 @@
 {
+  "rewrites": [
+    { "source": "/work", "destination": "https://kaalytics-work.vercel.app/work" },
+    { "source": "/work/:path*", "destination": "https://kaalytics-work.vercel.app/work/:path*" }
+  ],
   "redirects": [
     { "source": "/checklist-maintenance", "destination": "/guides/checklist-maintenance", "permanent": true },
     { "source": "/comparatif-fleet-management", "destination": "/guides/comparatif-fleet-management", "permanent": true },

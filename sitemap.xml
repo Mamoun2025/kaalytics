@@ -277,4 +277,13 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/industries/transport"/>
     <priority>0.8</priority>
   </url>
+
+  <!-- =============================================
+       PORTFOLIO - book des réalisations
+       ============================================= -->
+  <url>
+    <loc>https://kaalytics.com/work</loc>
+    <lastmod>2026-08-08</lastmod>
+    <priority>0.9</priority>
+  </url>
 </urlset>
