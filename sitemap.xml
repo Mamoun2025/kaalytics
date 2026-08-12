@@ -18,6 +18,11 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kaalytics.com/about"/>
   </url>
   <url>
+    <loc>https://kaalytics.com/alternatives</loc>
+    <lastmod>2026-08-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kaalytics.com/blog</loc>
     <lastmod>2026-08-12</lastmod>
     <priority>0.8</priority>
@@ -36,6 +41,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kaalytics.com/blog/cout-projet-ia-pme</loc>
+    <lastmod>2026-08-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/blog/deployer-ia-entreprise</loc>
+    <lastmod>2026-08-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kaalytics.com/blog/digitalisation-flotte-btp</loc>
     <lastmod>2026-08-12</lastmod>
     <priority>0.8</priority>
@@ -45,6 +60,11 @@
   </url>
   <url>
     <loc>https://kaalytics.com/blog/erp-maroc-comparatif</loc>
+    <lastmod>2026-08-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/blog/erreurs-migration-erp</loc>
     <lastmod>2026-08-12</lastmod>
     <priority>0.8</priority>
   </url>

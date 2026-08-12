@@ -187,6 +187,7 @@
             .about-values__grid { grid-template-columns: 1fr; }
             .approach-item { flex-direction: column; gap: 8px; }
             .approach-item__number { font-size: 1.5rem; }
+            .team-grid { grid-template-columns: 1fr; }
         }
     </style>
 <!-- SEO:BEGIN (genere par scripts/seo/gen_head.py - ne pas editer) -->
@@ -278,16 +279,23 @@
 
     <!-- Notre approche -->
     <section class="about-section">
-        <span class="about-section__label">Notre approche</span>
-        <h2 class="about-section__title">L'intelligence au service de l'opération</h2>
+        <span class="about-section__label">Le problème que nous résolvons</span>
+        <h2 class="about-section__title">La donnée existe. C'est l'utiliser qui manque.</h2>
         <p class="about-section__text">
-            La plupart des entreprises ont déjà investi dans des systèmes de gestion. Odoo, SAP, Sage, Dynamics — tous ces outils contiennent déjà l'essentiel de la donnée. Le problème n'est pas la donnée. Le problème est ce qu'on en fait.
+            Les PME, les ETI avec un ERP (Odoo, SAP, Sage, Dynamics) connaissent ce problème :
+        </p>
+        <p class="about-section__text" style="text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;">
+            • 20h/semaine de rapports manuels dans Excel<br>
+            • Des données enterrées dans l'ERP, invisibles pour les décideurs<br>
+            • Pas d'alertes : on découvre les problèmes au rapport mensuel<br>
+            • Changer l'ERP coûterait 6 mois et 100k€<br>
+            • Ajouter un BI coûterait une équipe data qui n'existe pas<br>
         </p>
         <p class="about-section__text">
-            <strong>Nous construisons les modules qui manquent.</strong> Ceux qui transforment les données en décisions, les saisies en actions, les rapports en alertes. Sans remplacer l'existant. Sans forcer les équipes à changer leurs habitudes.
+            <strong>La solution : une couche intelligence connectée à votre ERP.</strong> Pas un remplacement. Une extension. Quelques semaines à déployer. Des résultats visibles le premier jour.
         </p>
         <p class="about-section__text">
-            Chaque module s'installe en quelques semaines, se connecte aux systèmes en place, et commence à produire des résultats mesurables des les premiers jours.
+            C'est ce que Kaalytics fait. Depuis 2022. Pour des PME au Maroc, en France, en Belgique.
         </p>
     </section>
 
@@ -327,31 +335,66 @@
                 <div class="approach-item">
                     <div class="approach-item__number">01</div>
                     <div>
-                        <h3 class="approach-item__title">Audit</h3>
-                        <p class="approach-item__desc">Nous analysons vos processus, vos systèmes et vos irritants quotidiens. Cette première étape est gratuite et aboutit à une cartographie claire des opportunités d'optimisation.</p>
+                        <h3 class="approach-item__title">Audit (1-2 jours)</h3>
+                        <p class="approach-item__desc">Nous analysons vos processus, vos systèmes et vos irritants quotidiens. Pourquoi ? Parce qu'une bonne solution doit résoudre votre réalité, pas une réalité théorique. Cette première étape est gratuite. Vous recevez un rapport : opportunités identifiées + plan d'attaque.</p>
                     </div>
                 </div>
                 <div class="approach-item">
                     <div class="approach-item__number">02</div>
                     <div>
-                        <h3 class="approach-item__title">Sélection des modules</h3>
-                        <p class="approach-item__desc">Ensemble, nous identifions les modules qui apporteront le plus d'impact selon votre contexte. Commencer petit, mesurer, étendre — ou déployer une suite complète.</p>
+                        <h3 class="approach-item__title">Sélection des modules (1 semaine)</h3>
+                        <p class="approach-item__desc">Ensemble, nous choisissons les modules qui vont vraiment vous apporter de la valeur. Pas de vente de tout le catalogue. Vous commencez par un. Vous voyez les résultats. Vous décidez d'étendre.</p>
                     </div>
                 </div>
                 <div class="approach-item">
                     <div class="approach-item__number">03</div>
                     <div>
-                        <h3 class="approach-item__title">Intégration ERP</h3>
-                        <p class="approach-item__desc">Nous connectons les modules à votre ERP existant. Lecture et écriture bidirectionnelles. Vos données restent chez vous, vos équipes gardent leurs outils.</p>
+                        <h3 class="approach-item__title">Intégration ERP (1-2 semaines)</h3>
+                        <p class="approach-item__desc">Notre équipe connecte les modules à votre ERP. Lecture et écriture temps réel. Données bidirectionnelles. Vos données restent chez vous, dans votre infrastructure. Vos équipes ne changent pas d'outils.</p>
                     </div>
                 </div>
                 <div class="approach-item">
                     <div class="approach-item__number">04</div>
                     <div>
-                        <h3 class="approach-item__title">Formation et accompagnement</h3>
-                        <p class="approach-item__desc">Déploiement progressif, formation des utilisateurs, support dédié pendant les premiers mois. Nous iterons avec vos équipes jusqu'à ce que ca marche.</p>
+                        <h3 class="approach-item__title">Formation et support (2-4 semaines)</h3>
+                        <p class="approach-item__desc">Déploiement progressif avec vos équipes. Formation sur les premiers jours. Support dédié pendant le premier mois. On itère ensemble jusqu'à ce que ca marche parfaitement. Vous ne venez jamais seul à cette étape.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Le modèle expliqué -->
+    <section style="padding: 80px 24px; background: #0a1612;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2 style="font-size: 1.5rem; font-weight: 800; color: #ecfdf5; text-align: center; margin-bottom: 12px;">Pourquoi ajouter plutôt que remplacer</h2>
+            <p style="color: #94a3b8; text-align: center; font-size: 0.95rem; line-height: 1.7; margin-bottom: 40px;">Vous avez investi dans un ERP. Vos équipes le maîtrisent. Vos données y sont. Pourquoi le remplacer ?</p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                <div>
+                    <h3 style="font-weight: 700; color: #ecfdf5; margin-bottom: 20px;">Le coût d'une migration ERP</h3>
+                    <ul style="list-style: none; padding: 0; color: #94a3b8; font-size: 0.9rem; line-height: 1.8;">
+                        <li style="margin-bottom: 12px;">6 à 18 mois d'implémentation</li>
+                        <li style="margin-bottom: 12px;">100k à 500k EUR de frais (consulting + licences)</li>
+                        <li style="margin-bottom: 12px;">Formation complète de vos équipes</li>
+                        <li>Risque de perte de données, d'interruptions</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 style="font-weight: 700; color: #ecfdf5; margin-bottom: 20px;">Une couche analytics connectée</h3>
+                    <ul style="list-style: none; padding: 0; color: #94a3b8; font-size: 0.9rem; line-height: 1.8;">
+                        <li style="margin-bottom: 12px;">2 à 4 semaines de déploiement</li>
+                        <li style="margin-bottom: 12px;">Coût maîtrisé et transparent</li>
+                        <li style="margin-bottom: 12px;">Formation légère (le module seul, pas le tout)</li>
+                        <li>Résultats visibles le premier jour</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px; padding: 24px; background: rgba(16, 185, 129, 0.08); border-left: 4px solid #10b981; border-radius: 8px;">
+                <h3 style="font-weight: 700; color: #ecfdf5; margin-bottom: 12px;">Si vous arrêtez un jour</h3>
+                <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.7; margin: 0;">Vos données restent dans votre ERP, intactes. Les modules se désactivent. Vous continuez à utiliser votre ERP normalement. Rien d'irréversible.</p>
             </div>
         </div>
     </section>

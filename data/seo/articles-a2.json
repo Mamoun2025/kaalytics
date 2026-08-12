@@ -4,15 +4,13 @@
     "fr": {
       "title": "Connecter son ERP à un tableau de bord temps réel | Kaalytics",
       "description": "Comment connecter votre ERP à un tableau de bord temps réel. Guide pratique, cas concrets et indicateurs essentiels pour piloter votre activité."
-    },
-    "author": "karim-ouazzani"
+    }
   },
   "blog/automatiser-relances-clients.html": {
     "keyword": "automatiser relances clients",
     "fr": {
       "title": "Automatiser relances clients : gagner en trésorerie | Kaalytics",
       "description": "Comment automatiser les relances clients pour réduire le DSO, gagner en trésorerie et éviter les impayés. Guide pratique avec cas concrets."
-    },
-    "author": "nadia-cherkaoui"
+    }
   }
 }

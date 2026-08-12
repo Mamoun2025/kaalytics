@@ -248,7 +248,7 @@
     <div class="pricing-tiers">
         <div class="tier">
             <div class="tier__name">Standard</div>
-            <div class="tier__desc">L'essentiel pour démarrer. Les composants fondamentaux du module, prêts à l'emploi.</div>
+            <div class="tier__desc">Parfait pour une PME qui démarre. Fonctionnalités essentielles. Vous pouvez ajouter des utilisateurs à la demande.</div>
             <div class="tier__price"><span class="tier__price-value">990</span><span class="tier__price-currency"> EUR</span></div>
             <div class="tier__price-period">par module / mois</div>
             <ul class="tier__features">
@@ -298,6 +298,27 @@
         </div>
     </div>
 
+    <!-- Clarification des variables de prix -->
+    <section style="max-width: 900px; margin: 0 auto; padding: 60px 24px; text-align: center;">
+        <h2 style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary); margin-bottom: 20px;">Ce qui fait varier le coût</h2>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 40px;">Les trois variables ci-dessous peuvent influencer votre devis. Ci-dessous, la logique.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+            <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 24px; text-align: center;">
+                <h3 style="font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">Nombre d'utilisateurs</h3>
+                <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">Standard = 5 utilisateurs. Pro = 15. Premium = illimité. Chaque utilisateur supplémentaire en Standard coûte 50€/mois.</p>
+            </div>
+            <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 24px; text-align: center;">
+                <h3 style="font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">Intégrations ERP</h3>
+                <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">Standard = 1 connecteur ERP. Pro = multi-connecteurs. Premium = connecteurs illimités. Connecteurs custom = sur devis.</p>
+            </div>
+            <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 24px; text-align: center;">
+                <h3 style="font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">Composants custom</h3>
+                <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">Premium seul : développement de composants spécifiques à votre métier. Inclus dans le prix Premium.</p>
+            </div>
+        </div>
+    </section>
+
     <section class="modules-pricing">
         <h2 class="modules-pricing__title">Tarif par module</h2>
         <p class="modules-pricing__subtitle">Chaque module est indépendant. Combinez selon vos besoins.</p>
@@ -346,6 +367,50 @@
         <p class="guarantee__text"><strong>Satisfait ou rembourse, 30 jours.</strong> Chaque module est déployé avec un accompagnement initial. Si les résultats ne sont pas au rendez-vous, on vous rembourse. Sans question.</p>
     </div>
 
+    <!-- Ce qui est inclus / exclu -->
+    <section style="padding: 60px 24px; background: var(--bg-secondary);">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <h2 style="font-size: 1.5rem; font-weight: 800; color: var(--text-primary); text-align: center; margin-bottom: 12px;">Inclus ou pas dans chaque plan</h2>
+            <p style="color: var(--text-secondary); text-align: center; font-size: 0.95rem; margin-bottom: 40px;">Voici exactement ce que vous payez et ce que vous ne payez pas.</p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                <div>
+                    <h3 style="font-weight: 700; color: #10b981; margin-bottom: 20px;">Toujours inclus (tous les plans)</h3>
+                    <ul style="list-style: none; padding: 0; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8;">
+                        <li style="margin-bottom: 12px;">+ Audit initial gratuit</li>
+                        <li style="margin-bottom: 12px;">+ Intégration complète à votre ERP</li>
+                        <li style="margin-bottom: 12px;">+ Déploiement et configuration</li>
+                        <li style="margin-bottom: 12px;">+ Formation utilisateurs</li>
+                        <li style="margin-bottom: 12px;">+ Mises à jour et maintenance</li>
+                        <li style="margin-bottom: 12px;">+ Support initial 30 jours</li>
+                        <li style="margin-bottom: 12px;">+ Données restent chez vous (infrastructure client)</li>
+                        <li>+ Résiliation sans pénalité</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 style="font-weight: 700; color: #10b981; margin-bottom: 20px;">Options courantes (sur demande)</h3>
+                    <ul style="list-style: none; padding: 0; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8;">
+                        <li style="margin-bottom: 12px;">+ Ajout d'utilisateurs supplémentaires (50EUR/mois en Standard)</li>
+                        <li style="margin-bottom: 12px;">+ Connecteur ERP additionnel (multi-ERP)</li>
+                        <li style="margin-bottom: 12px;">+ Composants sur-mesure (inclus Premium)</li>
+                        <li style="margin-bottom: 12px;">+ Support étendu après 30j</li>
+                        <li style="margin-bottom: 12px;">+ Intégration CRM / E-commerce</li>
+                        <li style="margin-bottom: 12px;">+ Adaptations locales (conformité locale)</li>
+                        <li style="margin-bottom: 12px;">+ Déploiement sur multiple serveurs</li>
+                        <li>+ Backup avancé et SLA</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px; padding: 24px; background: rgba(16, 185, 129, 0.08); border-radius: 8px;">
+                <h3 style="font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">Estimation et transparence</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; margin-bottom: 16px;">Tarif de base : Standard/Pro/Premium par module. Après audit, on ajoute si besoin : utilisateurs supplémentaires, connecteurs, options. Vous approuvez avant signature. Aucune surprise après.</p>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; margin: 0;"><strong>Notre engagement :</strong> si un déploiement dépasse l'estimation, on absorbe la différence jusqu'à 20% de surcharge. Au-delà, on discute. Le client n'absorbe jamais une mauvaise estimation de notre côté.</p>
+            </div>
+        </div>
+    </section>
+
     <section class="pricing-faq">
         <h2 class="pricing-faq__title">Questions fréquentes</h2>
         <details class="faq-item">
@@ -362,11 +427,19 @@
         </details>
         <details class="faq-item">
             <summary>Combien de temps pour déployer un module ?</summary>
-            <p>Comptez 2 à 4 semaines entre la signature et le lancement. Notre équipe gère la configuration, l'import de données et la formation. Vous n'avez pas besoin de profil technique en interne.</p>
+            <p>Typiquement 2 à 4 semaines entre votre signature et votre accès au module en production. Cela inclut l'audit, la configuration, l'import de vos données, la formation de vos équipes. Aucune implication technique de votre côté. Notre équipe gère tout.</p>
         </details>
         <details class="faq-item">
             <summary>Mon ERP est-il compatible ?</summary>
             <p>Nous supportons Odoo (natif), SAP, Sage, Microsoft Dynamics et la plupart des ERP du marche via API REST. Pour les systèmes legacy, nous avons des connecteurs adaptés (CSV, FTP, ODBC).</p>
+        </details>
+        <details class="faq-item">
+            <summary>Dois-je avoir une équipe technique interne ?</summary>
+            <p>Non. Nous gérons toute la partie technique : configuration, intégrations, déploiement. Les utilisateurs finaux reçoivent une formation sur le module lui-même. Aucune compétence SQL, API ou infrastructure requise.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Puis-je tester avant de payer ?</summary>
+            <p>Oui. Nous proposons un audit gratuit de 1-2 jours, suivi d'une démo personnalisée avec vos données. Vous voyez exactement comment ça marchera chez vous. Si ça ne convient pas, vous n'êtes engagé à rien.</p>
         </details>
         <details class="faq-item">
             <summary>Puis-je avoir un composant sur-mesure ?</summary>
