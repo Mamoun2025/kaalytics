@@ -189,3 +189,56 @@ def test_critical_template_loaders_are_clean(js_files):
             f"des redirections (utilisé par 83 pages):\n"
             + "\n".join(f"  Ligne {ln}: {line}" for ln, line, _ in violations)
         )
+
+
+def test_service_worker_precache_consistency():
+    """
+    Vérifie que le service worker est cohérent:
+    - Aucune entrée de PRECACHE_ASSETS ne finit en .html
+    - OFFLINE_URL est présent dans PRECACHE_ASSETS
+    - OFFLINE_URL et PRECACHE_ASSETS sont synchronisés
+    """
+    root = Path(__file__).parent.parent.parent
+    sw_file = root / "sw.js"
+    assert sw_file.exists(), "Service worker manquant: sw.js"
+
+    content = sw_file.read_text(encoding='utf-8')
+
+    # Extraire OFFLINE_URL
+    offline_match = re.search(r"const\s+OFFLINE_URL\s*=\s*['\"]([^'\"]+)['\"]", content)
+    assert offline_match, "OFFLINE_URL non trouvé dans sw.js"
+    offline_url = offline_match.group(1)
+
+    # Vérifier qu'OFFLINE_URL ne finit pas en .html
+    assert not offline_url.endswith('.html'), (
+        f"OFFLINE_URL finit en .html ({offline_url}) - causera une redirection 308. "
+        f"Utiliser la version canonique sans extension."
+    )
+
+    # Extraire PRECACHE_ASSETS
+    precache_match = re.search(
+        r"const\s+PRECACHE_ASSETS\s*=\s*\[(.*?)\]",
+        content,
+        re.DOTALL
+    )
+    assert precache_match, "PRECACHE_ASSETS non trouvé dans sw.js"
+    precache_block = precache_match.group(1)
+
+    # Parser les URLs de PRECACHE_ASSETS
+    precache_urls = re.findall(r"['\"]([^'\"]+)['\"]", precache_block)
+    assert len(precache_urls) > 0, "Aucune URL trouvée dans PRECACHE_ASSETS"
+
+    # Vérifier qu'aucune URL ne finit en .html
+    for url in precache_urls:
+        assert not url.endswith('.html'), (
+            f"PRECACHE_ASSETS contient une URL en .html: {url}. "
+            f"Vercel redirige 308 sur .html, et cache.addAll() rejette les réponses redirigées. "
+            f"Utiliser la version canonique sans extension."
+        )
+
+    # Vérifier qu'OFFLINE_URL est dans PRECACHE_ASSETS
+    assert offline_url in precache_urls, (
+        f"OFFLINE_URL ({offline_url}) n'est pas dans PRECACHE_ASSETS. "
+        f"Sans quoi caches.match(OFFLINE_URL) échoue et le repli hors ligne ne marche pas. "
+        f"Ajouter '{offline_url}' à PRECACHE_ASSETS."
+    )

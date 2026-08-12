@@ -17,10 +17,6 @@
             parent: { name: 'Produits', url: '/products/' },
             current: 'Daedalia'
         },
-        'ascend': {
-            parent: { name: 'Produits', url: '/products/' },
-            current: 'Ascend'
-        },
         // Pages industries (secteurs)
         'industrie': {
             parent: { name: 'Industries', url: '/industries/' },
@@ -42,13 +38,9 @@
             parent: { name: 'Industries', url: '/industries/' },
             current: 'Mines & Carrieres'
         },
-        'collectivites': {
-            parent: { name: 'Industries', url: '/industries/' },
-            current: 'Collectivites'
-        },
         // Blog
         'blog': {
-            parent: { name: 'Ressources', url: '/ressources' },
+            parent: { name: 'Ressources', url: '/resources' },
             current: 'Blog'
         },
         // Case studies

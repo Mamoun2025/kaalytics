@@ -13,7 +13,7 @@ const PRECACHE_ASSETS = [
     '/assets/js/core/performance.js',
     '/assets/images/icons/icon-192x192.png',
     '/manifest.json',
-    '/404.html'
+    '/404'
 ];
 
 // Install event - precache essential assets
