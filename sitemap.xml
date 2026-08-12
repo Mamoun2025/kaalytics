@@ -90,6 +90,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kaalytics.com/blog/maintenance-predictive-guide"/>
   </url>
   <url>
+    <loc>https://kaalytics.com/blog/odoo-pme-bon-choix</loc>
+    <lastmod>2026-08-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/blog/premier-erp-pme</loc>
+    <lastmod>2026-08-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kaalytics.com/blog/reduire-couts-flotte-ia</loc>
     <lastmod>2026-08-12</lastmod>
     <priority>0.8</priority>
@@ -104,6 +114,11 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/blog/roi-gestion-flotte"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/blog/roi-gestion-flotte"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kaalytics.com/blog/roi-gestion-flotte"/>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/blog/securite-donnees-ia-entreprise</loc>
+    <lastmod>2026-08-12</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/blog/tableau-de-bord-erp</loc>

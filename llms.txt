@@ -37,8 +37,11 @@
 - [Facturation électronique : quel ERP choisir pour être conforme](https://kaalytics.com/blog/facturation-electronique-erp) : Calendrier réel, obligations légales et solutions pour mettre votre ERP en conformité facturation électronique dès 2026.
 - [GPS Tracking : 5 erreurs à éviter | Blog Kaalytics](https://kaalytics.com/blog/gps-tracking-erreurs) : Les 5 erreurs les plus courantes lors du déploiement d'une solution GPS tracking pour flotte de véhicules et comment les éviter.
 - [Maintenance prédictive : le guide complet | Blog Kaalytics](https://kaalytics.com/blog/maintenance-predictive-guide) : Guide complet de la maintenance prédictive pour flottes de véhicules. Principes, technologies, mise en œuvre et bénéfices.
+- [Odoo pour une PME : dans quels cas c'est le bon choix](https://kaalytics.com/blog/odoo-pme-bon-choix) : Odoo convient-il vraiment à votre PME ? Comparaison avec Sage et Cegid, coûts réels, limites, et checklist de décision.
+- [Faut-il un ERP quand on n'en a jamais eu](https://kaalytics.com/blog/premier-erp-pme) : À partir de quelle taille faut-il passer à un ERP ? Ce qu'on perd à rester sur Excel, ce que coûte vraiment un premier déploiement.
 - [Comment réduire les coûts de flotte avec l'IA | Blog Kaalytics](https://kaalytics.com/blog/reduire-couts-flotte-ia) : Découvrez comment l'IA permet de réduire les coûts de gestion de flotte. Maintenance prédictive, optimisation carburant, analyse des données.
 - [ROI d'une solution de gestion de flotte | Blog Kaalytics](https://kaalytics.com/blog/roi-gestion-flotte) : Comment calculer le ROI d'une solution de gestion de flotte. Méthodologie, indicateurs clés et exemples concrets.
+- [IA et données d'entreprise : où vont vos données, vraiment](https://kaalytics.com/blog/securite-donnees-ia-entreprise) : Sécurité données IA en entreprise : RGPD, confidentialité, transferts USA, et obligations contractuelles que vous devez connaître.
 - [Connecter son ERP à un tableau de bord temps réel | Kaalytics](https://kaalytics.com/blog/tableau-de-bord-erp) : Comment connecter votre ERP à un tableau de bord temps réel. Guide pratique, cas concrets et indicateurs essentiels pour piloter votre activité.
 
 ## Guides

@@ -171,6 +171,14 @@ def _run_checks_internal(root: Path) -> tuple[list[Violation], list[Warning]]:
         for err in rules.check_french_on_english_page(rel, html):
             violations.append(Violation(err.page, err.rule, err.detail))
 
+        # Français dans les blocs JSON-LD
+        for err in rules.check_french_in_jsonld(rel, html):
+            violations.append(Violation(err.page, err.rule, err.detail))
+
+        # Gibberish (traduction mot-à-mot cassée)
+        for err in rules.check_gibberish_substitution(rel, html):
+            violations.append(Violation(err.page, err.rule, err.detail))
+
     # --- Sitemap
     sitemap = root / "sitemap.xml"
     if sitemap.exists():

@@ -1,0 +1,23 @@
+{
+  "blog/odoo-pme-bon-choix.html": {
+    "keyword": "Odoo PME coût implémentation bon choix 2026",
+    "fr": {
+      "title": "Odoo pour une PME : dans quels cas c'est le bon choix",
+      "description": "Odoo convient-il vraiment à votre PME ? Comparaison avec Sage et Cegid, coûts réels, limites, et checklist de décision."
+    }
+  },
+  "blog/securite-donnees-ia-entreprise.html": {
+    "keyword": "sécurité données IA entreprise RGPD confidentialité 2026",
+    "fr": {
+      "title": "IA et données d'entreprise : où vont vos données, vraiment",
+      "description": "Sécurité données IA en entreprise : RGPD, confidentialité, transferts USA, et obligations contractuelles que vous devez connaître."
+    }
+  },
+  "blog/premier-erp-pme.html": {
+    "keyword": "premier ERP PME quand nécessaire coût 2026",
+    "fr": {
+      "title": "Faut-il un ERP quand on n'en a jamais eu",
+      "description": "À partir de quelle taille faut-il passer à un ERP ? Ce qu'on perd à rester sur Excel, ce que coûte vraiment un premier déploiement."
+    }
+  }
+}
