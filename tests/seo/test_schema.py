@@ -196,6 +196,66 @@ class TestNonRegression:
                 assert "@type" in item and item["@type"] == "ListItem", \
                     f"ListItem manquant dans {page.html_path} entrée {item}"
 
+    def test_extra_org_replaces_default(self):
+        """Une Organization supplémentaire remplace celle par défaut, pas s'ajoute."""
+        from scripts.seo.head import build_head_block
+        import re
+
+        meta = next(p for p in load_catalog(DATA) if p.html_path == "index.html")
+        defaults = load_defaults(DATA)
+
+        # Créer une Organization supplémentaire riche
+        extra_org = {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Kaalytics Riche",
+            "hasOfferCatalog": {"@type": "OfferCatalog"}
+        }
+
+        block = build_head_block(meta, defaults, extra_schemas=[extra_org])
+
+        # Compter les Organization dans le bloc
+        scripts = re.findall(r'<script[^>]*ld\+json[^>]*>(.*?)</script>', block, re.S)
+        org_count = 0
+        for script in scripts:
+            data = json.loads(script)
+            if data.get("@type") == "Organization":
+                org_count += 1
+
+        assert org_count == 1, f"Expected 1 Organization, got {org_count}"
+
+    def test_no_duplicate_types_at_root_level(self):
+        """Aucun type ne doit apparaître plus d'une fois au niveau racine."""
+        from scripts.seo.head import build_head_block, _deduplicate_schemas
+        from scripts.seo.gen_head import _load_extra_schemas
+        import re
+
+        catalog = load_catalog(DATA)
+        defaults = load_defaults(DATA)
+        extra_schemas_by_page = _load_extra_schemas()
+
+        for page in catalog:
+            extra = extra_schemas_by_page.get(page.html_path, {}).get("extra_schemas")
+            block = build_head_block(page, defaults, extra_schemas=extra)
+            block = _deduplicate_schemas(block + "</head></html>")
+
+            # Compter les types au niveau racine
+            scripts = re.findall(r'<script[^>]*ld\+json[^>]*>(.*?)</script>', block, re.S)
+            type_counts = {}
+            for script in scripts:
+                try:
+                    data = json.loads(script)
+                    t = data.get("@type")
+                    if t:
+                        type_counts[t] = type_counts.get(t, 0) + 1
+                except:
+                    pass
+
+            # Vérifier qu'aucun type n'apparaît plus d'une fois
+            duplicates = {t: count for t, count in type_counts.items() if count > 1}
+            assert not duplicates, \
+                f"{page.html_path}: types dupliqués au premier niveau: {duplicates}"
+
 
 class TestSchemaIntegration:
     """Tests d'intégration avec le catalogue."""

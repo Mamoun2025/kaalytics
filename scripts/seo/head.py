@@ -108,9 +108,15 @@ def build_head_block(meta: PageMeta, defaults: dict, extra_schemas: list[dict] |
     if article:
         schemas.append(article)
 
-    # 3. Organization (toujours présente)
-    organization = {"@context": "https://schema.org", **defaults["organization"]}
-    schemas.append(organization)
+    # 3. Organization (sauf si remplacée par extra_schemas)
+    # Vérifier si extra_schemas contient une Organization
+    has_extra_org = False
+    if extra_schemas:
+        has_extra_org = any(s.get("@type") == "Organization" for s in extra_schemas)
+
+    if not has_extra_org:
+        organization = {"@context": "https://schema.org", **defaults["organization"]}
+        schemas.append(organization)
 
     # 4. Schémas supplémentaires (si fournis)
     if extra_schemas:
