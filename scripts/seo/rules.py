@@ -1,6 +1,7 @@
 """Regles de verification SEO. A appeler depuis check_seo.py."""
 from __future__ import annotations
 
+import json
 import re
 from pathlib import Path
 
@@ -26,6 +27,15 @@ ETIQUETTES_FR = re.compile(
     r"Contactez|Demander|Telecharger|Télécharger)(?![\w-])")
 
 HORS_INDEX = {"404.html", "merci.html"}
+
+# Gibberish signatures: séquences impossibles en anglais correct
+# Résultat d'une traduction mot-à-mot cassée où des mots français restent
+GIBBERISH_PATTERNS = re.compile(
+    r"\b(has votre|has vos|has notre|has nos|has clear|has free audit|has \w+ audit|"
+    r"of vos|of votre|of notre|of nos|"
+    r"qu'is|c'is|n'is|Par or|or begin|concoit|deploie|ameliore|forrez|meterr|integre|"
+    r"modules the|the plus)\b", re.I
+)
 
 
 def _visible_text(html: str) -> str:
@@ -184,5 +194,73 @@ def check_french_on_english_page(rel: str, html: str) -> list[RuleError]:
     trouves = sorted(set(m.lower() for m in FRENCH_MARKERS.findall(texte)))
     if trouves:
         errors.append(RuleError(rel, "francais-sur-page-en", ", ".join(trouves[:5])))
+
+    return errors
+
+
+def _extract_jsonld_text(html: str) -> str:
+    """Extrait les valeurs textuelles de tous les blocs JSON-LD.
+    Cherche les champs porteurs de contenu : name, description, text, headline, articleBody, etc.
+    """
+    texts = []
+    for bloc_json in re.findall(r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>', html, re.S):
+        try:
+            data = json.loads(bloc_json)
+            # Parcourir récursivement pour extraire les champs textuels
+            def extract_text_fields(obj):
+                if isinstance(obj, dict):
+                    for key, value in obj.items():
+                        if key in ("name", "description", "text", "headline", "articleBody"):
+                            if isinstance(value, str):
+                                texts.append(value)
+                        else:
+                            extract_text_fields(value)
+                elif isinstance(obj, list):
+                    for item in obj:
+                        extract_text_fields(item)
+            extract_text_fields(data)
+        except (json.JSONDecodeError, TypeError):
+            pass
+    return " ".join(texts)
+
+
+def check_french_in_jsonld(rel: str, html: str) -> list[RuleError]:
+    """Verifie l'absence de francais dans les blocs JSON-LD des pages /en/."""
+    errors = []
+    if not rel.startswith("en/"):
+        return errors
+
+    jsonld_text = _extract_jsonld_text(html)
+    if not jsonld_text:
+        return errors
+
+    # Chercher les marqueurs de français (exclure les acronymes courts comme "IA")
+    etiq = sorted(set(e for e in ETIQUETTES_FR.findall(jsonld_text) if len(e) > 2))
+    if etiq:
+        errors.append(RuleError(rel, "francais-dans-jsonld-sur-page-EN", ", ".join(etiq[:5])))
+
+    trouves = sorted(set(m.lower() for m in FRENCH_MARKERS.findall(jsonld_text) if len(m) > 2))
+    if trouves:
+        errors.append(RuleError(rel, "francais-dans-jsonld-sur-page-en", ", ".join(trouves[:5])))
+
+    return errors
+
+
+def check_gibberish_substitution(rel: str, html: str) -> list[RuleError]:
+    """Verifie l'absence de gibberish (traduction mot-à-mot cassée) sur toutes les pages."""
+    errors = []
+
+    # Vérifier le texte visible
+    texte_visible = _visible_text(html)
+    gibberish_visible = sorted(set(m for m in GIBBERISH_PATTERNS.findall(texte_visible)))
+    if gibberish_visible:
+        errors.append(RuleError(rel, "gibberish-substitution-visible", ", ".join(gibberish_visible[:3])))
+
+    # Vérifier aussi dans le JSON-LD (important pour les pages /en/)
+    jsonld_text = _extract_jsonld_text(html)
+    if jsonld_text:
+        gibberish_jsonld = sorted(set(m for m in GIBBERISH_PATTERNS.findall(jsonld_text)))
+        if gibberish_jsonld:
+            errors.append(RuleError(rel, "gibberish-substitution-jsonld", ", ".join(gibberish_jsonld[:3])))
 
     return errors
