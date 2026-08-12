@@ -40,6 +40,11 @@
     "fr": {
       "title": "Demander une Démo Gratuite | Kaalytics",
       "description": "Demandez une démo gratuite de nos modules. Présentation personnalisée de 30 minutes avec un expert."
+    },
+    "en": {
+      "path": "en/demo.html",
+      "title": "Request a Free Demo | Kaalytics",
+      "description": "Request a free demo of our modules. 30-minute personalized presentation with an expert."
     }
   },
   "faq.html": {

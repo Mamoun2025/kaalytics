@@ -5,6 +5,11 @@
     "fr": {
       "title": "Politique de Confidentialité | Kaalytics",
       "description": "Politique de confidentialité de Kaalytics. Comment nous collectons, utilisons et protégeons vos données personnelles."
+    },
+    "en": {
+      "path": "en/legal/privacy.html",
+      "title": "Privacy Policy | Kaalytics",
+      "description": "Kaalytics privacy policy. How we collect, use and protect your personal data with full GDPR compliance."
     }
   },
   "legal/terms.html": {
@@ -13,6 +18,11 @@
     "fr": {
       "title": "Conditions Générales d'Utilisation | Kaalytics",
       "description": "Conditions générales d'utilisation des services Kaalytics - modules IA connectés aux ERP."
+    },
+    "en": {
+      "path": "en/legal/terms.html",
+      "title": "Terms of Service | Kaalytics",
+      "description": "Kaalytics terms of service for AI modules connected to your ERP systems and smart dashboards."
     }
   },
   "legal/mentions.html": {
@@ -29,6 +39,11 @@
     "fr": {
       "title": "Politique de Cookies | Kaalytics",
       "description": "Politique de cookies de Kaalytics. Comment nous utilisons les cookies et technologies similaires sur notre site."
+    },
+    "en": {
+      "path": "en/legal/cookies.html",
+      "title": "Cookie Policy | Kaalytics",
+      "description": "Kaalytics cookie policy. How we use cookies and similar technologies to enhance your browsing experience."
     }
   }
 }
