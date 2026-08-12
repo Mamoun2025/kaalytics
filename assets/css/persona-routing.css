@@ -1,0 +1,219 @@
+/* Persona Routing Page */
+.persona-hero {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, transparent 100%);
+  border-bottom: 1px solid rgba(16, 185, 129, 0.15);
+  padding: 120px 24px 60px;
+  text-align: center;
+}
+
+.persona-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 800;
+  color: #ecfdf5;
+  margin-bottom: 20px;
+}
+
+.persona-hero .subtitle {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Personas Grid */
+.personas-grid {
+  padding: 80px 24px;
+}
+
+.personas-grid .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.personas-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.persona-card {
+  background: #0f1f1b;
+  border: 2px solid rgba(16, 185, 129, 0.15);
+  border-radius: 12px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.persona-card:hover {
+  border-color: rgba(16, 185, 129, 0.35);
+  box-shadow: 0 12px 40px rgba(16, 185, 129, 0.1);
+  transform: translateY(-4px);
+}
+
+.persona-icon {
+  min-height: 60px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, transparent 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+}
+
+.tech-card .persona-icon::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #10b981, rgba(16, 185, 129, 0.5));
+  border-radius: 6px;
+}
+
+.ops-card .persona-icon::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #10b981, rgba(16, 185, 129, 0.5));
+  border-radius: 50%;
+}
+
+.exec-card .persona-icon::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #10b981, rgba(16, 185, 129, 0.5));
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.persona-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ecfdf5;
+  margin: 0;
+}
+
+.persona-subtitle {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.persona-features {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+
+.persona-features li {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+}
+
+.persona-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-weight: bold;
+}
+
+/* CTA Buttons */
+.persona-cta {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid;
+  margin-top: auto;
+}
+
+.demo-cta {
+  background: #10b981;
+  border-color: #10b981;
+  color: #040a08;
+}
+
+.demo-cta:hover {
+  background: #059669;
+  border-color: #059669;
+  transform: translateY(-2px);
+}
+
+.roi-cta {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.roi-cta:hover {
+  background: rgba(16, 185, 129, 0.25);
+  transform: translateY(-2px);
+}
+
+.exec-cta {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.exec-cta:hover {
+  background: rgba(16, 185, 129, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Persona Note */
+.persona-note {
+  text-align: center;
+  padding: 20px;
+  background: rgba(16, 185, 129, 0.05);
+  border-radius: 6px;
+}
+
+.persona-note p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .personas-cards {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .persona-card {
+    padding: 28px 20px;
+  }
+
+  .personas-grid {
+    padding: 60px 20px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .persona-card,
+  .persona-cta {
+    transition: none;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .persona-card {
+    background: #f8fafc;
+    border-color: rgba(16, 185, 129, 0.2);
+  }
+}

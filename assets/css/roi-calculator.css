@@ -1,0 +1,284 @@
+/* ROI Calculator Block */
+.roi-calculator-block {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(16, 185, 129, 0.02) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  border-radius: 12px;
+  padding: 60px 24px;
+  margin: 60px 0;
+}
+
+.roi-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.roi-header h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: #ecfdf5;
+  margin-bottom: 12px;
+}
+
+.roi-header .subtitle {
+  font-size: 1rem;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.roi-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Inputs column */
+.roi-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-group label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ecfdf5;
+}
+
+.input-group select {
+  background: #0f1f1b;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 6px;
+  color: #ecfdf5;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group select:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.slider {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(to right,
+    #10b981 0%,
+    #10b981 var(--value),
+    rgba(16, 185, 129, 0.2) var(--value),
+    rgba(16, 185, 129, 0.2) 100%
+  );
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #10b981;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+  transition: box-shadow 0.2s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  box-shadow: 0 2px 12px rgba(16, 185, 129, 0.5);
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #10b981;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+  transition: box-shadow 0.2s ease;
+}
+
+.slider::-moz-range-thumb:hover {
+  box-shadow: 0 2px 12px rgba(16, 185, 129, 0.5);
+}
+
+.slider-value {
+  min-width: 50px;
+  text-align: right;
+  font-weight: 600;
+  color: #10b981;
+  font-size: 0.95rem;
+}
+
+.input-group small {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* Output column */
+.roi-output {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.roi-result {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 8px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.result-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.result-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.result-value {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: #ecfdf5;
+}
+
+.result-value.roi-savings {
+  color: #10b981;
+}
+
+.result-value.final {
+  color: #10b981;
+}
+
+.result-item small {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.result-divider {
+  height: 1px;
+  background: rgba(16, 185, 129, 0.1);
+  margin: 8px 0;
+}
+
+.result-item.roi-highlight {
+  padding: 12px;
+  background: rgba(16, 185, 129, 0.12);
+  border-radius: 6px;
+  margin: 8px 0;
+}
+
+.result-item.roi-final {
+  padding: 16px;
+  background: rgba(16, 185, 129, 0.15);
+  border-radius: 6px;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+/* Button and disclaimer */
+.roi-contact-button {
+  background: #10b981;
+  border: none;
+  color: #040a08;
+  padding: 14px 24px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: none;
+}
+
+.roi-contact-button:hover {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(16, 185, 129, 0.3);
+}
+
+.roi-contact-button:focus {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+
+.disclaimer {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-align: center;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .roi-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .roi-calculator-block {
+    padding: 40px 20px;
+    margin: 40px 0;
+  }
+
+  .roi-result {
+    padding: 24px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .slider::-webkit-slider-thumb,
+  .slider::-moz-range-thumb,
+  .roi-contact-button {
+    transition: none;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .roi-calculator-block {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(16, 185, 129, 0.04) 100%);
+    border-color: rgba(16, 185, 129, 0.2);
+  }
+
+  .roi-inputs select {
+    background: #f8fafc;
+    border-color: rgba(16, 185, 129, 0.15);
+    color: #1e293b;
+  }
+
+  .slider-value,
+  .result-value.roi-savings,
+  .result-value.final {
+    color: #059669;
+  }
+}

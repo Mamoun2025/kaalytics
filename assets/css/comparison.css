@@ -1,0 +1,356 @@
+/* Comparison Page */
+.comparison-hero {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, transparent 100%);
+  border-bottom: 1px solid rgba(16, 185, 129, 0.15);
+  padding: 100px 24px 60px;
+  text-align: center;
+}
+
+.comparison-hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #ecfdf5;
+  margin-bottom: 20px;
+}
+
+.comparison-hero .lead {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.comparison-content {
+  padding: 60px 24px;
+}
+
+.comparison-content .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Quick Answer */
+.quick-answer {
+  margin-bottom: 60px;
+}
+
+.quick-answer h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ecfdf5;
+  margin-bottom: 32px;
+}
+
+.qa-box {
+  background: rgba(16, 185, 129, 0.08);
+  border-left: 4px solid #10b981;
+  padding: 24px;
+  border-radius: 6px;
+  margin-bottom: 24px;
+}
+
+.qa-box p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ecfdf5;
+  margin-bottom: 16px;
+}
+
+.qa-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.qa-box li {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+}
+
+.qa-box li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-weight: bold;
+}
+
+/* Comparison Table */
+.comparison-table-wrapper {
+  margin-bottom: 60px;
+}
+
+.comparison-table-wrapper h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ecfdf5;
+  margin-bottom: 28px;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 18px;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.comparison-table th {
+  background: rgba(16, 185, 129, 0.12);
+  border-bottom: 2px solid rgba(16, 185, 129, 0.2);
+  font-weight: 700;
+  color: #ecfdf5;
+}
+
+.comparison-table td {
+  border-bottom: 1px solid rgba(16, 185, 129, 0.1);
+  color: #94a3b8;
+}
+
+.comparison-table td strong {
+  color: #ecfdf5;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Deep Dives */
+.deep-dives {
+  margin-bottom: 60px;
+}
+
+.deep-dive-section {
+  margin-bottom: 48px;
+}
+
+.deep-dive-section h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ecfdf5;
+  margin-bottom: 24px;
+}
+
+.deep-dive-section h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #10b981;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.deep-dive-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.deep-dive-section li {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  padding: 10px 0;
+  padding-left: 24px;
+  position: relative;
+}
+
+.deep-dive-section li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #10b981;
+}
+
+/* Matchups */
+.matchups {
+  margin-bottom: 60px;
+}
+
+.matchups h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ecfdf5;
+  margin-bottom: 32px;
+}
+
+.matchup-card {
+  background: rgba(16, 185, 129, 0.06);
+  border: 1px solid rgba(16, 185, 129, 0.12);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.matchup-card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ecfdf5;
+  margin-bottom: 12px;
+}
+
+.matchup-card p {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+/* Decision Framework */
+.decision-framework {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  border-radius: 8px;
+  padding: 40px;
+  margin-bottom: 60px;
+}
+
+.decision-framework h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ecfdf5;
+  margin-bottom: 28px;
+}
+
+.framework-content > p {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  margin-bottom: 24px;
+}
+
+.question {
+  background: #0f1f1b;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.question p {
+  font-size: 0.95rem;
+  color: #ecfdf5;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.answer {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.answer.yes {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+.answer.no {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+/* FAQ */
+.faq {
+  margin-bottom: 60px;
+}
+
+.faq h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ecfdf5;
+  margin-bottom: 32px;
+}
+
+.faq h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ecfdf5;
+  margin-bottom: 12px;
+  cursor: pointer;
+  padding: 12px 0;
+}
+
+.faq [itemprop="acceptedAnswer"] {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.7;
+  padding: 12px 0 24px 0;
+  border-bottom: 1px solid rgba(16, 185, 129, 0.08);
+}
+
+.faq [itemprop="acceptedAnswer"]:last-of-type {
+  border-bottom: none;
+}
+
+/* CTA Section */
+.comparison-cta {
+  text-align: center;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, transparent 100%);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  border-radius: 8px;
+  padding: 48px 24px;
+  margin-top: 60px;
+}
+
+.comparison-cta h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ecfdf5;
+  margin-bottom: 16px;
+}
+
+.comparison-cta p {
+  font-size: 1rem;
+  color: #94a3b8;
+  margin-bottom: 28px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #10b981;
+  color: #040a08;
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(16, 185, 129, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .comparison-table {
+    font-size: 0.85rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 12px;
+  }
+
+  .decision-framework {
+    padding: 24px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .cta-button {
+    transition: none;
+  }
+}
