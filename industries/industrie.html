@@ -388,6 +388,189 @@
         </div>
     </section>
 
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Le déroulé du déploiement</h2>
+        <p class="challenges__subtitle">Comment on améliore votre production et votre qualité</p>
+
+        <div class="solution-item">
+            <span class="solution-item__number">1</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Audit production (Semaine 1)</div>
+                <div class="solution-item__desc">On visite votre usine, on parle à l'équipe production. On identifie : où sont les goulots (bottlenecks) réels, où vous perdiez du temps, quels défauts reviennent tout le temps. Pas de théorie, juste le terrain.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">2</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Connecter l'ERP et les machines (Semaines 2-3)</div>
+                <div class="solution-item__desc">Supply Chain et ERP Connect lisent vos données production : temps de cycle, rebuts, anomalies arrêts. Les capteurs se branchent sur les machines critiques (sans les modifier). Tout rentre dans le système en temps réel.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">3</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Configurer les alertes (Semaine 4)</div>
+                <div class="solution-item__desc">Les anomalies : temps de cycle rallongit, taux de rebut augmente, machine démarre/s'arrête anormalement. Chacune déclenche une alerte spécifique. Les chefs d'équipe reçoivent les notifications avant de savoir qu'il y a un problème.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">4</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Dashboards temps réel et OEE (Semaine 5+)</div>
+                <div class="solution-item__desc">OEE (Overall Equipment Effectiveness) = Disponibilité × Performance × Qualité. Vous la voyez par équipement, par ligne, par shift. Chaque directeur voit les vrais goulots et peut décider où investir.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Les prérequis qui bloquent</h2>
+        <p class="challenges__subtitle">Ce qui doit être en place</p>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Données de production élémentaires</div>
+            <div class="challenge-card__desc">On a besoin de savoir : ce que vous produisez, le temps de cycle, les rebuts. Si c'est sur des papiers ou des post-its, digitalisez d'abord. Si c'est dans un MES ou un ERP : on connecte directement.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Accès aux machines de production</div>
+            <div class="challenge-card__desc">Pour les capteurs : on a besoin d'accès physique pour installer. Pour la lecture de données : interface OPC-UA ou Modbus, ou on peut importer par CSV. Autorisations et sécurité à valider d'entrée de jeu.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Documentation d'équipement disponible</div>
+            <div class="challenge-card__desc">Manuals des machines, schémas électriques, historique maintenance. Si c'est tout chez vous en papier, on va lentement. Si c'est organisé : on déploie vite.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Acceptance du personnel production</div>
+            <div class="challenge-card__desc">Les opérateurs craignent qu'on optimise leur travail à mort. Réalité : on optimise les goulots et les arrêts, pas les gens. Formation 2-3 jours. C'est un outil pour eux, pas un flic.</div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Ce que vous mesurez vraiment</h2>
+        <p class="challenges__subtitle">Les KPIs de la production industrielle</p>
+
+        <div class="solution-item">
+            <span class="solution-item__number">1</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">OEE (Overall Equipment Effectiveness)</div>
+                <div class="solution-item__desc">Benchmark France 2024 : 50-70 %. Excellents : 80-85 %. Mauvais : 30-40 %. Chaque point d'OEE = 1-2 % de capacité gagnée. Avec une ligne de 1000 unités/jour et OEE à 60 %, monter à 75 % = 150 unités/jour additionnelles = 50-100k euros de revenu annuel supplémentaire par ligne.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">2</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Taux de rebut / Defects per Million (DPM)</div>
+                <div class="solution-item__desc">Sur ligne à fort cadence, le contrôle manuel détecte seulement 70-80 % des défauts. Les 20-30 % ratés = réclamation client ou destruction en fin de chaîne. Automatisation du contrôle + alertes prédictive = réduit DPM de 60-80 %.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">3</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Temps moyen entre défaillances (MTBF)</div>
+                <div class="solution-item__desc">Maintenance réactive : machine tombe en panne, vous perdez 4-8 heures. Maintenance prédictive : révision faite avant la panne, machine roule 99 % du temps. Gain : -90 % des arrêts imprévus en 4-6 mois.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">4</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Consommation énergétique par unité</div>
+                <div class="solution-item__desc">Machine vieille ou mal réglée = surconsommation 15-20 %. Alertes consommation anormale + tuning automatique = réduit facture électrique de 10-15 %. Sur une usine de 2 MW, ça fait 30-50k euros/an.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Objections qu'on entend</h2>
+        <p class="challenges__subtitle">Réponses qu'on donne</p>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">« On a une vieille usine — c'est impossible de connecter. »</div>
+            <div class="challenge-card__desc">Au contraire. Les vieilles machines n'ont pas de capteurs : on les ajoute en externe. Pour les données : capteurs de vibration, température, consommation électrique. Coût : 500-1500 euros par machine. Très amorti si vous avez du downtime.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">« Mon ERP ne parle à rien. »</div>
+            <div class="challenge-card__desc">Si c'est Sage, SAP, Oracle, Odoo : on connecte directement. Si c'est du legacy propriétaire : on passe par des exports quotidiens. Plus lent, mais ça marche. C'est discuté en démo selon votre système.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">« Ça va être un monstre d'implémentation. »</div>
+            <div class="challenge-card__desc">5 semaines en général. Une semaine par module, une semaine de stabilisation. Si vous avez 10 lignes de production, on les onboarde graduellement. Semaine 1-2 : première ligne en prod. Semaine 3-5 : les autres.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">« Mes données historiques sont un chaos. »</div>
+            <div class="challenge-card__desc">On part de zéro le jour J. À partir de mois 2, vous avez des données de qualité. La prédiction commence petit (détections évidentes) et s'affine avec le temps. Pas besoin d'historique parfait pour démarrer.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">« Ça va rallentir nos lignes. »</div>
+            <div class="challenge-card__desc">Zéro impact. Les capteurs ne ralentissent rien. Le système tourne en parallèle de votre production. Les alertes n'apparaissent que s'il y a vraiment un problème — pas de faux positifs de paranoia.</div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Questions fréquentes</h2>
+        <p class="challenges__subtitle">Réponses directes</p>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">En combien de temps on améliore l'OEE ?</div>
+            <div class="challenge-card__desc">Aussitôt qu'on a une semaine de données : vous voyez les vrais goulots. Premiers gains : semaine 4 (alertes anomalies réduisent les arrêts surprise). Gains stabilisés : mois 3-4 (assez de données pour patterns fiables).</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Peut-on garder mes systèmes actuels ?</div>
+            <div class="challenge-card__desc">Oui, 100 %. Vous n'êtes pas obligé de remplacer votre ERP ou MES. Kaalytics se pose en parallèle et enrichit vos données. Si vous changez de système plus tard, la migration est facile.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Qui reçoit les alertes ?</div>
+            <div class="challenge-card__desc">Vous configurez : chefs d'équipe pour anomalies production, mainteneurs pour alertes préventive, responsable usine pour résumé quotidien. Pas de spam — les alertes sont chacune actionnable.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Comment vous garantissez la confidentialité des recettes ?</div>
+            <div class="challenge-card__desc">On voit les données de production (temps, défauts, consommation), pas les recettes ni formulations. Les données restent chez vous — zéro upload permanent vers notre cloud. Audit annuel de sécurité inclus.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Et si je ne suis pas satisfait après 3 mois ?</div>
+            <div class="challenge-card__desc">Abonnement flexible. Vous annulez sans pénalité. Mais honnêtement, 9 clients sur 10 voient des gains mesurables à mois 2. Si rien ne marche, on apprend pourquoi ensemble et on cherche une autre approche.</div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border); padding-bottom: 40px;">
+        <h2 class="challenges__title">Pour aller plus loin</h2>
+        <p class="challenges__subtitle">Ressources et modules associés</p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;">
+            <a href="../modules/erp-connect" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Module ERP Connect</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Connecteurs production, dashboards temps réel, alertes anomalies.</div>
+            </a>
+            <a href="../modules/supply-chain" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Module Supply Chain</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Planification matières, prévisions usure, stock optimisé.</div>
+            </a>
+            <a href="../modules/financial-operations" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Module Financial Operations</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Coûts production réels, cash flow prédictif, marges par ligne.</div>
+            </a>
+            <a href="../pricing" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Tarification</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Par nombre de lignes de production. Contrat flexible.</div>
+            </a>
+        </div>
+    </section>
+
     <section class="industry-cta">
         <h2 class="industry-cta__title">Prêt à optimiser votre production ?</h2>
         <p class="industry-cta__subtitle">Contactez notre équipe pour une démo personnalisée</p>

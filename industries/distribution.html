@@ -388,6 +388,189 @@
         </div>
     </section>
 
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Le déroulé du déploiement</h2>
+        <p class="challenges__subtitle">Comment on améliore votre stock et vos ventes</p>
+
+        <div class="solution-item">
+            <span class="solution-item__number">1</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Audit données articles (Semaine 1)</div>
+                <div class="solution-item__desc">On analyse votre fichier articles : est-ce que les prix de revient sont justes, les descriptions complètes, les familles cohérentes ? 40 % des distributeurs ont des données sales mal renseignées — ça casse la prédiction. On nettoie d'abord.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">2</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Connecter l'ERP et l'historique (Semaines 2-3)</div>
+                <div class="solution-item__desc">Supply Chain Command lit vos ventes des 12-24 derniers mois dans l'ERP. Plus vous avez d'historique, meilleure la prédiction. Puis on renseigne les clients, les liaisons fournisseur, les délais livraison actuels.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">3</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Calibrer la prédiction (Semaine 4)</div>
+                <div class="solution-item__desc">L'IA analyse les patterns : saisonnalité, cycles clients, anomalies (promotions, ruptures). Elle propose un stock optimal par article. On peut affiner pour tel client, telle période. Les mécaniciens restent en contrôle.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">4</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Dashboards et alertes (Semaine 5+)</div>
+                <div class="solution-item__desc">Chaque responsable voit : ruptures prédites 7-15 jours à l'avance, surstock identifié, rotation par article, couverture jours. Les alertes passent avant le problème, pas après.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Les prérequis qui bloquent</h2>
+        <p class="challenges__subtitle">Ce qui doit être en place</p>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Données articles et pricing robustes</div>
+            <div class="challenge-card__desc">Si vos prix de revient sont faux, les marges calculées sont fausses. Si les articles manquent de description ou sont en doublon, la prédiction demande perd ses repères. 2-3 semaines de nettoyage = gain réel après. Pas de shortcut.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Historique de vente accessible</div>
+            <div class="challenge-card__desc">La prédiction a besoin d'au moins 12 mois de données réelles. Idéal : 24 mois. Si vos données sont en PDF ou sur papier, on digitalise d'abord. Si elles sont dans l'ERP : on les extrait directement.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Accès à votre réseau de fournisseurs</div>
+            <div class="challenge-card__desc">On a besoin de savoir : délais de livraison réels, minimums de commande, moq (quantity), rabais. Si ça bouge tous les mois ou que vous avez 50 fournisseurs différents, c'est plus complexe. Mais on gère.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Acceptation commerciale de la prédiction</div>
+            <div class="challenge-card__desc">L'IA propose — le commercial décide. Un bon responsable stock va accepter 80-85 % des recommandations, laisser 15-20 % pour cas spéciaux (promo future, client fidélité). Ça sauvebeaucoup de temps sans casser le métier.</div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Ce que vous mesurez vraiment</h2>
+        <p class="challenges__subtitle">Les KPIs qui font la différence</p>
+
+        <div class="solution-item">
+            <span class="solution-item__number">1</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Taux de rupture par famille d'articles</div>
+                <div class="solution-item__desc">Benchmark secteur : 3-8 % de ruptures. Chaque rupture = perte de vente + perte client. Avec prédiction bien calibrée, vous descendez à 1-2 % en 3 mois. Chaque point perdu = 1-2 % de CA gagné via fidélisation.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">2</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Rotation des stocks et jours de couverture</div>
+                <div class="solution-item__desc">Vous avez des articles qui traînent 8 mois en stock. À 15 % de coût de détention annuel, c'est du mararge qui s'évapore. Prédiction + trigger de braderie automatique = vous libérez du cash et de la place. Gain : 5-15 % du BFR (besoin en fonds de roulement).</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">3</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Marge de distribution réelle</div>
+                <div class="solution-item__desc">Marge brute − coûts rupture − coûts surstock − coûts de stockage = marge nette. Vous la voyez vraiment ? Ou vous devinez ? Avec dashboards Supply Chain, vous savez par article, par client, par période.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">4</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Délai de réapprovisionnement et fiabilité fournisseur</div>
+                <div class="solution-item__desc">Qui livre à temps ? Qui livre en retard ? Par combien ? L'historique révèle souvent qu'un fournisseur dépendable vaut 2 euros par article de moins qu'un fournisseur flaky. Vous réinvestissez dans les bons partenaires.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Objections qu'on entend</h2>
+        <p class="challenges__subtitle">Réponses franches</p>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">« Nos données articles sont vraiment mal organisées. »</div>
+            <div class="challenge-card__desc">Normal. Distribution = 5-30k articles. Personne n'a le temps de rrenseigner parfaitement. On passe 2-3 semaines à dedoublonner, corriger les prix de revient, compléter les descriptions manquantes. C'est un coût-bénéfice : une semaine de peine pour 2 ans de stock optimisé.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">« Mon ERP ne se connecte à rien. »</div>
+            <div class="challenge-card__desc">Si c'est du Sage 100, Cegid, Odoo, ou un ERP standard : on connecte directement. Si c'est du legacy propriétaire : on passe par exports quotidiens. Plus lent, mais ça marche. Coût additionnel selon la complexité.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">« Ça va surcharger mes achats — trop d'emails de prédictions. »</div>
+            <div class="challenge-card__desc">Pas d'emails spams. Un dashboard que vous regardez une fois par jour. Les alertes critiques (rupture imminente) sont signalées. Les autres recommandations sont dans le tableau. Vous contrôlez le flux, pas l'inverse.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">« On ne peut pas commander aux fournisseurs — moqs trop élevés. »</div>
+            <div class="challenge-card__desc">C'est un vrai contrainte et on l'intègre. Si Fournisseur X exige 500 pièces minimum et que vous en vendez 10 par mois, on règle ça : commande groupée, stock lissé, ou pivot vers fournisseur alternatif. La prédiction inclut ces contraintes.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">« Mes clients font des commandes farfelues et imprévisibles. »</div>
+            <div class="challenge-card__desc">L'IA détecte les outliers et les isole. Elle n'essaye pas de prédire une promo surprise ou un gros marché qui arrive sans prévenance. Mais elle détecte les anomalies régulières (commandes plus fortes à certaines périodes). Vous n'avez jamais 100 %, mais 85 % c'est déjà énorme.</div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Questions fréquentes</h2>
+        <p class="challenges__subtitle">Réponses directes</p>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">En combien de temps je vois des ruptures évitées ?</div>
+            <div class="challenge-card__desc">Aussitôt qu'on a 6-8 semaines d'historique. Les premières alertes commencent à la semaine 4. Les premiers gains mesurables : mois 2-3. Gains complets et stabilisés : mois 4-6 (suffisant pour voir les cycles complets).</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Que fait-on des articles qui ne vendent jamais ?</div>
+            <div class="challenge-card__desc">L'IA les signale automatiquement. Vous décidez : braderie, destruction, donation. Supply Chain vous montre le coût de stockage — vous pouvez comparer avec le coût de liquider. Souvent, vendre 50 % de prix-revient vaut mieux que garder l'article 18 mois.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Comment on gère les articles saisonniers ?</div>
+            <div class="challenge-card__desc">L'IA détecte la saisonnalité dans l'historique. Elle vous propose un stock 60-90 jours avant la haute saison. Les clients réguliers : plus facile. Nouveaux patterns : l'IA vous alerte pour validation manuelle les premières fois.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Si je arrête l'abonnement, je récupère mes données ?</div>
+            <div class="challenge-card__desc">Oui, tout. CSV, JSON, XML — votre choix. Pas de verrouillage. Préavis 30 jours. Une semaine de support technique pour la transition.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Y a-t-il un coût additionnel par article ou par référence ?</div>
+            <div class="challenge-card__desc">Non. Abonnement fixe selon la taille catalogue + volume transactions. 5k articles ou 50k : même abonnement tant que vous restez dans la tranche. Aucun coût par référence ou par prédiction.</div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border); padding-bottom: 40px;">
+        <h2 class="challenges__title">Pour aller plus loin</h2>
+        <p class="challenges__subtitle">Ressources et modules associés</p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;">
+            <a href="../modules/supply-chain" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Module Supply Chain</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Prédiction stock, gestion achats, optimisation ruptures.</div>
+            </a>
+            <a href="../modules/sales-intelligence" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Module Sales Intelligence</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Scoring prospects, portail B2B, devis automatiques.</div>
+            </a>
+            <a href="../modules/financial-operations" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Module Financial Operations</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Marge réelle par article, BFR optimisé, cash flow.</div>
+            </a>
+            <a href="../pricing" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Tarification</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Par catalogue et volume. Pas de coûts cachés.</div>
+            </a>
+        </div>
+    </section>
+
     <section class="industry-cta">
         <h2 class="industry-cta__title">Prêt à accélérer votre croissance ?</h2>
         <p class="industry-cta__subtitle">Contactez notre équipe pour une démo personnalisée</p>
