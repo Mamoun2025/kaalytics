@@ -132,7 +132,7 @@
     // ========================================
 
     async function loadPricingTemplate(rootPath) {
-        const templateUrl = rootPath + 'components/sections/pricing.html';
+        const templateUrl = rootPath + 'components/sections/pricing';
 
         try {
             const response = await fetch(templateUrl);

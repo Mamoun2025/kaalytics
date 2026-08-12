@@ -64,7 +64,7 @@
         // Template absolu ; variante .en sur les pages /en/
         const _p = window.location.pathname;
         const _en = (_p === '/en' || _p.startsWith('/en/'));
-        const templateUrl = _en ? '/components/navbar/navbar.en.html' : '/components/navbar/navbar.html';
+        const templateUrl = _en ? '/components/navbar/navbar.en' : '/components/navbar/navbar';
 
         try {
             const response = await fetch(templateUrl);

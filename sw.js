@@ -4,7 +4,7 @@
  */
 
 const CACHE_NAME = 'kaalytics-v1';
-const OFFLINE_URL = '/404.html';
+const OFFLINE_URL = '/404';
 
 // Assets to cache on install
 const PRECACHE_ASSETS = [

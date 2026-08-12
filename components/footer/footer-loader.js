@@ -44,7 +44,7 @@
     async function loadFooterTemplate(rootPath) {
         const _p = window.location.pathname;
         const _en = (_p === '/en' || _p.startsWith('/en/'));
-        const templateUrl = _en ? '/components/footer/footer.en.html' : '/components/footer/footer.html';
+        const templateUrl = _en ? '/components/footer/footer.en' : '/components/footer/footer';
 
         try {
             const response = await fetch(templateUrl);

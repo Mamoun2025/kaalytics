@@ -32,7 +32,7 @@
                 'assets/videos/sales/sales-2.mp4',
                 'assets/videos/sales/sales-3.mp4'
             ],
-            link: 'modules/sales-intelligence.html'
+            link: 'modules/sales-intelligence'
         },
         'marketing-automation': {
             title: 'Marketing Automation',
@@ -50,7 +50,7 @@
                 'assets/videos/odoo/odoo-1.mp4',
                 'assets/videos/connectivity/connectivity-1.mp4'
             ],
-            link: 'modules/marketing-automation.html'
+            link: 'modules/marketing-automation'
         },
         'financial-operations': {
             title: 'Financial Operations',
@@ -67,7 +67,7 @@
                 'assets/videos/odoo/odoo-2.mp4',
                 'assets/videos/connectivity/connectivity-4.mp4'
             ],
-            link: 'modules/financial-operations.html'
+            link: 'modules/financial-operations'
         },
         'supply-chain': {
             title: 'Supply Chain Command',
@@ -85,7 +85,7 @@
                 'assets/videos/connectivity/connectivity-3.mp4',
                 'assets/videos/odoo/odoo-2.mp4'
             ],
-            link: 'modules/supply-chain.html'
+            link: 'modules/supply-chain'
         },
         'fleetops': {
             title: 'FleetOps',
@@ -107,7 +107,7 @@
                 'assets/videos/industrial/industrial-5.mp4',
                 'assets/videos/industrial/industrial-6.mp4'
             ],
-            link: 'modules/fleetops.html'
+            link: 'modules/fleetops'
         },
         'erp-connect': {
             title: 'ERP Connect',
@@ -124,7 +124,7 @@
                 'assets/videos/connectivity/connectivity-2.mp4',
                 'assets/videos/connectivity/connectivity-3.mp4'
             ],
-            link: 'modules/erp-connect.html'
+            link: 'modules/erp-connect'
         },
         'digital-platform': {
             title: 'Digital Platform',
@@ -142,7 +142,7 @@
                 'assets/videos/sales/sales-1.mp4',
                 'assets/videos/connectivity/connectivity-2.mp4'
             ],
-            link: 'modules/digital-platform.html'
+            link: 'modules/digital-platform'
         },
         'ai-engine': {
             title: 'AI Engine',
@@ -160,7 +160,7 @@
                 'assets/videos/cyber/cyber-2.mp4',
                 'assets/videos/architecture/ai-infrastructure-showcase.mp4'
             ],
-            link: 'modules/ai-engine.html'
+            link: 'modules/ai-engine'
         }
     };
 
