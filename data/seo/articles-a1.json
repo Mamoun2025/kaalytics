@@ -4,20 +4,23 @@
     "fr": {
       "title": "Facturation électronique : quel ERP choisir pour être conforme",
       "description": "Calendrier réel, obligations légales et solutions pour mettre votre ERP en conformité facturation électronique dès 2026."
-    }
+    },
+    "author": "yasmine-berrada"
   },
   "blog/erp-maroc-comparatif.html": {
     "keyword": "ERP Maroc comparatif Odoo SAP Sage Cegid prix 2026",
     "fr": {
       "title": "ERP au Maroc : comparatif Odoo, SAP, Sage et Cegid en 2026",
       "description": "Comparatif complet des ERP au Maroc : prix réels, fonctionnalités, avantages et faiblesses de chaque solution."
-    }
+    },
+    "author": "sofia-lemhaouri"
   },
   "blog/connecteurs-cegid-sage-sap.html": {
     "keyword": "connecteur Cegid Sage SAP intégration API données",
     "fr": {
       "title": "Connecteurs Cegid, Sage, SAP : brancher sans modifier l'ERP",
       "description": "Guide technique : comment connecter un module d'analyse en lecture seule. Sécurité, API et délais réalistes."
-    }
+    },
+    "author": "karim-ouazzani"
   }
 }

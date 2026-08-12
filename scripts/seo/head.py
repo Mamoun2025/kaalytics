@@ -108,7 +108,19 @@ def build_head_block(meta: PageMeta, defaults: dict, extra_schemas: list[dict] |
         schemas.append(breadcrumb)
 
     # 2. Article (si applicable)
-    article = build_article_schema(meta.html_path, meta.lang, meta.title, meta.description)
+    author_name = None
+    author_job_title = None
+    if meta.author:
+        from scripts.seo.schema import get_author
+        author_info = get_author(meta.author, root or "data")
+        if author_info:
+            author_name = author_info.get("name")
+            author_job_title = author_info.get("jobTitle")
+
+    article = build_article_schema(
+        meta.html_path, meta.lang, meta.title, meta.description,
+        author_name=author_name, author_job_title=author_job_title
+    )
     if article:
         schemas.append(article)
 
