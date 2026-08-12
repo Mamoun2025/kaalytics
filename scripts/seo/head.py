@@ -64,7 +64,7 @@ def _deduplicate_schemas(html: str) -> str:
     return before_seo_clean + seo_block + after_seo_clean + "</head>" + rest
 
 
-def build_head_block(meta: PageMeta, defaults: dict, extra_schemas: list[dict] | None = None) -> str:
+def build_head_block(meta: PageMeta, defaults: dict, extra_schemas: list[dict] | None = None, root=None) -> str:
     title = escape(meta.title, quote=True)
     description = escape(meta.description, quote=True)
     canonical = BASE_URL + meta.url_path
@@ -99,7 +99,7 @@ def build_head_block(meta: PageMeta, defaults: dict, extra_schemas: list[dict] |
     schemas = []
 
     # 1. BreadcrumbList (si applicable)
-    breadcrumb = build_breadcrumb_list(meta.html_path, meta.lang)
+    breadcrumb = build_breadcrumb_list(meta.html_path, meta.lang, root=root)
     if breadcrumb:
         schemas.append(breadcrumb)
 

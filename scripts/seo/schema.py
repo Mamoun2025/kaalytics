@@ -126,10 +126,36 @@ def _humanize_segment(segment: str) -> str:
     return " ".join(result)
 
 
-def build_breadcrumb_list(html_path: str, lang: str) -> Optional[dict]:
+def _path_exists(root, url_segment: str) -> bool:
+    """Vérifie qu'un segment d'URL correspond à un fichier réel du dépôt.
+
+    Retourne True si fichier.html ou fichier/index.html existe.
+    """
+    if not root:
+        return True  # Si root non fourni, accepter tous les segments
+
+    segment = url_segment.lstrip("/")
+    if not segment:  # Accueil
+        return True
+
+    # Cherche foo.html ou foo/index.html
+    candidates = [
+        root / (segment + ".html"),
+        root / segment / "index.html",
+    ]
+    return any(c.exists() for c in candidates)
+
+
+def build_breadcrumb_list(html_path: str, lang: str, root=None) -> Optional[dict]:
     """Génère un schéma BreadcrumbList pour une page.
 
     Retourne None si la page est l'accueil (pas de fil d'Ariane sur une seule étape).
+
+    Paramètres :
+        html_path : chemin relatif du fichier HTML
+        lang : 'fr' ou 'en'
+        root : chemin racine du dépôt (Path), optionnel. Si fourni, vérifie que
+               chaque niveau intermédiaire correspond à un fichier réel.
     """
     segments = _html_path_to_segments(html_path)
 
@@ -150,9 +176,15 @@ def build_breadcrumb_list(html_path: str, lang: str) -> Optional[dict]:
     )
 
     # Étapes intermédiaires et finale
+    position = 2
     for i, segment in enumerate(segments):
-        position = i + 2
         path_parts = segments[: i + 1]
+
+        # Vérifier que ce segment correspond à un fichier réel (sauf si c'est le dernier)
+        if i < len(segments) - 1:
+            url_path = _url_path_from_segments(path_parts)
+            if not _path_exists(root, url_path):
+                continue  # Sauter ce niveau, il n'existe pas réellement
 
         # Libellé : lookup dans la table si c'est un segment connu, sinon humaniser
         if segment in BREADCRUMB_LABELS[lang]:
@@ -171,6 +203,7 @@ def build_breadcrumb_list(html_path: str, lang: str) -> Optional[dict]:
                 "item": url,
             }
         )
+        position += 1
 
     return {
         "@context": "https://schema.org",

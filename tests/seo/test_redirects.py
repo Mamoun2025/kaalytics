@@ -24,3 +24,35 @@ def test_chaque_redirection_a_source_et_destination():
         assert redirect["source"], f"Redirection {i} : source vide"
         assert redirect["destination"], f"Redirection {i} : destination vide"
         assert redirect.get("permanent", False), f"Redirection {i} ({redirect['source']}) doit être permanente (permanent: true)"
+
+
+def test_destinations_redirects_correspondent_a_fichiers_reels():
+    """Chaque destination de redirection doit correspondre à un fichier réel du dépôt.
+
+    Les sections sans index.html (modules, industries, legal, products) doivent
+    rediriger vers une page réelle, pas vers un dossier inexistant.
+    """
+    vercel_file = ROOT / "vercel.json"
+    data = json.loads(vercel_file.read_text(encoding="utf-8"))
+
+    redirects = data.get("redirects", [])
+    for redirect in redirects:
+        dest = redirect["destination"]
+        if dest == "/":
+            continue  # L'accueil existe toujours
+
+        # Reconstruit le chemin fichier correspondant à la destination
+        if dest.endswith("/"):
+            dest = dest[:-1]  # Retire slash final
+
+        # Cherche le fichier correspondant
+        candidates = [
+            ROOT / (dest.lstrip("/") + ".html"),  # /foo → foo.html
+            ROOT / (dest.lstrip("/") + "/index.html"),  # /foo → foo/index.html
+        ]
+
+        file_exists = any(c.exists() for c in candidates)
+        assert file_exists, (
+            f"Redirection vers '{dest}' : aucun fichier trouvé. "
+            f"Cherchait : {[str(c.relative_to(ROOT)) for c in candidates]}"
+        )

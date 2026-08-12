@@ -287,3 +287,35 @@ class TestSchemaIntegration:
         schema = build_breadcrumb_list("modules/fleetops.html", "fr")
         for item in schema["itemListElement"]:
             assert item["item"].startswith("https://kaalytics.com")
+
+    def test_breadcrumb_items_correspond_to_real_files(self):
+        """Chaque maillon du fil d'Ariane (sauf accueil) doit correspondre à un fichier réel."""
+        # Teste plusieurs pages
+        test_cases = [
+            "modules/fleetops.html",
+            "blog/roi-gestion-flotte.html",
+            "industries/btp.html",
+            "guides/checklist-maintenance.html",
+        ]
+
+        for html_path in test_cases:
+            schema = build_breadcrumb_list(html_path, "fr", root=ROOT)
+            assert schema is not None, f"{html_path}: attendait un breadcrumb, reçu None"
+
+            for item in schema["itemListElement"]:
+                url = item["item"]
+                # Extrait le chemin relatif de l'URL
+                path_part = url.replace("https://kaalytics.com", "")
+                if path_part == "/":
+                    continue  # L'accueil existe toujours
+
+                # Cherche le fichier correspondant
+                candidates = [
+                    ROOT / (path_part.lstrip("/") + ".html"),
+                    ROOT / (path_part.lstrip("/") + "/index.html"),
+                ]
+                file_exists = any(c.exists() for c in candidates)
+                assert file_exists, (
+                    f"{html_path}: breadcrumb maillon {path_part} ne correspond à aucun fichier. "
+                    f"Cherchait : {[str(c.relative_to(ROOT)) for c in candidates]}"
+                )

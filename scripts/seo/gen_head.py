@@ -28,10 +28,10 @@ def _load_extra_schemas() -> dict:
     return json.loads(extra_file.read_text(encoding="utf-8"))
 
 
-def apply_to_page(html: str, meta: PageMeta, defaults: dict, extra_schemas_by_page: dict) -> str:
+def apply_to_page(html: str, meta: PageMeta, defaults: dict, extra_schemas_by_page: dict, root=None) -> str:
     cleaned = strip_legacy_tags(html)
     extra = extra_schemas_by_page.get(meta.html_path, {}).get("extra_schemas")
-    with_seo = upsert_block(cleaned, build_head_block(meta, defaults, extra_schemas=extra))
+    with_seo = upsert_block(cleaned, build_head_block(meta, defaults, extra_schemas=extra, root=root))
     return _deduplicate_schemas(with_seo)
 
 
@@ -60,7 +60,7 @@ def main(argv: list[str] | None = None) -> int:
             print(f"ERREUR: fichier introuvable : {meta.html_path}", file=sys.stderr)
             return 1
         avant = path.read_text(encoding="utf-8")
-        apres = apply_to_page(avant, meta, defaults, extra_schemas_by_page)
+        apres = apply_to_page(avant, meta, defaults, extra_schemas_by_page, root=ROOT)
         if avant == apres:
             print(f"{prefix}inchange  {meta.html_path}")
             continue
