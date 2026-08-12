@@ -1,0 +1,23 @@
+{
+  "blog/cout-projet-ia-pme.html": {
+    "keyword": "coût projet IA PME budget 2026 prix réel",
+    "fr": {
+      "title": "Combien coûte vraiment un projet IA en PME",
+      "description": "Budget réel pour implémenter l'IA en PME : coûts cachés, préparation des données, intégration et ROI mesurable."
+    }
+  },
+  "blog/deployer-ia-entreprise.html": {
+    "keyword": "déployer IA entreprise par où commencer cas d'usage 2026",
+    "fr": {
+      "title": "Déployer l'IA en entreprise : par où commencer",
+      "description": "Guide structuré en 6 étapes pour passer du test IA à la production. Cas d'usage rentables et pièges courants."
+    }
+  },
+  "blog/erreurs-migration-erp.html": {
+    "keyword": "migration ERP erreurs budget dépassement 2026 PME",
+    "fr": {
+      "title": "Migration ERP : les sept erreurs qui font déraper le budget",
+      "description": "Pourquoi 60 % des migrations ERP dépassent le budget initial. Les sept erreurs et comment les éviter en PME."
+    }
+  }
+}
