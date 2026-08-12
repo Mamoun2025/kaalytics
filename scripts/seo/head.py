@@ -99,7 +99,11 @@ def build_head_block(meta: PageMeta, defaults: dict, extra_schemas: list[dict] |
     schemas = []
 
     # 1. BreadcrumbList (si applicable)
-    breadcrumb = build_breadcrumb_list(meta.html_path, meta.lang, root=root)
+    # Extraire le titre sans le suffixe " | Kaalytics"
+    page_title_clean = meta.title
+    if " | " in page_title_clean:
+        page_title_clean = page_title_clean.split(" | ")[0]
+    breadcrumb = build_breadcrumb_list(meta.html_path, meta.lang, root=root, page_title=page_title_clean)
     if breadcrumb:
         schemas.append(breadcrumb)
 

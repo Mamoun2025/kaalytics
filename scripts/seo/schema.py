@@ -146,7 +146,7 @@ def _path_exists(root, url_segment: str) -> bool:
     return any(c.exists() for c in candidates)
 
 
-def build_breadcrumb_list(html_path: str, lang: str, root=None) -> Optional[dict]:
+def build_breadcrumb_list(html_path: str, lang: str, root=None, page_title: Optional[str] = None) -> Optional[dict]:
     """Génère un schéma BreadcrumbList pour une page.
 
     Retourne None si la page est l'accueil (pas de fil d'Ariane sur une seule étape).
@@ -156,6 +156,8 @@ def build_breadcrumb_list(html_path: str, lang: str, root=None) -> Optional[dict
         lang : 'fr' ou 'en'
         root : chemin racine du dépôt (Path), optionnel. Si fourni, vérifie que
                chaque niveau intermédiaire correspond à un fichier réel.
+        page_title : titre de la page depuis le catalogue (sans suffixe ` | Kaalytics`),
+                     optionnel. Utilisé pour le dernier maillon du fil d'Ariane.
     """
     segments = _html_path_to_segments(html_path)
 
@@ -179,6 +181,7 @@ def build_breadcrumb_list(html_path: str, lang: str, root=None) -> Optional[dict
     position = 2
     for i, segment in enumerate(segments):
         path_parts = segments[: i + 1]
+        is_last = (i == len(segments) - 1)
 
         # Vérifier que ce segment correspond à un fichier réel (sauf si c'est le dernier)
         if i < len(segments) - 1:
@@ -186,8 +189,11 @@ def build_breadcrumb_list(html_path: str, lang: str, root=None) -> Optional[dict
             if not _path_exists(root, url_path):
                 continue  # Sauter ce niveau, il n'existe pas réellement
 
-        # Libellé : lookup dans la table si c'est un segment connu, sinon humaniser
-        if segment in BREADCRUMB_LABELS[lang]:
+        # Libellé : pour le dernier maillon, utiliser le titre de la page (si fourni)
+        # Sinon, lookup dans la table ou humaniser
+        if is_last and page_title:
+            name = page_title
+        elif segment in BREADCRUMB_LABELS[lang]:
             name = BREADCRUMB_LABELS[lang][segment]
         else:
             name = _humanize_segment(segment)

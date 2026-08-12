@@ -319,3 +319,25 @@ class TestSchemaIntegration:
                     f"{html_path}: breadcrumb maillon {path_part} ne correspond à aucun fichier. "
                     f"Cherchait : {[str(c.relative_to(ROOT)) for c in candidates]}"
                 )
+
+    def test_dernier_maillon_breadcrumb_utilise_titre_catalogue(self):
+        """Le dernier maillon du fil d'Ariane doit être le titre du catalogue (sans suffixe ` | Kaalytics`).
+
+        Cela garantit que les accents, sigles et contexte sont corrects.
+        """
+        catalog = load_catalog(DATA)
+        by_path = {p.html_path: p for p in catalog}
+
+        for html_path, page in by_path.items():
+            schema = build_breadcrumb_list(html_path, page.lang, root=ROOT, page_title=page.title.split(" | ")[0])
+            if schema is None:
+                continue  # Pas de breadcrumb pour l'accueil
+
+            dernier = schema["itemListElement"][-1]
+            # Le dernier maillon doit être exactement le titre sans suffixe
+            titre_attendu = page.title.split(" | ")[0]
+            assert dernier["name"] == titre_attendu, (
+                f"{html_path} ({page.lang}): dernier maillon du breadcrumb incorrect\n"
+                f"  actuel: {dernier['name']}\n"
+                f"  attendu: {titre_attendu}"
+            )
