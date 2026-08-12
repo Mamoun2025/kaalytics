@@ -1,0 +1,74 @@
+{
+  "industries/btp.html": {
+    "keyword": "gestion flotte BTP construction Maroc",
+    "fr": {
+      "title": "BTP & Construction | Kaalytics",
+      "description": "La construction exige de la précision. Vos outils aussi. Machines dispersées, pannes imprévues, coûts invisibles. Kaalytics résout ces problèmes."
+    },
+    "en": {
+      "path": "en/industries/btp.html",
+      "title": "Building & Construction Solutions | Kaalytics",
+      "description": "Construction demands precision. So should your tools. Scattered machines, unexpected breakdowns, hidden costs. Kaalytics solves these problems."
+    }
+  },
+  "industries/distribution.html": {
+    "keyword": "gestion distribution grossiste négoce",
+    "fr": {
+      "title": "Distribution & Négoce | Kaalytics",
+      "description": "Vendre plus, stocker mieux, livrer plus vite. Distributeurs, grossistes, négociants. Kaalytics optimise votre chaîne commerciale."
+    },
+    "en": {
+      "path": "en/industries/distribution.html",
+      "title": "Distribution & Trade | Kaalytics",
+      "description": "Sell more, stock smarter, deliver faster. Distributors, wholesalers, merchants. Kaalytics automates your commercial chain."
+    }
+  },
+  "industries/industrie.html": {
+    "keyword": "logiciels production industrie manufacturière",
+    "fr": {
+      "title": "Industrie & Production | Kaalytics",
+      "description": "La performance industrielle, chiffrée en temps réel. Lignes de production, stocks, qualité. Kaalytics optimise votre chaîne de valeur."
+    },
+    "en": {
+      "path": "en/industries/industrie.html",
+      "title": "Manufacturing & Production | Kaalytics",
+      "description": "Industrial performance, measured in real time. Production lines, inventory, quality. Kaalytics optimizes your value chain."
+    }
+  },
+  "industries/location.html": {
+    "keyword": "gestion parc location équipements",
+    "fr": {
+      "title": "Location d'Équipements | Kaalytics",
+      "description": "Maximisez l'utilisation. Minimisez l'immobilisation. Parc de location, multi-clients, rotations rapides. Kaalytics optimise votre parc."
+    },
+    "en": {
+      "path": "en/industries/location.html",
+      "title": "Equipment Rental | Kaalytics",
+      "description": "Maximize utilization. Minimize idle assets. Rental fleet, multi-customer, fast rotations. Kaalytics optimizes your fleet."
+    }
+  },
+  "industries/mines.html": {
+    "keyword": "gestion mines carrières extraction",
+    "fr": {
+      "title": "Mines & Carrières | Kaalytics",
+      "description": "L'extraction ne tolère pas l'approximation. Équipements critiques, conditions extrêmes, conformité stricte. Kaalytics optimise votre production."
+    },
+    "en": {
+      "path": "en/industries/mines.html",
+      "title": "Mining & Quarries | Kaalytics",
+      "description": "Extraction tolerates no approximation. Critical equipment, extreme conditions, strict compliance. Kaalytics optimizes your production."
+    }
+  },
+  "industries/transport.html": {
+    "keyword": "transport logistique gestion flotte routière",
+    "fr": {
+      "title": "Transport & Logistique | Kaalytics",
+      "description": "Chaque kilomètre compte. Chaque livraison aussi. Marges fines, clients exigeants, réglementation stricte. Kaalytics optimise votre rentabilité."
+    },
+    "en": {
+      "path": "en/industries/transport.html",
+      "title": "Transport & Logistics | Kaalytics",
+      "description": "Every kilometer counts. Every delivery too. Thin margins, demanding clients, strict regulations. Kaalytics optimizes your profitability."
+    }
+  }
+}

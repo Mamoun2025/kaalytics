@@ -6,6 +6,10 @@ TRASH-FILES.md
 *.bak
 *~
 
+# Python
+__pycache__/
+*.pyc
+
 # OS files
 .DS_Store
 Thumbs.db
@@ -37,3 +41,6 @@ proposals/
 sections/modules-ia/editor.html
 .vercel
 .env*.local
+
+# SDD scratch
+.superpowers/

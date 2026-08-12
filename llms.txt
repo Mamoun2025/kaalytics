@@ -1,0 +1,39 @@
+# Kaalytics
+
+> Kaalytics est une société marocaine qui connecte des modules d'analyse et
+> d'automatisation aux ERP déjà en place dans l'entreprise - Cegid, Sage, SAP,
+> Dynamics, Odoo - sans modifier le système existant. Pour une entreprise sans
+> ERP, Kaalytics déploie Odoo. Basé à Casablanca, Maroc.
+
+## Modules
+
+- [FleetOps](https://kaalytics.com/modules/fleetops) : suivi de flotte, maintenance prédictive, coûts par chantier
+- [Sales Intelligence](https://kaalytics.com/modules/sales-intelligence) : pilotage commercial et scoring des prospects
+- [Marketing Automation](https://kaalytics.com/modules/marketing-automation) : campagnes ciblées et pipeline marketing
+- [Financial Operations](https://kaalytics.com/modules/financial-operations) : tableau de bord financier et relances clients
+- [Supply Chain Command](https://kaalytics.com/modules/supply-chain) : planning achats et prévision de ventes
+- [ERP Connect](https://kaalytics.com/modules/erp-connect) : connecteurs vers les ERP existants
+- [Digital Platform](https://kaalytics.com/modules/digital-platform) : site web et catalogue connectés à l'ERP
+- [AI Engine](https://kaalytics.com/modules/ai-engine) : agents autonomes et automatisations IA
+
+## Secteurs
+
+- [Industries](https://kaalytics.com/industries/industrie)
+- [Transport et logistique](https://kaalytics.com/industries/transport)
+- [Distribution et négoce](https://kaalytics.com/industries/distribution)
+- [BTP](https://kaalytics.com/industries/btp)
+- [Location d'équipements](https://kaalytics.com/industries/location)
+- [Mines et carrières](https://kaalytics.com/industries/mines)
+
+## Ressources
+
+- [Blog](https://kaalytics.com/blog)
+- [Guides](https://kaalytics.com/guides)
+- [Études de cas](https://kaalytics.com/case-studies)
+- [Questions fréquentes](https://kaalytics.com/faq)
+- [Tarifs](https://kaalytics.com/pricing)
+
+## Contact
+
+- [Contact](https://kaalytics.com/contact)
+- Version anglaise : https://kaalytics.com/en

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="checklist maintenance, maintenance préventive, entretien véhicule, contrôle flotte, maintenance flotte">
+    <meta name="author" content="Kaalytics">
+    <meta name="theme-color" content="#10b981">
+
+    <!-- Canonical URL -->
+
+    <!-- Open Graph -->
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/../assets/css/main.css?v=20260808">
+    <link rel="stylesheet" href="/../assets/css/industries.css">
+
+    <style>
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+            padding: var(--space-md);
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-sm);
+        }
+        .checklist-item__checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-sm);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .checklist-item__content {
+            flex: 1;
+        }
+        .checklist-item__title {
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+        }
+        .checklist-item__desc {
+            color: var(--text-secondary);
+            font-size: var(--text-sm);
+        }
+        .checklist-section {
+            margin-bottom: var(--space-3xl);
+        }
+        .checklist-section__header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+        .checklist-section__badge {
+            padding: var(--space-xs) var(--space-sm);
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--emerald);
+            border-radius: var(--radius-sm);
+            font-size: var(--text-xs);
+            font-weight: 600;
+        }
+    </style>
+<!-- SEO:BEGIN (genere par scripts/seo/gen_head.py - ne pas editer) -->
+    <title>Preventive Maintenance Checklist | Kaalytics</title>
+    <meta name="description" content="Complete preventive maintenance checklist for vehicle fleets. Checkpoints, frequencies and best practices.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://kaalytics.com/en/guides/checklist-maintenance">
+    <link rel="alternate" hreflang="fr" href="https://kaalytics.com/guides/checklist-maintenance">
+    <link rel="alternate" hreflang="en" href="https://kaalytics.com/en/guides/checklist-maintenance">
+    <link rel="alternate" hreflang="x-default" href="https://kaalytics.com/guides/checklist-maintenance">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kaalytics">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Preventive Maintenance Checklist | Kaalytics">
+    <meta property="og:description" content="Complete preventive maintenance checklist for vehicle fleets. Checkpoints, frequencies and best practices.">
+    <meta property="og:url" content="https://kaalytics.com/en/guides/checklist-maintenance">
+    <meta property="og:image" content="https://kaalytics.com/assets/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Preventive Maintenance Checklist | Kaalytics">
+    <meta name="twitter:description" content="Complete preventive maintenance checklist for vehicle fleets. Checkpoints, frequencies and best practices.">
+    <meta name="twitter:image" content="https://kaalytics.com/assets/images/og-image.jpg">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Kaalytics",
+    "url": "https://kaalytics.com",
+    "logo": "https://kaalytics.com/assets/images/logo/kaalytics-logo.png",
+    "areaServed": "MA",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Casablanca",
+        "addressCountry": "MA"
+    }
+}
+    </script>
+<!-- SEO:END -->
+
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-container" data-navbar="full" data-navbar-style="solid"></div>
+
+    <!-- Hero -->
+    <header class="industry-hero" style="--industry-color: #10b981; min-height: auto; padding: var(--space-4xl) 0;">
+        <div class="container">
+            <div style="max-width: 800px;">
+                <a href="/en" style="display: inline-flex; align-items: center; gap: var(--space-xs); color: var(--text-muted); text-decoration: none; margin-bottom: var(--space-lg);">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    Back to Guides
+                </a>
+                <span class="industry-hero__badge">Practical Tool</span>
+                <h1 style="font-size: var(--text-4xl); font-weight: 800; line-height: 1.2; margin-bottom: var(--space-lg);">
+                    Preventive Maintenance Checklist
+                </h1>
+                <p style="color: var(--text-secondary); font-size: var(--text-lg); margin-bottom: var(--space-xl);">
+                    Complete checklist of control points to ensure preventive maintenance of your fleet. Use this checklist for your daily, weekly and monthly inspections.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <article style="padding: var(--space-4xl) 0; background: var(--bg-secondary);">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+
+                <!-- Controles quotidiens -->
+                <section class="checklist-section">
+                    <div class="checklist-section__header">
+                        <h2 style="font-size: var(--text-2xl); font-weight: 700;">Daily Checks</h2>
+                        <span class="checklist-section__badge">Before Each Trip</span>
+                    </div>
+                    <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-xl);">
+                        These checks must be performed each day by the driver before taking to the road.
+                    </p>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Engine Oil Level</div>
+                            <div class="checklist-item__desc">Check the level when cold and top up if necessary. Check the colour (abnormal darkening indicates oil change needed).</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Coolant Level</div>
+                            <div class="checklist-item__desc">Check in the expansion tank when cold. Never open when hot.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Tyre Condition</div>
+                            <div class="checklist-item__desc">Visual check of pressure, wear, and obvious damage (cuts, bulges). Also check the spare tyre.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Lighting</div>
+                            <div class="checklist-item__desc">Position lights, dipped beam, main beam, indicators, brake lights, reversing lights.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Windscreen and Mirrors</div>
+                            <div class="checklist-item__desc">Cleanliness, absence of cracks, correct mirror adjustment.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Windscreen Washer Fluid</div>
+                            <div class="checklist-item__desc">Top up if necessary and check that wipers operate correctly.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Leaks Under Vehicle</div>
+                            <div class="checklist-item__desc">Check for any signs of oil, coolant or fuel leaks.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Vehicle Documents</div>
+                            <div class="checklist-item__desc">Vehicle registration, insurance, roadworthiness test, service logbook.</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Controles hebdomadaires -->
+                <section class="checklist-section">
+                    <div class="checklist-section__header">
+                        <h2 style="font-size: var(--text-2xl); font-weight: 700;">Weekly Checks</h2>
+                        <span class="checklist-section__badge">Weekly</span>
+                    </div>
+                    <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-xl);">
+                        More thorough inspections to be performed once per week.
+                    </p>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Tyre Pressure</div>
+                            <div class="checklist-item__desc">Check when cold using a pressure gauge. Refer to manufacturer's specifications (door pillar sticker).</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Brake Fluid Level</div>
+                            <div class="checklist-item__desc">Must be between minimum and maximum. A significant drop may indicate a leak or brake pad wear.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Power Steering Fluid Level</div>
+                            <div class="checklist-item__desc">Where applicable (some vehicles have electric power steering).</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Battery Condition</div>
+                            <div class="checklist-item__desc">Clean terminals, no corrosion, secure fixings.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Belts</div>
+                            <div class="checklist-item__desc">Visual inspection, tension, no cracks or fraying.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Air Filter</div>
+                            <div class="checklist-item__desc">Visual inspection. Clean or replace if heavily clogged.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">General Cleanliness</div>
+                            <div class="checklist-item__desc">Interior and exterior of the vehicle. A clean vehicle maintains a professional appearance.</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Controles mensuels -->
+                <section class="checklist-section">
+                    <div class="checklist-section__header">
+                        <h2 style="font-size: var(--text-2xl); font-weight: 700;">Monthly Checks</h2>
+                        <span class="checklist-section__badge">Monthly</span>
+                    </div>
+                    <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-xl);">
+                        Monthly inspections to prevent problems before they become critical.
+                    </p>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Brake Pad Thickness</div>
+                            <div class="checklist-item__desc">Minimum 3mm. Plan replacement if approaching wear indicator.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Tyre Tread Depth</div>
+                            <div class="checklist-item__desc">Legal minimum: 1.6mm. Recommended: replace at 3mm. Use wear indicator or depth gauge.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Suspension</div>
+                            <div class="checklist-item__desc">Bounce test at all four corners. Visual inspection of dampers (leaks).</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Steering</div>
+                            <div class="checklist-item__desc">Steering wheel play, unusual noises, stiffness.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Air Conditioning</div>
+                            <div class="checklist-item__desc">Operation, unusual odours, cooling effectiveness.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Safety Equipment</div>
+                            <div class="checklist-item__desc">Warning triangle, high-visibility vest, fire extinguisher (check expiry), first aid kit.</div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-item">
+                        <div class="checklist-item__checkbox"></div>
+                        <div class="checklist-item__content">
+                            <div class="checklist-item__title">Bodywork</div>
+                            <div class="checklist-item__desc">Note any damage (scratches, dents), check for absence of rust.</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Periodicites entretien -->
+                <section class="checklist-section">
+                    <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg);">Maintenance Intervals</h2>
+                    <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-xl);">
+                        Standard maintenance intervals (adapt according to manufacturer's recommendations).
+                    </p>
+
+                    <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-xl);">
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr style="border-bottom: 1px solid var(--border);">
+                                    <th style="text-align: left; padding: var(--space-md); font-weight: 600;">Operation</th>
+                                    <th style="text-align: left; padding: var(--space-md); font-weight: 600;">Interval</th>
+                                </tr>
+                            </thead>
+                            <tbody style="color: var(--text-secondary);">
+                                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                    <td style="padding: var(--space-md);">Oil Change</td>
+                                    <td style="padding: var(--space-md);">15,000 - 30,000 km or 1 year</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                    <td style="padding: var(--space-md);">Oil Filter</td>
+                                    <td style="padding: var(--space-md);">At every oil change</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                    <td style="padding: var(--space-md);">Air Filter</td>
+                                    <td style="padding: var(--space-md);">30,000 - 60,000 km</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                    <td style="padding: var(--space-md);">Fuel Filter</td>
+                                    <td style="padding: var(--space-md);">40,000 - 80,000 km</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                    <td style="padding: var(--space-md);">Cabin Filter</td>
+                                    <td style="padding: var(--space-md);">15,000 - 30,000 km or 1 year</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                    <td style="padding: var(--space-md);">Brake Fluid</td>
+                                    <td style="padding: var(--space-md);">2 years</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                    <td style="padding: var(--space-md);">Coolant</td>
+                                    <td style="padding: var(--space-md);">4 - 5 years or 100,000 km</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                    <td style="padding: var(--space-md);">Timing Belt</td>
+                                    <td style="padding: var(--space-md);">80,000 - 160,000 km or 5-10 years</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: var(--space-md);">Battery</td>
+                                    <td style="padding: var(--space-md);">4 - 5 years</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Conseils -->
+                <section>
+                    <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg);">Practical Tips</h2>
+                    <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-xl);">
+                        <ul style="color: var(--text-secondary); line-height: 1.8; padding-left: var(--space-xl);">
+                            <li style="margin-bottom: var(--space-sm);">Keep a logbook for each vehicle</li>
+                            <li style="margin-bottom: var(--space-sm);">Take photos of any issues found</li>
+                            <li style="margin-bottom: var(--space-sm);">Report any problems immediately to the fleet manager</li>
+                            <li style="margin-bottom: var(--space-sm);">Follow manufacturer's recommendations</li>
+                            <li>Use fleet management software to automate reminders</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </article>
+
+    <!-- CTA -->
+    <section class="industry-cta">
+        <div class="container">
+            <h2 class="industry-cta__title">Automate Your Maintenance</h2>
+            <p class="industry-cta__desc">
+                Our FleetOps module automatically generates maintenance alerts based on mileage and engine hours.
+            </p>
+            <div class="btn-group" style="justify-content: center;">
+                <a href="../demo" class="btn btn-primary btn-lg">Request a demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 Kaalytics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Navbar Loader -->
+    <script src="/../components/navbar/navbar-loader.js?v=20260808"></script>
+</body>
+</html>
