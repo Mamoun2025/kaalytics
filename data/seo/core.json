@@ -1,0 +1,113 @@
+{
+  "index.html": {
+    "keyword": "modules IA ERP Maroc automatisation",
+    "fr": {
+      "title": "Kaalytics | Vos systèmes. Sous stéroïdes.",
+      "description": "On branche nos modules sur votre ERP. Ce qui prenait des jours prend maintenant quelques secondes. Modules intelligents pour Odoo, SAP, Sage, Dynamics."
+    },
+    "en": {
+      "path": "en/index.html",
+      "title": "Kaalytics | Your systems. On steroids.",
+      "description": "We plug our modules into your ERP. What took days now takes seconds. Smart modules for Odoo, SAP, Sage, Dynamics."
+    }
+  },
+  "about.html": {
+    "keyword": "kaalytics société casablanca vision",
+    "fr": {
+      "title": "À propos | Kaalytics",
+      "description": "Kaalytics développe des modules IA qui se connectent aux ERP pour optimiser les opérations des entreprises. Notre approche, notre vision."
+    },
+    "en": {
+      "path": "en/about.html",
+      "title": "About | Kaalytics",
+      "description": "Kaalytics develops AI modules that connect to ERPs to optimize business operations. Our approach, our vision."
+    }
+  },
+  "contact.html": {
+    "keyword": "contact expert kaalytics démonstration",
+    "fr": {
+      "title": "Contact | Kaalytics - Parlez à un expert",
+      "description": "Contactez l'équipe Kaalytics. Formulaire de contact, coordonnées, WhatsApp. Réponse sous 24h."
+    },
+    "en": {
+      "path": "en/contact.html",
+      "title": "Contact | Kaalytics - Speak with an expert",
+      "description": "Contact the Kaalytics team. Contact form, phone number, WhatsApp. We respond within 24h."
+    }
+  },
+  "demo.html": {
+    "keyword": "demander démonstration gratuite kaalytics",
+    "fr": {
+      "title": "Demander une Démo Gratuite | Kaalytics",
+      "description": "Demandez une démo gratuite de nos modules. Présentation personnalisée de 30 minutes avec un expert."
+    }
+  },
+  "faq.html": {
+    "keyword": "questions fréquentes modules IA ERP",
+    "fr": {
+      "title": "FAQ | Questions Fréquentes | Kaalytics",
+      "description": "FAQ Kaalytics - Questions fréquentes sur nos modules IA. Déploiement, tarifs, intégrations, sécurité et support."
+    },
+    "en": {
+      "path": "en/faq.html",
+      "title": "FAQ | Frequently Asked Questions | Kaalytics",
+      "description": "Kaalytics FAQ - Frequently asked questions about our AI modules. Deployment, pricing, integrations, security and support."
+    }
+  },
+  "integrations.html": {
+    "keyword": "intégrations ERP Cegid Sage SAP Dynamics Odoo",
+    "fr": {
+      "title": "Intégrations | Kaalytics",
+      "description": "Intégrations Kaalytics. Connectez nos modules à vos outils existants : ERP, comptabilité, CRM et plus."
+    }
+  },
+  "pricing.html": {
+    "keyword": "tarifs modules ERP Maroc",
+    "fr": {
+      "title": "Tarifs | Kaalytics",
+      "description": "Tarification transparente par module. Standard, Pro ou Premium selon vos besoins. Chaque module est indépendant et modulaire."
+    },
+    "en": {
+      "path": "en/pricing.html",
+      "title": "Pricing | Kaalytics",
+      "description": "Transparent module-based pricing. Standard, Pro or Premium based on your needs. Each module is independent and modular."
+    }
+  },
+  "support.html": {
+    "keyword": "support assistance technique kaalytics",
+    "fr": {
+      "title": "Support | Kaalytics",
+      "description": "Support Kaalytics. Assistance technique, documentation et contact pour nos modules."
+    }
+  },
+  "resources/index.html": {
+    "keyword": "guides ressources articles gestion flotte",
+    "fr": {
+      "title": "Centre de Ressources | Kaalytics",
+      "description": "Centre de ressources Kaalytics. Guides, articles, études de cas et outils pour optimiser votre gestion de flotte."
+    }
+  },
+  "portail-client/index.html": {
+    "keyword": "portail client kaalytics suivi projet",
+    "fr": {
+      "title": "Portail Client | Kaalytics — Votre projet en temps réel",
+      "description": "Un espace confidentiel où chaque client Kaalytics suit son projet en direct : Blueprint, avancement, documents, échanges."
+    }
+  },
+  "products/daedalia.html": {
+    "keyword": "daedalia ai copilote ia odoo erp",
+    "og_image": "/assets/images/og-daedalia.jpg",
+    "fr": {
+      "title": "Daedalia AI | Copilote IA pour Odoo - LLM connecté à votre ERP en 3 sec | Kaalytics",
+      "description": "Daedalia AI: le premier LLM connecté à Odoo. Interrogez vos documents en langage naturel, créez des devis, analysez vos ventes en 3 secondes."
+    }
+  },
+  "products/fleetops.html": {
+    "keyword": "fleetops pro gestion flotte ia",
+    "og_image": "/assets/images/og-fleetops.jpg",
+    "fr": {
+      "title": "FleetOps Pro | Gestion de Flotte IA | Kaalytics",
+      "description": "FleetOps Pro: réduction des coûts et pannes, ROI rapide. Gestion de flotte IA pour BTP, Transport, Location. 8 modules."
+    }
+  }
+}

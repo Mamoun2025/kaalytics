@@ -1,0 +1,34 @@
+{
+  "legal/privacy.html": {
+    "keyword": "",
+    "robots": "noindex, follow",
+    "fr": {
+      "title": "Politique de Confidentialité | Kaalytics",
+      "description": "Politique de confidentialité de Kaalytics. Comment nous collectons, utilisons et protégeons vos données personnelles."
+    }
+  },
+  "legal/terms.html": {
+    "keyword": "",
+    "robots": "noindex, follow",
+    "fr": {
+      "title": "Conditions Générales d'Utilisation | Kaalytics",
+      "description": "Conditions générales d'utilisation des services Kaalytics - modules IA connectés aux ERP."
+    }
+  },
+  "legal/mentions.html": {
+    "keyword": "",
+    "robots": "noindex, follow",
+    "fr": {
+      "title": "Mentions Légales | Kaalytics",
+      "description": "Mentions légales de Kaalytics. Informations sur l'éditeur, l'hébergement et les crédits."
+    }
+  },
+  "legal/cookies.html": {
+    "keyword": "",
+    "robots": "noindex, follow",
+    "fr": {
+      "title": "Politique de Cookies | Kaalytics",
+      "description": "Politique de cookies de Kaalytics. Comment nous utilisons les cookies et technologies similaires sur notre site."
+    }
+  }
+}
