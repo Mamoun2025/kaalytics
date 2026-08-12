@@ -82,3 +82,27 @@ def test_descriptions_sous_160_caracteres():
 def test_les_fichiers_de_donnees_sont_du_json_valide():
     for path in DATA.glob("*.json"):
         json.loads(path.read_text(encoding="utf-8"))
+
+
+def test_les_textes_francais_sont_accentues():
+    """Les titres et descriptions FR alimentent les resultats Google : du
+    francais desaccentue y ferait tache. Detecte les mots frequents ecrits
+    sans leur accent."""
+    import re
+
+    sans_accent = re.compile(
+        r"\b(predictive|couts|rentabilite|reel|donnees|integre|automatise|"
+        r"ciblees|previsions?|referencement|genere|deployes|detection|"
+        r"numerique|systeme|societe|deja|operationnel|metier[es]?|"
+        r"prevision|reliee?s?|connectee?s?|alimentee?s?)\b",
+        re.I,
+    )
+    fautifs = []
+    for page in load_catalog(DATA):
+        if page.lang != "fr":
+            continue
+        for champ in (page.title, page.description):
+            trouves = sans_accent.findall(champ)
+            if trouves:
+                fautifs.append((page.html_path, trouves))
+    assert not fautifs, f"francais desaccentue : {fautifs}"

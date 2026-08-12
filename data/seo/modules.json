@@ -4,7 +4,7 @@
     "og_image": "/assets/images/og-fleetops.jpg",
     "fr": {
       "title": "FleetOps — logiciel de gestion de flotte au Maroc | Kaalytics",
-      "description": "Suivi GPS, maintenance predictive et couts par chantier. La rentabilite de chaque machine visible depuis votre ERP."
+      "description": "Suivi GPS, maintenance prédictive et coûts par chantier. La rentabilité de chaque machine visible depuis votre ERP."
     },
     "en": {
       "path": "en/modules/fleetops.html",
@@ -15,8 +15,8 @@
   "modules/sales-intelligence.html": {
     "keyword": "tableau de bord commercial ERP",
     "fr": {
-      "title": "Sales Intelligence — pilotage commercial connecte a votre ERP | Kaalytics",
-      "description": "Indicateurs commerciaux en temps reel, scoring des prospects et devis en 30 secondes, directement relies a votre ERP."
+      "title": "Sales Intelligence — pilotage commercial connecté à votre ERP | Kaalytics",
+      "description": "Indicateurs commerciaux en temps réel, scoring des prospects et devis en 30 secondes, directement reliés à votre ERP."
     },
     "en": {
       "path": "en/modules/sales-intelligence.html",
@@ -27,8 +27,8 @@
   "modules/marketing-automation.html": {
     "keyword": "marketing automation Maroc",
     "fr": {
-      "title": "Marketing Automation — campagnes ciblees pour PME | Kaalytics",
-      "description": "Campagnes avec scoring automatique, enrichissement des contacts et pipeline marketing relie au commercial. ROI mesure par campagne."
+      "title": "Marketing Automation — campagnes ciblées pour PME | Kaalytics",
+      "description": "Campagnes avec scoring automatique, enrichissement des contacts et pipeline marketing relié au commercial. ROI mesuré par campagne."
     },
     "en": {
       "path": "en/modules/marketing-automation.html",
@@ -40,7 +40,7 @@
     "keyword": "tableau de bord financier PME",
     "fr": {
       "title": "Financial Operations — tableau de bord financier et relances | Kaalytics",
-      "description": "Suivi de facturation automatise, relances intelligentes et detection d'anomalies. Cash flow previsionnel en un seul ecran."
+      "description": "Suivi de facturation automatisé, relances intelligentes et détection d'anomalies. Cash flow prévisionnel en un seul écran."
     },
     "en": {
       "path": "en/modules/financial-operations.html",
@@ -51,8 +51,8 @@
   "modules/supply-chain.html": {
     "keyword": "gestion des approvisionnements",
     "fr": {
-      "title": "Supply Chain Command — planning achats et prevision de ventes | Kaalytics",
-      "description": "Planning des achats, previsions de ventes et suivi logistique. Chaque maillon de la chaine visible en temps reel."
+      "title": "Supply Chain Command — planning achats et prévision de ventes | Kaalytics",
+      "description": "Planning des achats, prévisions de ventes et suivi logistique. Chaque maillon de la chaîne visible en temps réel."
     },
     "en": {
       "path": "en/modules/supply-chain.html",
@@ -64,7 +64,7 @@
     "keyword": "integration ERP Maroc",
     "fr": {
       "title": "ERP Connect — brancher vos modules sur votre ERP | Kaalytics",
-      "description": "Connecteurs bidirectionnels vers Cegid, Sage, SAP, Dynamics et Odoo. Vos donnees exploitables sans toucher au systeme en place."
+      "description": "Connecteurs bidirectionnels vers Cegid, Sage, SAP, Dynamics et Odoo. Vos données exploitables sans toucher au système en place."
     },
     "en": {
       "path": "en/modules/erp-connect.html",
@@ -75,8 +75,8 @@
   "modules/digital-platform.html": {
     "keyword": "site web connecte ERP",
     "fr": {
-      "title": "Digital Platform — site web et catalogue connectes a l'ERP | Kaalytics",
-      "description": "Site vitrine, referencement et catalogue e-commerce alimentes directement par votre ERP. Une presence en ligne qui genere des contacts."
+      "title": "Digital Platform — site web et catalogue connectés à l'ERP | Kaalytics",
+      "description": "Site vitrine, référencement et catalogue e-commerce alimentés directement par votre ERP. Une présence en ligne qui génère des contacts."
     },
     "en": {
       "path": "en/modules/digital-platform.html",
@@ -87,8 +87,8 @@
   "modules/ai-engine.html": {
     "keyword": "automatisation IA entreprise Maroc",
     "fr": {
-      "title": "AI Engine — automatisations IA pour vos operations | Kaalytics",
-      "description": "Agents autonomes, lecture intelligente de documents et analyses automatisees, branches sur vos donnees metier."
+      "title": "AI Engine — automatisations IA pour vos opérations | Kaalytics",
+      "description": "Agents autonomes, lecture intelligente de documents et analyses automatisées, branchées sur vos données métier."
     },
     "en": {
       "path": "en/modules/ai-engine.html",
