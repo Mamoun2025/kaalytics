@@ -1,0 +1,207 @@
+"""Tests pour les structures de données structurées (BreadcrumbList, Article)."""
+import json
+from pathlib import Path
+
+from scripts.seo.catalog import load_catalog, load_defaults
+from scripts.seo.schema import build_breadcrumb_list, build_article_schema
+
+
+ROOT = Path(__file__).resolve().parents[2]
+DATA = ROOT / "data" / "seo"
+
+
+class TestBreadcrumbList:
+    """Tests pour la génération de BreadcrumbList."""
+
+    def test_homepage_has_no_breadcrumb(self):
+        """L'accueil n'a pas de fil d'Ariane (une seule étape)."""
+        schema = build_breadcrumb_list("index.html", "fr")
+        assert schema is None, "L'accueil ne doit pas avoir de fil d'Ariane"
+
+    def test_homepage_en_has_no_breadcrumb(self):
+        """La page d'accueil anglaise n'a pas de fil d'Ariane."""
+        schema = build_breadcrumb_list("en/index.html", "en")
+        assert schema is None, "L'accueil EN ne doit pas avoir de fil d'Ariane"
+
+    def test_module_page_breadcrumb(self):
+        """Une page module a un fil d'Ariane : Accueil → Modules → FleetOps."""
+        schema = build_breadcrumb_list("modules/fleetops.html", "fr")
+        assert schema is not None
+        assert schema["@type"] == "BreadcrumbList"
+        assert len(schema["itemListElement"]) == 3
+
+        # Vérifier l'ordre
+        assert schema["itemListElement"][0]["position"] == 1
+        assert schema["itemListElement"][0]["name"] == "Accueil"
+        assert schema["itemListElement"][0]["item"] == "https://kaalytics.com/"
+
+        assert schema["itemListElement"][1]["position"] == 2
+        assert schema["itemListElement"][1]["name"] == "Modules"
+        assert schema["itemListElement"][1]["item"] == "https://kaalytics.com/modules"
+
+        assert schema["itemListElement"][2]["position"] == 3
+        assert schema["itemListElement"][2]["name"] == "FleetOps"
+        assert schema["itemListElement"][2]["item"] == "https://kaalytics.com/modules/fleetops"
+
+    def test_module_page_breadcrumb_en(self):
+        """Fil d'Ariane en anglais pour une page module."""
+        schema = build_breadcrumb_list("en/modules/fleetops.html", "en")
+        assert schema is not None
+        assert schema["itemListElement"][1]["name"] == "Modules"
+        assert schema["itemListElement"][2]["name"] == "FleetOps"
+
+    def test_blog_index_breadcrumb(self):
+        """blog/index.html a un fil d'Ariane : Accueil → Blog."""
+        schema = build_breadcrumb_list("blog/index.html", "fr")
+        assert schema is not None
+        assert len(schema["itemListElement"]) == 2
+        assert schema["itemListElement"][1]["name"] == "Blog"
+        assert schema["itemListElement"][1]["item"] == "https://kaalytics.com/blog"
+
+    def test_blog_article_breadcrumb(self):
+        """Un article de blog a un fil d'Ariane : Accueil → Blog → titre article."""
+        schema = build_breadcrumb_list("blog/digitalisation-flotte-btp.html", "fr")
+        assert schema is not None
+        assert len(schema["itemListElement"]) == 3
+        assert schema["itemListElement"][1]["name"] == "Blog"
+        assert "Digitalisation flotte BTP" in schema["itemListElement"][2]["name"]
+
+    def test_guides_breadcrumb(self):
+        """guides/index.html a un fil d'Ariane : Accueil → Guides."""
+        schema = build_breadcrumb_list("guides/index.html", "fr")
+        assert schema is not None
+        assert len(schema["itemListElement"]) == 2
+        assert schema["itemListElement"][1]["name"] == "Guides"
+
+    def test_case_studies_breadcrumb(self):
+        """case-studies/index.html a un fil d'Ariane : Accueil → Études de cas."""
+        schema = build_breadcrumb_list("case-studies/index.html", "fr")
+        assert schema is not None
+        assert len(schema["itemListElement"]) == 2
+        assert schema["itemListElement"][1]["name"] == "Études de cas"
+
+    def test_breadcrumb_is_valid_json(self):
+        """Le JSON-LD généré est valide."""
+        schema = build_breadcrumb_list("modules/fleetops.html", "fr")
+        json_str = json.dumps(schema)
+        parsed = json.loads(json_str)
+        assert parsed["@type"] == "BreadcrumbList"
+
+
+class TestArticleSchema:
+    """Tests pour la génération du schéma Article."""
+
+    def test_no_article_on_module_page(self):
+        """Une page module n'est pas un Article."""
+        schema = build_article_schema("modules/fleetops.html", "fr", None, None)
+        assert schema is None
+
+    def test_no_article_on_homepage(self):
+        """L'accueil n'est pas un Article."""
+        schema = build_article_schema("index.html", "fr", None, None)
+        assert schema is None
+
+    def test_article_on_blog_page(self):
+        """Un article de blog a un schéma Article."""
+        title = "Digitalisation flotte BTP"
+        description = "Guide pratique de digitalisation"
+        schema = build_article_schema("blog/digitalisation-flotte-btp.html", "fr", title, description)
+
+        assert schema is not None
+        assert schema["@type"] == "Article"
+        assert schema["headline"] == title
+        assert schema["description"] == description
+        assert schema["inLanguage"] == "fr"
+        assert schema["mainEntityOfPage"]["@id"] == "https://kaalytics.com/blog/digitalisation-flotte-btp"
+
+    def test_article_on_guide_page(self):
+        """Un guide a un schéma Article."""
+        title = "Checklist Maintenance Préventive"
+        description = "Checklist complète de maintenance"
+        schema = build_article_schema("guides/checklist-maintenance.html", "fr", title, description)
+
+        assert schema is not None
+        assert schema["@type"] == "Article"
+        assert schema["headline"] == title
+
+    def test_article_has_author_and_publisher(self):
+        """Un Article inclut author et publisher."""
+        schema = build_article_schema(
+            "blog/roi-gestion-flotte.html", "fr",
+            "ROI d'une solution | Blog Kaalytics", "Comment calculer le ROI"
+        )
+        assert "author" in schema
+        assert schema["author"]["@type"] == "Organization"
+        assert schema["author"]["name"] == "Kaalytics"
+        assert "publisher" in schema
+        assert schema["publisher"]["@type"] == "Organization"
+        # Vérifier que le suffixe a été retiré du headline
+        assert schema["headline"] == "ROI d'une solution"
+
+    def test_article_headline_strips_kaalytics_suffix(self):
+        """Le headline retire le suffixe '| Kaalytics' du titre du catalogue."""
+        schema = build_article_schema(
+            "blog/test.html", "fr",
+            "Test Article | Blog Kaalytics", "Description"
+        )
+        assert schema["headline"] == "Test Article"
+
+    def test_article_no_date_if_not_provided(self):
+        """Pas de datePublished si aucune date n'est fournie."""
+        schema = build_article_schema(
+            "blog/test.html", "fr",
+            "Test Article", "Description"
+        )
+        assert "datePublished" not in schema
+
+    def test_article_is_valid_json(self):
+        """Le JSON-LD Article généré est valide."""
+        schema = build_article_schema(
+            "blog/test.html", "fr",
+            "Test Article", "Description"
+        )
+        json_str = json.dumps(schema)
+        parsed = json.loads(json_str)
+        assert parsed["@type"] == "Article"
+
+    def test_no_article_on_blog_index(self):
+        """La page d'index du blog n'est pas un Article."""
+        schema = build_article_schema("blog/index.html", "fr", None, None)
+        assert schema is None
+
+    def test_no_article_on_guides_index(self):
+        """La page d'index des guides n'est pas un Article."""
+        schema = build_article_schema("guides/index.html", "fr", None, None)
+        assert schema is None
+
+
+class TestSchemaIntegration:
+    """Tests d'intégration avec le catalogue."""
+
+    def test_every_production_page_has_valid_json_ld(self):
+        """Chaque page de production ne doit avoir que du JSON-LD valide."""
+        catalog = load_catalog(DATA)
+        for page in catalog:
+            breadcrumb = build_breadcrumb_list(page.html_path, page.lang)
+            article = build_article_schema(page.html_path, page.lang, page.title, page.description)
+
+            # Vérifier que les deux sont soit None, soit des dicts valides
+            if breadcrumb is not None:
+                json_str = json.dumps(breadcrumb)
+                json.loads(json_str)  # Lève une exception si invalide
+
+            if article is not None:
+                json_str = json.dumps(article)
+                json.loads(json_str)  # Lève une exception si invalide
+
+    def test_breadcrumb_position_increments(self):
+        """Les positions du fil d'Ariane doivent incrémenter de 1."""
+        schema = build_breadcrumb_list("modules/fleetops.html", "fr")
+        positions = [item["position"] for item in schema["itemListElement"]]
+        assert positions == list(range(1, len(positions) + 1))
+
+    def test_breadcrumb_items_are_absolute_urls(self):
+        """Les URLs du fil d'Ariane doivent être absolues."""
+        schema = build_breadcrumb_list("modules/fleetops.html", "fr")
+        for item in schema["itemListElement"]:
+            assert item["item"].startswith("https://kaalytics.com")

@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 
 from scripts.seo.catalog import PageMeta, load_catalog, load_defaults
-from scripts.seo.head import build_head_block
+from scripts.seo.head import build_head_block, _deduplicate_schemas
 from scripts.seo.htmlio import strip_legacy_tags, upsert_block
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -21,7 +21,8 @@ DATA = ROOT / "data" / "seo"
 
 def apply_to_page(html: str, meta: PageMeta, defaults: dict) -> str:
     cleaned = strip_legacy_tags(html)
-    return upsert_block(cleaned, build_head_block(meta, defaults))
+    with_seo = upsert_block(cleaned, build_head_block(meta, defaults))
+    return _deduplicate_schemas(with_seo)
 
 
 def main(argv: list[str] | None = None) -> int:

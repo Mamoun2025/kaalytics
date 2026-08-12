@@ -87,9 +87,15 @@ def test_jsonld_organization_present_et_valide():
         r'<script type="application/ld\+json">(.*?)</script>', out, re.S
     )
     assert blocks, "aucun bloc JSON-LD"
-    data = json.loads(blocks[0])
-    assert data["@type"] == "Organization"
-    assert data["@context"] == "https://schema.org"
+    # Chercher le bloc Organization (peut ne pas être le premier s'il y a BreadcrumbList/Article)
+    org_data = None
+    for block_str in blocks:
+        data = json.loads(block_str)
+        if data["@type"] == "Organization":
+            org_data = data
+            break
+    assert org_data is not None, "aucun bloc Organization trouvé"
+    assert org_data["@context"] == "https://schema.org"
 
 
 def test_les_guillemets_du_titre_sont_echappes():

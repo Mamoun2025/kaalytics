@@ -2,9 +2,11 @@
 from __future__ import annotations
 
 import json
+import re
 from html import escape
 
 from scripts.seo.catalog import BASE_URL, PageMeta
+from scripts.seo.schema import build_breadcrumb_list, build_article_schema
 
 BEGIN_MARKER = "<!-- SEO:BEGIN (genere par scripts/seo/gen_head.py - ne pas editer) -->"
 END_MARKER = "<!-- SEO:END -->"
@@ -14,6 +16,52 @@ OG_LOCALE = {"fr": "fr_FR", "en": "en_US"}
 
 def _abs(path: str) -> str:
     return path if path.startswith("http") else BASE_URL + path
+
+
+def _deduplicate_schemas(html: str) -> str:
+    """Retire les scripts JSON-LD redondants en dehors du bloc SEO généré.
+
+    Retire les blocs Organization et BreadcrumbList qui sont doublonnés
+    (on les génère désormais dans le bloc SEO).
+    """
+    # Diviser le HTML en trois parties : avant bloc SEO, le bloc SEO, après bloc SEO
+    head, rest = html.split("</head>", 1)
+    seo_start = BEGIN_MARKER
+    seo_end = END_MARKER
+
+    if seo_start not in head or seo_end not in head:
+        # Pas de bloc SEO, laisser intact
+        return html
+
+    # Trouver les positions
+    before_seo = head[: head.find(seo_start)]
+    seo_block = head[head.find(seo_start) : head.find(seo_end) + len(seo_end)]
+    after_seo = head[head.find(seo_end) + len(seo_end) :]
+
+    # Retirer les schémas redondants en dehors du bloc SEO
+    def remove_duplicate_schemas(text: str) -> str:
+        """Retire les scripts JSON-LD Organization et BreadcrumbList."""
+        pattern = r'[ \t]*<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>[ \t]*\r?\n?'
+
+        def check_and_remove(match):
+            content = match.group(1)
+            try:
+                data = json.loads(content)
+                schema_type = data.get("@type") if isinstance(data, dict) else None
+                # Retirer si c'est une Organization ou BreadcrumbList (qu'on génère maintenant)
+                if schema_type in ("Organization", "BreadcrumbList"):
+                    return ""
+            except (json.JSONDecodeError, ValueError):
+                # Laisser les scripts invalides en place
+                pass
+            return match.group(0)
+
+        return re.sub(pattern, check_and_remove, text, flags=re.S | re.I)
+
+    before_seo_clean = remove_duplicate_schemas(before_seo)
+    after_seo_clean = remove_duplicate_schemas(after_seo)
+
+    return before_seo_clean + seo_block + after_seo_clean + "</head>" + rest
 
 
 def build_head_block(meta: PageMeta, defaults: dict) -> str:
@@ -47,11 +95,30 @@ def build_head_block(meta: PageMeta, defaults: dict) -> str:
         f'    <meta name="twitter:image" content="{og_image}">',
     ]
 
+    # Générer les schémas structurés
+    schemas = []
+
+    # 1. BreadcrumbList (si applicable)
+    breadcrumb = build_breadcrumb_list(meta.html_path, meta.lang)
+    if breadcrumb:
+        schemas.append(breadcrumb)
+
+    # 2. Article (si applicable)
+    article = build_article_schema(meta.html_path, meta.lang, meta.title, meta.description)
+    if article:
+        schemas.append(article)
+
+    # 3. Organization (toujours présente)
     organization = {"@context": "https://schema.org", **defaults["organization"]}
-    lines += [
-        '    <script type="application/ld+json">',
-        json.dumps(organization, ensure_ascii=False, indent=4),
-        "    </script>",
-        END_MARKER,
-    ]
+    schemas.append(organization)
+
+    # Générer les scripts JSON-LD
+    for schema in schemas:
+        lines += [
+            '    <script type="application/ld+json">',
+            json.dumps(schema, ensure_ascii=False, indent=4),
+            "    </script>",
+        ]
+
+    lines.append(END_MARKER)
     return "\n".join(lines) + "\n"
