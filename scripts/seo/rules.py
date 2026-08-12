@@ -14,7 +14,25 @@ FR_DESACCENTUE = re.compile(
     r"clientele|maitrise|securite|fiabilite|qualite|activite)\b"
 )
 
+# Marqueurs de français sur pages anglaises
+FRENCH_MARKERS = re.compile(
+    r"\b(vos|votre|nos|notre|des|une|pour|avec|sans|plus|tous|toutes|"
+    r"chaque|leur|dans|entre|selon|ainsi|donc|aussi|les|est|sont|nous|vous|"
+    r"qui|que|plusieurs|cette|ces|afin|lors|depuis|jusqu)\b", re.I)
+
+ETIQUETTES_FR = re.compile(
+    r"(?<![\w-])(IA|Lire|Voir|Accueil|Retour|Suivant|Precedent|Précédent|"
+    r"Decouvrir|Découvrir|Nos|Le|La|Du|Au|Aux|Ou|Tarifs|Ressources|"
+    r"Contactez|Demander|Telecharger|Télécharger)(?![\w-])")
+
 HORS_INDEX = {"404.html", "merci.html"}
+
+
+def _visible_text(html: str) -> str:
+    """Extrait le texte visible d'une page HTML."""
+    body = html.split("<body", 1)[-1]
+    body = re.sub(r"<(script|style|svg)[\s\S]*?</\1>", " ", body, flags=re.I)
+    return re.sub(r"<[^>]+>", " ", body)
 
 
 class RuleError:
@@ -149,4 +167,22 @@ def check_sitemap_url_format(url: str) -> list[RuleError]:
     errors = []
     if url.endswith(".html"):
         errors.append(RuleError("sitemap.xml", "sitemap-url-en-.html", url))
+    return errors
+
+
+def check_french_on_english_page(rel: str, html: str) -> list[RuleError]:
+    """Verifie l'absence de francais sur les pages /en/."""
+    errors = []
+    if not rel.startswith("en/"):
+        return errors
+
+    texte = _visible_text(html)
+    etiq = sorted(set(ETIQUETTES_FR.findall(texte)))
+    if etiq:
+        errors.append(RuleError(rel, "etiquette-francaise-sur-page-EN", ", ".join(etiq[:5])))
+
+    trouves = sorted(set(m.lower() for m in FRENCH_MARKERS.findall(texte)))
+    if trouves:
+        errors.append(RuleError(rel, "francais-sur-page-en", ", ".join(trouves[:5])))
+
     return errors

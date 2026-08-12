@@ -14,15 +14,6 @@ from scripts.seo import rules
 EXCLUDED_DIRS = {"TRASH", "PROPOSALS", "proposals", "node_modules", "docs", "tests", ".superpowers", ".git", ".vercel", "components", "sections", "playground"}
 MAX_DESCRIPTION = 160
 MAX_TITLE = 70
-TRADUCTION_EN_ATTENTE: dict[str, str] = {}
-FRENCH_MARKERS = re.compile(
-    r"\b(vos|votre|nos|notre|des|une|pour|avec|sans|plus|tous|toutes|"
-    r"chaque|leur|dans|entre|selon|ainsi|donc|aussi|les|est|sont|nous|vous|"
-    r"qui|que|plusieurs|cette|ces|afin|lors|depuis|jusqu)\b", re.I)
-ETIQUETTES_FR = re.compile(
-    r"(?<![\w-])(IA|Lire|Voir|Accueil|Retour|Suivant|Precedent|Précédent|"
-    r"Decouvrir|Découvrir|Nos|Le|La|Du|Au|Aux|Ou|Tarifs|Ressources|"
-    r"Contactez|Demander|Telecharger|Télécharger)(?![\w-])")
 RESSOURCE = re.compile(r"\.(css|js|mjs|png|jpe?g|svg|ico|webp|gif|woff2?|ttf|mp4|webm|json|xml|txt|pdf)$", re.I)
 URLS_HORS_DEPOT = {BASE_URL + "/work"}
 
@@ -45,12 +36,6 @@ def _pages(root: Path) -> list[Path]:
         for p in sorted(root.rglob("*.html"))
         if not set(p.relative_to(root).parts) & EXCLUDED_DIRS
     ]
-
-
-def _visible_text(html: str) -> str:
-    body = html.split("<body", 1)[-1]
-    body = re.sub(r"<(script|style|svg)[\s\S]*?</\1>", " ", body, flags=re.I)
-    return re.sub(r"<[^>]+>", " ", body)
 
 
 def _resolve_link_target(rel_file: str, href: str, root: Path) -> bool:
@@ -183,14 +168,8 @@ def _run_checks_internal(root: Path) -> tuple[list[Violation], list[Warning]]:
                 violations.append(Violation(rel, "lien-sans-cible", href))
 
         # Separation des langues et contenu FR
-        if rel.startswith("en/") and rel not in TRADUCTION_EN_ATTENTE:
-            texte = _visible_text(html)
-            etiq = sorted(set(ETIQUETTES_FR.findall(texte)))
-            if etiq:
-                violations.append(Violation(rel, "etiquette-francaise-sur-page-EN", ", ".join(etiq[:5])))
-            trouves = sorted(set(m.lower() for m in FRENCH_MARKERS.findall(texte)))
-            if trouves:
-                violations.append(Violation(rel, "francais-sur-page-en", ", ".join(trouves[:5])))
+        for err in rules.check_french_on_english_page(rel, html):
+            violations.append(Violation(err.page, err.rule, err.detail))
 
     # --- Sitemap
     sitemap = root / "sitemap.xml"
