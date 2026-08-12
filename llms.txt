@@ -59,4 +59,22 @@
 
 ## Version anglaise
 
-- [English version](https://kaalytics.com/en) : Full English version of Kaalytics
+- [AI Engine — AI automation for your operations | Kaalytics](https://kaalytics.com/en/modules/ai-engine) : Autonomous agents, intelligent document parsing and automated analysis, wired into your business data.
+- [Digital Platform — website and catalogue for ERP | Kaalytics](https://kaalytics.com/en/modules/digital-platform) : Website, search visibility and e-commerce catalogue fed directly by your ERP. An online presence that generates leads.
+- [ERP Connect — plug our modules into your ERP | Kaalytics](https://kaalytics.com/en/modules/erp-connect) : Two-way connectors for Cegid, Sage, SAP, Dynamics and Odoo. Your data made usable without touching the system in place.
+- [Financial Operations — financial dashboard and collections | Kaalytics](https://kaalytics.com/en/modules/financial-operations) : Automated invoicing follow-up, smart payment reminders and anomaly detection. Forecast cash flow on a single screen.
+- [FleetOps — fleet management software in Morocco | Kaalytics](https://kaalytics.com/en/modules/fleetops) : GPS tracking, predictive maintenance and per-site costs. See the profitability of every machine from your ERP.
+- [Marketing Automation — targeted campaigns for SMEs | Kaalytics](https://kaalytics.com/en/modules/marketing-automation) : Campaigns with automatic scoring, contact enrichment and a marketing pipeline wired to sales. ROI measured per campaign.
+- [Sales Intelligence — sales management for ERP | Kaalytics](https://kaalytics.com/en/modules/sales-intelligence) : Real-time sales indicators, prospect scoring and quotes in 30 seconds, wired straight into your ERP.
+- [Supply Chain Command — purchasing and sales forecasting | Kaalytics](https://kaalytics.com/en/modules/supply-chain) : Purchase planning, sales forecasting and logistics tracking. Every link in the chain visible in real time.
+- [Building & Construction Solutions | Kaalytics](https://kaalytics.com/en/industries/btp) : Construction demands precision. So should your tools. Scattered machines, unexpected breakdowns, hidden costs. Kaalytics solves these problems.
+- [Distribution & Trade | Kaalytics](https://kaalytics.com/en/industries/distribution) : Sell more, stock smarter, deliver faster. Distributors, wholesalers, merchants. Kaalytics automates your commercial chain.
+- [Manufacturing & Production | Kaalytics](https://kaalytics.com/en/industries/industrie) : Industrial performance, measured in real time. Production lines, inventory, quality. Kaalytics optimizes your value chain.
+- [Equipment Rental | Kaalytics](https://kaalytics.com/en/industries/location) : Maximize utilization. Minimize idle assets. Rental fleet, multi-customer, fast rotations. Kaalytics optimizes your fleet.
+- [Mining & Quarries | Kaalytics](https://kaalytics.com/en/industries/mines) : Extraction tolerates no approximation. Critical equipment, extreme conditions, strict compliance. Kaalytics optimizes your production.
+- [Transport & Logistics | Kaalytics](https://kaalytics.com/en/industries/transport) : Every kilometer counts. Every delivery too. Thin margins, demanding clients, strict regulations. Kaalytics optimizes your profitability.
+- [Kaalytics | Your systems. On steroids.](https://kaalytics.com/en) : We plug our modules into your ERP. What took days now takes seconds. Smart modules for Odoo, SAP, Sage, Dynamics.
+- [About | Kaalytics](https://kaalytics.com/en/about) : Kaalytics develops AI modules that connect to ERPs to optimize business operations. Our approach, our vision.
+- [Contact | Kaalytics - Speak with an expert](https://kaalytics.com/en/contact) : Contact the Kaalytics team. Contact form, phone number, WhatsApp. We respond within 24h.
+- [FAQ | Frequently Asked Questions | Kaalytics](https://kaalytics.com/en/faq) : Kaalytics FAQ - Frequently asked questions about our AI modules. Deployment, pricing, integrations, security and support.
+- [Pricing | Kaalytics](https://kaalytics.com/en/pricing) : Transparent module-based pricing. Standard, Pro or Premium based on your needs. Each module is independent and modular.

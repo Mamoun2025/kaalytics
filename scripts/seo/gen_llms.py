@@ -137,7 +137,30 @@ def build_llms(pages: list[PageMeta]) -> str:
     if groups["en"]:
         lines.append("## Version anglaise")
         lines.append("")
-        lines.append(f"- [English version]({BASE_URL}/en) : Full English version of Kaalytics")
+
+        # Modules anglais
+        en_modules = [p for p in groups["en"] if p.html_path.startswith("en/modules/")]
+        if en_modules:
+            for page in _sort_within_family(en_modules):
+                url = BASE_URL + page.url_path
+                lines.append(f"- [{page.title.replace(' — ', ' — ')}]({url}) : {page.description}")
+
+        # Secteurs anglais
+        en_industries = [p for p in groups["en"] if p.html_path.startswith("en/industries/")]
+        if en_industries:
+            for page in _sort_within_family(en_industries):
+                url = BASE_URL + page.url_path
+                lines.append(f"- [{page.title.replace(' | ', ' | ')}]({url}) : {page.description}")
+
+        # Pages principales (accueil, à propos, contact, FAQ, tarifs)
+        en_company = [p for p in groups["en"] if p.html_path in (
+            "en/index.html", "en/about.html", "en/contact.html", "en/faq.html", "en/pricing.html"
+        )]
+        if en_company:
+            for page in _sort_within_family(en_company):
+                url = BASE_URL + page.url_path
+                lines.append(f"- [{page.title.replace(' | ', ' | ')}]({url}) : {page.description}")
+
         lines.append("")
 
     return "\n".join(lines)
