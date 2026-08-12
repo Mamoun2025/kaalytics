@@ -58,3 +58,7 @@ def test_only_ne_traite_que_les_pages_demandees(capsys):
     sortie = capsys.readouterr().out
     assert "modules/fleetops.html" in sortie
     assert "modules/ai-engine.html" not in sortie
+
+
+def test_retour_1_si_page_inexistante_au_catalogue():
+    assert main(["--dry-run", "--only", "page-inexistante.html"]) == 1

@@ -66,3 +66,19 @@ def test_leve_si_pas_de_head_fermant():
 
     with pytest.raises(ValueError, match="</head>"):
         upsert_block("<html><body>rien</body></html>", BLOCK)
+
+
+def test_lindentation_de_la_ligne_suivante_est_preservee():
+    html = (
+        "<!DOCTYPE html>\n<html><head>\n"
+        '    <meta charset="UTF-8">\n'
+        "    <title>Ancien</title>\n"
+        '    <meta name="description" content="x">\n'
+        '    <meta name="keywords" content="a, b">\n'
+        '    <link rel="preconnect" href="https://fonts.googleapis.com">\n'
+        "</head>\n<body>corps</body></html>\n"
+    )
+    out = strip_legacy_tags(html)
+    assert '\n    <meta name="keywords" content="a, b">' in out
+    assert '\n    <link rel="preconnect" href="https://fonts.googleapis.com">' in out
+    assert '\n    <meta charset="UTF-8">' in out

@@ -12,13 +12,14 @@ _BLOCK_RE = re.compile(
 # Balises que le bloc genere reprend a son compte, et qui doivent donc
 # disparaitre du <head> ecrit a la main. charset et viewport ne sont pas
 # dans la liste : ils restent geres par la page.
+# Note: terminer par [ \t]*\r?\n? (pas \s*\n?) pour preserver l'indentation de la ligne suivante.
 _LEGACY_PATTERNS = [
-    r'[ \t]*<title[^>]*>.*?</title>\s*\n?',
-    r'[ \t]*<meta[^>]+name=["\'](?:description|robots|title)["\'][^>]*>\s*\n?',
-    r'[ \t]*<meta[^>]+property=["\']og:[^"\']+["\'][^>]*>\s*\n?',
-    r'[ \t]*<meta[^>]+name=["\']twitter:[^"\']+["\'][^>]*>\s*\n?',
-    r'[ \t]*<link[^>]+rel=["\']canonical["\'][^>]*>\s*\n?',
-    r'[ \t]*<link[^>]+rel=["\']alternate["\'][^>]*hreflang[^>]*>\s*\n?',
+    r'[ \t]*<title[^>]*>.*?</title>[ \t]*\r?\n?',
+    r'[ \t]*<meta[^>]+name=["\'](?:description|robots|title)["\'][^>]*>[ \t]*\r?\n?',
+    r'[ \t]*<meta[^>]+property=["\']og:[^"\']+["\'][^>]*>[ \t]*\r?\n?',
+    r'[ \t]*<meta[^>]+name=["\']twitter:[^"\']+["\'][^>]*>[ \t]*\r?\n?',
+    r'[ \t]*<link[^>]+rel=["\']canonical["\'][^>]*>[ \t]*\r?\n?',
+    r'[ \t]*<link[^>]+rel=["\']alternate["\'][^>]*hreflang[^>]*>[ \t]*\r?\n?',
 ]
 
 
