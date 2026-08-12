@@ -388,6 +388,189 @@
         </div>
     </section>
 
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Le déroulé du déploiement</h2>
+        <p class="challenges__subtitle">Comment on optimise votre parc en location</p>
+
+        <div class="solution-item">
+            <span class="solution-item__number">1</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Cartographier le parc (Semaine 1)</div>
+                <div class="solution-item__desc">On recense chaque équipement : type, année d'achat, état, localisation actuelle, historique de location. Ça prend une semaine si vous avez 100-300 machines. Plus de 1000 ? On commence par les 20 % qui génèrent 80 % du chiffre.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">2</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Poser les traceurs (Semaine 2)</div>
+                <div class="solution-item__desc">GPS ou RFID selon l'équipement. Les machines de chantier : GPS fixe. Les petits outils : RFID actif. Vos équipes savent où elles sont, toujours. Plus de recherche, plus de perte.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">3</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Intégrer les calendriers (Semaines 3-4)</div>
+                <div class="solution-item__desc">FleetOps lit vos réservations client et propose l'allocation optimal : quelle machine pour quel client, quand retour pour maintenance, quand repaint ou révision. Pas de chevauchement, pas d'oubli.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">4</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Dashboards et revenus (Semaine 5+)</div>
+                <div class="solution-item__desc">Chaque machine a un historique clair : combien de jours en location, revenus générés, coûts d'entretien, marge réelle. Le directeur voit en temps réel le taux d'utilisation et les priorités de maintenance.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Les prérequis qui bloquent</h2>
+        <p class="challenges__subtitle">Ce qui doit être en place</p>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Historique de location et tarifs clairs</div>
+            <div class="challenge-card__desc">On a besoin de savoir : quels clients louent quoi, à quel prix, pour combien de jours. Si c'est dans votre ERP ou TMS : parfait. Si c'est sur papier : digitalisez d'abord. Sans historique, pas de prédiction d'allocation optimale.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Données de maintenance actualisées</div>
+            <div class="challenge-card__desc">Quand a-t-on faire la révision majeure ? Quelle machine approche d'une visite importante ? Les manuels de maintenance de vos équipements doivent être consultables. Si tout ça est en papier, on digitalise d'abord.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Couverture réseau sur les sites de stockage</div>
+            <div class="challenge-card__desc">Les traceurs GPS ont besoin de 4G au moins. Si vos machines sont entreposées au milieu de nulle part sans réseau, les données se synchronisent une fois par jour ou quand elles reviennent à base. À discuter d'entrée de jeu.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Acceptance des équipes de manutention</div>
+            <div class="challenge-card__desc">Les gars qui conduisent les machines doivent accepter le tracking — c'est surtout du « plus jamais on perd une pelle » plutôt que surveillance. Deux jours de formation et c'est bon. Zéro problème social quand on explique bien.</div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Ce que vous mesurez vraiment</h2>
+        <p class="challenges__subtitle">Les KPIs de la location</p>
+
+        <div class="solution-item">
+            <span class="solution-item__number">1</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Taux d'utilisation du parc</div>
+                <div class="solution-item__desc">Nombre de jours loués vs. nombre de jours disponibles. Les parcs bien gérés affichent un taux bien supérieur aux parcs sans optimisation. FleetOps vous fait progresser via allocation intelligente et prédiction de demande, typiquement en quelques mois.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">2</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Jours perdus en maintenance (downtime)</div>
+                <div class="solution-item__desc">Une pelle qui attend révision majeure et qui est pas disponible : perte directe. Avec maintenance prédictive bien calibrée, les révisions se font pendant les creux de demande. Jours en entretien : zéro impact sur les revenus.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">3</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Revenu par machine et par mois</div>
+                <div class="solution-item__desc">Certaines machines génèrent 1500 euros/mois. D'autres 300. Vous savez ? Et vous avez un plan pour remonter les faibles ? FleetOps vous identifie les machines faibles et vous propose : relocation, prix ajusté, ou déclassement.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">4</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Pertes et casses en location</div>
+                <div class="solution-item__desc">Qui a gardé la machine plus long que prévu ? Qui l'a abîmée et pas signalé ? Le suivi GPS permet de détecter les anomalies (immobilité anormale) et les sorties non autorisées. Diminue fortement les litiges et les pertes.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Objections qu'on entend</h2>
+        <p class="challenges__subtitle">Réponses claires</p>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">« Mes clients refuseront des traceurs. »</div>
+            <div class="challenge-card__desc">Essentiellement non. Vous dites : « Nous avons une pelle neuve à 80k euros, on veut savoir où elle est. » Les clients comprennent. Si une machine part chez un concurrent sans autorisation, c'est grave — le GPS vous protège. Zéro résistance dans la pratique.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">« Ça va surcharger ma maintenance. »</div>
+            <div class="challenge-card__desc">L'inverse. Vous savez quand les révisions arrivent avant la panne. Les mécaniciens réparent sans urgence (moins coûteux) au lieu de se battre sur une machine tombée sur un chantier. Plus d'organisation, moins de stress, moins d'heures supplémentaires.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">« Mon parc est trop vieux — pas de capteurs. »</div>
+            <div class="challenge-card__desc">On ajoute les capteurs en externe pour vieilles machines. GPS de surface ou RFID adhésif : 150-300 euros par machine. Pour une pelle de 70k que vous louez 1500/mois, c'est rentable en 2-3 mois par les économies perte + optimisation.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">« Mon ERP ne se connecte pas. »</div>
+            <div class="challenge-card__desc">Sage, Cegid, Odoo, TMS standard : connexion directe. Legacy propriétaire : exports quotidiens. Plus lent mais ça marche. On discute de la feasibility en démo.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">« Combien ça va coûter à la location du client ? »</div>
+            <div class="challenge-card__desc">Rien. Le client paye la location. Vos gains (optimisation, moins de perte, moins de maintenance d'urgence) deviennent vos marges. Zéro surcoût pour le client, zéro frais d'accès pour lui.</div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Questions fréquentes</h2>
+        <p class="challenges__subtitle">Réponses directes</p>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">En combien de temps on améliore le taux d'utilisation ?</div>
+            <div class="challenge-card__desc">Aussitôt qu'on a une semaine de données : vous voyez où sont les trous de calendrier. Premiers gains : semaines 3-4 (meilleure allocation). Gains stabilisés : mois 3-6 (vous avez assez de données pour des patterns fiables).</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Si un client perd ou casse la machine ?</div>
+            <div class="challenge-card__desc">Le contrat de location inclut les responsabilités. FleetOps vous aide avec preuves GPS et photos (maintenance record) qui documentent l'état à chaque retour. Moins de litiges, meilleure protection légale.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Comment on gère les machines loués hors agence ?</div>
+            <div class="challenge-card__desc">Si un client la loue et la fait travailler sur un chantier distant, c'est OK — le GPS marche partout. Si elle sort du champ de 4G temporairement, les données se synchronisent plus tard. Pas de souci, c'est par design.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Y a-t-il un coût par machine tracée ?</div>
+            <div class="challenge-card__desc">Abonnement FleetOps fixe selon votre volume parc. Pas de coût additionnel par machine. Le capteur GPS/RFID est un achat unique : 200-300 euros amortis en quelques mois.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Peut-on monitorer les revenus par client ?</div>
+            <div class="challenge-card__desc">Oui. Dashboard : pour chaque client, total jours loués, revenu généré, machines utilisées, comportement (respect délais return, dégâts). Vous identifiez les bons clients et les risky.</div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border); padding-bottom: 40px;">
+        <h2 class="challenges__title">Pour aller plus loin</h2>
+        <p class="challenges__subtitle">Ressources et modules associés</p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;">
+            <a href="../modules/fleetops" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Module FleetOps</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Allocation machines, maintenance préventive, tracking utilisation.</div>
+            </a>
+            <a href="../modules/sales-intelligence" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Module Sales Intelligence</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Portail client, calendrier réservation, devis automatiques.</div>
+            </a>
+            <a href="../modules/financial-operations" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Module Financial Operations</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Revenu par machine, marge location, analyse utilisation.</div>
+            </a>
+            <a href="../pricing" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Tarification</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Par taille de parc. Contrat flexible.</div>
+            </a>
+        </div>
+    </section>
+
     <section class="industry-cta">
         <h2 class="industry-cta__title">Prêt à augmenter votre taux d'utilisation ?</h2>
         <p class="industry-cta__subtitle">Contactez notre équipe pour une démo personnalisée</p>

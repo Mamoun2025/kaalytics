@@ -426,6 +426,189 @@
         </div>
     </section>
 
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Le déroulé du déploiement</h2>
+        <p class="challenges__subtitle">Comment on commence avec votre parc matériel</p>
+
+        <div class="solution-item">
+            <span class="solution-item__number">1</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Audit initial (Semaine 1)</div>
+                <div class="solution-item__desc">On cartographie votre parc : machines actuellement en service, leurs positions, historique des pannes. On connecte les capteurs GPS sur les engins prioritaires. Vos équipes terrain continuent normalement — aucune interruption d'activité.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">2</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Intégration ERP (Semaines 2-3)</div>
+                <div class="solution-item__desc">FleetOps se branche sur votre système de gestion existant (Cegid, Sage, Odoo). Les données de disponibilité matériel alimentent vos prévisions. Les alertes anomalies remontent automatiquement aux chefs d'équipe.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">3</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Configuration maintenance (Semaine 4)</div>
+                <div class="solution-item__desc">On définit les seuils de maintenance pour chaque type d'engin (heures d'utilisation, kilométrage, anomalies détectées). Le système génère automatiquement les fiches d'intervention avant la panne. Les mécaniciens reçoivent le planning deux semaines à l'avance.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">4</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Dashboards et reporting (Semaine 5+)</div>
+                <div class="solution-item__desc">Chaque directeur voit en temps réel : localisation complète du parc, taux de disponibilité par chantier, coûts de maintenance par machine et par mois. Les anomalies sont alertées 2 heures après détection, pas à la panne.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Les prérequis qui bloquent</h2>
+        <p class="challenges__subtitle">Ce qui doit être en place avant de démarrer</p>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Couverture réseau sur les chantiers</div>
+            <div class="challenge-card__desc">FleetOps fonctionne en temps réel avec 4G/5G. Si vos carrières ou chantiers n'ont pas de réseau stable, les données se synchronisent quand la couverture revient. Pour les zones sans réseau permanent, on peut configurer des relais ou des mises à jour différées. À discuter d'entrée de jeu.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Historique de maintenance lisible</div>
+            <div class="challenge-card__desc">On a besoin de savoir ce qui s'est passé sur vos engins : quand ils ont été achetés, les réparations déjà effectuées, les consommables changés. Si c'est éparpillé dans des emails ou des carnets, on commence par ça avant la maintenance prédictive.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Disponibilité des chefs de chantier</div>
+            <div class="challenge-card__desc">Deux jours de formation suffisent pour utiliser les dashboards et réagir aux alertes. Pas de compétences techniques requises. Mais quelqu'un doit valider la transition et former son équipe.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Accès à votre ERP</div>
+            <div class="challenge-card__desc">On a besoin de lire vos données : bons de commande, factures matériel, données comptables par chantier. Si votre ERP n'est pas accessible (serveur legacy, base fermée), on peut passer par des exports mensuels, mais c'est plus lent.</div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Ce que vous mesurez vraiment</h2>
+        <p class="challenges__subtitle">Les KPIs qui font bouger l'aiguille</p>
+
+        <div class="solution-item">
+            <span class="solution-item__number">1</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Disponibilité du parc matériel</div>
+                <div class="solution-item__desc">Pourcentage de machines opérationnelles chaque jour. La plupart des entreprises BTP fonctionnent avec des taux de disponibilité sous-optimaux. Avec maintenance préventive bien calibrée, vous améliorez significativement cette disponibilité. Chaque amélioration se traduit directement par une augmentation de capacité de chantier.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">2</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Coûts de maintenance par machine</div>
+                <div class="solution-item__desc">La maintenance réactive coûte sensiblement plus cher que la préventive. Les pannes imprévues représentent une source majeure de pertes de productivité. En passant à une approche prédictive, vous réduisez ce coût de manière significative.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">3</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Rentabilité par chantier</div>
+                <div class="solution-item__desc">Marges brutes réelles après allocation du coût du matériel, de la maintenance, et des transports. FleetOps vous donne ce chiffre jour par jour, pas à la clôture. Vous reactionnez avant de perdre 50k sur un gros chantier.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">4</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Temps de mobilisation</div>
+                <div class="solution-item__desc">Nombre de jours entre la demande d'un engin et sa disponibilité sur chantier. Avec une allocation optimisée, ce délai diminue nettement. Parallèlement, vous réduisez le surcoût logistique qui accompagne traditionnellement les allocations mal planifiées.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Objections qu'on entend</h2>
+        <p class="challenges__subtitle">Réponses franches à vos doutes</p>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">« Mes engins n'ont pas de capteurs — c'est impossible d'installer. »</div>
+            <div class="challenge-card__desc">Faux. Les capteurs GPS se montent en une heure sur 90 % des engins. Pour les vieilles machines (15+ ans), on peut poser un tracker externe. Coût : 200-400 euros par engin, amorti en 2-3 mois par les économies de maintenance.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">« Mes chefs de chantier refuseront d'être suivis. »</div>
+            <div class="challenge-card__desc">On suit les engins, pas les gens. Les localisations des machines sont visibles seulement au dispatching. Les équipes voient juste les alertes et le planning maintenance — zéro surveillance personnelle. On a travaillé avec des PME syndicalisées ; aucun problème social.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">« Mes données sont mal organisées. »</div>
+            <div class="challenge-card__desc">Normal. Ça fait 20 ans que vous construisez des chantiers, pas que vous organisez des bases. On prend 3-4 semaines pour nettoyer l'historique avant d'aller vers du prédictif. C'est un coût-bénéfice : une semaine de rangement pour 2 ans de maintenance optimisée.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">« Ça va me coûter une fortune. »</div>
+            <div class="challenge-card__desc">FleetOps fonctionne en abonnement : 200-600 euros par mois selon la taille du parc. Si vous réduisez les pannes de 40 % et gagnez 3-5 jours de disponibilité matériel par mois, le ROI est de 6-9 mois. Pas de licence unique, pas de serveur à acheter.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">« Ça va surcharger mon ERP. »</div>
+            <div class="challenge-card__desc">Kaalytics se branche en lecture. On ne modifie rien dans votre système — on lit les données et on crée nos propres tableaux de bord. Zéro ralentissement, zéro risque. Si vous avez une panne ERP, FleetOps marche toujours en mode dégradé.</div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Questions fréquentes</h2>
+        <p class="challenges__subtitle">Réponses directes à vos interrogations</p>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">En combien de temps je vois des résultats ?</div>
+            <div class="challenge-card__desc">Les premiers gains apparaissent à la semaine 3 : vous localisez les engins en 30 secondes au lieu de 30 minutes, les alertes anomalies réduisent les pannes surprise. Les gains de maintenance prédictive se mesurent vraiment à partir de la semaine 8, quand le système a assez de données. Attendre 3-4 mois pour la disponibilité matériel complètement stable.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Comment vous garantissez la sécurité des données ?</div>
+            <div class="challenge-card__desc">Infrastructure cloud chez un prestataire RGPD (AWS EU, Scaleway). Vos données localisations et techniques restent privées. Aucune donnée n'est vendue, utilisée pour l'IA générale, ou partagée tiers. Audit annuel de sécurité. Clause de confidentialité contractuelle explicite.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Et si je veux partir — comment je récupère mes données ?</div>
+            <div class="challenge-card__desc">Toutes vos données sont exportables en CSV et JSON. Pas de verrouillage. Vous pouvez partir avec l'historique complet du matériel. Préavis de 30 jours respecté. On donne aussi une semaine de support technique pour la transition.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Quel engin ne peut pas être suivi ?</div>
+            <div class="challenge-card__desc">En théorie, tous peuvent l'être. En pratique : les engins loués à des tiers (camion bétonnière chez un artisan) on les suit pas — légalement compliqué. Les petits outils (tronçonneuses, compresseurs) c'est possible mais peu utile — ROI bas. Les groupes électrogènes et pelles mécaniques de plus de 3 tonnes : 100 % tracés sans problème.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Mon ERP n'est pas compatible. Qu'est-ce qu'on fait ?</div>
+            <div class="challenge-card__desc">Si c'est du Cegid, Sage, Odoo, ou Dynamics : pas de souci, on connecte directement. Si c'est du legacy (mainframe, système propriétaire), on passe par des exports mensuels. Plus lent, mais ça marche. Devis séparé selon la complexité.</div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border); padding-bottom: 40px;">
+        <h2 class="challenges__title">Pour aller plus loin</h2>
+        <p class="challenges__subtitle">Ressources et modules associés</p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;">
+            <a href="../modules/fleetops" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Module FleetOps</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Suivi temps réel, maintenance prédictive, analyse rentabilité.</div>
+            </a>
+            <a href="../modules/supply-chain" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Module Supply Chain</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Achats, approvisionnement pièces détachées, stock centralisé.</div>
+            </a>
+            <a href="../modules/financial-operations" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Module Financial Operations</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Rentabilité chantier, allocation coûts indirects, forecasting.</div>
+            </a>
+            <a href="../pricing" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Tarification</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Formules adaptées à votre taille. Pas de contrat minimum.</div>
+            </a>
+        </div>
+    </section>
+
     <section class="industry-cta">
         <h2 class="industry-cta__title">Prêt à optimiser vos chantiers ?</h2>
         <p class="industry-cta__subtitle">Contactez notre équipe pour une démo personnalisée</p>
