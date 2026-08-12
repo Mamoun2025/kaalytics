@@ -47,6 +47,7 @@ class PageMeta:
     keyword: str
     alternates: tuple[tuple[str, str], ...]
     robots: str
+    author: str | None = None
 
 
 def load_defaults(data_dir: Path) -> dict:
@@ -80,17 +81,31 @@ def _alternates(fr_path: str, en_path: str | None) -> tuple[tuple[str, str], ...
 
 
 def load_catalog(data_dir: Path) -> list[PageMeta]:
+    from scripts.seo.schema import get_author
+
     defaults = load_defaults(data_dir)
+    # Pour get_author, on a besoin du répertoire parent (racine du projet)
+    # data_dir est typiquement data/seo, donc data_dir.parent.parent est la racine
+    root = data_dir.parent if data_dir.name == "seo" else data_dir
     pages: list[PageMeta] = []
     for fr_path, entry in _entries(data_dir).items():
         en = entry.get("en")
         en_path = en.get("path") if en else None
         alternates = _alternates(fr_path, en_path)
+
+        # Valider l'auteur s'il est déclaré
+        author_id = entry.get("author")
+        if author_id:
+            author = get_author(author_id, root)
+            if not author:
+                raise ValueError(f"Auteur '{author_id}' déclaré dans '{fr_path}' mais introuvable dans data/authors.json")
+
         common = {
             "og_image": entry.get("og_image", defaults["og_image"]),
             "keyword": entry.get("keyword", ""),
             "alternates": alternates,
             "robots": entry.get("robots", DEFAULT_ROBOTS),
+            "author": author_id,
         }
         pages.append(
             PageMeta(
