@@ -148,7 +148,7 @@
     // ========================================
 
     async function loadTestimonialsTemplate(rootPath) {
-        const templateUrl = rootPath + 'components/sections/testimonials.html';
+        const templateUrl = rootPath + 'components/sections/testimonials';
 
         try {
             const response = await fetch(templateUrl);

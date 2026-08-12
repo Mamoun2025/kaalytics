@@ -103,7 +103,7 @@
     // ========================================
 
     async function loadHeroTemplate(rootPath) {
-        const templateUrl = rootPath + 'components/sections/hero.html';
+        const templateUrl = rootPath + 'components/sections/hero';
 
         try {
             const response = await fetch(templateUrl);

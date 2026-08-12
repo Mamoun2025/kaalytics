@@ -40,7 +40,7 @@
         });
 
         // Demo requests
-        document.querySelectorAll('a[href*="#contact"], a[href*="contact.html"]').forEach(link => {
+        document.querySelectorAll('a[href*="#contact"], a[href*="/contact"]').forEach(link => {
             if (link.textContent.toLowerCase().includes('demo') ||
                 link.textContent.toLowerCase().includes('audit')) {
                 link.addEventListener('click', function() {

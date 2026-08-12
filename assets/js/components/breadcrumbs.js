@@ -9,50 +9,42 @@
     // Configuration des pages
     const PAGE_CONFIG = {
         // Pages produits
-        'fleetops.html': {
+        'fleetops': {
             parent: { name: 'Produits', url: '/products/' },
             current: 'FleetOps Pro'
         },
-        'daedalia.html': {
+        'daedalia': {
             parent: { name: 'Produits', url: '/products/' },
             current: 'Daedalia'
         },
-        'ascend.html': {
-            parent: { name: 'Produits', url: '/products/' },
-            current: 'Ascend'
-        },
         // Pages industries (secteurs)
-        'industrie.html': {
+        'industrie': {
             parent: { name: 'Industries', url: '/industries/' },
             current: 'Industrie'
         },
-        'btp.html': {
+        'btp': {
             parent: { name: 'Industries', url: '/industries/' },
             current: 'BTP & Construction'
         },
-        'transport.html': {
+        'transport': {
             parent: { name: 'Industries', url: '/industries/' },
             current: 'Transport & Logistique'
         },
-        'location.html': {
+        'location': {
             parent: { name: 'Industries', url: '/industries/' },
             current: 'Location de véhicules'
         },
-        'mines.html': {
+        'mines': {
             parent: { name: 'Industries', url: '/industries/' },
             current: 'Mines & Carrieres'
         },
-        'collectivites.html': {
-            parent: { name: 'Industries', url: '/industries/' },
-            current: 'Collectivites'
-        },
         // Blog
         'blog': {
-            parent: { name: 'Ressources', url: '/ressources.html' },
+            parent: { name: 'Ressources', url: '/resources' },
             current: 'Blog'
         },
         // Case studies
-        'terrafleet.html': {
+        'terrafleet': {
             parent: { name: 'Études de cas', url: '/case-studies/' },
             current: 'TerraFleet'
         }

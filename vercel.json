@@ -32,7 +32,9 @@
     { "source": "/privacy", "destination": "/legal/privacy", "permanent": true },
     { "source": "/terms", "destination": "/legal/terms", "permanent": true },
     { "source": "/mentions", "destination": "/legal/mentions", "permanent": true },
-    { "source": "/cookies", "destination": "/legal/cookies", "permanent": true }
+    { "source": "/cookies", "destination": "/legal/cookies", "permanent": true },
+    { "source": "/industries/collectivites", "destination": "/", "permanent": true },
+    { "source": "/industries/collectivites.html", "destination": "/", "permanent": true }
   ],
   "headers": [
     {

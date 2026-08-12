@@ -164,7 +164,7 @@
     // ========================================
 
     async function loadFeaturesTemplate(rootPath) {
-        const templateUrl = rootPath + 'components/sections/features.html';
+        const templateUrl = rootPath + 'components/sections/features';
 
         try {
             const response = await fetch(templateUrl);

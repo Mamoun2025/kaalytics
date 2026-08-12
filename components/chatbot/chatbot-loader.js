@@ -72,7 +72,7 @@
     // ========================================
 
     async function loadChatbotTemplate(rootPath) {
-        const templateUrl = rootPath + 'components/chatbot/chatbot.html';
+        const templateUrl = rootPath + 'components/chatbot/chatbot';
 
         try {
             const response = await fetch(templateUrl);

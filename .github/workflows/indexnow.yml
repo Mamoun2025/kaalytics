@@ -1,0 +1,36 @@
+name: IndexNow - Submit URLs to Search Engines
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "sitemap.xml"
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "Optional single URL to submit"
+        required: false
+        type: string
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Wait for Vercel deployment
+        run: sleep 30
+
+      - name: Submit to IndexNow
+        run: |
+          if [ -n "${{ inputs.url }}" ]; then
+            python3 -m scripts.seo.indexnow "${{ inputs.url }}"
+          else
+            python3 -m scripts.seo.indexnow
+          fi

@@ -4,7 +4,7 @@
  */
 
 const CACHE_NAME = 'kaalytics-v1';
-const OFFLINE_URL = '/404.html';
+const OFFLINE_URL = '/404';
 
 // Assets to cache on install
 const PRECACHE_ASSETS = [
@@ -13,7 +13,7 @@ const PRECACHE_ASSETS = [
     '/assets/js/core/performance.js',
     '/assets/images/icons/icon-192x192.png',
     '/manifest.json',
-    '/404.html'
+    '/404'
 ];
 
 // Install event - precache essential assets

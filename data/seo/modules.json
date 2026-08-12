@@ -15,12 +15,12 @@
   "modules/sales-intelligence.html": {
     "keyword": "tableau de bord commercial ERP",
     "fr": {
-      "title": "Sales Intelligence — pilotage commercial connecté à votre ERP | Kaalytics",
+      "title": "Sales Intelligence — pilotage commercial ERP | Kaalytics",
       "description": "Indicateurs commerciaux en temps réel, scoring des prospects et devis en 30 secondes, directement reliés à votre ERP."
     },
     "en": {
       "path": "en/modules/sales-intelligence.html",
-      "title": "Sales Intelligence — sales management connected to your ERP | Kaalytics",
+      "title": "Sales Intelligence — sales management for ERP | Kaalytics",
       "description": "Real-time sales indicators, prospect scoring and quotes in 30 seconds, wired straight into your ERP."
     }
   },
@@ -39,7 +39,7 @@
   "modules/financial-operations.html": {
     "keyword": "tableau de bord financier PME",
     "fr": {
-      "title": "Financial Operations — tableau de bord financier et relances | Kaalytics",
+      "title": "Financial Operations — tableau financier et relances | Kaalytics",
       "description": "Suivi de facturation automatisé, relances intelligentes et détection d'anomalies. Cash flow prévisionnel en un seul écran."
     },
     "en": {
@@ -51,7 +51,7 @@
   "modules/supply-chain.html": {
     "keyword": "gestion des approvisionnements",
     "fr": {
-      "title": "Supply Chain Command — planning achats et prévision de ventes | Kaalytics",
+      "title": "Supply Chain Command — planning achats et prévisions | Kaalytics",
       "description": "Planning des achats, prévisions de ventes et suivi logistique. Chaque maillon de la chaîne visible en temps réel."
     },
     "en": {
@@ -80,7 +80,7 @@
     },
     "en": {
       "path": "en/modules/digital-platform.html",
-      "title": "Digital Platform — website and catalogue connected to your ERP | Kaalytics",
+      "title": "Digital Platform — website and catalogue for ERP | Kaalytics",
       "description": "Website, search visibility and e-commerce catalogue fed directly by your ERP. An online presence that generates leads."
     }
   },
