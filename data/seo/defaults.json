@@ -1,0 +1,18 @@
+{
+  "base_url": "https://kaalytics.com",
+  "site_name": "Kaalytics",
+  "og_image": "/assets/images/og-image.jpg",
+  "twitter_card": "summary_large_image",
+  "organization": {
+    "@type": "Organization",
+    "name": "Kaalytics",
+    "url": "https://kaalytics.com",
+    "logo": "https://kaalytics.com/assets/images/logo/kaalytics-logo.png",
+    "areaServed": "MA",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Casablanca",
+      "addressCountry": "MA"
+    }
+  }
+}
