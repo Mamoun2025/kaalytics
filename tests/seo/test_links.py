@@ -20,6 +20,11 @@ from scripts.seo.links import canonicalize_href, canonicalize_links
         ("index.html", "/"),
         ("../index.html", "../"),
         ("../index.html#modules-ia", "../#modules-ia"),
+        # index.html avec slash (cas critique pour idempotence)
+        ("blog/index.html", "blog"),
+        ("guides/index.html", "guides"),
+        ("/blog/index.html", "/blog"),
+        ("../guides/index.html", "../guides"),
         # fragments et requetes preserves
         ("../about.html#equipe", "../about#equipe"),
         ("/faq.html?lang=fr", "/faq?lang=fr"),
@@ -61,3 +66,18 @@ def test_idempotent():
     html = '<a href="../pricing.html">x</a>'
     une = canonicalize_links(html)
     assert canonicalize_links(une) == une
+
+
+def test_canonicalize_href_est_idempotente():
+    """Appliquer deux fois doit donner le meme resultat : sans ca, un href
+    peut rester dans un etat intermediaire qui redirige encore."""
+    cas = [
+        "../pricing.html", "blog/index.html", "guides/index.html",
+        "index.html", "../index.html", "/blog/", "{{ROOT}}blog/",
+        "../", "./", "/", "#ancre", "/faq.html?lang=fr",
+        "../about.html#equipe", "/assets/css/main.css",
+        "https://exemple.com/page.html", "mailto:a@b.c",
+    ]
+    for href in cas:
+        une = canonicalize_href(href)
+        assert canonicalize_href(une) == une, f"non idempotent sur {href!r}"

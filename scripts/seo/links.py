@@ -42,7 +42,8 @@ def canonicalize_href(href: str) -> str:
             path = "/"
     elif path.endswith(".html"):
         path = path[: -len(".html")]
-    elif path.endswith("/"):
+
+    if path.endswith("/"):
         last = path.rstrip("/").split("/")[-1]
         if last and last not in ("..", "."):
             path = path.rstrip("/")
