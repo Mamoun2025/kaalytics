@@ -7,11 +7,11 @@
 - [AI Engine — automatisations IA pour vos opérations | Kaalytics](https://kaalytics.com/modules/ai-engine) : Agents autonomes, lecture intelligente de documents et analyses automatisées, branchées sur vos données métier.
 - [Digital Platform — site web et catalogue connectés à l'ERP | Kaalytics](https://kaalytics.com/modules/digital-platform) : Site vitrine, référencement et catalogue e-commerce alimentés directement par votre ERP. Une présence en ligne qui génère des contacts.
 - [ERP Connect — brancher vos modules sur votre ERP | Kaalytics](https://kaalytics.com/modules/erp-connect) : Connecteurs bidirectionnels vers Cegid, Sage, SAP, Dynamics et Odoo. Vos données exploitables sans toucher au système en place.
-- [Financial Operations — tableau de bord financier et relances | Kaalytics](https://kaalytics.com/modules/financial-operations) : Suivi de facturation automatisé, relances intelligentes et détection d'anomalies. Cash flow prévisionnel en un seul écran.
+- [Financial Operations — tableau financier et relances | Kaalytics](https://kaalytics.com/modules/financial-operations) : Suivi de facturation automatisé, relances intelligentes et détection d'anomalies. Cash flow prévisionnel en un seul écran.
 - [FleetOps — logiciel de gestion de flotte au Maroc | Kaalytics](https://kaalytics.com/modules/fleetops) : Suivi GPS, maintenance prédictive et coûts par chantier. La rentabilité de chaque machine visible depuis votre ERP.
 - [Marketing Automation — campagnes ciblées pour PME | Kaalytics](https://kaalytics.com/modules/marketing-automation) : Campagnes avec scoring automatique, enrichissement des contacts et pipeline marketing relié au commercial. ROI mesuré par campagne.
-- [Sales Intelligence — pilotage commercial connecté à votre ERP | Kaalytics](https://kaalytics.com/modules/sales-intelligence) : Indicateurs commerciaux en temps réel, scoring des prospects et devis en 30 secondes, directement reliés à votre ERP.
-- [Supply Chain Command — planning achats et prévision de ventes | Kaalytics](https://kaalytics.com/modules/supply-chain) : Planning des achats, prévisions de ventes et suivi logistique. Chaque maillon de la chaîne visible en temps réel.
+- [Sales Intelligence — pilotage commercial ERP | Kaalytics](https://kaalytics.com/modules/sales-intelligence) : Indicateurs commerciaux en temps réel, scoring des prospects et devis en 30 secondes, directement reliés à votre ERP.
+- [Supply Chain Command — planning achats et prévisions | Kaalytics](https://kaalytics.com/modules/supply-chain) : Planning des achats, prévisions de ventes et suivi logistique. Chaque maillon de la chaîne visible en temps réel.
 
 ## Secteurs
 
@@ -53,7 +53,7 @@
 - [À propos | Kaalytics](https://kaalytics.com/about) : Kaalytics développe des modules IA qui se connectent aux ERP pour optimiser les opérations des entreprises. Notre approche, notre vision.
 - [Demander une Démo Gratuite | Kaalytics](https://kaalytics.com/demo) : Demandez une démo gratuite de nos modules. Présentation personnalisée de 30 minutes avec un expert.
 - [Intégrations | Kaalytics](https://kaalytics.com/integrations) : Intégrations Kaalytics. Connectez nos modules à vos outils existants : ERP, comptabilité, CRM et plus.
-- [Daedalia AI | Copilote IA pour Odoo - LLM connecté à votre ERP en 3 sec | Kaalytics](https://kaalytics.com/products/daedalia) : Daedalia AI: le premier LLM connecté à Odoo. Interrogez vos documents en langage naturel, créez des devis, analysez vos ventes en 3 secondes.
+- [Daedalia AI — Copilote IA pour Odoo | Kaalytics](https://kaalytics.com/products/daedalia) : Daedalia AI: le premier LLM connecté à Odoo. Interrogez vos documents en langage naturel, créez des devis, analysez vos ventes en 3 secondes.
 - [FleetOps Pro | Gestion de Flotte IA | Kaalytics](https://kaalytics.com/products/fleetops) : FleetOps Pro: réduction des coûts et pannes, ROI rapide. Gestion de flotte IA pour BTP, Transport, Location. 8 modules.
 - [Support | Kaalytics](https://kaalytics.com/support) : Support Kaalytics. Assistance technique, documentation et contact pour nos modules.
 
