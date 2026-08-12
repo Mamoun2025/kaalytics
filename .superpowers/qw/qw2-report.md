@@ -183,3 +183,49 @@ Toutes les URLs réécrites:
 ---
 
 **Terminé**: 2026-08-12 | **Branche**: seo/quick-wins | **Statut**: DONE
+
+---
+
+## Correction 1 — Cohérence Service Worker + Breadcrumbs
+
+**Commit**: `52ab38f`
+
+### Problèmes identifiés et corrigés
+
+#### 1. Service Worker `sw.js` incohérent
+**Problème**: Ligne 16 contenait `/404.html` dans `PRECACHE_ASSETS` alors que `OFFLINE_URL` avait été changé en `/404`.
+- `cache.addAll()` rejette les réponses redirigées (spec Web Caching)
+- Vercel redirige 308 sur `.html` → `/404.html` → redirection 308
+- Installation complète du SW échouait silencieusement
+
+**Correction**: Remplacer `/404.html` par `/404` dans `PRECACHE_ASSETS`
+
+**Vérification curl — Toutes les entrées précache répondent 200** ✓
+```
+/                                              200 redir=0
+/assets/css/main.css                           200 redir=0
+/assets/js/core/performance.js                 200 redir=0
+/assets/images/icons/icon-192x192.png          200 redir=0
+/manifest.json                                 200 redir=0
+/404                                           200 redir=0
+```
+
+#### 2. Breadcrumbs `PAGE_CONFIG` contient des clés invalides
+**Problème**: 
+- Clés `'ascend'` et `'collectivites'` → pages n'existent pas
+- URL parent `/ressources` renvoyait 404 (bon répertoire = `/resources`)
+
+**Correction**:
+- Retirer clés `'ascend'` et `'collectivites'`
+- Changer `/ressources` → `/resources` (200 en production)
+
+### Tests — Nouvelles assurances
+
+**Nouveau test**: `test_service_worker_precache_consistency()`
+- ✓ Aucune entrée de `PRECACHE_ASSETS` ne finit en `.html`
+- ✓ `OFFLINE_URL` est présent dans `PRECACHE_ASSETS`
+- ✓ Détecte toute incohérence future (installation SW cassée)
+
+### Statut final après correction
+
+**Tests**: 128 verts (+ 1 nouveau test SW) | **Violations SEO**: 0
