@@ -1,4 +1,5 @@
 from pathlib import Path
+import re
 
 ROOT = Path(__file__).resolve().parents[2]
 AI_BOTS = [
@@ -9,7 +10,7 @@ AI_BOTS = [
 
 def parse_groups(text):
     """Retourne {user_agent_minuscule: [regles]} depuis un robots.txt."""
-    groups, current = {}, []
+    groups, current = {}, None
     for raw in text.splitlines():
         line = raw.split("#")[0].strip()
         if not line:
@@ -18,7 +19,9 @@ def parse_groups(text):
         key, value = key.strip().lower(), value.strip()
         if key == "user-agent":
             current = groups.setdefault(value.lower(), [])
-        elif key in ("allow", "disallow") and current is not None:
+        elif key in ("allow", "disallow"):
+            if current is None:
+                raise ValueError(f"Règle {key} orpheline (avant tout User-agent)")
             current.append((key, value))
     return groups
 
@@ -37,7 +40,7 @@ def test_sous_ressources_de_rendu_autorisees():
 
 
 def test_trash_reste_bloque():
-    rules = parse_groups((ROOT / "robots.txt").read_text(encoding="utf-8"))["*"]
+    rules = parse_groups((ROOT / "robots.txt").read_text(encoding="utf-8")).get("*", [])
     assert ("disallow", "/TRASH/") in rules
 
 
@@ -57,7 +60,22 @@ def test_aucun_user_agent_declare_deux_fois():
     assert len(agents) == len(set(agents)), "AhrefsBot ou SemrushBot declare deux fois"
 
 
-def test_llms_txt_present_et_liste_les_sections():
+def test_llms_txt_liste_les_sections_du_site():
     text = (ROOT / "llms.txt").read_text(encoding="utf-8")
-    for section in ("/modules/", "/industries/", "/blog/", "/guides/"):
-        assert section in text
+    for url in (
+        "https://kaalytics.com/modules/fleetops",
+        "https://kaalytics.com/industries/transport",
+        "https://kaalytics.com/blog",
+        "https://kaalytics.com/guides",
+    ):
+        assert url in text
+
+
+def test_llms_txt_ne_publie_aucune_url_qui_redirige():
+    """trailingSlash:false + cleanUrls:true -> tout .html ou / final donne un 308."""
+    text = (ROOT / "llms.txt").read_text(encoding="utf-8")
+    fautives = [
+        u for u in re.findall(r"https://kaalytics\.com\S*", text)
+        if u.endswith("/") or u.endswith(".html")
+    ]
+    assert not fautives, f"URL qui redirigent dans llms.txt : {fautives}"

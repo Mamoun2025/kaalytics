@@ -27,8 +27,8 @@
 
 ## Ressources
 
-- [Blog](https://kaalytics.com/blog/)
-- [Guides](https://kaalytics.com/guides/)
+- [Blog](https://kaalytics.com/blog)
+- [Guides](https://kaalytics.com/guides)
 - [Etudes de cas](https://kaalytics.com/case-studies)
 - [Questions frequentes](https://kaalytics.com/faq)
 - [Tarifs](https://kaalytics.com/pricing)
