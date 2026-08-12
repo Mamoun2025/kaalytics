@@ -37,3 +37,6 @@ proposals/
 sections/modules-ia/editor.html
 .vercel
 .env*.local
+
+# SDD scratch
+.superpowers/
