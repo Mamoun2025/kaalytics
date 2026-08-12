@@ -9,6 +9,7 @@ from typing import NamedTuple
 
 from scripts.seo.catalog import BASE_URL, load_catalog
 from scripts.seo.links import canonicalize_href
+from scripts.seo import rules
 
 EXCLUDED_DIRS = {"TRASH", "PROPOSALS", "proposals", "node_modules", "docs", "tests", ".superpowers", ".git", ".vercel", "components", "sections", "playground"}
 MAX_DESCRIPTION = 160
@@ -53,24 +54,13 @@ def _visible_text(html: str) -> str:
 
 
 def _resolve_link_target(rel_file: str, href: str, root: Path) -> bool:
-    """Verifie qu'un lien interne existe. rel_file est le chemin du fichier HTML.
-    Soutient /path/, /path.html, /path/index.html."""
-    # Skip les liens externes, ressources, fragments
     if href.startswith(("http", "//", "#", "mailto:", "tel:", "data:", "javascript:", "{{")):
         return True
-
     chemin = re.match(r"([^#?]*)", href).group(1)
-    if not chemin or chemin in ("/", "./", "../"):
+    if not chemin or chemin in ("/", "./", "../") or RESSOURCE.search(chemin):
         return True
-    if RESSOURCE.search(chemin):
-        return True
-
-    # Normalise le chemin cible comme l'audit fait
     base = os.path.dirname(rel_file)
-    cible = os.path.normpath(os.path.join(
-        "" if chemin.startswith("/") else base, chemin.lstrip("/")))
-
-    # Essaie toutes les formes possibles
+    cible = os.path.normpath(os.path.join("" if chemin.startswith("/") else base, chemin.lstrip("/")))
     for candidate in (cible + ".html", os.path.join(cible, "index.html"), cible):
         if (root / candidate).exists():
             return True
@@ -78,16 +68,12 @@ def _resolve_link_target(rel_file: str, href: str, root: Path) -> bool:
 
 
 def _run_checks_internal(root: Path) -> tuple[list[Violation], list[Warning]]:
-    """Version interne qui retourne violations et avertissements."""
     violations: list[Violation] = []
     warnings: list[Warning] = []
     catalog = load_catalog(root / "data" / "seo")
     by_path = {p.html_path: p for p in catalog}
 
-    # --- Catalogue : descriptions, titres, JSON-LD, avis fictifs
-    descriptions: dict[str, str] = {}
-    titres: dict[str, list[str]] = {}
-
+    descriptions, titres = {}, {}
     for page in catalog:
         if len(page.description) > MAX_DESCRIPTION:
             violations.append(
@@ -105,7 +91,6 @@ def _run_checks_internal(root: Path) -> tuple[list[Violation], list[Warning]]:
                 Warning(page.html_path, "titre-tronque-en-SERP", str(len(page.title)))
             )
         titres.setdefault(page.title, []).append(page.html_path)
-
         for lang, url in page.alternates:
             if lang == "x-default":
                 continue
@@ -115,17 +100,40 @@ def _run_checks_internal(root: Path) -> tuple[list[Violation], list[Warning]]:
                 violations.append(Violation(page.html_path, "hreflang-orphelin", url))
             elif dict(cible.alternates) != dict(page.alternates):
                 violations.append(Violation(page.html_path, "hreflang-non-reciproque", url))
-
     # Detecte les titres dupliques
     for titre, pages in titres.items():
         if len(pages) > 1:
             violations.append(Violation(pages[0], "titre-duplique", f"{pages} : {titre}"))
-
+    # Catalogue : entrees fantomes et français désaccentué
+    raw_catalog = {}
+    for path in sorted((root / "data" / "seo").glob("*.json")):
+        if path.name != "defaults.json":
+            raw_catalog.update(json.loads(path.read_text(encoding="utf-8")))
+    for err in rules.check_catalog_entries_exist(raw_catalog, root):
+        violations.append(Violation(err.page, err.rule, err.detail))
+    for page_path, entry in raw_catalog.items():
+        for lng in ("fr", "en"):
+            bloc = entry.get(lng)
+            if not bloc or lng != "fr": continue
+            for err in rules.check_french_unaccented(page_path, bloc["title"], bloc["description"]):
+                violations.append(Violation(err.page, err.rule, err.detail))
     # --- Fichiers HTML
     for path in _pages(root):
         rel = path.relative_to(root).as_posix()
         html = path.read_text(encoding="utf-8")
         tete = html.split("</head>")[0]
+
+        # Page en catalogue
+        for err in rules.check_page_in_catalog(rel, by_path):
+            violations.append(Violation(err.page, err.rule, err.detail))
+
+        # Unicité balises title/canonical/bloc-SEO
+        for err in rules.check_tag_uniqueness(rel, html):
+            violations.append(Violation(err.page, err.rule, err.detail))
+
+        # Attribut lang
+        for err in rules.check_lang_attribute(rel, html):
+            violations.append(Violation(err.page, err.rule, err.detail))
 
         # Canonique
         if rel in by_path and 'rel="canonical"' not in tete:
@@ -140,7 +148,6 @@ def _run_checks_internal(root: Path) -> tuple[list[Violation], list[Warning]]:
             elif canon_url != BASE_URL + "/" and canon_url.endswith("/"):
                 violations.append(Violation(rel, "canonique-a-slash-final", canon_url))
             else:
-                # Verifie que la canonique correspond au chemin reel
                 attendu = "/" if rel == "index.html" else (
                     "/" + rel[:-len("/index.html")] if rel.endswith("/index.html")
                     else "/" + rel[:-len(".html")] if rel.endswith(".html")
@@ -148,6 +155,12 @@ def _run_checks_internal(root: Path) -> tuple[list[Violation], list[Warning]]:
                 )
                 if canon_url != BASE_URL + attendu:
                     violations.append(Violation(rel, "canonique-ne-correspond-pas-au-chemin", f"{canon_url}"))
+
+        # hreflang
+        for err in rules.check_hreflang_defaults(rel, html, root):
+            violations.append(Violation(err.page, err.rule, err.detail))
+        for err in rules.check_hreflang_targets_exist(rel, html, root):
+            violations.append(Violation(err.page, err.rule, err.detail))
 
         # JSON-LD valide
         for bloc in re.findall(r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>', html, re.S):
@@ -162,20 +175,19 @@ def _run_checks_internal(root: Path) -> tuple[list[Violation], list[Warning]]:
 
         # Liens internes
         for href in re.findall(r'href="([^"]*)"', html):
+            if href.startswith(("http", "//", "#", "mailto:", "tel:", "data:", "javascript:", "{{")):
+                continue
             if href != canonicalize_href(href):
                 violations.append(Violation(rel, "lien-non-canonique", href))
-            # Verifie que la cible existe
             if not _resolve_link_target(rel, href, root):
                 violations.append(Violation(rel, "lien-sans-cible", href))
 
-        # Separation des langues
+        # Separation des langues et contenu FR
         if rel.startswith("en/") and rel not in TRADUCTION_EN_ATTENTE:
             texte = _visible_text(html)
-            # Regex sensible a la casse pour les etiquettes
             etiq = sorted(set(ETIQUETTES_FR.findall(texte)))
             if etiq:
                 violations.append(Violation(rel, "etiquette-francaise-sur-page-EN", ", ".join(etiq[:5])))
-            # Mots FR courants (insensible a la casse)
             trouves = sorted(set(m.lower() for m in FRENCH_MARKERS.findall(texte)))
             if trouves:
                 violations.append(Violation(rel, "francais-sur-page-en", ", ".join(trouves[:5])))
