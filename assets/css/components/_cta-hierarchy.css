@@ -1,0 +1,276 @@
+/**
+ * CTA Hierarchy — Primary, Secondary, Tertiary
+ * Définit une hiérarchie cohérente des appels à l'action
+ */
+
+/* Base button styling */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-lg);
+    font-size: var(--text-base);
+    font-weight: 600;
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    white-space: nowrap;
+    line-height: 1;
+    font-family: var(--font-primary);
+}
+
+/* Focus state for keyboard navigation */
+.btn:focus-visible {
+    outline: 2px solid var(--emerald);
+    outline-offset: 2px;
+}
+
+/* ===========================================
+   PRIMARY CTA — Strong, command attention
+   =========================================== */
+
+.btn--primary {
+    background: var(--emerald);
+    color: var(--bg-void);
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+}
+
+.btn--primary:hover {
+    background: var(--emerald-bright);
+    box-shadow: 0 6px 24px rgba(16, 185, 129, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn--primary:active {
+    transform: translateY(0);
+}
+
+.btn--primary:disabled,
+.btn--primary[aria-disabled="true"] {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* ===========================================
+   SECONDARY CTA — Subtle, supporting action
+   =========================================== */
+
+.btn--secondary {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-accent);
+}
+
+.btn--secondary:hover {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: var(--emerald-bright);
+    color: var(--emerald-bright);
+}
+
+.btn--secondary:active {
+    background: rgba(16, 185, 129, 0.15);
+}
+
+.btn--secondary:disabled,
+.btn--secondary[aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* ===========================================
+   TERTIARY CTA — Link only, minimal
+   =========================================== */
+
+.btn--tertiary {
+    background: transparent;
+    color: var(--text-secondary);
+    padding: var(--space-sm) 0;
+    border: none;
+    box-shadow: none;
+}
+
+.btn--tertiary:hover {
+    color: var(--emerald-bright);
+}
+
+.btn--tertiary:active {
+    color: var(--emerald);
+}
+
+.btn--tertiary:disabled,
+.btn--tertiary[aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ===========================================
+   SIZE VARIANTS
+   =========================================== */
+
+.btn--lg {
+    padding: var(--space-lg) var(--space-2xl);
+    font-size: var(--text-lg);
+}
+
+.btn--sm {
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--text-sm);
+}
+
+.btn--xs {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--text-xs);
+}
+
+/* ===========================================
+   ICON HANDLING
+   =========================================== */
+
+.btn__icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.btn__icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* ===========================================
+   FULL WIDTH VARIANT (mobile-friendly)
+   =========================================== */
+
+.btn--full-width {
+    width: 100%;
+}
+
+/* ===========================================
+   RESPONSIVE ADJUSTMENTS
+   =========================================== */
+
+@media (max-width: 768px) {
+    .btn {
+        padding: var(--space-md) var(--space-lg);
+        font-size: var(--text-base);
+    }
+
+    .btn--lg {
+        padding: var(--space-md) var(--space-lg);
+        font-size: var(--text-base);
+    }
+
+    .btn--full-width {
+        width: 100%;
+    }
+
+    /* Stack buttons vertically on mobile by default */
+    .btn + .btn {
+        margin-top: var(--space-sm);
+    }
+}
+
+@media (max-width: 640px) {
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn--sm {
+        padding: var(--space-sm) var(--space-md);
+    }
+}
+
+/* ===========================================
+   MOTION PREFERENCES
+   =========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .btn {
+        transition: none;
+    }
+
+    .btn--primary:hover {
+        transform: none;
+    }
+
+    .btn--primary:active {
+        transform: none;
+    }
+}
+
+/* ===========================================
+   DARK THEME ENHANCEMENTS
+   =========================================== */
+
+@media (prefers-color-scheme: dark) {
+    .btn--secondary {
+        border-color: rgba(16, 185, 129, 0.25);
+    }
+
+    .btn--secondary:hover {
+        background: rgba(16, 185, 129, 0.12);
+        border-color: rgba(16, 185, 129, 0.4);
+    }
+
+    .btn--secondary:active {
+        background: rgba(16, 185, 129, 0.18);
+    }
+}
+
+/* ===========================================
+   LIGHT THEME (if implemented in future)
+   =========================================== */
+
+@media (prefers-color-scheme: light) {
+    .btn--primary {
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+    }
+
+    .btn--primary:hover {
+        box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35);
+    }
+
+    .btn--secondary {
+        border-color: rgba(16, 185, 129, 0.4);
+    }
+}
+
+/* ===========================================
+   ACCESSIBILITY & FOCUS STATES
+   =========================================== */
+
+.btn:focus {
+    outline: 2px solid var(--emerald);
+    outline-offset: 2px;
+}
+
+/* Ensure sufficient contrast */
+.btn--primary {
+    color: var(--bg-void);
+}
+
+.btn--secondary {
+    color: var(--text-secondary);
+}
+
+.btn--tertiary {
+    color: var(--text-secondary);
+}
+
+/* Minimum touch target size: 44x44px */
+@media (pointer: coarse) {
+    .btn {
+        min-height: 44px;
+        min-width: 44px;
+        padding: calc(22px - 0.5em) var(--space-lg);
+    }
+}

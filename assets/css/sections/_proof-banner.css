@@ -1,0 +1,178 @@
+/**
+ * Proof Banner — Preuve honnête (ERP, délai, localisation)
+ * Bandeau sous hero avec éléments vérifiables : pas de fake clients ni récompenses
+ */
+
+.proof-banner {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: var(--space-3xl) 0;
+    margin: var(--space-3xl) 0;
+}
+
+.proof-banner__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-2xl);
+}
+
+.proof-banner__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--space-xl);
+}
+
+/* Icon styling */
+.proof-banner__icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: var(--space-lg);
+    color: var(--emerald);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.proof-banner__icon svg {
+    width: 100%;
+    height: 100%;
+    stroke-width: 2;
+}
+
+/* Label — section title */
+.proof-banner__label {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: var(--space-md);
+}
+
+/* ERP tags */
+.proof-banner__erps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-sm);
+}
+
+.proof-banner__erps span {
+    font-size: var(--text-sm);
+    color: var(--text-primary);
+    padding: var(--space-xs) var(--space-md);
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    font-weight: 500;
+    transition: all var(--transition-base);
+}
+
+.proof-banner__erps span:hover {
+    background: rgba(16, 185, 129, 0.2);
+    border-color: var(--border-accent);
+}
+
+.proof-banner__more {
+    background: transparent !important;
+    border: none !important;
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+    font-weight: 400;
+    cursor: default;
+    padding: var(--space-xs) 0 !important;
+}
+
+.proof-banner__more:hover {
+    background: transparent !important;
+    border: none !important;
+}
+
+/* Value — metric value */
+.proof-banner__value {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .proof-banner {
+        padding: var(--space-2xl) 0;
+        margin: var(--space-2xl) 0;
+    }
+
+    .proof-banner__grid {
+        gap: var(--space-xl);
+    }
+}
+
+@media (max-width: 768px) {
+    .proof-banner {
+        padding: var(--space-2xl) 0;
+        margin: var(--space-2xl) 0;
+    }
+
+    .proof-banner__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .proof-banner__item {
+        padding: var(--space-md);
+    }
+
+    .proof-banner__icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: var(--space-md);
+    }
+
+    .proof-banner__label {
+        font-size: var(--text-xs);
+        margin-bottom: var(--space-sm);
+    }
+
+    .proof-banner__erps {
+        gap: var(--space-xs);
+    }
+
+    .proof-banner__erps span {
+        font-size: var(--text-xs);
+        padding: var(--space-xs) var(--space-sm);
+    }
+
+    .proof-banner__value {
+        font-size: var(--text-base);
+    }
+}
+
+/* Dark theme — ensure readability */
+@media (prefers-color-scheme: dark) {
+    .proof-banner__erps span {
+        background: rgba(16, 185, 129, 0.08);
+        border-color: rgba(16, 185, 129, 0.25);
+    }
+
+    .proof-banner__erps span:hover {
+        background: rgba(16, 185, 129, 0.15);
+        border-color: rgba(16, 185, 129, 0.35);
+    }
+}
+
+/* Motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .proof-banner__erps span {
+        transition: none;
+    }
+}
+
+/* Accessibility — focus visible */
+.proof-banner__erps span:focus-visible {
+    outline: 2px solid var(--emerald);
+    outline-offset: 2px;
+}

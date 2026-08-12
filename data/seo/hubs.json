@@ -1,0 +1,31 @@
+{
+  "modules/index.html": {
+    "keyword": "modules IA ERP automatisation",
+    "fr": {
+      "title": "Modules IA pour ERP | Kaalytics",
+      "description": "Découvrez nos 8 modules IA connectés à votre ERP. Sales Intelligence, FleetOps, Marketing Automation. Aucune modification de votre système."
+    }
+  },
+  "industries/index.html": {
+    "keyword": "IA par secteur d'activité solutions",
+    "fr": {
+      "title": "Modules IA par Secteur | Kaalytics",
+      "description": "Solutions IA spécialisées par secteur : BTP, Transport, Mines, Distribution, Industrie, Location. Nos modules répondent aux besoins métier de chaque industrie."
+    }
+  },
+  "products/index.html": {
+    "keyword": "produits Kaalytics Daedalia FleetOps",
+    "fr": {
+      "title": "Produits | Kaalytics",
+      "description": "Nos produits complets : Daedalia (copilote IA Odoo) et FleetOps Pro (gestion de flotte). Solutions intégrées au-delà des modules standards."
+    }
+  },
+  "legal/index.html": {
+    "keyword": "mentions légales confidentialité cookies",
+    "robots": "noindex, follow",
+    "fr": {
+      "title": "Informations légales | Kaalytics",
+      "description": "Mentions légales, politique de confidentialité, conditions d'utilisation et politique de cookies de Kaalytics."
+    }
+  }
+}

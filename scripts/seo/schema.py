@@ -1,11 +1,12 @@
 """Génération des structures de données structurées : BreadcrumbList et Article.
 
-Ce module est une fonction pure - aucun accès disque, aucun effet de bord.
 Chaque fonction retourne un dict JSON-LD (ou None si non applicable).
 """
 from __future__ import annotations
 
+import json
 import re
+from pathlib import Path
 from typing import Optional
 
 # Table de correspondance segment URL ↔ libellé du fil d'Ariane
@@ -30,6 +31,43 @@ BREADCRUMB_LABELS = {
         "products": "Products",
     },
 }
+
+
+def load_authors(data_dir: Path | str = "data") -> dict:
+    """Charge la liste des auteurs depuis data/authors.json.
+
+    Retourne un dict {author_id: {name, jobTitle, description}}.
+    Retourne un dict vide si le fichier n'existe pas.
+
+    Paramètres :
+        data_dir : répertoire parent (par défaut "data"). La fonction cherche
+                   data_dir/authors.json.
+    """
+    data_path = Path(data_dir)
+
+    # Si data_dir ne contient pas "authors.json", chercher dans data/
+    if not (data_path / "authors.json").exists():
+        data_path = data_path / "data"
+
+    authors_file = data_path / "authors.json"
+    if not authors_file.exists():
+        return {}
+
+    try:
+        data = json.loads(authors_file.read_text(encoding="utf-8"))
+        authors_list = data.get("authors", [])
+        return {a["id"]: a for a in authors_list if "id" in a}
+    except (json.JSONDecodeError, IOError):
+        return {}
+
+
+def get_author(author_id: str, data_dir: Path | str = "data") -> Optional[dict]:
+    """Récupère les infos d'un auteur par son ID.
+
+    Retourne {name, jobTitle, description} ou None si non trouvé.
+    """
+    authors = load_authors(data_dir)
+    return authors.get(author_id)
 
 
 def _html_path_to_segments(html_path: str) -> list[str]:
@@ -219,7 +257,12 @@ def build_breadcrumb_list(html_path: str, lang: str, root=None, page_title: Opti
 
 
 def build_article_schema(
-    html_path: str, lang: str, title: Optional[str], description: Optional[str]
+    html_path: str,
+    lang: str,
+    title: Optional[str],
+    description: Optional[str],
+    author_name: Optional[str] = None,
+    author_job_title: Optional[str] = None,
 ) -> Optional[dict]:
     """Génère un schéma Article pour une page de blog ou guide.
 
@@ -230,6 +273,8 @@ def build_article_schema(
         lang : 'fr' ou 'en'
         title : titre de la page
         description : description de la page
+        author_name : nom de l'auteur (optionnel). Si fourni, crée un auteur Person.
+        author_job_title : fonction de l'auteur chez Kaalytics (optionnel).
     """
     # Retire 'en/' du début du chemin si présent pour la vérification
     check_path = html_path.replace("en/", "")
@@ -257,13 +302,26 @@ def build_article_schema(
 
     canonical_url = "https://kaalytics.com/" + path
 
-    # Schéma Organization pour author et publisher
+    # Schéma Organization pour publisher
     organization = {
         "@type": "Organization",
         "name": "Kaalytics",
         "url": "https://kaalytics.com",
         "logo": "https://kaalytics.com/assets/images/logo/kaalytics-logo.png",
     }
+
+    # Déterminer l'auteur : Person ou Organization
+    if author_name:
+        author = {
+            "@type": "Person",
+            "name": author_name,
+        }
+        if author_job_title:
+            author["jobTitle"] = author_job_title
+        # Lien à l'organisation via worksFor
+        author["worksFor"] = organization
+    else:
+        author = organization
 
     # Nettoyer le headline : retirer le suffixe "| Kaalytics" et autres suffixes
     headline = title
@@ -279,7 +337,7 @@ def build_article_schema(
         "headline": headline,
         "description": description,
         "inLanguage": lang,
-        "author": organization,
+        "author": author,
         "publisher": organization,
         "mainEntityOfPage": {
             "@type": "WebPage",

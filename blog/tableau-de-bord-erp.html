@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="tableau de bord ERP, tableau de bord temps réel, indicateurs clés ERP, reporting ERP">
+    <meta name="author" content="Kaalytics">
+    <meta name="theme-color" content="#10b981">
+
+    <!-- Canonical URL -->
+
+    <!-- Open Graph -->
+    <meta property="article:published_time" content="2026-08-12">
+    <meta property="article:author" content="Karim Ouazzani">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css?v=20260808">
+    <link rel="stylesheet" href="../assets/css/components/exit-popup.css">
+
+    <link rel="stylesheet" href="../assets/css/industries.css">
+<!-- SEO:BEGIN (genere par scripts/seo/gen_head.py - ne pas editer) -->
+    <title>Connecter son ERP à un tableau de bord temps réel | Kaalytics</title>
+    <meta name="description" content="Comment connecter votre ERP à un tableau de bord temps réel. Guide pratique, cas concrets et indicateurs essentiels pour piloter votre activité.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://kaalytics.com/blog/tableau-de-bord-erp">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kaalytics">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Connecter son ERP à un tableau de bord temps réel | Kaalytics">
+    <meta property="og:description" content="Comment connecter votre ERP à un tableau de bord temps réel. Guide pratique, cas concrets et indicateurs essentiels pour piloter votre activité.">
+    <meta property="og:url" content="https://kaalytics.com/blog/tableau-de-bord-erp">
+    <meta property="og:image" content="https://kaalytics.com/assets/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Connecter son ERP à un tableau de bord temps réel | Kaalytics">
+    <meta name="twitter:description" content="Comment connecter votre ERP à un tableau de bord temps réel. Guide pratique, cas concrets et indicateurs essentiels pour piloter votre activité.">
+    <meta name="twitter:image" content="https://kaalytics.com/assets/images/og-image.jpg">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "https://kaalytics.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://kaalytics.com/blog"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Connecter son ERP à un tableau de bord temps réel",
+            "item": "https://kaalytics.com/blog/tableau-de-bord-erp"
+        }
+    ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Connecter son ERP à un tableau de bord temps réel",
+    "description": "Comment connecter votre ERP à un tableau de bord temps réel. Guide pratique, cas concrets et indicateurs essentiels pour piloter votre activité.",
+    "inLanguage": "fr",
+    "author": {
+        "@type": "Organization",
+        "name": "Kaalytics",
+        "url": "https://kaalytics.com",
+        "logo": "https://kaalytics.com/assets/images/logo/kaalytics-logo.png"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Kaalytics",
+        "url": "https://kaalytics.com",
+        "logo": "https://kaalytics.com/assets/images/logo/kaalytics-logo.png"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://kaalytics.com/blog/tableau-de-bord-erp"
+    }
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Kaalytics",
+    "url": "https://kaalytics.com",
+    "logo": "https://kaalytics.com/assets/images/logo/kaalytics-logo.png",
+    "areaServed": [
+        {
+            "@type": "Country",
+            "name": "Maroc"
+        },
+        {
+            "@type": "Country",
+            "name": "France"
+        },
+        {
+            "@type": "Country",
+            "name": "Canada"
+        },
+        {
+            "@type": "Country",
+            "name": "Belgique"
+        },
+        {
+            "@type": "Country",
+            "name": "Suisse"
+        }
+    ],
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Casablanca",
+        "addressCountry": "MA"
+    }
+}
+    </script>
+<!-- SEO:END -->
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-container" data-navbar="full" data-navbar-style="solid"></div>
+
+    <!-- Article -->
+    <article>
+        <header class="industry-hero" style="--industry-color: #10b981; min-height: auto; padding: var(--space-4xl) 0;">
+            <div class="container">
+                <div style="max-width: 800px;">
+                    <a href="/" style="display: inline-flex; align-items: center; gap: var(--space-xs); color: var(--text-muted); text-decoration: none; margin-bottom: var(--space-lg);">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                        Retour au blog
+                    </a>
+                    <span class="industry-hero__badge">Opérations</span>
+                    <h1 style="font-size: var(--text-4xl); font-weight: 800; line-height: 1.2; margin-bottom: var(--space-lg);">
+                        Connecter son ERP à un tableau de bord temps réel
+                    </h1>
+                    <p style="color: var(--text-secondary); font-size: var(--text-lg); margin-bottom: var(--space-xl);">
+                        Vos données ERP sont puissantes, mais seulement si vous pouvez les voir. Un tableau de bord temps réel transforme les chiffres en décisions.
+                    </p>
+                    <div style="display: flex; align-items: center; gap: var(--space-lg); color: var(--text-muted); font-size: var(--text-sm);">
+                        <div style="display: flex; align-items: center; gap: var(--space-sm);">
+                            <div style="width: 40px; height: 40px; background: var(--gradient-brand); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: white;">KO</div>
+                            <span>Karim Ouazzani</span>
+                        </div>
+                        <span>12 août 2026</span>
+                        <span>10 min de lecture</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div style="padding: var(--space-4xl) 0; background: var(--bg-secondary);">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto;">
+
+                    <section style="margin-bottom: var(--space-3xl);">
+                        <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg);">Le problème : des données dormantes</h2>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            Votre ERP contient des dizaines d'années de données : ventes, achats, stocks, comptabilité, projets. Mais où se trouvent-elles ? Dans des rapports trimestriels que personne ne lit. Dans des exports Excel que votre comptable met deux jours à produire. Les indicateurs clés — chiffre d'affaires, marges, encours clients — sont noyés quelque part dans une base de données, invisibles jusqu'à la clôture du mois.
+                        </p>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            Entre-temps, vos commerciaux ne savent pas combien il reste de stock. Votre directeur financier découvre une mauvaise surprise en fin de mois. Vos clients attendent des relances manuelles. Selon <a href="https://www.banque-france.fr/fr/publications-et-statistiques/publications/rapport-de-lobservatoire-des-delais-de-paiement-2024" rel="noopener" target="_blank">l'Observatoire des délais de paiement 2024 de la Banque de France</a>, les retards de paiement privent les PME de ressources de trésorerie importantes — 15 milliards d'euros au total en 2024 pour l'ensemble des PME françaises.
+                        </p>
+                    </section>
+
+                    <section style="margin-bottom: var(--space-3xl);">
+                        <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg);">Qu'est-ce qu'un tableau de bord ERP temps réel ?</h2>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            Un tableau de bord temps réel connecté à votre ERP affiche les données au moment où elles changent. Pas en fin de mois, pas demain, maintenant. C'est le pouls financier et opérationnel de votre activité, en direct.
+                        </p>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            Vos ventes de la journée ? Visibles en live. Les commandes non livrées ? Un clic. La situation des créances clients par département ? Un graphique que vous customisez selon vos besoins. Les données qui stagnaient en base dormante deviennent des leviers de décision.
+                        </p>
+                    </section>
+
+                    <section style="margin-bottom: var(--space-3xl);">
+                        <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg);">Pourquoi les rapports natifs de l'ERP ne suffisent pas</h2>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            Chaque ERP propose des rapports intégrés : Cegid, Sage, SAP, Dynamics, Odoo. Ils sont complets, mais ils sont aussi figés. Vous êtes prisonnier de la structure que l'éditeur a décidée. Un ERP met en général 2 à 3 jours de la saisie à la production du rapport classique. Entre-temps, les données ont changé trois fois.
+                        </p>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            Les rapports natifs répondent aussi souvent à une question générale : « comment j'ai vendu ce mois ? » Mais votre question est spécifique : « Quel produit n'a pas bougé en 48 h ? », « Lequel de mes clients risque de devenir impayé ? », « Ma marge produit X est-elle stable ? ». Pour chaque nouvelle question, c'est un nouveau rapport, un appel à la hotline, plusieurs jours d'attente.
+                        </p>
+                    </section>
+
+                    <section style="margin-bottom: var(--space-3xl);">
+                        <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg);">Les indicateurs qui font la différence</h2>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            Pas besoin d'une centaine d'indicateurs. Les meilleurs tableaux de bord ERP se concentrent sur 5 à 10 métriques clés, celle qui pilotent réellement votre activité.
+                        </p>
+
+                        <h3 style="font-size: var(--text-xl); font-weight: 600; margin: var(--space-xl) 0 var(--space-md);">1. Chiffre d'affaires jour/semaine/mois</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            Votre revenue en direct. Comparé au budget et à la même période l'année précédente, ça dit si vous êtes sur les rails.
+                        </p>
+
+                        <h3 style="font-size: var(--text-xl); font-weight: 600; margin: var(--space-xl) 0 var(--space-md);">2. Marge nette par produit</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            Quel produit tire votre rentabilité vers le haut ? Lequel vers le bas ? Une marge apparemment saine peut cacher un prix de revient qui monte. Sans visibilité temps réel, vous le découvrez trop tard.
+                        </p>
+
+                        <h3 style="font-size: var(--text-xl); font-weight: 600; margin: var(--space-xl) 0 var(--space-md);">3. Encours clients (DSO)</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            Combien de jours en moyenne avant qu'un client ne paie ? <a href="https://agicap.com/fr/article/dso-days-sales-outstanding/" rel="noopener" target="_blank">Le DSO moyen en France est de 51 jours</a>, ce qui signifie qu'une facture met en moyenne sept semaines avant d'être encaissée. Chaque jour perdu immobilise du cash. Un tableau de bord temps réel vous dit exactement où vous en êtes, et quels clients tirent la moyenne vers le haut.
+                        </p>
+
+                        <h3 style="font-size: var(--text-xl); font-weight: 600; margin: var(--space-xl) 0 var(--space-md);">4. Stocks critiques</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            Rupture de stock détectée en live, pas en fin de journée. Pour un distributeur, c'est la différence entre 100 commandes complétées et 50.
+                        </p>
+
+                        <h3 style="font-size: var(--text-xl); font-weight: 600; margin: var(--space-xl) 0 var(--space-md);">5. Anomalies de saisie</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            La plupart des problèmes de qualité des données proviennent des saisies utilisateurs : une facture sans date de livraison, une commande avec un client introuvable, une ligne comptable dans le mauvais code analytique. Ces erreurs restent invisibles jusqu'au moment où vous en avez besoin, par exemple lors d'une relance. Un tableau de bord de qualité les signale immédiatement, avant qu'elles ne remontent dans vos reportings et ne causent des litiges.
+                        </p>
+                    </section>
+
+                    <section style="margin-bottom: var(--space-3xl);">
+                        <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg);">Cas concret : négociant en matériel à Casablanca</h2>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            Prenons une entreprise réelle. Un négociant de matériel spécialisé, 40 salariés, sous Cegid PMI depuis huit ans. Il vend 800 références à une centaine de clients (ateliers, usines, collectivités).
+                        </p>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            <strong>Le problème :</strong> Le directeur ne sait pas en temps réel qui a commandé quoi. Ses clients grincent des dents parce qu'ils attendent trois jours pour savoir si on a le stock. Son comptable passe trois heures par semaine à extraire les créances à relancer. Trois produits vieux stock restent en rayons, immobilisant du cash.
+                        </p>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            <strong>Après un tableau de bord temps réel connecté à Cegid :</strong> Chaque matin, le directeur voit la veille en direct. Ses vendeurs savent en 10 secondes si un stock est disponible (plus d'appel au magasin). Les créances à relancer se remplissent automatiquement avec les clients qui dépassent 60 jours. En trois mois, l'encours moyen tombe de 58 jours à 52 jours — une économie de 6 jours de trésorerie, soit environ 45 000 MAD pour cette PME.
+                        </p>
+                    </section>
+
+                    <section style="margin-bottom: var(--space-3xl);">
+                        <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg);">La qualité des données, fondation du tableau</h2>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            Un tableau de bord est aussi bon que les données qu'il affiche. C'est un piège courant : installer un beau dashboard et réaliser qu'il met en avant des erreurs cachées depuis des mois.
+                        </p>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            Avant de brancher le tableau de bord, audit des données : factures sans dates de livraison, clients dupliqués, codes analytiques manquants. Ces anomalies n'étaient pas graves quand personne ne regardait le détail ; elles deviennent évidents quand un indicateur les souligne tous les jours.
+                        </p>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            La bonne nouvelle : une fois le tableau en place, ces erreurs disparaissent vite. Les utilisateurs voient immédiatement les conséquences de leurs saisies, et cela change les comportements. Un tableau de bord devient ainsi un outil de nettoyage de données indirect mais puissant.
+                        </p>
+                    </section>
+
+                    <section style="margin-bottom: var(--space-3xl);">
+                        <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg);">Comment connecter votre ERP sans le modifier</h2>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            La question que chaque DSI pose : « Faut-il toucher à mon ERP pour ça ? » La réponse est non. C'est même l'avantage clé d'une architecture modulaire.
+                        </p>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            Votre ERP expose ses données via une API (REST, OData, ou extraction directe en base de données si l'ERP l'autorise). Un module d'analyse lit ces données en direct, les enrichit (calculs de marge, détection d'anomalies), et les sert dans un tableau de bord. L'ERP ignore qu'il se passe quelque chose. Vous mettez à jour l'ERP sans crainte : le tableau suivra.
+                        </p>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            Cet approche modulaire marche avec Cegid, Sage, SAP, Dynamics, Odoo. Le délai de mise en route est généralement 4 à 6 semaines pour un système de taille moyenne.
+                        </p>
+                    </section>
+
+                    <section style="margin-bottom: var(--space-3xl);">
+                        <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg);">Les pièges courants à éviter</h2>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            Un projet tableau de bord échoue généralement pour les mêmes raisons, toujours liées aux données ou à l'adoption.
+                        </p>
+                        <ul style="color: var(--text-secondary); line-height: 1.8; padding-left: var(--space-xl);">
+                            <li style="margin-bottom: var(--space-sm);"><strong>Vouloir trop au démarrage :</strong> Commencez avec 5 indicateurs clés, pas 50. Élargissez une fois que l'équipe est à l'aise.</li>
+                            <li style="margin-bottom: var(--space-sm);"><strong>Ignorer la qualité des données :</strong> Un tableau de mauvaises données est pire que pas de tableau. Nettoyez d'abord.</li>
+                            <li style="margin-bottom: var(--space-sm);"><strong>Oublier la formation :</strong> Le plus beau tableau ne sert à rien si personne ne sait s'en servir. Prévoyez des sessions guidées.</li>
+                            <li><strong>Confondre ERP et tableaux bord :</strong> Votre ERP est un système transactionnel. Le tableau de bord est un système de pilotage. Ils ont des besoins différents.</li>
+                        </ul>
+                    </section>
+
+                    <section style="margin-bottom: var(--space-3xl);">
+                        <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg);">Délai réaliste de mise en place</h2>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            La plupart des PME attendent une mise en place rapide et gratuite. La réalité est différente, mais pas pessimiste.
+                        </p>
+                        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-xl); margin: var(--space-xl) 0;">
+                            <p style="font-weight: 600; margin-bottom: var(--space-md);">Chronologie typique :</p>
+                            <ul style="color: var(--text-secondary); line-height: 1.8; padding-left: var(--space-xl); margin-bottom: var(--space-lg);">
+                                <li><strong>Semaine 1-2 :</strong> Audit des données. Quelles sont les qualités, les anomalies ?</li>
+                                <li><strong>Semaine 3-4 :</strong> Design du dashboard. Quels indicateurs afficher ? Quelle granularité ?</li>
+                                <li><strong>Semaine 5-6 :</strong> Construction et tests. Connexion à l'ERP, vérification des calculs.</li>
+                                <li><strong>Semaine 7+ :</strong> Déploiement progressif, formation, ajustements.</li>
+                            </ul>
+                            <p style="color: var(--text-secondary);">
+                                Délai global : 4 à 8 semaines selon la complexité. Les erreurs de données détectées rallongent un peu, mais elles auraient coûté bien plus tard.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section style="margin-bottom: var(--space-3xl);">
+                        <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg);">FAQ : Les vraies questions qu'on nous pose</h2>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            <strong>« Nos données sont trop sales, ça va prendre trop longtemps ? »</strong><br>
+                            Non. Un audit de données prend généralement deux semaines et identifie 80 % des anomalies. Les 20 % restantes se découvrent au fil du temps et se corrigent naturellement une fois que le tableau est en production — les utilisateurs voient immédiatement l'impact de leurs saisies.
+                        </p>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            <strong>« Et si le tableau montre des trucs qui mettent mal à l'aise ? »</strong><br>
+                            C'est exactement le but. Un manager qui découvre que son département a une marge de 8 % alors qu'il croyait 15 % préfère le savoir maintenant plutôt que après une crise de fermeture. C'est une source d'action, pas de blâme.
+                        </p>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            <strong>« Ça va révéler qu'on s'est trompé de décisions ? »</strong><br>
+                            Oui, parfois. Mais c'est préférable à continuer à se tromper sans le savoir. Un tableau de bord honnête est le meilleur outil de correction de trajectoire.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg);">Conclusion</h2>
+                        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                            Un tableau de bord ERP temps réel n'est pas du luxe, c'est de la visibilité. Il transforme votre ERP d'une machine transactionnelle en une machine de pilotage. Vous et votre équipe prenez des décisions sur des faits, pas sur des guesses. Vous détectez les anomalies avant qu'elles ne deviennent des crises. Vous gagnez des jours de trésorerie simplement en voyant. La question n'est pas « faut-il investir ? », mais « quand puis-je commencer ? »
+                        </p>
+                    </section>
+
+                    <section style="margin-top: var(--space-4xl); padding-top: var(--space-3xl); border-top: 1px solid var(--border);">
+                        <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg);">Sources</h2>
+                        <ul style="color: var(--text-secondary); line-height: 1.8; padding-left: var(--space-xl);">
+                            <li style="margin-bottom: var(--space-md);"><a href="https://www.banque-france.fr/fr/publications-et-statistiques/publications/rapport-de-lobservatoire-des-delais-de-paiement-2024" rel="noopener" target="_blank">Observatoire des délais de paiement 2024 — Banque de France</a> : retards de paiement, impact sur la trésorerie des PME, comportements par taille d'entreprise.</li>
+                            <li style="margin-bottom: var(--space-md);"><a href="https://agicap.com/fr/article/dso-days-sales-outstanding/" rel="noopener" target="_blank">Days Sales Outstanding (DSO) — Agicap</a> : définition et calcul du DSO, moyenne en France (51 jours).</li>
+                            <li style="margin-bottom: var(--space-md);"><a href="https://www.lundimatin.fr/blog/tableau-de-bord-erp-les-kpi-essentiels-pour-piloter-son-activite-en-temps-reel" rel="noopener" target="_blank">Tableau de bord ERP : les KPI essentiels — Lundimatin</a> : indicateurs clés pour piloter en temps réel.</li>
+                            <li><a href="https://www.lmb-erp.fr/blog/tableau-de-bord-erp-en-5-etapes" rel="noopener" target="_blank">Comment construire un tableau de bord ERP efficace en 5 étapes — LMB</a> : méthodologie de construction.</li>
+                        </ul>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <section class="industry-cta">
+            <div class="container">
+                <h2 class="industry-cta__title">Créez votre tableau de bord</h2>
+                <p class="industry-cta__desc">
+                    Découvrez comment connecter vos données ERP à un tableau de bord temps réel, sans modifier votre système.
+                </p>
+                <div class="btn-group" style="justify-content: center;">
+                    <a href="../contact" class="btn btn-primary btn-lg">Demander une démo</a>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 Kaalytics. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Navbar Loader -->
+    <script src="../components/navbar/navbar-loader.js?v=20260808"></script>
+
+
+    <!-- Blog Article Schema -->
+    <script src="../assets/js/components/blog-schema.js"></script>
+
+    <!-- GA4 Event Tracking -->
+    <script src="../assets/js/components/ga4-events.js"></script>
+
+    <!-- Marketing Pixels -->
+    <script src="../assets/js/components/marketing-pixels.js"></script>
+
+    <!-- Exit Intent Popup -->
+    <script src="../assets/js/components/exit-popup.js"></script>
+</body>
+</html>

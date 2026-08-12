@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="IA par secteur, modules ERP secteurs, automatisation par industrie">
+    <meta name="author" content="Kaalytics">
+    <meta name="theme-color" content="#10b981">
+
+    <!-- Canonical URL -->
+
+    <!-- Open Graph -->
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css?v=20260808">
+
+    <style>
+        :root {
+            --bg-void: #040a08;
+            --bg-card: #0f1f1b;
+            --bg-secondary: #132a24;
+            --emerald: #10b981;
+            --emerald-dim: rgba(16, 185, 129, 0.1);
+            --text-primary: #ecfdf5;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: rgba(16, 185, 129, 0.12);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg-void); color: var(--text-primary); }
+
+        /* Hero Section */
+        .industries-hero {
+            background: var(--bg-void);
+            padding: 120px 24px 60px;
+            text-align: center;
+            border-bottom: 1px solid rgba(16, 185, 129, 0.12);
+        }
+
+        .industries-hero__badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            color: #10b981;
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .industries-hero__title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            color: #ecfdf5;
+            margin-bottom: 16px;
+        }
+
+        .industries-hero__subtitle {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Content Section */
+        .industries-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        .industries-content__section {
+            margin-bottom: 48px;
+        }
+
+        .industries-content__section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ecfdf5;
+            margin-bottom: 20px;
+        }
+
+        .industries-content__text {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .industries-content__text strong {
+            color: #ecfdf5;
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .industry-card {
+            display: block;
+            text-decoration: none;
+            border-left: 3px solid #10b981;
+            background: #0f1f1b;
+            padding: 28px 32px;
+            border-radius: 0 12px 12px 0;
+            transition: all 0.2s;
+        }
+
+        .industry-card:hover {
+            background: rgba(16, 185, 129, 0.06);
+            border-left-color: #34d399;
+            transform: translateX(4px);
+        }
+
+        .industry-card__title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #ecfdf5;
+            margin-bottom: 12px;
+        }
+
+        .industry-card__problem {
+            font-size: 0.85rem;
+            color: #10b981;
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .industry-card__desc {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .industry-card__modules {
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-top: 8px;
+        }
+
+        /* CTA Section */
+        .industries-cta {
+            text-align: center;
+            padding: 60px 24px;
+            border-top: 1px solid rgba(16, 185, 129, 0.12);
+        }
+
+        .industries-cta__title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ecfdf5;
+            margin-bottom: 12px;
+        }
+
+        .industries-cta__subtitle {
+            color: #94a3b8;
+            margin-bottom: 32px;
+        }
+
+        .industries-cta__btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 40px;
+            background: #10b981;
+            color: #040a08;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .industries-cta__btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-void);
+            border-top: 1px solid rgba(16, 185, 129, 0.12);
+            padding: 48px 0 20px;
+        }
+
+        footer a {
+            color: #64748b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--emerald);
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .industries-hero {
+                padding: 100px 16px 40px;
+            }
+
+            .industries-content {
+                padding: 40px 16px;
+            }
+
+            .industry-card {
+                padding: 20px 24px;
+            }
+
+            .industries-hero__title {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+<!-- SEO:BEGIN (genere par scripts/seo/gen_head.py - ne pas editer) -->
+    <title>Modules IA par Secteur | Kaalytics</title>
+    <meta name="description" content="Solutions IA spécialisées par secteur : BTP, Transport, Mines, Distribution, Industrie, Location. Nos modules répondent aux besoins métier de chaque industrie.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://kaalytics.com/industries">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kaalytics">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Modules IA par Secteur | Kaalytics">
+    <meta property="og:description" content="Solutions IA spécialisées par secteur : BTP, Transport, Mines, Distribution, Industrie, Location. Nos modules répondent aux besoins métier de chaque industrie.">
+    <meta property="og:url" content="https://kaalytics.com/industries">
+    <meta property="og:image" content="https://kaalytics.com/assets/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Modules IA par Secteur | Kaalytics">
+    <meta name="twitter:description" content="Solutions IA spécialisées par secteur : BTP, Transport, Mines, Distribution, Industrie, Location. Nos modules répondent aux besoins métier de chaque industrie.">
+    <meta name="twitter:image" content="https://kaalytics.com/assets/images/og-image.jpg">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "https://kaalytics.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Modules IA par Secteur",
+            "item": "https://kaalytics.com/industries"
+        }
+    ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Kaalytics",
+    "url": "https://kaalytics.com",
+    "logo": "https://kaalytics.com/assets/images/logo/kaalytics-logo.png",
+    "areaServed": [
+        {
+            "@type": "Country",
+            "name": "Maroc"
+        },
+        {
+            "@type": "Country",
+            "name": "France"
+        },
+        {
+            "@type": "Country",
+            "name": "Canada"
+        },
+        {
+            "@type": "Country",
+            "name": "Belgique"
+        },
+        {
+            "@type": "Country",
+            "name": "Suisse"
+        }
+    ],
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Casablanca",
+        "addressCountry": "MA"
+    }
+}
+    </script>
+<!-- SEO:END -->
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-container" data-navbar="full" data-navbar-style="solid"></div>
+
+    <!-- Hero Section -->
+    <header class="industries-hero">
+        <div class="industries-hero__badge">Par secteur d'activité</div>
+        <h1 class="industries-hero__title">L'IA adapte ses réponses à votre industrie</h1>
+        <p class="industries-hero__subtitle">
+            Les besoins diffèrent moins par secteur qu'on ne le croit. Ce qui change vraiment, c'est la donnée disponible et la priorité des enjeux métier.
+        </p>
+    </header>
+
+    <!-- Content Section -->
+    <section class="industries-content">
+        <!-- Section 1: L'Approche -->
+        <div class="industries-content__section">
+            <h2>Une approche spécialisée par métier</h2>
+            <p class="industries-content__text">
+                Nos modules fonctionnent dans tous les secteurs. Mais chacun vit ses propres défis : un transporteur se soucie d'optimiser la flotte et réduire le carburant, un distributeur de gérer la rupture de stock et la prévisibilité, une fabrique d'anticiper la maintenance machine, un minier de sécurité des engins.
+            </p>
+            <p class="industries-content__text">
+                Nous avons construit nos modules autour d'une architecture modulaire commune — une base solide, évolutive, testée dans des centaines d'installations. Puis nous avons spécialisé les algorithmes, les tableaux de bord et les intégrations selon le secteur. Un transporteur voyait des optimisations de tournée ; un distributeur, des alertes de rupture. Même module, interfaces et logiques différentes.
+            </p>
+            <p class="industries-content__text">
+                Résultat : une solution qui parle votre langage métier sans réinventer la roue. Vous reconnaissez vos indicateurs métier. Les équipes ne doivent pas réapprendre comment lire un tableau de bord — ils voient des concepts qu'ils utilisent déjà chez vous.
+            </p>
+        </div>
+
+        <!-- Section 2: Six Secteurs -->
+        <div class="industries-content__section">
+            <h2>Les six secteurs couverts</h2>
+            <p class="industries-content__text">
+                Explorez chaque secteur pour voir les modules qui font la différence, les cas d'usage, et les résultats mesurables observés chez nos clients.
+            </p>
+
+            <div class="industries-grid">
+                <a href="btp" class="industry-card">
+                    <div class="industry-card__problem">Problème clé</div>
+                    <h3 class="industry-card__title">BTP & Construction</h3>
+                    <p class="industry-card__desc">Dépassements de délai et de budget. Conducteurs de travaux qui passent plus de temps à rapporter que sur le terrain. Maintenabilité des machines imprévisible.</p>
+                    <p class="industry-card__modules"><strong>Modules clés :</strong> FleetOps, Supply Chain, Financial Operations</p>
+                </a>
+
+                <a href="mines" class="industry-card">
+                    <div class="industry-card__problem">Problème clé</div>
+                    <h3 class="industry-card__title">Mines & Carrières</h3>
+                    <p class="industry-card__desc">Sécurité des engins et des personnels. Optimisation des cycles d'extraction. Conformité croissante et reporting fragmenté.</p>
+                    <p class="industry-card__modules"><strong>Modules clés :</strong> FleetOps, Supply Chain, AI Engine</p>
+                </a>
+
+                <a href="transport" class="industry-card">
+                    <div class="industry-card__problem">Problème clé</div>
+                    <h3 class="industry-card__title">Transport & Logistique</h3>
+                    <p class="industry-card__desc">Marges érodées par le carburant et les pannes. Clients exigeants sur les délais. Optimisation des tournées laissée à l'improvisation.</p>
+                    <p class="industry-card__modules"><strong>Modules clés :</strong> FleetOps, Digital Platform, Financial Operations</p>
+                </a>
+
+                <a href="distribution" class="industry-card">
+                    <div class="industry-card__problem">Problème clé</div>
+                    <h3 class="industry-card__title">Distribution & Négoce</h3>
+                    <p class="industry-card__desc">Ruptures et surstock simultanés. Visibilité faible sur la performance commerciale. Clients hétérogènes aux besoins variables.</p>
+                    <p class="industry-card__modules"><strong>Modules clés :</strong> Sales Intelligence, Supply Chain, Digital Platform</p>
+                </a>
+
+                <a href="industrie" class="industry-card">
+                    <div class="industry-card__problem">Problème clé</div>
+                    <h3 class="industry-card__title">Industrie & Production</h3>
+                    <p class="industry-card__desc">Temps d'arrêt non planifiés qui percent le budget. Données de production éparses. Prédiction de pannes encore manuelle.</p>
+                    <p class="industry-card__modules"><strong>Modules clés :</strong> Supply Chain, AI Engine, Financial Operations</p>
+                </a>
+
+                <a href="location" class="industry-card">
+                    <div class="industry-card__problem">Problème clé</div>
+                    <h3 class="industry-card__title">Location d'Équipements</h3>
+                    <p class="industry-card__desc">Localisation imprécise des engins. Maintenance non prédictive = immobilisations coûteuses. Contrats et pricing peu optimisés.</p>
+                    <p class="industry-card__modules"><strong>Modules clés :</strong> FleetOps, Digital Platform, Financial Operations</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Section 3: Logique Transversale -->
+        <div class="industries-content__section">
+            <h2>La logique transversale</h2>
+            <p class="industries-content__text">
+                Remarquez un patron dans la liste ci-dessus : <strong>FleetOps</strong> apparaît dans presque tous les secteurs. <strong>Supply Chain</strong> aussi. <strong>Financial Operations</strong> dans tous les secteurs sans exception. C'est normal — gestion de flotte, planification d'achat et rigueur comptable sont des problèmes universels. Ce qui diffère, c'est le contexte opérationnel.
+            </p>
+            <p class="industries-content__text">
+                Un transporteur utilise FleetOps pour optimiser carburant et réduire les pannes imprévisibles. Un mineur l'utilise pour sécurité des engins et conformité des opérations. Un constructeur pour traçabilité des machines et respect des délais. Même module, usage différent, données différentes, KPIs et alertes dans l'ordre d'importance du secteur.
+            </p>
+            <p class="industries-content__text">
+                C'est la force de l'approche modulaire de Kaalytics. Au lieu de construire 6 solutions verticales indépendantes — une pour BTP, une pour transport, une pour mines — nous en construisons une horizontale solidement, puis nous la configurons pour chaque secteur.
+            </p>
+        </div>
+
+        <!-- Section 4: Intégration Métier -->
+        <div class="industries-content__section">
+            <h2>Chaque industrie a son ERP, ses process, ses réglementations</h2>
+            <p class="industries-content__text">
+                Un négociant marocain tourne souvent sur Cegid avec logiciel comptable couplé. Une fabrique sur Sage ou Odoo avec tracking production. Un transporteur sur SAP avec WMS intégré. Nos modules s'intègrent indépendamment du système cible — nous lisons vos données depuis n'importe quel ERP, nous n'en changeons rien sauf indication explicite.
+            </p>
+            <p class="industries-content__text">
+                Nous utilisons des APIs standards et des intégrations éprouvées. Votre IT n'a pas besoin de faire d'adaptations complexes. Nous gérons la connectivité. Votre équipe donne juste les credentials de lecture, et le reste se configure facilement.
+            </p>
+            <p class="industries-content__text">
+                Conformité réglementaire : NORME ISO, normes de sécurité au travail (CNESST), traçabilité marchandises, normes environnementales, audits fournisseurs. Tous ces frameworks sont couverts dans nos modules. Nous mettons à jour les contrôles proactivement quand les normes changent, et sur demande pour des exigences spéciales clients.
+            </p>
+        </div>
+
+        <!-- Section 4.5: Cas d'Usage Transversales -->
+        <div class="industries-content__section">
+            <h2>Trois cas d'usage qui traversent tous les secteurs</h2>
+            <p class="industries-content__text">
+                Même si chaque industrie a ses spécificités, trois problèmes émergent partout.
+            </p>
+            <p class="industries-content__text">
+                <strong>1. Visibility opérationnelle :</strong> Les dirigeants voient un chiffre de revenu, mais ignorent où se fait vraiment l'argent. Quel projet/contrat/client génère profit ? Quel se termine en perte ? Nos modules donnent cette transparence en dashboards temps réel, avec drill-down jusqu'à la ligne de commande si besoin.
+            </p>
+            <p class="modules-content__text">
+                <strong>2. Prédiction et anticipation :</strong> Les équipes opérationnelles réagissent toujours aux problèmes après qu'ils surviennent. Une machine tombe en panne, un client se plaint, un stock rompt. Nos algorithmes ML anticipent : prédire les pannes, prédire la churn client, prédire les ruptures. Vous passez du réactif au prédictif.
+            </p>
+            <p class="modules-content__text">
+                <strong>3. Automatisation des tâches répétitives :</strong> Les commerciaux passent 40 % du temps à chercher l'info au lieu de vendre. Les chefs de projet 30 % à faire des rapports au lieu de planifier. Nos modules automatisent ces tâches. Les données remontent sans effort humain. Les alertes se déclenchent sans attendre.
+            </p>
+        </div>
+
+        <!-- Section 5: Exemples Concrets -->
+        <div class="industries-content__section">
+            <h2>Exemples mesurables de nos clients</h2>
+            <p class="industries-content__text">
+                Un sous-traitant BTP de 40 salariés à Casablanca qui utilisait FleetOps a réduit ses ruptures de maintenance imprévisible de 35 % et ses dépassements de budget de délai de 25 % en 6 mois. L'investissement s'est amorti en 5 mois.
+            </p>
+            <p class="industries-content__text">
+                Une entreprise de transport de 100 véhicules a réduit son coût carburant par kilomètre de 18 % grâce aux algorithmes d'optimisation de tournée et coaching conducteur intégrés dans FleetOps. Économie annuelle : 2,7 M MAD sur carburant seul.
+            </p>
+            <p class="industries-content__text">
+                Une usine de préfabrication a diminué ses arrêts de production de 40 % — économie de 800k MAD par an — grâce à la maintenance prédictive du Supply Chain Command, qui prédit les pannes avant qu'elles surviennent. Les techniciens interviennent en préventif au lieu de curatif.
+            </p>
+            <p class="industries-content__text">
+                Une société de location d'équipements a réduit son taux de rupture d'engins disponibles de 23 % à 5 % avec FleetOps, juste par meilleure maintenance. Les clients louent plus — satisfaction monte, fidélité monte, churn descend.
+            </p>
+            <p class="industries-content__text">
+                Ces exemples sont anonymes par défaut — vos données restent vôtres, et nous ne les divulguons sans votre accord écrit explicite. Nous ne faisons jamais de marketing sur les données clients.
+            </p>
+        </div>
+
+        <!-- Section 6: Prochaine Étape -->
+        <div class="industries-content__section">
+            <h2>Vous êtes dans l'une de ces industries ?</h2>
+            <p class="industries-content__text">
+                Cliquez sur votre secteur ci-dessus pour voir les détails des défis caractéristiques de votre industrie, les modules disponibles et prioritaires, et les cas d'usage concrets observés dans votre secteur. Chaque page industrie est détaillée et explique comment nous avons adapté nos solutions à vos contraintes.
+            </p>
+            <p class="industries-content__text">
+                Ou consultez notre catalogue complet des <strong><a href="../modules" style="color: #10b981; text-decoration: none;">modules IA</a></strong> pour explorer les fonctionnalités détaillées de chaque module, indépendamment du secteur.
+            </p>
+            <p class="industries-content__text">
+                Besoin de conseils personnalisés ? <strong><a href="../contact" style="color: #10b981; text-decoration: none;">Contactez nos experts</a></strong> pour une discussion approfondie sur votre cas d'usage spécifique, vos enjeux, et le meilleur chemin d'implémentation pour votre industrie.
+            </p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="industries-cta">
+        <h2 class="industries-cta__title">Vous voulez explorer votre secteur ?</h2>
+        <p class="industries-cta__subtitle">Un expert répondra à toutes vos questions en 20 minutes.</p>
+        <a href="../contact" class="industries-cta__btn">
+            Demander une consultation
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--bg-void); border-top: 1px solid rgba(16,185,129,0.12); padding: 48px 0 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 48px;">
+                <div>
+                    <a href="../" style="display: flex; align-items: center; gap: 10px; text-decoration: none; margin-bottom: 16px;">
+                        <svg width="32" height="32" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#10b981" stroke-width="2"/><path d="M12 20l6 6 10-12" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span style="font-size: 1.25rem; font-weight: 800; color: #ecfdf5;">Kaal<span style="color: #10b981;">ytics</span></span>
+                    </a>
+                    <p style="color: #64748b; font-size: 0.85rem; line-height: 1.7; margin-bottom: 20px; max-width: 280px;">Modules IA connectés à votre ERP. Dashboards intelligents et automatisation sur-mesure.</p>
+                    <div style="display: flex; gap: 12px;">
+                        <a href="https://wa.me/212673736611" target="_blank" rel="noopener" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: #0f1f1b; border: 1px solid rgba(16,185,129,0.12); border-radius: 8px; color: #64748b;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+                        <a href="https://linkedin.com/company/kaalytics" target="_blank" rel="noopener" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: #0f1f1b; border: 1px solid rgba(16,185,129,0.12); border-radius: 8px; color: #64748b;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Industries</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="btp" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">BTP & Construction</a>
+                        <a href="mines" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Mines & Carrières</a>
+                        <a href="transport" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Transport & Logistique</a>
+                        <a href="distribution" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Distribution & Négoce</a>
+                        <a href="industrie" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Industrie & Production</a>
+                        <a href="location" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Location d'Équipements</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Modules</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="../modules/sales-intelligence" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Sales Intelligence</a>
+                        <a href="../modules/marketing-automation" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Marketing Automation</a>
+                        <a href="../modules/financial-operations" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Financial Operations</a>
+                        <a href="../modules/supply-chain" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Supply Chain</a>
+                        <a href="../modules/fleetops" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">FleetOps</a>
+                        <a href="../modules/erp-connect" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">ERP Connect</a>
+                        <a href="../modules/digital-platform" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Digital Platform</a>
+                        <a href="../modules/ai-engine" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">AI Engine</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Ressources</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="../guides" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Guides</a>
+                        <a href="../faq" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">FAQ</a>
+                        <a href="../pricing" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Tarifs</a>
+                        <a href="../about" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">À propos</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Contact</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="https://wa.me/212673736611" target="_blank" rel="noopener" style="color: #10b981; text-decoration: none; font-size: 0.85rem; font-weight: 600;">WhatsApp</a>
+                        <a href="tel:+212673736611" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">+212 673 736 611</a>
+                    </div>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(16,185,129,0.12); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                <p style="color: #64748b; font-size: 0.8rem;">© 2026 Kaalytics. Tous droits réservés. Made in Morocco.</p>
+                <div style="display: flex; gap: 24px; font-size: 0.8rem;">
+                    <a href="../legal/privacy" style="color: #64748b; text-decoration: none;">Confidentialité</a>
+                    <a href="../legal/terms" style="color: #64748b; text-decoration: none;">CGU</a>
+                    <a href="../legal/cookies" style="color: #64748b; text-decoration: none;">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../components/navbar/navbar-loader.js?v=20260808" defer></script>
+</body>
+</html>
