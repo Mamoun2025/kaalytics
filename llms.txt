@@ -1,39 +1,62 @@
 # Kaalytics
 
-> Kaalytics est une société marocaine qui connecte des modules d'analyse et
-> d'automatisation aux ERP déjà en place dans l'entreprise - Cegid, Sage, SAP,
-> Dynamics, Odoo - sans modifier le système existant. Pour une entreprise sans
-> ERP, Kaalytics déploie Odoo. Basé à Casablanca, Maroc.
+> Kaalytics est une société marocaine qui connecte des modules d'analyse et d'automatisation aux ERP déjà en place dans l'entreprise — Cegid, Sage, SAP, Dynamics, Odoo — sans modifier le système existant. Pour une entreprise sans ERP, Kaalytics déploie Odoo. Basée à Casablanca, Maroc.
 
 ## Modules
 
-- [FleetOps](https://kaalytics.com/modules/fleetops) : suivi de flotte, maintenance prédictive, coûts par chantier
-- [Sales Intelligence](https://kaalytics.com/modules/sales-intelligence) : pilotage commercial et scoring des prospects
-- [Marketing Automation](https://kaalytics.com/modules/marketing-automation) : campagnes ciblées et pipeline marketing
-- [Financial Operations](https://kaalytics.com/modules/financial-operations) : tableau de bord financier et relances clients
-- [Supply Chain Command](https://kaalytics.com/modules/supply-chain) : planning achats et prévision de ventes
-- [ERP Connect](https://kaalytics.com/modules/erp-connect) : connecteurs vers les ERP existants
-- [Digital Platform](https://kaalytics.com/modules/digital-platform) : site web et catalogue connectés à l'ERP
-- [AI Engine](https://kaalytics.com/modules/ai-engine) : agents autonomes et automatisations IA
+- [AI Engine — automatisations IA pour vos opérations | Kaalytics](https://kaalytics.com/modules/ai-engine) : Agents autonomes, lecture intelligente de documents et analyses automatisées, branchées sur vos données métier.
+- [Digital Platform — site web et catalogue connectés à l'ERP | Kaalytics](https://kaalytics.com/modules/digital-platform) : Site vitrine, référencement et catalogue e-commerce alimentés directement par votre ERP. Une présence en ligne qui génère des contacts.
+- [ERP Connect — brancher vos modules sur votre ERP | Kaalytics](https://kaalytics.com/modules/erp-connect) : Connecteurs bidirectionnels vers Cegid, Sage, SAP, Dynamics et Odoo. Vos données exploitables sans toucher au système en place.
+- [Financial Operations — tableau de bord financier et relances | Kaalytics](https://kaalytics.com/modules/financial-operations) : Suivi de facturation automatisé, relances intelligentes et détection d'anomalies. Cash flow prévisionnel en un seul écran.
+- [FleetOps — logiciel de gestion de flotte au Maroc | Kaalytics](https://kaalytics.com/modules/fleetops) : Suivi GPS, maintenance prédictive et coûts par chantier. La rentabilité de chaque machine visible depuis votre ERP.
+- [Marketing Automation — campagnes ciblées pour PME | Kaalytics](https://kaalytics.com/modules/marketing-automation) : Campagnes avec scoring automatique, enrichissement des contacts et pipeline marketing relié au commercial. ROI mesuré par campagne.
+- [Sales Intelligence — pilotage commercial connecté à votre ERP | Kaalytics](https://kaalytics.com/modules/sales-intelligence) : Indicateurs commerciaux en temps réel, scoring des prospects et devis en 30 secondes, directement reliés à votre ERP.
+- [Supply Chain Command — planning achats et prévision de ventes | Kaalytics](https://kaalytics.com/modules/supply-chain) : Planning des achats, prévisions de ventes et suivi logistique. Chaque maillon de la chaîne visible en temps réel.
 
 ## Secteurs
 
-- [Industries](https://kaalytics.com/industries/industrie)
-- [Transport et logistique](https://kaalytics.com/industries/transport)
-- [Distribution et négoce](https://kaalytics.com/industries/distribution)
-- [BTP](https://kaalytics.com/industries/btp)
-- [Location d'équipements](https://kaalytics.com/industries/location)
-- [Mines et carrières](https://kaalytics.com/industries/mines)
+- [BTP & Construction | Kaalytics](https://kaalytics.com/industries/btp) : La construction exige de la précision. Vos outils aussi. Machines dispersées, pannes imprévues, coûts invisibles. Kaalytics résout ces problèmes.
+- [Distribution & Négoce | Kaalytics](https://kaalytics.com/industries/distribution) : Vendre plus, stocker mieux, livrer plus vite. Distributeurs, grossistes, négociants. Kaalytics optimise votre chaîne commerciale.
+- [Industrie & Production | Kaalytics](https://kaalytics.com/industries/industrie) : La performance industrielle, chiffrée en temps réel. Lignes de production, stocks, qualité. Kaalytics optimise votre chaîne de valeur.
+- [Location d'Équipements | Kaalytics](https://kaalytics.com/industries/location) : Maximisez l'utilisation. Minimisez l'immobilisation. Parc de location, multi-clients, rotations rapides. Kaalytics optimise votre parc.
+- [Mines & Carrières | Kaalytics](https://kaalytics.com/industries/mines) : L'extraction ne tolère pas l'approximation. Équipements critiques, conditions extrêmes, conformité stricte. Kaalytics optimise votre production.
+- [Transport & Logistique | Kaalytics](https://kaalytics.com/industries/transport) : Chaque kilomètre compte. Chaque livraison aussi. Marges fines, clients exigeants, réglementation stricte. Kaalytics optimise votre rentabilité.
+
+## Articles
+
+- [Blog | Kaalytics - Articles IA & Transformation Digitale Afrique](https://kaalytics.com/blog) : Découvrez nos articles sur l'IA, le Fleet Management et la transformation digitale en Afrique. Conseils pratiques et études de cas.
+- [Digitalisation flotte BTP en 2026 | Blog Kaalytics](https://kaalytics.com/blog/digitalisation-flotte-btp) : Comment digitaliser la gestion de votre flotte BTP en 2026. Guide pratique avec étapes, outils et retours d'expérience.
+- [GPS Tracking : 5 erreurs à éviter | Blog Kaalytics](https://kaalytics.com/blog/gps-tracking-erreurs) : Les 5 erreurs les plus courantes lors du déploiement d'une solution GPS tracking pour flotte de véhicules et comment les éviter.
+- [Maintenance prédictive : le guide complet | Blog Kaalytics](https://kaalytics.com/blog/maintenance-predictive-guide) : Guide complet de la maintenance prédictive pour flottes de véhicules. Principes, technologies, mise en œuvre et bénéfices.
+- [Comment réduire les coûts de flotte avec l'IA | Blog Kaalytics](https://kaalytics.com/blog/reduire-couts-flotte-ia) : Découvrez comment l'IA permet de réduire les coûts de gestion de flotte. Maintenance prédictive, optimisation carburant, analyse des données.
+- [ROI d'une solution de gestion de flotte | Blog Kaalytics](https://kaalytics.com/blog/roi-gestion-flotte) : Comment calculer le ROI d'une solution de gestion de flotte. Méthodologie, indicateurs clés et exemples concrets.
+
+## Guides
+
+- [Guides Pratiques | Kaalytics](https://kaalytics.com/guides) : Guides pratiques pour transformer vos opérations. Ressources concrètes sur la maintenance préventive, fleet management et gestion de flotte BTP.
+- [Checklist Maintenance Préventive | Kaalytics](https://kaalytics.com/guides/checklist-maintenance) : Checklist complète de maintenance préventive pour flottes de véhicules. Points de contrôle, périodicités et bonnes pratiques.
+- [Comparatif Solutions Fleet Management | Kaalytics](https://kaalytics.com/guides/comparatif-fleet-management) : Comparatif des solutions de fleet management. Critères de choix, fonctionnalités clés et guide de sélection pour votre flotte.
+- [Guide complet : Gestion de flotte BTP | Kaalytics](https://kaalytics.com/guides/guide-flotte-btp) : Guide complet pour la gestion de flotte BTP. Engins, véhicules, maintenance, conformité et optimisation des coûts.
 
 ## Ressources
 
-- [Blog](https://kaalytics.com/blog)
-- [Guides](https://kaalytics.com/guides)
-- [Études de cas](https://kaalytics.com/case-studies)
-- [Questions fréquentes](https://kaalytics.com/faq)
-- [Tarifs](https://kaalytics.com/pricing)
+- [Contact | Kaalytics - Parlez à un expert](https://kaalytics.com/contact) : Contactez l'équipe Kaalytics. Formulaire de contact, coordonnées, WhatsApp. Réponse sous 24h.
+- [FAQ | Questions Fréquentes | Kaalytics](https://kaalytics.com/faq) : FAQ Kaalytics - Questions fréquentes sur nos modules IA. Déploiement, tarifs, intégrations, sécurité et support.
+- [Tarifs | Kaalytics](https://kaalytics.com/pricing) : Tarification transparente par module. Standard, Pro ou Premium selon vos besoins. Chaque module est indépendant et modulaire.
 
-## Contact
+## Entreprise
 
-- [Contact](https://kaalytics.com/contact)
-- Version anglaise : https://kaalytics.com/en
+- [Études de Cas | Kaalytics](https://kaalytics.com/case-studies) : Études de cas Kaalytics. Découvrez comment nos clients optimisent leur flotte avec FleetOps Pro.
+- [Portail Client | Kaalytics — Votre projet en temps réel](https://kaalytics.com/portail-client) : Un espace confidentiel où chaque client Kaalytics suit son projet en direct : Blueprint, avancement, documents, échanges.
+- [Centre de Ressources | Kaalytics](https://kaalytics.com/resources) : Centre de ressources Kaalytics. Guides, articles, études de cas et outils pour optimiser votre gestion de flotte.
+- [Kaalytics | Vos systèmes. Sous stéroïdes.](https://kaalytics.com/) : On branche nos modules sur votre ERP. Ce qui prenait des jours prend maintenant quelques secondes. Modules intelligents pour Odoo, SAP, Sage, Dynamics.
+- [À propos | Kaalytics](https://kaalytics.com/about) : Kaalytics développe des modules IA qui se connectent aux ERP pour optimiser les opérations des entreprises. Notre approche, notre vision.
+- [Demander une Démo Gratuite | Kaalytics](https://kaalytics.com/demo) : Demandez une démo gratuite de nos modules. Présentation personnalisée de 30 minutes avec un expert.
+- [Intégrations | Kaalytics](https://kaalytics.com/integrations) : Intégrations Kaalytics. Connectez nos modules à vos outils existants : ERP, comptabilité, CRM et plus.
+- [Daedalia AI | Copilote IA pour Odoo - LLM connecté à votre ERP en 3 sec | Kaalytics](https://kaalytics.com/products/daedalia) : Daedalia AI: le premier LLM connecté à Odoo. Interrogez vos documents en langage naturel, créez des devis, analysez vos ventes en 3 secondes.
+- [FleetOps Pro | Gestion de Flotte IA | Kaalytics](https://kaalytics.com/products/fleetops) : FleetOps Pro: réduction des coûts et pannes, ROI rapide. Gestion de flotte IA pour BTP, Transport, Location. 8 modules.
+- [Support | Kaalytics](https://kaalytics.com/support) : Support Kaalytics. Assistance technique, documentation et contact pour nos modules.
+
+## Version anglaise
+
+- [English version](https://kaalytics.com/en) : Full English version of Kaalytics
