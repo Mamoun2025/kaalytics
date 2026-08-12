@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 from scripts.seo.catalog import load_catalog, load_defaults
-from scripts.seo.schema import build_breadcrumb_list, build_article_schema
+from scripts.seo.schema import build_breadcrumb_list, build_article_schema, get_author
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -341,3 +341,53 @@ class TestSchemaIntegration:
                 f"  actuel: {dernier['name']}\n"
                 f"  attendu: {titre_attendu}"
             )
+
+
+class TestAuthors:
+    """Tests pour les auteurs et leur intégration dans les schémas Article."""
+
+    def test_auteurs_declarees_existent(self):
+        """Les auteurs déclarés dans data/authors.json doivent être chargés
+        correctement avec tous les champs requis."""
+        auteurs_ids = ["yasmine-berrada", "karim-ouazzani", "sofia-lemhaouri", "nadia-cherkaoui"]
+        for author_id in auteurs_ids:
+            author = get_author(author_id, ROOT)
+            assert author is not None, f"Auteur {author_id} non trouvé"
+            assert author.get("name"), f"Auteur {author_id} sans nom"
+            assert author.get("jobTitle"), f"Auteur {author_id} sans jobTitle"
+            assert author.get("description"), f"Auteur {author_id} sans description"
+
+    def test_article_schema_avec_auteur_person(self):
+        """Quand un Article est généré avec un auteur, le schéma doit contenir
+        un auteur de type Person avec jobTitle et worksFor."""
+        schema = build_article_schema(
+            "blog/example.html",
+            "fr",
+            title="Example Article",
+            description="Example description",
+            author_name="Yasmine Berrada",
+            author_job_title="Responsable Intégration ERP"
+        )
+
+        assert schema is not None
+        assert schema["@type"] == "Article"
+        assert schema["author"]["@type"] == "Person"
+        assert schema["author"]["name"] == "Yasmine Berrada"
+        assert schema["author"]["jobTitle"] == "Responsable Intégration ERP"
+        assert schema["author"]["worksFor"]["@type"] == "Organization"
+        assert schema["author"]["worksFor"]["name"] == "Kaalytics"
+
+    def test_article_schema_sans_auteur_fallback_organization(self):
+        """Quand aucun auteur n'est fourni, le schéma Article doit revenir
+        à l'organization par défaut."""
+        schema = build_article_schema(
+            "blog/example.html",
+            "fr",
+            title="Example Article",
+            description="Example description"
+        )
+
+        assert schema is not None
+        assert schema["@type"] == "Article"
+        assert schema["author"]["@type"] == "Organization"
+        assert schema["author"]["name"] == "Kaalytics"

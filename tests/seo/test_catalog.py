@@ -106,3 +106,14 @@ def test_les_textes_francais_sont_accentues():
             if trouves:
                 fautifs.append((page.html_path, trouves))
     assert not fautifs, f"francais desaccentue : {fautifs}"
+
+
+def test_load_catalog_ne_renvoie_que_des_pages_existantes():
+    """Le catalogue ne doit contenir que des entrées correspondant à des fichiers
+    HTML réels. C'est un garde-fou contre les confusion (ex: auteurs chargés
+    comme des pages du site)."""
+    manquantes = []
+    for page in load_catalog(DATA):
+        if not Path(page.html_path).exists():
+            manquantes.append(page.html_path)
+    assert not manquantes, f"entrées du catalogue sans fichier : {manquantes}"

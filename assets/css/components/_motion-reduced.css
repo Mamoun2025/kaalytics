@@ -1,0 +1,221 @@
+/**
+ * Motion Preferences — Respecter prefers-reduced-motion
+ * WCAG AA compliance : désactiver les animations pour les utilisateurs qui le demandent
+ */
+
+@media (prefers-reduced-motion: reduce) {
+    /*
+     * Désactiver TOUTES les animations par défaut.
+     * Les exceptions (éléments interactifs essentiels) sont ci-dessous.
+     */
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    /* Exceptions : garder les transitions essentielles sur interactions */
+    .btn,
+    a,
+    [role="button"],
+    [type="button"],
+    [type="submit"],
+    [type="reset"] {
+        transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease !important;
+    }
+
+    /* Désactiver les animations visuelles hero */
+    .hero__orb,
+    .hero__particles,
+    .particle,
+    .particle--1,
+    .particle--2,
+    .particle--3,
+    .particle--4,
+    .particle--5,
+    .particle--6,
+    .particle--7,
+    .particle--8 {
+        display: none !important;
+        animation: none !important;
+    }
+
+    /* Radar: réduire à une pulsation simple et lente */
+    .radar-pulse {
+        animation: radar-pulse-minimal 4s ease-out infinite !important;
+    }
+
+    @keyframes radar-pulse-minimal {
+        0% {
+            r: 20px;
+            opacity: 0.8;
+        }
+        100% {
+            r: 120px;
+            opacity: 0;
+        }
+    }
+
+    /* Désactiver les révélations au scroll */
+    [data-scroll-reveal],
+    [data-gsap-reveal],
+    .scroll-fade-in,
+    .scroll-slide-up,
+    .scroll-slide-down,
+    .scroll-scale-in {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+    }
+
+    /* Désactiver les animations de fade et stagger */
+    .fade-in,
+    .fade-in-up,
+    .fade-in-down,
+    .stagger-child {
+        animation: none !important;
+        opacity: 1 !important;
+    }
+
+    /* Désactiver les floats et floating animations */
+    .float,
+    .floating,
+    [class*="float"] {
+        animation: none !important;
+        transform: none !important;
+    }
+
+    /* Désactiver les rotations et spins */
+    [class*="spin"],
+    [class*="rotate"],
+    .rotate,
+    .spin {
+        animation: none !important;
+        transform: none !important;
+    }
+
+    /* Désactiver les bounces */
+    [class*="bounce"],
+    .bounce {
+        animation: none !important;
+        transform: none !important;
+    }
+
+    /* Désactiver les pulses */
+    [class*="pulse"],
+    .pulse {
+        animation: none !important;
+        opacity: 1 !important;
+    }
+
+    /* Désactiver les parallax effects */
+    [data-parallax],
+    .parallax {
+        transform: none !important;
+    }
+
+    /* Désactiver les modales avec animations */
+    .modal,
+    [role="dialog"] {
+        transition: opacity 0.01ms, visibility 0.01ms !important;
+    }
+
+    /* Scroll behavior: désactiver le smooth scroll */
+    html {
+        scroll-behavior: auto !important;
+    }
+
+    /* Désactiver les transitions sur les hover/focus (sauf couleurs) */
+    button:hover,
+    a:hover,
+    [role="button"]:hover {
+        transform: none !important;
+    }
+
+    /* GSAP specific: désactiver les tweens */
+    .gsap-animated {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* ====================================================
+   AUTRES RECOMMANDATIONS DE PERFORMANCE ANIMATION
+   ==================================================== */
+
+/* Optimiser les animations pour les appareils mobiles */
+@media (pointer: coarse) {
+    .particle,
+    [class*="particle"] {
+        /* Réduire le nombre de particles sur mobile */
+        animation-duration: longer !important;
+    }
+
+    /* Réduire les effects de glow */
+    [class*="glow"],
+    [class*="shadow-glow"] {
+        filter: blur(0.5px) !important;
+        opacity: 0.8 !important;
+    }
+}
+
+/* Optimiser les animations pour les écrans de faible puissance */
+@media (prefers-color-scheme: dark) and (prefers-reduced-motion: no-preference) {
+    /* Sur dark mode, réduire les glows trop intensifs */
+    .hero__orb {
+        opacity: 0.6 !important;
+    }
+
+    [class*="glow"] {
+        filter: blur(2px) !important;
+    }
+}
+
+/* ====================================================
+   CONTRASTE ET LISIBILITÉ EN MOTION RÉDUITE
+   ==================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    /* Augmenter le contraste si les animations disparaissent */
+    .text-with-background {
+        color: var(--text-primary);
+        background: var(--bg-secondary);
+    }
+
+    /* Ajouter des underlines aux liens interactifs */
+    a {
+        text-decoration: underline;
+    }
+
+    /* Rendre les boutons plus explicites */
+    .btn {
+        border: 1px solid currentColor;
+    }
+}
+
+/* ====================================================
+   TEST: Assurer que rien ne clignote rapidement
+   ==================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    /* Vérifier que aucune animation n'a une durée < 100ms */
+    @keyframes test-flashing {
+        0%, 100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.5;
+        }
+    }
+
+    /* Désactiver les animations de flashing/blinking */
+    .blink,
+    [class*="flash"],
+    [class*="blink"] {
+        animation: none !important;
+        opacity: 1 !important;
+    }
+}

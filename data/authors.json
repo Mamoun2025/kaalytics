@@ -1,0 +1,28 @@
+{
+  "authors": [
+    {
+      "id": "yasmine-berrada",
+      "name": "Yasmine Berrada",
+      "jobTitle": "Responsable Intégration ERP",
+      "description": "Pilote les connexions de nos modules aux systèmes de gestion existants chez les clients. Assure la fiabilité des flux de données en lecture et écriture."
+    },
+    {
+      "id": "karim-ouazzani",
+      "name": "Karim Ouazzani",
+      "jobTitle": "Architecte Données et Automatisation",
+      "description": "Conçoit les architectures de flux entre l'ERP client et nos modules d'analyse. Responsable de la transformation des données en insights."
+    },
+    {
+      "id": "sofia-lemhaouri",
+      "name": "Sofia Lemhaouri",
+      "jobTitle": "Consultante Transformation",
+      "description": "Accompagne les PME et moyennes entreprises dans le choix de leurs modules d'optimisation et la refonte de leurs processus opérationnels."
+    },
+    {
+      "id": "nadia-cherkaoui",
+      "name": "Nadia Cherkaoui",
+      "jobTitle": "Responsable Opérations Financières",
+      "description": "Met en place les automatisations de facturation, recouvrement et rapprochement bancaire. Optimise les workflows financiers côté client."
+    }
+  ]
+}

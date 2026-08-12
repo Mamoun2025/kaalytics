@@ -1,0 +1,84 @@
+/**
+ * Hero Text Hierarchy — Refondre le message
+ * Ajoute des sous-titres informatifs au hero pour clarifier le produit
+ */
+
+.hero__subtitle {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+.hero__subtitle--primary {
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: var(--space-lg) auto var(--space-md);
+    font-weight: 500;
+    font-size: var(--text-lg);
+}
+
+.hero__subtitle--secondary {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto var(--space-2xl);
+    font-size: var(--text-base);
+    font-weight: 400;
+}
+
+/* Animation de reveal au chargement (si GSAP disponible) */
+@supports (animation: fadeIn 1s ease) {
+    .hero__subtitle {
+        animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .hero__subtitle--primary {
+        animation-delay: 0.2s;
+    }
+
+    .hero__subtitle--secondary {
+        animation-delay: 0.4s;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero__subtitle--primary {
+        font-size: var(--text-base);
+    }
+
+    .hero__subtitle--secondary {
+        font-size: var(--text-sm);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__subtitle--primary {
+        font-size: var(--text-base);
+        margin: var(--space-md) auto var(--space-sm);
+    }
+
+    .hero__subtitle--secondary {
+        font-size: var(--text-sm);
+        margin: 0 auto var(--space-xl);
+    }
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .hero__subtitle {
+        animation: none !important;
+        opacity: 1;
+    }
+}

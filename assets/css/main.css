@@ -26,12 +26,16 @@
 @import 'components/_cards.css';
 @import 'components/_micro-interactions.css';
 @import 'components/_visual-effects.css';
+@import 'components/_cta-hierarchy.css';
+@import 'components/_motion-reduced.css';
 
 /* ========================================
    SECTIONS
    ======================================== */
 @import 'sections/_hero.css';
 @import 'sections/_hero-premium.css';
+@import 'sections/_hero-text-hierarchy.css';
+@import 'sections/_proof-banner.css';
 @import 'sections/_fleetops.css';
 @import 'sections/_playground.css';
 @import 'sections/_services.css';
@@ -40,10 +44,12 @@
 @import 'sections/_daedalia.css';
 @import 'sections/_cta-premium.css';
 @import 'sections/_case-study-highlight.css';
+@import 'sections/_case-studies.css';
 @import 'sections/_premium-sections.css';
 @import 'sections/_pricing.css';
 @import 'sections/_index-inline.css';
 @import 'sections/_modules-enhanced.css';
+@import 'sections/_team.css';
 
 /* ========================================
    CTA FINAL SECTION (legacy - override by _cta-premium.css)

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css?v=20260808">
+    <style>
+        .about-hero {
+            background: #040a08;
+            padding: 120px 24px 60px;
+            text-align: center;
+            border-bottom: 1px solid rgba(16,185,129,0.12);
+        }
+        .about-hero__badge {
+            display: inline-block;
+            background: rgba(16,185,129,0.08);
+            border: 1px solid rgba(16,185,129,0.25);
+            color: #10b981;
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        .about-hero__title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            color: #ecfdf5;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .about-hero__subtitle {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .about-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+            text-align: center;
+        }
+        .about-section__label {
+            display: inline-block;
+            color: #10b981;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+        }
+        .about-section__title {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 800;
+            color: #ecfdf5;
+            margin-bottom: 24px;
+        }
+        .about-section__text {
+            color: #94a3b8;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .about-section__text:last-child { margin-bottom: 0; }
+        .about-section__text strong { color: #ecfdf5; }
+
+        .about-values {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        .about-values__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .value-card {
+            background: #0f1f1b;
+            border: 1px solid rgba(16,185,129,0.12);
+            border-radius: 16px;
+            padding: 32px 28px;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+        .value-card:hover {
+            border-color: #10b981;
+            transform: translateY(-4px);
+        }
+        .value-card__icon {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+        .value-card__title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #ecfdf5;
+            margin-bottom: 12px;
+        }
+        .value-card__desc {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+        .about-cta {
+            text-align: center;
+            padding: 80px 24px;
+            border-top: 1px solid rgba(16,185,129,0.12);
+        }
+        .about-cta__title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ecfdf5;
+            margin-bottom: 12px;
+        }
+        .about-cta__subtitle {
+            color: #94a3b8;
+            margin-bottom: 32px;
+        }
+        .about-cta__btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 40px;
+            background: #10b981;
+            color: #040a08;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .about-cta__btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(16,185,129,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .about-values__grid { grid-template-columns: 1fr; }
+        }
+    </style>
+<!-- SEO:BEGIN (genere par scripts/seo/gen_head.py - ne pas editer) -->
+    <title>Où nous intervenons | Kaalytics</title>
+    <meta name="description" content="Kaalytics intervient à distance depuis le Maroc sur l&#x27;ERP de clients en France, Canada, Belgique, Suisse et Afrique francophone.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://kaalytics.com/ou-nous-intervenons">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kaalytics">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Où nous intervenons | Kaalytics">
+    <meta property="og:description" content="Kaalytics intervient à distance depuis le Maroc sur l&#x27;ERP de clients en France, Canada, Belgique, Suisse et Afrique francophone.">
+    <meta property="og:url" content="https://kaalytics.com/ou-nous-intervenons">
+    <meta property="og:image" content="https://kaalytics.com/assets/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Où nous intervenons | Kaalytics">
+    <meta name="twitter:description" content="Kaalytics intervient à distance depuis le Maroc sur l&#x27;ERP de clients en France, Canada, Belgique, Suisse et Afrique francophone.">
+    <meta name="twitter:image" content="https://kaalytics.com/assets/images/og-image.jpg">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "https://kaalytics.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Où nous intervenons",
+            "item": "https://kaalytics.com/ou-nous-intervenons"
+        }
+    ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Kaalytics",
+    "url": "https://kaalytics.com",
+    "logo": "https://kaalytics.com/assets/images/logo/kaalytics-logo.png",
+    "areaServed": [
+        {
+            "@type": "Country",
+            "name": "Maroc"
+        },
+        {
+            "@type": "Country",
+            "name": "France"
+        },
+        {
+            "@type": "Country",
+            "name": "Canada"
+        },
+        {
+            "@type": "Country",
+            "name": "Belgique"
+        },
+        {
+            "@type": "Country",
+            "name": "Suisse"
+        }
+    ],
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Casablanca",
+        "addressCountry": "MA"
+    }
+}
+    </script>
+<!-- SEO:END -->
+</head>
+<body>
+    <div id="navbar-container" data-navbar="full" data-navbar-style="solid"></div>
+
+    <!-- Hero -->
+    <section class="about-hero">
+        <div class="about-hero__badge">Présence géographique</div>
+        <h1 class="about-hero__title">L'équipe au Maroc. Les clients en ligne.</h1>
+        <p class="about-hero__subtitle">Basée à Casablanca, l'équipe Kaalytics intervient sur les ERP de ses clients dans toute la francophonie : France, Canada, Belgique, Suisse et Afrique.</p>
+    </section>
+
+    <!-- L'équipe et les clients -->
+    <section class="about-section">
+        <span class="about-section__label">Comment ça marche</span>
+        <h2 class="about-section__title">Une équipe marocaine pour le monde francophone</h2>
+        <p class="about-section__text">
+            Kaalytics est une société basée à Casablanca, Maroc. Ses ingénieurs, consultants et responsables d'intégration y sont localisés et disposent de moyens pour vous accompagner en temps réel. Nous ne créons pas de filiales ou de représentations locales chez nos clients — c'est inefficace et coûteux. À la place, nous intervenons directement en ligne.
+        </p>
+        <p class="about-section__text">
+            Cela signifie que <strong>vos systèmes sont accédés à distance</strong> depuis Casablanca, en lecture et en écriture. Vos données restent chez vous — serveur client, base de données locale, ou infrastructure cloud que vous contrôlez. Nous nous connectons via API ou intégration directe, sans installer d'agent ou de service chez vous.
+        </p>
+        <p class="about-section__text">
+            Cette approche fonctionne parfaitement parce que <strong>nos clients parlent français et sont actifs pendant le jour</strong>, tout comme nous. Le décalage horaire entre le Maroc, la France, la Belgique et la Suisse est zéro. Le décalage entre le Maroc et le Canada ou la Suisse romande est minimal (une à deux heures, selon la saison).
+        </p>
+        <p class="about-section__text">
+            Nos clients ont des systèmes déployés chez eux — Odoo sur un serveur dédié, SAP en cloud privé, Dynamics en SaaS avec Microsoft. Nous ne créons aucune dépendance logicielle chez vous, aucun point d'entrée permanent. Chaque intervention est isolée, chaque module fonctionne indépendamment, chaque accès est enregistré et révocable immédiatement.
+        </p>
+    </section>
+
+    <!-- Pays servis -->
+    <section class="about-values">
+        <div style="text-align: center;">
+            <span class="about-section__label">Notre périmètre</span>
+            <h2 class="about-section__title">Les marchés que nous servons</h2>
+        </div>
+        <div class="about-values__grid">
+            <div class="value-card">
+                <div class="value-card__icon">🇲🇦</div>
+                <h3 class="value-card__title">Maroc</h3>
+                <p class="value-card__desc">Base opérationnelle. Nous assistons les PME et entreprises de croissance marocaines : commerce, BTP, transport, industries.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-card__icon">🇫🇷</div>
+                <h3 class="value-card__title">France</h3>
+                <p class="value-card__desc">Deuxième marché. Nous travaillons avec des entreprises de Provence, Bordeaux, Lille et région parisienne dans le secteur tertiaire et logistique.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-card__icon">🇨🇦</div>
+                <h3 class="value-card__title">Canada</h3>
+                <p class="value-card__desc">Québec et reste du pays. Fuseaux compatibles avec le Maroc. Nous accompagnons les PME québécoises et canadiennes-français.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-card__icon">🇧🇪</div>
+                <h3 class="value-card__title">Belgique</h3>
+                <p class="value-card__desc">Wallonie et Flandre francophone. Distribution, industrie pharmaceutique et BTP. Même fuseau horaire que le Maroc.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-card__icon">🇨🇭</div>
+                <h3 class="value-card__title">Suisse</h3>
+                <p class="value-card__desc">Suisse romande en priorité. PME de la région lémanique, entreprises de l'Arc jurassien. Fuseaux horaires proches du nôtre.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-card__icon">🌍</div>
+                <h3 class="value-card__title">Afrique francophone</h3>
+                <p class="value-card__desc">Côte d'Ivoire, Sénégal, Cameroun, Gabon. Extensions régionales pour des partenaires importants.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Réalités pratiques -->
+    <section class="about-section">
+        <span class="about-section__label">Conditions d'intervention</span>
+        <h2 class="about-section__title">Ce qui change. Ce qui ne change pas.</h2>
+        <p class="about-section__text">
+            <strong>Ce qui change selon votre localisation :</strong> la fiscalité et la réglementation. Une PME française qui branche Kaalytics sur son Odoo doit respecter la CNIL et l'RGPD. Une entreprise au Canada doit respecter la PIPEDA. Une entreprise belge doit garantir la conformité avec la loi sur la protection des données. Nous connaissons ces cadres et nous les appliquons.
+        </p>
+        <p class="about-section__text">
+            Nous facturerons peut-être en euros si vous êtes en France, en francs suisses si vous êtes en Suisse, en dollars canadiens si vous êtes au Canada. Mais la prestation reste identique : connexion à distance, modules compatibles avec votre ERP, support en français pendant les heures ouvrables.
+        </p>
+        <p class="about-section__text">
+            <strong>Ce qui ne change pas :</strong> vos données restent sous votre contrôle. Vous n'acceptez pas un service multilocataire ni un hébergement chez nous. Vos systèmes existants ne sont jamais remplacés. Nos modules se connectent, point. Le jour où vous arrêtez un abonnement Kaalytics, votre ERP continue de fonctionner normalement — les données qu'on a analysées restent chez vous.
+        </p>
+        <p class="about-section__text">
+            Cette transparence est volontaire. Nous croyons que nos clients doivent être autonomes. Un outil qui vous rend dépendant n'a aucune valeur — c'est de la dette technique. Nous vendons de l'autonomie, pas de la captivité.
+        </p>
+    </section>
+
+    <!-- Détails opérationnels -->
+    <section class="about-values">
+        <div style="text-align: center;">
+            <span class="about-section__label">Détails opérationnels</span>
+            <h2 class="about-section__title">Comment nous intervenons en ligne</h2>
+        </div>
+        <div class="about-values__grid" style="text-align: left;">
+            <div class="value-card">
+                <h3 class="value-card__title">Accès sécurisé</h3>
+                <p class="value-card__desc">Nous accédons à vos systèmes via VPN, jeton API ou clé SSH, jamais en login utilisateur simple. Tout accès est enregistré et révocable. Chaque intervention laisse une trace.</p>
+            </div>
+            <div class="value-card">
+                <h3 class="value-card__title">Support en français</h3>
+                <p class="value-card__desc">Tous les échanges sont en français (français de France, français québécois ou français belge). Pas de support en anglais, sauf demande spécifique.</p>
+            </div>
+            <div class="value-card">
+                <h3 class="value-card__title">Heures de bureau</h3>
+                <p class="value-card__desc">Nos heures de support : 9h-18h Casablanca (GMT+1 toute l'année). Pour France, Belgique et Suisse, c'est votre heure locale (19h Casablanca = 20h Paris).</p>
+            </div>
+            <div class="value-card">
+                <h3 class="value-card__title">Réunions en visioconférence</h3>
+                <p class="value-card__desc">Audit, formation, déploiement : tout se fait en Teams, Zoom ou Meet. Pas de déplacement sur site, sauf exception payante.</p>
+            </div>
+            <div class="value-card">
+                <h3 class="value-card__title">Documentation</h3>
+                <p class="value-card__desc">Tous les guides, tutoriels et manuels d'utilisation sont en français. Vous recevez aussi une documentation PDF à conserver après le déploiement.</p>
+            </div>
+            <div class="value-card">
+                <h3 class="value-card__title">Facturation transparente</h3>
+                <p class="value-card__desc">Tarifs mensuels clairs, pas de frais cachés. Paiement par transfert bancaire international, facture en euros, francs suisses ou dollars canadiens selon votre devise.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="about-cta">
+        <h2 class="about-cta__title">Parlons de votre projet.</h2>
+        <p class="about-cta__subtitle">Où que vous soyez en francophonie, prenez 15 minutes pour explorer si nos modules peuvent vous apporter quelque chose.</p>
+        <a href="https://wa.me/212673736611" target="_blank" rel="noopener" class="about-cta__btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Nous contacter sur WhatsApp
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #040a08; border-top: 1px solid rgba(16,185,129,0.12); padding: 48px 0 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 48px;" class="footer__grid-responsive">
+                <div>
+                    <a href="/" style="display: flex; align-items: center; gap: 10px; text-decoration: none; margin-bottom: 16px;">
+                        <svg width="32" height="32" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#10b981" stroke-width="2"/><path d="M12 20l6 6 10-12" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span style="font-size: 1.25rem; font-weight: 800; color: #ecfdf5;">Kaal<span style="color: #10b981;">ytics</span></span>
+                    </a>
+                    <p style="color: #64748b; font-size: 0.85rem; line-height: 1.7; margin-bottom: 20px; max-width: 280px;">Modules IA connectés à votre ERP. Dashboards intelligents et automatisation sur-mesure.</p>
+                    <div style="display: flex; gap: 12px;">
+                        <a href="https://wa.me/212673736611" target="_blank" rel="noopener" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: #0f1f1b; border: 1px solid rgba(16,185,129,0.12); border-radius: 8px; color: #64748b;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Industries</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="industries/btp" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">BTP & Construction</a>
+                        <a href="industries/mines" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Mines & Carrières</a>
+                        <a href="industries/transport" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Transport & Logistique</a>
+                        <a href="industries/distribution" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Distribution & Négoce</a>
+                        <a href="industries/industrie" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Industrie & Production</a>
+                        <a href="industries/location" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Location d'Équipements</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Modules</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="modules/sales-intelligence" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Sales Intelligence</a>
+                        <a href="modules/marketing-automation" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Marketing Automation</a>
+                        <a href="modules/financial-operations" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Financial Operations</a>
+                        <a href="modules/supply-chain" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Supply Chain</a>
+                        <a href="modules/fleetops" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">FleetOps</a>
+                        <a href="modules/erp-connect" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">ERP Connect</a>
+                        <a href="modules/digital-platform" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Digital Platform</a>
+                        <a href="modules/ai-engine" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">AI Engine</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Ressources</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="guides" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Guides</a>
+                        <a href="faq" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">FAQ</a>
+                        <a href="pricing" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Tarifs</a>
+                        <a href="about" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">À propos</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Contact</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="https://wa.me/212673736611" target="_blank" rel="noopener" style="color: #10b981; text-decoration: none; font-size: 0.85rem; font-weight: 600;">WhatsApp</a>
+                        <a href="tel:+212673736611" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">+212 673 736 611</a>
+                    </div>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(16,185,129,0.12); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                <p style="color: #64748b; font-size: 0.8rem;">© 2026 Kaalytics. Tous droits réservés. Made in Morocco.</p>
+                <div style="display: flex; gap: 24px; font-size: 0.8rem;">
+                    <a href="legal/privacy" style="color: #64748b; text-decoration: none;">Confidentialité</a>
+                    <a href="legal/terms" style="color: #64748b; text-decoration: none;">CGU</a>
+                    <a href="legal/cookies" style="color: #64748b; text-decoration: none;">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="components/navbar/navbar-loader.js?v=20260808" defer></script>
+</body>
+</html>

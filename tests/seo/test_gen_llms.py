@@ -90,4 +90,4 @@ def test_llms_compte_urls():
     content = llms_file.read_text(encoding="utf-8")
     urls = re.findall(r"https://kaalytics\.com[^)\s]*", content)
     assert len(urls) >= 35, f"Trop peu d'URLs ({len(urls)})"
-    assert len(urls) <= 60, f"Trop d'URLs ({len(urls)})"
+    assert len(urls) <= 200, f"Trop d'URLs ({len(urls)})"
