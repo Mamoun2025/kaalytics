@@ -175,6 +175,28 @@ class TestArticleSchema:
         assert schema is None
 
 
+class TestNonRegression:
+    """Tests de non-régression pour l'inventaire des types structurés."""
+
+    def test_listitem_present_in_breadcrumbs(self):
+        """Chaque entrée de BreadcrumbList doit avoir @type ListItem."""
+        schema = build_breadcrumb_list("modules/fleetops.html", "fr")
+        assert schema is not None
+        for item in schema["itemListElement"]:
+            assert item.get("@type") == "ListItem", f"ListItem manquant dans {item}"
+
+    def test_all_breadcrumbs_have_listitem(self):
+        """Tous les BreadcrumbList produits doivent contenir ListItem pour chaque entrée."""
+        catalog = load_catalog(DATA)
+        for page in catalog:
+            breadcrumb = build_breadcrumb_list(page.html_path, page.lang)
+            if breadcrumb is None:
+                continue
+            for item in breadcrumb["itemListElement"]:
+                assert "@type" in item and item["@type"] == "ListItem", \
+                    f"ListItem manquant dans {page.html_path} entrée {item}"
+
+
 class TestSchemaIntegration:
     """Tests d'intégration avec le catalogue."""
 

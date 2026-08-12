@@ -64,7 +64,7 @@ def _deduplicate_schemas(html: str) -> str:
     return before_seo_clean + seo_block + after_seo_clean + "</head>" + rest
 
 
-def build_head_block(meta: PageMeta, defaults: dict) -> str:
+def build_head_block(meta: PageMeta, defaults: dict, extra_schemas: list[dict] | None = None) -> str:
     title = escape(meta.title, quote=True)
     description = escape(meta.description, quote=True)
     canonical = BASE_URL + meta.url_path
@@ -111,6 +111,10 @@ def build_head_block(meta: PageMeta, defaults: dict) -> str:
     # 3. Organization (toujours présente)
     organization = {"@context": "https://schema.org", **defaults["organization"]}
     schemas.append(organization)
+
+    # 4. Schémas supplémentaires (si fournis)
+    if extra_schemas:
+        schemas.extend(extra_schemas)
 
     # Générer les scripts JSON-LD
     for schema in schemas:

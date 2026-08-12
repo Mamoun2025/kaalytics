@@ -25,7 +25,7 @@ def meta_fleetops():
 
 
 def test_applique_le_nouveau_titre_et_retire_lancien():
-    out = apply_to_page(PAGE, meta_fleetops(), load_defaults(DATA))
+    out = apply_to_page(PAGE, meta_fleetops(), load_defaults(DATA), {})
     assert "FleetOps" in out
     assert "Ancien titre" not in out
     assert "Ancienne description" not in out
@@ -34,13 +34,13 @@ def test_applique_le_nouveau_titre_et_retire_lancien():
 
 def test_idempotent_sur_une_page_reelle():
     defaults = load_defaults(DATA)
-    une = apply_to_page(PAGE, meta_fleetops(), defaults)
-    deux = apply_to_page(une, meta_fleetops(), defaults)
+    une = apply_to_page(PAGE, meta_fleetops(), defaults, {})
+    deux = apply_to_page(une, meta_fleetops(), defaults, {})
     assert une == deux
 
 
 def test_le_corps_est_preserve():
-    out = apply_to_page(PAGE, meta_fleetops(), load_defaults(DATA))
+    out = apply_to_page(PAGE, meta_fleetops(), load_defaults(DATA), {})
     assert "<main>corps</main>" in out
 
 

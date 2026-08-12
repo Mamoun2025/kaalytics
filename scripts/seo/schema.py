@@ -142,6 +142,7 @@ def build_breadcrumb_list(html_path: str, lang: str) -> Optional[dict]:
     # Étape 1 : Accueil
     items.append(
         {
+            "@type": "ListItem",
             "position": 1,
             "name": "Accueil" if lang == "fr" else "Home",
             "item": "https://kaalytics.com/",
@@ -164,6 +165,7 @@ def build_breadcrumb_list(html_path: str, lang: str) -> Optional[dict]:
 
         items.append(
             {
+                "@type": "ListItem",
                 "position": position,
                 "name": name,
                 "item": url,

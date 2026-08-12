@@ -54,10 +54,10 @@ def load_defaults(data_dir: Path) -> dict:
 
 
 def _entries(data_dir: Path) -> dict:
-    """Fusionne tous les data/seo/*.json sauf defaults.json."""
+    """Fusionne tous les data/seo/*.json sauf defaults.json et extra-schemas.json."""
     merged: dict = {}
     for path in sorted(data_dir.glob("*.json")):
-        if path.name == "defaults.json":
+        if path.name in ("defaults.json", "extra-schemas.json"):
             continue
         section = json.loads(path.read_text(encoding="utf-8"))
         duplicates = merged.keys() & section.keys()

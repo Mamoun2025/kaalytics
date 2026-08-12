@@ -8,6 +8,7 @@ Usage :
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
@@ -19,9 +20,18 @@ ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "data" / "seo"
 
 
-def apply_to_page(html: str, meta: PageMeta, defaults: dict) -> str:
+def _load_extra_schemas() -> dict:
+    """Charge les données structurées supplémentaires par page."""
+    extra_file = DATA / "extra-schemas.json"
+    if not extra_file.exists():
+        return {}
+    return json.loads(extra_file.read_text(encoding="utf-8"))
+
+
+def apply_to_page(html: str, meta: PageMeta, defaults: dict, extra_schemas_by_page: dict) -> str:
     cleaned = strip_legacy_tags(html)
-    with_seo = upsert_block(cleaned, build_head_block(meta, defaults))
+    extra = extra_schemas_by_page.get(meta.html_path, {}).get("extra_schemas")
+    with_seo = upsert_block(cleaned, build_head_block(meta, defaults, extra_schemas=extra))
     return _deduplicate_schemas(with_seo)
 
 
@@ -33,6 +43,7 @@ def main(argv: list[str] | None = None) -> int:
 
     defaults = load_defaults(DATA)
     pages = load_catalog(DATA)
+    extra_schemas_by_page = _load_extra_schemas()
     if args.only:
         wanted = set(args.only)
         pages = [p for p in pages if p.html_path in wanted]
@@ -49,7 +60,7 @@ def main(argv: list[str] | None = None) -> int:
             print(f"ERREUR: fichier introuvable : {meta.html_path}", file=sys.stderr)
             return 1
         avant = path.read_text(encoding="utf-8")
-        apres = apply_to_page(avant, meta, defaults)
+        apres = apply_to_page(avant, meta, defaults, extra_schemas_by_page)
         if avant == apres:
             print(f"{prefix}inchange  {meta.html_path}")
             continue
