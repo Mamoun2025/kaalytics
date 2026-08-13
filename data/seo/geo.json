@@ -1,9 +1,16 @@
 {
-  "ou-nous-intervenons.html": {
-    "keyword": "kaalytics maroc france canada belgique suisse intervention distance",
-    "fr": {
-      "title": "Où nous intervenons | Kaalytics",
-      "description": "Kaalytics intervient à distance depuis le Maroc sur l'ERP de clients en France, Canada, Belgique, Suisse et Afrique francophone."
+    "ou-nous-intervenons.html": {
+        "keyword": "kaalytics maroc france canada belgique suisse intervention distance",
+        "fr": {
+            "title": "Où nous intervenons | Kaalytics",
+            "description": "Kaalytics intervient à distance depuis le Maroc sur l'ERP de clients en France, Canada, Belgique, Suisse et Afrique francophone."
+        }
+    },
+    "canada.html": {
+        "keyword": "modules IA ERP Canada Quebec Odoo SAP Sage",
+        "fr": {
+            "title": "Kaalytics au Canada | Modules IA connectés à votre ERP",
+            "description": "Modules d'intelligence branchés sur l'ERP des entreprises canadiennes : Odoo, SAP, Sage. En français, à distance, cadre Loi 25 et PIPEDA."
+        }
     }
-  }
 }

@@ -66,6 +66,7 @@
 - [Kaalytics | Vos systèmes. Sous stéroïdes.](https://kaalytics.com/) : On branche nos modules sur votre ERP. Ce qui prenait des jours prend maintenant quelques secondes. Modules intelligents pour Odoo, SAP, Sage, Dynamics.
 - [À propos | Kaalytics](https://kaalytics.com/about) : Kaalytics développe des modules IA qui se connectent aux ERP pour optimiser les opérations des entreprises. Notre approche, notre vision.
 - [Alternative BI ERP | Kaalytics](https://kaalytics.com/alternatives) : Comparaison honnête des solutions BI : BI natif, Power BI, Tableau, développement interne. Coûts réels, délais, et cas d'usage.
+- [Kaalytics au Canada | Modules IA connectés à votre ERP](https://kaalytics.com/canada) : Modules d'intelligence branchés sur l'ERP des entreprises canadiennes : Odoo, SAP, Sage. En français, à distance, cadre Loi 25 et PIPEDA.
 - [Demander une Démo Gratuite | Kaalytics](https://kaalytics.com/demo) : Demandez une démo gratuite de nos modules. Présentation personnalisée de 30 minutes avec un expert.
 - [Intégrations | Kaalytics](https://kaalytics.com/integrations) : Intégrations Kaalytics. Connectez nos modules à vos outils existants : ERP, comptabilité, CRM et plus.
 - [Où nous intervenons | Kaalytics](https://kaalytics.com/ou-nous-intervenons) : Kaalytics intervient à distance depuis le Maroc sur l'ERP de clients en France, Canada, Belgique, Suisse et Afrique francophone.
