@@ -32,8 +32,8 @@
     // Reponses predefinies de l'IA
     const AI_RESPONSES = {
         pricing: {
-            fr: "Nos tarifs FleetOps Pro:\n• Starter: 500€/mois (10-50 véhicules)\n• Professional: 1500€/mois (50-200 véhicules)\n• Enterprise: Sur mesure (200+ véhicules)\n\nTous incluent formation et support. Voulez-vous une démo personnalisée?",
-            en: "FleetOps Pro Pricing:\n• Starter: €500/month (10-50 vehicles)\n• Professional: €1500/month (50-200 vehicles)\n• Enterprise: Custom (200+ vehicles)\n\nAll include training and support. Would you like a personalized demo?"
+            fr: "Nos tarifs dépendent du nombre de modules, du nombre d'utilisateurs et de l'intégration à votre ERP.\n• Chaque devis suit un premier échange de 15 à 30 minutes\n• Formation et support inclus dans tous les cas\n\nVoulez-vous une démo personnalisée?",
+            en: "Pricing depends on the number of modules, users and the integration with your ERP.\n• Every quote follows a short 15-30 minute call\n• Training and support included in every case.\n\n Would you like a personalized demo?"
         },
         demo: {
             fr: "Super ! Pour organiser une démo personnalisée, vous pouvez:\n1. Remplir le formulaire sur notre page Contact\n2. Nous appeler au +212 661 718 141\n3. Nous écrire sur WhatsApp\n\nNous vous recontactons sous 24h !",
