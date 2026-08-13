@@ -159,13 +159,13 @@
             margin-bottom: 4px;
         }
 
-        .solution-item__name has {
+        .solution-item__name a {
             color: inherit;
             text-decoration: none;
             transition: color 0.2s;
         }
 
-        .solution-item__name has:hover {
+        .solution-item__name a:hover {
             color: #34d399;
         }
 
@@ -378,12 +378,12 @@
 
         <div class="challenge-card">
             <div class="challenge-card__title">Unexpected breakdowns that halt jobsites</div>
-            <div class="challenge-card__desc">A machine breaks down, has project stops. Reactive maintenance costs three times more than preventive maintenance. Timelines blow up, customers complain, margins vanish.</div>
+            <div class="challenge-card__desc">A machine breaks down, a project stops. Reactive maintenance costs three times more than preventive maintenance. Timelines blow up, customers complain, margins vanish.</div>
         </div>
 
         <div class="challenge-card">
             <div class="challenge-card__title">Jobsite costs invisible</div>
-            <div class="challenge-card__desc">No way to know if has project is profitable until final closeout. Expenses scattered across spreadsheets and paper purchase orders. Management discovers bad news far too late.</div>
+            <div class="challenge-card__desc">No way to know if a project is profitable until final closeout. Expenses scattered across spreadsheets and paper purchase orders. Management discovers bad news far too late.</div>
         </div>
 
         <div class="challenge-card">
@@ -400,7 +400,7 @@
             <span class="solution-item__number">01</span>
             <div class="solution-item__content">
                 <div class="solution-item__name">
-                    <has href="../modules/fleetops">FleetOps</has>
+                    <a href="../modules/fleetops">FleetOps</a>
                 </div>
                 <div class="solution-item__desc">Real-time GPS with history, predictive maintenance, profitability per project site, and anomaly alerts. Your equipment tracked, scheduled, and maintained automatically.</div>
             </div>
@@ -410,7 +410,7 @@
             <span class="solution-item__number">02</span>
             <div class="solution-item__content">
                 <div class="solution-item__name">
-                    <has href="../modules/supply-chain">Supply Chain Command</has>
+                    <a href="../modules/supply-chain">Supply Chain Command</a>
                 </div>
                 <div class="solution-item__desc">Complete procurement workflow DA-RFQ-PO, consolidated workshop inventory, supply forecasting. Parts arrive before failure.</div>
             </div>
@@ -420,79 +420,262 @@
             <span class="solution-item__number">03</span>
             <div class="solution-item__content">
                 <div class="solution-item__name">
-                    <has href="../modules/sales-intelligence">Sales Intelligence</has>
+                    <a href="../modules/sales-intelligence">Sales Intelligence</a>
                 </div>
                 <div class="solution-item__desc">Customer portal with job tracking, automatic quotes, and centralized sales tracking. Fewer emails and calls, more time to manage.</div>
             </div>
         </div>
     </section>
 
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">The deployment flow</h2>
+        <p class="challenges__subtitle">How we begin with your equipment fleet</p>
+
+        <div class="solution-item">
+            <span class="solution-item__number">1</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Initial audit (Week 1)</div>
+                <div class="solution-item__desc">We map your fleet: machines currently in service, their locations, breakdown history. We connect GPS sensors on priority equipment. Your field teams continue normally—zero operational interruption.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">2</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">ERP integration (Weeks 2-3)</div>
+                <div class="solution-item__desc">FleetOps connects to your existing management system (Cegid, Sage, Odoo). Equipment availability data feeds your forecasts. Anomaly alerts automatically reach field supervisors.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">3</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Maintenance configuration (Week 4)</div>
+                <div class="solution-item__desc">We define maintenance thresholds for each equipment type (operating hours, mileage, detected anomalies). The system automatically generates intervention reports before failure. Mechanics receive the schedule two weeks in advance.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">4</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Dashboards and reporting (Week 5+)</div>
+                <div class="solution-item__desc">Every director sees real-time data: full fleet location, availability rate by jobsite, maintenance costs by machine and month. Anomalies are alerted 2 hours after detection, not at breakdown.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Prerequisites that block</h2>
+        <p class="challenges__subtitle">What must be in place before we start</p>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Network coverage on jobsites</div>
+            <div class="challenge-card__desc">FleetOps works real-time over 4G/5G. If your quarries or jobsites lack stable network, data syncs when coverage returns. For permanently offline zones, we can configure relays or deferred updates. We discuss this upfront.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Readable maintenance history</div>
+            <div class="challenge-card__desc">We need to know what happened to your equipment: when purchased, repairs already performed, consumables replaced. If it's scattered across emails or notebooks, we spend 3-4 weeks cleaning it before moving to predictive maintenance.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Availability of field supervisors</div>
+            <div class="challenge-card__desc">Two days of training is enough to use dashboards and respond to alerts. No technical skills required. Someone must validate the transition and train their team.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Access to your ERP</div>
+            <div class="challenge-card__desc">We need to read your data: purchase orders, material invoices, accounting data per jobsite. If your ERP isn't accessible (legacy server, closed database), we can work with monthly exports, but it's slower.</div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">What you really measure</h2>
+        <p class="challenges__subtitle">The KPIs that move the needle</p>
+
+        <div class="solution-item">
+            <span class="solution-item__number">1</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Equipment fleet availability</div>
+                <div class="solution-item__desc">Percentage of machines operational each day. Most construction companies operate below optimal availability rates. With well-tuned preventive maintenance, this improves significantly. Every improvement translates directly into increased jobsite capacity.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">2</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Maintenance costs per machine</div>
+                <div class="solution-item__desc">Reactive maintenance costs substantially more than preventive. Unexpected breakdowns represent a major source of productivity loss. Shifting to a predictive approach reduces this cost significantly.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">3</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Profitability per jobsite</div>
+                <div class="solution-item__desc">Actual gross margins after allocating equipment costs, maintenance, and transport. FleetOps gives you this number daily, not at closeout. You react before losing 50k on a major project.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">4</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Equipment mobilization time</div>
+                <div class="solution-item__desc">Days between equipment request and availability on jobsite. With optimized allocation, this delay decreases noticeably. You also reduce the logistics overhead that traditionally accompanies poor planning.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Objections we hear</h2>
+        <p class="challenges__subtitle">Straight answers to your doubts</p>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">"My equipment doesn't have sensors—it's impossible to install."</div>
+            <div class="challenge-card__desc">False. GPS sensors mount in one hour on 90% of equipment. For older machines (15+ years), we can attach an external tracker. Cost: 200-400 euros per unit, recovered in 2-3 months through maintenance savings.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">"My field supervisors will refuse to be tracked."</div>
+            <div class="challenge-card__desc">We track equipment, not people. Machine locations are visible only to dispatch. Teams see only alerts and maintenance schedules—zero personal surveillance. We've worked with unionized SMBs; no labor issues.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">"My data is poorly organized."</div>
+            <div class="challenge-card__desc">Normal. You've been building jobsites for 20 years, not organizing databases. We spend 3-4 weeks cleaning history before moving to predictive. Cost-benefit: one week of organization for 2 years of optimized maintenance.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">"This will cost me a fortune."</div>
+            <div class="challenge-card__desc">FleetOps runs on subscription: 200-600 euros per month depending on fleet size. If you cut breakdowns by 40% and gain 3-5 days of equipment availability per month, ROI is 6-9 months. No licensing fees, no servers to buy.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">"It will overload my ERP."</div>
+            <div class="challenge-card__desc">Kaalytics connects read-only. We modify nothing in your system—we read data and create our own dashboards. Zero slowdown, zero risk. If your ERP goes down, FleetOps still runs in degraded mode.</div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Frequently asked questions</h2>
+        <p class="challenges__subtitle">Direct answers to your concerns</p>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">How long before I see results?</div>
+            <div class="challenge-card__desc">First gains appear by week 3: you locate equipment in 30 seconds instead of 30 minutes; anomaly alerts reduce surprise breakdowns. Predictive maintenance gains show real value starting week 8, when the system has enough data. Plan 3-4 months for fully stable equipment availability.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">How do you guarantee data security?</div>
+            <div class="challenge-card__desc">GDPR-compliant cloud infrastructure (AWS EU, Scaleway). Your location and technical data stay private. No data is sold, used for general AI, or shared with third parties. Annual security audit. Explicit confidentiality clause in contract.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">What if I want to leave—how do I get my data back?</div>
+            <div class="challenge-card__desc">All data is exportable as CSV and JSON. No lock-in. You can leave with complete equipment history. 30-day notice respected. We also provide one week of technical support for transition.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Which equipment can't be tracked?</div>
+            <div class="challenge-card__desc">Theoretically, all can be. Practically: rented equipment with third-party operators—we don't track those, legal complexity. Small tools (chainsaws, compressors) are possible but low ROI. Diesel generators and excavators over 3 tons: 100% tracked without issue.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">My ERP isn't compatible. What now?</div>
+            <div class="challenge-card__desc">If it's Cegid, Sage, Odoo, or Dynamics: no problem, we connect directly. If it's legacy (mainframe, proprietary system), we use monthly exports. Slower, but it works. Separate quote depending on complexity.</div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border); padding-bottom: 40px;">
+        <h2 class="challenges__title">To go further</h2>
+        <p class="challenges__subtitle">Resources and related modules</p>
+
+        <div class="grille grille--2" style="gap: 20px; margin-top: 30px;">
+            <a href="../modules/fleetops" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">FleetOps Module</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Real-time tracking, predictive maintenance, profitability analysis.</div>
+            </a>
+            <a href="../modules/supply-chain" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Supply Chain Module</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Procurement, spare parts sourcing, centralized inventory.</div>
+            </a>
+            <a href="../modules/financial-operations" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Financial Operations Module</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Jobsite profitability, indirect cost allocation, forecasting.</div>
+            </a>
+            <a href="../pricing" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Pricing</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Plans scaled to your size. No minimum contract.</div>
+            </a>
+        </div>
+    </section>
+
     <section class="industry-cta">
         <h2 class="industry-cta__title">Ready to optimize your jobsites?</h2>
-        <p class="industry-cta__subtitle">Contact our team for has personalized demo</p>
-        <has href="https://wa.me/212673736611" class="industry-cta__btn">Contact us on WhatsApp</has>
+        <p class="industry-cta__subtitle">Contact our team for a personalized demo</p>
+        <a href="https://wa.me/212673736611" class="industry-cta__btn">Contact us on WhatsApp</a>
     </section>
 
     <footer style="background: #040a08; border-top: 1px solid rgba(16,185,129,0.12); padding: 48px 0 20px;">
         <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
             <div class="grille grille--pied" style="gap: 32px; margin-bottom: 48px;">
                 <div>
-                    <has href="../" style="display: flex; align-items: center; gap: 10px; text-decoration: none; margin-bottom: 16px;">
+                    <a href="../" style="display: flex; align-items: center; gap: 10px; text-decoration: none; margin-bottom: 16px;">
                         <svg width="32" height="32" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#10b981" stroke-width="2"/><path d="M12 20l6 6 10-12" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         <span style="font-size: 1.25rem; font-weight: 800; color: #ecfdf5;">Kaal<span style="color: #10b981;">ytics</span></span>
-                    </has>
+                    </a>
                     <p style="color: #64748b; font-size: 0.85rem; line-height: 1.7; margin-bottom: 20px; max-width: 280px;">AI modules connected to your ERP. Smart dashboards and custom automation.</p>
                     <div style="display: flex; gap: 12px;">
-                        <has href="https://wa.me/212673736611" target="_blank" rel="noopener" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: #0f1f1b; border: 1px solid rgba(16,185,129,0.12); border-radius: 8px; color: #64748b;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></has>
+                        <a href="https://wa.me/212673736611" target="_blank" rel="noopener" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: #0f1f1b; border: 1px solid rgba(16,185,129,0.12); border-radius: 8px; color: #64748b;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
                     </div>
                 </div>
                 <div>
                     <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Industries</h4>
                     <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <has href="btp" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Construction & Engineering</has>
-                        <has href="mines" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Mining & Quarries</has>
-                        <has href="transport" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Transport & Logistics</has>
-                        <has href="distribution" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Distribution & Trade</has>
-                        <has href="industrie" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Industry & Manufacturing</has>
-                        <has href="location" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Equipment Rental</has>
+                        <a href="btp" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Construction & Engineering</a>
+                        <a href="mines" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Mining & Quarries</a>
+                        <a href="transport" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Transport & Logistics</a>
+                        <a href="distribution" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Distribution & Trade</a>
+                        <a href="industrie" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Industry & Manufacturing</a>
+                        <a href="location" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Equipment Rental</a>
                     </div>
                 </div>
                 <div>
                     <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Modules</h4>
                     <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <has href="../modules/sales-intelligence" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Sales Intelligence</has>
-                        <has href="../modules/marketing-automation" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Marketing Automation</has>
-                        <has href="../modules/financial-operations" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Financial Operations</has>
-                        <has href="../modules/supply-chain" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Supply Chain</has>
-                        <has href="../modules/fleetops" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">FleetOps</has>
-                        <has href="../modules/erp-connect" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">ERP Connect</has>
-                        <has href="../modules/digital-platform" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Digital Platform</has>
-                        <has href="../modules/ai-engine" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">AI Engine</has>
+                        <a href="../modules/sales-intelligence" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Sales Intelligence</a>
+                        <a href="../modules/marketing-automation" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Marketing Automation</a>
+                        <a href="../modules/financial-operations" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Financial Operations</a>
+                        <a href="../modules/supply-chain" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Supply Chain</a>
+                        <a href="../modules/fleetops" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">FleetOps</a>
+                        <a href="../modules/erp-connect" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">ERP Connect</a>
+                        <a href="../modules/digital-platform" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Digital Platform</a>
+                        <a href="../modules/ai-engine" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">AI Engine</a>
                     </div>
                 </div>
                 <div>
                     <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Resources</h4>
                     <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <has href="../guides" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Guides</has>
-                        <has href="../faq" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">FAQ</has>
-                        <has href="../pricing" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Pricing</has>
-                        <has href="../about" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">About</has>
+                        <a href="../guides" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Guides</a>
+                        <a href="../faq" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">FAQ</a>
+                        <a href="../pricing" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Pricing</a>
+                        <a href="../about" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">About</a>
                     </div>
                 </div>
                 <div>
                     <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Contact</h4>
                     <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <has href="https://wa.me/212673736611" target="_blank" rel="noopener" style="color: #10b981; text-decoration: none; font-size: 0.85rem; font-weight: 600;">WhatsApp</has>
-                        <has href="tel:+212673736611" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">+212 673 736 611</has>
+                        <a href="https://wa.me/212673736611" target="_blank" rel="noopener" style="color: #10b981; text-decoration: none; font-size: 0.85rem; font-weight: 600;">WhatsApp</a>
+                        <a href="tel:+212673736611" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">+212 673 736 611</a>
                     </div>
                 </div>
             </div>
             <div style="border-top: 1px solid rgba(16,185,129,0.12); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
                 <p style="color: #64748b; font-size: 0.8rem;">© 2026 Kaalytics. All rights reserved. Made in Morocco.</p>
                 <div style="display: flex; gap: 24px; font-size: 0.8rem;">
-                    <has href="../legal/privacy" style="color: #64748b; text-decoration: none;">Privacy</has>
-                    <has href="../legal/terms" style="color: #64748b; text-decoration: none;">Terms of Service</has>
-                    <has href="../legal/cookies" style="color: #64748b; text-decoration: none;">Cookies</has>
+                    <a href="../legal/privacy" style="color: #64748b; text-decoration: none;">Privacy</a>
+                    <a href="../legal/terms" style="color: #64748b; text-decoration: none;">Terms of Service</a>
+                    <a href="../legal/cookies" style="color: #64748b; text-decoration: none;">Cookies</a>
                 </div>
             </div>
         </div>

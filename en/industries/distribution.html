@@ -362,7 +362,7 @@
             <span class="solution-item__number">01</span>
             <div class="solution-item__content">
                 <div class="solution-item__name">
-                    <has href="../modules/sales-intelligence">Sales Intelligence</has>
+                    <a href="../modules/sales-intelligence">Sales Intelligence</a>
                 </div>
                 <div class="solution-item__desc">Matching engine that identifies the best opportunities, maps customers with optimal routes, quote agent that generates proposals in 30 seconds, B2B self-service portal. Sales teams equipped, customers empowered.</div>
             </div>
@@ -372,7 +372,7 @@
             <span class="solution-item__number">02</span>
             <div class="solution-item__content">
                 <div class="solution-item__name">
-                    <has href="../modules/marketing-automation">Marketing Automation</has>
+                    <a href="../modules/marketing-automation">Marketing Automation</a>
                 </div>
                 <div class="solution-item__desc">Campaigns targeted by potential, automated prospect scoring, intelligent re-engagement of inactive customers, behavioral segmentation. Churn eliminated, retention preserved.</div>
             </div>
@@ -382,79 +382,262 @@
             <span class="solution-item__number">03</span>
             <div class="solution-item__content">
                 <div class="solution-item__name">
-                    <has href="../modules/erp-connect">ERP Connect</has>
+                    <a href="../modules/erp-connect">ERP Connect</a>
                 </div>
                 <div class="solution-item__desc">Real-time bidirectional connectors, integrated dashboards, consolidated multi-entity inventory, automatic synchronization. Single source of truth for all users.</div>
             </div>
         </div>
     </section>
 
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">The deployment flow</h2>
+        <p class="challenges__subtitle">How we integrate with your systems</p>
+
+        <div class="solution-item">
+            <span class="solution-item__number">1</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Data audit and cleanup (Week 1-2)</div>
+                <div class="solution-item__desc">We analyze your product catalog, cost structure, sales history. We identify and fix duplicates, incorrect margins, incomplete descriptions. Your team continues operations normally—no disruption.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">2</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">ERP integration (Weeks 3-4)</div>
+                <div class="solution-item__desc">Supply Chain connects to your ERP (Sage, Cegid, Odoo). Historical sales data is ingested. Supplier data and minimum orders are mapped. The system begins learning patterns.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">3</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Prediction calibration (Weeks 5-6)</div>
+                <div class="solution-item__desc">Machine learning models are trained on your 12-24 months of history. First recommendations appear week 4. You validate and adjust parameters. Week 6: recommendations are tuned to your business.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">4</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Live operation and optimization (Week 7+)</div>
+                <div class="solution-item__desc">Daily recommendations in your dashboard. Purchase team reviews and approves orders. System learns from accepted/rejected recommendations. Continuous improvement in prediction accuracy.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Prerequisites that block</h2>
+        <p class="challenges__subtitle">What must be in place first</p>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Robust product data and pricing</div>
+            <div class="challenge-card__desc">If cost prices are wrong, calculated margins are wrong. If products lack descriptions or are duplicated, demand prediction loses its bearings. 2-3 weeks of cleanup equals real gain afterward. No shortcuts.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Accessible sales history</div>
+            <div class="challenge-card__desc">Prediction needs at least 12 months of real data. Ideal: 24 months. If data is in PDFs or paper, we digitalize first. If in your ERP: we extract directly.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Access to your supplier network</div>
+            <div class="challenge-card__desc">We need to know: real delivery times, minimum orders, MOQ (quantity), discounts. If this changes monthly or you have 50 different suppliers, it's more complex. But we handle it.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Commercial acceptance of AI recommendations</div>
+            <div class="challenge-card__desc">AI proposes—your team decides. A good inventory manager will accept 80-85% of recommendations, hold 15-20% for special cases (future promo, loyal customer). That saves enormous time without breaking the business.</div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">What you really measure</h2>
+        <p class="challenges__subtitle">KPIs that make the difference</p>
+
+        <div class="solution-item">
+            <span class="solution-item__number">1</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Stockout rate by product family</div>
+                <div class="solution-item__desc">Stockouts cost: immediate lost sale, lost customer, lasting friction. With well-tuned prediction, you drastically reduce stockouts. Every improvement in this rate translates directly to additional revenue through customer retention.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">2</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Inventory turnover and days of coverage</div>
+                <div class="solution-item__desc">You have articles that sit long in inventory, generating significant storage costs. Prediction plus automated markdown trigger equals freed cash and space for fast-moving items. Result: improved working capital.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">3</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">True distribution margin</div>
+                <div class="solution-item__desc">Gross margin minus stockout costs minus overstock costs minus storage costs equals net margin. Do you see it really? Or guess? With Supply Chain dashboards, you know by product, by customer, by period.</div>
+            </div>
+        </div>
+
+        <div class="solution-item">
+            <span class="solution-item__number">4</span>
+            <div class="solution-item__content">
+                <div class="solution-item__name">Replenishment time and supplier reliability</div>
+                <div class="solution-item__desc">Who delivers on time? Who delivers late? By how much? History often reveals a reliable supplier is worth 2 euros less per item than an unreliable one. You reinvest in good partners.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Objections we hear</h2>
+        <p class="challenges__subtitle">Straight answers</p>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">"Our product data is really poorly organized."</div>
+            <div class="challenge-card__desc">Normal. Distribution equals 5-30k products. No one has time to fill everything perfectly. We spend 2-3 weeks deduplicating, fixing cost prices, completing missing descriptions. Cost-benefit: one week of effort for 2 years of optimized stock.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">"My ERP doesn't connect to anything."</div>
+            <div class="challenge-card__desc">If Sage 100, Cegid, Odoo, or standard ERP: we connect directly. If legacy proprietary: we use daily exports. Slower, but works. Additional cost depends on complexity.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">"This will overload purchasing—too many prediction emails."</div>
+            <div class="challenge-card__desc">No email spam. One dashboard you check daily. Critical alerts (imminent stockout) are flagged. Other recommendations are in the table. You control the flow, not the other way around.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">"We can't order from suppliers—MOQs too high."</div>
+            <div class="challenge-card__desc">That's a real constraint and we incorporate it. If Supplier X requires 500 minimum and you sell 10 monthly, we handle it: grouped orders, leveled stock, or pivot to alternate supplier. Prediction includes these constraints.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">"Our customers make erratic, unpredictable orders."</div>
+            <div class="challenge-card__desc">AI detects outliers and isolates them. It doesn't try to predict surprise promos or large unexpected deals. But it detects regular anomalies (stronger orders at certain times). You'll never get 100%, but 85% is already massive.</div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border);">
+        <h2 class="challenges__title">Frequently asked questions</h2>
+        <p class="challenges__subtitle">Direct answers</p>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">How long before I see stockouts avoided?</div>
+            <div class="challenge-card__desc">Once we have 6-8 weeks of history. First alerts start week 4. First measurable gains: months 2-3. Complete stable gains: months 4-6 (enough to see full cycles).</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">What do we do with products that never sell?</div>
+            <div class="challenge-card__desc">AI flags them automatically. You decide: clearance, destruction, donation. Supply Chain shows storage cost—you can compare with liquidation cost. Often, selling 50% of cost-price beats holding the item 18 months.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">How do we handle seasonal products?</div>
+            <div class="challenge-card__desc">AI detects seasonality in your history. It proposes stock 60-90 days before peak season. Regular customers: easier. New patterns: AI alerts you for manual validation the first times.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">If I cancel, do I get my data back?</div>
+            <div class="challenge-card__desc">Yes, everything. CSV, JSON, XML—your choice. No lock-in. 30-day notice. One week of technical support for transition.</div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-card__title">Is there extra cost per product or SKU?</div>
+            <div class="challenge-card__desc">No. Fixed subscription by catalog size and transaction volume. 5k products or 50k: same subscription as long as you stay in the tier. No cost per SKU or per prediction.</div>
+        </div>
+    </section>
+
+    <section class="challenges" style="border-top: 1px solid var(--border); padding-bottom: 40px;">
+        <h2 class="challenges__title">To go further</h2>
+        <p class="challenges__subtitle">Resources and related modules</p>
+
+        <div class="grille grille--2" style="gap: 20px; margin-top: 30px;">
+            <a href="../modules/supply-chain" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Supply Chain Module</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Stock prediction, procurement management, stockout optimization.</div>
+            </a>
+            <a href="../modules/sales-intelligence" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Sales Intelligence Module</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Prospect scoring, B2B portal, automatic quotes.</div>
+            </a>
+            <a href="../modules/financial-operations" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Financial Operations Module</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">True margin by product, optimized working capital, cash flow.</div>
+            </a>
+            <a href="../pricing" style="display: block; padding: 20px; background: var(--bg-card); border-radius: 8px; text-decoration: none; transition: background 0.2s;">
+                <div style="color: var(--emerald); font-weight: 700; margin-bottom: 8px;">Pricing</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">By catalog and volume. No hidden costs.</div>
+            </a>
+        </div>
+    </section>
+
     <section class="industry-cta">
         <h2 class="industry-cta__title">Ready to accelerate your growth?</h2>
-        <p class="industry-cta__subtitle">Contact our team for has personalized demo</p>
-        <has href="https://wa.me/212673736611" class="industry-cta__btn">Contact us on WhatsApp</has>
+        <p class="industry-cta__subtitle">Contact our team for a personalized demo</p>
+        <a href="https://wa.me/212673736611" class="industry-cta__btn">Contact us on WhatsApp</a>
     </section>
 
     <footer style="background: #040a08; border-top: 1px solid rgba(16,185,129,0.12); padding: 48px 0 20px;">
         <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
             <div class="grille grille--pied" style="gap: 32px; margin-bottom: 48px;">
                 <div>
-                    <has href="../" style="display: flex; align-items: center; gap: 10px; text-decoration: none; margin-bottom: 16px;">
+                    <a href="../" style="display: flex; align-items: center; gap: 10px; text-decoration: none; margin-bottom: 16px;">
                         <svg width="32" height="32" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#10b981" stroke-width="2"/><path d="M12 20l6 6 10-12" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         <span style="font-size: 1.25rem; font-weight: 800; color: #ecfdf5;">Kaal<span style="color: #10b981;">ytics</span></span>
-                    </has>
+                    </a>
                     <p style="color: #64748b; font-size: 0.85rem; line-height: 1.7; margin-bottom: 20px; max-width: 280px;">AI modules connected to your ERP. Smart dashboards and custom automation.</p>
                     <div style="display: flex; gap: 12px;">
-                        <has href="https://wa.me/212673736611" target="_blank" rel="noopener" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: #0f1f1b; border: 1px solid rgba(16,185,129,0.12); border-radius: 8px; color: #64748b;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></has>
+                        <a href="https://wa.me/212673736611" target="_blank" rel="noopener" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: #0f1f1b; border: 1px solid rgba(16,185,129,0.12); border-radius: 8px; color: #64748b;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
                     </div>
                 </div>
                 <div>
                     <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Industries</h4>
                     <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <has href="btp" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Construction & Engineering</has>
-                        <has href="mines" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Mining & Quarries</has>
-                        <has href="transport" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Transport & Logistics</has>
-                        <has href="distribution" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Distribution & Trade</has>
-                        <has href="industrie" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Industry & Manufacturing</has>
-                        <has href="location" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Equipment Rental</has>
+                        <a href="btp" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Construction & Engineering</a>
+                        <a href="mines" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Mining & Quarries</a>
+                        <a href="transport" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Transport & Logistics</a>
+                        <a href="distribution" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Distribution & Trade</a>
+                        <a href="industrie" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Industry & Manufacturing</a>
+                        <a href="location" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Equipment Rental</a>
                     </div>
                 </div>
                 <div>
                     <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Modules</h4>
                     <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <has href="../modules/sales-intelligence" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Sales Intelligence</has>
-                        <has href="../modules/marketing-automation" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Marketing Automation</has>
-                        <has href="../modules/financial-operations" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Financial Operations</has>
-                        <has href="../modules/supply-chain" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Supply Chain</has>
-                        <has href="../modules/fleetops" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">FleetOps</has>
-                        <has href="../modules/erp-connect" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">ERP Connect</has>
-                        <has href="../modules/digital-platform" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Digital Platform</has>
-                        <has href="../modules/ai-engine" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">AI Engine</has>
+                        <a href="../modules/sales-intelligence" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Sales Intelligence</a>
+                        <a href="../modules/marketing-automation" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Marketing Automation</a>
+                        <a href="../modules/financial-operations" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Financial Operations</a>
+                        <a href="../modules/supply-chain" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Supply Chain</a>
+                        <a href="../modules/fleetops" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">FleetOps</a>
+                        <a href="../modules/erp-connect" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">ERP Connect</a>
+                        <a href="../modules/digital-platform" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Digital Platform</a>
+                        <a href="../modules/ai-engine" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">AI Engine</a>
                     </div>
                 </div>
                 <div>
                     <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Resources</h4>
                     <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <has href="../guides" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Guides</has>
-                        <has href="../faq" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">FAQ</has>
-                        <has href="../pricing" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Pricing</has>
-                        <has href="../about" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">About</has>
+                        <a href="../guides" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Guides</a>
+                        <a href="../faq" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">FAQ</a>
+                        <a href="../pricing" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Pricing</a>
+                        <a href="../about" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">About</a>
                     </div>
                 </div>
                 <div>
                     <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Contact</h4>
                     <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <has href="https://wa.me/212673736611" target="_blank" rel="noopener" style="color: #10b981; text-decoration: none; font-size: 0.85rem; font-weight: 600;">WhatsApp</has>
-                        <has href="tel:+212673736611" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">+212 673 736 611</has>
+                        <a href="https://wa.me/212673736611" target="_blank" rel="noopener" style="color: #10b981; text-decoration: none; font-size: 0.85rem; font-weight: 600;">WhatsApp</a>
+                        <a href="tel:+212673736611" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">+212 673 736 611</a>
                     </div>
                 </div>
             </div>
             <div style="border-top: 1px solid rgba(16,185,129,0.12); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
                 <p style="color: #64748b; font-size: 0.8rem;">© 2026 Kaalytics. All rights reserved. Made in Morocco.</p>
                 <div style="display: flex; gap: 24px; font-size: 0.8rem;">
-                    <has href="../legal/privacy" style="color: #64748b; text-decoration: none;">Privacy</has>
-                    <has href="../legal/terms" style="color: #64748b; text-decoration: none;">Terms of Service</has>
-                    <has href="../legal/cookies" style="color: #64748b; text-decoration: none;">Cookies</has>
+                    <a href="../legal/privacy" style="color: #64748b; text-decoration: none;">Privacy</a>
+                    <a href="../legal/terms" style="color: #64748b; text-decoration: none;">Terms of Service</a>
+                    <a href="../legal/cookies" style="color: #64748b; text-decoration: none;">Cookies</a>
                 </div>
             </div>
         </div>
