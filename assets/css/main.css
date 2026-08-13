@@ -56,6 +56,7 @@
 @import 'sections/_index-inline.css';
 @import 'sections/_modules-enhanced.css';
 @import 'sections/_team.css';
+@import 'sections/_francophonie.css';
 
 /* ========================================
    CTA FINAL SECTION (legacy - override by _cta-premium.css)

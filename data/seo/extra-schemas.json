@@ -69,15 +69,28 @@
                     "https://twitter.com/kaalytics",
                     "https://linkedin.com/company/kaalytics"
                 ],
-                "areaServed": {
-                    "@type": "GeoCircle",
-                    "geoMidpoint": {
-                        "@type": "GeoCoordinates",
-                        "latitude": 33.5731,
-                        "longitude": -7.5898
+                "areaServed": [
+                    {
+                        "@type": "Country",
+                        "name": "Maroc"
                     },
-                    "geoRadius": "5000 km"
-                },
+                    {
+                        "@type": "Country",
+                        "name": "France"
+                    },
+                    {
+                        "@type": "Country",
+                        "name": "Canada"
+                    },
+                    {
+                        "@type": "Country",
+                        "name": "Belgique"
+                    },
+                    {
+                        "@type": "Country",
+                        "name": "Suisse"
+                    }
+                ],
                 "knowsAbout": [
                     "Artificial Intelligence",
                     "Fleet Management",
@@ -162,7 +175,11 @@
                             }
                         }
                     ]
-                }
+                },
+                "knowsLanguage": [
+                    "fr",
+                    "en"
+                ]
             }
         ]
     },
@@ -236,15 +253,28 @@
                     "https://twitter.com/kaalytics",
                     "https://linkedin.com/company/kaalytics"
                 ],
-                "areaServed": {
-                    "@type": "GeoCircle",
-                    "geoMidpoint": {
-                        "@type": "GeoCoordinates",
-                        "latitude": 33.5731,
-                        "longitude": -7.5898
+                "areaServed": [
+                    {
+                        "@type": "Country",
+                        "name": "Morocco"
                     },
-                    "geoRadius": "5000 km"
-                },
+                    {
+                        "@type": "Country",
+                        "name": "France"
+                    },
+                    {
+                        "@type": "Country",
+                        "name": "Canada"
+                    },
+                    {
+                        "@type": "Country",
+                        "name": "Belgium"
+                    },
+                    {
+                        "@type": "Country",
+                        "name": "Switzerland"
+                    }
+                ],
                 "knowsAbout": [
                     "Artificial Intelligence",
                     "Fleet Management",
@@ -329,7 +359,11 @@
                             }
                         }
                     ]
-                }
+                },
+                "knowsLanguage": [
+                    "fr",
+                    "en"
+                ]
             }
         ]
     },

@@ -93,9 +93,24 @@
             border-color: #10b981;
             transform: translateY(-4px);
         }
-        .value-card__icon {
-            font-size: 1.8rem;
-            margin-bottom: 12px;
+        /* Le code pays remplace le drapeau : sobre, lisible a toute taille,
+           et lu correctement par un lecteur d'ecran (voir l'attribut aria). */
+        .value-card__code {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 44px;
+            height: 26px;
+            padding: 0 10px;
+            margin-bottom: 14px;
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            border-radius: 4px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            color: #6ee7b7;
+            background: rgba(16, 185, 129, 0.06);
         }
         .value-card__title {
             font-size: 1.15rem;
@@ -241,7 +256,7 @@
             Cela signifie que <strong>vos systèmes sont accédés à distance</strong> depuis Casablanca, en lecture et en écriture. Vos données restent chez vous — serveur client, base de données locale, ou infrastructure cloud que vous contrôlez. Nous nous connectons via API ou intégration directe, sans installer d'agent ou de service chez vous.
         </p>
         <p class="about-section__text">
-            Cette approche fonctionne parfaitement parce que <strong>nos clients parlent français et sont actifs pendant le jour</strong>, tout comme nous. Le décalage horaire entre le Maroc, la France, la Belgique et la Suisse est zéro. Le décalage entre le Maroc et le Canada ou la Suisse romande est minimal (une à deux heures, selon la saison).
+            Cette approche fonctionne parfaitement parce que <strong>nos clients parlent français et sont actifs pendant le jour</strong>, tout comme nous. Le décalage horaire entre le Maroc, la France, la Belgique et la Suisse est zéro. Avec le Québec, l'écart est de cinq heures : nos après-midis couvrent vos matinées, de 9h à 13h heure de Montréal. C'est une plage de travail commune de quatre heures, tous les jours, sans que personne ne se lève à l'aube.
         </p>
         <p class="about-section__text">
             Nos clients ont des systèmes déployés chez eux — Odoo sur un serveur dédié, SAP en cloud privé, Dynamics en SaaS avec Microsoft. Nous ne créons aucune dépendance logicielle chez vous, aucun point d'entrée permanent. Chaque intervention est isolée, chaque module fonctionne indépendamment, chaque accès est enregistré et révocable immédiatement.
@@ -256,34 +271,34 @@
         </div>
         <div class="about-values__grid">
             <div class="value-card">
-                <div class="value-card__icon">🇲🇦</div>
+                <div class="value-card__code" role="img" aria-label="Maroc">MA</div>
                 <h3 class="value-card__title">Maroc</h3>
-                <p class="value-card__desc">Base opérationnelle. Nous assistons les PME et entreprises de croissance marocaines : commerce, BTP, transport, industries.</p>
+                <p class="value-card__desc">Notre base. L'équipe, les ingénieurs et les intégrations y sont. C'est aussi le seul endroit où nous avons un bureau.</p>
             </div>
             <div class="value-card">
-                <div class="value-card__icon">🇫🇷</div>
+                <div class="value-card__code" role="img" aria-label="France">FR</div>
                 <h3 class="value-card__title">France</h3>
-                <p class="value-card__desc">Deuxième marché. Nous travaillons avec des entreprises de Provence, Bordeaux, Lille et région parisienne dans le secteur tertiaire et logistique.</p>
+                <p class="value-card__desc">Même fuseau horaire, même langue de travail, même vocabulaire comptable. Les connecteurs Cegid, Sage et SAP couvrent l'essentiel du parc installé.</p>
             </div>
             <div class="value-card">
-                <div class="value-card__icon">🇨🇦</div>
+                <div class="value-card__code" role="img" aria-label="Canada">CA</div>
                 <h3 class="value-card__title">Canada</h3>
-                <p class="value-card__desc">Québec et reste du pays. Fuseaux compatibles avec le Maroc. Nous accompagnons les PME québécoises et canadiennes-français.</p>
+                <p class="value-card__desc">Québec et provinces francophones. Cinq heures d'écart, donc nos après-midis recouvrent vos matinées. Loi 25 : le transfert de données hors Québec se contractualise.</p>
             </div>
             <div class="value-card">
-                <div class="value-card__icon">🇧🇪</div>
+                <div class="value-card__code" role="img" aria-label="Belgique">BE</div>
                 <h3 class="value-card__title">Belgique</h3>
-                <p class="value-card__desc">Wallonie et Flandre francophone. Distribution, industrie pharmaceutique et BTP. Même fuseau horaire que le Maroc.</p>
+                <p class="value-card__desc">Wallonie et Bruxelles. Même fuseau horaire, cadre RGPD identique à celui de la France. Facturation en euros, hors TVA marocaine.</p>
             </div>
             <div class="value-card">
-                <div class="value-card__icon">🇨🇭</div>
+                <div class="value-card__code" role="img" aria-label="Suisse">CH</div>
                 <h3 class="value-card__title">Suisse</h3>
-                <p class="value-card__desc">Suisse romande en priorité. PME de la région lémanique, entreprises de l'Arc jurassien. Fuseaux horaires proches du nôtre.</p>
+                <p class="value-card__desc">Suisse romande. Même fuseau horaire, français de travail, facturation possible en francs suisses. Hors UE : le transfert de données suit la LPD révisée.</p>
             </div>
             <div class="value-card">
-                
+                <div class="value-card__code" role="img" aria-label="Afrique francophone">RÉGION</div>
                 <h3 class="value-card__title">Afrique francophone</h3>
-                <p class="value-card__desc">Côte d'Ivoire, Sénégal, Cameroun, Gabon. Extensions régionales pour des partenaires importants.</p>
+                <p class="value-card__desc">Côte d'Ivoire, Sénégal, Cameroun, Gabon. Fuseau identique ou proche, et un parc Odoo qui progresse vite dans la région.</p>
             </div>
         </div>
     </section>
@@ -293,7 +308,7 @@
         <span class="about-section__label">Conditions d'intervention</span>
         <h2 class="about-section__title">Ce qui change. Ce qui ne change pas.</h2>
         <p class="about-section__text">
-            <strong>Ce qui change selon votre localisation :</strong> la fiscalité et la réglementation. Une PME française qui branche Kaalytics sur son Odoo doit respecter la CNIL et l'RGPD. Une entreprise au Canada doit respecter la PIPEDA. Une entreprise belge doit garantir la conformité avec la loi sur la protection des données. Nous connaissons ces cadres et nous les appliquons.
+            <strong>Ce qui change selon votre localisation :</strong> la fiscalité et la réglementation. Une PME française qui branche Kaalytics sur son Odoo doit respecter la CNIL et le RGPD. Une entreprise au Canada relève de la PIPEDA, et de la Loi 25 si elle est au Québec. Une entreprise belge doit garantir la conformité avec la loi sur la protection des données. Nous connaissons ces cadres et nous les appliquons.
         </p>
         <p class="about-section__text">
             Nous facturerons peut-être en euros si vous êtes en France, en francs suisses si vous êtes en Suisse, en dollars canadiens si vous êtes au Canada. Mais la prestation reste identique : connexion à distance, modules compatibles avec votre ERP, support en français pendant les heures ouvrables.
@@ -360,6 +375,7 @@
                         <span style="font-size: 1.25rem; font-weight: 800; color: #ecfdf5;">Kaal<span style="color: #10b981;">ytics</span></span>
                     </a>
                     <p style="color: #64748b; font-size: 0.85rem; line-height: 1.7; margin-bottom: 20px; max-width: 280px;">Modules IA connectés à votre ERP. Dashboards intelligents et automatisation sur-mesure.</p>
+                    <p style="color: #64748b;  line-height: 1.7; margin-bottom: 20px; max-width: 280px; font-size: 0.78rem; opacity: 0.85;">Bureau à Casablanca. Interventions à distance au Maroc, en France, au Canada, en Belgique et en Suisse.</p>
                     <div style="display: flex; gap: 12px;">
                         <a href="https://wa.me/212673736611" target="_blank" rel="noopener" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: #0f1f1b; border: 1px solid rgba(16,185,129,0.12); border-radius: 8px; color: #64748b;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
                     </div>

@@ -1,0 +1,144 @@
+/* ========================================
+   COUVERTURE FRANCOPHONE
+   ========================================
+   Responsabilite unique : dire ou nous intervenons, sans faire croire a
+   des bureaux que nous n'avons pas.
+
+   Parti pris typographique plutot qu'illustratif : les codes pays ISO
+   en monospace, un filet, aucune icone ni drapeau. Un drapeau emoji rend
+   differemment sur chaque systeme, se lit mal en petit, et suggere une
+   implantation locale — exactement ce que nous ne voulons pas dire. */
+
+.francophonie {
+    padding: var(--space-4xl, 96px) 24px;
+    background: var(--bg-void, #040a08);
+    border-top: 1px solid rgba(16, 185, 129, 0.12);
+}
+
+.francophonie__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.francophonie__label {
+    display: block;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--emerald, #10b981);
+    margin-bottom: 14px;
+}
+
+.francophonie__title {
+    font-size: clamp(1.5rem, 3.6vw, 2.1rem);
+    font-weight: 800;
+    color: var(--text-primary, #ecfdf5);
+    line-height: 1.22;
+    text-wrap: balance;
+    margin: 0 0 16px;
+}
+
+.francophonie__intro {
+    color: var(--text-secondary, #94a3b8);
+    font-size: 1rem;
+    line-height: 1.75;
+    max-width: 62ch;
+    margin: 0 0 40px;
+}
+
+/* La signature de couverture : une suite de codes pays separes par un
+   filet. Format repris de ce que font les cabinets qui assument un siege
+   unique — une liste, pas une carte piquee d'epingles. */
+.francophonie__pays {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 0;
+    border: 1px solid rgba(16, 185, 129, 0.18);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 36px;
+}
+
+.pays {
+    flex: 1 1 150px;
+    min-width: 0;
+    padding: 20px 18px;
+    border-right: 1px solid rgba(16, 185, 129, 0.14);
+}
+
+.pays:last-child { border-right: 0; }
+
+.pays--base {
+    background: rgba(16, 185, 129, 0.06);
+}
+
+.pays__code {
+    display: block;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    color: var(--emerald, #10b981);
+    margin-bottom: 8px;
+}
+
+.pays__nom {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary, #ecfdf5);
+    margin-bottom: 6px;
+}
+
+.pays__detail {
+    display: block;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: var(--text-muted, #64748b);
+}
+
+/* La precision qui rend la couverture credible : l'ecart horaire reel,
+   presente comme une plage de travail commune. */
+.francophonie__note {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 20px 22px;
+    background: rgba(16, 185, 129, 0.05);
+    border-left: 3px solid var(--emerald, #10b981);
+    border-radius: 8px;
+}
+
+.francophonie__note p {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: var(--text-secondary, #94a3b8);
+    max-width: 70ch;
+}
+
+.francophonie__note strong { color: var(--text-primary, #ecfdf5); }
+
+.francophonie__lien {
+    display: inline-block;
+    margin-top: 26px;
+    color: var(--emerald, #10b981);
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(16, 185, 129, 0.4);
+    padding-bottom: 2px;
+}
+
+.francophonie__lien:hover { border-bottom-color: var(--emerald, #10b981); }
+
+@media (max-width: 860px) {
+    .pays {
+        flex: 1 1 100%;
+        border-right: 0;
+        border-bottom: 1px solid rgba(16, 185, 129, 0.14);
+    }
+    .pays:last-child { border-bottom: 0; }
+}
