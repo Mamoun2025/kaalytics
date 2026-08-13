@@ -698,8 +698,9 @@
     position: absolute;
     top: var(--space-md);
     right: var(--space-md);
-    width: 32px;
-    height: 32px;
+    /* 32px etait sous le minimum visable au doigt. */
+    width: 44px;
+    height: 44px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-full);
@@ -957,12 +958,14 @@
         height: 18px;
     }
 
+    /* Coupe a l'ellipse, « Sales Intelligence » devenait « Sales I… ».
+       Le libelle tient sur deux lignes : illisible vaut moins que serre. */
     .module-node__label {
-        font-size: 8px;
-        max-width: 50px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        font-size: 10px;
+        max-width: 72px;
+        white-space: normal;
+        line-height: 1.15;
+        overflow-wrap: break-word;
     }
 
     .module-node__count {
@@ -1047,11 +1050,11 @@
     }
 
     .module-node__label {
-        font-size: 7px;
-        max-width: 45px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        font-size: 9px;
+        max-width: 64px;
+        white-space: normal;
+        line-height: 1.15;
+        overflow-wrap: break-word;
     }
 
     .modules-ia__stats {
