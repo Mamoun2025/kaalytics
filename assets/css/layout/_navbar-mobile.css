@@ -1,0 +1,105 @@
+/* ========================================
+   NAVIGATION MOBILE
+   ========================================
+   Responsabilite unique : rendre la navigation utilisable sous 1024px.
+
+   Ce fichier est importe APRES components/_buttons.css : sans cela,
+   `.btn { display: inline-flex }` l'emportait sur le masquage du CTA
+   (specificite egale, une media query n'ajoute aucune specificite) et le
+   bouton burger etait pousse hors de l'ecran, donc injoignable au doigt.
+   Les selecteurs sont malgre tout prefixes `.navbar` pour rester corrects
+   si l'ordre des imports change un jour. */
+
+/* Le CTA portait ces proprietes en style en ligne, ce qui le rendait
+   impossible a masquer. Elles vivent ici. */
+.navbar .navbar__cta-desktop {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+@media (max-width: 1024px) {
+    /* Ce qui n'a pas sa place dans une barre de 375px de large. */
+    .navbar .navbar__cta-desktop {
+        display: none;
+    }
+
+    /* Le burger ne doit jamais etre comprime par ses voisins :
+       c'est le seul acces a la navigation sur telephone. */
+    .navbar .navbar__mobile-toggle {
+        display: flex;
+        flex: 0 0 auto;
+        width: 44px;
+        height: 44px;
+    }
+
+    .navbar .navbar__actions {
+        gap: var(--space-sm, 12px);
+        flex: 0 1 auto;
+        min-width: 0;
+    }
+
+    /* Le selecteur de langue reste accessible mais cede la place au burger. */
+    .navbar .navbar__lang {
+        flex: 0 1 auto;
+        min-width: 0;
+    }
+
+    .navbar .navbar__logo {
+        flex: 0 1 auto;
+        min-width: 0;
+        overflow: hidden;
+    }
+}
+
+/* Sous 360px, chaque pixel compte : on resserre sans jamais toucher
+   a la taille de la cible tactile. */
+@media (max-width: 360px) {
+    .navbar .navbar__container {
+        padding: 0 12px;
+    }
+
+    .navbar .navbar__actions {
+        gap: 6px;
+    }
+
+    .navbar .navbar__logo-text {
+        font-size: var(--text-sm, 14px);
+    }
+}
+
+/* ========================================
+   PANNEAU MOBILE : ETAT FERME
+   ========================================
+   Ferme, le panneau est decale hors champ : ses liens resteraient dans
+   l'ordre de tabulation et le clavier partirait dans le vide. C'est
+   l'attribut `inert`, pilote en JS, qui les retire du parcours : il prend
+   effet immediatement, alors que basculer `visibility` laisse le panneau
+   non focusable pendant une centaine de millisecondes et fait echouer la
+   mise au point du focus sans erreur. */
+.navbar__mobile-menu[inert] {
+    pointer-events: none;
+}
+
+/* Menu ouvert, la barre ne doit pas se derober au defilement :
+   elle porte le bouton de fermeture. */
+.navbar--hidden.navbar--menu-ouvert {
+    transform: translateY(0);
+}
+
+/* Cibles tactiles confortables dans le panneau. */
+@media (max-width: 1024px) {
+    .navbar__mobile-menu .mobile-link,
+    .navbar__mobile-menu .navbar__link {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar__mobile-menu,
+    .navbar__mobile-menu.active {
+        transition: none;
+    }
+}

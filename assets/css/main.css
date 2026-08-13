@@ -29,6 +29,10 @@
 @import 'components/_cta-hierarchy.css';
 @import 'components/_motion-reduced.css';
 
+/* Apres les boutons a dessein : le masquage du CTA en mobile doit
+   l'emporter sur `.btn { display: inline-flex }` (meme specificite). */
+@import 'layout/_navbar-mobile.css';
+
 /* ========================================
    SECTIONS
    ======================================== */
