@@ -1,0 +1,66 @@
+name: Indexation - prevenir les moteurs
+
+# Deux canaux, parce qu'ils ne se remplacent pas :
+#   - IndexNow previent Bing et Yandex qu'une page a change (effet rapide) ;
+#   - Google n'utilise pas IndexNow. Sa decouverte passe par le sitemap
+#     declare dans la Search Console, qu'on lui resoumet a chaque changement.
+#
+# Releve du 13/08/2026, avant la premiere soumission : 1 seule page indexee
+# sur 84, dernier passage de Google le 28 juin. Aucun sitemap ne lui avait
+# jamais ete soumis.
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "**.html"
+      - "sitemap.xml"
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "URL unique a soumettre (facultatif)"
+        required: false
+        type: string
+
+concurrency:
+  group: indexation
+  cancel-in-progress: false
+
+jobs:
+  prevenir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Attendre le deploiement Vercel
+        run: sleep 45
+
+      - name: IndexNow (Bing, Yandex)
+        run: |
+          if [ -n "${{ inputs.url }}" ]; then
+            python3 -m scripts.seo.indexnow "${{ inputs.url }}"
+          else
+            python3 -m scripts.seo.indexnow
+          fi
+
+      - name: Installer le client Google
+        run: pip install --quiet google-api-python-client google-auth
+
+      - name: Soumettre le sitemap a la Search Console
+        env:
+          GOOGLE_SA_KEY: ${{ secrets.GOOGLE_SA_KEY }}
+        run: |
+          if [ -z "$GOOGLE_SA_KEY" ]; then
+            echo "Secret GOOGLE_SA_KEY absent : etape ignoree."
+            exit 0
+          fi
+          printf '%s' "$GOOGLE_SA_KEY" > /tmp/sa.json
+          KAALYTICS_SA_KEY=/tmp/sa.json python3 -m scripts.seo.search_console --sitemap
+          rm -f /tmp/sa.json
