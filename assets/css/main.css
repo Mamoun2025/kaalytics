@@ -32,6 +32,8 @@
 /* Apres les boutons a dessein : le masquage du CTA en mobile doit
    l'emporter sur `.btn { display: inline-flex }` (meme specificite). */
 @import 'layout/_navbar-mobile.css';
+@import 'layout/_grilles-responsives.css';
+@import 'layout/_cibles-tactiles.css';
 
 /* ========================================
    SECTIONS

@@ -45,6 +45,24 @@
         min-width: 0;
     }
 
+    /* FR et EN faisaient 20px de haut : sous le minimum, on vise a cote.
+       La zone tactile atteint 44px sans epaissir la pastille : le groupe
+       rend les 2px de rembourrage qu'il ajoutait de chaque cote. */
+    .navbar .navbar__lang {
+        padding: 0;
+    }
+
+    .navbar .navbar__lang-btn {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .navbar .navbar__logo {
+        min-height: 44px;
+        align-items: center;
+    }
+
     .navbar .navbar__logo {
         flex: 0 1 auto;
         min-width: 0;
@@ -94,6 +112,11 @@
         min-height: 44px;
         display: flex;
         align-items: center;
+    }
+
+    /* Le bouton d'appel du panneau faisait 40px de haut. */
+    .navbar__mobile-actions .btn {
+        min-height: 44px;
     }
 }
 

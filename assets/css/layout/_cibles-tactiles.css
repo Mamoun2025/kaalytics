@@ -1,0 +1,33 @@
+/* ========================================
+   CIBLES TACTILES
+   ========================================
+   Responsabilite unique : sur un ecran tactile, ce qui se clique doit
+   pouvoir se viser au doigt.
+
+   Ne s'applique que sous 1024px : au-dela on pointe a la souris, et
+   espacer les liens d'un pied de page n'aurait aucun benefice. */
+
+@media (max-width: 1024px) {
+    /* Les liens de pied de page faisaient 19 a 20px de haut, empiles les
+       uns sur les autres : viser le bon demandait de la precision. */
+    footer a {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    /* Sauf le bloc de marque, qui n'est pas une liste de liens. */
+    footer a > svg + span,
+    footer a:has(> svg:first-child:last-child) {
+        min-height: 0;
+    }
+
+    /* Appeler et ecrire sont les deux actions principales de la page
+       contact : elles ne peuvent pas etre les plus difficiles a viser. */
+    a[href^="tel:"],
+    a[href^="mailto:"] {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+}
