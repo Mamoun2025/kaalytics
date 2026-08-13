@@ -161,11 +161,11 @@
         <div class="container">
             <div class="industry-hero__content">
                 <div>
-                    <span class="industry-hero__badge" data-i18n="contactPage.badge">Contact</span>
-                    <h1 class="industry-hero__title" data-i18n="contactPage.title" data-i18n-html>
+                    <span class="industry-hero__badge">Contact</span>
+                    <h1 class="industry-hero__title">
                         Let's discuss your <span>project</span>
                     </h1>
-                    <p class="industry-hero__subtitle" data-i18n="contactPage.subtitle">
+                    <p class="industry-hero__subtitle">
                         Our team responds within 24h. Call us, write to us or send a WhatsApp.
                     </p>
                 </div>
@@ -180,12 +180,12 @@
 
                 <!-- Formulaire -->
                 <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-2xl); padding: var(--space-2xl);">
-                    <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg);" data-i18n="contactPage.formTitle">Send us a message</h2>
+                    <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg);">Send us a message</h2>
 
                     <!-- Message of succes -->
                     <div id="formSuccess" style="display: none; background: rgba(16, 185, 129, 0.15); border: 1px solid var(--emerald); border-radius: var(--radius-lg); padding: var(--space-lg); margin-bottom: var(--space-lg);">
-                        <p style="color: var(--emerald); font-weight: 600; margin-bottom: var(--space-xs);" data-i18n="contactPage.success.title">Message sent successfully!</p>
-                        <p style="color: var(--text-secondary); font-size: var(--text-sm);" data-i18n="contactPage.success.desc">Our team will respond within 24 hours.</p>
+                        <p style="color: var(--emerald); font-weight: 600; margin-bottom: var(--space-xs);">Message sent successfully!</p>
+                        <p style="color: var(--text-secondary); font-size: var(--text-sm);">Our team will respond within 24 hours.</p>
                     </div>
 
                     <!-- Formspree: remplacer YOUR_FORM_ID by l'ID Formspree -->
@@ -197,52 +197,52 @@
                         <input type="hidden" name="_subject" value="Nouveau contact since kaalytics.com">
 
                         <div>
-                            <label for="name" style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);" data-i18n="contactPage.labels.name">Full name</label>
+                            <label for="name" style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);">Full name</label>
                             <input type="text" id="name" name="name" required style="width: 100%; padding: var(--space-md); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-primary); font-size: var(--text-base);">
                         </div>
                         <div>
-                            <label for="email" style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);" data-i18n="contactPage.labels.email">Professional email</label>
+                            <label for="email" style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);">Professional email</label>
                             <input type="email" id="email" name="email" required style="width: 100%; padding: var(--space-md); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-primary); font-size: var(--text-base);">
                         </div>
                         <div>
-                            <label for="company" style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);" data-i18n="demoPage.labels.company">Company</label>
+                            <label for="company" style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);">Company</label>
                             <input type="text" id="company" name="company" style="width: 100%; padding: var(--space-md); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-primary); font-size: var(--text-base);">
                         </div>
                         <div>
-                            <label for="phone" style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);" data-i18n="contactPage.labels.phone">Phone</label>
+                            <label for="phone" style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);">Phone</label>
                             <input type="tel" id="phone" name="phone" style="width: 100%; padding: var(--space-md); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-primary); font-size: var(--text-base);">
                         </div>
                         <div>
-                            <label for="subject" style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);" data-i18n="contactPage.labels.subject">Subject</label>
+                            <label for="subject" style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);">Subject</label>
                             <select id="subject" name="subject" style="width: 100%; padding: var(--space-md); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-primary); font-size: var(--text-base);">
-                                <option value="" data-i18n="demoPage.labels.select">Select a topic</option>
-                                <option value="demo" data-i18n="contactPage.subjects.demo">Demo request</option>
-                                <option value="devis" data-i18n="contactPage.subjects.info">Request a quote</option>
-                                <option value="support" data-i18n="contactPage.subjects.support">Technical support</option>
-                                <option value="partenariat" data-i18n="contactPage.subjects.partnership">Partnership</option>
-                                <option value="autre" data-i18n="contactPage.subjects.other">Other</option>
+                                <option value="">Select a topic</option>
+                                <option value="demo">Demo request</option>
+                                <option value="devis">Request a quote</option>
+                                <option value="support">Technical support</option>
+                                <option value="partenariat">Partnership</option>
+                                <option value="autre">Other</option>
                             </select>
                         </div>
                         <div>
-                            <label for="message" style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);" data-i18n="contactPage.labels.message">Message</label>
+                            <label for="message" style="display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--text-primary);">Message</label>
                             <textarea id="message" name="message" rows="5" required style="width: 100%; padding: var(--space-md); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-primary); font-size: var(--text-base); resize: vertical;"></textarea>
                         </div>
                         <div>
                             <label style="display: flex; align-items: flex-start; gap: var(--space-sm); cursor: pointer;">
                                 <input type="checkbox" name="consent" required style="margin-top: 4px;">
-                                <span style="font-size: var(--text-sm); color: var(--text-secondary);" data-i18n="contactPage.consent" data-i18n-html>
+                                <span style="font-size: var(--text-sm); color: var(--text-secondary);">
                                     I accept the <a href="legal/privacy" target="_blank" style="color: var(--emerald);">privacy policy</a> and the processing of my data.
                                 </span>
                             </label>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;" data-i18n="contactPage.submit">Send message</button>
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Send message</button>
                     </form>
                 </div>
 
                 <!-- Coordonnees -->
                 <div>
                     <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-2xl); padding: var(--space-2xl); margin-bottom: var(--space-xl);">
-                        <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-xl);" data-i18n="contactPage.channels.title">Contact information</h2>
+                        <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-xl);">Contact information</h2>
 
                         <div style="display: flex; flex-direction: column; gap: var(--space-xl);">
                             <div style="display: flex; align-items: flex-start; gap: var(--space-md);">
@@ -251,7 +251,7 @@
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                                 </div>
                                 <div>
-                                    <h3 style="font-weight: 600; margin-bottom: var(--space-xs);" data-i18n="contactPage.channels.phone.title">Phone</h3>
+                                    <h3 style="font-weight: 600; margin-bottom: var(--space-xs);">Phone</h3>
                                     <a href="tel:+212673736611" style="color: var(--text-secondary); text-decoration: none;">+212 673 736 611</a>
                                 </div>
                             </div>
@@ -262,7 +262,7 @@
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                                 </div>
                                 <div>
-                                    <h3 style="font-weight: 600; margin-bottom: var(--space-xs);" data-i18n="contactPage.channels.email.title">Email</h3>
+                                    <h3 style="font-weight: 600; margin-bottom: var(--space-xs);">Email</h3>
                                     <a href="mailto:contact@kaalytics.com" style="color: var(--text-secondary); text-decoration: none;">contact@kaalytics.com</a>
                                 </div>
                             </div>
@@ -332,14 +332,13 @@
         <span>WhatsApp</span>
     </a>
 
-    <!-- i18n -->
-    <script src="/assets/js/i18n/i18n.js?v=20260808"></script>
 
     <!-- Navbar Loader -->
-    <script src="/components/navbar/navbar-loader.js?v=20260813"></script>
+    <script src="/components/navbar/navbar-loader.js?v=20260813b"></script>
 
     <!-- Cookie Consent -->
-    <script src="/assets/js/components/cookie-consent.js?v=20260129"></script>
+    <script defer src="/assets/js/components/cookie-consent-textes.js?v=20260813b"></script>
+    <script src="/assets/js/components/cookie-consent.js?v=20260813b"></script>
 
     <!-- Form Success Handler -->
     <script>
