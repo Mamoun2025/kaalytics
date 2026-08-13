@@ -1,0 +1,134 @@
+/* ========================================
+   MISSION, VISION, VALEURS
+   ========================================
+   Responsabilite unique : la declaration de marque de la page A propos.
+
+   Traitement typographique, sans icone ni pictogramme. Les valeurs ne
+   sont pas numerotees : ce n'est pas une sequence, et numeroter suggere
+   un ordre d'importance qui n'existe pas. Un filet les separe, rien de
+   plus. */
+
+.raison {
+    padding: var(--space-4xl, 96px) 24px;
+    background: var(--bg-void, #040a08);
+    border-top: 1px solid rgba(16, 185, 129, 0.12);
+}
+
+.raison__inner {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.raison__label {
+    display: block;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--emerald, #10b981);
+    margin-bottom: 14px;
+}
+
+.raison__titre {
+    font-size: clamp(1.5rem, 3.6vw, 2.1rem);
+    font-weight: 800;
+    color: var(--text-primary, #ecfdf5);
+    line-height: 1.22;
+    text-wrap: balance;
+    margin: 0 0 16px;
+}
+
+.raison__intro {
+    color: var(--text-secondary, #94a3b8);
+    font-size: 1rem;
+    line-height: 1.75;
+    max-width: 62ch;
+    margin: 0 0 48px;
+}
+
+/* Mission et vision se repondent : l'une dit le present, l'autre le cap.
+   Cote a cote sur grand ecran, l'une sous l'autre sinon. */
+.raison__paire {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    margin-bottom: 56px;
+}
+
+.enonce {
+    padding: 28px 30px;
+    border: 1px solid rgba(16, 185, 129, 0.18);
+    border-radius: 10px;
+    background: rgba(16, 185, 129, 0.04);
+}
+
+.enonce__quoi {
+    display: block;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--emerald, #10b981);
+    margin-bottom: 16px;
+}
+
+.enonce__texte {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-primary, #ecfdf5);
+}
+
+.enonce__texte + .enonce__texte {
+    margin-top: 14px;
+    font-size: 0.95rem;
+    color: var(--text-secondary, #94a3b8);
+}
+
+/* Les valeurs : un filet, un intitule, une ligne. Rien d'autre. */
+.valeurs__titre {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--emerald, #10b981);
+    margin: 0 0 20px;
+}
+
+.valeurs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid rgba(16, 185, 129, 0.14);
+}
+
+.valeur {
+    display: grid;
+    grid-template-columns: minmax(180px, 260px) 1fr;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(16, 185, 129, 0.14);
+}
+
+.valeur__nom {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary, #ecfdf5);
+}
+
+.valeur__ligne {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--text-secondary, #94a3b8);
+    max-width: 60ch;
+}
+
+@media (max-width: 780px) {
+    .raison__paire { grid-template-columns: minmax(0, 1fr); }
+    .valeur {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 6px;
+    }
+}
