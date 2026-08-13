@@ -82,11 +82,13 @@
      * Extrait uniquement le contenu de la balise <nav>
      */
     function extractNavContent(html) {
-        const match = html.match(/<nav[^>]*>([\s\S]*?)<\/nav>/i);
-        if (match) {
-            return '<nav' + html.match(/<nav([^>]*)>/i)[1] + '>' + match[1] + '</nav>';
-        }
-        return html;
+        // Le fragment contient un second <nav> imbrique (la navigation du
+        // panneau mobile). Une expression reguliere non gourmande s'arretait
+        // a son </nav> et amputait la fin du fragment : le bouton d'appel du
+        // panneau mobile n'a jamais ete rendu. On analyse donc le fragment.
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        const nav = doc.querySelector('nav.navbar') || doc.querySelector('nav');
+        return nav ? nav.outerHTML : html;
     }
 
     /**
@@ -124,6 +126,138 @@
         });
     }
 
+    // ========================================
+    // MENU MOBILE
+    // ========================================
+
+    const SELECTEUR_FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+    /**
+     * Menu mobile : ouverture, fermeture et navigation au clavier.
+     *
+     * Sur telephone c'est le seul acces a la navigation : le panneau doit
+     * pouvoir se fermer autrement qu'en retrouvant le bouton (Echap, clic
+     * a cote, choix d'un lien, retour au desktop).
+     */
+    function initMobileMenu({ navbar, mobileToggle, mobileMenu }) {
+        let ouvert = false;
+
+        const libelle = (cle) => mobileToggle.dataset[cle] || 'Menu';
+
+        function ouvrir({ focusPanneau = false } = {}) {
+            if (ouvert) return;
+            ouvert = true;
+            mobileMenu.classList.add('active');
+            // `inert` sort le panneau de la tabulation quand il est ferme ;
+            // le retirer le rend focusable immediatement.
+            mobileMenu.removeAttribute('inert');
+            mobileMenu.setAttribute('aria-hidden', 'false');
+            mobileToggle.setAttribute('aria-expanded', 'true');
+            mobileToggle.setAttribute('aria-label', libelle('labelFermer'));
+            document.body.classList.add('menu-open');
+            // La barre porte le bouton de fermeture : elle ne doit pas
+            // se derober si un defilement residuel survient.
+            if (navbar) navbar.classList.add('navbar--menu-ouvert');
+
+            if (focusPanneau) donnerLeFocusAuPanneau();
+        }
+
+        /**
+         * Amene le focus sur la premiere destination du panneau.
+         *
+         * Possible des le retrait de `inert` : l'attribut prend effet
+         * immediatement, sans attendre de recalcul de style.
+         */
+        function donnerLeFocusAuPanneau() {
+            const premier = mobileMenu.querySelector(SELECTEUR_FOCUSABLE);
+            if (premier) premier.focus();
+        }
+
+        function fermer({ rendreLeFocus = false } = {}) {
+            if (!ouvert) return;
+            ouvert = false;
+            mobileMenu.classList.remove('active');
+            mobileMenu.setAttribute('inert', '');
+            mobileMenu.setAttribute('aria-hidden', 'true');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            mobileToggle.setAttribute('aria-label', libelle('labelOuvrir'));
+            document.body.classList.remove('menu-open');
+            if (navbar) navbar.classList.remove('navbar--menu-ouvert');
+
+            // Au clavier, laisser le focus sur un element devenu invisible
+            // renverrait l'utilisateur au debut de la page.
+            if (rendreLeFocus) mobileToggle.focus();
+        }
+
+        mobileToggle.addEventListener('click', (e) => {
+            if (ouvert) {
+                fermer();
+                return;
+            }
+            // Une activation au clavier (Entree ou Espace) arrive avec
+            // detail = 0. Elle seule justifie de deplacer le focus : au
+            // doigt ou a la souris, le focus doit rester ou il est.
+            ouvrir({ focusPanneau: e.detail === 0 });
+        });
+
+        // Choisir une destination ferme le panneau.
+        mobileMenu.querySelectorAll('a').forEach((lien) => {
+            lien.addEventListener('click', () => fermer());
+        });
+
+        // Clic sur le fond du panneau (hors contenu) : fermeture.
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) fermer();
+        });
+
+        // Clic ailleurs dans la page, barre comprise.
+        document.addEventListener('click', (e) => {
+            if (!ouvert) return;
+            if (mobileMenu.contains(e.target) || mobileToggle.contains(e.target)) return;
+            fermer();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!ouvert) return;
+            if (e.key === 'Escape') {
+                fermer({ rendreLeFocus: true });
+                return;
+            }
+            if (e.key === 'Tab') piegerLeFocus(e, mobileMenu, mobileToggle);
+        });
+
+        // Retour au desktop avec le panneau ouvert : il resterait affiche
+        // par-dessus une navigation redevenue visible.
+        window.addEventListener('resize', () => {
+            if (ouvert && window.innerWidth > 1024) fermer();
+        });
+    }
+
+    /**
+     * Maintient la tabulation dans le panneau tant qu'il est ouvert :
+     * sans cela le focus part derriere l'overlay, dans une page masquee.
+     */
+    function piegerLeFocus(e, mobileMenu, mobileToggle) {
+        const cibles = [
+            mobileToggle,
+            ...mobileMenu.querySelectorAll(SELECTEUR_FOCUSABLE),
+        ].filter((el) => el.offsetParent !== null || el === mobileToggle);
+
+        if (cibles.length === 0) return;
+
+        const premier = cibles[0];
+        const dernier = cibles[cibles.length - 1];
+        const actif = document.activeElement;
+
+        if (e.shiftKey && actif === premier) {
+            e.preventDefault();
+            dernier.focus();
+        } else if (!e.shiftKey && actif === dernier) {
+            e.preventDefault();
+            premier.focus();
+        }
+    }
+
     /**
      * Initialise les interactions (mobile menu, dropdowns, scroll)
      */
@@ -133,22 +267,9 @@
         const mobileMenu = container.querySelector('.navbar__mobile-menu');
         const dropdowns = container.querySelectorAll('.navbar__dropdown');
 
-        // Mobile menu toggle
+        // Mobile menu
         if (mobileToggle && mobileMenu) {
-            mobileToggle.addEventListener('click', () => {
-                const isOpen = mobileMenu.classList.toggle('active');
-                mobileToggle.setAttribute('aria-expanded', isOpen);
-                document.body.classList.toggle('menu-open', isOpen);
-            });
-
-            // Fermer au clic sur un lien
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.remove('active');
-                    mobileToggle.setAttribute('aria-expanded', 'false');
-                    document.body.classList.remove('menu-open');
-                });
-            });
+            initMobileMenu({ navbar, mobileToggle, mobileMenu });
         }
 
         // Dropdown hover (desktop)
