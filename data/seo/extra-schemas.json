@@ -1,160 +1,426 @@
 {
-  "index.html": {
-    "extra_schemas": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "@id": "https://kaalytics.com/#organization",
-        "name": "Kaalytics",
-        "alternateName": ["Kaalytics AI", "Kaalytics Solutions"],
-        "url": "https://kaalytics.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://kaalytics.com/assets/images/logo/daedalia-logo.png",
-          "width": 612,
-          "height": 612
-        },
-        "image": "https://kaalytics.com/assets/images/og-image.jpg",
-        "description": "Solutions IA pour entreprises africaines. Fleet Management intelligent, copilote IA pour Odoo, automatisation et transformation digitale.",
-        "slogan": "L'IA qui transforme l'industrie africaine",
-        "foundingDate": "2024",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Casablanca",
-          "addressLocality": "Casablanca",
-          "addressRegion": "Casablanca-Settat",
-          "postalCode": "20000",
-          "addressCountry": "MA"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 33.5731,
-          "longitude": -7.5898
-        },
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "telephone": "+212-661-718-141",
-            "contactType": "sales",
-            "areaServed": ["MA", "DZ", "TN", "SN", "CI", "FR"],
-            "availableLanguage": ["French", "English", "Arabic"]
-          },
-          {
-            "@type": "ContactPoint",
-            "telephone": "+212-661-718-141",
-            "contactType": "customer support",
-            "availableLanguage": ["French", "English", "Arabic"]
-          }
-        ],
-        "sameAs": [
-          "https://wa.me/212673736611",
-          "https://twitter.com/kaalytics",
-          "https://linkedin.com/company/kaalytics"
-        ],
-        "areaServed": {
-          "@type": "GeoCircle",
-          "geoMidpoint": {
-            "@type": "GeoCoordinates",
-            "latitude": 33.5731,
-            "longitude": -7.5898
-          },
-          "geoRadius": "5000 km"
-        },
-        "knowsAbout": ["Artificial Intelligence", "Fleet Management", "Odoo ERP", "Digital Transformation", "Predictive Maintenance"],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Kaalytics Modules",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Sales Intelligence", "applicationCategory": "BusinessApplication", "operatingSystem": "Web" } },
-            { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Marketing Automation", "applicationCategory": "BusinessApplication", "operatingSystem": "Web" } },
-            { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Financial Operations", "applicationCategory": "BusinessApplication", "operatingSystem": "Web" } },
-            { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Supply Chain Command", "applicationCategory": "BusinessApplication", "operatingSystem": "Web" } },
-            { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "FleetOps", "applicationCategory": "BusinessApplication", "operatingSystem": "Web" } },
-            { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "ERP Connect", "applicationCategory": "BusinessApplication", "operatingSystem": "Web" } },
-            { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Digital Platform", "applicationCategory": "BusinessApplication", "operatingSystem": "Web" } },
-            { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "AI Engine", "applicationCategory": "BusinessApplication", "operatingSystem": "Web" } }
-          ]
-        }
-      }
-    ]
-  },
-  "en/index.html": {
-    "extra_schemas": [
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "@id": "https://kaalytics.com/#organization",
-        "name": "Kaalytics",
-        "alternateName": ["Kaalytics AI", "Kaalytics Solutions"],
-        "url": "https://kaalytics.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://kaalytics.com/assets/images/logo/daedalia-logo.png",
-          "width": 612,
-          "height": 612
-        },
-        "image": "https://kaalytics.com/assets/images/og-image.jpg",
-        "description": "AI solutions for African enterprises. Intelligent Fleet Management, AI copilot for Odoo, automation and digital transformation.",
-        "slogan": "AI that transforms African industry",
-        "foundingDate": "2024",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Casablanca",
-          "addressLocality": "Casablanca",
-          "addressRegion": "Casablanca-Settat",
-          "postalCode": "20000",
-          "addressCountry": "MA"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 33.5731,
-          "longitude": -7.5898
-        },
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "telephone": "+212-661-718-141",
-            "contactType": "sales",
-            "areaServed": ["MA", "DZ", "TN", "SN", "CI", "FR"],
-            "availableLanguage": ["French", "English", "Arabic"]
-          },
-          {
-            "@type": "ContactPoint",
-            "telephone": "+212-661-718-141",
-            "contactType": "customer support",
-            "availableLanguage": ["French", "English", "Arabic"]
-          }
-        ],
-        "sameAs": [
-          "https://wa.me/212673736611",
-          "https://twitter.com/kaalytics",
-          "https://linkedin.com/company/kaalytics"
-        ],
-        "areaServed": {
-          "@type": "GeoCircle",
-          "geoMidpoint": {
-            "@type": "GeoCoordinates",
-            "latitude": 33.5731,
-            "longitude": -7.5898
-          },
-          "geoRadius": "5000 km"
-        },
-        "knowsAbout": ["Artificial Intelligence", "Fleet Management", "Odoo ERP", "Digital Transformation", "Predictive Maintenance"],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Kaalytics Modules",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Sales Intelligence", "applicationCategory": "BusinessApplication", "operatingSystem": "Web" } },
-            { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Marketing Automation", "applicationCategory": "BusinessApplication", "operatingSystem": "Web" } },
-            { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Financial Operations", "applicationCategory": "BusinessApplication", "operatingSystem": "Web" } },
-            { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Supply Chain Command", "applicationCategory": "BusinessApplication", "operatingSystem": "Web" } },
-            { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "FleetOps", "applicationCategory": "BusinessApplication", "operatingSystem": "Web" } },
-            { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "ERP Connect", "applicationCategory": "BusinessApplication", "operatingSystem": "Web" } },
-            { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Digital Platform", "applicationCategory": "BusinessApplication", "operatingSystem": "Web" } },
-            { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "AI Engine", "applicationCategory": "BusinessApplication", "operatingSystem": "Web" } }
-          ]
-        }
-      }
-    ]
-  }
+    "index.html": {
+        "extra_schemas": [
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "@id": "https://kaalytics.com/#organization",
+                "name": "Kaalytics",
+                "alternateName": [
+                    "Kaalytics AI",
+                    "Kaalytics Solutions"
+                ],
+                "url": "https://kaalytics.com",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://kaalytics.com/assets/images/logo/daedalia-logo.png",
+                    "width": 612,
+                    "height": 612
+                },
+                "image": "https://kaalytics.com/assets/images/og-image.jpg",
+                "description": "Solutions IA pour entreprises africaines. Fleet Management intelligent, copilote IA pour Odoo, automatisation et transformation digitale.",
+                "slogan": "L'IA qui transforme l'industrie africaine",
+                "foundingDate": "2024",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Casablanca",
+                    "addressLocality": "Casablanca",
+                    "addressRegion": "Casablanca-Settat",
+                    "postalCode": "20000",
+                    "addressCountry": "MA"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 33.5731,
+                    "longitude": -7.5898
+                },
+                "contactPoint": [
+                    {
+                        "@type": "ContactPoint",
+                        "telephone": "+212-661-718-141",
+                        "contactType": "sales",
+                        "areaServed": [
+                            "MA",
+                            "DZ",
+                            "TN",
+                            "SN",
+                            "CI",
+                            "FR"
+                        ],
+                        "availableLanguage": [
+                            "French",
+                            "English",
+                            "Arabic"
+                        ]
+                    },
+                    {
+                        "@type": "ContactPoint",
+                        "telephone": "+212-661-718-141",
+                        "contactType": "customer support",
+                        "availableLanguage": [
+                            "French",
+                            "English",
+                            "Arabic"
+                        ]
+                    }
+                ],
+                "sameAs": [
+                    "https://wa.me/212673736611",
+                    "https://twitter.com/kaalytics",
+                    "https://linkedin.com/company/kaalytics"
+                ],
+                "areaServed": {
+                    "@type": "GeoCircle",
+                    "geoMidpoint": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 33.5731,
+                        "longitude": -7.5898
+                    },
+                    "geoRadius": "5000 km"
+                },
+                "knowsAbout": [
+                    "Artificial Intelligence",
+                    "Fleet Management",
+                    "Odoo ERP",
+                    "Digital Transformation",
+                    "Predictive Maintenance"
+                ],
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Kaalytics Modules",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "SoftwareApplication",
+                                "name": "Sales Intelligence",
+                                "applicationCategory": "BusinessApplication",
+                                "operatingSystem": "Web"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "SoftwareApplication",
+                                "name": "Marketing Automation",
+                                "applicationCategory": "BusinessApplication",
+                                "operatingSystem": "Web"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "SoftwareApplication",
+                                "name": "Financial Operations",
+                                "applicationCategory": "BusinessApplication",
+                                "operatingSystem": "Web"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "SoftwareApplication",
+                                "name": "Supply Chain Command",
+                                "applicationCategory": "BusinessApplication",
+                                "operatingSystem": "Web"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "SoftwareApplication",
+                                "name": "FleetOps",
+                                "applicationCategory": "BusinessApplication",
+                                "operatingSystem": "Web"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "SoftwareApplication",
+                                "name": "ERP Connect",
+                                "applicationCategory": "BusinessApplication",
+                                "operatingSystem": "Web"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "SoftwareApplication",
+                                "name": "Digital Platform",
+                                "applicationCategory": "BusinessApplication",
+                                "operatingSystem": "Web"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "SoftwareApplication",
+                                "name": "AI Engine",
+                                "applicationCategory": "BusinessApplication",
+                                "operatingSystem": "Web"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "en/index.html": {
+        "extra_schemas": [
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "@id": "https://kaalytics.com/#organization",
+                "name": "Kaalytics",
+                "alternateName": [
+                    "Kaalytics AI",
+                    "Kaalytics Solutions"
+                ],
+                "url": "https://kaalytics.com",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://kaalytics.com/assets/images/logo/daedalia-logo.png",
+                    "width": 612,
+                    "height": 612
+                },
+                "image": "https://kaalytics.com/assets/images/og-image.jpg",
+                "description": "AI solutions for African enterprises. Intelligent Fleet Management, AI copilot for Odoo, automation and digital transformation.",
+                "slogan": "AI that transforms African industry",
+                "foundingDate": "2024",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Casablanca",
+                    "addressLocality": "Casablanca",
+                    "addressRegion": "Casablanca-Settat",
+                    "postalCode": "20000",
+                    "addressCountry": "MA"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 33.5731,
+                    "longitude": -7.5898
+                },
+                "contactPoint": [
+                    {
+                        "@type": "ContactPoint",
+                        "telephone": "+212-661-718-141",
+                        "contactType": "sales",
+                        "areaServed": [
+                            "MA",
+                            "DZ",
+                            "TN",
+                            "SN",
+                            "CI",
+                            "FR"
+                        ],
+                        "availableLanguage": [
+                            "French",
+                            "English",
+                            "Arabic"
+                        ]
+                    },
+                    {
+                        "@type": "ContactPoint",
+                        "telephone": "+212-661-718-141",
+                        "contactType": "customer support",
+                        "availableLanguage": [
+                            "French",
+                            "English",
+                            "Arabic"
+                        ]
+                    }
+                ],
+                "sameAs": [
+                    "https://wa.me/212673736611",
+                    "https://twitter.com/kaalytics",
+                    "https://linkedin.com/company/kaalytics"
+                ],
+                "areaServed": {
+                    "@type": "GeoCircle",
+                    "geoMidpoint": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 33.5731,
+                        "longitude": -7.5898
+                    },
+                    "geoRadius": "5000 km"
+                },
+                "knowsAbout": [
+                    "Artificial Intelligence",
+                    "Fleet Management",
+                    "Odoo ERP",
+                    "Digital Transformation",
+                    "Predictive Maintenance"
+                ],
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Kaalytics Modules",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "SoftwareApplication",
+                                "name": "Sales Intelligence",
+                                "applicationCategory": "BusinessApplication",
+                                "operatingSystem": "Web"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "SoftwareApplication",
+                                "name": "Marketing Automation",
+                                "applicationCategory": "BusinessApplication",
+                                "operatingSystem": "Web"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "SoftwareApplication",
+                                "name": "Financial Operations",
+                                "applicationCategory": "BusinessApplication",
+                                "operatingSystem": "Web"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "SoftwareApplication",
+                                "name": "Supply Chain Command",
+                                "applicationCategory": "BusinessApplication",
+                                "operatingSystem": "Web"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "SoftwareApplication",
+                                "name": "FleetOps",
+                                "applicationCategory": "BusinessApplication",
+                                "operatingSystem": "Web"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "SoftwareApplication",
+                                "name": "ERP Connect",
+                                "applicationCategory": "BusinessApplication",
+                                "operatingSystem": "Web"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "SoftwareApplication",
+                                "name": "Digital Platform",
+                                "applicationCategory": "BusinessApplication",
+                                "operatingSystem": "Web"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "SoftwareApplication",
+                                "name": "AI Engine",
+                                "applicationCategory": "BusinessApplication",
+                                "operatingSystem": "Web"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "en/faq.html": {
+        "extra_schemas": [
+            {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "How does Kaalytics work?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "We deploy AI modules that connect directly to your existing ERP (Odoo, SAP, Sage, Dynamics). Each module is independent and adapts to your business. No need to change how you work—we plug into your systems and enhance them."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Where to start?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Through a free audit of your processes. Within 48 hours, we identify the most relevant modules for your business and estimate the impact. No commitment, no surprises."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How long does deployment take?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Allow 2 to 4 weeks between signature and go-live. Our team handles configuration, your data import, and your team training. No technical resources required in-house."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Does it work with my ERP?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "We support Odoo natively, and SAP, Sage, Microsoft Dynamics via REST API. For older systems, we have tailored connectors: CSV, FTP, ODBC. If your ERP has a database or API, we can connect to it."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What is a component?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "A component is a feature within a module. For example, in Sales Intelligence, the Matching Engine, Interactive Map, and Quote Agent are components. The number of included components depends on your plan (Standard, Pro, Premium)."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I start with a single module?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Each module is fully independent. You can start with Sales Intelligence for example, and add other modules whenever you're ready. No mandatory package."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do the modules communicate with each other?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, that's actually one of our strengths. When you combine multiple modules, data flows naturally between them. For example, Marketing Automation campaigns feed your Sales Intelligence pipeline, and FleetOps data enriches Supply Chain Command."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is there a minimum commitment?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No. Monthly subscription, cancelable at any time. We bet on the quality of our solutions, not on lock-in contracts."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is my data secure?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Hosting on secure servers, data encryption at rest and in transit, GDPR compliance. Your data belongs to you — full export available anytime."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How to contact us?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "By WhatsApp at +212 673 736 611 (quick response), or directly on our website. Fast response guaranteed."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
 }

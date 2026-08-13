@@ -17,7 +17,7 @@ FR_DESACCENTUE = re.compile(
 
 # Marqueurs de français sur pages anglaises
 FRENCH_MARKERS = re.compile(
-    r"\b(vos|votre|nos|notre|des|une|pour|avec|sans|plus|tous|toutes|"
+    r"\b(vos|votre|nos|notre|des|une|pour|avec|sans|tous|toutes|"
     r"chaque|leur|dans|entre|selon|ainsi|donc|aussi|les|est|sont|nous|vous|"
     r"qui|que|plusieurs|cette|ces|afin|lors|depuis|jusqu)\b", re.I)
 
