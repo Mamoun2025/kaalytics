@@ -1,0 +1,442 @@
+{
+  "afficher_les_prix": false,
+  "_note": "Les montants sont conserves ici, pas supprimes. Passer afficher_les_prix a true puis relancer scripts.seo.gen_prix les remet en place partout.",
+  "montants": {
+    "fr.palier1.montant": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"tier__price\"><span class=\"tier__price-value\">990</span><span class=\"tier__price-currency\"> EUR</span></div>",
+      "masque": "<div class=\"tier__price\"><span class=\"tier__price-value\">Sur devis</span></div>"
+    },
+    "fr.palier2.montant": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"tier__price\"><span class=\"tier__price-value\">1 490</span><span class=\"tier__price-currency\"> EUR</span></div>",
+      "masque": "<div class=\"tier__price\"><span class=\"tier__price-value\">Sur devis</span></div>"
+    },
+    "fr.palier3.montant": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"tier__price\"><span class=\"tier__price-value\">2 490</span><span class=\"tier__price-currency\"> EUR</span></div>",
+      "masque": "<div class=\"tier__price\"><span class=\"tier__price-value\">Sur devis</span></div>"
+    },
+    "fr.palier1.periode": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"tier__price-period\">par module / mois</div>",
+      "masque": "<div class=\"tier__price-period\">Tarification adaptée à votre périmètre</div>"
+    },
+    "fr.palier2.periode": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"tier__price-period\">par module / mois</div>",
+      "masque": "<div class=\"tier__price-period\">Tarification adaptée à votre périmètre</div>"
+    },
+    "fr.palier3.periode": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"tier__price-period\">par module / mois</div>",
+      "masque": "<div class=\"tier__price-period\">Tarification adaptée à votre périmètre</div>"
+    },
+    "fr.module01": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">990 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module02": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">1 490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module03": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">2 490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module04": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">990 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module05": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">1 490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module06": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">2 490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module07": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">990 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module08": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">1 490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module09": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">2 490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module10": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">990 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module11": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">1 490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module12": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">2 490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module13": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">990 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module14": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">1 490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module15": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">2 490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module16": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">990 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module17": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">1 490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module18": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">2 490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module19": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">990 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module20": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">1 490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module21": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">2 490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module22": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">990 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module23": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">1 490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "fr.module24": {
+      "fichier": "pricing.html",
+      "affiche": "<div class=\"module-row__price\">2 490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">Sur devis</div>"
+    },
+    "en.palier1.montant": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"tier__price\"><span class=\"tier__price-value\">990</span><span class=\"tier__price-currency\"> EUR</span></div>",
+      "masque": "<div class=\"tier__price\"><span class=\"tier__price-value\">On request</span></div>"
+    },
+    "en.palier2.montant": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"tier__price\"><span class=\"tier__price-value\">1 490</span><span class=\"tier__price-currency\"> EUR</span></div>",
+      "masque": "<div class=\"tier__price\"><span class=\"tier__price-value\">On request</span></div>"
+    },
+    "en.palier3.montant": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"tier__price\"><span class=\"tier__price-value\">2 490</span><span class=\"tier__price-currency\"> EUR</span></div>",
+      "masque": "<div class=\"tier__price\"><span class=\"tier__price-value\">On request</span></div>"
+    },
+    "en.palier1.periode": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"tier__price-period\">per module / month</div>",
+      "masque": "<div class=\"tier__price-period\">Pricing tailored to your scope</div>"
+    },
+    "en.palier2.periode": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"tier__price-period\">per module / month</div>",
+      "masque": "<div class=\"tier__price-period\">Pricing tailored to your scope</div>"
+    },
+    "en.palier3.periode": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"tier__price-period\">per module / month</div>",
+      "masque": "<div class=\"tier__price-period\">Pricing tailored to your scope</div>"
+    },
+    "en.module01": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">990 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module02": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">1,490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module03": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">2,490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module04": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">990 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module05": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">1,490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module06": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">2,490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module07": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">990 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module08": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">1,490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module09": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">2,490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module10": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">990 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module11": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">1,490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module12": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">2,490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module13": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">990 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module14": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">1,490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module15": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">2,490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module16": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">990 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module17": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">1,490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module18": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">2,490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module19": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">990 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module20": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">1,490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module21": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">2,490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module22": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">990 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module23": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">1,490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "en.module24": {
+      "fichier": "en/pricing.html",
+      "affiche": "<div class=\"module-row__price\">2,490 EUR</div>",
+      "masque": "<div class=\"module-row__price\">On request</div>"
+    },
+    "fleetops.carte1": {
+      "fichier": "products/fleetops.html",
+      "affiche": "<div class=\"pricing-card__price\">\n                        <span class=\"pricing-card__price-value\">500 EUR</span>\n                        <span class=\"pricing-card__price-period\">/mois</span>\n                    </div>",
+      "masque": "<div class=\"pricing-card__price\"><span class=\"pricing-card__price-value\">Sur devis</span></div>"
+    },
+    "fleetops.carte2": {
+      "fichier": "products/fleetops.html",
+      "affiche": "<div class=\"pricing-card__price\">\n                        <span class=\"pricing-card__price-value\">1 500 EUR</span>\n                        <span class=\"pricing-card__price-period\">/mois</span>\n                    </div>",
+      "masque": "<div class=\"pricing-card__price\"><span class=\"pricing-card__price-value\">Sur devis</span></div>"
+    },
+    "fleetops.carte3": {
+      "fichier": "products/fleetops.html",
+      "affiche": "<div class=\"pricing-card__price\">\n                        <span class=\"pricing-card__price-value\">5 000 EUR</span>\n                        <span class=\"pricing-card__price-period\">/mois</span>\n                    </div>",
+      "masque": "<div class=\"pricing-card__price\"><span class=\"pricing-card__price-value\">Sur devis</span></div>"
+    },
+    "daedalia.carte1": {
+      "fichier": "products/daedalia.html",
+      "affiche": "<div class=\"pricing-card__price\">\n                        <span class=\"pricing-card__price-value\">299 EUR</span>\n                        <span class=\"pricing-card__price-period\">/mois</span>\n                    </div>",
+      "masque": "<div class=\"pricing-card__price\"><span class=\"pricing-card__price-value\">Sur devis</span></div>"
+    },
+    "daedalia.carte2": {
+      "fichier": "products/daedalia.html",
+      "affiche": "<div class=\"pricing-card__price\">\n                        <span class=\"pricing-card__price-value\">599 EUR</span>\n                        <span class=\"pricing-card__price-period\">/mois</span>\n                    </div>",
+      "masque": "<div class=\"pricing-card__price\"><span class=\"pricing-card__price-value\">Sur devis</span></div>"
+    },
+    "fr.utilisateur.sup": {
+      "fichier": "pricing.html",
+      "affiche": "Chaque utilisateur supplémentaire en Standard coûte 50€/mois.",
+      "masque": "Les utilisateurs supplémentaires en Standard sont facturés selon le devis."
+    },
+    "fr.utilisateur.liste": {
+      "fichier": "pricing.html",
+      "affiche": "+ Ajout d'utilisateurs supplémentaires (50EUR/mois en Standard)",
+      "masque": "+ Ajout d'utilisateurs supplémentaires (sur devis en Standard)"
+    },
+    "en.utilisateur.sup": {
+      "fichier": "en/pricing.html",
+      "affiche": "Each additional user in Standard costs 50 EUR/month.",
+      "masque": "Additional users in Standard are billed as quoted."
+    },
+    "en.utilisateur.liste": {
+      "fichier": "en/pricing.html",
+      "affiche": "+ Additional users (50 EUR/month in Standard)",
+      "masque": "+ Additional users (on request in Standard)"
+    },
+    "daedalia.demo.filtre1": {
+      "fichier": "products/daedalia.html",
+      "affiche": "est à <strong>245 EUR HT</strong>.<br>\n                            12 unités en",
+      "masque": "est disponible.<br>\n                            12 unités en"
+    },
+    "daedalia.demo.devis1": {
+      "fichier": "products/daedalia.html",
+      "affiche": "<br>\n                            Total: <strong>735 EUR HT</strong><br>",
+      "masque": "<br>\n                            Devis prêt à envoyer.<br>"
+    },
+    "daedalia.demo.filtre2": {
+      "fichier": "products/daedalia.html",
+      "affiche": "Le filtre à huile référence FIL-349D-OIL est à 245 EUR HT. 12 en stock.",
+      "masque": "Le filtre à huile référence FIL-349D-OIL est disponible. 12 en stock."
+    },
+    "daedalia.demo.devis2": {
+      "fichier": "products/daedalia.html",
+      "affiche": "Devis #QO-2026-0142 créé pour TerraFleet. Total: 18,750 EUR HT. Lien: Voir le devis",
+      "masque": "Devis #QO-2026-0142 créé. Lien: Voir le devis"
+    },
+    "chatbot.fr.tarifs": {
+      "fichier": "components/chatbot-widget.html",
+      "affiche": "FleetOps Pro demarre a 500 EUR/mois pour les flottes jusqu'a 20 vehicules. Le plan Professional (21-100 vehicules) est a 1 500 EUR/mois. Pour les grandes flottes, nous proposons des tarifs sur mesure. Souhaitez-vous un devis personnalise ?",
+      "masque": "Nos tarifs dependent du nombre de modules, du nombre d'utilisateurs et de l'integration a votre ERP. Nous etablissons un devis apres un premier echange de 15 a 30 minutes. Souhaitez-vous qu'on vous rappelle ?"
+    },
+    "chatbot.en.tarifs": {
+      "fichier": "components/chatbot/chatbot-loader.js",
+      "affiche": "FleetOps Pro Pricing:\\n• Starter: €500/month (10-50 vehicles)\\n• Professional: €1500/month (50-200 vehicles)",
+      "masque": "Pricing depends on the number of modules, users and the integration with your ERP.\\n• Every quote follows a short 15-30 minute call"
+    },
+    "chatbot.fr.pricing": {
+      "fichier": "components/chatbot/chatbot-loader.js",
+      "affiche": "fr: \"Nos tarifs FleetOps Pro:\\n• Starter: 500€/mois (10-50 véhicules)\\n• Professional: 1500€/mois (50-200 véhicules)\\n• Enterprise: Sur mesure (200+ véhicules)\\n\\nTous incluent formation et support. Voulez-vous une démo personnalisée?\"",
+      "masque": "fr: \"Nos tarifs dépendent du nombre de modules, du nombre d'utilisateurs et de l'intégration à votre ERP.\\n• Chaque devis suit un premier échange de 15 à 30 minutes\\n• Formation et support inclus dans tous les cas\\n\\nVoulez-vous une démo personnalisée?\""
+    },
+    "chatbot.en.pricing2": {
+      "fichier": "components/chatbot/chatbot-loader.js",
+      "affiche": "• Enterprise: Custom (200+ vehicles)\\n\\nAll include training and support.",
+      "masque": "• Training and support included in every case.\\n\\n"
+    },
+    "daedalia.demo.classement": {
+      "fichier": "products/daedalia.html",
+      "affiche": "a: \"1. TerraFleet (45k EUR), 2. TransMaroc (38k EUR), 3. MineralCo (32k EUR)...\"",
+      "masque": "a: \"Classement des 10 premiers clients du mois, avec leur evolution.\""
+    }
+  },
+  "schemas": {
+    "index.html": [
+      {
+        "avec_prix": "<script type=\"application/ld+json\">\n    {\n        \"@context\": \"https://schema.org\",\n        \"@type\": \"LocalBusiness\",\n        \"@id\": \"https://kaalytics.com/#localbusiness\",\n        \"name\": \"Kaalytics\",\n        \"image\": \"https://kaalytics.com/assets/images/og-image.jpg\",\n        \"priceRange\": \"$$\",\n        \"address\": {\n            \"@type\": \"PostalAddress\",\n            \"streetAddress\": \"Casablanca\",\n            \"addressLocality\": \"Casablanca\",\n            \"addressRegion\": \"Casablanca-Settat\",\n            \"postalCode\": \"20000\",\n            \"addressCountry\": \"MA\"\n        },\n        \"geo\": {\n            \"@type\": \"GeoCoordinates\",\n            \"latitude\": 33.5731,\n            \"longitude\": -7.5898\n        },\n        \"url\": \"https://kaalytics.com\",\n        \"telephone\": \"+212-661-718-141\",\n        \"openingHoursSpecification\": [\n            {\n                \"@type\": \"OpeningHoursSpecification\",\n                \"dayOfWeek\": [\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\"],\n                \"opens\": \"09:00\",\n                \"closes\": \"18:00\"\n            }\n        ]\n    }\n    </script>",
+        "sans_prix": "<script type=\"application/ld+json\">\n    {\n        \"@context\": \"https://schema.org\",\n        \"@type\": \"LocalBusiness\",\n        \"@id\": \"https://kaalytics.com/#localbusiness\",\n        \"name\": \"Kaalytics\",\n        \"image\": \"https://kaalytics.com/assets/images/og-image.jpg\",\n        \"address\": {\n            \"@type\": \"PostalAddress\",\n            \"streetAddress\": \"Casablanca\",\n            \"addressLocality\": \"Casablanca\",\n            \"addressRegion\": \"Casablanca-Settat\",\n            \"postalCode\": \"20000\",\n            \"addressCountry\": \"MA\"\n        },\n        \"geo\": {\n            \"@type\": \"GeoCoordinates\",\n            \"latitude\": 33.5731,\n            \"longitude\": -7.5898\n        },\n        \"url\": \"https://kaalytics.com\",\n        \"telephone\": \"+212-661-718-141\",\n        \"openingHoursSpecification\": [\n            {\n                \"@type\": \"OpeningHoursSpecification\",\n                \"dayOfWeek\": [\n                    \"Monday\",\n                    \"Tuesday\",\n                    \"Wednesday\",\n                    \"Thursday\",\n                    \"Friday\"\n                ],\n                \"opens\": \"09:00\",\n                \"closes\": \"18:00\"\n            }\n        ]\n    }\n    </script>"
+      },
+      {
+        "avec_prix": "<script type=\"application/ld+json\">\n    {\n        \"@context\": \"https://schema.org\",\n        \"@type\": \"Product\",\n        \"name\": \"FleetOps\",\n        \"description\": \"Module de gestion de flotte : GPS temps réel, maintenance predictive, procurement DA-RFQ-PO, rentabilite par machine et par chantier\",\n        \"brand\": {\n            \"@type\": \"Brand\",\n            \"name\": \"Kaalytics\"\n        },\n        \"offers\": {\n            \"@type\": \"AggregateOffer\",\n            \"lowPrice\": \"499\",\n            \"highPrice\": \"1999\",\n            \"priceCurrency\": \"EUR\",\n            \"offerCount\": \"3\",\n            \"availability\": \"https://schema.org/InStock\"\n        }\n    }\n    </script>",
+        "sans_prix": "<script type=\"application/ld+json\">\n    {\n        \"@context\": \"https://schema.org\",\n        \"@type\": \"Product\",\n        \"name\": \"FleetOps\",\n        \"description\": \"Module de gestion de flotte : GPS temps réel, maintenance predictive, procurement DA-RFQ-PO, rentabilite par machine et par chantier\",\n        \"brand\": {\n            \"@type\": \"Brand\",\n            \"name\": \"Kaalytics\"\n        }\n    }\n    </script>"
+      }
+    ],
+    "en/index.html": [
+      {
+        "avec_prix": "<script type=\"application/ld+json\">\n    {\n        \"@context\": \"https://schema.org\",\n        \"@type\": \"LocalBusiness\",\n        \"@id\": \"https://kaalytics.com/#localbusiness\",\n        \"name\": \"Kaalytics\",\n        \"image\": \"https://kaalytics.com/assets/images/og-image.jpg\",\n        \"priceRange\": \"$$\",\n        \"address\": {\n            \"@type\": \"PostalAddress\",\n            \"streetAddress\": \"Casablanca\",\n            \"addressLocality\": \"Casablanca\",\n            \"addressRegion\": \"Casablanca-Settat\",\n            \"postalCode\": \"20000\",\n            \"addressCountry\": \"MA\"\n        },\n        \"geo\": {\n            \"@type\": \"GeoCoordinates\",\n            \"latitude\": 33.5731,\n            \"longitude\": -7.5898\n        },\n        \"url\": \"https://kaalytics.com\",\n        \"telephone\": \"+212-661-718-141\",\n        \"openingHoursSpecification\": [\n            {\n                \"@type\": \"OpeningHoursSpecification\",\n                \"dayOfWeek\": [\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\"],\n                \"opens\": \"09:00\",\n                \"closes\": \"18:00\"\n            }\n        ]\n    }\n    </script>",
+        "sans_prix": "<script type=\"application/ld+json\">\n    {\n        \"@context\": \"https://schema.org\",\n        \"@type\": \"LocalBusiness\",\n        \"@id\": \"https://kaalytics.com/#localbusiness\",\n        \"name\": \"Kaalytics\",\n        \"image\": \"https://kaalytics.com/assets/images/og-image.jpg\",\n        \"address\": {\n            \"@type\": \"PostalAddress\",\n            \"streetAddress\": \"Casablanca\",\n            \"addressLocality\": \"Casablanca\",\n            \"addressRegion\": \"Casablanca-Settat\",\n            \"postalCode\": \"20000\",\n            \"addressCountry\": \"MA\"\n        },\n        \"geo\": {\n            \"@type\": \"GeoCoordinates\",\n            \"latitude\": 33.5731,\n            \"longitude\": -7.5898\n        },\n        \"url\": \"https://kaalytics.com\",\n        \"telephone\": \"+212-661-718-141\",\n        \"openingHoursSpecification\": [\n            {\n                \"@type\": \"OpeningHoursSpecification\",\n                \"dayOfWeek\": [\n                    \"Monday\",\n                    \"Tuesday\",\n                    \"Wednesday\",\n                    \"Thursday\",\n                    \"Friday\"\n                ],\n                \"opens\": \"09:00\",\n                \"closes\": \"18:00\"\n            }\n        ]\n    }\n    </script>"
+      },
+      {
+        "avec_prix": "<script type=\"application/ld+json\">\n    {\n        \"@context\": \"https://schema.org\",\n        \"@type\": \"Product\",\n        \"name\": \"FleetOps\",\n        \"description\": \"Module of gestion of flotte : GPS temps reel, maintenance predictive, procurement DA-RFQ-PO, rentabilite by machine and by chantier\",\n        \"brand\": {\n            \"@type\": \"Brand\",\n            \"name\": \"Kaalytics\"\n        },\n        \"offers\": {\n            \"@type\": \"AggregateOffer\",\n            \"lowPrice\": \"499\",\n            \"highPrice\": \"1999\",\n            \"priceCurrency\": \"EUR\",\n            \"offerCount\": \"3\",\n            \"availability\": \"https://schema.org/InStock\"\n        }\n    }\n    </script>",
+        "sans_prix": "<script type=\"application/ld+json\">\n    {\n        \"@context\": \"https://schema.org\",\n        \"@type\": \"Product\",\n        \"name\": \"FleetOps\",\n        \"description\": \"Module of gestion of flotte : GPS temps reel, maintenance predictive, procurement DA-RFQ-PO, rentabilite by machine and by chantier\",\n        \"brand\": {\n            \"@type\": \"Brand\",\n            \"name\": \"Kaalytics\"\n        }\n    }\n    </script>"
+      }
+    ],
+    "products/fleetops.html": [
+      {
+        "avec_prix": "<script type=\"application/ld+json\">\n    {\n        \"@context\": \"https://schema.org\",\n        \"@type\": \"Product\",\n        \"name\": \"FleetOps Pro\",\n        \"description\": \"Solution complete de gestion de flotte IA pour BTP, Transport et Location. 8 modules integres: Parc, Planning, Maintenance, Supply, Chantiers, Effectif, Produits, Dashboard.\",\n        \"url\": \"https://kaalytics.com/products/fleetops\",\n        \"image\": \"https://kaalytics.com/assets/images/fleetops-hero.jpg\",\n        \"brand\": {\n            \"@type\": \"Brand\",\n            \"name\": \"Kaalytics\"\n        },\n        \"offers\": {\n            \"@type\": \"AggregateOffer\",\n            \"lowPrice\": \"500\",\n            \"highPrice\": \"5000\",\n            \"priceCurrency\": \"EUR\",\n            \"offerCount\": \"3\",\n            \"offers\": [\n                {\n                    \"@type\": \"Offer\",\n                    \"name\": \"Starter\",\n                    \"price\": \"500\",\n                    \"priceCurrency\": \"EUR\",\n                    \"description\": \"1-20 vehicules\"\n                },\n                {\n                    \"@type\": \"Offer\",\n                    \"name\": \"Professional\",\n                    \"price\": \"1500\",\n                    \"priceCurrency\": \"EUR\",\n                    \"description\": \"21-100 vehicules\"\n                },\n                {\n                    \"@type\": \"Offer\",\n                    \"name\": \"Enterprise\",\n                    \"description\": \"100+ vehicules, sur mesure\"\n                }\n            ]\n        }\n    }\n    </script>",
+        "sans_prix": "<script type=\"application/ld+json\">\n    {\n        \"@context\": \"https://schema.org\",\n        \"@type\": \"Product\",\n        \"name\": \"FleetOps Pro\",\n        \"description\": \"Solution complete de gestion de flotte IA pour BTP, Transport et Location. 8 modules integres: Parc, Planning, Maintenance, Supply, Chantiers, Effectif, Produits, Dashboard.\",\n        \"url\": \"https://kaalytics.com/products/fleetops\",\n        \"image\": \"https://kaalytics.com/assets/images/fleetops-hero.jpg\",\n        \"brand\": {\n            \"@type\": \"Brand\",\n            \"name\": \"Kaalytics\"\n        }\n    }\n    </script>"
+      }
+    ],
+    "products/daedalia.html": [
+      {
+        "avec_prix": "<script type=\"application/ld+json\">\n    {\n        \"@context\": \"https://schema.org\",\n        \"@type\": \"SoftwareApplication\",\n        \"@id\": \"https://kaalytics.com/products/daedalia.html#software\",\n        \"name\": \"Daedalia AI\",\n        \"alternateName\": [\"Daedalia\", \"Copilote IA Odoo\", \"Odoo AI Assistant\"],\n        \"description\": \"Copilote IA pour Odoo propulse par Claude AI. Interrogez vos données en langage naturel, creez des devis automatiquement, analysez vos ventes en temps réel. 178,000+ documents indexes, reponse en moins de 3 secondes.\",\n        \"url\": \"https://kaalytics.com/products/daedalia.html\",\n        \"image\": {\n            \"@type\": \"ImageObject\",\n            \"url\": \"https://kaalytics.com/assets/images/logo/daedalia-head.jpg\",\n            \"width\": 800,\n            \"height\": 800\n        },\n        \"screenshot\": \"https://kaalytics.com/assets/images/daedalia-demo.jpg\",\n        \"applicationCategory\": \"BusinessApplication\",\n        \"applicationSubCategory\": \"AI Assistant\",\n        \"operatingSystem\": \"Web Browser, Odoo 14, Odoo 15, Odoo 16, Odoo 17\",\n        \"softwareVersion\": \"2.0\",\n        \"releaseNotes\": \"Integration Claude AI, support multilingue, temps de reponse ameliore\",\n        \"datePublished\": \"2024-01-01\",\n        \"dateModified\": \"2026-01-22\",\n        \"inLanguage\": [\"fr\", \"en\", \"ar\"],\n        \"isAccessibleForFree\": false,\n        \"offers\": {\n            \"@type\": \"AggregateOffer\",\n            \"lowPrice\": \"299\",\n            \"highPrice\": \"599\",\n            \"priceCurrency\": \"EUR\",\n            \"priceValidUntil\": \"2026-12-31\",\n            \"availability\": \"https://schema.org/InStock\",\n            \"offerCount\": \"3\",\n            \"offers\": [\n                {\n                    \"@type\": \"Offer\",\n                    \"name\": \"Daedalia Starter\",\n                    \"price\": \"299\",\n                    \"priceCurrency\": \"EUR\",\n                    \"description\": \"5 utilisateurs, 1000 requetes/mois, Integration Odoo, Support email\",\n                    \"availability\": \"https://schema.org/InStock\",\n                    \"priceValidUntil\": \"2026-12-31\",\n                    \"url\": \"https://kaalytics.com/products/daedalia.html#pricing\"\n                },\n                {\n                    \"@type\": \"Offer\",\n                    \"name\": \"Daedalia Professional\",\n                    \"price\": \"599\",\n                    \"priceCurrency\": \"EUR\",\n                    \"description\": \"20 utilisateurs, Requetes illimitees, Formation equipe, Support prioritaire\",\n                    \"availability\": \"https://schema.org/InStock\",\n                    \"priceValidUntil\": \"2026-12-31\",\n                    \"url\": \"https://kaalytics.com/products/daedalia.html#pricing\"\n                },\n                {\n                    \"@type\": \"Offer\",\n                    \"name\": \"Daedalia Enterprise\",\n                    \"description\": \"Utilisateurs illimites, Acces API, White-label, Support dedie\",\n                    \"availability\": \"https://schema.org/InStock\",\n                    \"url\": \"https://kaalytics.com/products/daedalia.html#pricing\"\n                }\n            ]\n        },\n        \"featureList\": [\n            \"Interrogation en langage naturel de 178,000+ documents\",\n            \"Creation de devis automatique en une phrase\",\n            \"Analyse des ventes en temps réel\",\n            \"Integration native Odoo 14-17\",\n            \"Temps de reponse inferieur a 3 secondes\",\n            \"Support multilingue (FR, EN, AR)\",\n            \"Propulse par Claude AI (Anthropic)\",\n            \"Deploiement en 1 semaine\"\n        ],\n        \"provider\": {\n            \"@type\": \"Organization\",\n            \"@id\": \"https://kaalytics.com/#organization\",\n            \"name\": \"Kaalytics\",\n            \"url\": \"https://kaalytics.com\"\n        },\n        \"maintainer\": {\n            \"@type\": \"Organization\",\n            \"name\": \"Kaalytics\"\n        }\n    }\n    </script>",
+        "sans_prix": "<script type=\"application/ld+json\">\n    {\n        \"@context\": \"https://schema.org\",\n        \"@type\": \"SoftwareApplication\",\n        \"@id\": \"https://kaalytics.com/products/daedalia.html#software\",\n        \"name\": \"Daedalia AI\",\n        \"alternateName\": [\n            \"Daedalia\",\n            \"Copilote IA Odoo\",\n            \"Odoo AI Assistant\"\n        ],\n        \"description\": \"Copilote IA pour Odoo propulse par Claude AI. Interrogez vos données en langage naturel, creez des devis automatiquement, analysez vos ventes en temps réel. 178,000+ documents indexes, reponse en moins de 3 secondes.\",\n        \"url\": \"https://kaalytics.com/products/daedalia.html\",\n        \"image\": {\n            \"@type\": \"ImageObject\",\n            \"url\": \"https://kaalytics.com/assets/images/logo/daedalia-head.jpg\",\n            \"width\": 800,\n            \"height\": 800\n        },\n        \"screenshot\": \"https://kaalytics.com/assets/images/daedalia-demo.jpg\",\n        \"applicationCategory\": \"BusinessApplication\",\n        \"applicationSubCategory\": \"AI Assistant\",\n        \"operatingSystem\": \"Web Browser, Odoo 14, Odoo 15, Odoo 16, Odoo 17\",\n        \"softwareVersion\": \"2.0\",\n        \"releaseNotes\": \"Integration Claude AI, support multilingue, temps de reponse ameliore\",\n        \"datePublished\": \"2024-01-01\",\n        \"dateModified\": \"2026-01-22\",\n        \"inLanguage\": [\n            \"fr\",\n            \"en\",\n            \"ar\"\n        ],\n        \"isAccessibleForFree\": false,\n        \"featureList\": [\n            \"Interrogation en langage naturel de 178,000+ documents\",\n            \"Creation de devis automatique en une phrase\",\n            \"Analyse des ventes en temps réel\",\n            \"Integration native Odoo 14-17\",\n            \"Temps de reponse inferieur a 3 secondes\",\n            \"Support multilingue (FR, EN, AR)\",\n            \"Propulse par Claude AI (Anthropic)\",\n            \"Deploiement en 1 semaine\"\n        ],\n        \"provider\": {\n            \"@type\": \"Organization\",\n            \"@id\": \"https://kaalytics.com/#organization\",\n            \"name\": \"Kaalytics\",\n            \"url\": \"https://kaalytics.com\"\n        },\n        \"maintainer\": {\n            \"@type\": \"Organization\",\n            \"name\": \"Kaalytics\"\n        }\n    }\n    </script>"
+      }
+    ],
+    "contact.html": [
+      {
+        "avec_prix": "        \"priceRange\": \"$$\",\n",
+        "sans_prix": ""
+      }
+    ],
+    "en/contact.html": [
+      {
+        "avec_prix": "        \"priceRange\": \"$$\",\n",
+        "sans_prix": ""
+      }
+    ]
+  }
+}

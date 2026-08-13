@@ -54,7 +54,11 @@
         "@type": "SoftwareApplication",
         "@id": "https://kaalytics.com/products/daedalia.html#software",
         "name": "Daedalia AI",
-        "alternateName": ["Daedalia", "Copilote IA Odoo", "Odoo AI Assistant"],
+        "alternateName": [
+            "Daedalia",
+            "Copilote IA Odoo",
+            "Odoo AI Assistant"
+        ],
         "description": "Copilote IA pour Odoo propulse par Claude AI. Interrogez vos données en langage naturel, creez des devis automatiquement, analysez vos ventes en temps réel. 178,000+ documents indexes, reponse en moins de 3 secondes.",
         "url": "https://kaalytics.com/products/daedalia.html",
         "image": {
@@ -71,46 +75,12 @@
         "releaseNotes": "Integration Claude AI, support multilingue, temps de reponse ameliore",
         "datePublished": "2024-01-01",
         "dateModified": "2026-01-22",
-        "inLanguage": ["fr", "en", "ar"],
+        "inLanguage": [
+            "fr",
+            "en",
+            "ar"
+        ],
         "isAccessibleForFree": false,
-        "offers": {
-            "@type": "AggregateOffer",
-            "lowPrice": "299",
-            "highPrice": "599",
-            "priceCurrency": "EUR",
-            "priceValidUntil": "2026-12-31",
-            "availability": "https://schema.org/InStock",
-            "offerCount": "3",
-            "offers": [
-                {
-                    "@type": "Offer",
-                    "name": "Daedalia Starter",
-                    "price": "299",
-                    "priceCurrency": "EUR",
-                    "description": "5 utilisateurs, 1000 requetes/mois, Integration Odoo, Support email",
-                    "availability": "https://schema.org/InStock",
-                    "priceValidUntil": "2026-12-31",
-                    "url": "https://kaalytics.com/products/daedalia.html#pricing"
-                },
-                {
-                    "@type": "Offer",
-                    "name": "Daedalia Professional",
-                    "price": "599",
-                    "priceCurrency": "EUR",
-                    "description": "20 utilisateurs, Requetes illimitees, Formation equipe, Support prioritaire",
-                    "availability": "https://schema.org/InStock",
-                    "priceValidUntil": "2026-12-31",
-                    "url": "https://kaalytics.com/products/daedalia.html#pricing"
-                },
-                {
-                    "@type": "Offer",
-                    "name": "Daedalia Enterprise",
-                    "description": "Utilisateurs illimites, Acces API, White-label, Support dedie",
-                    "availability": "https://schema.org/InStock",
-                    "url": "https://kaalytics.com/products/daedalia.html#pricing"
-                }
-            ]
-        },
         "featureList": [
             "Interrogation en langage naturel de 178,000+ documents",
             "Creation de devis automatique en une phrase",
@@ -1353,15 +1323,15 @@
                             Quel est le prix du filtre à huile pour CAT 349D?
                         </div>
                         <div class="demo-message demo-message--ai">
-                            Le filtre à huile référence <strong>FIL-349D-OIL</strong> est à <strong>245 EUR HT</strong>.<br>
-                            12 unités en stock. Délai livraison: 2-3 jours.
+                            Le filtre à huile référence <strong>FIL-349D-OIL</strong> <!--PRIX:daedalia.demo.filtre1-->est disponible.<br>
+                            12 unités en<!--/PRIX--> stock. Délai livraison: 2-3 jours.
                         </div>
                         <div class="demo-message demo-message--user">
                             Créé un devis pour TerraFleet avec 3 de ces filtres
                         </div>
                         <div class="demo-message demo-message--ai">
-                            Devis <strong>#QO-2026-0142</strong> créé pour TerraFleet.<br>
-                            Total: <strong>735 EUR HT</strong><br>
+                            Devis <strong>#QO-2026-0142</strong> créé pour TerraFleet.<!--PRIX:daedalia.demo.devis1--><br>
+                            Devis prêt à envoyer.<br><!--/PRIX-->
                             <a href="#" style="color: var(--daedalia-primary);">Voir le devis dans Odoo</a>
                         </div>
                     </div>
@@ -1449,7 +1419,7 @@
                     <div class="usecase-card__avatar usecase-card__avatar--ai">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
                     </div>
-                    <div class="usecase-card__text">Le filtre à huile référence FIL-349D-OIL est à 245 EUR HT. 12 en stock.</div>
+                    <div class="usecase-card__text"><!--PRIX:daedalia.demo.filtre2-->Le filtre à huile référence FIL-349D-OIL est disponible. 12 en stock.<!--/PRIX--></div>
                 </div>
             </div>
 
@@ -1464,7 +1434,7 @@
                     <div class="usecase-card__avatar usecase-card__avatar--ai">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
                     </div>
-                    <div class="usecase-card__text">Devis #QO-2026-0142 créé pour TerraFleet. Total: 18,750 EUR HT. Lien: Voir le devis</div>
+                    <div class="usecase-card__text"><!--PRIX:daedalia.demo.devis2-->Devis #QO-2026-0142 créé. Lien: Voir le devis<!--/PRIX--></div>
                 </div>
             </div>
 
@@ -1496,10 +1466,7 @@
                 <!-- Starter -->
                 <div class="pricing-card">
                     <h3 class="pricing-card__name">Starter</h3>
-                    <div class="pricing-card__price">
-                        <span class="pricing-card__price-value">299 EUR</span>
-                        <span class="pricing-card__price-period">/mois</span>
-                    </div>
+                    <!--PRIX:daedalia.carte1--><div class="pricing-card__price"><span class="pricing-card__price-value">Sur devis</span></div><!--/PRIX-->
                     <ul class="pricing-card__features">
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 5 utilisateurs</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 1000 requêtes/mois</li>
@@ -1513,10 +1480,7 @@
                 <div class="pricing-card pricing-card--featured">
                     <span class="pricing-card__badge">Populaire</span>
                     <h3 class="pricing-card__name">Professional</h3>
-                    <div class="pricing-card__price">
-                        <span class="pricing-card__price-value">599 EUR</span>
-                        <span class="pricing-card__price-period">/mois</span>
-                    </div>
+                    <!--PRIX:daedalia.carte2--><div class="pricing-card__price"><span class="pricing-card__price-value">Sur devis</span></div><!--/PRIX-->
                     <ul class="pricing-card__features">
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 20 utilisateurs</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Requêtes illimitées</li>
@@ -1562,7 +1526,7 @@
     <script>
         // Demo simulation
         const suggestions = [
-            { q: "Mes 10 meilleurs clients ce mois?", a: "1. TerraFleet (45k EUR), 2. TransMaroc (38k EUR), 3. MineralCo (32k EUR)..." },
+            { q: "Mes 10 meilleurs clients ce mois?", a: "Classement des 10 premiers clients du mois, avec leur evolution." },
             { q: "Stock critique a commander?", a: "5 produits en rupture: Filtre air CAT (0), Joint pompe D8R (2), Courroie 349D (1)..." },
             { q: "Envoie le devis 142 par email", a: "Email envoye a contact@terrafleet.ma avec le devis QO-2026-0142 en piece jointe." }
         ];
