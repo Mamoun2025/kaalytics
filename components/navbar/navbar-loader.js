@@ -310,8 +310,8 @@
 
     /**
      * Initialise le language switcher
-     * Note: Les event listeners sont gérés par i18n.js setupLangSwitcher()
-     * Cette fonction prépare juste les éléments pour l'accessibilité
+     * Le basculement FR/EN se fait par l'URL : chaque bouton pointe vers
+     * la page equivalente dans l'autre langue.
      */
     function initLangSwitcher(container) {
         // Switcher pilule FR/EN piloté par l'URL (path-based). Pointe vers l'URL équivalente.

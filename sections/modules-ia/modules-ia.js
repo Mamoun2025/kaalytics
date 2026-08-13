@@ -28,9 +28,9 @@
                 'KPI Executive quotidien'
             ],
             videos: [
-                'assets/videos/sales/sales-1.mp4',
-                'assets/videos/sales/sales-2.mp4',
-                'assets/videos/sales/sales-3.mp4'
+                '/assets/videos/sales/sales-1.mp4',
+                '/assets/videos/sales/sales-2.mp4',
+                '/assets/videos/sales/sales-3.mp4'
             ],
             link: 'modules/sales-intelligence'
         },
@@ -46,9 +46,9 @@
                 'Matrices compatibilité produits'
             ],
             videos: [
-                'assets/videos/marketing/marketing-1.mp4',
-                'assets/videos/odoo/odoo-1.mp4',
-                'assets/videos/connectivity/connectivity-1.mp4'
+                '/assets/videos/marketing/marketing-1.mp4',
+                '/assets/videos/odoo/odoo-1.mp4',
+                '/assets/videos/connectivity/connectivity-1.mp4'
             ],
             link: 'modules/marketing-automation'
         },
@@ -63,9 +63,9 @@
                 'Détection non-factures temps réel'
             ],
             videos: [
-                'assets/videos/odoo/odoo-1.mp4',
-                'assets/videos/odoo/odoo-2.mp4',
-                'assets/videos/connectivity/connectivity-4.mp4'
+                '/assets/videos/odoo/odoo-1.mp4',
+                '/assets/videos/odoo/odoo-2.mp4',
+                '/assets/videos/connectivity/connectivity-4.mp4'
             ],
             link: 'modules/financial-operations'
         },
@@ -81,9 +81,9 @@
                 'Revue tarifaire automatisée'
             ],
             videos: [
-                'assets/videos/industrial/industrial-2.mp4',
-                'assets/videos/connectivity/connectivity-3.mp4',
-                'assets/videos/odoo/odoo-2.mp4'
+                '/assets/videos/industrial/industrial-2.mp4',
+                '/assets/videos/connectivity/connectivity-3.mp4',
+                '/assets/videos/odoo/odoo-2.mp4'
             ],
             link: 'modules/supply-chain'
         },
@@ -100,12 +100,12 @@
                 'Planning ressources'
             ],
             videos: [
-                'assets/videos/industrial/industrial-1.mp4',
-                'assets/videos/industrial/industrial-2.mp4',
-                'assets/videos/industrial/industrial-3.mp4',
-                'assets/videos/industrial/industrial-4.mp4',
-                'assets/videos/industrial/industrial-5.mp4',
-                'assets/videos/industrial/industrial-6.mp4'
+                '/assets/videos/industrial/industrial-1.mp4',
+                '/assets/videos/industrial/industrial-2.mp4',
+                '/assets/videos/industrial/industrial-3.mp4',
+                '/assets/videos/industrial/industrial-4.mp4',
+                '/assets/videos/industrial/industrial-5.mp4',
+                '/assets/videos/industrial/industrial-6.mp4'
             ],
             link: 'modules/fleetops'
         },
@@ -120,9 +120,9 @@
                 'Mobile & terrain'
             ],
             videos: [
-                'assets/videos/connectivity/connectivity-1.mp4',
-                'assets/videos/connectivity/connectivity-2.mp4',
-                'assets/videos/connectivity/connectivity-3.mp4'
+                '/assets/videos/connectivity/connectivity-1.mp4',
+                '/assets/videos/connectivity/connectivity-2.mp4',
+                '/assets/videos/connectivity/connectivity-3.mp4'
             ],
             link: 'modules/erp-connect'
         },
@@ -138,9 +138,9 @@
                 'Scraping données produits'
             ],
             videos: [
-                'assets/videos/odoo/odoo-2.mp4',
-                'assets/videos/sales/sales-1.mp4',
-                'assets/videos/connectivity/connectivity-2.mp4'
+                '/assets/videos/odoo/odoo-2.mp4',
+                '/assets/videos/sales/sales-1.mp4',
+                '/assets/videos/connectivity/connectivity-2.mp4'
             ],
             link: 'modules/digital-platform'
         },
@@ -156,9 +156,9 @@
                 'Pricing intelligence'
             ],
             videos: [
-                'assets/videos/cyber/cyber-1.mp4',
-                'assets/videos/cyber/cyber-2.mp4',
-                'assets/videos/architecture/ai-infrastructure-showcase.mp4'
+                '/assets/videos/cyber/cyber-1.mp4',
+                '/assets/videos/cyber/cyber-2.mp4',
+                '/assets/videos/architecture/ai-infrastructure-showcase.mp4'
             ],
             link: 'modules/ai-engine'
         }

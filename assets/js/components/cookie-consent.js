@@ -10,11 +10,6 @@ class CookieConsent {
         this.consent = this.getConsent();
 
         this.init();
-
-        // Ecouter les changements de langue pour recréer le banner
-        document.addEventListener('i18nLanguageChanged', () => {
-            this.recreateBanner();
-        });
     }
 
     init() {
@@ -122,10 +117,9 @@ class CookieConsent {
     }
 
     t(key) {
-        if (window.i18n && window.i18n.isReady()) {
-            return window.i18n.t(key);
-        }
-        return key;
+        // Libelles portes par cookie-consent-textes.js. Sans lui, on
+        // renvoie la cle : visible tout de suite, plutot qu'un blanc.
+        return window.texteConsentement ? window.texteConsentement(key) : key;
     }
 
     createBanner() {
@@ -324,26 +318,9 @@ class CookieConsent {
     }
 }
 
-// Initialiser au chargement - attendre i18n si disponible
+// Le bandeau porte ses propres libelles : rien a attendre.
 document.addEventListener('DOMContentLoaded', () => {
-    // Si i18n est deja pret, initialiser directement
-    if (window.i18n && window.i18n.isReady()) {
-        window.cookieConsent = new CookieConsent();
-    } else {
-        // Attendre l'evenement i18n ready
-        const handler = () => {
-            window.cookieConsent = new CookieConsent();
-            document.removeEventListener('i18nReady', handler);
-        };
-        document.addEventListener('i18nReady', handler);
-        // Fallback: si i18n ne se charge pas apres 3s, initialiser quand meme
-        setTimeout(() => {
-            if (!window.cookieConsent) {
-                window.cookieConsent = new CookieConsent();
-                document.removeEventListener('i18nReady', handler);
-            }
-        }, 3000);
-    }
+    window.cookieConsent = new CookieConsent();
 });
 
 // Export pour usage externe

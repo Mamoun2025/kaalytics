@@ -17,9 +17,8 @@ const Kaalytics = {
         this.initNavbar();
         this.initAnimations();
         this.initLazyLoading();
-        // i18n gere par un systeme unique (assets/js/i18n/i18n.js + /assets/locales).
-        // Ancien systeme (/i18n, dico incomplet) desactive pour eviter le melange FR/EN.
-        // this.initI18n();
+        // Pas de traduction au chargement : la langue vient de l'URL,
+        // chaque page porte deja son texte definitif.
 
         if (this.config.debug) {
             console.log('Kaalytics initialized', this.config);
@@ -120,63 +119,6 @@ const Kaalytics = {
         }
     },
 
-    // i18n initialization
-    initI18n() {
-        // Load translations based on current language
-        this.loadTranslations(this.config.lang);
-    },
-
-    // Load translation file
-    async loadTranslations(lang) {
-        try {
-            const response = await fetch(`/i18n/${lang}.json`);
-            if (response.ok) {
-                this.translations = await response.json();
-                this.applyTranslations();
-            }
-        } catch (error) {
-            console.warn('Could not load translations:', error);
-        }
-    },
-
-    // Apply translations to DOM
-    applyTranslations() {
-        if (!this.translations) return;
-
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-            const key = el.dataset.i18n;
-            const translation = this.getTranslation(key);
-            if (translation) {
-                el.textContent = translation;
-            }
-        });
-
-        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-            const key = el.dataset.i18nPlaceholder;
-            const translation = this.getTranslation(key);
-            if (translation) {
-                el.placeholder = translation;
-            }
-        });
-    },
-
-    // Get nested translation by key
-    getTranslation(key) {
-        return key.split('.').reduce((obj, k) => obj?.[k], this.translations);
-    },
-
-    // Switch language
-    switchLanguage(lang) {
-        this.config.lang = lang;
-        localStorage.setItem('kaalytics-lang', lang);
-        document.documentElement.lang = lang;
-        this.loadTranslations(lang);
-
-        // Update active state in language switcher
-        document.querySelectorAll('.lang-switcher__option').forEach(el => {
-            el.classList.toggle('lang-switcher__option--active', el.dataset.lang === lang);
-        });
-    }
 };
 
 // Initialize on DOM ready

@@ -1,40 +1,170 @@
 {
   "rewrites": [
-    { "source": "/work", "destination": "https://kaalytics-work.vercel.app/work" },
-    { "source": "/work/:path*", "destination": "https://kaalytics-work.vercel.app/work/:path*" }
+    {
+      "source": "/work",
+      "destination": "https://kaalytics-work.vercel.app/work"
+    },
+    {
+      "source": "/work/:path*",
+      "destination": "https://kaalytics-work.vercel.app/work/:path*"
+    }
   ],
   "redirects": [
-    { "source": "/checklist-maintenance", "destination": "/guides/checklist-maintenance", "permanent": true },
-    { "source": "/comparatif-fleet-management", "destination": "/guides/comparatif-fleet-management", "permanent": true },
-    { "source": "/guide-flotte-btp", "destination": "/guides/guide-flotte-btp", "permanent": true },
-    { "source": "/ai-engine", "destination": "/modules/ai-engine", "permanent": true },
-    { "source": "/digital-platform", "destination": "/modules/digital-platform", "permanent": true },
-    { "source": "/erp-connect", "destination": "/modules/erp-connect", "permanent": true },
-    { "source": "/financial-operations", "destination": "/modules/financial-operations", "permanent": true },
-    { "source": "/fleetops", "destination": "/modules/fleetops", "permanent": true },
-    { "source": "/marketing-automation", "destination": "/modules/marketing-automation", "permanent": true },
-    { "source": "/sales-intelligence", "destination": "/modules/sales-intelligence", "permanent": true },
-    { "source": "/supply-chain", "destination": "/modules/supply-chain", "permanent": true },
-    { "source": "/btp", "destination": "/industries/btp", "permanent": true },
-    { "source": "/distribution", "destination": "/industries/distribution", "permanent": true },
-    { "source": "/industrie", "destination": "/industries/industrie", "permanent": true },
-    { "source": "/location", "destination": "/industries/location", "permanent": true },
-    { "source": "/mines", "destination": "/industries/mines", "permanent": true },
-    { "source": "/transport", "destination": "/industries/transport", "permanent": true },
-    { "source": "/locamat", "destination": "/case-studies/locamat", "permanent": true },
-    { "source": "/terrafleet", "destination": "/case-studies/terrafleet", "permanent": true },
-    { "source": "/transmaroc", "destination": "/case-studies/transmaroc", "permanent": true },
-    { "source": "/reduire-couts-flotte-ia", "destination": "/blog/reduire-couts-flotte-ia", "permanent": true },
-    { "source": "/gps-tracking-erreurs", "destination": "/blog/gps-tracking-erreurs", "permanent": true },
-    { "source": "/digitalisation-flotte-btp", "destination": "/blog/digitalisation-flotte-btp", "permanent": true },
-    { "source": "/maintenance-predictive-guide", "destination": "/blog/maintenance-predictive-guide", "permanent": true },
-    { "source": "/roi-gestion-flotte", "destination": "/blog/roi-gestion-flotte", "permanent": true },
-    { "source": "/privacy", "destination": "/legal/privacy", "permanent": true },
-    { "source": "/terms", "destination": "/legal/terms", "permanent": true },
-    { "source": "/mentions", "destination": "/legal/mentions", "permanent": true },
-    { "source": "/cookies", "destination": "/legal/cookies", "permanent": true },
-    { "source": "/industries/collectivites", "destination": "/", "permanent": true },
-    { "source": "/industries/collectivites.html", "destination": "/", "permanent": true }
+    {
+      "source": "/checklist-maintenance",
+      "destination": "/guides/checklist-maintenance",
+      "permanent": true
+    },
+    {
+      "source": "/comparatif-fleet-management",
+      "destination": "/guides/comparatif-fleet-management",
+      "permanent": true
+    },
+    {
+      "source": "/guide-flotte-btp",
+      "destination": "/guides/guide-flotte-btp",
+      "permanent": true
+    },
+    {
+      "source": "/ai-engine",
+      "destination": "/modules/ai-engine",
+      "permanent": true
+    },
+    {
+      "source": "/digital-platform",
+      "destination": "/modules/digital-platform",
+      "permanent": true
+    },
+    {
+      "source": "/erp-connect",
+      "destination": "/modules/erp-connect",
+      "permanent": true
+    },
+    {
+      "source": "/financial-operations",
+      "destination": "/modules/financial-operations",
+      "permanent": true
+    },
+    {
+      "source": "/fleetops",
+      "destination": "/modules/fleetops",
+      "permanent": true
+    },
+    {
+      "source": "/marketing-automation",
+      "destination": "/modules/marketing-automation",
+      "permanent": true
+    },
+    {
+      "source": "/sales-intelligence",
+      "destination": "/modules/sales-intelligence",
+      "permanent": true
+    },
+    {
+      "source": "/supply-chain",
+      "destination": "/modules/supply-chain",
+      "permanent": true
+    },
+    {
+      "source": "/btp",
+      "destination": "/industries/btp",
+      "permanent": true
+    },
+    {
+      "source": "/distribution",
+      "destination": "/industries/distribution",
+      "permanent": true
+    },
+    {
+      "source": "/industrie",
+      "destination": "/industries/industrie",
+      "permanent": true
+    },
+    {
+      "source": "/location",
+      "destination": "/industries/location",
+      "permanent": true
+    },
+    {
+      "source": "/mines",
+      "destination": "/industries/mines",
+      "permanent": true
+    },
+    {
+      "source": "/transport",
+      "destination": "/industries/transport",
+      "permanent": true
+    },
+    {
+      "source": "/locamat",
+      "destination": "/case-studies/locamat",
+      "permanent": true
+    },
+    {
+      "source": "/terrafleet",
+      "destination": "/case-studies/terrafleet",
+      "permanent": true
+    },
+    {
+      "source": "/transmaroc",
+      "destination": "/case-studies/transmaroc",
+      "permanent": true
+    },
+    {
+      "source": "/reduire-couts-flotte-ia",
+      "destination": "/blog/reduire-couts-flotte-ia",
+      "permanent": true
+    },
+    {
+      "source": "/gps-tracking-erreurs",
+      "destination": "/blog/gps-tracking-erreurs",
+      "permanent": true
+    },
+    {
+      "source": "/digitalisation-flotte-btp",
+      "destination": "/blog/digitalisation-flotte-btp",
+      "permanent": true
+    },
+    {
+      "source": "/maintenance-predictive-guide",
+      "destination": "/blog/maintenance-predictive-guide",
+      "permanent": true
+    },
+    {
+      "source": "/roi-gestion-flotte",
+      "destination": "/blog/roi-gestion-flotte",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/legal/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/terms",
+      "destination": "/legal/terms",
+      "permanent": true
+    },
+    {
+      "source": "/mentions",
+      "destination": "/legal/mentions",
+      "permanent": true
+    },
+    {
+      "source": "/cookies",
+      "destination": "/legal/cookies",
+      "permanent": true
+    },
+    {
+      "source": "/industries/collectivites",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/industries/collectivites.html",
+      "destination": "/",
+      "permanent": true
+    }
   ],
   "headers": [
     {
@@ -63,15 +193,6 @@
         {
           "key": "Strict-Transport-Security",
           "value": "max-age=31536000; includeSubDomains; preload"
-        }
-      ]
-    },
-    {
-      "source": "/assets/locales/(.*).json",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
         }
       ]
     },
