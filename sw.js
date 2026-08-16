@@ -3,7 +3,7 @@
  * PWA support with offline fallback
  */
 
-const CACHE_NAME = 'kaalytics-v1';
+const CACHE_NAME = 'kaalytics-v2';
 const OFFLINE_URL = '/404';
 
 // Assets to cache on install

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css?v=20260816b">
+    <style>
+        .m-hero { background: #040a08; padding: 120px 24px 56px; text-align: center; border-bottom: 1px solid rgba(16,185,129,0.12); }
+        .m-hero__badge { display: inline-block; background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.25); color: #10b981; padding: 6px 16px; border-radius: 100px; font-size: 13px; font-weight: 600; margin-bottom: 24px; }
+        .m-hero__title { font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 800; color: #ecfdf5; margin-bottom: 16px; line-height: 1.2; }
+        .m-hero__subtitle { font-size: 1.1rem; color: #94a3b8; max-width: 680px; margin: 0 auto; line-height: 1.7; }
+        .m-intro { max-width: 760px; margin: 0 auto; padding: 56px 24px 8px; text-align: center; }
+        .m-intro p { color: #94a3b8; font-size: 1.05rem; line-height: 1.8; }
+        .m-intro strong { color: #ecfdf5; }
+        .m-phases { max-width: 900px; margin: 0 auto; padding: 40px 24px 20px; display: grid; gap: 28px; }
+        .m-phase { display: flex; gap: 24px; align-items: flex-start; border: 1px solid rgba(16,185,129,0.12); border-radius: 14px; padding: 26px 28px; background: #0f1f1b; }
+        .m-phase__num { font-size: 1.8rem; font-weight: 800; color: #10b981; opacity: .35; min-width: 54px; line-height: 1; }
+        .m-phase__title { font-size: 1.15rem; font-weight: 700; color: #ecfdf5; margin: 0 0 8px; }
+        .m-phase__desc { color: #94a3b8; font-size: 0.95rem; line-height: 1.7; margin: 0; }
+        .m-phase__desc b { color: #cbd5e1; font-weight: 600; }
+        .m-callout { max-width: 900px; margin: 32px auto; padding: 28px 30px; background: rgba(16,185,129,0.08); border-left: 4px solid #10b981; border-radius: 10px; }
+        .m-callout h3 { color: #ecfdf5; font-size: 1.1rem; margin: 0 0 10px; }
+        .m-callout p { color: #94a3b8; font-size: 0.95rem; line-height: 1.7; margin: 0; }
+        .m-garanties { max-width: 900px; margin: 0 auto; padding: 24px 24px 8px; }
+        .m-garanties h2 { text-align: center; font-size: 1.5rem; font-weight: 800; color: #ecfdf5; margin-bottom: 24px; }
+        .m-garanties ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2,1fr); gap: 14px 32px; }
+        .m-garanties li { color: #94a3b8; font-size: 0.92rem; line-height: 1.5; padding-left: 26px; position: relative; }
+        .m-garanties li::before { content: "\2713"; position: absolute; left: 0; color: #10b981; font-weight: 800; }
+        .m-cta { text-align: center; padding: 72px 24px; border-top: 1px solid rgba(16,185,129,0.12); }
+        .m-cta h2 { font-size: 1.5rem; font-weight: 700; color: #ecfdf5; margin-bottom: 12px; }
+        .m-cta p { color: #94a3b8; margin-bottom: 28px; }
+        .m-cta__btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 40px; background: #10b981; color: #040a08; font-size: 1rem; font-weight: 700; border-radius: 12px; text-decoration: none; }
+        .m-cta__btn:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(16,185,129,0.3); }
+        @media (max-width: 720px){ .m-garanties ul { grid-template-columns: 1fr; } }
+        @media (max-width: 640px){ .m-phase { flex-direction: column; gap: 10px; } }
+    </style>
+<!-- SEO -->
+    <title>Our digital diagnostic method | Kaalytics</title>
+    <meta name="description" content="The Kaalytics digital diagnostic in 9 steps: scoping, interviews, maturity, process mapping, prioritization, requirements, change management, roadmap. A structured, funding-eligible approach.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://kaalytics.com/en/methodologie">
+    <link rel="alternate" hreflang="fr" href="https://kaalytics.com/methodologie">
+    <link rel="alternate" hreflang="en" href="https://kaalytics.com/en/methodologie">
+    <link rel="alternate" hreflang="x-default" href="https://kaalytics.com/methodologie">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kaalytics">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Our digital diagnostic method | Kaalytics">
+    <meta property="og:description" content="The Kaalytics digital diagnostic in 9 steps, from scoping to roadmap. A structured, repeatable and funding-eligible approach.">
+    <meta property="og:url" content="https://kaalytics.com/en/methodologie">
+    <meta property="og:image" content="https://kaalytics.com/assets/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+    <div id="navbar-container" data-navbar="full" data-navbar-style="solid"></div>
+
+    <section class="m-hero">
+        <div class="m-hero__badge">Our method</div>
+        <h1 class="m-hero__title">The digital diagnostic, in 9 steps.</h1>
+        <p class="m-hero__subtitle">Before connecting a single module, we understand your business in depth. A structured approach, repeatable from one engagement to the next — and designed to be funding-eligible.</p>
+    </section>
+
+    <div class="m-intro">
+        <p>Most digital projects fail because they start with the solution, not the problem. Our method does the opposite: a <strong>rigorous diagnostic</strong> that objectifies the existing situation, prioritizes what matters, and leads to a clear roadmap — readable by a busy executive and a funding analyst alike.</p>
+    </div>
+
+    <div class="m-phases">
+        <div class="m-phase"><div class="m-phase__num">01</div><div><h3 class="m-phase__title">Scoping</h3><p class="m-phase__desc">A first meeting with the leader to set the foundations: <b>scope</b> (departments, processes, teams covered), <b>objectives</b> (time savings, growth, error reduction, compliance…), perceived <b>priority issues</b>, and the <b>timeline</b> of the approach.</p></div></div>
+        <div class="m-phase"><div class="m-phase__num">02</div><div><h3 class="m-phase__title">Data collection</h3><p class="m-phase__desc">Build a factual overview before even talking to the teams: <b>inventory of tools</b> (ERP, CRM, business software, spreadsheets — with age, cost, real usage), <b>volumetrics</b> (invoices, orders, clients, org chart) and <b>real digital practices</b> — how information actually flows day to day.</p></div></div>
+        <div class="m-phase"><div class="m-phase__num">03</div><div><h3 class="m-phase__title">Interviews</h3><p class="m-phase__desc">The most revealing step: the gap between the available tool and real usage. We meet <b>the leader, the owners of each key process, and a sample of operational staff</b>. Questions get to the point: where do you lose time? what "homemade workarounds" make up for tool limits? if you had a magic wand, what would you change first?</p></div></div>
+        <div class="m-phase"><div class="m-phase__num">04</div><div><h3 class="m-phase__title">Digital maturity assessment</h3><p class="m-phase__desc">A <b>scoring grid</b> (7 dimensions, rated 1 to 5) to objectify the assessment rather than rely on an impression. The <b>overall score</b> is compared to an industry benchmark and serves as a reference to measure progress in a future diagnostic.</p></div></div>
+        <div class="m-phase"><div class="m-phase__num">05</div><div><h3 class="m-phase__title">Process mapping</h3><p class="m-phase__desc">Document <b>at least 9 business processes</b> (sales, invoicing, purchasing, operations, HR, customer service, reporting…), including <b>3 identified as "high-stakes"</b> — those generating the most friction, errors, or lost time. For each: current steps, tools, time spent, friction points.</p></div></div>
+        <div class="m-phase"><div class="m-phase__num">06</div><div><h3 class="m-phase__title">Project prioritization</h3><p class="m-phase__desc">A two-axis matrix — <b>potential impact</b> × <b>ease of implementation</b>. We start with the <b>"quick wins"</b> (high impact, low complexity): they build trust before tackling heavier projects.</p></div></div>
+        <div class="m-phase"><div class="m-phase__num">07</div><div><h3 class="m-phase__title">Requirements &amp; solution analysis</h3><p class="m-phase__desc">For each priority project: a <b>requirements grid</b> (features, constraints, budget), a <b>functional analysis</b> comparing 2-3 solutions, and a <b>financial analysis</b> (acquisition, implementation, maintenance) with an estimated return on investment.</p></div></div>
+        <div class="m-phase"><div class="m-phase__num">08</div><div><h3 class="m-phase__title">Change management plan</h3><p class="m-phase__desc">Often overlooked, yet it determines the real success of the deployment. <b>Operational side</b>: schedule, training, transition. <b>Human side</b>: communication to teams, internal champions, managing resistance. A good project poorly supported almost always fails.</p></div></div>
+        <div class="m-phase"><div class="m-phase__num">09</div><div><h3 class="m-phase__title">Final report &amp; roadmap</h3><p class="m-phase__desc">The deliverable that synthesizes everything: <b>executive summary</b> (1 page, readable in 3 min), current state and maturity score, process mapping and issues, priority projects (impact/complexity), recommended solutions, implementation and change management plan, <b>next steps and timeline</b>.</p></div></div>
+    </div>
+
+    <div class="m-callout">
+        <h3>An approach designed for funding</h3>
+        <p>Our method is aligned with the requirements of digital transformation support programs — notably <b>ESSOR (component 1B)</b> and the <b>Offensive Tr@ns Num (ADRIQ)</b>. An engagement run this way is structured to be directly eligible for funding, when your company qualifies.</p>
+    </div>
+
+    <div class="m-garanties">
+        <h2>What every diagnostic guarantees</h2>
+        <ul>
+            <li>At least 9 business processes documented, including 3 high-stakes</li>
+            <li>A digital maturity index assessed with a structured tool</li>
+            <li>A requirements specification for each priority project</li>
+            <li>A functional and financial analysis of the solutions</li>
+            <li>A change management plan (operational and human)</li>
+            <li>A mid-engagement review (formal checkpoint)</li>
+            <li>A final report and an actionable roadmap</li>
+            <li>A repeatable approach, adapted to your size and sector</li>
+        </ul>
+    </div>
+
+    <section class="m-cta">
+        <h2>A diagnostic for your business?</h2>
+        <p>The initial scoping happens in one conversation. We start from your reality, not a catalog.</p>
+        <a href="https://wa.me/212673736611" target="_blank" rel="noopener" class="m-cta__btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
+            Let's talk about your project
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #040a08; border-top: 1px solid rgba(16,185,129,0.12); padding: 48px 0 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+            <div class="grille grille--pied footer__grid-responsive" style="gap: 32px; margin-bottom: 48px;">
+                <div>
+                    <a href="/en" style="display: flex; align-items: center; gap: 10px; text-decoration: none; margin-bottom: 16px;">
+                        <svg width="32" height="32" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#10b981" stroke-width="2"/><path d="M12 20l6 6 10-12" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span style="font-size: 1.25rem; font-weight: 800; color: #ecfdf5;">Kaal<span style="color: #10b981;">ytics</span></span>
+                    </a>
+                    <p style="color: #64748b; font-size: 0.85rem; line-height: 1.7; margin-bottom: 20px; max-width: 280px;">AI modules connected to your ERP. Smart dashboards and tailor-made automation.</p>
+                    <p style="color: #64748b; line-height: 1.7; margin-bottom: 20px; max-width: 280px; font-size: 0.78rem; opacity: 0.85;">Remote engagements across the French-speaking world: Morocco, France, Canada, Belgium, Switzerland.</p>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Resources</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="/en/guides" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Guides</a>
+                        <a href="/en/faq" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">FAQ</a>
+                        <a href="/en/pricing" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Pricing</a>
+                        <a href="/en/about" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">About</a>
+                        <a href="/en/methodologie" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Method</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Contact</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="https://wa.me/212673736611" target="_blank" rel="noopener" style="color: #10b981; text-decoration: none; font-size: 0.85rem; font-weight: 600;">WhatsApp</a>
+                        <a href="tel:+212673736611" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">+212 673 736 611</a>
+                    </div>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(16,185,129,0.12); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                <p style="color: #64748b; font-size: 0.8rem;">© 2026 Kaalytics. All rights reserved.</p>
+                <div style="display: flex; gap: 24px; font-size: 0.8rem;">
+                    <a href="/en/legal/privacy" style="color: #64748b; text-decoration: none;">Privacy</a>
+                    <a href="/en/legal/terms" style="color: #64748b; text-decoration: none;">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/components/navbar/navbar-loader.js?v=20260816b" defer></script>
+</body>
+</html>
