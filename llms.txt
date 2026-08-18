@@ -69,6 +69,7 @@
 - [Kaalytics au Canada | Modules IA connectés à votre ERP](https://kaalytics.com/canada) : Modules d'intelligence branchés sur l'ERP des entreprises canadiennes : Odoo, SAP, Sage. En français, à distance, cadre Loi 25 et PIPEDA.
 - [Demander une Démo Gratuite | Kaalytics](https://kaalytics.com/demo) : Demandez une démo gratuite de nos modules. Présentation personnalisée de 30 minutes avec un expert.
 - [Intégrations | Kaalytics](https://kaalytics.com/integrations) : Intégrations Kaalytics. Connectez nos modules à vos outils existants : ERP, comptabilité, CRM et plus.
+- [Diagnostic numérique : notre méthode en 9 étapes | Kaalytics](https://kaalytics.com/methodologie) : Notre méthode de diagnostic numérique : 9 phases, grille de maturité à 7 dimensions, rapport et feuille de route. Alignée sur ESSOR 1B.
 - [Où nous intervenons | Kaalytics](https://kaalytics.com/ou-nous-intervenons) : Kaalytics intervient à distance depuis le Maroc sur l'ERP de clients en France, Canada, Belgique, Suisse et Afrique francophone.
 - [Daedalia AI — Copilote IA pour Odoo | Kaalytics](https://kaalytics.com/products/daedalia) : Daedalia AI: le premier LLM connecté à Odoo. Interrogez vos documents en langage naturel, créez des devis, analysez vos ventes en 3 secondes.
 - [FleetOps Pro | Gestion de Flotte IA | Kaalytics](https://kaalytics.com/products/fleetops) : FleetOps Pro: réduction des coûts et pannes, ROI rapide. Gestion de flotte IA pour BTP, Transport, Location. 8 modules.
