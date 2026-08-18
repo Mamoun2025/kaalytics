@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/main.css?v=20260818b">
+    <link rel="stylesheet" href="/assets/css/main.css?v=20260818c">
     <style>
         .m-hero { background: #040a08; padding: 120px 24px 56px; text-align: center; border-bottom: 1px solid rgba(16,185,129,0.12); }
         .m-hero__badge { display: inline-block; background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.25); color: #10b981; padding: 6px 16px; border-radius: 100px; font-size: 13px; font-weight: 600; margin-bottom: 24px; }
@@ -33,6 +33,15 @@
         .m-cta p { color: #94a3b8; margin-bottom: 28px; }
         .m-cta__btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 40px; background: #10b981; color: #040a08; font-size: 1rem; font-weight: 700; border-radius: 12px; text-decoration: none; }
         .m-cta__btn:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(16,185,129,0.3); }
+        .m-dims { max-width: 900px; margin: 0 auto; padding: 8px 24px 24px; }
+        .m-dims h2 { text-align: center; font-size: 1.5rem; font-weight: 800; color: #ecfdf5; margin-bottom: 10px; }
+        .m-dims__intro { text-align: center; color: #94a3b8; font-size: .95rem; line-height: 1.7; margin: 0 auto 28px; max-width: 60ch; }
+        .m-dims ol { list-style: none; padding: 0; margin: 0; counter-reset: dim; border-top: 1px solid rgba(16,185,129,.14); }
+        .m-dims li { counter-increment: dim; display: grid; grid-template-columns: 34px minmax(160px,240px) 1fr; gap: 18px; padding: 16px 0; border-bottom: 1px solid rgba(16,185,129,.14); align-items: baseline; }
+        .m-dims li::before { content: counter(dim,decimal-leading-zero); font-family: ui-monospace,Menlo,monospace; font-size: .72rem; color: #10b981; }
+        .m-dims__nom { font-weight: 700; color: #ecfdf5; font-size: .98rem; }
+        .m-dims__quoi { color: #94a3b8; font-size: .9rem; line-height: 1.6; }
+        @media (max-width: 720px){ .m-dims li { grid-template-columns: 28px 1fr; } .m-dims__quoi { grid-column: 2; } }
         @media (max-width: 720px){ .m-garanties ul { grid-template-columns: 1fr; } }
         @media (max-width: 640px){ .m-phase { flex-direction: column; gap: 10px; } }
     </style>
@@ -142,6 +151,20 @@
     <div class="m-callout">
         <h3>An approach designed for funding</h3>
         <p>Our method is aligned with the requirements of digital transformation support programs — notably <b>ESSOR (component 1B)</b> and the <b>Offensive Tr@ns Num (ADRIQ)</b>. An engagement run this way is structured to be directly eligible for funding, when your company qualifies.</p>
+    </div>
+
+    <div class="m-dims">
+        <h2>The 7 dimensions of digital maturity</h2>
+        <p class="m-dims__intro">The assessment does not rest on a general impression. Each dimension is scored separately, which shows where the company is solid and where it falls behind — and makes progress measurable at a later diagnostic.</p>
+        <ol>
+            <li><span class="m-dims__nom">Strategy and governance</span><span class="m-dims__quoi">A digital vision that exists, and leadership that carries it.</span></li>
+            <li><span class="m-dims__nom">Process and operations</span><span class="m-dims__quoi">How standardised and automated the key processes are.</span></li>
+            <li><span class="m-dims__nom">Technology and infrastructure</span><span class="m-dims__quoi">Fit, integration and modernity of the systems in place.</span></li>
+            <li><span class="m-dims__nom">Data and analytics</span><span class="m-dims__quoi">Reliability, centralisation and actual use of the data.</span></li>
+            <li><span class="m-dims__nom">Digital culture and skills</span><span class="m-dims__quoi">How comfortable the teams are with the tools, and how much they buy in.</span></li>
+            <li><span class="m-dims__nom">Customer relationship and sales</span><span class="m-dims__quoi">Digitalisation of the customer journey, CRM, sales follow-up.</span></li>
+            <li><span class="m-dims__nom">Finance and reporting</span><span class="m-dims__quoi">Automation of invoicing, cash tracking and reporting.</span></li>
+        </ol>
     </div>
 
     <div class="m-garanties">
