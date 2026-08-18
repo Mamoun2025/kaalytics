@@ -400,6 +400,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kaalytics.com/pricing"/>
   </url>
   <url>
+    <loc>https://kaalytics.com/en/realisations</loc>
+    <lastmod>2026-08-18</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/realisations"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/realisations"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kaalytics.com/realisations"/>
+  </url>
+  <url>
     <loc>https://kaalytics.com/faq</loc>
     <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
@@ -611,6 +619,9 @@
     <loc>https://kaalytics.com/realisations</loc>
     <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/realisations"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/realisations"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kaalytics.com/realisations"/>
   </url>
   <url>
     <loc>https://kaalytics.com/resources</loc>

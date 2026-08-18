@@ -169,7 +169,12 @@
         "keyword": "creation site web Maroc realisations agence",
         "fr": {
             "title": "Réalisations web | Kaalytics",
-            "description": "Sites vitrines et catalogues techniques livrés par Kaalytics : XLAB, XCAB, Magma Parts, RIA, Frida Yachting, RIWAQ, LGL Conciergerie."
+            "description": "Sites vitrines et catalogues techniques livrés par Kaalytics : XLAB, XCAB, BEKS, Magma Parts, RIA, Frida Yachting, RIWAQ, LGL."
+        },
+        "en": {
+            "title": "Our work | Kaalytics",
+            "description": "Marketing sites and technical catalogues shipped by Kaalytics: XLAB, XCAB, BEKS, Magma Parts, RIA, Frida Yachting, RIWAQ, LGL.",
+            "path": "en/realisations.html"
         }
     }
 }
