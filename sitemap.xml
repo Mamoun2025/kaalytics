@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kaalytics.com/</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en"/>
@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/about</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/about"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/about"/>
@@ -19,12 +19,12 @@
   </url>
   <url>
     <loc>https://kaalytics.com/alternatives</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/blog</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/blog"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/blog"/>
@@ -32,27 +32,27 @@
   </url>
   <url>
     <loc>https://kaalytics.com/blog/automatiser-relances-clients</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/blog/connecteurs-cegid-sage-sap</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/blog/cout-projet-ia-pme</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/blog/deployer-ia-entreprise</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/blog/digitalisation-flotte-btp</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/blog/digitalisation-flotte-btp"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/blog/digitalisation-flotte-btp"/>
@@ -60,22 +60,22 @@
   </url>
   <url>
     <loc>https://kaalytics.com/blog/erp-maroc-comparatif</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/blog/erreurs-migration-erp</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/blog/facturation-electronique-erp</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/blog/gps-tracking-erreurs</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/blog/gps-tracking-erreurs"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/blog/gps-tracking-erreurs"/>
@@ -83,7 +83,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/blog/maintenance-predictive-guide</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/blog/maintenance-predictive-guide"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/blog/maintenance-predictive-guide"/>
@@ -91,17 +91,17 @@
   </url>
   <url>
     <loc>https://kaalytics.com/blog/odoo-pme-bon-choix</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/blog/premier-erp-pme</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/blog/reduire-couts-flotte-ia</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/blog/reduire-couts-flotte-ia"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/blog/reduire-couts-flotte-ia"/>
@@ -109,7 +109,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/blog/roi-gestion-flotte</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/blog/roi-gestion-flotte"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/blog/roi-gestion-flotte"/>
@@ -117,27 +117,27 @@
   </url>
   <url>
     <loc>https://kaalytics.com/blog/securite-donnees-ia-entreprise</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/blog/tableau-de-bord-erp</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/canada</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/case-studies</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/contact</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/contact"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/contact"/>
@@ -145,7 +145,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/demo</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/demo"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/demo"/>
@@ -153,7 +153,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en"/>
@@ -161,7 +161,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/about</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/about"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/about"/>
@@ -169,7 +169,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/blog</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/blog"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/blog"/>
@@ -177,7 +177,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/blog/digitalisation-flotte-btp</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/blog/digitalisation-flotte-btp"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/blog/digitalisation-flotte-btp"/>
@@ -185,7 +185,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/blog/gps-tracking-erreurs</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/blog/gps-tracking-erreurs"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/blog/gps-tracking-erreurs"/>
@@ -193,7 +193,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/blog/maintenance-predictive-guide</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/blog/maintenance-predictive-guide"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/blog/maintenance-predictive-guide"/>
@@ -201,7 +201,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/blog/reduire-couts-flotte-ia</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/blog/reduire-couts-flotte-ia"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/blog/reduire-couts-flotte-ia"/>
@@ -209,7 +209,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/blog/roi-gestion-flotte</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/blog/roi-gestion-flotte"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/blog/roi-gestion-flotte"/>
@@ -217,7 +217,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/contact</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/contact"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/contact"/>
@@ -225,7 +225,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/demo</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/demo"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/demo"/>
@@ -233,7 +233,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/faq</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/faq"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/faq"/>
@@ -241,7 +241,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/guides</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/guides"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/guides"/>
@@ -249,7 +249,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/guides/checklist-maintenance</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/guides/checklist-maintenance"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/guides/checklist-maintenance"/>
@@ -257,7 +257,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/guides/comparatif-fleet-management</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/guides/comparatif-fleet-management"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/guides/comparatif-fleet-management"/>
@@ -265,7 +265,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/guides/guide-flotte-btp</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/guides/guide-flotte-btp"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/guides/guide-flotte-btp"/>
@@ -273,7 +273,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/industries/btp</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/industries/btp"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/industries/btp"/>
@@ -281,7 +281,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/industries/distribution</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/industries/distribution"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/industries/distribution"/>
@@ -289,7 +289,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/industries/industrie</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/industries/industrie"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/industries/industrie"/>
@@ -297,7 +297,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/industries/location</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/industries/location"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/industries/location"/>
@@ -305,7 +305,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/industries/mines</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/industries/mines"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/industries/mines"/>
@@ -313,7 +313,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/industries/transport</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/industries/transport"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/industries/transport"/>
@@ -321,7 +321,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/modules/ai-engine</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/ai-engine"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/ai-engine"/>
@@ -329,7 +329,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/modules/digital-platform</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/digital-platform"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/digital-platform"/>
@@ -337,7 +337,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/modules/erp-connect</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/erp-connect"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/erp-connect"/>
@@ -345,7 +345,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/modules/financial-operations</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/financial-operations"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/financial-operations"/>
@@ -353,7 +353,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/modules/fleetops</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/fleetops"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/fleetops"/>
@@ -361,7 +361,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/modules/marketing-automation</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/marketing-automation"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/marketing-automation"/>
@@ -369,7 +369,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/modules/sales-intelligence</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/sales-intelligence"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/sales-intelligence"/>
@@ -377,7 +377,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/modules/supply-chain</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/supply-chain"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/supply-chain"/>
@@ -385,7 +385,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/en/pricing</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/pricing"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/pricing"/>
@@ -393,7 +393,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/faq</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/faq"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/faq"/>
@@ -401,7 +401,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/guides</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/guides"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/guides"/>
@@ -409,7 +409,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/guides/checklist-maintenance</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/guides/checklist-maintenance"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/guides/checklist-maintenance"/>
@@ -417,7 +417,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/guides/comparatif-fleet-management</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/guides/comparatif-fleet-management"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/guides/comparatif-fleet-management"/>
@@ -425,7 +425,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/guides/guide-flotte-btp</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/guides/guide-flotte-btp"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/guides/guide-flotte-btp"/>
@@ -433,12 +433,12 @@
   </url>
   <url>
     <loc>https://kaalytics.com/industries</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/industries/btp</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/industries/btp"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/industries/btp"/>
@@ -446,7 +446,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/industries/distribution</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/industries/distribution"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/industries/distribution"/>
@@ -454,7 +454,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/industries/industrie</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/industries/industrie"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/industries/industrie"/>
@@ -462,7 +462,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/industries/location</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/industries/location"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/industries/location"/>
@@ -470,7 +470,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/industries/mines</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/industries/mines"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/industries/mines"/>
@@ -478,7 +478,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/industries/transport</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/industries/transport"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/industries/transport"/>
@@ -486,17 +486,17 @@
   </url>
   <url>
     <loc>https://kaalytics.com/integrations</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/modules</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/modules/ai-engine</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/ai-engine"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/ai-engine"/>
@@ -504,7 +504,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/modules/digital-platform</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/digital-platform"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/digital-platform"/>
@@ -512,7 +512,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/modules/erp-connect</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/erp-connect"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/erp-connect"/>
@@ -520,7 +520,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/modules/financial-operations</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/financial-operations"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/financial-operations"/>
@@ -528,7 +528,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/modules/fleetops</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/fleetops"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/fleetops"/>
@@ -536,7 +536,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/modules/marketing-automation</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/marketing-automation"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/marketing-automation"/>
@@ -544,7 +544,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/modules/sales-intelligence</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/sales-intelligence"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/sales-intelligence"/>
@@ -552,7 +552,7 @@
   </url>
   <url>
     <loc>https://kaalytics.com/modules/supply-chain</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/modules/supply-chain"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/modules/supply-chain"/>
@@ -560,17 +560,17 @@
   </url>
   <url>
     <loc>https://kaalytics.com/ou-nous-intervenons</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/portail-client</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/pricing</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kaalytics.com/pricing"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kaalytics.com/en/pricing"/>
@@ -578,32 +578,37 @@
   </url>
   <url>
     <loc>https://kaalytics.com/products</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/products/daedalia</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/products/fleetops</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kaalytics.com/realisations</loc>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/resources</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/support</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kaalytics.com/work</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>

@@ -1,156 +1,163 @@
 {
-  "blog/index.html": {
-    "keyword": "blog articles IA transformation digitale Afrique",
-    "fr": {
-      "title": "Blog | Kaalytics - Articles IA & Transformation Digitale Afrique",
-      "description": "Découvrez nos articles sur l'IA, le Fleet Management et la transformation digitale en Afrique. Conseils pratiques et études de cas."
+    "blog/index.html": {
+        "keyword": "blog articles IA transformation digitale Afrique",
+        "fr": {
+            "title": "Blog | Kaalytics - Articles IA & Transformation Digitale Afrique",
+            "description": "Découvrez nos articles sur l'IA, le Fleet Management et la transformation digitale en Afrique. Conseils pratiques et études de cas."
+        },
+        "en": {
+            "path": "en/blog/index.html",
+            "title": "Blog | Kaalytics",
+            "description": "Articles and insights on AI, fleet management and digital transformation in Africa. Practical tips and case studies."
+        }
     },
-    "en": {
-      "path": "en/blog/index.html",
-      "title": "Blog | Kaalytics",
-      "description": "Articles and insights on AI, fleet management and digital transformation in Africa. Practical tips and case studies."
-    }
-  },
-  "blog/digitalisation-flotte-btp.html": {
-    "keyword": "digitalisation flotte btp 2026 guide",
-    "fr": {
-      "title": "Digitalisation flotte BTP en 2026 | Blog Kaalytics",
-      "description": "Comment digitaliser la gestion de votre flotte BTP en 2026. Guide pratique avec étapes, outils et retours d'expérience."
+    "blog/digitalisation-flotte-btp.html": {
+        "keyword": "digitalisation flotte btp 2026 guide",
+        "fr": {
+            "title": "Digitalisation flotte BTP en 2026 | Blog Kaalytics",
+            "description": "Comment digitaliser la gestion de votre flotte BTP en 2026. Guide pratique avec étapes, outils et retours d'expérience."
+        },
+        "en": {
+            "path": "en/blog/digitalisation-flotte-btp.html",
+            "title": "Fleet Digitalization in 2026 | Blog Kaalytics",
+            "description": "How construction companies are digitizing fleet management in 2026. Trends, technologies and practical insights."
+        }
     },
-    "en": {
-      "path": "en/blog/digitalisation-flotte-btp.html",
-      "title": "Fleet Digitalization in 2026 | Blog Kaalytics",
-      "description": "How construction companies are digitizing fleet management in 2026. Trends, technologies and practical insights."
-    }
-  },
-  "blog/gps-tracking-erreurs.html": {
-    "keyword": "gps tracking erreurs flotte véhicules",
-    "fr": {
-      "title": "GPS Tracking : 5 erreurs à éviter | Blog Kaalytics",
-      "description": "Les 5 erreurs les plus courantes lors du déploiement d'une solution GPS tracking pour flotte de véhicules et comment les éviter."
+    "blog/gps-tracking-erreurs.html": {
+        "keyword": "gps tracking erreurs flotte véhicules",
+        "fr": {
+            "title": "GPS Tracking : 5 erreurs à éviter | Blog Kaalytics",
+            "description": "Les 5 erreurs les plus courantes lors du déploiement d'une solution GPS tracking pour flotte de véhicules et comment les éviter."
+        },
+        "en": {
+            "path": "en/blog/gps-tracking-erreurs.html",
+            "title": "GPS Tracking: 5 Mistakes to Avoid | Blog Kaalytics",
+            "description": "The 5 most common mistakes in GPS tracking deployment and how to avoid them. Practical guide based on real cases."
+        }
     },
-    "en": {
-      "path": "en/blog/gps-tracking-erreurs.html",
-      "title": "GPS Tracking: 5 Mistakes to Avoid | Blog Kaalytics",
-      "description": "The 5 most common mistakes in GPS tracking deployment and how to avoid them. Practical guide based on real cases."
-    }
-  },
-  "blog/maintenance-predictive-guide.html": {
-    "keyword": "maintenance prédictive guide flotte",
-    "fr": {
-      "title": "Maintenance prédictive : le guide complet | Blog Kaalytics",
-      "description": "Guide complet de la maintenance prédictive pour flottes de véhicules. Principes, technologies, mise en œuvre et bénéfices."
+    "blog/maintenance-predictive-guide.html": {
+        "keyword": "maintenance prédictive guide flotte",
+        "fr": {
+            "title": "Maintenance prédictive : le guide complet | Blog Kaalytics",
+            "description": "Guide complet de la maintenance prédictive pour flottes de véhicules. Principes, technologies, mise en œuvre et bénéfices."
+        },
+        "en": {
+            "path": "en/blog/maintenance-predictive-guide.html",
+            "title": "Predictive Maintenance: The Complete Guide | Blog Kaalytics",
+            "description": "Complete guide to predictive maintenance for vehicle fleets. Principles, technologies, implementation and benefits."
+        }
     },
-    "en": {
-      "path": "en/blog/maintenance-predictive-guide.html",
-      "title": "Predictive Maintenance: The Complete Guide | Blog Kaalytics",
-      "description": "Complete guide to predictive maintenance for vehicle fleets. Principles, technologies, implementation and benefits."
-    }
-  },
-  "blog/reduire-couts-flotte-ia.html": {
-    "keyword": "réduire coûts flotte ia intelligence artificielle",
-    "fr": {
-      "title": "Comment réduire les coûts de flotte avec l'IA | Blog Kaalytics",
-      "description": "Découvrez comment l'IA permet de réduire les coûts de gestion de flotte. Maintenance prédictive, optimisation carburant, analyse des données."
+    "blog/reduire-couts-flotte-ia.html": {
+        "keyword": "réduire coûts flotte ia intelligence artificielle",
+        "fr": {
+            "title": "Comment réduire les coûts de flotte avec l'IA | Blog Kaalytics",
+            "description": "Découvrez comment l'IA permet de réduire les coûts de gestion de flotte. Maintenance prédictive, optimisation carburant, analyse des données."
+        },
+        "en": {
+            "path": "en/blog/reduire-couts-flotte-ia.html",
+            "title": "How to Reduce Fleet Costs with AI | Blog Kaalytics",
+            "description": "Discover how AI can reduce fleet management costs. Predictive maintenance, fuel optimization and data analysis."
+        }
     },
-    "en": {
-      "path": "en/blog/reduire-couts-flotte-ia.html",
-      "title": "How to Reduce Fleet Costs with AI | Blog Kaalytics",
-      "description": "Discover how AI can reduce fleet management costs. Predictive maintenance, fuel optimization and data analysis."
-    }
-  },
-  "blog/roi-gestion-flotte.html": {
-    "keyword": "roi retour sur investissement gestion flotte",
-    "fr": {
-      "title": "ROI d'une solution de gestion de flotte | Blog Kaalytics",
-      "description": "Comment calculer le ROI d'une solution de gestion de flotte. Méthodologie, indicateurs clés et exemples concrets."
+    "blog/roi-gestion-flotte.html": {
+        "keyword": "roi retour sur investissement gestion flotte",
+        "fr": {
+            "title": "ROI d'une solution de gestion de flotte | Blog Kaalytics",
+            "description": "Comment calculer le ROI d'une solution de gestion de flotte. Méthodologie, indicateurs clés et exemples concrets."
+        },
+        "en": {
+            "path": "en/blog/roi-gestion-flotte.html",
+            "title": "Fleet Management Solution ROI | Blog Kaalytics",
+            "description": "How to calculate ROI of a fleet management solution. Methodology, key indicators and concrete examples."
+        }
     },
-    "en": {
-      "path": "en/blog/roi-gestion-flotte.html",
-      "title": "Fleet Management Solution ROI | Blog Kaalytics",
-      "description": "How to calculate ROI of a fleet management solution. Methodology, key indicators and concrete examples."
-    }
-  },
-  "guides/index.html": {
-    "keyword": "guides pratiques fleet management gestion flotte",
-    "fr": {
-      "title": "Guides Pratiques | Kaalytics",
-      "description": "Guides pratiques pour transformer vos opérations. Ressources concrètes sur la maintenance préventive, fleet management et gestion de flotte BTP."
+    "guides/index.html": {
+        "keyword": "guides pratiques fleet management gestion flotte",
+        "fr": {
+            "title": "Guides Pratiques | Kaalytics",
+            "description": "Guides pratiques pour transformer vos opérations. Ressources concrètes sur la maintenance préventive, fleet management et gestion de flotte BTP."
+        },
+        "en": {
+            "path": "en/guides/index.html",
+            "title": "Guides | Kaalytics",
+            "description": "Practical resources to transform your fleet operations. Complete guides on preventive maintenance, fleet management and construction fleet digitalization."
+        }
     },
-    "en": {
-      "path": "en/guides/index.html",
-      "title": "Guides | Kaalytics",
-      "description": "Practical resources to transform your fleet operations. Complete guides on preventive maintenance, fleet management and construction fleet digitalization."
-    }
-  },
-  "guides/checklist-maintenance.html": {
-    "keyword": "checklist maintenance préventive flotte véhicules",
-    "fr": {
-      "title": "Checklist Maintenance Préventive | Kaalytics",
-      "description": "Checklist complète de maintenance préventive pour flottes de véhicules. Points de contrôle, périodicités et bonnes pratiques."
+    "guides/checklist-maintenance.html": {
+        "keyword": "checklist maintenance préventive flotte véhicules",
+        "fr": {
+            "title": "Checklist Maintenance Préventive | Kaalytics",
+            "description": "Checklist complète de maintenance préventive pour flottes de véhicules. Points de contrôle, périodicités et bonnes pratiques."
+        },
+        "en": {
+            "path": "en/guides/checklist-maintenance.html",
+            "title": "Preventive Maintenance Checklist | Kaalytics",
+            "description": "Complete preventive maintenance checklist for vehicle fleets. Checkpoints, frequencies and best practices."
+        }
     },
-    "en": {
-      "path": "en/guides/checklist-maintenance.html",
-      "title": "Preventive Maintenance Checklist | Kaalytics",
-      "description": "Complete preventive maintenance checklist for vehicle fleets. Checkpoints, frequencies and best practices."
-    }
-  },
-  "guides/comparatif-fleet-management.html": {
-    "keyword": "comparatif solutions fleet management logiciels",
-    "fr": {
-      "title": "Comparatif Solutions Fleet Management | Kaalytics",
-      "description": "Comparatif des solutions de fleet management. Critères de choix, fonctionnalités clés et guide de sélection pour votre flotte."
+    "guides/comparatif-fleet-management.html": {
+        "keyword": "comparatif solutions fleet management logiciels",
+        "fr": {
+            "title": "Comparatif Solutions Fleet Management | Kaalytics",
+            "description": "Comparatif des solutions de fleet management. Critères de choix, fonctionnalités clés et guide de sélection pour votre flotte."
+        },
+        "en": {
+            "path": "en/guides/comparatif-fleet-management.html",
+            "title": "Fleet Management Solutions Comparison | Kaalytics",
+            "description": "Compare fleet management solutions. Selection criteria, key features and selection guide for your fleet."
+        }
     },
-    "en": {
-      "path": "en/guides/comparatif-fleet-management.html",
-      "title": "Fleet Management Solutions Comparison | Kaalytics",
-      "description": "Compare fleet management solutions. Selection criteria, key features and selection guide for your fleet."
-    }
-  },
-  "guides/guide-flotte-btp.html": {
-    "keyword": "guide gestion flotte btp construction",
-    "fr": {
-      "title": "Guide complet : Gestion de flotte BTP | Kaalytics",
-      "description": "Guide complet pour la gestion de flotte BTP. Engins, véhicules, maintenance, conformité et optimisation des coûts."
+    "guides/guide-flotte-btp.html": {
+        "keyword": "guide gestion flotte btp construction",
+        "fr": {
+            "title": "Guide complet : Gestion de flotte BTP | Kaalytics",
+            "description": "Guide complet pour la gestion de flotte BTP. Engins, véhicules, maintenance, conformité et optimisation des coûts."
+        },
+        "en": {
+            "path": "en/guides/guide-flotte-btp.html",
+            "title": "Complete Guide: Construction Fleet Management | Kaalytics",
+            "description": "Complete guide to construction fleet management. Equipment, vehicles, maintenance, compliance and cost optimization."
+        }
     },
-    "en": {
-      "path": "en/guides/guide-flotte-btp.html",
-      "title": "Complete Guide: Construction Fleet Management | Kaalytics",
-      "description": "Complete guide to construction fleet management. Equipment, vehicles, maintenance, compliance and cost optimization."
+    "case-studies/index.html": {
+        "keyword": "études de cas clients kaalytics fleetops",
+        "fr": {
+            "title": "Études de Cas | Kaalytics",
+            "description": "Études de cas Kaalytics. Découvrez comment nos clients optimisent leur flotte avec FleetOps Pro."
+        }
+    },
+    "case-studies/locamat.html": {
+        "keyword": "locamat location engins btp case study",
+        "robots": "noindex, nofollow",
+        "_note": "2026-08-12 - client fictif, à remplacer par un cas réel anonymisé en P2",
+        "fr": {
+            "title": "Étude de Cas LocaMat : Location d'Engins Optimisée | Kaalytics",
+            "description": "LocaMat: gestion optimisée de la location d'engins. Découvrez comment FleetOps Pro a transformé leur activité de location de matériel BTP."
+        }
+    },
+    "case-studies/terrafleet.html": {
+        "keyword": "terrafleet économies maintenance btp case study",
+        "robots": "noindex, nofollow",
+        "_note": "2026-08-12 - client fictif, à remplacer par un cas réel anonymisé en P2",
+        "fr": {
+            "title": "Étude de Cas TerraFleet : Économies Significatives | Kaalytics",
+            "description": "TerraFleet: réduction significative des coûts maintenance et temps admin. Découvrez comment FleetOps Pro a transformé leur gestion de flotte BTP."
+        }
+    },
+    "case-studies/transmaroc.html": {
+        "keyword": "transmaroc transport optimisation tournées carburant",
+        "robots": "noindex, nofollow",
+        "_note": "2026-08-12 - client fictif, à remplacer par un cas réel anonymisé en P2",
+        "fr": {
+            "title": "Étude de Cas TransMaroc : Optimisation Transport | Kaalytics",
+            "description": "TransMaroc: optimisation des tournées et réduction du carburant. Découvrez comment FleetOps Pro a transformé leur flotte de transport routier."
+        }
+    },
+    "realisations.html": {
+        "keyword": "creation site web Maroc realisations agence",
+        "fr": {
+            "title": "Réalisations web | Kaalytics",
+            "description": "Sites vitrines et catalogues techniques livrés par Kaalytics : XLAB, XCAB, Magma Parts, RIA, Frida Yachting, RIWAQ."
+        }
     }
-  },
-  "case-studies/index.html": {
-    "keyword": "études de cas clients kaalytics fleetops",
-    "fr": {
-      "title": "Études de Cas | Kaalytics",
-      "description": "Études de cas Kaalytics. Découvrez comment nos clients optimisent leur flotte avec FleetOps Pro."
-    }
-  },
-  "case-studies/locamat.html": {
-    "keyword": "locamat location engins btp case study",
-    "robots": "noindex, nofollow",
-    "_note": "2026-08-12 - client fictif, à remplacer par un cas réel anonymisé en P2",
-    "fr": {
-      "title": "Étude de Cas LocaMat : Location d'Engins Optimisée | Kaalytics",
-      "description": "LocaMat: gestion optimisée de la location d'engins. Découvrez comment FleetOps Pro a transformé leur activité de location de matériel BTP."
-    }
-  },
-  "case-studies/terrafleet.html": {
-    "keyword": "terrafleet économies maintenance btp case study",
-    "robots": "noindex, nofollow",
-    "_note": "2026-08-12 - client fictif, à remplacer par un cas réel anonymisé en P2",
-    "fr": {
-      "title": "Étude de Cas TerraFleet : Économies Significatives | Kaalytics",
-      "description": "TerraFleet: réduction significative des coûts maintenance et temps admin. Découvrez comment FleetOps Pro a transformé leur gestion de flotte BTP."
-    }
-  },
-  "case-studies/transmaroc.html": {
-    "keyword": "transmaroc transport optimisation tournées carburant",
-    "robots": "noindex, nofollow",
-    "_note": "2026-08-12 - client fictif, à remplacer par un cas réel anonymisé en P2",
-    "fr": {
-      "title": "Étude de Cas TransMaroc : Optimisation Transport | Kaalytics",
-      "description": "TransMaroc: optimisation des tournées et réduction du carburant. Découvrez comment FleetOps Pro a transformé leur flotte de transport routier."
-    }
-  }
 }
