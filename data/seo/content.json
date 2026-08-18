@@ -164,5 +164,12 @@
             "description": "Our digital diagnostic method: 9 phases, a 7-dimension maturity grid, a report and a roadmap. Aligned with Québec's ESSOR 1B requirements.",
             "path": "en/methodologie.html"
         }
+    },
+    "realisations.html": {
+        "keyword": "creation site web Maroc realisations agence",
+        "fr": {
+            "title": "Réalisations web | Kaalytics",
+            "description": "Sites vitrines et catalogues techniques livrés par Kaalytics : XLAB, XCAB, Magma Parts, RIA, Frida Yachting, RIWAQ."
+        }
     }
 }

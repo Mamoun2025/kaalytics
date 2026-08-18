@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css?v=20260818">
+    <style>
+        .about-hero {
+            background: #040a08;
+            padding: 120px 24px 60px;
+            text-align: center;
+            border-bottom: 1px solid rgba(16,185,129,0.12);
+        }
+        .about-hero__badge {
+            display: inline-block;
+            background: rgba(16,185,129,0.08);
+            border: 1px solid rgba(16,185,129,0.25);
+            color: #10b981;
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        .about-hero__title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            color: #ecfdf5;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .about-hero__subtitle {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .about-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+            text-align: center;
+        }
+        .about-section__label {
+            display: inline-block;
+            color: #10b981;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+        }
+        .about-section__title {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 800;
+            color: #ecfdf5;
+            margin-bottom: 24px;
+        }
+        .about-section__text {
+            color: #94a3b8;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .about-section__text:last-child { margin-bottom: 0; }
+        .about-section__text strong { color: #ecfdf5; }
+
+        .about-values {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        .about-values__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .value-card {
+            background: #0f1f1b;
+            border: 1px solid rgba(16,185,129,0.12);
+            border-radius: 16px;
+            padding: 32px 28px;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+        .value-card:hover {
+            border-color: #10b981;
+            transform: translateY(-4px);
+        }
+        /* Le code pays remplace le drapeau : sobre, lisible a toute taille,
+           et lu correctement par un lecteur d'ecran (voir l'attribut aria). */
+        .value-card__code {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 44px;
+            height: 26px;
+            padding: 0 10px;
+            margin-bottom: 14px;
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            border-radius: 4px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            color: #6ee7b7;
+            background: rgba(16, 185, 129, 0.06);
+        }
+        .value-card__title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #ecfdf5;
+            margin-bottom: 12px;
+        }
+        .value-card__desc {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+        .about-cta {
+            text-align: center;
+            padding: 80px 24px;
+            border-top: 1px solid rgba(16,185,129,0.12);
+        }
+        .about-cta__title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ecfdf5;
+            margin-bottom: 12px;
+        }
+        .about-cta__subtitle {
+            color: #94a3b8;
+            margin-bottom: 32px;
+        }
+        .about-cta__btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 40px;
+            background: #10b981;
+            color: #040a08;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .about-cta__btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(16,185,129,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .about-values__grid { grid-template-columns: 1fr; }
+        }
+    </style>
+<!-- SEO:BEGIN (genere par scripts/seo/gen_head.py - ne pas editer) -->
+    <title>Réalisations web | Kaalytics</title>
+    <meta name="description" content="Sites vitrines et catalogues techniques livrés par Kaalytics : XLAB, XCAB, Magma Parts, RIA, Frida Yachting, RIWAQ.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://kaalytics.com/realisations">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kaalytics">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Réalisations web | Kaalytics">
+    <meta property="og:description" content="Sites vitrines et catalogues techniques livrés par Kaalytics : XLAB, XCAB, Magma Parts, RIA, Frida Yachting, RIWAQ.">
+    <meta property="og:url" content="https://kaalytics.com/realisations">
+    <meta property="og:image" content="https://kaalytics.com/assets/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Réalisations web | Kaalytics">
+    <meta name="twitter:description" content="Sites vitrines et catalogues techniques livrés par Kaalytics : XLAB, XCAB, Magma Parts, RIA, Frida Yachting, RIWAQ.">
+    <meta name="twitter:image" content="https://kaalytics.com/assets/images/og-image.jpg">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "https://kaalytics.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Réalisations web",
+            "item": "https://kaalytics.com/realisations"
+        }
+    ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Kaalytics",
+    "url": "https://kaalytics.com",
+    "logo": "https://kaalytics.com/assets/images/logo/kaalytics-logo.png",
+    "areaServed": [
+        {
+            "@type": "Country",
+            "name": "Maroc"
+        },
+        {
+            "@type": "Country",
+            "name": "France"
+        },
+        {
+            "@type": "Country",
+            "name": "Canada"
+        },
+        {
+            "@type": "Country",
+            "name": "Belgique"
+        },
+        {
+            "@type": "Country",
+            "name": "Suisse"
+        }
+    ],
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Casablanca",
+        "addressCountry": "MA"
+    }
+}
+    </script>
+<!-- SEO:END -->
+</head>
+<body>
+    <div id="navbar-container" data-navbar="full" data-navbar-style="solid"></div>
+
+    <!-- Hero -->
+        <section class="about-hero">
+        <div class="about-hero__content">
+            <span class="about-hero__badge">Réalisations</span>
+            <h1 class="about-hero__title">Ce que nous avons livré</h1>
+            <p class="about-hero__subtitle">
+                Des sites vitrines et des catalogues techniques, conçus pour un métier
+                précis. Chacun est en ligne : vous pouvez juger sur pièces.
+            </p>
+        </div>
+    </section>
+
+    <section class="travaux">
+        <div class="travaux__inner">
+            <span class="travaux__label">Réalisations</span>
+            <h2 class="travaux__titre">Des sites qui font le travail qu'on leur demande</h2>
+            <p class="travaux__intro">
+                Un site n'est pas une plaquette. Selon le métier, il doit faire choisir,
+                faire trouver, ou faire comprendre — rarement les trois à la fois. Voici
+                ce que nous avons livré, et ce que chacun devait accomplir.
+            </p>
+            <div class="travaux__grille">
+                <article class="travail">
+                    <img class="travail__vue" src="/assets/images/realisations/xlab.webp"
+                         width="880" height="550" fetchpriority="high"
+                         alt="Page d'accueil du site XLAB">
+                    <div class="travail__corps">
+                        <span class="travail__secteur">Mobilier de laboratoire</span>
+                        <h3 class="travail__nom">XLAB</h3>
+                        <p class="travail__texte">Un catalogue technique que le client comprend sans être ingénieur. Sorbonnes, paillasses, normes EN 14175 : chaque produit dit à quoi il sert avant de dire comment il est fait.</p>
+                        <a href="https://www.xlab.ma" target="_blank" rel="noopener" class="travail__lien">Voir le site</a>
+                    </div>
+                </article>
+                <article class="travail">
+                    <img class="travail__vue" src="/assets/images/realisations/xcab.webp"
+                         width="880" height="550" fetchpriority="high"
+                         alt="Page d'accueil du site XCAB">
+                    <div class="travail__corps">
+                        <span class="travail__secteur">Cabines acoustiques</span>
+                        <h3 class="travail__nom">XCAB</h3>
+                        <p class="travail__texte">Un seul produit, quatre configurations. Le site sert à faire choisir : le visiteur sait en trente secondes quel modèle correspond à sa pièce.</p>
+                        <a href="https://www.xcab.ma" target="_blank" rel="noopener" class="travail__lien">Voir le site</a>
+                    </div>
+                </article>
+                <article class="travail">
+                    <img class="travail__vue" src="/assets/images/realisations/magmaparts.webp"
+                         width="880" height="550" loading="lazy" decoding="async"
+                         alt="Page d'accueil du site Magma Parts">
+                    <div class="travail__corps">
+                        <span class="travail__secteur">Pièces détachées TP</span>
+                        <h3 class="travail__nom">Magma Parts</h3>
+                        <p class="travail__texte">Des milliers de références pour engins de chantier, rendues cherchables. Caterpillar, Komatsu, Volvo : on trouve la pièce, pas la marque.</p>
+                        <a href="https://www.magmaparts.com" target="_blank" rel="noopener" class="travail__lien">Voir le site</a>
+                    </div>
+                </article>
+                <article class="travail">
+                    <img class="travail__vue" src="/assets/images/realisations/ria.webp"
+                         width="880" height="550" loading="lazy" decoding="async"
+                         alt="Page d'accueil du site RIA">
+                    <div class="travail__corps">
+                        <span class="travail__secteur">Démarreurs et alternateurs</span>
+                        <h3 class="travail__nom">RIA</h3>
+                        <p class="travail__texte">La bonne pièce du premier coup. Le visiteur entre sa référence d'origine — Bosch, Mitsubishi, Prestolite — et obtient l'équivalence. Le catalogue devient un outil, plus une liste.</p>
+                        <a href="https://ria-site.vercel.app" target="_blank" rel="noopener" class="travail__lien">Voir le site</a>
+                    </div>
+                </article>
+                <article class="travail">
+                    <img class="travail__vue" src="/assets/images/realisations/fridayacht.webp"
+                         width="880" height="550" loading="lazy" decoding="async"
+                         alt="Page d'accueil du site Frida Yachting">
+                    <div class="travail__corps">
+                        <span class="travail__secteur">Chantier naval</span>
+                        <h3 class="travail__nom">Frida Yachting</h3>
+                        <p class="travail__texte">Un constructeur de bateaux en bois sur la mer Égée. Le site se lit comme l'atelier travaille : lentement, sur la matière, sans argumentaire.</p>
+                        <a href="https://fridayacht.vercel.app" target="_blank" rel="noopener" class="travail__lien">Voir le site</a>
+                    </div>
+                </article>
+                <article class="travail">
+                    <img class="travail__vue" src="/assets/images/realisations/riwaq.webp"
+                         width="880" height="550" loading="lazy" decoding="async"
+                         alt="Page d'accueil du site RIWAQ">
+                    <div class="travail__corps">
+                        <span class="travail__secteur">Scénographie et événementiel</span>
+                        <h3 class="travail__nom">RIWAQ</h3>
+                        <p class="travail__texte">Un métier qui se vend par l'œil. La scénographie passe avant le texte, et le texte ne sert qu'à préciser ce qu'on vient de voir.</p>
+                        <a href="https://riwaq-studio.vercel.app" target="_blank" rel="noopener" class="travail__lien">Voir le site</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-cta">
+        <h2 class="about-cta__title">Un site à refaire, ou à faire ?</h2>
+        <p class="about-cta__text">
+            Dites-nous ce que le vôtre doit accomplir. Nous vous dirons si c'est un sujet
+            de site, ou d'autre chose.
+        </p>
+        <a href="https://wa.me/212673736611" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            Décrire votre besoin
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #040a08; border-top: 1px solid rgba(16,185,129,0.12); padding: 48px 0 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+            <div class="grille grille--pied footer__grid-responsive" style="gap: 32px; margin-bottom: 48px;">
+                <div>
+                    <a href="/" style="display: flex; align-items: center; gap: 10px; text-decoration: none; margin-bottom: 16px;">
+                        <svg width="32" height="32" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#10b981" stroke-width="2"/><path d="M12 20l6 6 10-12" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span style="font-size: 1.25rem; font-weight: 800; color: #ecfdf5;">Kaal<span style="color: #10b981;">ytics</span></span>
+                    </a>
+                    <p style="color: #64748b; font-size: 0.85rem; line-height: 1.7; margin-bottom: 20px; max-width: 280px;">Modules IA connectés à votre ERP. Dashboards intelligents et automatisation sur-mesure.</p>
+                    <p style="color: #64748b;  line-height: 1.7; margin-bottom: 20px; max-width: 280px; font-size: 0.78rem; opacity: 0.85;">Interventions à distance dans l'espace francophone : Maroc, France, Canada, Belgique, Suisse.</p>
+                    <div style="display: flex; gap: 12px;">
+                        <a href="https://wa.me/212673736611" target="_blank" rel="noopener" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: #0f1f1b; border: 1px solid rgba(16,185,129,0.12); border-radius: 8px; color: #64748b;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Industries</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="industries/btp" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">BTP & Construction</a>
+                        <a href="industries/mines" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Mines & Carrières</a>
+                        <a href="industries/transport" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Transport & Logistique</a>
+                        <a href="industries/distribution" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Distribution & Négoce</a>
+                        <a href="industries/industrie" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Industrie & Production</a>
+                        <a href="industries/location" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Location d'Équipements</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Modules</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="modules/sales-intelligence" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Sales Intelligence</a>
+                        <a href="modules/marketing-automation" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Marketing Automation</a>
+                        <a href="modules/financial-operations" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Financial Operations</a>
+                        <a href="modules/supply-chain" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Supply Chain</a>
+                        <a href="modules/fleetops" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">FleetOps</a>
+                        <a href="modules/erp-connect" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">ERP Connect</a>
+                        <a href="modules/digital-platform" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Digital Platform</a>
+                        <a href="modules/ai-engine" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">AI Engine</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Ressources</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="guides" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Guides</a>
+                        <a href="faq" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">FAQ</a>
+                        <a href="pricing" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">Tarifs</a>
+                        <a href="about" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">À propos</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.8rem; font-weight: 700; color: #ecfdf5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;">Contact</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="https://wa.me/212673736611" target="_blank" rel="noopener" style="color: #10b981; text-decoration: none; font-size: 0.85rem; font-weight: 600;">WhatsApp</a>
+                        <a href="tel:+212673736611" style="color: #64748b; text-decoration: none; font-size: 0.85rem;">+212 673 736 611</a>
+                    </div>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(16,185,129,0.12); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                <p style="color: #64748b; font-size: 0.8rem;">© 2026 Kaalytics. Tous droits réservés.</p>
+                <div style="display: flex; gap: 24px; font-size: 0.8rem;">
+                    <a href="legal/privacy" style="color: #64748b; text-decoration: none;">Confidentialité</a>
+                    <a href="legal/terms" style="color: #64748b; text-decoration: none;">CGU</a>
+                    <a href="legal/cookies" style="color: #64748b; text-decoration: none;">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="components/navbar/navbar-loader.js?v=20260818" defer></script>
+</body>
+</html>

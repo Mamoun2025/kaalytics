@@ -1,0 +1,91 @@
+/* ========================================
+   RÉALISATIONS WEB
+   ========================================
+   Responsabilite unique : montrer les sites livres.
+
+   Les visuels sont en WebP, redimensionnes a 880px et charges en
+   differe : sept apercus pesent 224 Ko au total, et seuls les deux
+   premiers sont telecharges a l'ouverture. Une page portfolio qui rame
+   dessert exactement ce qu'elle veut prouver. */
+
+.travaux {
+    padding: var(--space-4xl, 96px) 24px;
+    background: var(--bg-void, #040a08);
+}
+
+.travaux__inner { max-width: 1120px; margin: 0 auto; }
+
+.travaux__label {
+    display: block;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--emerald, #10b981); margin-bottom: 14px;
+}
+
+.travaux__titre {
+    font-size: clamp(1.5rem, 3.6vw, 2.1rem); font-weight: 800;
+    color: var(--text-primary, #ecfdf5); line-height: 1.22;
+    text-wrap: balance; margin: 0 0 16px;
+}
+
+.travaux__intro {
+    color: var(--text-secondary, #94a3b8); font-size: 1rem; line-height: 1.75;
+    max-width: 62ch; margin: 0 0 48px;
+}
+
+.travaux__grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
+    gap: 28px;
+}
+
+.travail {
+    display: flex; flex-direction: column;
+    border: 1px solid rgba(16, 185, 129, 0.16);
+    border-radius: 12px; overflow: hidden;
+    background: rgba(16, 185, 129, 0.03);
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.travail:hover {
+    border-color: rgba(16, 185, 129, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Ratio fixe : la grille ne saute pas pendant le chargement des images. */
+.travail__vue {
+    display: block; width: 100%; aspect-ratio: 88 / 55;
+    object-fit: cover; object-position: top center;
+    border-bottom: 1px solid rgba(16, 185, 129, 0.14);
+    background: #0a1612;
+}
+
+.travail__corps { padding: 22px 24px 24px; display: flex; flex-direction: column; flex: 1; }
+
+.travail__secteur {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--emerald, #10b981); margin-bottom: 10px;
+}
+
+.travail__nom {
+    font-size: 1.15rem; font-weight: 700;
+    color: var(--text-primary, #ecfdf5); margin: 0 0 10px;
+}
+
+.travail__texte {
+    font-size: 0.92rem; line-height: 1.65;
+    color: var(--text-secondary, #94a3b8); margin: 0 0 18px; flex: 1;
+}
+
+.travail__lien {
+    align-self: flex-start; font-size: 0.86rem; font-weight: 600;
+    color: var(--emerald, #10b981); text-decoration: none;
+    border-bottom: 1px solid rgba(16, 185, 129, 0.35); padding-bottom: 2px;
+}
+.travail__lien:hover { border-bottom-color: var(--emerald, #10b981); }
+
+/* Bandeau compact, pour l'accueil : trois apercus et un lien. */
+.travaux--apercu .travaux__grille { grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); }
+.travaux--apercu .travail__corps { padding: 18px 20px 20px; }
+.travaux--apercu .travail__texte { display: none; }

@@ -73,6 +73,7 @@
 - [Où nous intervenons | Kaalytics](https://kaalytics.com/ou-nous-intervenons) : Kaalytics intervient à distance depuis le Maroc sur l'ERP de clients en France, Canada, Belgique, Suisse et Afrique francophone.
 - [Daedalia AI — Copilote IA pour Odoo | Kaalytics](https://kaalytics.com/products/daedalia) : Daedalia AI: le premier LLM connecté à Odoo. Interrogez vos documents en langage naturel, créez des devis, analysez vos ventes en 3 secondes.
 - [FleetOps Pro | Gestion de Flotte IA | Kaalytics](https://kaalytics.com/products/fleetops) : FleetOps Pro: réduction des coûts et pannes, ROI rapide. Gestion de flotte IA pour BTP, Transport, Location. 8 modules.
+- [Réalisations web | Kaalytics](https://kaalytics.com/realisations) : Sites vitrines et catalogues techniques livrés par Kaalytics : XLAB, XCAB, Magma Parts, RIA, Frida Yachting, RIWAQ.
 - [Support | Kaalytics](https://kaalytics.com/support) : Support Kaalytics. Assistance technique, documentation et contact pour nos modules.
 
 ## Version anglaise

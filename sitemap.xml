@@ -608,6 +608,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kaalytics.com/realisations</loc>
+    <lastmod>2026-08-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kaalytics.com/resources</loc>
     <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
