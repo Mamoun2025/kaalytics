@@ -3,7 +3,7 @@
  * PWA support with offline fallback
  */
 
-const CACHE_NAME = 'kaalytics-v2';
+const CACHE_NAME = 'kaalytics-v3';
 const OFFLINE_URL = '/404';
 
 // Assets to cache on install
@@ -45,6 +45,9 @@ self.addEventListener('fetch', (event) => {
 
     // Skip external requests
     if (!event.request.url.startsWith(self.location.origin)) return;
+
+    // Vidéos : laissées au navigateur (requêtes partielles, pas de copie de plusieurs Mo dans le cache)
+    if (event.request.destination === 'video' || event.request.url.includes('/assets/videos/') || event.request.url.includes('/assets/hero-film/')) return;
 
     event.respondWith(
         fetch(event.request)
