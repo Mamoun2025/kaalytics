@@ -1,6 +1,6 @@
 /**
  * Hero : boucle vidéo de fond (26/11/2026)
- * Film émeraude du Studio (petits clips raccordés). Ordinateur : 1920 px, 60 i/s, AV1 (navigateurs récents) ou H.264 ; téléphone en portrait : film vertical
+ * Film émeraude du Studio (5 petits clips raccordés en boucle, v2 du 27/11/2026 ; fichiers en cache immuable 1 an : changer de nom à chaque nouvelle version). Ordinateur : 1920 px, 60 i/s, AV1 (navigateurs récents) ou H.264 ; téléphone en portrait : film vertical
  * cadré sur les blocs de verre. Image fixe en attendant le film, et à la place du film si l'utilisateur réduit les
  * animations ou économise ses données (hero-film.js).
  */
@@ -10,7 +10,7 @@
     inset: 0;
     z-index: 0;
     overflow: hidden;
-    background: #040a08 url("/assets/hero-film/hero-kaalytics-1920.jpg") center / cover no-repeat;
+    background: #040a08 url("/assets/hero-film/hero-kaalytics-v2-1920.jpg") center / cover no-repeat;
 }
 
 .hero__film-video {
@@ -58,7 +58,7 @@
 /* Téléphone en portrait : image fixe verticale, voile plus large (texte sur toute la largeur) */
 @media (max-width: 760px) and (orientation: portrait) {
     .hero__film {
-        background-image: url("/assets/hero-film/hero-kaalytics-portrait.jpg");
+        background-image: url("/assets/hero-film/hero-kaalytics-v2-portrait.jpg");
     }
 
     .hero__film-voile {
