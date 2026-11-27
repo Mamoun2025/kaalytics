@@ -1,8 +1,10 @@
 /**
  * Hero : boucle vidéo de fond (26/11/2026)
- * Film émeraude du Studio (5 petits clips raccordés en boucle, v3 du 27/11/2026 re-rythmée à vitesse constante ; fichiers en cache immuable 1 an : changer de nom à chaque nouvelle version). Ordinateur : 1920 px, 60 i/s, AV1 (navigateurs récents) ou H.264 ; écrans jusqu'à 1100 px : 1280 px, 30 i/s.
- * En portrait, le film entier passe en bandeau au-dessus du texte. Image fixe en attendant le film, et à la place du film si l'utilisateur réduit les
- * animations ou économise ses données (hero-film.js).
+ * Film émeraude du Studio, v4 du 27/11/2026 : une génération Kling 4.0 en 1080p natif, 24 i/s, même image au début
+ * et à la fin (boucle sans raccord). Fichiers en cache immuable 1 an : changer de nom à chaque nouvelle version.
+ * Ordinateur : 1920 px en AV1 ou H.264 ; écrans jusqu'à 1100 px : 1280 px. En portrait, le film entier passe en bandeau
+ * au-dessus du texte. Image fixe en attendant le film, et à sa place si l'utilisateur réduit les animations ou économise
+ * ses données (hero-film.js).
  */
 
 .hero__film {
@@ -10,7 +12,7 @@
     inset: 0;
     z-index: 0;
     overflow: hidden;
-    background: #040a08 url("/assets/hero-film/hero-kaalytics-v3-1920.jpg") center / cover no-repeat;
+    background: #040a08 url("/assets/hero-film/hero-kaalytics-v4-1920.jpg") center / cover no-repeat;
 }
 
 .hero__film-video {
@@ -66,7 +68,7 @@
 
     .hero__film {
         inset: var(--navbar-height, 72px) 0 auto 0;
-        aspect-ratio: 1920 / 1056;
+        aspect-ratio: 16 / 9;
     }
 
     .hero__film-voile {
@@ -74,7 +76,7 @@
     }
 
     .hero:has(.hero__film) .hero__content {
-        margin-top: calc(100vw * 1056 / 1920 - 0.75rem);
+        margin-top: calc(100vw * 9 / 16 - 0.75rem);
     }
 }
 
