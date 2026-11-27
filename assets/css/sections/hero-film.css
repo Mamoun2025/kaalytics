@@ -1,7 +1,7 @@
 /**
  * Hero : boucle vidéo de fond (26/11/2026)
- * Film émeraude du Studio (5 petits clips raccordés en boucle, v2 du 27/11/2026 ; fichiers en cache immuable 1 an : changer de nom à chaque nouvelle version). Ordinateur : 1920 px, 60 i/s, AV1 (navigateurs récents) ou H.264 ; téléphone en portrait : film vertical
- * cadré sur les blocs de verre. Image fixe en attendant le film, et à la place du film si l'utilisateur réduit les
+ * Film émeraude du Studio (5 petits clips raccordés en boucle, v3 du 27/11/2026 re-rythmée à vitesse constante ; fichiers en cache immuable 1 an : changer de nom à chaque nouvelle version). Ordinateur : 1920 px, 60 i/s, AV1 (navigateurs récents) ou H.264 ; écrans jusqu'à 1100 px : 1280 px, 30 i/s.
+ * En portrait, le film entier passe en bandeau au-dessus du texte. Image fixe en attendant le film, et à la place du film si l'utilisateur réduit les
  * animations ou économise ses données (hero-film.js).
  */
 
@@ -10,7 +10,7 @@
     inset: 0;
     z-index: 0;
     overflow: hidden;
-    background: #040a08 url("/assets/hero-film/hero-kaalytics-v2-1920.jpg") center / cover no-repeat;
+    background: #040a08 url("/assets/hero-film/hero-kaalytics-v3-1920.jpg") center / cover no-repeat;
 }
 
 .hero__film-video {
@@ -55,16 +55,37 @@
     text-shadow: 0 2px 24px rgba(4, 10, 8, 0.65);
 }
 
-/* Téléphone en portrait : image fixe verticale, voile plus large (texte sur toute la largeur) */
-@media (max-width: 760px) and (orientation: portrait) {
+/* Écran en portrait (téléphone, tablette) : le film entier en bandeau sous la barre de navigation, le texte dessous.
+   Rempli en hauteur, le film ne montrait plus que son centre vide (27/11/2026). */
+@media (orientation: portrait) and (max-width: 1100px) {
+    .hero:has(.hero__film) {
+        align-items: flex-start;
+        min-height: 0;
+        padding-bottom: var(--space-3xl, 4rem);
+    }
+
     .hero__film {
-        background-image: url("/assets/hero-film/hero-kaalytics-v2-portrait.jpg");
+        inset: var(--navbar-height, 72px) 0 auto 0;
+        aspect-ratio: 1920 / 1056;
     }
 
     .hero__film-voile {
-        background:
-            radial-gradient(ellipse 95% 46% at 50% 48%, rgba(4, 10, 8, 0.72) 0%, rgba(4, 10, 8, 0.38) 70%, rgba(4, 10, 8, 0.18) 100%),
-            linear-gradient(180deg, rgba(4, 10, 8, 0.55) 0%, rgba(4, 10, 8, 0) 16%, rgba(4, 10, 8, 0) 80%, var(--bg-void, #040a08) 100%);
+        background: linear-gradient(180deg, rgba(4, 10, 8, 0.5) 0%, rgba(4, 10, 8, 0) 16%, rgba(4, 10, 8, 0) 58%, rgba(4, 10, 8, 0.7) 86%, var(--bg-void, #040a08) 100%);
+    }
+
+    .hero:has(.hero__film) .hero__content {
+        margin-top: calc(100vw * 1056 / 1920 - 0.75rem);
+    }
+}
+
+/* Téléphone : bandeau un peu plus haut (bords du film légèrement rognés) */
+@media (orientation: portrait) and (max-width: 600px) {
+    .hero__film {
+        aspect-ratio: 3 / 2;
+    }
+
+    .hero:has(.hero__film) .hero__content {
+        margin-top: calc(100vw * 2 / 3 - 0.5rem);
     }
 }
 
