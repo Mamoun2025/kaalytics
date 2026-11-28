@@ -87,12 +87,63 @@ h1 { margin: 0 0 6px; font: 700 1.8rem/1.1 'Inter Tight', sans-serif; letter-spa
 .f:hover i { transform: translateX(4px) rotate(-8deg); }
 .f:active { transform: scale(.98); }
 
+/* Briques : forme des briques de modules (coins 6 px, tranche visible sous le bouton, appui qui l'enfonce) */
+.k { border-radius: 6px; min-height: 54px; padding: 0 26px; }
+.k:active { transform: translateY(4px); }
+/* G · Brique émeraude pleine */
+.g { color: #03140f; background: linear-gradient(180deg, #5eeaa8 0%, #22c98d 38%, #10b981 70%, #0c9a6c);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.6), inset 0 0 0 1px rgba(167,243,208,.5), 0 4px 0 #065f46, 0 5px 0 #03281d, 0 16px 26px -12px rgba(16,185,129,.9); }
+.g:hover { transform: translateY(-2px); box-shadow: inset 0 1px 0 rgba(255,255,255,.7), inset 0 0 0 1px rgba(167,243,208,.7), 0 6px 0 #065f46, 0 7px 0 #03281d, 0 0 30px -6px rgba(52,211,153,.8), 0 20px 30px -12px rgba(16,185,129,1); }
+.g:active { box-shadow: inset 0 1px 0 rgba(255,255,255,.5), inset 0 0 0 1px rgba(167,243,208,.5), 0 0 0 #065f46, 0 1px 0 #03281d; }
+/* Secondaire commun : brique de verre sombre, comme les briques de modules de l'accueil */
+.k.sec { color: var(--texte); background: linear-gradient(160deg, #143029, #07120f);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.1), inset 0 0 0 1px rgba(52,211,153,.35), 0 4px 0 #0a1d18, 0 5px 0 #020705, 0 14px 24px -14px #000; }
+.k.sec:hover { transform: translateY(-2px); box-shadow: inset 0 1px 0 rgba(255,255,255,.14), inset 0 0 0 1px rgba(52,211,153,.75), 0 6px 0 #0a1d18, 0 7px 0 #020705, 0 0 24px -8px rgba(52,211,153,.7); }
+.k.sec:active { box-shadow: inset 0 0 0 1px rgba(52,211,153,.6), 0 0 0 #0a1d18, 0 1px 0 #020705; }
+/* H · Brique de métal brossé émeraude */
+.h { color: #021a12; text-shadow: 0 1px 0 rgba(255,255,255,.4); background:
+        repeating-linear-gradient(90deg, rgba(255,255,255,.07) 0 1px, rgba(0,0,0,0) 1px 3px),
+        linear-gradient(180deg, #d9fbe9 0%, #8debc2 30%, #34d399 52%, #13a676 56%, #23c48a 78%, #6ee7b7 100%);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.5), inset 0 -1px 0 rgba(2,61,43,.5), 0 4px 0 #0b5f45, 0 5px 0 #03281d, 0 14px 24px -12px rgba(16,185,129,.9); }
+.h::after { content: ''; position: absolute; inset: 0; border-radius: inherit; z-index: -1; opacity: 0;
+    background: linear-gradient(110deg, transparent 35%, rgba(255,255,255,.75) 50%, transparent 65%) -120% 0 / 220% 100% no-repeat; }
+.h { z-index: 0; }
+.h:hover { transform: translateY(-2px); box-shadow: inset 0 0 0 1px rgba(255,255,255,.7), 0 6px 0 #0b5f45, 0 7px 0 #03281d, 0 0 28px -6px rgba(52,211,153,.8); }
+.h:hover::after { opacity: 1; background-position: 120% 0; transition: background-position .8s ease; }
+.h:active { box-shadow: inset 0 0 0 1px rgba(255,255,255,.5), 0 0 0 #0b5f45, 0 1px 0 #03281d; }
+/* I · Brique qui s'emboîte : tenon sur le dessus, il s'allume au survol */
+.i { color: var(--texte); background: linear-gradient(180deg, #123a2f, #0a1f19); margin-top: 8px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.12), inset 0 0 0 1px rgba(52,211,153,.6), 0 4px 0 #0b3a2c, 0 5px 0 #020705, 0 14px 24px -14px #000; }
+.i::before { content: ''; position: absolute; top: -7px; left: 22px; width: 30px; height: 7px; border-radius: 3px 3px 0 0;
+    background: linear-gradient(180deg, #1c5a47, #123a2f); box-shadow: inset 0 0 0 1px rgba(52,211,153,.6); transition: background .3s ease, box-shadow .3s ease; }
+.i:hover { transform: translateY(-2px); box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 0 0 1px var(--e-clair), 0 6px 0 #0b3a2c, 0 7px 0 #020705, 0 0 26px -8px rgba(52,211,153,.8); }
+.i:hover::before { background: linear-gradient(180deg, #a7f3d0, #10b981); box-shadow: 0 0 14px rgba(52,211,153,.9); }
+.i:active { box-shadow: inset 0 0 0 1px var(--e-clair), 0 0 0 #0b3a2c, 0 1px 0 #020705; }
+/* Commutateur FR / EN en deux briques accolées */
+.duo { display: inline-flex; gap: 3px; padding: 3px; border-radius: 8px; background: #020705; box-shadow: inset 0 0 0 1px rgba(52,211,153,.25); }
+.duo a { display: grid; place-items: center; min-width: 46px; height: 40px; border-radius: 5px; font: 600 .85rem/1 'Inter', sans-serif; letter-spacing: .06em;
+    color: var(--gris); text-decoration: none; background: linear-gradient(180deg, #10201b, #08120f); box-shadow: 0 2px 0 #050d0a; transition: color .25s, transform .2s; }
+.duo a:hover { color: var(--texte); }
+.duo a.actif { color: #03140f; background: linear-gradient(180deg, #5eeaa8, #10b981); box-shadow: inset 0 1px 0 rgba(255,255,255,.55), 0 2px 0 #065f46; }
+
 @media (prefers-reduced-motion: reduce) { .e::before { animation: none; } .b { transition: none; } }
 </style>
 
 <main class="page">
     <h1>Boutons Kaalytics</h1>
-    <p class="chapeau">Six styles vivants : survol à la souris, appui au doigt. Choix d'une lettre, appliqué ensuite au site entier (boutons principaux et secondaires).</p>
+    <p class="chapeau">Styles vivants : survol à la souris, appui au doigt. En tête, les briques (G, H, I) demandées le 28/11 ; plus bas, les six pilules précédentes. Choix d'une lettre, appliqué ensuite au site entier.</p>
+
+    <section class="style"><h2><b>G</b>Brique émeraude</h2><p>Forme des briques de modules : coins presque vifs, tranche visible dessous ; le bouton s'enfonce à l'appui. Secondaire en brique de verre sombre.</p>
+        <div class="rang"><a class="b k g" href="#g">Demander une démo</a><a class="b k sec" href="#g">Voir les modules</a></div></section>
+
+    <section class="style"><h2><b>H</b>Brique de métal brossé</h2><p>Matière du nom Kaalytics, brossage fin, reflet qui traverse au survol.</p>
+        <div class="rang"><a class="b k h" href="#h">Demander une démo</a><a class="b k sec" href="#h">Voir les modules</a></div></section>
+
+    <section class="style"><h2><b>I</b>Brique qui s'emboîte</h2><p>Tenon sur le dessus, allumé au survol : rappel des modules qui se connectent.</p>
+        <div class="rang"><a class="b k i" href="#i">Demander une démo</a><a class="b k sec" href="#i">Voir les modules</a></div></section>
+
+    <section class="style"><h2><b>FR/EN</b>Commutateur en briques</h2><p>Deux briques accolées, langue active en émeraude.</p>
+        <div class="rang"><span class="duo"><a class="actif" href="#fr">FR</a><a href="#en">EN</a></span></div></section>
 
     <section class="style"><h2><b>A</b>Verre émeraude bombé</h2><p>Version actuelle du site : émeraude pleine, reflet en haut, lueur portée.</p>
         <div class="rang"><a class="b a" href="#a">Parler à un expert</a><a class="b a sec" href="#a">Voir les modules</a></div></section>
