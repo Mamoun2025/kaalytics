@@ -116,3 +116,45 @@
 /* Forme brique (Mamoun, 28/11 : « plus carré, comme les briques des modules ») */
 .btn, .btn-primary, .btn-secondary, .btn-outline, .btn-ghost, .btn-orange, .btn-purple, .btn-blue,
 .hero__cta-main, .hero__cta-secondary, .navbar__mobile-actions .btn, .accueil .bouton { border-radius: 6px; }
+
+/* ---------- Brique à tenon : « Parler à un expert » (Studio bt3-04, choix de Mamoun du 28/11) ----------
+   Brique de verre émeraude, tenon de métal qui dépasse à droite (le module qui se branche) ; au survol la brique
+   s'allume en vert clair et le tenon s'enfonce d'un cran. La flèche est remplacée par le tenon. */
+.hero .hero__cta-main, .accueil .bouton--grand {
+    position: relative; overflow: visible; margin-inline: 22px; border-radius: 8px;
+    color: #ffffff; text-shadow: 0 1px 0 rgba(2, 40, 30, 0.55);
+    background:
+        linear-gradient(105deg, rgba(255, 255, 255, 0) 38%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 62%) 170% 0 / 260% 100% no-repeat,
+        radial-gradient(120% 70% at 50% 0%, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0) 55%),
+        linear-gradient(180deg, #1f9c7b 0%, #0d6b55 55%, #12866b 100%);
+    box-shadow: inset 0 0 0 1px rgba(167, 243, 208, 0.55), inset 0 -8px 14px -8px rgba(110, 231, 183, 0.7),
+        0 5px 0 #0a4a3a, 0 6px 0 #021a13, 0 18px 30px -14px rgba(16, 185, 129, 0.9);
+}
+.hero .hero__cta-main:hover, .accueil .bouton--grand:hover {
+    color: #03231a; text-shadow: none;
+    background:
+        linear-gradient(105deg, rgba(255, 255, 255, 0) 38%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 62%) 170% 0 / 260% 100% no-repeat,
+        radial-gradient(120% 70% at 50% 0%, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0) 60%),
+        linear-gradient(180deg, #c8f8df 0%, #86edbb 50%, #57dca1 100%);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.75), 0 7px 0 #0b5f45, 0 8px 0 #03281d, 0 0 34px -4px rgba(110, 231, 183, 0.85);
+    transform: translateY(-2px);
+}
+.hero .hero__cta-main svg { display: none; }
+/* Tenon de métal, avec sa lumière de fixation */
+.hero .hero__cta-main::after, .accueil .bouton--grand::after {
+    content: ''; display: block; position: absolute; top: 50%; right: -21px; width: 23px; height: 24px; margin-top: -13px;
+    border-radius: 2px 4px 4px 2px;
+    background: linear-gradient(#071510, #071510) 60% 50% / 8px 8px no-repeat, linear-gradient(180deg, #f1f6f4 0%, #b7c4bf 45%, #7d8b86 100%);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35), 1px 2px 0 #2a3532;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hero .hero__cta-main:hover::after, .accueil .bouton--grand:hover::after { transform: translateX(-4px); }
+/* Logement du tenon dans la brique */
+.hero .hero__cta-main::before, .accueil .bouton--grand::before {
+    content: ''; display: block; position: absolute; top: 50%; right: 0; width: 7px; height: 30px; margin-top: -16px;
+    border-radius: 2px 0 0 2px; background: rgba(2, 30, 22, 0.55); box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.15);
+}
+.hero .hero__cta-main:active, .accueil .bouton--grand:active {
+    transform: translateY(4px);
+    box-shadow: inset 0 0 0 1px rgba(167, 243, 208, 0.6), 0 1px 0 #0a4a3a, 0 2px 0 #021a13;
+}

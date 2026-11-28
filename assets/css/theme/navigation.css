@@ -4,50 +4,63 @@
  * Zones de toucher gardées à 44 px (tests nav mobile) : le dessin est plus fin que la zone, porté par des pseudo-éléments.
  */
 
-/* ---------- Sélecteur de langue : commutateur compact en relief ---------- */
+/* ---------- Sélecteur de langue : deux briques séparées (Studio bt3-07, choix de Mamoun du 28/11) ----------
+   Langue active : brique émeraude allumée ; l'autre : brique sombre. Dessin porté par ::before, zone de toucher 44 px. */
 .navbar .navbar__lang {
-    position: relative; isolation: isolate;
-    display: inline-flex; align-items: center; gap: 0;
-    height: 44px; padding: 0 3px; margin-right: 6px;
-    background: none; border: 0; box-shadow: none;
-}
-.navbar .navbar__lang::before {
-    content: ''; position: absolute; inset: 7px 0; z-index: -1; border-radius: 999px;
-    background: linear-gradient(180deg, #0c1a16, #07110e);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(143, 165, 156, 0.22), 0 1px 0 rgba(255, 255, 255, 0.05);
+    position: relative; display: inline-flex; align-items: center; gap: 4px;
+    height: 44px; padding: 0; margin-right: 8px; background: none; border: 0; box-shadow: none;
 }
 .navbar .navbar__lang-btn {
     position: relative; isolation: isolate;
     display: inline-flex; align-items: center; justify-content: center;
-    min-width: 40px; height: 44px; padding: 0 9px;
-    background: none; border: 0; border-radius: 999px; box-shadow: none;
-    font: 600 0.72rem/1 var(--font-primary, 'Inter', sans-serif); letter-spacing: 0.1em;
-    color: #8fa59c; transition: color 0.2s ease;
+    min-width: 40px; height: 44px; padding: 0 8px;
+    background: none; border: 0; border-radius: 6px; box-shadow: none;
+    font: 700 0.74rem/1 var(--font-primary, 'Inter', sans-serif); letter-spacing: 0.08em;
+    color: #6f8a80; transition: color 0.2s ease;
+}
+.navbar .navbar__lang-btn::before {
+    content: ''; position: absolute; inset: 6px 2px 8px; z-index: -1; border-radius: 6px;
+    background: linear-gradient(180deg, #12261f, #0a1814);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07), inset 0 0 0 1px rgba(52, 211, 153, 0.16), 0 2px 0 #050d0a, 0 3px 0 #010403;
+    transition: box-shadow 0.25s ease, transform 0.2s ease;
 }
 .navbar .navbar__lang-btn:hover { color: #ecfdf5; }
-.navbar .navbar__lang .navbar__lang-btn--active { color: #03140f; background: none; }
-.navbar .navbar__lang-btn--active::before {
-    content: ''; position: absolute; inset: 10px 3px; z-index: -1; border-radius: 999px;
-    background: linear-gradient(180deg, #6ee7b7 0%, #34d399 45%, #10b981 100%);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(4, 47, 35, 0.35), 0 3px 10px -3px rgba(16, 185, 129, 0.8);
+.navbar .navbar__lang-btn:hover::before { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(52, 211, 153, 0.5), 0 2px 0 #050d0a, 0 3px 0 #010403; }
+.navbar .navbar__lang .navbar__lang-btn--active { color: #ffffff; background: none; text-shadow: 0 1px 0 rgba(2, 61, 43, 0.6); }
+.navbar .navbar__lang .navbar__lang-btn--active::before {
+    background: linear-gradient(180deg, #5eeaa8 0%, #22c98d 45%, #0fa877 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), inset 0 0 0 1px rgba(167, 243, 208, 0.5), 0 2px 0 #065f46, 0 3px 0 #03281d, 0 0 16px -2px rgba(52, 211, 153, 0.75);
 }
+.navbar .navbar__lang-btn:active::before { transform: translateY(2px); }
 .navbar--scrolled .navbar__lang { border-color: transparent; }
-.navbar--scrolled .navbar__lang-btn:not(.navbar__lang-btn--active) { color: #8fa59c; }
+.navbar--scrolled .navbar__lang-btn:not(.navbar__lang-btn--active) { color: #6f8a80; }
 
-/* ---------- Bouton menu : carré arrondi en verre ---------- */
+/* ---------- Bouton menu : brique carrée à coins coupés, trois barres lumineuses (Studio bt3-08) ---------- */
 .navbar .navbar__mobile-toggle {
-    width: 44px; height: 44px; place-items: center; padding: 0;
-    border-radius: 14px; border: 0; color: #ecfdf5;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(143, 165, 156, 0.24), 0 6px 16px -8px rgba(0, 0, 0, 0.8);
+    position: relative; isolation: isolate;
+    width: 46px; height: 46px; place-items: center; padding: 0;
+    border-radius: 0; border: 0; color: #5eeaa8; background: none; box-shadow: none;
 }
-.navbar .navbar__mobile-toggle svg { width: 20px; height: 20px; }
+.navbar .navbar__mobile-toggle::before, .navbar .navbar__mobile-toggle::after {
+    content: ''; position: absolute; z-index: -1;
+    clip-path: polygon(9px 0, calc(100% - 9px) 0, 100% 9px, 100% calc(100% - 9px), calc(100% - 9px) 100%, 9px 100%, 0 calc(100% - 9px), 0 9px);
+}
+/* Tranche et arête */
+.navbar .navbar__mobile-toggle::before { inset: 0; background: linear-gradient(180deg, #2b7d63, #0b3a2c 70%, #03140f); }
+/* Face */
+.navbar .navbar__mobile-toggle::after { inset: 1px 1px 4px; background: radial-gradient(120% 90% at 50% 0%, rgba(255, 255, 255, 0.1), transparent 60%), linear-gradient(180deg, #17493b, #0e2f26); transition: background 0.25s ease; }
+.navbar .navbar__mobile-toggle svg { width: 22px; height: 22px; margin-top: -3px; stroke-width: 3; stroke-linecap: round; }
+.navbar .navbar__mobile-toggle:hover { color: #ecfdf5; }
+.navbar .navbar__mobile-toggle:hover::after, .navbar--menu-ouvert .navbar__mobile-toggle::after {
+    background: radial-gradient(120% 90% at 50% 0%, rgba(255, 255, 255, 0.3), transparent 60%), linear-gradient(180deg, #4fd79e, #1c9e74);
+}
+.navbar .navbar__mobile-toggle:active::after { inset: 3px 1px 2px; }
 /* Visible seulement là où le site l'affiche déjà (sous 1025 px, _navbar.css) : on ne touche pas à display ailleurs */
 @media (max-width: 1024px) { .navbar .navbar__mobile-toggle { display: inline-grid; } }
 
 /* Téléphone : l'en-tête illustré de chaque page commence sous la barre (étiquette de page plus masquée) */
 @media (max-width: 1024px) { body :has(> .visuel-page) { padding-top: 112px; } }
-.navbar--menu-ouvert .navbar__mobile-toggle { color: #34d399; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(52, 211, 153, 0.5); }
+.navbar--menu-ouvert .navbar__mobile-toggle { color: #ecfdf5; }
 
 /* ---------- Panneau mobile ---------- */
 .navbar__mobile-menu {
