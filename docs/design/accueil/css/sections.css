@@ -16,7 +16,15 @@
 .fil { height: 2px; margin-bottom: 40px; background: var(--filet); overflow: hidden; }
 .fil span { display: block; height: 100%; background: linear-gradient(90deg, var(--emeraude), var(--emeraude-clair)); transform: scaleX(var(--avance, 1)); transform-origin: left; }
 .etapes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-.etapes b { display: block; margin-bottom: 18px; font: 400 clamp(3rem, 6vw, 4.75rem)/1 var(--marque); letter-spacing: -0.05em; color: transparent; -webkit-text-stroke: 1px rgba(52, 211, 153, 0.85); }
+/* Visuels des étapes (Studio, planche Méthode du 21/11/2026) : bords fondus pour effacer les restes de cadre */
+.etapes img {
+    width: 100%; height: auto; aspect-ratio: 6 / 5; object-fit: cover; margin-bottom: 6px;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 16%, #000 84%, transparent), linear-gradient(180deg, transparent, #000 14%, #000 82%, transparent);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(90deg, transparent, #000 16%, #000 84%, transparent), linear-gradient(180deg, transparent, #000 14%, #000 82%, transparent);
+    mask-composite: intersect;
+}
+.etapes b { display: block; margin-bottom: 14px; font: 400 clamp(2.4rem, 4.5vw, 3.5rem)/1 var(--marque); letter-spacing: -0.05em; color: transparent; -webkit-text-stroke: 1px rgba(52, 211, 153, 0.85); }
 .etapes p { margin: 10px 0 14px; color: var(--gris); }
 .etapes i { font-style: normal; font-size: 0.9rem; color: var(--emeraude-clair); }
 
