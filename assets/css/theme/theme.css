@@ -93,7 +93,7 @@ a { text-underline-offset: 3px; }
     box-shadow: none;
 }
 .navbar__link.active, .navbar__link--active { color: #ffffff; }
-.navbar__dropdown, .navbar__dropdown-menu { background: #08130f; border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5); -webkit-backdrop-filter: none; backdrop-filter: none; }
+.navbar__dropdown-menu { background: #08130f; border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5); -webkit-backdrop-filter: none; backdrop-filter: none; }
 
 /* ---------- Boutons : une forme pleine émeraude, une forme filaire ---------- */
 .btn, .btn-primary, .btn-secondary, .btn-outline, .btn-ghost, .hero__cta-main, [class*="cta"] > a.btn {

@@ -17,6 +17,25 @@ ECRANS = {"ordinateur": (1440, 900, False), "tablette": (600, 900, True), "telep
 SEUIL_IMAGES_LENTES = 5  # % d'images au-delà de 34 ms toléré pendant un défilement continu
 
 
+def capturer_menu(page, cible: Path, problemes: list[str], nom: str) -> None:
+    """Menu mobile ouvert, premier groupe déplié : capture à regarder (leçon du 28/11/2026, menu jamais relu)."""
+    page.evaluate("window.scrollTo(0, 0)")
+    bouton = page.locator(".navbar__mobile-toggle")
+    if not bouton.count() or not bouton.first.is_visible():
+        return
+    bouton.first.click()
+    page.wait_for_timeout(700)
+    groupe = page.locator("summary.mobile-group__title")
+    if groupe.count():
+        groupe.first.click()
+        page.wait_for_timeout(400)
+    page.screenshot(path=str(cible), type="jpeg", quality=72)
+    if page.evaluate("document.documentElement.scrollWidth - window.innerWidth") > 2:
+        problemes.append(f"{nom} : menu mobile ouvert, débordement horizontal")
+    bouton.first.click()
+    page.wait_for_timeout(500)
+
+
 def mesurer_fluidite(contexte, page) -> int:
     """Défile toute la page depuis le haut, processeur ralenti x4 ; rend le % d'images au-delà de 34 ms."""
     session = contexte.new_cdp_session(page)
@@ -58,6 +77,8 @@ def controler(adresse: str, sortie: Path) -> list[str]:
             debordement = page.evaluate("document.documentElement.scrollWidth - window.innerWidth")
             if debordement > 2:
                 problemes.append(f"{nom} : débordement horizontal de {debordement} px")
+            if tactile:
+                capturer_menu(page, sortie / f"{nom}-menu.jpg", problemes, nom)
             lentes = mesurer_fluidite(contexte, page)
             if lentes > SEUIL_IMAGES_LENTES:
                 problemes.append(f"{nom} : défilement saccadé, {lentes} % d'images au-delà de 34 ms (processeur ralenti x4)")

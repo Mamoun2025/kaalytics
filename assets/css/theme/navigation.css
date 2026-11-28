@@ -1,0 +1,114 @@
+/**
+ * Thème Kaalytics 2026 : barre de navigation, sélecteur de langue, bouton menu et panneau mobile.
+ * Demande de Mamoun du 28/11/2026 sur téléphone : « la barre nav n'est pas du tout jolie, pas très ergonomique ».
+ * Zones de toucher gardées à 44 px (tests nav mobile) : le dessin est plus fin que la zone, porté par des pseudo-éléments.
+ */
+
+/* ---------- Sélecteur de langue : commutateur compact en relief ---------- */
+.navbar .navbar__lang {
+    position: relative; isolation: isolate;
+    display: inline-flex; align-items: center; gap: 0;
+    height: 44px; padding: 0 3px; margin-right: 6px;
+    background: none; border: 0; box-shadow: none;
+}
+.navbar .navbar__lang::before {
+    content: ''; position: absolute; inset: 7px 0; z-index: -1; border-radius: 999px;
+    background: linear-gradient(180deg, #0c1a16, #07110e);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(143, 165, 156, 0.22), 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+.navbar .navbar__lang-btn {
+    position: relative; isolation: isolate;
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 40px; height: 44px; padding: 0 9px;
+    background: none; border: 0; border-radius: 999px; box-shadow: none;
+    font: 600 0.72rem/1 var(--font-primary, 'Inter', sans-serif); letter-spacing: 0.1em;
+    color: #8fa59c; transition: color 0.2s ease;
+}
+.navbar .navbar__lang-btn:hover { color: #ecfdf5; }
+.navbar .navbar__lang-btn--active, .navbar--scrolled .navbar__lang-btn--active { color: #03140f; background: none; }
+.navbar .navbar__lang-btn--active::before {
+    content: ''; position: absolute; inset: 10px 3px; z-index: -1; border-radius: 999px;
+    background: linear-gradient(180deg, #6ee7b7 0%, #34d399 45%, #10b981 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(4, 47, 35, 0.35), 0 3px 10px -3px rgba(16, 185, 129, 0.8);
+}
+.navbar--scrolled .navbar__lang { border-color: transparent; }
+.navbar--scrolled .navbar__lang-btn { color: #8fa59c; }
+
+/* ---------- Bouton menu : carré arrondi en verre ---------- */
+.navbar .navbar__mobile-toggle {
+    width: 44px; height: 44px; place-items: center; padding: 0;
+    border-radius: 14px; border: 0; color: #ecfdf5;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(143, 165, 156, 0.24), 0 6px 16px -8px rgba(0, 0, 0, 0.8);
+}
+.navbar .navbar__mobile-toggle svg { width: 20px; height: 20px; }
+/* Visible seulement là où le site l'affiche déjà (sous 1025 px, _navbar.css) : on ne touche pas à display ailleurs */
+@media (max-width: 1024px) { .navbar .navbar__mobile-toggle { display: inline-grid; } }
+
+/* Téléphone : l'en-tête illustré de chaque page commence sous la barre (étiquette de page plus masquée) */
+@media (max-width: 1024px) { body :has(> .visuel-page) { padding-top: 112px; } }
+.navbar--menu-ouvert .navbar__mobile-toggle { color: #34d399; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(52, 211, 153, 0.5); }
+
+/* ---------- Panneau mobile ---------- */
+.navbar__mobile-menu {
+    background:
+        radial-gradient(120% 55% at 100% 0%, rgba(16, 185, 129, 0.2), transparent 62%),
+        radial-gradient(90% 50% at 0% 100%, rgba(24, 76, 61, 0.55), transparent 70%),
+        #040a08;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.navbar__mobile-menu .navbar__mobile-nav { padding: 18px 20px 8px; display: flex; flex-direction: column; }
+
+/* Entrées principales : grandes, en Inter Tight, filet fin */
+.navbar__mobile-menu .mobile-link--top, .navbar__mobile-menu .mobile-group__title {
+    display: flex; align-items: center; justify-content: space-between;
+    min-height: 60px; padding: 0 4px;
+    font: 600 1.45rem/1.15 var(--font-titre, 'Inter Tight', sans-serif); letter-spacing: -0.02em;
+    color: #ecfdf5; border-bottom: 1px solid rgba(143, 165, 156, 0.13);
+    list-style: none; cursor: pointer;
+}
+.navbar__mobile-menu .mobile-group { border: 0; margin: 0; padding: 0; }
+.navbar__mobile-menu .mobile-group__title::-webkit-details-marker { display: none; }
+
+/* Chevron dans une pastille, qui tourne à l'ouverture */
+.navbar__mobile-menu .mobile-group__title::after {
+    content: ''; flex: 0 0 32px; width: 32px; height: 32px; border-radius: 50%;
+    border: 0; transform: none;
+    background: rgba(16, 185, 129, 0.1) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2334d399' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") center / 14px no-repeat;
+    box-shadow: inset 0 0 0 1px rgba(52, 211, 153, 0.35);
+    transition: transform 0.3s var(--sortie, ease);
+}
+.navbar__mobile-menu .mobile-group[open] .mobile-group__title::after { transform: rotate(180deg); }
+.navbar__mobile-menu .mobile-group[open] .mobile-group__title { color: #34d399; border-bottom-color: transparent; }
+
+/* Sous-menus : tuiles en deux colonnes */
+.navbar__mobile-menu .mobile-group__items {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px;
+    padding: 4px 0 16px; border-bottom: 1px solid rgba(143, 165, 156, 0.13);
+}
+.navbar__mobile-menu .mobile-group__items .mobile-link {
+    min-height: 52px; padding: 10px 12px; margin: 0;
+    border-radius: 14px; font: 500 0.88rem/1.25 var(--font-primary, 'Inter', sans-serif); color: #d6e6de;
+    background: linear-gradient(180deg, rgba(19, 42, 36, 0.85), rgba(10, 21, 18, 0.85));
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(143, 165, 156, 0.16);
+}
+.navbar__mobile-menu .mobile-group__items .mobile-link:active { box-shadow: inset 0 0 0 1px rgba(52, 211, 153, 0.6); color: #ecfdf5; }
+
+/* Pied du panneau : bouton d'appel en relief, pleine largeur */
+.navbar__mobile-menu .navbar__mobile-actions { padding: 16px 20px calc(20px + env(safe-area-inset-bottom, 0px)); border-top: 0; }
+.navbar__mobile-menu .navbar__mobile-actions .btn { width: 100%; min-height: 56px; border-radius: 999px; font-size: 1.02rem; }
+
+/* Entrée du contenu à l'ouverture : en décalé, transform et opacity seulement */
+@media (prefers-reduced-motion: no-preference) {
+    .navbar__mobile-menu.active .navbar__mobile-nav > *,
+    .navbar__mobile-menu.active .navbar__mobile-actions {
+        animation: menu-entree 0.5s var(--sortie, ease) both;
+    }
+    .navbar__mobile-menu.active .navbar__mobile-nav > :nth-child(2) { animation-delay: 0.04s; }
+    .navbar__mobile-menu.active .navbar__mobile-nav > :nth-child(3) { animation-delay: 0.08s; }
+    .navbar__mobile-menu.active .navbar__mobile-nav > :nth-child(4) { animation-delay: 0.12s; }
+    .navbar__mobile-menu.active .navbar__mobile-nav > :nth-child(5) { animation-delay: 0.16s; }
+    .navbar__mobile-menu.active .navbar__mobile-nav > :nth-child(6) { animation-delay: 0.2s; }
+    .navbar__mobile-menu.active .navbar__mobile-actions { animation-delay: 0.24s; }
+}
+@keyframes menu-entree { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
