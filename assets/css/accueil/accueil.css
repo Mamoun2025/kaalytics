@@ -120,3 +120,7 @@
 .hero .hero__subtitle { color: rgba(236, 253, 245, 0.92); }
 .hero .hero__subtitle { margin-left: auto; margin-right: auto; max-width: 40rem; text-align: center; }
 .hero .hero__cta-group { margin-top: 28px; justify-content: center; }
+
+/* Film du hero : fondu d'apparition 0,5 s au lieu de 1,2 s (Mamoun, 28/11 : « les vidéos n'apparaissent pas vite »).
+   Réglé ici pour laisser hero-film.css intact. */
+.hero .hero__film .hero__film-video { transition-duration: 0.5s; }
