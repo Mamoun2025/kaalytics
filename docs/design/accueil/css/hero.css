@@ -1,0 +1,56 @@
+/* Maquette de l'accueil : hero. Film v4 inchangé (mêmes fichiers), image fixe affichée tout de suite, film en fondu
+   court dès sa première image. Texte centré dans l'écran, fondu long vers la suite de la page. */
+
+.hero {
+    position: relative; display: grid; place-items: center;
+    min-height: 100svh; padding: 96px 24px 120px;
+    text-align: center; overflow: clip;
+}
+.hero__film {
+    position: absolute; inset: 0;
+    background: var(--ombre) url('/assets/hero-film/hero-kaalytics-v4-1920.jpg') center / cover no-repeat;
+    will-change: transform;
+}
+.hero__film video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease-out; }
+.hero__film.est-pret video { opacity: 1; }
+.hero__voile {
+    position: absolute; inset: 0; pointer-events: none;
+    background:
+        radial-gradient(ellipse 52% 44% at 50% 48%, rgba(4, 10, 8, 0.72) 0%, rgba(4, 10, 8, 0.34) 58%, rgba(4, 10, 8, 0) 100%),
+        linear-gradient(180deg, rgba(4, 10, 8, 0.8) 0%, rgba(4, 10, 8, 0) 20%, rgba(4, 10, 8, 0) 52%, rgba(4, 10, 8, 0.72) 82%, #040a08 100%);
+}
+
+.hero__texte { position: relative; z-index: 2; display: grid; justify-items: center; gap: 0; max-width: 62rem; }
+.hero__titre { font-size: clamp(2.6rem, 8.2vw, 6.75rem); letter-spacing: -0.045em; line-height: 0.98; text-shadow: 0 4px 40px rgba(4, 10, 8, 0.7); }
+.hero__ligne { display: block; padding-bottom: 0.08em; }
+.hero__ligne--eclat {
+    background: linear-gradient(100deg, #10b981 0%, #34d399 30%, #ecfdf5 48%, #34d399 62%, #10b981 100%) 100% 0 / 240% 100%;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    text-shadow: none; filter: drop-shadow(0 4px 28px rgba(4, 10, 8, 0.75));
+    animation: eclat 6s ease-in-out 1.6s infinite;
+}
+@keyframes eclat { 0%, 50% { background-position: 100% 0; } 85%, 100% { background-position: 0 0; } }
+.hero__mot { display: inline-block; will-change: transform, filter, opacity; }
+.hero__chapeau { margin: 30px 0 40px; font-size: clamp(1.06rem, 1.7vw, 1.4rem); line-height: 1.45; color: rgba(236, 253, 245, 0.9); text-shadow: 0 2px 20px rgba(4, 10, 8, 0.8); }
+
+.hero__suite { position: absolute; left: 50%; bottom: 34px; z-index: 2; width: 26px; height: 42px; margin-left: -13px; border: 1.5px solid rgba(236, 253, 245, 0.4); border-radius: 14px; }
+.hero__suite span { position: absolute; left: 50%; top: 8px; width: 3px; height: 8px; margin-left: -1.5px; border-radius: 2px; background: var(--emeraude-clair); animation: molette 1.8s ease-in-out infinite; }
+@keyframes molette { 0% { transform: translateY(0); opacity: 1; } 70%, 100% { transform: translateY(14px); opacity: 0; } }
+
+/* Portrait (téléphone, tablette) : film entier en bandeau sous la barre, texte dessous, comme en ligne */
+@media (orientation: portrait) and (max-width: 1100px) {
+    .hero { display: block; min-height: 0; padding: 0 20px 72px; }
+    .hero__film, .hero__voile { inset: 64px 0 auto 0; aspect-ratio: 16 / 9; }
+    .hero__voile { background: linear-gradient(180deg, rgba(4, 10, 8, 0.5) 0%, rgba(4, 10, 8, 0) 18%, rgba(4, 10, 8, 0) 50%, rgba(4, 10, 8, 0.75) 84%, #040a08 100%); }
+    .hero__texte { margin-inline: auto; padding-top: calc(64px + 100vw * 9 / 16 - 28px); }
+    .hero__suite { display: none; }
+}
+@media (orientation: portrait) and (max-width: 600px) {
+    .hero__film, .hero__voile { aspect-ratio: 3 / 2; }
+    .hero__texte { padding-top: calc(64px + 100vw * 2 / 3 - 24px); }
+    .hero .bouton--grand { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero__film video { display: none; }
+    .hero__ligne--eclat, .hero__suite span { animation: none; }
+}

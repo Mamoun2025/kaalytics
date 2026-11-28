@@ -1,0 +1,94 @@
+<meta charset="utf-8">
+<title>Kaalytics · design</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="page.css">
+
+<main class="page">
+    <header class="tete">
+        <p class="sur">Refonte kaalytics.com · 28/11/2026</p>
+        <h1>Kaalytics · design</h1>
+        <p class="chapeau">Tour du site terminé, trois pistes de thème prêtes. Choix de la piste attendu avant toute application.</p>
+    </header>
+
+    <section>
+        <h2>Avancement</h2>
+        <ul class="lignes">
+            <li><span class="etat etat--fait">Fait</span><div><strong>Tour du site</strong><span id="resume-tour">101 pages, 4 largeurs</span></div></li>
+            <li><span class="etat etat--fait">Fait</span><div><strong>Pistes de thème</strong><span>3 maquettes de l'accueil, 4 largeurs chacune</span></div></li>
+            <li><span class="etat etat--attente">En attente</span><div><strong>Choix de la piste</strong><span>Décision de Mamoun</span></div></li>
+            <li><span class="etat etat--attente">En attente</span><div><strong>Application sur branche</strong><span>Après le choix, rien sur main</span></div></li>
+            <li><span class="etat etat--attente">En attente</span><div><strong>Aperçu Vercel</strong><span>Captures avant et après sur toutes les pages</span></div></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Décisions attendues</h2>
+        <ul class="lignes lignes--texte">
+            <li><div><strong>Piste de thème</strong><span>Sombre sobre, Clair ou Technique. Recommandation : Clair.</span></div></li>
+            <li><div><strong>Fond du contenu</strong><span>Palette validée sur fond #040a08 d'un côté, règle « fond blanc » des supports clients de l'autre. La piste Clair garde le film et le pied sombres, le reste passe sur blanc.</span></div></li>
+            <li><div><strong>Animations au défilement</strong><span>Fichier animations.js jamais exécuté en ligne (erreur de syntaxe). Correction prévue sur la branche. Proposition : apparitions discrètes seulement, sans effet aimanté ni zoom des cartes.</span></div></li>
+            <li><div><strong>Schéma orbital des modules</strong><span>Proposition : remplacement par une liste des huit modules, sans photo de banque d'images.</span></div></li>
+            <li><div><strong>Documents internes en ligne</strong><span>EN_READINESS.md et docs/ accessibles sur kaalytics.com. Proposition : exclusion du déploiement par .vercelignore.</span></div></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Pistes</h2>
+        <p class="note">Socle commun aux trois : film du hero inchangé, logo en nom seul, titres nominaux courts, un seul bouton plein, fin des violets, bleus et oranges, fin du texte courant vert menthe, lignes plates à filets fins.</p>
+        <div class="onglets" id="onglets-pistes" role="tablist"></div>
+        <div id="piste"></div>
+        <div class="reglages">
+            <span class="reglages__nom">Largeur</span>
+            <div class="onglets onglets--petits" id="onglets-largeurs"></div>
+        </div>
+        <figure class="cadre-capture">
+            <figcaption><span class="point point--avant"></span>Avant · site en ligne</figcaption>
+            <div class="fenetre"><img id="img-avant" alt="Accueil actuel" loading="lazy"></div>
+        </figure>
+        <figure class="cadre-capture">
+            <figcaption><span class="point point--apres"></span>Après · <span id="nom-apres"></span></figcaption>
+            <div class="fenetre"><img id="img-apres" alt="Maquette de la piste" loading="lazy"></div>
+        </figure>
+    </section>
+
+    <section>
+        <h2>Constats</h2>
+        <div class="chiffres" id="chiffres"></div>
+        <ul class="lignes lignes--texte" id="constats"></ul>
+    </section>
+
+    <section>
+        <h2>Pages</h2>
+        <div class="reglages">
+            <div class="onglets onglets--petits" id="filtre-langue"></div>
+            <label class="case"><input type="checkbox" id="filtre-constats"> Avec constat seulement</label>
+        </div>
+        <div id="pages"><p class="note">Chargement de l'état des pages.</p></div>
+    </section>
+
+    <section>
+        <h2>Gabarits de référence</h2>
+        <p class="note">Captures entières du site en ligne, huit gabarits, quatre largeurs.</p>
+        <div class="reglages">
+            <select id="choix-gabarit" aria-label="Gabarit"></select>
+            <div class="onglets onglets--petits" id="onglets-largeurs-gabarit"></div>
+        </div>
+        <figure class="cadre-capture">
+            <div class="fenetre fenetre--haute"><img id="img-gabarit" alt="Capture du gabarit" loading="lazy"></div>
+        </figure>
+    </section>
+
+    <section>
+        <h2>Dette technique</h2>
+        <ul class="lignes">
+            <li><span class="etat etat--cours">Cause trouvée</span><div><strong>Erreur « Unexpected token '{' »</strong><span>assets/js/core/animations.js, ligne 232 : classe refermée une méthode trop tôt, fichier entier rejeté. Chargé par les deux accueils. Correction sur la branche.</span></div></li>
+            <li><span class="etat etat--attente">À faire</span><div><strong>Films hero v1 et v2</strong><span>10 fichiers sans référence dans assets/hero-film (35 Mo). Déplacement vers TRASH/ sur la branche.</span></div></li>
+            <li><span class="etat etat--attente">À décider</span><div><strong>Documents internes publics</strong><span>Voir « Décisions attendues ».</span></div></li>
+        </ul>
+    </section>
+
+    <footer class="bas">Source : docs/design/page dans le dépôt du site · outils : scripts/design</footer>
+</main>
+
+<script src="page.js"></script>

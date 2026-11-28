@@ -44,3 +44,7 @@ sections/modules-ia/editor.html
 
 # SDD scratch
 .superpowers/
+
+# Captures de la page de suivi design (régénérées par scripts/design)
+docs/design/page/medias/
+docs/design/page/etat.json

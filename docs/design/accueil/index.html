@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#040a08">
+    <title>Kaalytics · maquette de l'accueil</title>
+    <link rel="preload" as="image" href="/assets/hero-film/hero-kaalytics-v4-1920.jpg" fetchpriority="high">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700&family=Unbounded:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/assemblage.css">
+    <link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+    <div class="aurore" aria-hidden="true"><i></i><i></i><i></i></div>
+
+    <header class="barre">
+        <a class="marque" href="#hero" aria-label="Kaalytics">Kaal<span>ytics</span></a>
+        <nav class="barre__liens" aria-label="Navigation principale">
+            <a href="#assemblage">Modules</a>
+            <a href="#cas">Industries</a>
+            <a href="#demarche">Méthode</a>
+            <a href="#zones">À propos</a>
+        </nav>
+        <span class="barre__langue"><b>FR</b> · EN</span>
+        <a class="bouton bouton--petit" href="#appel">Nous contacter</a>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero__film" aria-hidden="true">
+                <video autoplay muted loop playsinline preload="auto" disablepictureinpicture
+                       onloadeddata="this.parentNode.classList.add('est-pret')">
+                    <source media="(max-width: 1100px)" src="/assets/hero-film/hero-kaalytics-v4-1280.mp4" type="video/mp4">
+                    <source src="/assets/hero-film/hero-kaalytics-v4-1920-av1.mp4" type='video/mp4; codecs="av01.0.09M.10"'>
+                    <source src="/assets/hero-film/hero-kaalytics-v4-1920.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="hero__voile" aria-hidden="true"></div>
+            <div class="hero__texte">
+                <h1 class="hero__titre">
+                    <span class="hero__ligne">Vos systèmes.</span>
+                    <span class="hero__ligne hero__ligne--eclat">Sous stéroïdes.</span>
+                </h1>
+                <p class="hero__chapeau">On branche nos modules.<br>Des jours de travail, en quelques secondes.</p>
+                <a class="bouton bouton--grand" href="#appel">Parler à un expert</a>
+            </div>
+            <a class="hero__suite" href="#assemblage" aria-label="Suite de la page"><span></span></a>
+        </section>
+
+        <section class="assemblage" id="assemblage">
+            <div class="assemblage__scene">
+                <div class="tete tete--centre">
+                    <span class="etiquette">Modules</span>
+                    <h2>Assemblage</h2>
+                    <p>Huit briques autour de l'ERP en place. Sans migration.</p>
+                </div>
+                <ul class="mur">
+                    <li class="brique" data-x="-1" data-y="-1"><img src="medias/brique-ventes.webp" alt="" width="360" height="360"><span>Sales Intelligence</span></li>
+                    <li class="brique" data-x="0" data-y="-1"><img src="medias/brique-automatisation.webp" alt="" width="360" height="360"><span>Marketing Automation</span></li>
+                    <li class="brique" data-x="1" data-y="-1"><img src="medias/brique-recouvrement.webp" alt="" width="360" height="360"><span>Financial Operations</span></li>
+                    <li class="brique" data-x="-1" data-y="0"><img src="medias/brique-stock.webp" alt="" width="360" height="360"><span>Supply Chain</span></li>
+                    <li class="socle"><strong>Votre ERP</strong><span>Odoo · SAP<br>Sage · Dynamics</span></li>
+                    <li class="brique" data-x="1" data-y="0"><img src="medias/brique-localisation.webp" alt="" width="360" height="360"><span>FleetOps</span></li>
+                    <li class="brique" data-x="-1" data-y="1"><img src="medias/brique-integration.webp" alt="" width="360" height="360"><span>ERP Connect</span></li>
+                    <li class="brique" data-x="0" data-y="1"><img src="medias/brique-reporting.webp" alt="" width="360" height="360"><span>Digital Platform</span></li>
+                    <li class="brique" data-x="1" data-y="1"><img src="medias/brique-agent-ia.webp" alt="" width="360" height="360"><span>AI Engine</span></li>
+                </ul>
+                <p class="assemblage__compte"><b id="compte">8</b> / 8 modules branchés</p>
+            </div>
+        </section>
+
+        <section class="modules" id="modules">
+            <div class="modules__scene">
+                <div class="cadre">
+                    <div class="tete">
+                        <span class="etiquette">Offre</span>
+                        <h2>Modules</h2>
+                        <p>Chaque module indépendant, activé selon le besoin.</p>
+                    </div>
+                </div>
+                <div class="piste">
+                    <article class="carte"><img src="medias/module-sales-intelligence.webp" alt="" loading="lazy"><div><i>Ventes</i><h3>Sales Intelligence</h3><p>Pilotage commercial, prévisions, relances</p></div></article>
+                    <article class="carte"><img src="medias/module-marketing-auto.webp" alt="" loading="lazy"><div><i>Marketing</i><h3>Marketing Automation</h3><p>Campagnes, scoring, relances clients</p></div></article>
+                    <article class="carte"><img src="medias/module-financial-ops.webp" alt="" loading="lazy"><div><i>Finance</i><h3>Financial Operations</h3><p>Facturation, recouvrement, rapprochement</p></div></article>
+                    <article class="carte"><img src="medias/module-supply-chain.webp" alt="" loading="lazy"><div><i>Logistique</i><h3>Supply Chain</h3><p>Stocks, approvisionnements, tournées</p></div></article>
+                    <article class="carte"><img src="medias/module-fleetops.webp" alt="" loading="lazy"><div><i>Parc</i><h3>FleetOps</h3><p>Flotte, maintenance, carburant</p></div></article>
+                    <article class="carte"><img src="medias/module-erp-connect.webp" alt="" loading="lazy"><div><i>Intégration</i><h3>ERP Connect</h3><p>Connecteurs Odoo, SAP, Sage, Dynamics</p></div></article>
+                    <article class="carte"><img src="medias/module-digital-platform.webp" alt="" loading="lazy"><div><i>Portails</i><h3>Digital Platform</h3><p>Portails clients, applications métier</p></div></article>
+                    <article class="carte"><img src="medias/module-ai-engine.webp" alt="" loading="lazy"><div><i>IA</i><h3>AI Engine</h3><p>Agents IA, lecture de documents, alertes</p></div></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="bloc cadre" id="demarche">
+            <div class="tete">
+                <span class="etiquette">Méthode</span>
+                <h2>Démarche</h2>
+                <p>Trois étapes, de l'audit au lancement.</p>
+            </div>
+            <div class="fil" aria-hidden="true"><span></span></div>
+            <ol class="etapes">
+                <li data-apparition><b>1</b><h3>Audit</h3><p>Besoins, systèmes en place, plan d'action.</p><i>48 h</i></li>
+                <li data-apparition><b>2</b><h3>Configuration</h3><p>Import des données, branchement à l'ERP.</p><i>2 à 4 semaines</i></li>
+                <li data-apparition><b>3</b><h3>Lancement</h3><p>Formation des équipes, support prioritaire.</p><i>3 mois de suivi</i></li>
+            </ol>
+        </section>
+
+        <section class="bloc cadre" id="cas">
+            <div class="tete">
+                <span class="etiquette">Scénarios</span>
+                <h2>Déploiements types</h2>
+                <p>Trois situations fréquentes et les modules associés.</p>
+            </div>
+            <div class="cas">
+                <article data-apparition><img src="medias/cas-btp.webp" alt="" loading="lazy"><i>BTP et construction</i><h3>Suivi de flotte</h3><p>Positions en temps réel, maintenance prévisionnelle, facturation issue des événements GPS.</p><span>FleetOps · 3 à 4 semaines</span></article>
+                <article data-apparition><img src="medias/cas-distribution.webp" alt="" loading="lazy"><i>Distribution et négoce</i><h3>Relances clients</h3><p>Relances automatiques par seuil de délai, visibilité par client, synchronisation avec SAP.</p><span>Marketing, Sales · 2 à 3 semaines</span></article>
+                <article data-apparition><img src="medias/cas-transport.webp" alt="" loading="lazy"><i>Transport et logistique</i><h3>Tableau de bord</h3><p>TMS, Odoo et données temps réel réunis. Rentabilité par trajet, alertes sur anomalies.</p><span>Supply Chain · 4 à 5 semaines</span></article>
+            </div>
+        </section>
+
+        <section class="zones" id="zones">
+            <img class="zones__globe" src="medias/globe.webp" alt="" loading="lazy">
+            <div class="cadre">
+                <div class="tete">
+                    <span class="etiquette">Présence</span>
+                    <h2>Zones d'intervention</h2>
+                    <p>Interventions à distance, une seule équipe du déploiement au support.</p>
+                </div>
+                <ul class="pays">
+                    <li data-apparition><b>MA</b><strong>Maroc</strong><span>PME et groupes industriels</span></li>
+                    <li data-apparition><b>FR</b><strong>France</strong><span>RGPD, Cegid, Sage, SAP</span></li>
+                    <li data-apparition><b>CA</b><strong>Canada</strong><span>Québec, Loi 25</span></li>
+                    <li data-apparition><b>BE</b><strong>Belgique</strong><span>Wallonie et Bruxelles</span></li>
+                    <li data-apparition><b>CH</b><strong>Suisse</strong><span>Suisse romande, LPD</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="appel" id="appel">
+            <img class="appel__fond" src="medias/reseau.webp" alt="" loading="lazy">
+            <div class="cadre appel__texte">
+                <span class="etiquette">Contact</span>
+                <h2>Audit gratuit</h2>
+                <p>Échange de 15 minutes, proposition sous 48 h.</p>
+                <a class="bouton bouton--grand" href="https://wa.me/212673736611" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+                <span class="appel__tel">+212 673 736 611</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pied cadre">
+        <a class="marque" href="#hero" aria-label="Kaalytics">Kaal<span>ytics</span></a>
+        <span>Maquette de travail · 28/11/2026</span>
+    </footer>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script defer src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script defer src="js/defilement.js"></script>
+    <script defer src="js/hero.js"></script>
+    <script defer src="js/assemblage.js"></script>
+    <script defer src="js/galerie.js"></script>
+    <script defer src="js/apparitions.js"></script>
+</body>
+</html>

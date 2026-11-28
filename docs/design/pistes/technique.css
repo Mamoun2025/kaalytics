@@ -1,0 +1,71 @@
+/* Piste « Technique » : registre tableau de bord. Fond sombre, trame de colonnes visible, libellés en IBM Plex Mono,
+   angles droits, émeraude employée comme un voyant (points d'état, chiffres). */
+
+[data-piste="technique"] {
+    --fond: #040a08;
+    --bande: #071210;
+    --texte: #ecfdf5;
+    --texte-2: #8fa59c;
+    --texte-3: #5f7a70;
+    --filet: rgba(24, 76, 61, 0.9);
+    --accent: #10b981;
+    --accent-texte: #34d399;
+    --sur-accent: #040a08;
+    --rayon: 2px;
+    --police-titre: 'IBM Plex Sans', 'Inter', system-ui, sans-serif;
+    --police-texte: 'IBM Plex Sans', 'Inter', system-ui, sans-serif;
+    --police-etiquette: 'IBM Plex Mono', ui-monospace, monospace;
+    --graisse-titre: 500;
+}
+
+/* Trame : filets verticaux aux bords du cadre, sur toute la hauteur du contenu */
+[data-piste="technique"] .bloc > .cadre,
+[data-piste="technique"] .reperes > .cadre,
+[data-piste="technique"] .appel > .cadre {
+    border-left: 1px solid var(--filet);
+    border-right: 1px solid var(--filet);
+}
+[data-piste="technique"] .bloc { padding: 0; border-bottom: 1px solid var(--filet); }
+[data-piste="technique"] .bloc > .cadre { padding-top: 80px; padding-bottom: 80px; }
+[data-piste="technique"] .appel { padding: 0; }
+[data-piste="technique"] .appel > .cadre { padding-top: 72px; padding-bottom: 72px; }
+[data-piste="technique"] .etiquette { font-size: 0.6875rem; letter-spacing: 0.12em; }
+[data-piste="technique"] .bloc__tete .etiquette::before,
+[data-piste="technique"] .appel .etiquette::before {
+    content: ''; display: inline-block; width: 7px; height: 7px; margin-right: 10px; background: var(--accent);
+}
+[data-piste="technique"] h2 { letter-spacing: -0.025em; }
+
+/* Modules en registre : cases bordées, sans arrondi */
+[data-piste="technique"] .modules { display: grid; grid-template-columns: 1fr 1fr; border-left: 1px solid var(--filet); }
+[data-piste="technique"] .modules a {
+    grid-template-columns: 1fr auto; gap: 6px 16px;
+    height: 100%; padding: 20px;
+    border-right: 1px solid var(--filet);
+}
+[data-piste="technique"] .modules span { grid-column: 1 / -1; grid-row: 2; }
+[data-piste="technique"] .modules i { font-size: 0.6875rem; }
+[data-piste="technique"] .etapes { gap: 0; border: 1px solid var(--filet); }
+[data-piste="technique"] .etapes li { padding: 24px; border-top: 0; }
+[data-piste="technique"] .etapes li + li { border-left: 1px solid var(--filet); }
+[data-piste="technique"] .etapes__n { font: 500 0.8125rem/1 var(--police-etiquette); }
+[data-piste="technique"] .etapes__n::before { content: 'ÉTAPE 0'; }
+[data-piste="technique"] .cas { gap: 0; border: 1px solid var(--filet); }
+[data-piste="technique"] .cas article { padding: 24px; border-top: 0; }
+[data-piste="technique"] .cas article + article { border-left: 1px solid var(--filet); }
+[data-piste="technique"] .cas dd { font-family: var(--police-etiquette); font-weight: 500; font-size: 0.8125rem; color: var(--accent-texte); }
+[data-piste="technique"] .zones { border: 1px solid var(--filet); }
+[data-piste="technique"] .zones li { padding: 20px 16px; }
+[data-piste="technique"] .zones li + li { border-left: 1px solid var(--filet); }
+[data-piste="technique"] .reperes strong { font-family: var(--police-etiquette); font-weight: 500; font-size: 1rem; }
+[data-piste="technique"] .bouton { font-family: var(--police-etiquette); font-weight: 500; font-size: 0.8125rem; letter-spacing: 0.06em; text-transform: uppercase; }
+
+@media (max-width: 900px) {
+    [data-piste="technique"] .etapes li + li, [data-piste="technique"] .cas article + article { border-left: 0; border-top: 1px solid var(--filet); }
+    [data-piste="technique"] .zones li + li { border-left: 0; }
+    [data-piste="technique"] .zones li { border-bottom: 1px solid var(--filet); }
+    [data-piste="technique"] .bloc > .cadre { padding-top: 56px; padding-bottom: 56px; }
+}
+@media (max-width: 600px) {
+    [data-piste="technique"] .modules { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,17 @@
+/* Piste « Sombre sobre » : continuité de la palette officielle, fond #040a08 partout, émeraude en accent seulement.
+   Texte en lumière et gris verts (fin du texte courant en vert menthe), ni halo ni dégradé. */
+
+[data-piste="sombre"] {
+    --fond: #040a08;
+    --bande: #0a1512;
+    --texte: #ecfdf5;
+    --texte-2: #8fa59c;
+    --texte-3: #5f7a70;
+    --filet: rgba(143, 165, 156, 0.18);
+    --accent: #10b981;
+    --accent-texte: #34d399;
+    --sur-accent: #040a08;
+    --rayon: 6px;
+}
+
+[data-piste="sombre"] .modules a:hover strong { color: var(--accent-texte); }

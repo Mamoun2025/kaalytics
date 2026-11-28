@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Kaalytics · maquette de thème</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Geist:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="blocs.css">
+    <link rel="stylesheet" href="sombre.css">
+    <link rel="stylesheet" href="clair.css">
+    <link rel="stylesheet" href="technique.css">
+    <script>
+        // ?piste=sombre | clair | technique
+        document.documentElement.dataset.piste = new URLSearchParams(location.search).get('piste') || 'sombre';
+    </script>
+</head>
+<body>
+    <header class="barre">
+        <div class="cadre barre__rang">
+            <a class="logo" href="#">Kaal<span>ytics</span></a>
+            <nav class="barre__liens" aria-label="Navigation principale">
+                <a href="#modules">Modules</a>
+                <a href="#demarche">Industries</a>
+                <a href="#deploiements">Ressources</a>
+                <a href="#zones">À propos</a>
+                <a href="#demarche">Méthode</a>
+            </nav>
+            <div class="barre__actions">
+                <span class="langue"><b>FR</b> / EN</span>
+                <a class="bouton bouton--plein" href="#contact">Nous contacter</a>
+            </div>
+            <button class="barre__menu" aria-label="Menu"><span></span><span></span></button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero__film" aria-hidden="true"></div>
+        <div class="hero__voile" aria-hidden="true"></div>
+        <div class="cadre hero__texte">
+            <h1>Vos systèmes.<br><em>Sous stéroïdes.</em></h1>
+            <p class="hero__chapeau">Modules IA branchés sur votre ERP, sans migration.</p>
+            <a class="bouton bouton--plein bouton--grand" href="#contact">Parler à un expert</a>
+        </div>
+    </section>
+
+    <section class="reperes">
+        <div class="cadre reperes__grille">
+            <div><span class="etiquette">Compatibilité</span><strong>Odoo, SAP, Sage, Dynamics</strong></div>
+            <div><span class="etiquette">Déploiement</span><strong>2 à 4 semaines</strong></div>
+            <div><span class="etiquette">Couverture</span><strong>Espace francophone</strong></div>
+        </div>
+    </section>
+
+    <section class="bloc" id="modules">
+        <div class="cadre bloc__grille">
+            <div class="bloc__tete">
+                <span class="etiquette">Offre</span>
+                <h2>Modules</h2>
+                <p>Huit modules indépendants, branchés sur l'ERP en place.</p>
+            </div>
+            <ul class="modules">
+                <li><a href="#"><strong>Sales Intelligence</strong><span>Pilotage commercial, prévisions, relances</span><i>Ventes</i></a></li>
+                <li><a href="#"><strong>Marketing Automation</strong><span>Campagnes, scoring, relances clients</span><i>Marketing</i></a></li>
+                <li><a href="#"><strong>Financial Operations</strong><span>Facturation, recouvrement, rapprochement</span><i>Finance</i></a></li>
+                <li><a href="#"><strong>Supply Chain</strong><span>Stocks, approvisionnements, tournées</span><i>Logistique</i></a></li>
+                <li><a href="#"><strong>FleetOps</strong><span>Flotte, maintenance, carburant</span><i>Parc</i></a></li>
+                <li><a href="#"><strong>ERP Connect</strong><span>Connecteurs Odoo, SAP, Sage, Dynamics</span><i>Intégration</i></a></li>
+                <li><a href="#"><strong>Digital Platform</strong><span>Portails clients, applications métier</span><i>Portails</i></a></li>
+                <li><a href="#"><strong>AI Engine</strong><span>Agents IA, lecture de documents, alertes</span><i>IA</i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="bloc bloc--bande" id="demarche">
+        <div class="cadre bloc__grille">
+            <div class="bloc__tete">
+                <span class="etiquette">Méthode</span>
+                <h2>Démarche</h2>
+                <p>Trois étapes, de l'audit au lancement.</p>
+            </div>
+            <ol class="etapes">
+                <li><span class="etapes__n">1</span><strong>Audit</strong><p>Besoins, systèmes en place, plan d'action.</p><i>48 h</i></li>
+                <li><span class="etapes__n">2</span><strong>Configuration</strong><p>Import des données, branchement à l'ERP.</p><i>2 à 4 semaines</i></li>
+                <li><span class="etapes__n">3</span><strong>Lancement</strong><p>Formation des équipes, support prioritaire.</p><i>3 mois de suivi</i></li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="bloc" id="deploiements">
+        <div class="cadre bloc__grille">
+            <div class="bloc__tete">
+                <span class="etiquette">Scénarios</span>
+                <h2>Déploiements types</h2>
+                <p>Trois situations fréquentes et les modules associés.</p>
+            </div>
+            <div class="cas">
+                <article>
+                    <span class="etiquette etiquette--point">BTP et construction</span>
+                    <h3>Suivi de flotte</h3>
+                    <p>Positions en temps réel, maintenance prévisionnelle, facturation issue des événements GPS.</p>
+                    <dl><div><dt>Module</dt><dd>FleetOps</dd></div><div><dt>Délai</dt><dd>3 à 4 semaines</dd></div></dl>
+                </article>
+                <article>
+                    <span class="etiquette etiquette--point">Distribution et négoce</span>
+                    <h3>Relances clients</h3>
+                    <p>Relances automatiques par seuil de délai, visibilité par client, synchronisation avec SAP.</p>
+                    <dl><div><dt>Modules</dt><dd>Marketing, Sales</dd></div><div><dt>Délai</dt><dd>2 à 3 semaines</dd></div></dl>
+                </article>
+                <article>
+                    <span class="etiquette etiquette--point">Transport et logistique</span>
+                    <h3>Tableau de bord</h3>
+                    <p>TMS, Odoo et données temps réel réunis. Rentabilité par trajet, alertes sur anomalies.</p>
+                    <dl><div><dt>Module</dt><dd>Supply Chain</dd></div><div><dt>Délai</dt><dd>4 à 5 semaines</dd></div></dl>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="bloc bloc--bande" id="zones">
+        <div class="cadre bloc__grille">
+            <div class="bloc__tete">
+                <span class="etiquette">Présence</span>
+                <h2>Zones d'intervention</h2>
+                <p>Interventions à distance, une seule équipe du déploiement au support.</p>
+            </div>
+            <ul class="zones">
+                <li><b>MA</b><strong>Maroc</strong><span>PME et groupes industriels</span></li>
+                <li><b>FR</b><strong>France</strong><span>RGPD, Cegid, Sage, SAP</span></li>
+                <li><b>CA</b><strong>Canada</strong><span>Québec, Loi 25</span></li>
+                <li><b>BE</b><strong>Belgique</strong><span>Wallonie et Bruxelles</span></li>
+                <li><b>CH</b><strong>Suisse</strong><span>Suisse romande, LPD</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="appel" id="contact">
+        <div class="cadre appel__rang">
+            <div>
+                <span class="etiquette">Contact</span>
+                <h2>Audit gratuit</h2>
+                <p>Échange de 15 minutes, proposition sous 48 h.</p>
+            </div>
+            <div class="appel__actions">
+                <a class="bouton bouton--plein bouton--grand" href="#">Écrire sur WhatsApp</a>
+                <span class="appel__tel">+212 673 736 611</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pied">
+        <div class="cadre pied__grille">
+            <div><a class="logo" href="#">Kaal<span>ytics</span></a><p>Modules IA connectés à votre ERP.</p></div>
+            <div><h4>Modules</h4><a href="#">Sales Intelligence</a><a href="#">FleetOps</a><a href="#">ERP Connect</a><a href="#">AI Engine</a></div>
+            <div><h4>Industries</h4><a href="#">BTP</a><a href="#">Transport</a><a href="#">Distribution</a><a href="#">Mines</a></div>
+            <div><h4>Ressources</h4><a href="#">Guides</a><a href="#">FAQ</a><a href="#">Tarifs</a><a href="#">Réalisations</a></div>
+        </div>
+        <div class="cadre pied__bas"><span>© 2026 Kaalytics</span><span>Confidentialité · CGU</span></div>
+    </footer>
+</body>
+</html>

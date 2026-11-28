@@ -1,0 +1,11 @@
+[
+ ["Texte courant vert menthe", "Sous-titres et paragraphes en #6ee7b7 sur fond sombre : peu de hiérarchie entre titre, texte et accent."],
+ ["Fonds de section disparates", "Noir vert, gris ardoise et bleu nuit sur l'accueil, sans règle d'alternance."],
+ ["Mises en page différentes d'un gabarit à l'autre", "Largeur de colonne, alignement et forme des cartes propres à chaque page (accueil, modules, blog, tarifs, contact)."],
+ ["Titres à reprendre", "577 titres sur 1 256 au-delà de 4 mots ou ouverts par un article ou un possessif. Exemples sur l'accueil : « 8 modules pour transformer vos opérations », « Prêt à transformer vos opérations ? »."],
+ ["Bords gauches colorés", "33 pages avec au moins un bloc à bordure gauche colorée, interdit par la règle de style."],
+ ["Couleurs hors palette", "Bleu, violet, orange ou rouge sur 10 pages, plus le sélecteur de langue violet de la barre de navigation sur toutes les pages."],
+ ["Erreur JS", "Les deux accueils seulement : animations.js rejeté en entier. Aucun fichier absent, aucune capture en échec."],
+ ["Débordement horizontal", "Une seule page : /case-studies/transmaroc à 1024 px."],
+ ["Emoji", "Une page : /products/fleetops."]
+]
