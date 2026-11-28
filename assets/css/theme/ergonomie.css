@@ -1,0 +1,81 @@
+/**
+ * Thème Kaalytics 2026 : ergonomie sur téléphone, tablette 11 pouces (portrait, paysage) et ordinateur.
+ * Demande de Mamoun du 28/11/2026 : « un gros check d'ergonomie et de responsiveness, surtout téléphone ».
+ * Corrections issues de scripts/design/ergonomie.py (100 pages x 7 écrans), appliquées à la racine.
+ */
+
+/* ---------- Rien sous la barre de navigation fixe ---------- */
+/* En-têtes illustrés : le décalage doit l'emporter sur les « style » écrits dans les balises */
+@media (max-width: 1024px) {
+    body :has(> .visuel-page) { padding-top: 112px !important; }
+}
+/* Pages sans visuel d'en-tête dont le titre passait sous la barre */
+.legal-hero, .faq-hero { padding-top: 128px !important; }
+body > .breadcrumbs { padding-top: 92px; padding-inline: max(20px, env(safe-area-inset-left, 0px)); }
+
+/* ---------- Cibles tactiles : zone de toucher agrandie sans déplacer le texte ---------- */
+@media (pointer: coarse) {
+    .solution-item__name a, .industry-hero a:not(.btn), .travail__lien,
+    li > a:only-child:not(.navbar__link):not(.mobile-link), h3 > a, h4 > a {
+        padding-block: 10px;
+    }
+    .travail__lien { display: inline-block; }
+}
+
+/* ---------- Texte lisible ---------- */
+.raison__label, .travaux__label { font-size: 0.78rem; }
+
+/* ---------- Grilles serrées sur tablette en portrait ---------- */
+@media (max-width: 900px) {
+    .pricing-tiers { grid-template-columns: minmax(0, 560px) !important; justify-content: center; }
+}
+
+/* ---------- Accueil : les briques partent de moins loin sur téléphone (rien hors écran) ---------- */
+@media (max-width: 600px) {
+    .accueil.anime .brique:not(.est-assemble .brique) {
+        transform: translate(calc(var(--dx) * 35%), calc(var(--dy) * 45%)) rotate(calc(var(--dx) * 7deg + var(--dy) * 4deg)) scale(0.75);
+    }
+}
+
+/* ---------- Page produit FleetOps : en-tête plus large que l'écran, cartes serrées ---------- */
+@media (max-width: 900px) {
+    .hero-fleet__content { grid-template-columns: minmax(0, 1fr) !important; width: 100%; max-width: 100%; }
+    .hero-fleet__text, .hero-fleet__content > * { min-width: 0; }
+}
+@media (max-width: 520px) {
+    .industries-fleet__grid { grid-template-columns: minmax(0, 1fr) !important; }
+}
+
+/* ---------- Suite du contrôle d'ergonomie (second passage) ---------- */
+/* Pages légales anglaises : en-tête sans visuel, titre sous la barre */
+.industry-hero:not(:has(> .visuel-page)) { padding-top: 128px !important; }
+/* Texte lisible sur téléphone : noms des briques, secteurs des réalisations */
+@media (max-width: 600px) {
+    .accueil .brique span { font-size: 0.7rem; line-height: 1.15; }
+}
+.travail__secteur { font-size: 0.72rem; }
+/* Rangées d'onglets plus larges que l'écran : elles passent à la ligne */
+.mock-tabs, .video-dashboard__tabs { flex-wrap: wrap; row-gap: 8px; }
+/* Liens des listes de sources : zone de toucher pleine */
+@media (pointer: coarse) {
+    li > a:only-child:not(.navbar__link):not(.mobile-link) { padding-block: 12px; }
+}
+
+/* ---------- Tablette et téléphone en portrait ---------- */
+@media (orientation: portrait) and (max-width: 1100px) {
+    /* En-têtes illustrés : la hauteur minimale prévue pour l'ordinateur laissait un grand vide au-dessus du titre */
+    body :has(> .visuel-page) { min-height: 0 !important; padding-bottom: 64px !important; }
+    /* Accueil : l'indicateur de défilement se tassait sous le bouton */
+    .hero .hero__scroll-indicator { display: none; }
+}
+
+/* ---------- Troisième passage : derniers détails ---------- */
+@media (max-width: 600px) { .accueil .brique span { font-size: 0.75rem; } }
+.travail__secteur { font-size: 0.75rem; }
+@media (pointer: coarse) {
+    td > a, label a, .form-consent a, [class*="consent"] a { padding-block: 12px; }
+}
+@media (max-width: 400px) {
+    .video-dashboard__stats { flex-wrap: wrap; gap: 12px; }
+    .video-dashboard__stat { min-width: 0; flex: 1 1 40%; }
+}

@@ -74,3 +74,35 @@
 @media (prefers-reduced-motion: reduce) {
     .btn-primary:hover, .btn-secondary:hover, .hero__cta-main:hover, .navbar__mobile-actions .btn:hover { transform: none; }
 }
+
+/* ---------- Reflet qui balaie le verre (Mamoun, 28/11 : « les boutons doivent être sexy ») ----------
+   Une couche de lumière en plus dans le fond du bouton : elle traverse au survol (ordinateur) ; sur écran tactile,
+   elle passe une fois à l'arrivée de la page. Seule la position du fond bouge, sur le bouton seulement. */
+.btn-primary, .hero__cta-main, .navbar__mobile-actions .btn, .accueil .bouton {
+    background:
+        linear-gradient(105deg, rgba(255, 255, 255, 0) 38%, rgba(255, 255, 255, 0.55) 50%, rgba(255, 255, 255, 0) 62%) 170% 0 / 260% 100% no-repeat,
+        var(--relief-plein);
+}
+.btn-primary:hover, .hero__cta-main:hover, .navbar__mobile-actions .btn:hover, .accueil .bouton:hover {
+    background:
+        linear-gradient(105deg, rgba(255, 255, 255, 0) 38%, rgba(255, 255, 255, 0.55) 50%, rgba(255, 255, 255, 0) 62%) 170% 0 / 260% 100% no-repeat,
+        var(--relief-plein-survol);
+}
+@media (prefers-reduced-motion: no-preference) {
+    @media (hover: hover) {
+        .btn-primary:hover, .hero__cta-main:hover, .navbar__mobile-actions .btn:hover, .accueil .bouton:hover {
+            animation: bouton-reflet 0.9s cubic-bezier(0.4, 0, 0.2, 1) 1;
+        }
+    }
+    @media (hover: none) {
+        .btn-primary, .hero__cta-main, .accueil .bouton { animation: bouton-reflet 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.9s 1 both; }
+    }
+}
+@keyframes bouton-reflet { from { background-position: 170% 0, 0 0; } to { background-position: -70% 0, 0 0; } }
+
+/* Appui : le verre s'enfonce, la lueur se resserre */
+.btn-primary:active, .hero__cta-main:active, .accueil .bouton:active, .navbar__mobile-actions .btn:active {
+    transform: translateY(1px) scale(0.985);
+    box-shadow: inset 0 2px 8px rgba(4, 47, 35, 0.55), 0 0 0 1px rgba(110, 231, 183, 0.6), 0 0 14px -4px rgba(52, 211, 153, 0.7);
+}
+.btn-secondary:active, .btn-outline:active, .btn-ghost:active { transform: translateY(1px) scale(0.985); }
