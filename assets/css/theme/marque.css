@@ -1,0 +1,30 @@
+/**
+ * Thème Kaalytics 2026 : le nom « Kaalytics » en émeraude métal, une seule teinte en nuances (choix de Mamoun du
+ * 28/11/2026 : piste métal « avec un petit effet en plus », « pas deux couleurs, une seule couleur en nuances,
+ * un contraste »). Version texte : nette à toutes les tailles. Éclat qui balaie le nom à l'arrivée et au survol.
+ */
+.navbar__logo-text, .footer__logo-text {
+    --metal:
+        linear-gradient(100deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.95) 50%, rgba(255, 255, 255, 0) 60%) 160% 0 / 250% 100% no-repeat,
+        linear-gradient(180deg, #f7fffb 0%, #c4f8de 26%, #4ade9f 47%, #023d2b 49.5%, #07724f 56%, #22c387 78%, #b9f6d9 100%);
+    background: var(--metal);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+    font-weight: 600; letter-spacing: -0.04em;
+}
+/* « ytics » prend la même matière que « Kaal » : un seul nom, une seule teinte */
+.navbar__logo-text span, .footer__logo-text span {
+    color: inherit; -webkit-text-fill-color: transparent; background: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+    .navbar__logo-text { animation: marque-eclat 1.6s cubic-bezier(0.4, 0, 0.2, 1) 0.6s 1 both; }
+    .navbar__logo:hover .navbar__logo-text { animation: marque-eclat-survol 1.1s cubic-bezier(0.4, 0, 0.2, 1) 1 both; }
+}
+@keyframes marque-eclat {
+    from { background-position: 160% 0, 0 0; }
+    to { background-position: -60% 0, 0 0; }
+}
+@keyframes marque-eclat-survol {
+    from { background-position: 160% 0, 0 0; }
+    to { background-position: -60% 0, 0 0; }
+}
