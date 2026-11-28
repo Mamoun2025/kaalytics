@@ -161,3 +161,23 @@
 /* Téléphone : la brique (largeur 100 %, 320 px au plus) garde la place du tenon, centrée (capture de Mamoun, 28/11 15 h 18) */
 @media (max-width: 768px) { .hero .hero__cta-main { width: 100%; max-width: min(320px, calc(100% - 44px)); } }
 
+
+/* ---------- Secondaire : brique de métal sombre (Studio mb6-02 sombre, lueur dessous de mb6-03) ----------
+   Graphite émeraude brossé, texte vert pâle ; au survol les arêtes s'allument et une lueur passe sous la brique. */
+.btn-secondary, .btn-outline, .btn-ghost {
+    color: #bff5dc;
+    background:
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.035) 0 1px, rgba(0, 0, 0, 0) 1px 3px),
+        linear-gradient(180deg, #2a4a40 0%, #173129 46%, #10241e 54%, #183a30 100%);
+    box-shadow: inset 0 0 0 1px rgba(167, 243, 208, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.16),
+        0 4px 0 #0a1d18, 0 5px 0 #020705, 0 12px 24px -14px rgba(0, 0, 0, 0.9);
+}
+.btn-secondary:hover, .btn-outline:hover, .btn-ghost:hover {
+    color: #ecfdf5;
+    background:
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0 1px, rgba(0, 0, 0, 0) 1px 3px),
+        linear-gradient(180deg, #33594d 0%, #1c3d33 46%, #132b24 54%, #1f4a3d 100%);
+    box-shadow: inset 0 0 0 1px rgba(167, 243, 208, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.3),
+        0 6px 0 #0a1d18, 0 7px 0 #020705, 0 16px 26px -10px rgba(52, 211, 153, 0.6);
+    transform: translateY(-2px);
+}
