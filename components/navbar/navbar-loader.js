@@ -120,7 +120,10 @@
 
         links.forEach(link => {
             const href = link.getAttribute('href');
-            if (href && currentPath.includes(href.replace(/^\.\.\//, '').replace(/\/$/, ''))) {
+            const cible = href ? href.replace(/^\.\.\//, '').replace(/\/$/, '') : '';
+            // Lien d'accueil (« / ») : actif seulement sur l'accueil ; avant, le texte vide correspondait à toutes les pages.
+            const accueil = /^\/(?:en\/?)?(?:index(?:\.html)?)?$/.test(currentPath);
+            if (href === '/' ? accueil : (cible && currentPath.includes(cible))) {
                 link.classList.add('navbar__link--active');
             }
         });

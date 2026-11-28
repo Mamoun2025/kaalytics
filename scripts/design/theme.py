@@ -28,6 +28,7 @@ BRANCHEMENT = (
     '    <link rel="stylesheet" href="/assets/css/theme/visuels.css?v=2">\n'
     '    <link rel="stylesheet" href="/assets/css/theme/boutons.css?v=2">\n'
     '    <link rel="stylesheet" href="/assets/css/theme/navigation.css?v=6">\n'
+    '    <link rel="stylesheet" href="/assets/css/theme/menus.css?v=2">\n'
     '    <script defer src="/assets/js/theme/navigation.js?v=2"></script>\n'
 )
 INTACTS = {"assets/css/sections/hero-film.css"}  # hero v4 : aucune régression tolérée

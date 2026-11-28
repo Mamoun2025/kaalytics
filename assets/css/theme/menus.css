@@ -1,0 +1,80 @@
+/**
+ * Thème Kaalytics 2026 : menus déroulants de la barre (ordinateur). Demande de Mamoun du 28/11/2026 : « la barre
+ * nav qui se déplie doit être jolie quand elle se déplie ». Panneau de verre sombre, visuels du Studio à la place des
+ * icônes au trait (modules : icônes en verre ; industries et ressources : miniature de la page), ouverture en glissé,
+ * entrées en décalé. Transform et opacity seulement.
+ */
+@media (min-width: 1025px) {
+    .navbar .navbar__dropdown-menu {
+        top: calc(100% + 14px); min-width: 320px; padding: 10px; border: 0; border-radius: 22px;
+        background:
+            radial-gradient(120% 60% at 50% 0%, rgba(16, 185, 129, 0.14), transparent 60%),
+            linear-gradient(180deg, #0d1a16 0%, #060d0b 100%);
+        box-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 0.07), inset 0 0 0 1px rgba(143, 165, 156, 0.18),
+            0 30px 70px -20px rgba(0, 0, 0, 0.95), 0 0 44px -12px rgba(16, 185, 129, 0.3);
+        transform: translateX(-50%) translateY(12px) scale(0.97); transform-origin: top center;
+        transition: opacity 0.22s ease, transform 0.38s var(--sortie, ease), visibility 0s linear 0.38s;
+    }
+    .navbar .navbar__dropdown:hover .navbar__dropdown-menu,
+    .navbar .navbar__dropdown:focus-within .navbar__dropdown-menu {
+        opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0) scale(1);
+        transition: opacity 0.22s ease, transform 0.38s var(--sortie, ease), visibility 0s;
+    }
+    /* Pont invisible entre le lien et le panneau : le menu ne se ferme pas en chemin */
+    .navbar .navbar__dropdown-menu::before { content: ''; position: absolute; left: 0; right: 0; top: -18px; height: 18px; }
+    /* Filet de lumière en haut du panneau */
+    .navbar .navbar__dropdown-menu::after {
+        content: ''; position: absolute; top: 0; left: 18%; right: 18%; height: 1px; pointer-events: none;
+        background: linear-gradient(90deg, transparent, #34d399, transparent);
+    }
+
+    /* Modules et industries : deux colonnes */
+    .navbar .navbar__dropdown-menu:has(.navbar__dropdown-icon--image),
+    .navbar .navbar__dropdown-menu:has(.navbar__dropdown-icon--vignette) {
+        display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; min-width: 580px;
+    }
+
+    .navbar .navbar__dropdown-item {
+        gap: 14px; padding: 10px 12px; border-radius: 14px; border: 0;
+        transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .navbar .navbar__dropdown-item:hover {
+        background: linear-gradient(180deg, rgba(52, 211, 153, 0.11), rgba(52, 211, 153, 0.03));
+        box-shadow: inset 0 0 0 1px rgba(52, 211, 153, 0.35);
+    }
+    .navbar .navbar__dropdown-icon {
+        width: 44px; height: 44px; flex: 0 0 44px; border-radius: 12px; color: #34d399;
+        background: rgba(16, 185, 129, 0.08); box-shadow: inset 0 0 0 1px rgba(52, 211, 153, 0.22);
+    }
+    .navbar .navbar__dropdown-icon--image {
+        background: radial-gradient(circle at 50% 38%, rgba(16, 185, 129, 0.28), rgba(6, 16, 13, 0.95) 75%);
+    }
+    .navbar .navbar__dropdown-icon--image img { width: 40px; height: 40px; }
+    .navbar .navbar__dropdown-icon--vignette { width: 58px; flex-basis: 58px; height: 42px; padding: 0; overflow: hidden; border-radius: 10px; }
+    .navbar .navbar__dropdown-icon--vignette img { width: 100%; height: 100%; object-fit: cover; }
+    .navbar .navbar__dropdown-item:hover .navbar__dropdown-icon { box-shadow: inset 0 0 0 1px rgba(110, 231, 183, 0.7), 0 0 16px -4px rgba(52, 211, 153, 0.7); }
+
+    .navbar .navbar__dropdown-title { color: #ecfdf5; font: 600 0.92rem/1.25 var(--font-titre, 'Inter Tight', sans-serif); letter-spacing: -0.01em; }
+    .navbar .navbar__dropdown-desc { color: #8fa59c; font-size: 0.78rem; line-height: 1.35; margin-top: 2px; }
+
+    /* Entrées en décalé à l'ouverture */
+    @media (prefers-reduced-motion: no-preference) {
+        .navbar .navbar__dropdown:hover .navbar__dropdown-item { animation: menu-entree 0.42s var(--sortie, ease) both; }
+        .navbar .navbar__dropdown:hover .navbar__dropdown-item:nth-child(2) { animation-delay: 0.03s; }
+        .navbar .navbar__dropdown:hover .navbar__dropdown-item:nth-child(3) { animation-delay: 0.06s; }
+        .navbar .navbar__dropdown:hover .navbar__dropdown-item:nth-child(4) { animation-delay: 0.09s; }
+        .navbar .navbar__dropdown:hover .navbar__dropdown-item:nth-child(5) { animation-delay: 0.12s; }
+        .navbar .navbar__dropdown:hover .navbar__dropdown-item:nth-child(6) { animation-delay: 0.15s; }
+        .navbar .navbar__dropdown:hover .navbar__dropdown-item:nth-child(7) { animation-delay: 0.18s; }
+        .navbar .navbar__dropdown:hover .navbar__dropdown-item:nth-child(8) { animation-delay: 0.21s; }
+    }
+}
+
+@media (min-width: 1025px) {
+    /* Colonnes à miniatures : même largeur de vignette pour tous, textes alignés (FAQ garde son icône) */
+    .navbar .navbar__dropdown-menu:has(.navbar__dropdown-icon--vignette) .navbar__dropdown-icon { width: 58px; flex-basis: 58px; height: 42px; border-radius: 10px; }
+    /* Page en cours dans un menu : cadre lumineux plutôt que le trait souligné des liens de la barre */
+    .navbar .navbar__dropdown-item.navbar__link--active::before, .navbar .navbar__dropdown-item.navbar__link--active::after { display: none; }
+    .navbar .navbar__dropdown-item.navbar__link--active { background: rgba(52, 211, 153, 0.08); box-shadow: inset 0 0 0 1px rgba(52, 211, 153, 0.45); }
+}
