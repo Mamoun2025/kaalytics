@@ -1,0 +1,7 @@
+# Documents et outils internes, jamais servis sur kaalytics.com (refonte du 28/11/2026)
+docs/
+scripts/
+tests/
+evolve/
+conftest.py
+.claude/
