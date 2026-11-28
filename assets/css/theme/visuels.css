@@ -1,0 +1,35 @@
+/**
+ * Thème Kaalytics 2026 : visuel d'en-tête des pages (inséré par scripts/design/visuels.py).
+ * L'image passe sous le contenu sans toucher à sa mise en page : le bloc parent est isolé,
+ * le visuel est en z-index -1 (au-dessus du fond du bloc, sous son contenu).
+ */
+
+:has(> .visuel-page) {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: transparent;
+    padding-bottom: clamp(56px, 8vh, 96px);
+}
+
+.visuel-page { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.visuel-page img {
+    width: 100%; height: 100%; object-fit: cover; opacity: 0.82;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 50%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 0%, #000 50%, transparent 100%);
+}
+/* Voile : lisibilité du titre au centre, barre de navigation en haut */
+.visuel-page::after {
+    content: ''; position: absolute; inset: 0;
+    background:
+        radial-gradient(ellipse 62% 60% at 50% 52%, rgba(4, 10, 8, 0.7) 0%, rgba(4, 10, 8, 0.3) 62%, rgba(4, 10, 8, 0.05) 100%),
+        linear-gradient(180deg, rgba(4, 10, 8, 0.75) 0%, rgba(4, 10, 8, 0) 26%);
+}
+
+/* Texte d'en-tête : ombre portée légère pour rester net sur l'image */
+:has(> .visuel-page) h1,
+:has(> .visuel-page) p { text-shadow: 0 2px 18px rgba(4, 10, 8, 0.85); }
+
+@media (max-width: 700px) {
+    .visuel-page img { opacity: 0.66; }
+}

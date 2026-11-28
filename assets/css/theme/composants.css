@@ -1,0 +1,76 @@
+/**
+ * Thème Kaalytics 2026 : cartes, sections, listes, tableaux, formulaires, pied de page.
+ * Chargé après theme.css. Cartes plates à filet fin, sans halo ni bande de couleur sur le bord.
+ */
+
+/* ---------- Cartes : une seule forme pour tout le site ---------- */
+.challenge-card, .solution-item, .module-card, .value-card, .pricing-card, .blog-card, .industry-card,
+.case-result-card, .feature-card, .usecase-card, .stat-card, .tier, .guide-item, .approach-item,
+.case-sidebar, .mock-card, .tile, .faq-item, .accordion-item, .checklist-item, .case-quote,
+.feature-daedalia, .integration-logo, .about-section .card, .card {
+    border-radius: var(--rayon-carte);
+    background: rgba(15, 31, 27, 0.55);
+    background-image: none;
+    border: 1px solid var(--border);
+    box-shadow: none;
+    -webkit-backdrop-filter: none; backdrop-filter: none;
+}
+.challenge-card:hover, .solution-item:hover, .module-card:hover, .value-card:hover, .pricing-card:hover,
+.blog-card:hover, .industry-card:hover, .feature-card:hover, .usecase-card:hover, .guide-item:hover, .tile:hover, .card:hover {
+    border-color: rgba(52, 211, 153, 0.38);
+    box-shadow: none;
+}
+.challenge-card::before, .solution-item::before, .module-card::before, .value-card::before, .pricing-card::before,
+.blog-card::before, .industry-card::before, .feature-card::before, .usecase-card::before, .card::before {
+    background: none; box-shadow: none;
+}
+
+/* Carte mise en avant (offre recommandée) : filet émeraude, pas de halo */
+.pricing-card--featured, .pricing-card.featured, .tier--featured, .tier.featured { border-color: rgba(52, 211, 153, 0.6); }
+
+/* ---------- Sections : fonds proches, la lumière du fond continu passe à travers ---------- */
+main > section, body > section, .section {
+    background-color: transparent;
+}
+.industry-hero, .module-hero, .case-hero, .about-hero, .legal-hero, .page-header, .portail-hero {
+    background-color: transparent;
+    border-bottom: 0;
+}
+.industry-cta, .module-cta, .module-cta-section, .about-cta, .cta-section {
+    background: radial-gradient(70% 90% at 50% 100%, rgba(16, 185, 129, 0.16), transparent 70%);
+    border: 0;
+}
+
+/* Décors animés hérités (particules, orbes, grilles) : retirés, ils coûtent au défilement */
+.particle, .hero__particles, .hero__orb, .hero__grid, .floating-elements, .orb, .glow-orb { display: none; }
+
+/* ---------- Accordéons (FAQ, sections repliables) ---------- */
+.accordion-item { margin-bottom: 10px; }
+.accordion-item > button, .accordion-header, .faq-question { color: #ecfdf5; font-family: var(--font-titre); font-weight: 600; letter-spacing: -0.01em; }
+
+/* ---------- Tableaux ---------- */
+table { border-collapse: collapse; }
+th { color: #ecfdf5; font-family: var(--font-titre); font-weight: 600; background: rgba(15, 31, 27, 0.8); }
+td, th { border-color: var(--border); }
+
+/* ---------- Formulaires ---------- */
+input, select, textarea {
+    background: rgba(4, 10, 8, 0.7); color: #ecfdf5; border: 1px solid rgba(143, 165, 156, 0.28); border-radius: 12px;
+}
+input:focus, select:focus, textarea:focus { outline: none; border-color: #34d399; box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.18); }
+::placeholder { color: #5f7a70; }
+
+/* ---------- Pied de page ---------- */
+.footer { background: transparent; border-top: 1px solid var(--border); }
+.footer__newsletter { background: rgba(15, 31, 27, 0.45); border-bottom: 1px solid var(--border); }
+.footer h4, .footer__title, .footer__heading { font-family: var(--font-titre); letter-spacing: 0.08em; }
+
+/* ---------- Fil d'Ariane, pastilles, étiquettes ---------- */
+.badge, .hero__badge, .section-label, .tag, [class*="__badge"], [class*="__tag"] {
+    border-radius: 999px; box-shadow: none;
+}
+
+/* ---------- Mouvement réduit ---------- */
+@media (prefers-reduced-motion: reduce) {
+    .btn:hover, .btn-primary:hover, .hero__cta-main:hover { transform: none; }
+}

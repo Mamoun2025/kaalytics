@@ -1,0 +1,114 @@
+/**
+ * Thème Kaalytics 2026 : chargé en dernier sur toutes les pages (branché par scripts/design/theme.py).
+ * Palette validée le 23/11/2026 : émeraude #10b981 sur #040a08, gris verts. Direction validée sur la maquette
+ * de l'accueil (docs/design/accueil) le 28/11/2026.
+ * Performance : aucun flou, aucun effet animé au défilement ; transform et opacity seulement.
+ */
+
+/* ---------- Jetons : on redéfinit ceux du système existant (base/_variables.css) ---------- */
+:root {
+    --bg-void: #040a08;
+    --bg-deep: #050c0a;
+    --bg-primary: #060f0c;
+    --bg-secondary: #08130f;
+    --bg-tertiary: #0c1a16;
+    --bg-card: #0f1f1b;
+    --bg-elevated: #132a24;
+
+    --text-primary: #ecfdf5;
+    --text-secondary: #b3c6be;   /* fin du texte courant vert menthe */
+    --text-muted: #8fa59c;
+    --text-dim: #5f7a70;
+
+    --teal: #10b981; --teal-bright: #34d399; --teal-light: #6ee7b7; --teal-dim: #059669;
+    --orange: #10b981; --orange-bright: #34d399; --orange-light: #6ee7b7; --orange-dim: #059669; --orange-dark: #065f46;
+    --blue: #10b981; --blue-bright: #34d399; --blue-light: #6ee7b7; --blue-dim: #059669; --blue-dark: #065f46;
+    --purple: #10b981; --purple-bright: #34d399; --purple-light: #6ee7b7; --purple-dim: #059669; --purple-dark: #065f46;
+    --pink: #10b981; --pink-bright: #34d399; --pink-light: #6ee7b7; --pink-dim: #059669; --pink-dark: #065f46;
+    --teal-glow: transparent; --orange-glow: transparent; --blue-glow: transparent; --purple-glow: transparent; --pink-glow: transparent;
+    --emerald-glow: rgba(16, 185, 129, 0.18);
+
+    --border: rgba(143, 165, 156, 0.16);
+    --border-subtle: rgba(143, 165, 156, 0.1);
+    --border-accent: rgba(52, 211, 153, 0.4);
+    --border-teal: rgba(52, 211, 153, 0.4);
+
+    --gradient-brand: linear-gradient(135deg, #065f46 0%, #10b981 100%);
+    --gradient-vision: radial-gradient(circle, #10b981 0%, #065f46 100%);
+    --gradient-accent: linear-gradient(135deg, #059669 0%, #34d399 100%);
+    --gradient-orange: var(--gradient-accent); --gradient-blue: var(--gradient-accent);
+    --gradient-purple: var(--gradient-accent); --gradient-pink: var(--gradient-accent);
+    --gradient-ai: var(--gradient-accent); --gradient-fleet: var(--gradient-accent); --gradient-daedalia: var(--gradient-accent);
+    --shadow-glow-emerald: none;
+    --shadow-glow-teal: none;
+
+    --font-titre: 'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-marque: 'Unbounded', 'Inter Tight', system-ui, sans-serif;
+    --rayon-carte: 18px;
+    --sortie: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ---------- Fond continu : nappes de lumière fixes, peintes une fois, sans flou ---------- */
+html, body { background-color: #040a08; }
+/* Rien ne dépasse à droite (panneau du menu mobile rangé hors écran) ; clip ne casse pas les éléments collants */
+html, body { overflow-x: clip; }
+body { position: relative; color: var(--text-secondary); }
+body::before {
+    content: ''; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background:
+        radial-gradient(60vw 45vw at 0% 10%, rgba(16, 185, 129, 0.1), transparent 70%),
+        radial-gradient(55vw 45vw at 100% 55%, rgba(24, 76, 61, 0.42), transparent 70%),
+        radial-gradient(70vw 40vw at 40% 110%, rgba(16, 185, 129, 0.1), transparent 70%);
+}
+
+/* ---------- Typographie ---------- */
+h1, h2, h3, h4 { font-family: var(--font-titre); letter-spacing: -0.03em; text-wrap: balance; color: var(--text-primary); }
+h1 { line-height: 1.02; font-weight: 700; }
+h2 { line-height: 1.06; font-weight: 700; }
+h3, h4 { letter-spacing: -0.015em; }
+p, li, dd, td { color: inherit; }
+p { color: var(--text-secondary); }
+strong, b { color: var(--text-primary); }
+a { text-underline-offset: 3px; }
+
+/* Texte en dégradé (titres « mis en valeur ») : un seul ton émeraude, lisible */
+.gradient-text, .text-gradient {
+    background-image: linear-gradient(100deg, #10b981, #34d399) !important;
+    -webkit-background-clip: text !important; background-clip: text !important;
+    -webkit-text-fill-color: transparent; color: transparent;
+}
+
+/* ---------- Marque : le nom seul ---------- */
+.navbar__logo-text, .footer__logo-text {
+    font-family: var(--font-marque); font-weight: 500; letter-spacing: -0.045em; color: #ffffff;
+}
+.navbar__logo-text span, .footer__logo-text span { color: #10b981; }
+.navbar__logo-icon, .footer__logo-icon { display: none; }
+
+/* ---------- Barre de navigation : fond plein, sans flou ---------- */
+.navbar, .navbar.scrolled, .navbar--scrolled {
+    -webkit-backdrop-filter: none; backdrop-filter: none;
+    background: rgba(4, 10, 8, 0.92);
+    border-bottom: 1px solid var(--border);
+    box-shadow: none;
+}
+.navbar__link.active, .navbar__link--active { color: #ffffff; }
+.navbar__dropdown, .navbar__dropdown-menu { background: #08130f; border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5); -webkit-backdrop-filter: none; backdrop-filter: none; }
+
+/* ---------- Boutons : une forme pleine émeraude, une forme filaire ---------- */
+.btn, .btn-primary, .btn-secondary, .btn-outline, .btn-ghost, .hero__cta-main, [class*="cta"] > a.btn {
+    border-radius: 999px;
+    box-shadow: none;
+    transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+.btn-primary, .btn-orange, .btn-purple, .btn-blue, .hero__cta-main {
+    background: #10b981; background-image: none; color: #040a08; border: 1px solid #10b981;
+}
+.btn-primary:hover, .btn-orange:hover, .btn-purple:hover, .btn-blue:hover, .hero__cta-main:hover {
+    background: #34d399; border-color: #34d399; color: #040a08; transform: translateY(-2px); box-shadow: none;
+}
+.btn-secondary, .btn-outline, .btn-ghost {
+    background: transparent; background-image: none; color: #ecfdf5; border: 1px solid rgba(236, 253, 245, 0.28);
+}
+.btn-secondary:hover, .btn-outline:hover, .btn-ghost:hover { border-color: #34d399; color: #34d399; background: transparent; }
+.btn::before, .btn::after, .hero__cta-main::before, .hero__cta-main::after { display: none; }

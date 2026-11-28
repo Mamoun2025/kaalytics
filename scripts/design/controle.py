@@ -63,7 +63,9 @@ def controler(adresse: str, sortie: Path) -> list[str]:
                 problemes.append(f"{nom} : défilement saccadé, {lentes} % d'images au-delà de 34 ms (processeur ralenti x4)")
             contexte.close()
         navigateur.close()
-    return sorted(set(problemes))
+    # Mesure d'audience (identifiant factice G-XXXXXXXXXX déjà en ligne) : hors du périmètre du design.
+    tiers = ("google-analytics.com", "googletagmanager.com")
+    return sorted({p for p in problemes if not any(hote in p for hote in tiers)})
 
 
 def main() -> None:
@@ -71,7 +73,17 @@ def main() -> None:
     analyse.add_argument("adresse")
     analyse.add_argument("--sortie", type=Path, required=True)
     options = analyse.parse_args()
-    problemes = controler(options.adresse, options.sortie)
+    adresse, serveur = options.adresse, None
+    if not adresse.startswith("http"):
+        # Chemin du dépôt (ex. index.html) : servi en local, sur un port libre.
+        from scripts.design.serveur_local import demarrer
+        from scripts.design.tour import RACINE
+
+        serveur, base = demarrer(RACINE)
+        adresse = f"{base}/{adresse.lstrip('/')}"
+    problemes = controler(adresse, options.sortie)
+    if serveur:
+        serveur.shutdown()
     for probleme in problemes:
         print(probleme)
     print(f"{len(problemes)} problème(s) sur {options.adresse}")
