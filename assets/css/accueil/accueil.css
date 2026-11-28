@@ -124,3 +124,34 @@
 /* Film du hero : fondu d'apparition 0,5 s au lieu de 1,2 s (Mamoun, 28/11 : « les vidéos n'apparaissent pas vite »).
    Réglé ici pour laisser hero-film.css intact. */
 .hero .hero__film .hero__film-video { transition-duration: 0.5s; }
+
+/* Fonds de section (Mamoun, 28/11 : « des belles choses en fond quand on scrolle, ultra premium »).
+   Matières du Studio (25/11) étalonnées émeraude, pleine largeur, fondues en haut et en bas pour couler d'une
+   section à l'autre ; léger décalage au défilement (accueil.js, transform seulement). */
+.accueil > section { position: relative; isolation: isolate; }
+.accueil .scene {
+    position: absolute; z-index: -1; pointer-events: none;
+    top: -12%; bottom: -12%; left: 50%; width: 100vw;
+    transform: translate3d(-50%, 0, 0);
+    will-change: transform;  /* couche à part : glisser ne repeint rien ; fondu haut et bas cuit dans l'image */
+}
+.accueil .scene img { width: 100%; height: 100%; object-fit: cover; opacity: var(--intensite, 0.55); }
+.accueil .scene--assemblage { --intensite: 0.75; }
+.accueil .scene--modules { --intensite: 0.45; }
+.accueil .scene--demarche { --intensite: 0.6; top: 10%; }
+.accueil .scene--cas { --intensite: 0.4; }
+.accueil .scene--zones { --intensite: 0.5; }
+.accueil .scene--contact { --intensite: 0.85; }
+.accueil .scene--demarche img { object-position: 50% 80%; }
+@media (max-width: 700px) {
+    .accueil .scene { top: -6%; bottom: -6%; }
+    .accueil .scene img { opacity: calc(var(--intensite, 0.55) * 0.8); }
+}
+/* Contact : voile sombre derrière le texte, le faisceau reste visible autour */
+.accueil .appel .appel__texte::before {
+    content: ''; position: absolute; z-index: -1; left: 50%; top: 50%; width: min(760px, 96vw); height: 130%;
+    transform: translate(-50%, -50%); border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(4, 10, 8, 0.82), rgba(4, 10, 8, 0.5) 60%, transparent);
+    pointer-events: none;
+}
+.accueil .appel .appel__texte { isolation: isolate; }

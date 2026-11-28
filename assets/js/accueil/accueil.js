@@ -49,6 +49,7 @@
     var demarche = document.getElementById('demarche');
     var fil = demarche && demarche.querySelector('.fil');
     var paysage = window.matchMedia('(orientation: landscape), (min-width: 1101px)');
+    var scenes = Array.prototype.slice.call(accueil.querySelectorAll('.scene'));
     var enAttente = false;
 
     function borne(valeur) { return Math.min(1, Math.max(0, valeur)); }
@@ -61,6 +62,13 @@
             texteHero.style.transform = sortie ? 'translate3d(0,' + (-90 * sortie).toFixed(1) + 'px,0)' : '';
             texteHero.style.opacity = sortie ? (1 - sortie).toFixed(3) : '';
         }
+        // Fonds : glissent moins vite que le contenu (profondeur), seulement quand leur section est à l'écran.
+        scenes.forEach(function (scene) {
+            var boite = scene.parentNode.getBoundingClientRect();
+            if (boite.bottom < 0 || boite.top > h) return;
+            var centre = (boite.top + boite.height / 2 - h / 2) / h;
+            scene.style.transform = 'translate3d(-50%,' + (centre * -70).toFixed(1) + 'px,0)';
+        });
         if (fil) {
             var cadre = demarche.getBoundingClientRect();
             if (cadre.top < h && cadre.bottom > 0) fil.style.setProperty('--avance', borne((h * 0.85 - cadre.top) / (h * 0.6)).toFixed(3));

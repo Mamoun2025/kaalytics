@@ -221,7 +221,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/main.css?v=20260818c">
     <link rel="stylesheet" href="/assets/css/sections/hero-film.css?v=20261127c">
-    <link rel="stylesheet" href="/assets/css/accueil/accueil.css?v=6">
+    <link rel="stylesheet" href="/assets/css/accueil/accueil.css?v=9">
     <link rel="stylesheet" href="assets/css/components/cookie-consent.css">
     <link rel="stylesheet" href="assets/css/components/exit-popup.css">
     <link rel="stylesheet" href="assets/css/components/newsletter.css">
@@ -433,7 +433,8 @@
     <link rel="stylesheet" href="/assets/css/theme/composants.css?v=2">
     <link rel="stylesheet" href="/assets/css/theme/visuels.css?v=2">
     <link rel="stylesheet" href="/assets/css/theme/boutons.css?v=1">
-    <link rel="stylesheet" href="/assets/css/theme/navigation.css?v=2">
+    <link rel="stylesheet" href="/assets/css/theme/navigation.css?v=6">
+    <script defer src="/assets/js/theme/navigation.js?v=2"></script>
 </head>
 <body>
     <!-- =============================================
@@ -510,6 +511,7 @@
 
     <div class="accueil">
         <section class="assemblage" id="assemblage">
+            <div class="scene scene--assemblage" aria-hidden="true"><img src="/assets/images/accueil/fonds/mk-aurore.webp?v=2" alt="" width="1920" height="1086" loading="lazy" decoding="async"></div>
             <div class="assemblage__scene">
                 <div class="tete tete--centre">
                     <span class="etiquette">Modules</span>
@@ -532,6 +534,7 @@
         </section>
 
         <section class="modules cadre" id="modules">
+            <div class="scene scene--modules" aria-hidden="true"><img src="/assets/images/accueil/fonds/pk-nappe.webp?v=2" alt="" width="1920" height="1086" loading="lazy" decoding="async"></div>
             <div class="tete">
                 <span class="etiquette">Offre</span>
                 <h2>Modules</h2>
@@ -550,6 +553,7 @@
         </section>
 
         <section class="bloc cadre" id="demarche">
+            <div class="scene scene--demarche" aria-hidden="true"><img src="/assets/images/accueil/fonds/fk-grille.webp?v=2" alt="" width="1920" height="1086" loading="lazy" decoding="async"></div>
             <div class="tete">
                 <span class="etiquette">Méthode</span>
                 <h2>Démarche</h2>
@@ -564,6 +568,7 @@
         </section>
 
         <section class="bloc cadre" id="cas">
+            <div class="scene scene--cas" aria-hidden="true"><img src="/assets/images/accueil/fonds/mk-filaments.webp?v=2" alt="" width="1920" height="1086" loading="lazy" decoding="async"></div>
             <div class="tete">
                 <span class="etiquette">Scénarios</span>
                 <h2>Déploiements types</h2>
@@ -577,6 +582,7 @@
         </section>
 
         <section class="zones" id="zones">
+            <div class="scene scene--zones" aria-hidden="true"><img src="/assets/images/accueil/fonds/pk-reseau.webp?v=2" alt="" width="1920" height="1086" loading="lazy" decoding="async"></div>
             <img class="zones__globe" src="/assets/images/accueil/globe.webp" alt="" loading="lazy">
             <div class="cadre">
                 <div class="tete">
@@ -595,7 +601,7 @@
         </section>
 
         <section class="appel" id="contact">
-            <img class="appel__fond" src="/assets/images/accueil/reseau.webp" alt="" loading="lazy">
+            <div class="scene scene--contact" aria-hidden="true"><img src="/assets/images/accueil/fonds/fk-flux.webp?v=2" alt="" width="1920" height="1086" loading="lazy" decoding="async"></div>
             <div class="cadre appel__texte">
                 <span class="etiquette">Contact</span>
                 <h2>Audit gratuit</h2>
@@ -746,7 +752,7 @@
     <script defer src="assets/js/components/exit-popup.js"></script>
 
     <!-- Modules IA Hub -->
-    <script defer src="/assets/js/accueil/accueil.js?v=1"></script>
+    <script defer src="/assets/js/accueil/accueil.js?v=3"></script>
     <script defer src="/assets/js/sections/hero-film.js?v=20261127"></script>
 </body>
 </html>
