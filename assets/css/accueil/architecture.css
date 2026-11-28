@@ -57,3 +57,13 @@
 @keyframes archi-retour-v { from { transform: scaleY(-1) translateY(-100%); } to { transform: scaleY(-1) translateY(100%); } }
 @media (max-width: 420px) { .accueil .archi__noeud { padding: 10px 11px; } .accueil .archi__noeud b { font-size: 0.9rem; } .accueil .archi__noeud small { font-size: 0.76rem; } }
 @media (prefers-reduced-motion: reduce) { .accueil .archi__piste i { animation: none; transform: none; } }
+
+/* Habillage (Studio série 4, 28/11) : mur de briques reliées en fond, couches outils → socle → briques → équipes à côté du titre */
+.accueil .scene--archi { --intensite: 0.55; }
+.accueil .archi__haut { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); align-items: center; gap: clamp(24px, 4vw, 56px); margin-bottom: 44px; }
+.accueil .archi__haut .tete { margin-bottom: 0; }
+.accueil .archi__visuel { width: 100%; height: auto; display: block; }
+@media (max-width: 960px) {
+    .accueil .archi__haut { grid-template-columns: 1fr; gap: 8px; margin-bottom: 28px; }
+    .accueil .archi__visuel { max-width: 560px; margin-inline: auto; }
+}
