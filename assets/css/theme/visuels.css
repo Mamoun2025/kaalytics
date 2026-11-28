@@ -33,3 +33,25 @@
 @media (max-width: 700px) {
     .visuel-page img { opacity: 0.66; }
 }
+
+/* Pages intérieures : nappe de particules du Studio en fond fixe, très discrète, sous tout le contenu (Mamoun, 28/11 :
+   « quand on scrolle il faut qu'il y ait des belles choses en fond »). Couche fixe peinte une fois : défiler ne
+   la repeint pas. L'accueil a ses propres fonds de section. */
+body::after {
+    content: ''; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background:
+        linear-gradient(90deg, rgba(4, 10, 8, 0) 0%, rgba(4, 10, 8, 0.72) 24%, rgba(4, 10, 8, 0.72) 76%, rgba(4, 10, 8, 0) 100%),
+        url('/assets/images/accueil/fonds/pk-nappe.webp?v=2') center bottom / cover no-repeat;
+    opacity: 0.45;
+}
+body:has(.accueil)::after { display: none; }
+@media (max-width: 700px) { body::after { opacity: 0.3; background-position: 0 0, 70% bottom; } }
+/* Sections des pages intérieures : leur fond uni masquait la nappe ; les dégradés et les cartes gardent le leur */
+body:not(:has(.accueil)) section, body:not(:has(.accueil)) section[class] { background-color: transparent; }
+/* Blocs dont le fond est la couleur de page écrite en attribut style (passe avant les feuilles) : transparents.
+   Les cartes (--bg-card, #0f1f1b) gardent leur fond. */
+body:not(:has(.accueil)) section,
+body:not(:has(.accueil)) [style*="--bg-secondary"],
+body:not(:has(.accueil)) [style*="--bg-void"],
+body:not(:has(.accueil)) [style*="--bg-primary"],
+body:not(:has(.accueil)) [style*="#040a08"] { background-color: transparent !important; }
