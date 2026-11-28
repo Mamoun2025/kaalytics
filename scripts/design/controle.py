@@ -13,6 +13,27 @@ from pathlib import Path
 from playwright.sync_api import sync_playwright
 
 ECRANS = {"ordinateur": (1440, 900, False), "tablette": (600, 900, True), "telephone": (390, 780, True)}
+# Leçon du 28/11/2026 : maquette v1 à 6 images/s au défilement (flous, sections bloquées), non mesurée avant le lien.
+SEUIL_IMAGES_LENTES = 5  # % d'images au-delà de 34 ms toléré pendant un défilement continu
+
+
+def mesurer_fluidite(contexte, page) -> int:
+    """Défile toute la page depuis le haut, processeur ralenti x4 ; rend le % d'images au-delà de 34 ms."""
+    session = contexte.new_cdp_session(page)
+    session.send("Emulation.setCPUThrottlingRate", {"rate": 4})
+    page.evaluate("window.scrollTo(0, 0)")
+    page.wait_for_timeout(800)
+    page.evaluate(
+        """() => { window.__durees = []; let avant = performance.now();
+            const suivre = (t) => { window.__durees.push(t - avant); avant = t; requestAnimationFrame(suivre); };
+            requestAnimationFrame(suivre); }"""
+    )
+    for _ in range(50):
+        page.mouse.wheel(0, 160)
+        page.wait_for_timeout(60)
+    durees = page.evaluate("window.__durees.slice(3)")
+    session.send("Emulation.setCPUThrottlingRate", {"rate": 1})
+    return round(100 * sum(1 for d in durees if d > 34) / max(len(durees), 1))
 
 
 def controler(adresse: str, sortie: Path) -> list[str]:
@@ -37,6 +58,9 @@ def controler(adresse: str, sortie: Path) -> list[str]:
             debordement = page.evaluate("document.documentElement.scrollWidth - window.innerWidth")
             if debordement > 2:
                 problemes.append(f"{nom} : débordement horizontal de {debordement} px")
+            lentes = mesurer_fluidite(contexte, page)
+            if lentes > SEUIL_IMAGES_LENTES:
+                problemes.append(f"{nom} : défilement saccadé, {lentes} % d'images au-delà de 34 ms (processeur ralenti x4)")
             contexte.close()
         navigateur.close()
     return sorted(set(problemes))
