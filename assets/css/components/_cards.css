@@ -241,22 +241,22 @@
 
 .card--orange .card__icon {
     color: var(--orange);
-    background: rgba(249, 115, 22, 0.15);
+    background: rgba(22, 249, 173, 0.15);
 }
 
 .card--purple .card__icon {
     color: var(--purple);
-    background: rgba(139, 92, 246, 0.15);
+    background: rgba(92, 246, 195, 0.15);
 }
 
 .card--blue .card__icon {
     color: var(--blue);
-    background: rgba(59, 130, 246, 0.15);
+    background: rgba(59, 246, 184, 0.15);
 }
 
 .card--pink .card__icon {
     color: var(--pink);
-    background: rgba(236, 72, 153, 0.15);
+    background: rgba(69, 239, 182, 0.15);
 }
 
 .card--teal .card__icon {
@@ -271,22 +271,22 @@
 }
 
 .card--orange:hover {
-    box-shadow: 0 20px 40px -15px rgba(249, 115, 22, 0.3);
+    box-shadow: 0 20px 40px -15px rgba(22, 249, 173, 0.3);
     border-color: var(--orange);
 }
 
 .card--purple:hover {
-    box-shadow: 0 20px 40px -15px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 20px 40px -15px rgba(92, 246, 195, 0.3);
     border-color: var(--purple);
 }
 
 .card--blue:hover {
-    box-shadow: 0 20px 40px -15px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 20px 40px -15px rgba(59, 246, 184, 0.3);
     border-color: var(--blue);
 }
 
 .card--pink:hover {
-    box-shadow: 0 20px 40px -15px rgba(236, 72, 153, 0.3);
+    box-shadow: 0 20px 40px -15px rgba(69, 239, 182, 0.3);
     border-color: var(--pink);
 }
 

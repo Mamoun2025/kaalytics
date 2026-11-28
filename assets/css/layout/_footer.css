@@ -174,7 +174,7 @@
     content: 'New';
     margin-left: var(--space-xs);
     padding: 2px 6px;
-    background: linear-gradient(135deg, #f97316 0%, #ef4444 100%);
+    background: linear-gradient(135deg, #16f9ad 0%, #ef4444 100%);
     border-radius: var(--radius-sm);
     font-size: 9px;
     font-weight: 700;
@@ -251,11 +251,11 @@
 
 /* Social links with colored hovers */
 .footer__social-link--linkedin:hover {
-    background: #0077b5;
+    background: #00b579;
 }
 
 .footer__social-link--twitter:hover {
-    background: #1da1f2;
+    background: #1df2ab;
 }
 
 .footer__social-link--youtube:hover {

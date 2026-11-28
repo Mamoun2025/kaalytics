@@ -48,6 +48,7 @@ p { margin: 0; }
 .lignes li { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--filet); align-items: baseline; }
 .lignes--texte li { grid-template-columns: minmax(0, 1fr); }
 .lignes strong { display: block; font-weight: 600; }
+.lignes a { color: var(--accent); text-decoration: underline; }
 .lignes div span { display: block; color: var(--texte-2); font-size: 0.9rem; }
 .etat { font: 500 0.72rem/1.5 var(--mono); letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap; }
 .etat::before { content: ''; display: inline-block; width: 7px; height: 7px; margin-right: 7px; border-radius: 50%; background: currentColor; }

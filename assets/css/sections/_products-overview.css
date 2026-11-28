@@ -104,8 +104,8 @@
 }
 
 .product-card--daedalia:hover {
-    border-color: #a78bfa;
-    box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
+    border-color: #8bfad5;
+    box-shadow: 0 0 30px rgba(92, 246, 195, 0.15);
 }
 
 /* ========================================
@@ -146,8 +146,8 @@
 }
 
 .product-card__badge-label--daedalia {
-    background: rgba(139, 92, 246, 0.15);
-    color: #a78bfa;
+    background: rgba(92, 246, 195, 0.15);
+    color: #8bfad5;
 }
 
 .product-card__badge-label--custom {
@@ -172,11 +172,11 @@
 }
 
 .product-card__icon--daedalia {
-    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    background: linear-gradient(135deg, #5cf6c3, #39eeb2);
 }
 
 .product-card__icon--custom {
-    background: linear-gradient(135deg, #f59e0b, #d97706);
+    background: linear-gradient(135deg, #f59e0b, #06d993);
 }
 
 .product-card__icon svg {
@@ -228,7 +228,7 @@
 }
 
 .product-card__stat-value--daedalia {
-    color: #a78bfa;
+    color: #8bfad5;
 }
 
 .product-card__stat-value--custom {
@@ -287,11 +287,11 @@
 }
 
 .product-card__cta--daedalia {
-    color: #a78bfa;
+    color: #8bfad5;
 }
 
 .product-card__cta--daedalia:hover {
-    color: #c4b5fd;
+    color: #b5fde5;
 }
 
 .product-card__cta--custom {

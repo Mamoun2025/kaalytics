@@ -311,7 +311,7 @@
 
 .testimonial-card--purple:hover {
     border-color: var(--purple);
-    box-shadow: 0 15px 40px -10px rgba(139, 92, 246, 0.25);
+    box-shadow: 0 15px 40px -10px rgba(92, 246, 195, 0.25);
 }
 
 .testimonial-card--purple .testimonial-card__stars {
@@ -319,12 +319,12 @@
 }
 
 .testimonial-card--purple .testimonial-card__avatar {
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, var(--purple) 100%);
+    background: linear-gradient(135deg, rgba(92, 246, 195, 0.2) 0%, var(--purple) 100%);
 }
 
 .testimonial-card--orange:hover {
     border-color: var(--orange);
-    box-shadow: 0 15px 40px -10px rgba(249, 115, 22, 0.25);
+    box-shadow: 0 15px 40px -10px rgba(22, 249, 173, 0.25);
 }
 
 .testimonial-card--orange .testimonial-card__stars {
@@ -332,12 +332,12 @@
 }
 
 .testimonial-card--orange .testimonial-card__avatar {
-    background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, var(--orange) 100%);
+    background: linear-gradient(135deg, rgba(22, 249, 173, 0.2) 0%, var(--orange) 100%);
 }
 
 .testimonial-card--blue:hover {
     border-color: var(--blue);
-    box-shadow: 0 15px 40px -10px rgba(59, 130, 246, 0.25);
+    box-shadow: 0 15px 40px -10px rgba(59, 246, 184, 0.25);
 }
 
 .testimonial-card--blue .testimonial-card__stars {
@@ -345,7 +345,7 @@
 }
 
 .testimonial-card--blue .testimonial-card__avatar {
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, var(--blue) 100%);
+    background: linear-gradient(135deg, rgba(59, 246, 184, 0.2) 0%, var(--blue) 100%);
 }
 
 /* Featured testimonial - larger, centered */

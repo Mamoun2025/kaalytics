@@ -39,7 +39,7 @@
 }
 
 .raison__intro {
-    color: var(--text-secondary, #94a3b8);
+    color: var(--text-secondary, #9ab2a8);
     font-size: 1rem;
     line-height: 1.75;
     max-width: 62ch;
@@ -83,7 +83,7 @@
 .enonce__texte + .enonce__texte {
     margin-top: 14px;
     font-size: 0.95rem;
-    color: var(--text-secondary, #94a3b8);
+    color: var(--text-secondary, #9ab2a8);
 }
 
 /* Les valeurs : un filet, un intitule, une ligne. Rien d'autre. */
@@ -121,7 +121,7 @@
 .valeur__ligne {
     font-size: 0.95rem;
     line-height: 1.65;
-    color: var(--text-secondary, #94a3b8);
+    color: var(--text-secondary, #9ab2a8);
     max-width: 60ch;
 }
 

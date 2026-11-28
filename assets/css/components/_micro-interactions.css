@@ -36,15 +36,15 @@
 }
 
 .hover-glow--orange:hover {
-    box-shadow: 0 0 30px rgba(249, 115, 22, 0.3);
+    box-shadow: 0 0 30px rgba(22, 249, 173, 0.3);
 }
 
 .hover-glow--purple:hover {
-    box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 0 30px rgba(92, 246, 195, 0.3);
 }
 
 .hover-glow--blue:hover {
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 30px rgba(59, 246, 184, 0.3);
 }
 
 /* Tilt effect (subtle 3D) */
@@ -68,7 +68,7 @@
 }
 
 .focus-ring--orange:focus-visible {
-    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.4);
+    box-shadow: 0 0 0 3px rgba(22, 249, 173, 0.4);
 }
 
 /* Input focus glow */

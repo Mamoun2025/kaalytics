@@ -864,11 +864,11 @@
 @media (prefers-color-scheme: dark) {
     /* Ensure sufficient contrast */
     .btn-orange {
-        box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+        box-shadow: 0 4px 15px rgba(22, 249, 173, 0.3);
     }
 
     .btn-purple {
-        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+        box-shadow: 0 4px 15px rgba(92, 246, 195, 0.3);
     }
 
     .card--orange:hover,

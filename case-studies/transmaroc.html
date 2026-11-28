@@ -34,7 +34,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(59, 246, 184, 0.15) 0%, transparent 50%);
         }
         .case-hero__content { position: relative; z-index: 1; }
         .case-hero__badge {
@@ -42,30 +42,30 @@
             align-items: center;
             gap: var(--space-sm);
             padding: var(--space-xs) var(--space-md);
-            background: rgba(59, 130, 246, 0.15);
-            border: 1px solid #3b82f6;
+            background: rgba(59, 246, 184, 0.15);
+            border: 1px solid #3bf6b8;
             border-radius: var(--radius-full);
             font-size: var(--text-sm);
-            color: #3b82f6;
+            color: #3bf6b8;
             margin-bottom: var(--space-xl);
         }
         .case-hero__title { font-size: var(--text-4xl); font-weight: 800; margin-bottom: var(--space-lg); max-width: 700px; }
         .case-hero__subtitle { font-size: var(--text-xl); color: var(--text-secondary); margin-bottom: var(--space-2xl); max-width: 600px; }
         .case-hero__metrics { display: flex; gap: var(--space-2xl); flex-wrap: wrap; }
         .case-hero__metric { text-align: left; }
-        .case-hero__metric-value { font-size: var(--text-4xl); font-weight: 800; color: #3b82f6; }
+        .case-hero__metric-value { font-size: var(--text-4xl); font-weight: 800; color: #3bf6b8; }
         .case-hero__metric-label { font-size: var(--text-sm); color: var(--text-muted); }
         .case-content { background: var(--bg-primary); padding: var(--space-4xl) 0; }
         .case-content__grid { display: grid; grid-template-columns: 2fr 1fr; gap: var(--space-3xl); }
         @media (max-width: 968px) { .case-content__grid { grid-template-columns: 1fr; } }
         .case-section { margin-bottom: var(--space-3xl); }
         .case-section__title { font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg); display: flex; align-items: center; gap: var(--space-md); }
-        .case-section__title-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: rgba(59, 130, 246, 0.15); border-radius: var(--radius-lg); font-size: 1.25rem; }
+        .case-section__title-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: rgba(59, 246, 184, 0.15); border-radius: var(--radius-lg); font-size: 1.25rem; }
         .case-section__content { color: var(--text-secondary); line-height: 1.8; }
         .case-section__content p { margin-bottom: var(--space-lg); }
         .case-section__content ul { list-style: none; padding: 0; }
         .case-section__content li { padding: var(--space-sm) 0; padding-left: var(--space-xl); position: relative; }
-        .case-section__content li::before { content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 8px; height: 8px; background: #3b82f6; border-radius: 50%; }
+        .case-section__content li::before { content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 8px; height: 8px; background: #3bf6b8; border-radius: 50%; }
         .case-sidebar { position: sticky; top: 100px; }
         .case-sidebar__card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-2xl); padding: var(--space-xl); margin-bottom: var(--space-xl); }
         .case-sidebar__title { font-size: var(--text-lg); font-weight: 600; margin-bottom: var(--space-lg); }
@@ -73,17 +73,17 @@
         .case-sidebar__item:last-child { border-bottom: none; }
         .case-sidebar__label { color: var(--text-muted); font-size: var(--text-sm); }
         .case-sidebar__value { font-weight: 600; font-size: var(--text-sm); }
-        .case-quote { background: linear-gradient(135deg, var(--bg-card) 0%, rgba(59, 130, 246, 0.05) 100%); border: 1px solid #3b82f6; border-radius: var(--radius-2xl); padding: var(--space-2xl); margin: var(--space-2xl) 0; }
+        .case-quote { background: linear-gradient(135deg, var(--bg-card) 0%, rgba(59, 246, 184, 0.05) 100%); border: 1px solid #3bf6b8; border-radius: var(--radius-2xl); padding: var(--space-2xl); margin: var(--space-2xl) 0; }
         .case-quote__text { font-size: var(--text-xl); font-style: italic; color: var(--text-primary); margin-bottom: var(--space-lg); line-height: 1.6; }
         .case-quote__author { display: flex; align-items: center; gap: var(--space-md); }
-        .case-quote__avatar { width: 48px; height: 48px; background: #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: white; }
+        .case-quote__avatar { width: 48px; height: 48px; background: #3bf6b8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: white; }
         .case-quote__name { font-weight: 600; }
         .case-quote__role { font-size: var(--text-sm); color: var(--text-muted); }
         .case-results { background: var(--bg-secondary); padding: var(--space-4xl) 0; }
         .case-results__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-xl); }
         @media (max-width: 968px) { .case-results__grid { grid-template-columns: repeat(2, 1fr); } }
         .case-result-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-xl); text-align: center; }
-        .case-result-card__value { font-size: var(--text-3xl); font-weight: 800; color: #3b82f6; margin-bottom: var(--space-xs); }
+        .case-result-card__value { font-size: var(--text-3xl); font-weight: 800; color: #3bf6b8; margin-bottom: var(--space-xs); }
         .case-result-card__label { font-size: var(--text-sm); color: var(--text-secondary); }
         .case-cta { background: var(--bg-void); padding: var(--space-4xl) 0; text-align: center; }
         .case-cta__title { font-size: var(--text-3xl); font-weight: 800; margin-bottom: var(--space-lg); }
@@ -168,6 +168,11 @@
 }
     </script>
 <!-- SEO:END -->
+    <!-- theme-2026 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Unbounded:wght@400;500&display=swap">
+    <link rel="stylesheet" href="/assets/css/theme/theme.css?v=2">
+    <link rel="stylesheet" href="/assets/css/theme/composants.css?v=2">
+    <link rel="stylesheet" href="/assets/css/theme/visuels.css?v=2">
 </head>
 <body>
     <!-- Navbar -->
@@ -175,6 +180,7 @@
 
     <!-- Hero -->
     <section class="case-hero">
+        <div class="visuel-page" aria-hidden="true"><img src="/assets/images/visuels/scenario-transport-logistique.webp" alt="" width="1600" height="900" fetchpriority="high" decoding="async"></div>
         <div class="container case-hero__content">
             <span class="case-hero__badge">Case Study - Transport</span>
             <h1 class="case-hero__title">Comment TransMaroc a optimise ses tournées et réduit sa consommation carburant</h1>
@@ -331,8 +337,8 @@
                         </div>
                     </div>
 
-                    <div class="case-sidebar__card" style="background: linear-gradient(135deg, var(--bg-card) 0%, rgba(59, 130, 246, 0.1) 100%); border-color: #3b82f6;">
-                        <h3 class="case-sidebar__title" style="color: #3b82f6;">Transporteur ?</h3>
+                    <div class="case-sidebar__card" style="background: linear-gradient(135deg, var(--bg-card) 0%, rgba(59, 246, 184, 0.1) 100%); border-color: #3bf6b8;">
+                        <h3 class="case-sidebar__title" style="color: #3bf6b8;">Transporteur ?</h3>
                         <p style="color: var(--text-secondary); font-size: var(--text-sm); margin-bottom: var(--space-lg);">
                             Découvrez comment optimiser vos opérations de transport.
                         </p>

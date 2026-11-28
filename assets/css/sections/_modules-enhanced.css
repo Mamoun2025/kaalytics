@@ -27,11 +27,11 @@
 
 .module-ia-card[data-title="Business Intelligence"]:hover {
     border-color: var(--purple);
-    box-shadow: 0 20px 40px -15px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 20px 40px -15px rgba(92, 246, 195, 0.3);
 }
 
 .module-ia-card[data-title="Business Intelligence"] .module-ia-card__tag {
-    background: rgba(139, 92, 246, 0.15);
+    background: rgba(92, 246, 195, 0.15);
     color: var(--purple-light);
 }
 
@@ -47,11 +47,11 @@
 
 .module-ia-card[data-title="Growth Engine"]:hover {
     border-color: var(--orange);
-    box-shadow: 0 20px 40px -15px rgba(249, 115, 22, 0.3);
+    box-shadow: 0 20px 40px -15px rgba(22, 249, 173, 0.3);
 }
 
 .module-ia-card[data-title="Growth Engine"] .module-ia-card__tag {
-    background: rgba(249, 115, 22, 0.15);
+    background: rgba(22, 249, 173, 0.15);
     color: var(--orange-light);
 }
 
@@ -67,11 +67,11 @@
 
 .module-ia-card[data-title="Marketing Automation"]:hover {
     border-color: var(--pink);
-    box-shadow: 0 20px 40px -15px rgba(236, 72, 153, 0.3);
+    box-shadow: 0 20px 40px -15px rgba(69, 239, 182, 0.3);
 }
 
 .module-ia-card[data-title="Marketing Automation"] .module-ia-card__tag {
-    background: rgba(236, 72, 153, 0.15);
+    background: rgba(69, 239, 182, 0.15);
     color: var(--pink-light);
 }
 
@@ -87,11 +87,11 @@
 
 .module-ia-card[data-title="Brand & Experience"]:hover {
     border-color: var(--blue);
-    box-shadow: 0 20px 40px -15px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 20px 40px -15px rgba(59, 246, 184, 0.3);
 }
 
 .module-ia-card[data-title="Brand & Experience"] .module-ia-card__tag {
-    background: rgba(59, 130, 246, 0.15);
+    background: rgba(59, 246, 184, 0.15);
     color: var(--blue-light);
 }
 

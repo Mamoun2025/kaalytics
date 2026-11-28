@@ -160,9 +160,6 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- GSAP -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <!-- PWA -->
     <link rel="manifest" href="/manifest.json">
@@ -177,10 +174,10 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/assets/css/main.css?v=20260818c">
     <link rel="stylesheet" href="/assets/css/sections/hero-film.css?v=20261127c">
+    <link rel="stylesheet" href="/assets/css/accueil/accueil.css?v=5">
     <link rel="stylesheet" href="/assets/css/components/cookie-consent.css">
     <link rel="stylesheet" href="/assets/css/components/exit-popup.css">
     <link rel="stylesheet" href="/assets/css/components/newsletter.css">
-    <link rel="stylesheet" href="/sections/modules-ia/modules-ia.css">
 
 <!-- SEO:BEGIN (genere par scripts/seo/gen_head.py - ne pas editer) -->
     <title>Kaalytics | Your systems. On steroids.</title>
@@ -384,6 +381,11 @@
 }
     </script>
 <!-- SEO:END -->
+    <!-- theme-2026 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Unbounded:wght@400;500&display=swap">
+    <link rel="stylesheet" href="/assets/css/theme/theme.css?v=2">
+    <link rel="stylesheet" href="/assets/css/theme/composants.css?v=2">
+    <link rel="stylesheet" href="/assets/css/theme/visuels.css?v=2">
 </head>
 <body>
     <!-- =============================================
@@ -449,7 +451,7 @@
         </div>
 
         <!-- Scroll indicator -->
-        <a href="#modules-ia" class="hero__scroll-indicator">
+        <a href="#assemblage" class="hero__scroll-indicator">
             <span>Our modules</span>
             <div class="hero__scroll-mouse">
                 <div class="hero__scroll-wheel"></div>
@@ -457,382 +459,103 @@
         </a>
     </section>
 
-    <!-- =============================================
-         SECTION: MODULES IA - Hub Interactif
-         ============================================= -->
-    <section class="section-modules-ia" id="modules-ia">
-        <div class="container">
-            <header class="modules-ia__header">
-                <div class="modules-ia__badge">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="3"/>
-                        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/>
-                    </svg>
-                    Connected AI Ecosystem
+    <div class="accueil">
+        <section class="assemblage" id="assemblage">
+            <div class="assemblage__scene">
+                <div class="tete tete--centre">
+                    <span class="etiquette">Modules</span>
+                    <h2>Assembly</h2>
+                    <p>Eight building blocks around your existing ERP. No migration.</p>
                 </div>
-                <h2 class="modules-ia__title">8 modules to transform your operations</h2>
-                <p class="modules-ia__subtitle">Click a module to explore its features</p>
-            </header>
-
-            <div class="modules-ia__hub">
-                <div class="modules-ia__orbits">
-                    <div class="orbit-ring orbit-ring--inner"></div>
-                    <div class="orbit-ring orbit-ring--outer"></div>
-                </div>
-
-                <div class="modules-ia__radar">
-                    <div class="radar-pulse"></div>
-                    <div class="radar-pulse"></div>
-                    <div class="radar-pulse"></div>
-                    <div class="radar-sweep"></div>
-                </div>
-
-                <svg class="modules-ia__connections" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid meet">
-                    <line class="connection-line" data-module="sales-intelligence" x1="400" y1="400" x2="400" y2="40"/>
-                    <circle class="connection-dot" data-module="sales-intelligence" cx="400" cy="40" r="5"/>
-                    <line class="connection-line" data-module="marketing-automation" x1="401" y1="398" x2="667" y2="161"/>
-                    <circle class="connection-dot" data-module="marketing-automation" cx="667" cy="161" r="5"/>
-                    <line class="connection-line" data-module="financial-operations" x1="399" y1="399" x2="759" y2="400"/>
-                    <circle class="connection-dot" data-module="financial-operations" cx="759" cy="400" r="5"/>
-                    <line class="connection-line" data-module="supply-chain" x1="400" y1="400" x2="653" y2="660"/>
-                    <circle class="connection-dot" data-module="supply-chain" cx="653" cy="660" r="5"/>
-                    <line class="connection-line" data-module="fleetops" x1="400" y1="400" x2="400" y2="760"/>
-                    <circle class="connection-dot" data-module="fleetops" cx="400" cy="760" r="5"/>
-                    <line class="connection-line" data-module="erp-connect" x1="400" y1="400" x2="155" y2="655"/>
-                    <circle class="connection-dot" data-module="erp-connect" cx="155" cy="655" r="5"/>
-                    <line class="connection-line" data-module="digital-platform" x1="400" y1="400" x2="40" y2="400"/>
-                    <circle class="connection-dot" data-module="digital-platform" cx="40" cy="400" r="5"/>
-                    <line class="connection-line" data-module="ai-engine" x1="400" y1="400" x2="145" y2="150"/>
-                    <circle class="connection-dot" data-module="ai-engine" cx="145" cy="150" r="5"/>
-                    <circle class="connection-dot-center" cx="400" cy="400" r="6" fill="rgba(16, 185, 129, 0.2)" stroke="rgba(16, 185, 129, 0.5)" stroke-width="2"/>
-                </svg>
-
-                <div class="modules-ia__particles">
-                    <div class="particle particle--1"></div>
-                    <div class="particle particle--2"></div>
-                    <div class="particle particle--3"></div>
-                    <div class="particle particle--4"></div>
-                    <div class="particle particle--5"></div>
-                    <div class="particle particle--6"></div>
-                    <div class="particle particle--7"></div>
-                    <div class="particle particle--8"></div>
-                </div>
-
-                <div class="modules-ia__center">
-                    <video class="modules-ia__video" id="modules-ia-video" autoplay muted loop playsinline preload="none">
-                        <source src="/assets/videos/sales/sales-1.mp4" type="video/mp4">
-                    </video>
-                    <div class="modules-ia__nav">
-                        <button class="modules-ia__nav-btn" id="modules-ia-prev" aria-label="Video precedente">
-                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-                        </button>
-                        <button class="modules-ia__nav-btn" id="modules-ia-next" aria-label="Video suivante">
-                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-                        </button>
-                    </div>
-                    <div class="modules-ia__video-info">
-                        <div class="modules-ia__video-title" id="modules-ia-title">Sales Intelligence</div>
-                        <div class="modules-ia__video-counter" id="modules-ia-counter">Demo 1/4</div>
-                    </div>
-                </div>
-
-                <div class="module-node active" data-module="sales-intelligence" data-position="1">
-                    <div class="module-node__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-                    <span class="module-node__label">Sales Intelligence</span>
-                </div>
-                <div class="module-node" data-module="marketing-automation" data-position="2">
-                    <div class="module-node__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-                    <span class="module-node__label">Marketing Auto</span>
-                </div>
-                <div class="module-node" data-module="financial-operations" data-position="3">
-                    <div class="module-node__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-                    <span class="module-node__label">Financial Ops</span>
-                </div>
-                <div class="module-node" data-module="supply-chain" data-position="4">
-                    <div class="module-node__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="1" y="6" width="6" height="6" rx="1"/><rect x="9" y="6" width="6" height="6" rx="1"/><rect x="17" y="6" width="6" height="6" rx="1"/><path d="M4 12v4a2 2 0 002 2h12a2 2 0 002-2v-4"/></svg></div>
-                    <span class="module-node__label">Supply Chain</span>
-                </div>
-                <div class="module-node" data-module="fleetops" data-position="5">
-                    <div class="module-node__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-                    <span class="module-node__label">FleetOps</span>
-                </div>
-                <div class="module-node" data-module="erp-connect" data-position="6">
-                    <div class="module-node__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg></div>
-                    <span class="module-node__label">ERP Connect</span>
-                </div>
-                <div class="module-node" data-module="digital-platform" data-position="7">
-                    <div class="module-node__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-                    <span class="module-node__label">Digital Platform</span>
-                </div>
-                <div class="module-node" data-module="ai-engine" data-position="8">
-                    <div class="module-node__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10"/><circle cx="12" cy="12" r="3"/></svg></div>
-                    <span class="module-node__label">AI Engine</span>
-                </div>
+                <ul class="mur">
+                    <li class="brique" style="--dx:-1;--dy:-1"><img src="/assets/images/accueil/brique-ventes.webp?v=2" alt="" width="320" height="320"><span>Sales Intelligence</span></li>
+                    <li class="brique" style="--dx:0;--dy:-1"><img src="/assets/images/accueil/brique-automatisation.webp?v=2" alt="" width="320" height="320"><span>Marketing Automation</span></li>
+                    <li class="brique" style="--dx:1;--dy:-1"><img src="/assets/images/accueil/brique-recouvrement.webp?v=2" alt="" width="320" height="320"><span>Financial Operations</span></li>
+                    <li class="brique" style="--dx:-1;--dy:0"><img src="/assets/images/accueil/brique-stock.webp?v=2" alt="" width="320" height="320"><span>Supply Chain</span></li>
+                    <li class="socle"><strong>Your ERP</strong><span>Odoo · SAP<br>Sage · Dynamics</span></li>
+                    <li class="brique" style="--dx:1;--dy:0"><img src="/assets/images/accueil/brique-localisation.webp?v=2" alt="" width="320" height="320"><span>FleetOps</span></li>
+                    <li class="brique" style="--dx:-1;--dy:1"><img src="/assets/images/accueil/brique-integration.webp?v=2" alt="" width="320" height="320"><span>ERP Connect</span></li>
+                    <li class="brique" style="--dx:0;--dy:1"><img src="/assets/images/accueil/brique-reporting.webp?v=2" alt="" width="320" height="320"><span>Digital Platform</span></li>
+                    <li class="brique" style="--dx:1;--dy:1"><img src="/assets/images/accueil/brique-agent-ia.webp?v=2" alt="" width="320" height="320"><span>AI Engine</span></li>
+                </ul>
+                <p class="assemblage__compte"><b id="compte">8</b> / 8 modules connected</p>
             </div>
+        </section>
 
-            <div class="modules-ia__cta">
-                <a href="https://wa.me/212673736611" target="_blank" rel="noopener" class="modules-ia__cta-btn">
-                    Talk to an expert
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
+        <section class="modules cadre" id="modules">
+            <div class="tete">
+                <span class="etiquette">Offer</span>
+                <h2>Modules</h2>
+                <p>Each module stands alone, switched on as needed.</p>
             </div>
-        </div>
-
-        <aside class="module-info-panel" id="modules-ia-panel">
-            <button class="module-info-panel__close" id="modules-ia-panel-close" aria-label="Fermer">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-            </button>
-            <div class="module-info-panel__header">
-                <div class="module-info-panel__icon" id="modules-ia-panel-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="3"/></svg>
-                </div>
-                <h3 class="module-info-panel__title" id="modules-ia-panel-title">Module</h3>
+            <div class="galerie">
+                <a class="carte" href="/en/modules/sales-intelligence" data-apparition><img src="/assets/images/accueil/module-sales-intelligence.webp" alt="" loading="lazy"><div><i>Sales</i><h3>Sales Intelligence</h3><p>Sales steering, forecasts, follow-ups</p></div></a>
+                <a class="carte" href="/en/modules/marketing-automation" data-apparition><img src="/assets/images/accueil/module-marketing-auto.webp" alt="" loading="lazy"><div><i>Marketing</i><h3>Marketing Automation</h3><p>Campaigns, scoring, customer follow-ups</p></div></a>
+                <a class="carte" href="/en/modules/financial-operations" data-apparition><img src="/assets/images/accueil/module-financial-ops.webp" alt="" loading="lazy"><div><i>Finance</i><h3>Financial Operations</h3><p>Invoicing, collections, reconciliation</p></div></a>
+                <a class="carte" href="/en/modules/supply-chain" data-apparition><img src="/assets/images/accueil/module-supply-chain.webp" alt="" loading="lazy"><div><i>Logistics</i><h3>Supply Chain</h3><p>Stock, procurement, delivery rounds</p></div></a>
+                <a class="carte" href="/en/modules/fleetops" data-apparition><img src="/assets/images/accueil/module-fleetops.webp" alt="" loading="lazy"><div><i>Fleet</i><h3>FleetOps</h3><p>Fleet, maintenance, fuel</p></div></a>
+                <a class="carte" href="/en/modules/erp-connect" data-apparition><img src="/assets/images/accueil/module-erp-connect.webp" alt="" loading="lazy"><div><i>Integration</i><h3>ERP Connect</h3><p>Odoo, SAP, Sage, Dynamics connectors</p></div></a>
+                <a class="carte" href="/en/modules/digital-platform" data-apparition><img src="/assets/images/accueil/module-digital-platform.webp" alt="" loading="lazy"><div><i>Portals</i><h3>Digital Platform</h3><p>Customer portals, business apps</p></div></a>
+                <a class="carte" href="/en/modules/ai-engine" data-apparition><img src="/assets/images/accueil/module-ai-engine.webp" alt="" loading="lazy"><div><i>AI</i><h3>AI Engine</h3><p>AI agents, document reading, alerts</p></div></a>
             </div>
-            <span class="module-info-panel__badge" id="modules-ia-panel-badge">0 demo videos</span>
-            <p class="module-info-panel__desc" id="modules-ia-panel-desc">Module description.</p>
-            <ul class="module-info-panel__features" id="modules-ia-panel-features"></ul>
-            <div class="module-info-panel__stats" id="modules-ia-panel-stats"></div>
-            <a href="#contact" class="module-info-panel__cta" id="modules-ia-panel-cta">Learn More</a>
-        </aside>
-    </section>
-<!-- =============================================
-         SECTION: HOW IT WORKS - PROCESSUS SIMPLE
-         ============================================= -->
-    <section class="how-it-works">
-        <div class="container">
-            <div class="section-header section-header--center">
-                <span class="section-label">How It Works</span>
-                <h2 class="section-title">Operational in 3 Steps</h2>
-                <p class="section-description">From demo to full deployment, we handle everything</p>
+        </section>
+
+        <section class="bloc cadre" id="demarche">
+            <div class="tete">
+                <span class="etiquette">Method</span>
+                <h2>Approach</h2>
+                <p>Three steps, from audit to launch.</p>
             </div>
+            <div class="fil" aria-hidden="true"><span></span></div>
+            <ol class="etapes">
+                <li data-apparition><img src="/assets/images/accueil/etape-audit.webp" alt="" width="800" height="677" loading="lazy"><b>1</b><h3>Audit</h3><p>Needs, current systems, action plan.</p><i>48 h</i></li>
+                <li data-apparition><img src="/assets/images/accueil/etape-configuration.webp" alt="" width="800" height="652" loading="lazy"><b>2</b><h3>Configuration</h3><p>Data import, connection to your ERP.</p><i>2 to 4 weeks</i></li>
+                <li data-apparition><img src="/assets/images/accueil/etape-lancement.webp" alt="" width="800" height="674" loading="lazy"><b>3</b><h3>Launch</h3><p>Team training, priority support.</p><i>3 months of follow-up</i></li>
+            </ol>
+        </section>
 
-            <div class="how-it-works__steps">
-                <!-- Step 1 -->
-                <div class="how-it-works__step">
-                    <div class="how-it-works__step-number">1</div>
-                    <div class="how-it-works__step-icon"><!-- ICON: phone --></div>
-                    <h4 class="how-it-works__step-title">Free Audit</h4>
-                    <p class="how-it-works__step-desc">
-                        We analyze your needs, current systems, and objectives. You receive a personalized action plan.
-                    </p>
-                    <span class="how-it-works__step-time">48h</span>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="how-it-works__step">
-                    <div class="how-it-works__step-number">2</div>
-                    <div class="how-it-works__step-icon"><!-- ICON: cog --></div>
-                    <h4 class="how-it-works__step-title">Configuration</h4>
-                    <p class="how-it-works__step-desc">
-                        Our team configures your account, imports your data, and connects your existing systems.
-                    </p>
-                    <span class="how-it-works__step-time">2-4 weeks</span>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="how-it-works__step">
-                    <div class="how-it-works__step-number">3</div>
-                    <div class="how-it-works__step-icon"><!-- ICON: play --></div>
-                    <h4 class="how-it-works__step-title">Go Live</h4>
-                    <p class="how-it-works__step-desc">
-                        Team training and launch. Priority support for 3 months to guarantee success.
-                    </p>
-                    <span class="how-it-works__step-time">Fast ROI</span>
-                </div>
+        <section class="bloc cadre" id="cas">
+            <div class="tete">
+                <span class="etiquette">Scenarios</span>
+                <h2>Typical deployments</h2>
+                <p>Three common situations and the matching modules.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- =============================================
-         SECTION: INTEGRATIONS - ECOSYSTEME TECH
-         ============================================= -->
-    <section class="integrations-section">
-        <div class="container">
-            <div class="section-header section-header--center">
-                <span class="section-label">Integrations</span>
-                <h2 class="section-title">Connected to Your Existing Tools</h2>
-                <p class="section-description">Our modules plug into your existing ecosystem. No need to change everything.</p>
+            <div class="cas">
+                <article data-apparition><img src="/assets/images/accueil/cas-btp.webp" alt="" loading="lazy"><i>Construction</i><h3>Fleet tracking</h3><p>Real-time positions, predictive maintenance, invoicing from GPS events.</p><span>FleetOps · 3 to 4 weeks</span></article>
+                <article data-apparition><img src="/assets/images/accueil/cas-distribution.webp" alt="" loading="lazy"><i>Distribution and trade</i><h3>Customer follow-ups</h3><p>Automatic reminders by payment delay, per-customer visibility, sync with SAP.</p><span>Marketing, Sales · 2 to 3 weeks</span></article>
+                <article data-apparition><img src="/assets/images/accueil/cas-transport.webp" alt="" loading="lazy"><i>Transport and logistics</i><h3>Dashboard</h3><p>TMS, Odoo and real-time data together. Profit per trip, anomaly alerts.</p><span>Supply Chain · 4 to 5 weeks</span></article>
             </div>
+        </section>
 
-            <div class="integrations-section__grid">
-                <div class="integration-logo"><span>Odoo</span></div>
-                <div class="integration-logo"><span>SAP</span></div>
-                <div class="integration-logo"><span>Sage</span></div>
-                <div class="integration-logo"><span>Dynamics</span></div>
-                <div class="integration-logo"><span>Excel</span></div>
-                <div class="integration-logo"><span>WhatsApp</span></div>
-                <div class="integration-logo"><span>REST API</span></div>
-                <div class="integration-logo"><span>Gmail</span></div>
+        <section class="zones" id="zones">
+            <img class="zones__globe" src="/assets/images/accueil/globe.webp" alt="" loading="lazy">
+            <div class="cadre">
+                <div class="tete">
+                    <span class="etiquette">Presence</span>
+                    <h2>Coverage</h2>
+                    <p>Remote delivery, one team from deployment to support.</p>
+                </div>
+                <ul class="pays">
+                    <li data-apparition><b>MA</b><strong>Morocco</strong><span>SMEs and industrial groups</span></li>
+                    <li data-apparition><b>FR</b><strong>France</strong><span>GDPR, Cegid, Sage, SAP</span></li>
+                    <li data-apparition><b>CA</b><strong>Canada</strong><span>Quebec, Law 25</span></li>
+                    <li data-apparition><b>BE</b><strong>Belgium</strong><span>Wallonia and Brussels</span></li>
+                    <li data-apparition><b>CH</b><strong>Switzerland</strong><span>French-speaking Switzerland, FADP</span></li>
+                </ul>
             </div>
+        </section>
 
-            <p style="text-align: center; margin-top: var(--space-xl); color: var(--text-muted); font-size: var(--text-sm);">
-                + 50 other integrations available via our open API
-            </p>
-        </div>
-    </section>
-<!-- =============================================
-         SECTION: CTA CONTACT - FORMULAIRE PREMIUM
-         ============================================= -->
-    <section class="case-studies">
-        <div class="container">
-            <header class="section-header section-header--center">
-                <span class="section-label">Typical scenarios</span>
-                <h2 class="section-title">What a deployment looks like</h2>
-                <p class="section-description">
-                    Three situations that represent the requests we receive, and the modules that answer them.
-                </p>
-            </header>
-
-            <div class="case-studies__grid">
-                <!-- Case 1 -->
-                <div class="case-study">
-                    <div class="case-study__header">
-                        <span class="case-study__industry">Construction</span>
-                        <h3 class="case-study__title">Real-time fleet tracking</h3>
-                    </div>
-
-                    <div class="case-study__content">
-                        <div class="case-study__section">
-                            <h4>Typical situation</h4>
-                            <p>A fleet followed through spreadsheets and basic GPS. No consolidated view of where the machines are, maintenance handled after the breakdown rather than before, invoicing done by hand.</p>
-                        </div>
-
-                        <div class="case-study__section">
-                            <h4>With FleetOps</h4>
-                            <p><strong>FleetOps</strong> connected to Odoo ERP. Positions in real time, preventive maintenance triggered automatically, invoicing built from the GPS events themselves.</p>
-                        </div>
-
-                        <div class="case-study__footer">
-                            <div class="case-study__metric">
-                                <span class="case-study__metric-label">Deployment</span>
-                                <span class="case-study__metric-value">3-4 weeks</span>
-                            </div>
-                            <div class="case-study__metric">
-                                <span class="case-study__metric-label">Integration</span>
-                                <span class="case-study__metric-value">Tailored</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Case 2 -->
-                <div class="case-study">
-                    <div class="case-study__header">
-                        <span class="case-study__industry">Distribution &amp; Trade</span>
-                        <h3 class="case-study__title">Automated customer follow-ups</h3>
-                    </div>
-
-                    <div class="case-study__content">
-                        <div class="case-study__section">
-                            <h4>Typical situation</h4>
-                            <p>Follow-ups sent by hand, reminders forgotten, unpaid invoices tracked in scattered places. No visibility on payment delays by customer or by sector.</p>
-                        </div>
-
-                        <div class="case-study__section">
-                            <h4>With Marketing Automation and Sales Intelligence</h4>
-                            <p>Follow-ups triggered automatically once a delay threshold is crossed, dashboards showing where each customer stands, alerts on anomalies. Invoice status kept in sync with SAP.</p>
-                        </div>
-
-                        <div class="case-study__footer">
-                            <div class="case-study__metric">
-                                <span class="case-study__metric-label">Deployment</span>
-                                <span class="case-study__metric-value">2-3 weeks</span>
-                            </div>
-                            <div class="case-study__metric">
-                                <span class="case-study__metric-label">Outcome</span>
-                                <span class="case-study__metric-value">Automated</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Case 3 -->
-                <div class="case-study">
-                    <div class="case-study__header">
-                        <span class="case-study__industry">Transport &amp; Logistics</span>
-                        <h3 class="case-study__title">One operational dashboard</h3>
-                    </div>
-
-                    <div class="case-study__content">
-                        <div class="case-study__section">
-                            <h4>Typical situation</h4>
-                            <p>Data scattered across a TMS, invoices in Excel and conversations on WhatsApp. No central view of operations. Decisions taken on figures that are late or incomplete.</p>
-                        </div>
-
-                        <div class="case-study__section">
-                            <h4>With Supply Chain Command</h4>
-                            <p><strong>Supply Chain Command</strong> brings the TMS, Odoo ERP and real-time data together. A single dashboard for dispatching, profitability visible per trip, instant alerts when something drifts.</p>
-                        </div>
-
-                        <div class="case-study__footer">
-                            <div class="case-study__metric">
-                                <span class="case-study__metric-label">Deployment</span>
-                                <span class="case-study__metric-value">4-5 weeks</span>
-                            </div>
-                            <div class="case-study__metric">
-                                <span class="case-study__metric-label">Coverage</span>
-                                <span class="case-study__metric-value">Whole entity</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <section class="appel" id="contact">
+            <img class="appel__fond" src="/assets/images/accueil/reseau.webp" alt="" loading="lazy">
+            <div class="cadre appel__texte">
+                <span class="etiquette">Contact</span>
+                <h2>Free audit</h2>
+                <p>15-minute call, proposal within 48 h.</p>
+                <a class="bouton bouton--grand" href="https://wa.me/212673736611" target="_blank" rel="noopener">Message us on WhatsApp</a>
+                <span class="appel__tel">+212 673 736 611</span>
             </div>
-
-            <div class="case-studies__cta">
-                <p>Your sector is not listed? Tell us about your own case.</p>
-                <a href="https://wa.me/212673736611" target="_blank" rel="noopener" class="btn btn--secondary">
-                    Describe your context
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="cta-section">
-        <div class="cta-section__content">
-            <h2 class="cta-section__title">Ready to transform your operations?</h2>
-            <p class="cta-section__description">
-                Free audit of your processes. We identify the modules that fit your business. <strong>Fast response guaranteed.</strong>
-            </p>
-
-            <div class="cta-section__steps">
-                <div class="cta-section__step">
-                    <span class="cta-section__step-number">1</span>
-                    <span>Contact us on WhatsApp</span>
-                </div>
-                <div class="cta-section__step">
-                    <span class="cta-section__step-number">2</span>
-                    <span>15-min call</span>
-                </div>
-                <div class="cta-section__step">
-                    <span class="cta-section__step-number">3</span>
-                    <span>Tailored proposal</span>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin: var(--space-2xl) 0;">
-                <a href="https://wa.me/212673736611" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; padding: 18px 48px; background: var(--emerald); color: var(--bg-void); font-size: 1.1rem; font-weight: 700; border-radius: var(--radius-xl); text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(16,185,129,0.3);">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    Contact us on WhatsApp
-                </a>
-                <p style="margin-top: var(--space-md); color: var(--text-muted); font-size: var(--text-sm);">+212 673 736 611 — Fast response</p>
-            </div>
-
-            <div class="cta-section__guarantees">
-                <div class="cta-section__guarantee">
-                    <svg class="cta-section__guarantee-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>No commitment</span>
-                </div>
-                <div class="cta-section__guarantee">
-                    <svg class="cta-section__guarantee-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    <span>Secure data</span>
-                </div>
-                <div class="cta-section__guarantee">
-                    <svg class="cta-section__guarantee-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    <span>Quick response</span>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- =============================================
          FOOTER
@@ -932,21 +655,6 @@
         }
     </style>
 
-    <!-- Video Modal -->
-    <div class="video-modal" id="videoModal">
-        <div class="video-modal__content">
-            <button class="video-modal__close" aria-label="Fermer">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M18 6L6 18M6 6l12 12"/>
-                </svg>
-            </button>
-            <video class="video-modal__video" id="modalVideo" controls>
-                <source src="" type="video/mp4">
-            </video>
-            <div class="video-modal__title" id="modalTitle"></div>
-        </div>
-    </div>
-
     <!-- i18n System -->
 
     <!-- Navbar Modulaire -->
@@ -955,96 +663,9 @@
     <!-- Scripts -->
     <script defer src="/assets/js/core/utils.js"></script>
     <script defer src="/assets/js/core/app.js?v=20260813b"></script>
-    <script defer src="/assets/js/core/animations.js"></script>
     <script defer src="/assets/js/core/performance.js"></script>
-    <script defer src="/assets/js/sections/fleetops.js"></script>
-    <script defer src="/assets/js/sections/hero-premium.js?v=20260808"></script>
 
     <!-- Module Video Interactions with Lazy Loading -->
-    <script>
-    (function() {
-        const modal = document.getElementById('videoModal');
-        const modalVideo = document.getElementById('modalVideo');
-        const modalTitle = document.getElementById('modalTitle');
-        const closeBtn = modal.querySelector('.video-modal__close');
-
-        // Lazy loading videos with IntersectionObserver
-        const videoObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const video = entry.target;
-                    const source = video.querySelector('source');
-                    if (source && !source.src) {
-                        source.src = source.dataset.src;
-                        video.load();
-                    }
-                    videoObserver.unobserve(video);
-                }
-            });
-        }, { rootMargin: '200px' });
-
-        // Setup cards
-        document.querySelectorAll('.module-ia-card').forEach(card => {
-            const video = card.querySelector('.module-ia-card__video');
-            if (!video) return;
-
-            // Setup lazy loading
-            const source = video.querySelector('source');
-            if (source && source.src) {
-                source.dataset.src = source.src;
-                source.removeAttribute('src');
-                videoObserver.observe(video);
-            }
-
-            // Hover play
-            card.addEventListener('mouseenter', () => {
-                if (video.readyState >= 2) {
-                    video.currentTime = 0;
-                    video.play().catch(() => {});
-                }
-            });
-
-            card.addEventListener('mouseleave', () => {
-                video.pause();
-            });
-
-            // Play button - open modal
-            const playBtn = card.querySelector('.module-ia-card__play');
-            if (playBtn) {
-                playBtn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const videoSrc = card.dataset.video;
-                    const title = card.dataset.title;
-
-                    modalVideo.querySelector('source').src = videoSrc;
-                    modalVideo.load();
-                    modalTitle.textContent = title;
-                    modal.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-
-                    setTimeout(() => modalVideo.play().catch(() => {}), 100);
-                });
-            }
-        });
-
-        // Close modal
-        function closeModal() {
-            modal.classList.remove('active');
-            modalVideo.pause();
-            document.body.style.overflow = '';
-        }
-
-        closeBtn.addEventListener('click', closeModal);
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal();
-        });
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal.classList.contains('active')) {
-                closeModal();
-            }
-        });
-    })();
-    </script>
 
 
 
@@ -1076,7 +697,7 @@
     <script defer src="/assets/js/components/exit-popup.js"></script>
 
     <!-- Modules IA Hub -->
-    <script defer src="/sections/modules-ia/modules-ia.en.js?v=20260813b"></script>
+    <script defer src="/assets/js/accueil/accueil.js?v=1"></script>
     <script defer src="/assets/js/sections/hero-film.js?v=20261127"></script>
 </body>
 </html>

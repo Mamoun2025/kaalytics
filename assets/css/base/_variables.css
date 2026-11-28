@@ -30,40 +30,40 @@
     --teal: #0d9488;
     --teal-bright: #14b8a6;
     --teal-light: #2dd4bf;
-    --teal-dim: #0f766e;
+    --teal-dim: #0b7a55;
     --teal-glow: rgba(13, 148, 136, 0.4);
 
     /* Orange (Action/CTA Accent) */
-    --orange: #f97316;
-    --orange-bright: #fb923c;
-    --orange-light: #fdba74;
-    --orange-dim: #ea580c;
-    --orange-dark: #c2410c;
-    --orange-glow: rgba(249, 115, 22, 0.4);
+    --orange: #16f9ad;
+    --orange-bright: #3cfbbb;
+    --orange-light: #74fdcf;
+    --orange-dim: #0ceaa0;
+    --orange-dark: #0cc285;
+    --orange-glow: rgba(22, 249, 173, 0.4);
 
     /* Blue (Info/Tech Accent) */
-    --blue: #3b82f6;
-    --blue-bright: #60a5fa;
-    --blue-light: #93c5fd;
-    --blue-dim: #2563eb;
-    --blue-dark: #1d4ed8;
-    --blue-glow: rgba(59, 130, 246, 0.4);
+    --blue: #3bf6b8;
+    --blue-bright: #60fac7;
+    --blue-light: #93fdda;
+    --blue-dim: #24eca9;
+    --blue-dark: #14e19d;
+    --blue-glow: rgba(59, 246, 184, 0.4);
 
     /* Purple (AI/Premium Accent) */
-    --purple: #8b5cf6;
-    --purple-bright: #a78bfa;
-    --purple-light: #c4b5fd;
-    --purple-dim: #7c3aed;
-    --purple-dark: #6d28d9;
-    --purple-glow: rgba(139, 92, 246, 0.4);
+    --purple: #5cf6c3;
+    --purple-bright: #8bfad5;
+    --purple-light: #b5fde5;
+    --purple-dim: #39eeb2;
+    --purple-dark: #16eba4;
+    --purple-glow: rgba(92, 246, 195, 0.4);
 
     /* Pink (Client/Human Accent) */
-    --pink: #ec4899;
-    --pink-bright: #f472b6;
-    --pink-light: #f9a8d4;
-    --pink-dim: #db2777;
-    --pink-dark: #be185d;
-    --pink-glow: rgba(236, 72, 153, 0.4);
+    --pink: #45efb6;
+    --pink-bright: #72f4c9;
+    --pink-light: #a8f9de;
+    --pink-dim: #17eba4;
+    --pink-dark: #11c589;
+    --pink-glow: rgba(69, 239, 182, 0.4);
 
     /* Text */
     --text-primary: #ecfdf5;
@@ -91,13 +91,13 @@
     --gradient-hero-overlay: linear-gradient(135deg, rgba(4, 10, 8, 0.8) 0%, rgba(16, 185, 129, 0.1) 100%);
 
     /* New Accent Gradients */
-    --gradient-orange: linear-gradient(135deg, #ea580c 0%, #f97316 50%, #fb923c 100%);
-    --gradient-blue: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 50%, #60a5fa 100%);
-    --gradient-purple: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 50%, #a78bfa 100%);
-    --gradient-pink: linear-gradient(135deg, #be185d 0%, #ec4899 50%, #f472b6 100%);
-    --gradient-ai: linear-gradient(135deg, #f97316 0%, #fbbf24 50%, #a78bfa 100%);
+    --gradient-orange: linear-gradient(135deg, #0ceaa0 0%, #16f9ad 50%, #3cfbbb 100%);
+    --gradient-blue: linear-gradient(135deg, #14e19d 0%, #3bf6b8 50%, #60fac7 100%);
+    --gradient-purple: linear-gradient(135deg, #16eba4 0%, #5cf6c3 50%, #8bfad5 100%);
+    --gradient-pink: linear-gradient(135deg, #11c589 0%, #45efb6 50%, #72f4c9 100%);
+    --gradient-ai: linear-gradient(135deg, #16f9ad 0%, #fbbf24 50%, #8bfad5 100%);
     --gradient-fleet: linear-gradient(135deg, #047857 0%, #10b981 100%);
-    --gradient-daedalia: linear-gradient(135deg, #f97316 0%, #8b5cf6 100%);
+    --gradient-daedalia: linear-gradient(135deg, #16f9ad 0%, #5cf6c3 100%);
 
     /* Shadows */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);

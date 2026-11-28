@@ -507,7 +507,7 @@
     top: -8px;
     right: -8px;
     padding: 2px 6px;
-    background: linear-gradient(135deg, #f97316 0%, #ef4444 100%);
+    background: linear-gradient(135deg, #16f9ad 0%, #ef4444 100%);
     border-radius: var(--radius-full);
     font-size: 9px;
     font-weight: 700;
@@ -648,17 +648,17 @@
 }
 
 .navbar__dropdown-icon--ai {
-    background: linear-gradient(135deg, #f97316 0%, #fbbf24 100%);
+    background: linear-gradient(135deg, #16f9ad 0%, #fbbf24 100%);
     color: white;
 }
 
 .navbar__dropdown-icon--guide {
-    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+    background: linear-gradient(135deg, #3bf6b8 0%, #60fac7 100%);
     color: white;
 }
 
 .navbar__dropdown-icon--blog {
-    background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+    background: linear-gradient(135deg, #5cf6c3 0%, #8bfad5 100%);
     color: white;
 }
 
@@ -686,7 +686,7 @@
 }
 
 .navbar__dropdown-badge--new {
-    background: linear-gradient(135deg, #f97316 0%, #ef4444 100%);
+    background: linear-gradient(135deg, #16f9ad 0%, #ef4444 100%);
     color: white;
     animation: pulse 2s infinite;
 }
@@ -835,17 +835,17 @@ body.menu-open {
     letter-spacing: 0.04em;
     padding: 4px 11px;
     border-radius: 999px;
-    color: var(--text-muted, #94a3b8);
+    color: var(--text-muted, #9ab2a8);
     text-decoration: none;
     line-height: 1;
     transition: color 0.18s ease, background 0.18s ease;
 }
-.navbar__lang-btn:hover { color: var(--text-primary, #e2e8f0); }
+.navbar__lang-btn:hover { color: var(--text-primary, #e6ecea); }
 .navbar__lang-btn--active {
-    background: var(--color-primary, #6366f1);
+    background: var(--color-primary, #63f1c2);
     color: #fff;
 }
 .navbar--scrolled .navbar__lang { border-color: rgba(0, 0, 0, 0.12); }
-.navbar--scrolled .navbar__lang-btn { color: var(--text-secondary, #475569); }
+.navbar--scrolled .navbar__lang-btn { color: var(--text-secondary, #4c645a); }
 .navbar--scrolled .navbar__lang-btn--active { color: #fff; }
 @media (max-width: 768px) { .navbar__lang { margin-right: 6px; } }

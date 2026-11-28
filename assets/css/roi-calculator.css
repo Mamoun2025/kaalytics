@@ -21,7 +21,7 @@
 
 .roi-header .subtitle {
   font-size: 1rem;
-  color: #94a3b8;
+  color: #9ab2a8;
   line-height: 1.6;
 }
 
@@ -132,7 +132,7 @@
 
 .input-group small {
   font-size: 0.85rem;
-  color: #64748b;
+  color: #67887a;
   line-height: 1.5;
 }
 
@@ -162,7 +162,7 @@
 .result-label {
   font-size: 0.85rem;
   font-weight: 500;
-  color: #94a3b8;
+  color: #9ab2a8;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -183,7 +183,7 @@
 
 .result-item small {
   font-size: 0.75rem;
-  color: #64748b;
+  color: #67887a;
 }
 
 .result-divider {
@@ -233,7 +233,7 @@
 
 .disclaimer {
   font-size: 0.75rem;
-  color: #64748b;
+  color: #67887a;
   text-align: center;
   display: block;
 }
@@ -271,9 +271,9 @@
   }
 
   .roi-inputs select {
-    background: #f8fafc;
+    background: #f8fcfb;
     border-color: rgba(16, 185, 129, 0.15);
-    color: #1e293b;
+    color: #26332e;
   }
 
   .slider-value,

@@ -207,9 +207,6 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- GSAP -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <!-- PWA -->
     <link rel="manifest" href="/manifest.json">
@@ -224,10 +221,10 @@
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/main.css?v=20260818c">
     <link rel="stylesheet" href="/assets/css/sections/hero-film.css?v=20261127c">
+    <link rel="stylesheet" href="/assets/css/accueil/accueil.css?v=5">
     <link rel="stylesheet" href="assets/css/components/cookie-consent.css">
     <link rel="stylesheet" href="assets/css/components/exit-popup.css">
     <link rel="stylesheet" href="assets/css/components/newsletter.css">
-    <link rel="stylesheet" href="sections/modules-ia/modules-ia.css">
 <!-- SEO:BEGIN (genere par scripts/seo/gen_head.py - ne pas editer) -->
     <title>Kaalytics | Vos systèmes. Sous stéroïdes.</title>
     <meta name="description" content="On branche nos modules sur votre ERP. Ce qui prenait des jours prend maintenant quelques secondes. Modules intelligents pour Odoo, SAP, Sage, Dynamics.">
@@ -430,6 +427,11 @@
 }
     </script>
 <!-- SEO:END -->
+    <!-- theme-2026 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Unbounded:wght@400;500&display=swap">
+    <link rel="stylesheet" href="/assets/css/theme/theme.css?v=2">
+    <link rel="stylesheet" href="/assets/css/theme/composants.css?v=2">
+    <link rel="stylesheet" href="/assets/css/theme/visuels.css?v=2">
 </head>
 <body>
     <!-- =============================================
@@ -478,12 +480,9 @@
             </h1>
 
             <!-- Proposition de valeur -->
-            <p class="hero__subtitle hero__subtitle--primary">
-                Votre ERP fait le minimum. Nos modules font le reste.
-            </p>
-
-            <p class="hero__subtitle hero__subtitle--secondary">
-                Fleet management, sales intelligence, automatisation : sans migration, sans risque.
+            <p class="hero__subtitle">
+                On branche nos modules.<br>
+                Des jours de travail, en quelques secondes.
             </p>
 
             <!-- CTA -->
@@ -498,7 +497,7 @@
         </div>
 
         <!-- Scroll indicator -->
-        <a href="#modules-ia" class="hero__scroll-indicator">
+        <a href="#assemblage" class="hero__scroll-indicator">
             <span>Nos modules</span>
             <div class="hero__scroll-mouse">
                 <div class="hero__scroll-wheel"></div>
@@ -506,487 +505,103 @@
         </a>
     </section>
 
-    <!-- =============================================
-         BANDEAU DE PREUVE — Elements verifiables
-         ============================================= -->
-    <section class="proof-banner">
-        <div class="container">
-            <div class="proof-banner__grid">
-                <div class="proof-banner__item">
-                    <div class="proof-banner__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="3" width="18" height="18" rx="2"/>
-                            <path d="M3 9h18M9 21V9"/>
-                        </svg>
-                    </div>
-                    <h3 class="proof-banner__label">Compatible avec</h3>
-                    <div class="proof-banner__erps">
-                        <span>Odoo</span>
-                        <span>SAP</span>
-                        <span>Sage</span>
-                        <span>Dynamics</span>
-                    </div>
+    <div class="accueil">
+        <section class="assemblage" id="assemblage">
+            <div class="assemblage__scene">
+                <div class="tete tete--centre">
+                    <span class="etiquette">Modules</span>
+                    <h2>Assemblage</h2>
+                    <p>Huit briques autour de l'ERP en place. Sans migration.</p>
                 </div>
-
-                <div class="proof-banner__item">
-                    <div class="proof-banner__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-                            <path d="M12 4v8l6.36 3.64"/>
-                        </svg>
-                    </div>
-                    <h3 class="proof-banner__label">Déploiement rapide</h3>
-                    <p class="proof-banner__value">2-4 semaines</p>
-                </div>
-
-                <div class="proof-banner__item">
-                    <div class="proof-banner__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                    </div>
-                    <h3 class="proof-banner__label">Couverture</h3>
-                    <p class="proof-banner__value">Espace francophone</p>
-                </div>
+                <ul class="mur">
+                    <li class="brique" style="--dx:-1;--dy:-1"><img src="/assets/images/accueil/brique-ventes.webp?v=2" alt="" width="320" height="320"><span>Sales Intelligence</span></li>
+                    <li class="brique" style="--dx:0;--dy:-1"><img src="/assets/images/accueil/brique-automatisation.webp?v=2" alt="" width="320" height="320"><span>Marketing Automation</span></li>
+                    <li class="brique" style="--dx:1;--dy:-1"><img src="/assets/images/accueil/brique-recouvrement.webp?v=2" alt="" width="320" height="320"><span>Financial Operations</span></li>
+                    <li class="brique" style="--dx:-1;--dy:0"><img src="/assets/images/accueil/brique-stock.webp?v=2" alt="" width="320" height="320"><span>Supply Chain</span></li>
+                    <li class="socle"><strong>Votre ERP</strong><span>Odoo · SAP<br>Sage · Dynamics</span></li>
+                    <li class="brique" style="--dx:1;--dy:0"><img src="/assets/images/accueil/brique-localisation.webp?v=2" alt="" width="320" height="320"><span>FleetOps</span></li>
+                    <li class="brique" style="--dx:-1;--dy:1"><img src="/assets/images/accueil/brique-integration.webp?v=2" alt="" width="320" height="320"><span>ERP Connect</span></li>
+                    <li class="brique" style="--dx:0;--dy:1"><img src="/assets/images/accueil/brique-reporting.webp?v=2" alt="" width="320" height="320"><span>Digital Platform</span></li>
+                    <li class="brique" style="--dx:1;--dy:1"><img src="/assets/images/accueil/brique-agent-ia.webp?v=2" alt="" width="320" height="320"><span>AI Engine</span></li>
+                </ul>
+                <p class="assemblage__compte"><b id="compte">8</b> / 8 modules branchés</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- =============================================
-         SECTION: MODULES IA - Hub Interactif
-         ============================================= -->
-    <section class="section-modules-ia" id="modules-ia">
-        <div class="container">
-            <header class="modules-ia__header">
-                <div class="modules-ia__badge">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="3"/>
-                        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/>
-                    </svg>
-                    Écosystème IA Connecté
-                </div>
-                <h2 class="modules-ia__title">8 modules pour transformer vos opérations</h2>
-                <p class="modules-ia__subtitle">Cliquez sur un module pour découvrir ses fonctionnalités</p>
-            </header>
-
-            <div class="modules-ia__hub">
-                <div class="modules-ia__orbits">
-                    <div class="orbit-ring orbit-ring--inner"></div>
-                    <div class="orbit-ring orbit-ring--outer"></div>
-                </div>
-
-                <div class="modules-ia__radar">
-                    <div class="radar-pulse"></div>
-                    <div class="radar-pulse"></div>
-                    <div class="radar-pulse"></div>
-                    <div class="radar-sweep"></div>
-                </div>
-
-                <svg class="modules-ia__connections" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid meet">
-                    <line class="connection-line" data-module="sales-intelligence" x1="400" y1="400" x2="400" y2="40"/>
-                    <circle class="connection-dot" data-module="sales-intelligence" cx="400" cy="40" r="5"/>
-                    <line class="connection-line" data-module="marketing-automation" x1="401" y1="398" x2="667" y2="161"/>
-                    <circle class="connection-dot" data-module="marketing-automation" cx="667" cy="161" r="5"/>
-                    <line class="connection-line" data-module="financial-operations" x1="399" y1="399" x2="759" y2="400"/>
-                    <circle class="connection-dot" data-module="financial-operations" cx="759" cy="400" r="5"/>
-                    <line class="connection-line" data-module="supply-chain" x1="400" y1="400" x2="653" y2="660"/>
-                    <circle class="connection-dot" data-module="supply-chain" cx="653" cy="660" r="5"/>
-                    <line class="connection-line" data-module="fleetops" x1="400" y1="400" x2="400" y2="760"/>
-                    <circle class="connection-dot" data-module="fleetops" cx="400" cy="760" r="5"/>
-                    <line class="connection-line" data-module="erp-connect" x1="400" y1="400" x2="155" y2="655"/>
-                    <circle class="connection-dot" data-module="erp-connect" cx="155" cy="655" r="5"/>
-                    <line class="connection-line" data-module="digital-platform" x1="400" y1="400" x2="40" y2="400"/>
-                    <circle class="connection-dot" data-module="digital-platform" cx="40" cy="400" r="5"/>
-                    <line class="connection-line" data-module="ai-engine" x1="400" y1="400" x2="145" y2="150"/>
-                    <circle class="connection-dot" data-module="ai-engine" cx="145" cy="150" r="5"/>
-                    <circle class="connection-dot-center" cx="400" cy="400" r="6" fill="rgba(16, 185, 129, 0.2)" stroke="rgba(16, 185, 129, 0.5)" stroke-width="2"/>
-                </svg>
-
-                <div class="modules-ia__particles">
-                    <div class="particle particle--1"></div>
-                    <div class="particle particle--2"></div>
-                    <div class="particle particle--3"></div>
-                    <div class="particle particle--4"></div>
-                    <div class="particle particle--5"></div>
-                    <div class="particle particle--6"></div>
-                    <div class="particle particle--7"></div>
-                    <div class="particle particle--8"></div>
-                </div>
-
-                <div class="modules-ia__center">
-                    <video class="modules-ia__video" id="modules-ia-video" autoplay muted loop playsinline preload="none">
-                        <source src="assets/videos/sales/sales-1.mp4" type="video/mp4">
-                    </video>
-                    <div class="modules-ia__nav">
-                        <button class="modules-ia__nav-btn" id="modules-ia-prev" aria-label="Video precedente">
-                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-                        </button>
-                        <button class="modules-ia__nav-btn" id="modules-ia-next" aria-label="Video suivante">
-                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-                        </button>
-                    </div>
-                    <div class="modules-ia__video-info">
-                        <div class="modules-ia__video-title" id="modules-ia-title">Sales Intelligence</div>
-                        <div class="modules-ia__video-counter" id="modules-ia-counter">Démo 1/4</div>
-                    </div>
-                </div>
-
-                <div class="module-node active" data-module="sales-intelligence" data-position="1">
-                    <div class="module-node__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-                    <span class="module-node__label">Sales Intelligence</span>
-                </div>
-                <div class="module-node" data-module="marketing-automation" data-position="2">
-                    <div class="module-node__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-                    <span class="module-node__label">Marketing Auto</span>
-                </div>
-                <div class="module-node" data-module="financial-operations" data-position="3">
-                    <div class="module-node__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-                    <span class="module-node__label">Financial Ops</span>
-                </div>
-                <div class="module-node" data-module="supply-chain" data-position="4">
-                    <div class="module-node__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="1" y="6" width="6" height="6" rx="1"/><rect x="9" y="6" width="6" height="6" rx="1"/><rect x="17" y="6" width="6" height="6" rx="1"/><path d="M4 12v4a2 2 0 002 2h12a2 2 0 002-2v-4"/></svg></div>
-                    <span class="module-node__label">Supply Chain</span>
-                </div>
-                <div class="module-node" data-module="fleetops" data-position="5">
-                    <div class="module-node__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-                    <span class="module-node__label">FleetOps</span>
-                </div>
-                <div class="module-node" data-module="erp-connect" data-position="6">
-                    <div class="module-node__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg></div>
-                    <span class="module-node__label">ERP Connect</span>
-                </div>
-                <div class="module-node" data-module="digital-platform" data-position="7">
-                    <div class="module-node__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-                    <span class="module-node__label">Digital Platform</span>
-                </div>
-                <div class="module-node" data-module="ai-engine" data-position="8">
-                    <div class="module-node__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10"/><circle cx="12" cy="12" r="3"/></svg></div>
-                    <span class="module-node__label">AI Engine</span>
-                </div>
+        <section class="modules cadre" id="modules">
+            <div class="tete">
+                <span class="etiquette">Offre</span>
+                <h2>Modules</h2>
+                <p>Chaque module indépendant, activé selon le besoin.</p>
             </div>
-
-            <div class="modules-ia__cta">
-                <a href="https://wa.me/212673736611" target="_blank" rel="noopener" class="modules-ia__cta-btn">
-                    Parler à un expert
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
+            <div class="galerie">
+                <a class="carte" href="/modules/sales-intelligence" data-apparition><img src="/assets/images/accueil/module-sales-intelligence.webp" alt="" loading="lazy"><div><i>Ventes</i><h3>Sales Intelligence</h3><p>Pilotage commercial, prévisions, relances</p></div></a>
+                <a class="carte" href="/modules/marketing-automation" data-apparition><img src="/assets/images/accueil/module-marketing-auto.webp" alt="" loading="lazy"><div><i>Marketing</i><h3>Marketing Automation</h3><p>Campagnes, scoring, relances clients</p></div></a>
+                <a class="carte" href="/modules/financial-operations" data-apparition><img src="/assets/images/accueil/module-financial-ops.webp" alt="" loading="lazy"><div><i>Finance</i><h3>Financial Operations</h3><p>Facturation, recouvrement, rapprochement</p></div></a>
+                <a class="carte" href="/modules/supply-chain" data-apparition><img src="/assets/images/accueil/module-supply-chain.webp" alt="" loading="lazy"><div><i>Logistique</i><h3>Supply Chain</h3><p>Stocks, approvisionnements, tournées</p></div></a>
+                <a class="carte" href="/modules/fleetops" data-apparition><img src="/assets/images/accueil/module-fleetops.webp" alt="" loading="lazy"><div><i>Parc</i><h3>FleetOps</h3><p>Flotte, maintenance, carburant</p></div></a>
+                <a class="carte" href="/modules/erp-connect" data-apparition><img src="/assets/images/accueil/module-erp-connect.webp" alt="" loading="lazy"><div><i>Intégration</i><h3>ERP Connect</h3><p>Connecteurs Odoo, SAP, Sage, Dynamics</p></div></a>
+                <a class="carte" href="/modules/digital-platform" data-apparition><img src="/assets/images/accueil/module-digital-platform.webp" alt="" loading="lazy"><div><i>Portails</i><h3>Digital Platform</h3><p>Portails clients, applications métier</p></div></a>
+                <a class="carte" href="/modules/ai-engine" data-apparition><img src="/assets/images/accueil/module-ai-engine.webp" alt="" loading="lazy"><div><i>IA</i><h3>AI Engine</h3><p>Agents IA, lecture de documents, alertes</p></div></a>
             </div>
-        </div>
+        </section>
 
-        <aside class="module-info-panel" id="modules-ia-panel">
-            <button class="module-info-panel__close" id="modules-ia-panel-close" aria-label="Fermer">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-            </button>
-            <div class="module-info-panel__header">
-                <div class="module-info-panel__icon" id="modules-ia-panel-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="3"/></svg>
-                </div>
-                <h3 class="module-info-panel__title" id="modules-ia-panel-title">Module</h3>
+        <section class="bloc cadre" id="demarche">
+            <div class="tete">
+                <span class="etiquette">Méthode</span>
+                <h2>Démarche</h2>
+                <p>Trois étapes, de l'audit au lancement.</p>
             </div>
-            <span class="module-info-panel__badge" id="modules-ia-panel-badge">0 vidéos démo</span>
-            <p class="module-info-panel__desc" id="modules-ia-panel-desc">Description du module.</p>
-            <ul class="module-info-panel__features" id="modules-ia-panel-features"></ul>
-            <div class="module-info-panel__stats" id="modules-ia-panel-stats"></div>
-            <a href="#contact" class="module-info-panel__cta" id="modules-ia-panel-cta">En savoir plus</a>
-        </aside>
-    </section>
-<!-- =============================================
-         SECTION: HOW IT WORKS - PROCESSUS SIMPLE
-         ============================================= -->
-    <section class="how-it-works">
-        <div class="container">
-            <div class="section-header section-header--center">
-                <span class="section-label">Comment ca marche</span>
-                <h2 class="section-title">Opérationnel en 3 étapes</h2>
-                <p class="section-description">De la démo au déploiement complet, on s'occupe de tout</p>
+            <div class="fil" aria-hidden="true"><span></span></div>
+            <ol class="etapes">
+                <li data-apparition><img src="/assets/images/accueil/etape-audit.webp" alt="" width="800" height="677" loading="lazy"><b>1</b><h3>Audit</h3><p>Besoins, systèmes en place, plan d'action.</p><i>48 h</i></li>
+                <li data-apparition><img src="/assets/images/accueil/etape-configuration.webp" alt="" width="800" height="652" loading="lazy"><b>2</b><h3>Configuration</h3><p>Import des données, branchement à l'ERP.</p><i>2 à 4 semaines</i></li>
+                <li data-apparition><img src="/assets/images/accueil/etape-lancement.webp" alt="" width="800" height="674" loading="lazy"><b>3</b><h3>Lancement</h3><p>Formation des équipes, support prioritaire.</p><i>3 mois de suivi</i></li>
+            </ol>
+        </section>
+
+        <section class="bloc cadre" id="cas">
+            <div class="tete">
+                <span class="etiquette">Scénarios</span>
+                <h2>Déploiements types</h2>
+                <p>Trois situations fréquentes et les modules associés.</p>
             </div>
-
-            <div class="how-it-works__steps">
-                <!-- Step 1 -->
-                <div class="how-it-works__step">
-                    <div class="how-it-works__step-number">1</div>
-                    <div class="how-it-works__step-icon"><!-- ICON: phone --></div>
-                    <h4 class="how-it-works__step-title">Audit gratuit</h4>
-                    <p class="how-it-works__step-desc">
-                        On analyse vos besoins, vos systèmes actuels et vos objectifs. Vous recevez un plan d'action personnalisé.
-                    </p>
-                    <span class="how-it-works__step-time">48h</span>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="how-it-works__step">
-                    <div class="how-it-works__step-number">2</div>
-                    <div class="how-it-works__step-icon"><!-- ICON: cog --></div>
-                    <h4 class="how-it-works__step-title">Configuration</h4>
-                    <p class="how-it-works__step-desc">
-                        Notre équipe configure votre compte, importe vos données et connecte vos systèmes existants.
-                    </p>
-                    <span class="how-it-works__step-time">2-4 semaines</span>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="how-it-works__step">
-                    <div class="how-it-works__step-number">3</div>
-                    <div class="how-it-works__step-icon"><!-- ICON: play --></div>
-                    <h4 class="how-it-works__step-title">Lancement</h4>
-                    <p class="how-it-works__step-desc">
-                        Formation de vos équipes et lancement. Support prioritaire pendant 3 mois pour garantir le succès.
-                    </p>
-                    <span class="how-it-works__step-time">ROI rapide</span>
-                </div>
+            <div class="cas">
+                <article data-apparition><img src="/assets/images/accueil/cas-btp.webp" alt="" loading="lazy"><i>BTP et construction</i><h3>Suivi de flotte</h3><p>Positions en temps réel, maintenance prévisionnelle, facturation issue des événements GPS.</p><span>FleetOps · 3 à 4 semaines</span></article>
+                <article data-apparition><img src="/assets/images/accueil/cas-distribution.webp" alt="" loading="lazy"><i>Distribution et négoce</i><h3>Relances clients</h3><p>Relances automatiques par seuil de délai, visibilité par client, synchronisation avec SAP.</p><span>Marketing, Sales · 2 à 3 semaines</span></article>
+                <article data-apparition><img src="/assets/images/accueil/cas-transport.webp" alt="" loading="lazy"><i>Transport et logistique</i><h3>Tableau de bord</h3><p>TMS, Odoo et données temps réel réunis. Rentabilité par trajet, alertes sur anomalies.</p><span>Supply Chain · 4 à 5 semaines</span></article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- =============================================
-         SECTION: INTEGRATIONS - ECOSYSTEME TECH
-         ============================================= -->
-    <section class="integrations-section">
-        <div class="container">
-            <div class="section-header section-header--center">
-                <span class="section-label">Intégrations</span>
-                <h2 class="section-title">Connecté à vos outils existants</h2>
-                <p class="section-description">Nos modules se branchent sur votre écosystème existant. Pas besoin de tout changer.</p>
+        <section class="zones" id="zones">
+            <img class="zones__globe" src="/assets/images/accueil/globe.webp" alt="" loading="lazy">
+            <div class="cadre">
+                <div class="tete">
+                    <span class="etiquette">Présence</span>
+                    <h2>Zones d'intervention</h2>
+                    <p>Interventions à distance, une seule équipe du déploiement au support.</p>
+                </div>
+                <ul class="pays">
+                    <li data-apparition><b>MA</b><strong>Maroc</strong><span>PME et groupes industriels</span></li>
+                    <li data-apparition><b>FR</b><strong>France</strong><span>RGPD, Cegid, Sage, SAP</span></li>
+                    <li data-apparition><b>CA</b><strong>Canada</strong><span>Québec, Loi 25</span></li>
+                    <li data-apparition><b>BE</b><strong>Belgique</strong><span>Wallonie et Bruxelles</span></li>
+                    <li data-apparition><b>CH</b><strong>Suisse</strong><span>Suisse romande, LPD</span></li>
+                </ul>
             </div>
+        </section>
 
-            <div class="integrations-section__grid">
-                <div class="integration-logo"><span>Odoo</span></div>
-                <div class="integration-logo"><span>SAP</span></div>
-                <div class="integration-logo"><span>Sage</span></div>
-                <div class="integration-logo"><span>Dynamics</span></div>
-                <div class="integration-logo"><span>Excel</span></div>
-                <div class="integration-logo"><span>WhatsApp</span></div>
-                <div class="integration-logo"><span>API REST</span></div>
-                <div class="integration-logo"><span>Gmail</span></div>
+        <section class="appel" id="contact">
+            <img class="appel__fond" src="/assets/images/accueil/reseau.webp" alt="" loading="lazy">
+            <div class="cadre appel__texte">
+                <span class="etiquette">Contact</span>
+                <h2>Audit gratuit</h2>
+                <p>Échange de 15 minutes, proposition sous 48 h.</p>
+                <a class="bouton bouton--grand" href="https://wa.me/212673736611" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+                <span class="appel__tel">+212 673 736 611</span>
             </div>
-
-            <p style="text-align: center; margin-top: var(--space-xl); color: var(--text-muted); font-size: var(--text-sm);">
-                D'autres intégrations sont réalisables via notre API ouverte
-            </p>
-        </div>
-    </section>
-<!-- =============================================
-         SECTION: CTA CONTACT - FORMULAIRE PREMIUM
-         ============================================= -->
-    <!-- =============================================
-         SCENARIOS TYPES — Situations représentatives
-         ============================================= -->
-    <section class="case-studies">
-        <div class="container">
-            <header class="section-header section-header--center">
-                <span class="section-label">Scénarios types</span>
-                <h2 class="section-title">À quoi ressemble un déploiement</h2>
-                <p class="section-description">
-                    Trois situations représentatives des demandes que nous recevons et des modules correspondants.
-                </p>
-            </header>
-
-            <div class="case-studies__grid">
-                <!-- Case 1 -->
-                <div class="case-study">
-                    <div class="case-study__header">
-                        <span class="case-study__industry">BTP & Construction</span>
-                        <h3 class="case-study__title">Suivi de flotte en temps réel</h3>
-                    </div>
-
-                    <div class="case-study__content">
-                        <div class="case-study__section">
-                            <h4>Situation type</h4>
-                            <p>Suivi de flotte par tableur et GPS basique. Absence de vue consolidée des positions, maintenance réactive plutôt que prévisionnelle, facturation manuelle.</p>
-                        </div>
-
-                        <div class="case-study__section">
-                            <h4>Avec FleetOps</h4>
-                            <p><strong>FleetOps</strong> connecté à Odoo ERP. Positions temps réel, maintenance prévisionnelle déclenchée automatiquement, facturation issues des événements GPS.</p>
-                        </div>
-
-                        <div class="case-study__footer">
-                            <div class="case-study__metric">
-                                <span class="case-study__metric-label">Déploiement</span>
-                                <span class="case-study__metric-value">3-4 semaines</span>
-                            </div>
-                            <div class="case-study__metric">
-                                <span class="case-study__metric-label">Intégration</span>
-                                <span class="case-study__metric-value">Sur mesure</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Case 2 -->
-                <div class="case-study">
-                    <div class="case-study__header">
-                        <span class="case-study__industry">Distribution & Négoce</span>
-                        <h3 class="case-study__title">Automatisation relances clients</h3>
-                    </div>
-
-                    <div class="case-study__content">
-                        <div class="case-study__section">
-                            <h4>Situation type</h4>
-                            <p>Relances clients manuelles, alertes oubliées, suivi des impayés fragmenté. Aucune visibilité sur les délais de paiement par client ou par secteur d'activité.</p>
-                        </div>
-
-                        <div class="case-study__section">
-                            <h4>Avec Marketing Automation + Sales Intelligence</h4>
-                            <p>Relances déclenchées automatiquement selon seuils de délai, dashboards de visibilité par client, alertes anomalies. Synchronisation avec SAP pour l'état des factures.</p>
-                        </div>
-
-                        <div class="case-study__footer">
-                            <div class="case-study__metric">
-                                <span class="case-study__metric-label">Déploiement</span>
-                                <span class="case-study__metric-value">2-3 semaines</span>
-                            </div>
-                            <div class="case-study__metric">
-                                <span class="case-study__metric-label">Résultat</span>
-                                <span class="case-study__metric-value">Automatisé</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Case 3 -->
-                <div class="case-study">
-                    <div class="case-study__header">
-                        <span class="case-study__industry">Transport & Logistique</span>
-                        <h3 class="case-study__title">Dashboard opérationnel centralisé</h3>
-                    </div>
-
-                    <div class="case-study__content">
-                        <div class="case-study__section">
-                            <h4>Situation type</h4>
-                            <p>Données fragmentées : TMS, facturations Excel, communications WhatsApp. Pas de vue centralisée des opérations. Décisions sur données décalées ou incomplètes.</p>
-                        </div>
-
-                        <div class="case-study__section">
-                            <h4>Avec Supply Chain Command</h4>
-                            <p><strong>Supply Chain Command</strong> unifie TMS, Odoo ERP et données temps réel. Dashboard unique pour dispatching, visibilité de rentabilité par trajet, alertes instantanées sur anomalies.</p>
-                        </div>
-
-                        <div class="case-study__footer">
-                            <div class="case-study__metric">
-                                <span class="case-study__metric-label">Déploiement</span>
-                                <span class="case-study__metric-value">4-5 semaines</span>
-                            </div>
-                            <div class="case-study__metric">
-                                <span class="case-study__metric-label">Couverture</span>
-                                <span class="case-study__metric-value">Entité complète</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="case-studies__cta">
-                <p>Votre secteur n'est pas listé ? Parlons de votre cas spécifique.</p>
-                <a href="https://wa.me/212673736611" target="_blank" rel="noopener" class="btn btn--secondary">
-                    Décrire votre contexte
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Couverture francophone -->
-    <section class="francophonie">
-        <div class="francophonie__inner">
-            <span class="francophonie__label">Où nous intervenons</span>
-            <h2 class="francophonie__title">Nous accompagnons des entreprises dans toute la francophonie</h2>
-            <p class="francophonie__intro">
-                Nos interventions se font à distance : votre ERP reste chez vous, nous nous y
-                connectons. Pas de déplacement à financer, pas de délai d'agenda — la même équipe
-                travaille pour une PME de Rabat, une entreprise de Lyon ou un distributeur de
-                Montréal.
-            </p>
-
-            <div class="francophonie__pays">
-                <div class="pays">
-                    <span class="pays__code">MA</span>
-                    <span class="pays__nom">Maroc</span>
-                    <span class="pays__detail">PME et groupes industriels. Cadre local maîtrisé.</span>
-                </div>
-                <div class="pays">
-                    <span class="pays__code">FR</span>
-                    <span class="pays__nom">France</span>
-                    <span class="pays__detail">Cadre RGPD, connecteurs Cegid, Sage et SAP.</span>
-                </div>
-                <div class="pays">
-                    <span class="pays__code">CA</span>
-                    <span class="pays__nom">Canada</span>
-                    <span class="pays__detail">Québec et provinces francophones. Loi 25.
-                        <a href="/canada" style="color: var(--emerald); text-decoration: underline;">En savoir plus</a></span>
-                </div>
-                <div class="pays">
-                    <span class="pays__code">BE</span>
-                    <span class="pays__nom">Belgique</span>
-                    <span class="pays__detail">Wallonie et Bruxelles. Cadre RGPD identique.</span>
-                </div>
-                <div class="pays">
-                    <span class="pays__code">CH</span>
-                    <span class="pays__nom">Suisse</span>
-                    <span class="pays__detail">Suisse romande. Hors UE, LPD révisée.</span>
-                </div>
-            </div>
-
-            <div class="francophonie__note">
-                <p>
-                    <strong>Une seule équipe, pas de relais.</strong> La personne qui conduit votre
-                    déploiement est celle qui vous répond ensuite. Pas de transfert entre agences,
-                    pas de dossier qui change de main d'un pays à l'autre — et rien à financer en
-                    déplacement.
-                </p>
-            </div>
-
-            <a href="/ou-nous-intervenons" class="francophonie__lien">Comment nous intervenons à distance</a>
-            <a href="/realisations" class="francophonie__lien" style="margin-left: 28px;">Voir les sites que nous avons livrés</a>
-        </div>
-    </section>
-
-    <section id="contact" class="cta-section">
-        <div class="cta-section__content">
-            <h2 class="cta-section__title">Prêt à transformer vos opérations ?</h2>
-            <p class="cta-section__description">
-                Audit gratuit de vos processus. On identifie les modules adaptés à votre métier. <strong>Réponse rapide garantie.</strong>
-            </p>
-
-            <div class="cta-section__steps">
-                <div class="cta-section__step">
-                    <span class="cta-section__step-number">1</span>
-                    <span>Contactez-nous sur WhatsApp</span>
-                </div>
-                <div class="cta-section__step">
-                    <span class="cta-section__step-number">2</span>
-                    <span>Échange de 15 min</span>
-                </div>
-                <div class="cta-section__step">
-                    <span class="cta-section__step-number">3</span>
-                    <span>Proposition personnalisée</span>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin: var(--space-2xl) 0;">
-                <a href="https://wa.me/212673736611" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; padding: 18px 48px; background: var(--emerald); color: var(--bg-void); font-size: 1.1rem; font-weight: 700; border-radius: var(--radius-xl); text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(16,185,129,0.3);">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    Nous contacter sur WhatsApp
-                </a>
-                <p style="margin-top: var(--space-md); color: var(--text-muted); font-size: var(--text-sm);">+212 673 736 611 — Réponse rapide</p>
-            </div>
-
-            <div class="cta-section__guarantees">
-                <div class="cta-section__guarantee">
-                    <svg class="cta-section__guarantee-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>Sans engagement</span>
-                </div>
-                <div class="cta-section__guarantee">
-                    <svg class="cta-section__guarantee-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    <span>Données sécurisées</span>
-                </div>
-                <div class="cta-section__guarantee">
-                    <svg class="cta-section__guarantee-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    <span>Réponse rapide</span>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- =============================================
          FOOTER
@@ -1086,21 +701,6 @@
         }
     </style>
 
-    <!-- Video Modal -->
-    <div class="video-modal" id="videoModal">
-        <div class="video-modal__content">
-            <button class="video-modal__close" aria-label="Fermer">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M18 6L6 18M6 6l12 12"/>
-                </svg>
-            </button>
-            <video class="video-modal__video" id="modalVideo" controls>
-                <source src="" type="video/mp4">
-            </video>
-            <div class="video-modal__title" id="modalTitle"></div>
-        </div>
-    </div>
-
     <!-- i18n System -->
 
     <!-- Navbar Modulaire -->
@@ -1109,96 +709,9 @@
     <!-- Scripts -->
     <script defer src="assets/js/core/utils.js"></script>
     <script defer src="assets/js/core/app.js?v=20260813b"></script>
-    <script defer src="assets/js/core/animations.js"></script>
     <script defer src="assets/js/core/performance.js"></script>
-    <script defer src="assets/js/sections/fleetops.js"></script>
-    <script defer src="assets/js/sections/hero-premium.js?v=20260808"></script>
 
     <!-- Module Video Interactions with Lazy Loading -->
-    <script>
-    (function() {
-        const modal = document.getElementById('videoModal');
-        const modalVideo = document.getElementById('modalVideo');
-        const modalTitle = document.getElementById('modalTitle');
-        const closeBtn = modal.querySelector('.video-modal__close');
-
-        // Lazy loading videos with IntersectionObserver
-        const videoObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const video = entry.target;
-                    const source = video.querySelector('source');
-                    if (source && !source.src) {
-                        source.src = source.dataset.src;
-                        video.load();
-                    }
-                    videoObserver.unobserve(video);
-                }
-            });
-        }, { rootMargin: '200px' });
-
-        // Setup cards
-        document.querySelectorAll('.module-ia-card').forEach(card => {
-            const video = card.querySelector('.module-ia-card__video');
-            if (!video) return;
-
-            // Setup lazy loading
-            const source = video.querySelector('source');
-            if (source && source.src) {
-                source.dataset.src = source.src;
-                source.removeAttribute('src');
-                videoObserver.observe(video);
-            }
-
-            // Hover play
-            card.addEventListener('mouseenter', () => {
-                if (video.readyState >= 2) {
-                    video.currentTime = 0;
-                    video.play().catch(() => {});
-                }
-            });
-
-            card.addEventListener('mouseleave', () => {
-                video.pause();
-            });
-
-            // Play button - open modal
-            const playBtn = card.querySelector('.module-ia-card__play');
-            if (playBtn) {
-                playBtn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const videoSrc = card.dataset.video;
-                    const title = card.dataset.title;
-
-                    modalVideo.querySelector('source').src = videoSrc;
-                    modalVideo.load();
-                    modalTitle.textContent = title;
-                    modal.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-
-                    setTimeout(() => modalVideo.play().catch(() => {}), 100);
-                });
-            }
-        });
-
-        // Close modal
-        function closeModal() {
-            modal.classList.remove('active');
-            modalVideo.pause();
-            document.body.style.overflow = '';
-        }
-
-        closeBtn.addEventListener('click', closeModal);
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal();
-        });
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal.classList.contains('active')) {
-                closeModal();
-            }
-        });
-    })();
-    </script>
 
 
 
@@ -1230,7 +743,7 @@
     <script defer src="assets/js/components/exit-popup.js"></script>
 
     <!-- Modules IA Hub -->
-    <script defer src="sections/modules-ia/modules-ia.js?v=20260813b"></script>
+    <script defer src="/assets/js/accueil/accueil.js?v=1"></script>
     <script defer src="/assets/js/sections/hero-film.js?v=20261127"></script>
 </body>
 </html>

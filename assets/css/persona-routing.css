@@ -15,7 +15,7 @@
 
 .persona-hero .subtitle {
   font-size: 1.1rem;
-  color: #94a3b8;
+  color: #9ab2a8;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.7;
@@ -98,7 +98,7 @@
 
 .persona-subtitle {
   font-size: 0.95rem;
-  color: #94a3b8;
+  color: #9ab2a8;
   line-height: 1.6;
   margin: 0;
 }
@@ -111,7 +111,7 @@
 
 .persona-features li {
   font-size: 0.9rem;
-  color: #94a3b8;
+  color: #9ab2a8;
   padding: 8px 0;
   padding-left: 24px;
   position: relative;
@@ -183,7 +183,7 @@
 
 .persona-note p {
   font-size: 0.9rem;
-  color: #94a3b8;
+  color: #9ab2a8;
   margin: 0;
 }
 
@@ -213,7 +213,7 @@
 
 @media (prefers-color-scheme: light) {
   .persona-card {
-    background: #f8fafc;
+    background: #f8fcfb;
     border-color: rgba(16, 185, 129, 0.2);
   }
 }

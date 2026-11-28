@@ -434,5 +434,5 @@
     font-style: italic;
     line-height: var(--leading-relaxed);
     padding-left: var(--space-md);
-    border-left: 2px solid var(--teal);
+    border-left: 0;
 }
