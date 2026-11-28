@@ -1,51 +1,50 @@
-// Maquette de l'accueil : défilement adouci (Lenis), barre posée, dérive du fond, fil de la démarche, profondeur des images.
+// Maquette de l'accueil : défilement natif, sans bibliothèque. Une seule écoute du défilement, regroupée par image
+// (requestAnimationFrame) : barre posée, sortie du hero, fil de la démarche. Écritures en transform et opacity seulement.
 (function () {
     'use strict';
 
-    var barre = document.querySelector('.barre');
-    function poserBarre() { barre.classList.toggle('est-posee', window.scrollY > 40); }
-    window.addEventListener('scroll', poserBarre, { passive: true });
-    poserBarre();
-
+    var racine = document.documentElement;
     var calme = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    window.maquette = { anime: !calme && !!window.gsap && !!window.ScrollTrigger };
-    if (!window.maquette.anime) return;
+    if (!calme) racine.classList.add('anime');
 
-    gsap.registerPlugin(ScrollTrigger);
+    var barre = document.querySelector('.barre');
+    var hero = document.querySelector('.hero');
+    var texte = document.querySelector('.hero__texte');
+    var demarche = document.getElementById('demarche');
+    var fil = document.querySelector('.fil span');
+    var paysage = window.matchMedia('(orientation: landscape), (min-width: 1101px)');
+    var enAttente = false;
 
-    // Défilement adouci à la molette ; le doigt garde le défilement natif du téléphone.
-    if (window.Lenis) {
-        var lenis = new Lenis({ duration: 1.15, smoothWheel: true });
-        lenis.on('scroll', ScrollTrigger.update);
-        gsap.ticker.add(function (temps) { lenis.raf(temps * 1000); });
-        gsap.ticker.lagSmoothing(0);
-        document.querySelectorAll('a[href^="#"]').forEach(function (lien) {
-            lien.addEventListener('click', function (evenement) {
-                var cible = document.querySelector(lien.getAttribute('href'));
-                if (!cible) return;
-                evenement.preventDefault();
-                lenis.scrollTo(cible, { duration: 1.6 });
-            });
-        });
+    function borne(valeur) { return Math.min(1, Math.max(0, valeur)); }
+
+    function peindre() {
+        enAttente = false;
+        var y = window.scrollY;
+        var h = window.innerHeight;
+        barre.classList.toggle('est-posee', y > 40);
+        if (calme) return;
+
+        // Sortie du hero : le texte monte et s'efface sur la première moitié d'écran (ordinateur seulement).
+        if (paysage.matches) {
+            var sortie = borne(y / (hero.offsetHeight * 0.6));
+            texte.style.transform = 'translate3d(0,' + (-90 * sortie).toFixed(1) + 'px,0)';
+            texte.style.opacity = (1 - sortie).toFixed(3);
+        }
+
+        // Fil de la démarche : rempli entre l'entrée de la section et son milieu.
+        var cadre = demarche.getBoundingClientRect();
+        if (cadre.top < h && cadre.bottom > 0) {
+            fil.parentNode.style.setProperty('--avance', borne((h * 0.85 - cadre.top) / (h * 0.6)).toFixed(3));
+        }
     }
 
-    // Fond : les nappes de brume remontent à des vitesses différentes sur toute la page.
-    gsap.utils.toArray('.aurore i').forEach(function (nappe, rang) {
-        gsap.to(nappe, {
-            yPercent: -120 - rang * 60, xPercent: rang % 2 ? -18 : 22, ease: 'none',
-            scrollTrigger: { trigger: document.body, start: 'top top', end: 'bottom bottom', scrub: 1.2 }
-        });
-    });
+    function demander() {
+        if (enAttente) return;
+        enAttente = true;
+        requestAnimationFrame(peindre);
+    }
 
-    gsap.fromTo('.fil span', { scaleX: 0 }, {
-        scaleX: 1, ease: 'none',
-        scrollTrigger: { trigger: '#demarche', start: 'top 70%', end: 'center 45%', scrub: 0.8 }
-    });
-
-    // Images des cas et du globe : léger glissement en profondeur.
-    gsap.utils.toArray('.cas img').forEach(function (image) {
-        gsap.fromTo(image, { yPercent: 8, scale: 1.06 }, { yPercent: -4, scale: 1, ease: 'none', scrollTrigger: { trigger: image, start: 'top bottom', end: 'bottom top', scrub: 1 } });
-    });
-    gsap.fromTo('.zones__globe', { yPercent: 14, rotate: -4 }, { yPercent: -10, rotate: 2, ease: 'none', scrollTrigger: { trigger: '.zones', start: 'top bottom', end: 'bottom top', scrub: 1 } });
-    gsap.fromTo('.appel__fond', { scale: 1.2 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '.appel', start: 'top bottom', end: 'bottom bottom', scrub: 1 } });
+    window.addEventListener('scroll', demander, { passive: true });
+    window.addEventListener('resize', demander, { passive: true });
+    peindre();
 })();

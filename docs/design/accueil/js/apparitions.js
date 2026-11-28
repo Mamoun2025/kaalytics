@@ -1,16 +1,26 @@
-// Maquette de l'accueil : apparitions des têtes de section et des éléments marqués.
-// Chargé en dernier : les scènes épinglées (assemblage, galerie) doivent exister avant le calcul des positions.
+// Maquette de l'accueil : apparitions des têtes de section et des éléments marqués, une fois, en CSS (base.css).
+// Les éléments d'un même groupe arrivent en décalé de 90 ms.
 (function () {
     'use strict';
-    if (!window.maquette || !window.maquette.anime) return;
 
-    // Apparitions : têtes de section et éléments marqués, une fois, sans rebond.
-    gsap.utils.toArray('.tete:not(.modules .tete), [data-apparition]').forEach(function (element) {
-        gsap.from(element, {
-            y: 44, opacity: 0, filter: 'blur(8px)', duration: 1, ease: 'power3.out',
-            scrollTrigger: { trigger: element, start: 'top 88%', once: true }
-        });
+    var elements = document.querySelectorAll('.tete, [data-apparition]');
+    if (!document.documentElement.classList.contains('anime') || !('IntersectionObserver' in window)) {
+        elements.forEach(function (element) { element.classList.add('est-vu'); });
+        return;
+    }
+
+    elements.forEach(function (element) {
+        var freres = element.parentNode.querySelectorAll(':scope > [data-apparition]');
+        var rang = Array.prototype.indexOf.call(freres, element);
+        if (rang > 0) element.style.transitionDelay = (rang * 0.09) + 's';
     });
 
-    window.addEventListener('load', function () { ScrollTrigger.refresh(); });
+    var veille = new IntersectionObserver(function (entrees) {
+        entrees.forEach(function (entree) {
+            if (!entree.isIntersecting) return;
+            entree.target.classList.add('est-vu');
+            veille.unobserve(entree.target);
+        });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    elements.forEach(function (element) { veille.observe(element); });
 })();

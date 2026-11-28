@@ -6,18 +6,20 @@
     <meta name="robots" content="noindex, nofollow">
     <meta name="theme-color" content="#040a08">
     <title>Kaalytics · maquette de l'accueil</title>
+    <script>
+        // Avant la première image : l'état de départ des animations n'existe que si elles vont tourner.
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('anime');
+    </script>
     <link rel="preload" as="image" href="/assets/hero-film/hero-kaalytics-v4-1920.jpg" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700&family=Unbounded:wght@400;500;600&display=swap">
-    <link rel="stylesheet" href="/docs/design/accueil/css/base.css">
-    <link rel="stylesheet" href="/docs/design/accueil/css/hero.css">
-    <link rel="stylesheet" href="/docs/design/accueil/css/assemblage.css">
-    <link rel="stylesheet" href="/docs/design/accueil/css/sections.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700&family=Unbounded:wght@400;500&display=swap">
+    <link rel="stylesheet" href="/docs/design/accueil/css/base.css?v=2">
+    <link rel="stylesheet" href="/docs/design/accueil/css/hero.css?v=2">
+    <link rel="stylesheet" href="/docs/design/accueil/css/assemblage.css?v=2">
+    <link rel="stylesheet" href="/docs/design/accueil/css/sections.css?v=3">
 </head>
 <body>
-    <div class="aurore" aria-hidden="true"><i></i><i></i><i></i></div>
-
     <header class="barre">
         <a class="marque" href="#hero" aria-label="Kaalytics">Kaal<span>ytics</span></a>
         <nav class="barre__liens" aria-label="Navigation principale">
@@ -31,10 +33,11 @@
     </header>
 
     <main>
+        <div class="fond" aria-hidden="true"></div>
+
         <section class="hero" id="hero">
             <div class="hero__film" aria-hidden="true">
-                <video autoplay muted loop playsinline preload="auto" disablepictureinpicture
-                       onloadeddata="this.parentNode.classList.add('est-pret')">
+                <video autoplay muted loop playsinline preload="auto" disablepictureinpicture>
                     <source media="(max-width: 1100px)" src="/assets/hero-film/hero-kaalytics-v4-1280.mp4" type="video/mp4">
                     <source src="/assets/hero-film/hero-kaalytics-v4-1920-av1.mp4" type='video/mp4; codecs="av01.0.09M.10"'>
                     <source src="/assets/hero-film/hero-kaalytics-v4-1920.mp4" type="video/mp4">
@@ -60,39 +63,35 @@
                     <p>Huit briques autour de l'ERP en place. Sans migration.</p>
                 </div>
                 <ul class="mur">
-                    <li class="brique" data-x="-1" data-y="-1"><img src="/docs/design/accueil/medias/brique-ventes.webp" alt="" width="360" height="360"><span>Sales Intelligence</span></li>
-                    <li class="brique" data-x="0" data-y="-1"><img src="/docs/design/accueil/medias/brique-automatisation.webp" alt="" width="360" height="360"><span>Marketing Automation</span></li>
-                    <li class="brique" data-x="1" data-y="-1"><img src="/docs/design/accueil/medias/brique-recouvrement.webp" alt="" width="360" height="360"><span>Financial Operations</span></li>
-                    <li class="brique" data-x="-1" data-y="0"><img src="/docs/design/accueil/medias/brique-stock.webp" alt="" width="360" height="360"><span>Supply Chain</span></li>
+                    <li class="brique" style="--dx:-1;--dy:-1"><img src="/docs/design/accueil/medias/brique-ventes.webp?v=2" alt="" width="320" height="320"><span>Sales Intelligence</span></li>
+                    <li class="brique" style="--dx:0;--dy:-1"><img src="/docs/design/accueil/medias/brique-automatisation.webp?v=2" alt="" width="320" height="320"><span>Marketing Automation</span></li>
+                    <li class="brique" style="--dx:1;--dy:-1"><img src="/docs/design/accueil/medias/brique-recouvrement.webp?v=2" alt="" width="320" height="320"><span>Financial Operations</span></li>
+                    <li class="brique" style="--dx:-1;--dy:0"><img src="/docs/design/accueil/medias/brique-stock.webp?v=2" alt="" width="320" height="320"><span>Supply Chain</span></li>
                     <li class="socle"><strong>Votre ERP</strong><span>Odoo · SAP<br>Sage · Dynamics</span></li>
-                    <li class="brique" data-x="1" data-y="0"><img src="/docs/design/accueil/medias/brique-localisation.webp" alt="" width="360" height="360"><span>FleetOps</span></li>
-                    <li class="brique" data-x="-1" data-y="1"><img src="/docs/design/accueil/medias/brique-integration.webp" alt="" width="360" height="360"><span>ERP Connect</span></li>
-                    <li class="brique" data-x="0" data-y="1"><img src="/docs/design/accueil/medias/brique-reporting.webp" alt="" width="360" height="360"><span>Digital Platform</span></li>
-                    <li class="brique" data-x="1" data-y="1"><img src="/docs/design/accueil/medias/brique-agent-ia.webp" alt="" width="360" height="360"><span>AI Engine</span></li>
+                    <li class="brique" style="--dx:1;--dy:0"><img src="/docs/design/accueil/medias/brique-localisation.webp?v=2" alt="" width="320" height="320"><span>FleetOps</span></li>
+                    <li class="brique" style="--dx:-1;--dy:1"><img src="/docs/design/accueil/medias/brique-integration.webp?v=2" alt="" width="320" height="320"><span>ERP Connect</span></li>
+                    <li class="brique" style="--dx:0;--dy:1"><img src="/docs/design/accueil/medias/brique-reporting.webp?v=2" alt="" width="320" height="320"><span>Digital Platform</span></li>
+                    <li class="brique" style="--dx:1;--dy:1"><img src="/docs/design/accueil/medias/brique-agent-ia.webp?v=2" alt="" width="320" height="320"><span>AI Engine</span></li>
                 </ul>
                 <p class="assemblage__compte"><b id="compte">8</b> / 8 modules branchés</p>
             </div>
         </section>
 
-        <section class="modules" id="modules">
-            <div class="modules__scene">
-                <div class="cadre">
-                    <div class="tete">
-                        <span class="etiquette">Offre</span>
-                        <h2>Modules</h2>
-                        <p>Chaque module indépendant, activé selon le besoin.</p>
-                    </div>
-                </div>
-                <div class="piste">
-                    <article class="carte"><img src="/docs/design/accueil/medias/module-sales-intelligence.webp" alt="" loading="lazy"><div><i>Ventes</i><h3>Sales Intelligence</h3><p>Pilotage commercial, prévisions, relances</p></div></article>
-                    <article class="carte"><img src="/docs/design/accueil/medias/module-marketing-auto.webp" alt="" loading="lazy"><div><i>Marketing</i><h3>Marketing Automation</h3><p>Campagnes, scoring, relances clients</p></div></article>
-                    <article class="carte"><img src="/docs/design/accueil/medias/module-financial-ops.webp" alt="" loading="lazy"><div><i>Finance</i><h3>Financial Operations</h3><p>Facturation, recouvrement, rapprochement</p></div></article>
-                    <article class="carte"><img src="/docs/design/accueil/medias/module-supply-chain.webp" alt="" loading="lazy"><div><i>Logistique</i><h3>Supply Chain</h3><p>Stocks, approvisionnements, tournées</p></div></article>
-                    <article class="carte"><img src="/docs/design/accueil/medias/module-fleetops.webp" alt="" loading="lazy"><div><i>Parc</i><h3>FleetOps</h3><p>Flotte, maintenance, carburant</p></div></article>
-                    <article class="carte"><img src="/docs/design/accueil/medias/module-erp-connect.webp" alt="" loading="lazy"><div><i>Intégration</i><h3>ERP Connect</h3><p>Connecteurs Odoo, SAP, Sage, Dynamics</p></div></article>
-                    <article class="carte"><img src="/docs/design/accueil/medias/module-digital-platform.webp" alt="" loading="lazy"><div><i>Portails</i><h3>Digital Platform</h3><p>Portails clients, applications métier</p></div></article>
-                    <article class="carte"><img src="/docs/design/accueil/medias/module-ai-engine.webp" alt="" loading="lazy"><div><i>IA</i><h3>AI Engine</h3><p>Agents IA, lecture de documents, alertes</p></div></article>
-                </div>
+        <section class="modules cadre" id="modules">
+            <div class="tete">
+                <span class="etiquette">Offre</span>
+                <h2>Modules</h2>
+                <p>Chaque module indépendant, activé selon le besoin.</p>
+            </div>
+            <div class="galerie">
+                <article class="carte" data-apparition><img src="/docs/design/accueil/medias/module-sales-intelligence.webp" alt="" loading="lazy"><div><i>Ventes</i><h3>Sales Intelligence</h3><p>Pilotage commercial, prévisions, relances</p></div></article>
+                <article class="carte" data-apparition><img src="/docs/design/accueil/medias/module-marketing-auto.webp" alt="" loading="lazy"><div><i>Marketing</i><h3>Marketing Automation</h3><p>Campagnes, scoring, relances clients</p></div></article>
+                <article class="carte" data-apparition><img src="/docs/design/accueil/medias/module-financial-ops.webp" alt="" loading="lazy"><div><i>Finance</i><h3>Financial Operations</h3><p>Facturation, recouvrement, rapprochement</p></div></article>
+                <article class="carte" data-apparition><img src="/docs/design/accueil/medias/module-supply-chain.webp" alt="" loading="lazy"><div><i>Logistique</i><h3>Supply Chain</h3><p>Stocks, approvisionnements, tournées</p></div></article>
+                <article class="carte" data-apparition><img src="/docs/design/accueil/medias/module-fleetops.webp" alt="" loading="lazy"><div><i>Parc</i><h3>FleetOps</h3><p>Flotte, maintenance, carburant</p></div></article>
+                <article class="carte" data-apparition><img src="/docs/design/accueil/medias/module-erp-connect.webp" alt="" loading="lazy"><div><i>Intégration</i><h3>ERP Connect</h3><p>Connecteurs Odoo, SAP, Sage, Dynamics</p></div></article>
+                <article class="carte" data-apparition><img src="/docs/design/accueil/medias/module-digital-platform.webp" alt="" loading="lazy"><div><i>Portails</i><h3>Digital Platform</h3><p>Portails clients, applications métier</p></div></article>
+                <article class="carte" data-apparition><img src="/docs/design/accueil/medias/module-ai-engine.webp" alt="" loading="lazy"><div><i>IA</i><h3>AI Engine</h3><p>Agents IA, lecture de documents, alertes</p></div></article>
             </div>
         </section>
 
@@ -158,13 +157,9 @@
         <span>Maquette de travail · 28/11/2026</span>
     </footer>
 
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script defer src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-    <script defer src="/docs/design/accueil/js/defilement.js"></script>
-    <script defer src="/docs/design/accueil/js/hero.js"></script>
-    <script defer src="/docs/design/accueil/js/assemblage.js"></script>
-    <script defer src="/docs/design/accueil/js/galerie.js"></script>
-    <script defer src="/docs/design/accueil/js/apparitions.js"></script>
+    <script defer src="/docs/design/accueil/js/defilement.js?v=2"></script>
+    <script defer src="/docs/design/accueil/js/hero.js?v=2"></script>
+    <script defer src="/docs/design/accueil/js/assemblage.js?v=2"></script>
+    <script defer src="/docs/design/accueil/js/apparitions.js?v=2"></script>
 </body>
 </html>

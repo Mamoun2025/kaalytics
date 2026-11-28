@@ -1,4 +1,6 @@
-/* Maquette de l'accueil : jetons, fond continu (aurore), barre, marque, boutons, têtes de section. */
+/* Maquette de l'accueil : jetons, fond continu, barre, marque, boutons, têtes de section, apparitions.
+   Règle de performance (28/11/2026, mesure à 6 images/s sur la v1) : aucun filtre (blur, drop-shadow, backdrop),
+   aucun mode de fusion, aucune section bloquée à l'écran. On anime transform et opacity, rien d'autre. */
 
 :root {
     --ombre: #040a08;
@@ -7,62 +9,68 @@
     --emeraude: #10b981;
     --emeraude-clair: #34d399;
     --lumiere: #ecfdf5;
-    --gris: #8fa59c;
-    --gris-doux: #5f7a70;
-    --filet: rgba(143, 165, 156, 0.16);
+    --gris: #b3c6be;
+    --gris-doux: #7f978d;
+    --filet: rgba(143, 165, 156, 0.2);
     --titre: 'Inter Tight', 'Inter', system-ui, sans-serif;
     --texte: 'Inter', system-ui, sans-serif;
     --marque: 'Unbounded', 'Inter Tight', system-ui, sans-serif;
+    --sortie: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { background: var(--ombre); }
-body { color: var(--lumiere); font: 400 17px/1.6 var(--texte); -webkit-font-smoothing: antialiased; overflow-x: clip; }
+body { color: var(--lumiere); font: 400 18px/1.6 var(--texte); -webkit-font-smoothing: antialiased; overflow-x: clip; }
 a { color: inherit; text-decoration: none; }
 ul, ol { list-style: none; }
 img { display: block; max-width: 100%; }
 
-/* Fond continu : trois nappes de brume émeraude, fixes, déplacées lentement au défilement (defilement.js).
+/* Fond continu : nappes de lumière peintes une fois sur toute la hauteur et qui défilent avec le contenu.
    Aucune bande ni bord de section : la lumière seule sépare les parties. */
-.aurore { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
-.aurore i { position: absolute; width: 70vmax; height: 70vmax; border-radius: 50%; filter: blur(90px); opacity: 0.5; will-change: transform; }
-.aurore i:nth-child(1) { top: 30%; left: -30vmax; background: radial-gradient(circle, rgba(16, 185, 129, 0.34), transparent 62%); }
-.aurore i:nth-child(2) { top: 90%; right: -34vmax; background: radial-gradient(circle, rgba(24, 76, 61, 0.9), transparent 64%); }
-.aurore i:nth-child(3) { top: 170%; left: 10%; background: radial-gradient(circle, rgba(52, 211, 153, 0.2), transparent 60%); }
-main, .pied { position: relative; z-index: 1; }
+main { position: relative; }
+.fond {
+    position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background:
+        radial-gradient(60vw 40vw at 8% 14%, rgba(16, 185, 129, 0.16), transparent 70%),
+        radial-gradient(55vw 45vw at 96% 30%, rgba(24, 76, 61, 0.55), transparent 70%),
+        radial-gradient(60vw 40vw at 4% 52%, rgba(24, 76, 61, 0.45), transparent 70%),
+        radial-gradient(50vw 40vw at 92% 70%, rgba(16, 185, 129, 0.12), transparent 70%),
+        radial-gradient(70vw 40vw at 50% 96%, rgba(16, 185, 129, 0.18), transparent 70%);
+}
+main > section, .pied { position: relative; z-index: 1; }
 
 .cadre { width: min(1200px, 100%); margin-inline: auto; padding-inline: max(24px, env(safe-area-inset-left, 0px)); }
 
 h1, h2, h3 { font-family: var(--titre); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; }
-h2 { font-size: clamp(2.25rem, 5.4vw, 4.25rem); }
-h3 { font-size: 1.25rem; letter-spacing: -0.015em; line-height: 1.2; }
+h2 { font-size: clamp(2.4rem, 5.6vw, 4.5rem); }
+h3 { font-size: 1.3rem; letter-spacing: -0.015em; line-height: 1.2; }
 
-.etiquette { display: block; font: 500 0.75rem/1.4 var(--texte); letter-spacing: 0.16em; text-transform: uppercase; color: var(--emeraude-clair); }
-.tete { display: grid; gap: 14px; max-width: 34rem; }
-.tete p { color: var(--gris); }
+.etiquette { display: block; font: 600 0.78rem/1.4 var(--texte); letter-spacing: 0.16em; text-transform: uppercase; color: var(--emeraude-clair); }
+.tete { display: grid; gap: 14px; max-width: 36rem; }
+.tete p { color: var(--gris); font-size: 1.08rem; }
 .tete--centre { margin-inline: auto; text-align: center; justify-items: center; }
-.bloc { padding-block: clamp(96px, 16vh, 180px); }
+.bloc { padding-block: clamp(88px, 14vh, 160px); }
 .bloc .tete { margin-bottom: 56px; }
 
-/* Marque : le nom seul, lettres larges, reflet qui traverse « ytics » */
+/* Marque : le nom seul, lettres larges, reflet qui traverse « ytics » deux fois à l'arrivée */
 .marque { font: 500 1.2rem/1 var(--marque); letter-spacing: -0.045em; color: #ffffff; }
 .marque span {
     background: linear-gradient(100deg, #10b981 0%, #10b981 38%, #d1fae5 50%, #10b981 62%, #10b981 100%) 100% 0 / 260% 100%;
     -webkit-background-clip: text; background-clip: text; color: transparent;
-    animation: reflet 5.5s ease-in-out 1.2s infinite;
+    animation: reflet 2.4s ease-in-out 1.4s 2 both;
 }
-@keyframes reflet { 0%, 55% { background-position: 100% 0; } 85%, 100% { background-position: 0 0; } }
+@keyframes reflet { from { background-position: 100% 0; } to { background-position: 0 0; } }
 
 .barre {
     position: fixed; inset: 0 0 auto 0; z-index: 20;
     display: flex; align-items: center; gap: 36px;
     height: 72px; padding-inline: max(24px, env(safe-area-inset-left, 0px));
-    transition: background 0.4s ease, backdrop-filter 0.4s ease;
 }
-.barre.est-posee { background: rgba(4, 10, 8, 0.62); backdrop-filter: blur(18px) saturate(1.3); -webkit-backdrop-filter: blur(18px) saturate(1.3); }
-.barre__liens { display: flex; gap: 30px; margin-left: 12px; font-size: 0.94rem; color: rgba(236, 253, 245, 0.78); }
+.barre::before { content: ''; position: absolute; inset: 0; z-index: -1; background: rgba(4, 10, 8, 0.9); border-bottom: 1px solid var(--filet); opacity: 0; transition: opacity 0.35s ease; }
+.barre.est-posee::before { opacity: 1; }
+.barre__liens { display: flex; gap: 30px; margin-left: 12px; font-size: 0.95rem; color: rgba(236, 253, 245, 0.82); }
 .barre__liens a:hover { color: #ffffff; }
-.barre__langue { margin-left: auto; font-size: 0.8rem; letter-spacing: 0.08em; color: rgba(236, 253, 245, 0.5); }
+.barre__langue { margin-left: auto; font-size: 0.82rem; letter-spacing: 0.08em; color: rgba(236, 253, 245, 0.55); }
 .barre__langue b { color: var(--lumiere); font-weight: 600; }
 
 .bouton {
@@ -70,19 +78,26 @@ h3 { font-size: 1.25rem; letter-spacing: -0.015em; line-height: 1.2; }
     padding: 15px 28px; border-radius: 999px;
     background: var(--emeraude); color: var(--ombre);
     font: 600 1rem/1 var(--texte); white-space: nowrap;
-    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.25s ease, background-color 0.25s ease;
 }
-.bouton:hover { background: var(--emeraude-clair); transform: translateY(-2px); box-shadow: 0 14px 40px -12px rgba(16, 185, 129, 0.7); }
+.bouton:hover { background: var(--emeraude-clair); transform: translateY(-2px); }
 .bouton--grand { padding: 19px 36px; font-size: 1.06rem; }
 .bouton--petit { padding: 11px 20px; font-size: 0.9rem; }
 a:focus-visible { outline: 2px solid var(--emeraude-clair); outline-offset: 4px; border-radius: 6px; }
+
+/* Apparitions (apparitions.js) : état de départ posé seulement quand le script tourne, sinon tout reste visible */
+.anime .tete, .anime [data-apparition] { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.9s var(--sortie); }
+.anime .tete.est-vu, .anime [data-apparition].est-vu { opacity: 1; transform: none; }
 
 .pied { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-block: 40px; color: var(--gris-doux); font-size: 0.85rem; }
 
 @media (max-width: 900px) {
     .barre { gap: 16px; height: 64px; }
     .barre__liens { display: none; }
-    body { font-size: 16px; }
+    body { font-size: 17px; }
 }
 @media (max-width: 420px) { .barre__langue { display: none; } .barre .bouton { margin-left: auto; } }
-@media (prefers-reduced-motion: reduce) { .marque span { animation: none; } }
+@media (prefers-reduced-motion: reduce) {
+    .marque span { animation: none; }
+    .anime .tete, .anime [data-apparition] { opacity: 1; transform: none; transition: none; }
+}

@@ -1,47 +1,52 @@
-/* Maquette de l'accueil : assemblage. Huit briques (icônes en verre du Studio) viennent se coller autour de l'ERP
-   pendant le défilement (assemblage.js). Sans script, le mur est affiché assemblé. */
+/* Maquette de l'accueil : assemblage. Section de hauteur normale, rien de bloqué à l'écran.
+   Quand le mur entre dans l'écran, les huit briques arrivent une à une et se collent autour de l'ERP (1,8 s, une fois).
+   Animation 100 % CSS (transform et opacity) ; le script ne fait qu'ajouter la classe et faire tourner le compteur. */
 
-.assemblage { position: relative; margin-top: -8vh; }
-.assemblage__scene {
-    display: grid; align-content: center; justify-items: center; gap: clamp(20px, 4vh, 44px);
-    min-height: 100svh; padding: 88px 20px 40px;
-}
+.assemblage { padding-block: clamp(72px, 12vh, 140px); }
+.assemblage__scene { display: grid; justify-items: center; gap: clamp(28px, 5vh, 52px); padding-inline: 20px; }
 
-.mur {
-    --jeu: 0px;
-    position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--jeu);
-    width: min(540px, 88vw, 58svh); aspect-ratio: 1;
-}
+.mur { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: min(560px, 90vw); }
 .brique, .socle {
     position: relative; display: grid; place-items: center; align-content: center;
-    aspect-ratio: 1; overflow: hidden;
-    background: linear-gradient(160deg, rgba(19, 42, 36, 0.92), rgba(6, 16, 13, 0.96));
-    border: 1px solid rgba(52, 211, 153, 0.22);
-    border-radius: calc(var(--jeu) * 0.9);
-    will-change: transform, opacity;
+    aspect-ratio: 1; border-radius: 18px;
+    background: linear-gradient(160deg, #10241f, #07120f);
+    border: 1px solid rgba(52, 211, 153, 0.2);
 }
-.brique img { width: 78%; height: auto; margin-top: -10%; mix-blend-mode: screen; }
-.brique span {
-    position: absolute; inset: auto 6px 9% 6px;
-    font: 500 clamp(0.6rem, 1.5vw, 0.78rem)/1.2 var(--texte); text-align: center; color: var(--lumiere);
-}
-.socle {
-    background: radial-gradient(circle at 50% 40%, rgba(16, 185, 129, 0.34), rgba(6, 16, 13, 0.96) 72%);
-    border-color: rgba(52, 211, 153, 0.6);
-    box-shadow: inset 0 0 40px rgba(16, 185, 129, 0.25);
-    text-align: center; gap: 8px;
-}
-.socle strong { font: 500 clamp(0.85rem, 2.2vw, 1.15rem)/1.1 var(--marque); letter-spacing: -0.03em; }
-.socle span { font-size: clamp(0.58rem, 1.4vw, 0.75rem); line-height: 1.35; color: var(--gris); }
+.brique img { width: 76%; height: auto; margin-top: -12%; }
+.brique span { position: absolute; inset: auto 6px 8% 6px; font: 500 clamp(0.62rem, 1.6vw, 0.82rem)/1.2 var(--texte); text-align: center; color: var(--lumiere); }
+.socle { background: radial-gradient(circle at 50% 40%, #12503d, #07120f 74%); border-color: rgba(52, 211, 153, 0.65); text-align: center; gap: 8px; }
+.socle strong { font: 500 clamp(0.9rem, 2.4vw, 1.2rem)/1.1 var(--marque); letter-spacing: -0.03em; }
+.socle span { font-size: clamp(0.6rem, 1.5vw, 0.78rem); line-height: 1.35; color: var(--gris); }
 
-/* Éclair de jointure, déclenché quand le mur se referme */
+/* Point de départ de chaque brique : hors du mur, dans sa direction (--dx, --dy posés dans la page) */
+.anime .brique {
+    opacity: 0;
+    transform: translate(calc(var(--dx) * 70%), calc(var(--dy) * 70%)) rotate(calc(var(--dx) * 9deg + var(--dy) * 5deg)) scale(0.7);
+    transition: transform 0.75s var(--sortie), opacity 0.45s ease;
+}
+.anime .mur.est-assemble .brique { opacity: 1; transform: none; }
+.anime .mur.est-assemble .brique:nth-child(1) { transition-delay: 0s; }
+.anime .mur.est-assemble .brique:nth-child(2) { transition-delay: 0.12s; }
+.anime .mur.est-assemble .brique:nth-child(3) { transition-delay: 0.24s; }
+.anime .mur.est-assemble .brique:nth-child(4) { transition-delay: 0.36s; }
+.anime .mur.est-assemble .brique:nth-child(6) { transition-delay: 0.48s; }
+.anime .mur.est-assemble .brique:nth-child(7) { transition-delay: 0.6s; }
+.anime .mur.est-assemble .brique:nth-child(8) { transition-delay: 0.72s; }
+.anime .mur.est-assemble .brique:nth-child(9) { transition-delay: 0.84s; }
+
+/* Jointure : un trait de lumière parcourt le mur une fois tout collé */
 .mur::after {
-    content: ''; position: absolute; inset: -1px; pointer-events: none; opacity: var(--eclair, 0);
-    border: 1px solid var(--emeraude-clair);
-    box-shadow: 0 0 60px 6px rgba(16, 185, 129, 0.55), inset 0 0 50px rgba(52, 211, 153, 0.28);
+    content: ''; position: absolute; inset: -6px; border-radius: 24px; pointer-events: none; opacity: 0;
+    border: 1.5px solid var(--emeraude-clair);
+    box-shadow: 0 0 50px rgba(16, 185, 129, 0.45), inset 0 0 40px rgba(52, 211, 153, 0.18);
 }
+.anime .mur.est-assemble::after { animation: jointure 1.4s ease-out 1.45s both; }
+@keyframes jointure { 0% { opacity: 0; } 25% { opacity: 1; } 100% { opacity: 0.35; } }
 
-.assemblage__compte { font: 400 0.82rem/1 var(--marque); letter-spacing: 0.02em; color: var(--gris); font-variant-numeric: tabular-nums; }
+.assemblage__compte { font: 400 0.9rem/1 var(--marque); letter-spacing: 0.02em; color: var(--gris); font-variant-numeric: tabular-nums; }
 .assemblage__compte b { color: var(--emeraude-clair); font-weight: 500; }
 
-@media (orientation: portrait) and (max-width: 1100px) { .assemblage { margin-top: 0; } }
+@media (prefers-reduced-motion: reduce) {
+    .anime .brique { opacity: 1; transform: none; transition: none; }
+    .anime .mur.est-assemble::after { animation: none; opacity: 0.35; }
+}
