@@ -30,6 +30,9 @@ pas de défilement adouci. On anime `transform` et `opacity`, une fois, déclenc
 - L'ancien hero (`_hero-premium.css`) cache `.hero__title-highlight` (`opacity: 0`) et interdit tout fond en `!important` :
   remplacer son animation le laisse invisible. Le raccourci `background … !important` remet aussi `background-clip`.
 - Sélecteurs génériques type `[class*="highlight"]` : ils touchent des blocs entiers (`accordion-item__highlight`, 134 fois).
+- Ne pas animer une variable CSS sur la barre ni une position (`left`) à chaque défilement : tout recalculer coûte
+  15 points d'images lentes. Ajouter de vrais éléments (`will-change: transform`) et ne changer que `transform`.
+- Fonds pleine largeur qui glissent : fondu cuit dans l'image (canal alpha), jamais de `mask-image` sur un élément qui bouge.
 - Visuels du Studio déjà générés AVANT d'en créer : `~/VI.Studio/projets/20261121-*`, `20261122-modules`.
 
 ## Suivi
