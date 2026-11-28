@@ -23,14 +23,14 @@ BRANCHEMENT = (
     f"    {MARQUE}\n"
     '    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700'
     '&family=Unbounded:wght@400;500;600&display=swap">\n'
-    '    <link rel="stylesheet" href="/assets/css/theme/theme.css?v=5">\n'
+    '    <link rel="stylesheet" href="/assets/css/theme/theme.css?v=6">\n'
     '    <link rel="stylesheet" href="/assets/css/theme/composants.css?v=2">\n'
     '    <link rel="stylesheet" href="/assets/css/theme/visuels.css?v=7">\n'
-    '    <link rel="stylesheet" href="/assets/css/theme/boutons.css?v=8">\n'
+    '    <link rel="stylesheet" href="/assets/css/theme/boutons.css?v=9">\n'
     '    <link rel="stylesheet" href="/assets/css/theme/navigation.css?v=8">\n'
     '    <link rel="stylesheet" href="/assets/css/theme/menus.css?v=2">\n'
     '    <link rel="stylesheet" href="/assets/css/theme/marque.css?v=2">\n'
-    '    <link rel="stylesheet" href="/assets/css/theme/ergonomie.css?v=6">\n'
+    '    <link rel="stylesheet" href="/assets/css/theme/ergonomie.css?v=7">\n'
     '    <script defer src="/assets/js/theme/navigation.js?v=2"></script>\n'
 )
 INTACTS = {"assets/css/sections/hero-film.css"}  # hero v4 : aucune régression tolérée

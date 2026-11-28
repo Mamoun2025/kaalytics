@@ -79,3 +79,6 @@ body > .breadcrumbs { padding-top: 92px; padding-inline: max(20px, env(safe-area
     .video-dashboard__stats { flex-wrap: wrap; gap: 12px; }
     .video-dashboard__stat { min-width: 0; flex: 1 1 40%; }
 }
+
+/* Tarifs : noms de modules du tableau, cibles de 20 px portées à 44 px au doigt (contrôle du 28/11) */
+@media (pointer: coarse) { .module-row__name > a { display: inline-flex; align-items: center; min-height: 44px; } }

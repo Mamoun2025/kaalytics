@@ -160,3 +160,4 @@
 }
 /* Téléphone : la brique (largeur 100 %, 320 px au plus) garde la place du tenon, centrée (capture de Mamoun, 28/11 15 h 18) */
 @media (max-width: 768px) { .hero .hero__cta-main { width: 100%; max-width: min(320px, calc(100% - 44px)); } }
+

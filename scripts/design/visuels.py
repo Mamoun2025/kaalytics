@@ -35,7 +35,7 @@ PAR_PAGE = {
     "methodologie.html": "scene-diagnostic", "alternatives.html": "scene-diagnostic", "pricing.html": "scene-equipe-commerciale",
     "contact.html": "scene-partage-reseaux", "support.html": "scene-partage-reseaux", "demo.html": "module-digital-platform",
     "portail-client/index.html": "module-digital-platform", "resources/index.html": "scene-reseau-agents",
-    "ou-nous-intervenons.html": "francophonie-globe", "canada.html": "francophonie-globe",
+    "ou-nous-intervenons.html": "zones-globe", "canada.html": "francophonie-globe",
     "guides/index.html": "scene-diagnostic", "guides/checklist-maintenance.html": "mines-maintenance-pneu",
     "guides/comparatif-fleet-management.html": "scene-flotte-nuit", "guides/guide-flotte-btp.html": "btp-chantier-grue",
     "blog/index.html": "scene-reseau-agents",
