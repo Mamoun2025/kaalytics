@@ -7,6 +7,7 @@ Leçon du 28/11/2026 : une maquette vérifiée seulement en local a été livré
 from __future__ import annotations
 
 import argparse
+import os
 import sys
 from pathlib import Path
 
@@ -81,8 +82,12 @@ def controler(adresse: str, sortie: Path) -> list[str]:
                 problemes.append(f"{nom} : débordement horizontal de {debordement} px")
             if tactile:
                 capturer_menu(page, sortie / f"{nom}-menu.jpg", problemes, nom)
+            charge = os.getloadavg()[0]
             lentes = mesurer_fluidite(contexte, page)
-            if lentes > SEUIL_IMAGES_LENTES:
+            if lentes > SEUIL_IMAGES_LENTES and charge > (os.cpu_count() or 1):
+                # Leçon du 28/11/2026 : PC chargé (15 pour 8 cœurs), le site en ligne passait de 0 à 39 % ; mesure faussée.
+                print(f"{nom} : fluidité non mesurable, PC trop chargé ({charge:.1f}) ; {lentes} % à refaire plus tard")
+            elif lentes > SEUIL_IMAGES_LENTES:
                 problemes.append(f"{nom} : défilement saccadé, {lentes} % d'images au-delà de 34 ms (processeur ralenti x4)")
             contexte.close()
         navigateur.close()
