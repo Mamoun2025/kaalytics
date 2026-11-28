@@ -1,0 +1,61 @@
+/* Accueil · Architecture : systèmes en place → connecteurs → plateforme → équipes (demande de Mamoun, 28/11/2026).
+   Esprit du schéma Mercure et de la diapositive Transwin « La plateforme ». Libellés en HTML, nœuds en briques.
+   Impulsions de données : transform seulement, en pause hors de l'écran (classe .est-actif posée par accueil.js). */
+.accueil .archi .tete { margin-bottom: 44px; }
+.accueil .archi__plan { position: relative; display: grid; grid-template-columns: 1fr 84px 0.8fr 84px 1.25fr 84px 1fr; align-items: stretch;
+    padding: clamp(18px, 3vw, 32px); border-radius: 22px; border: 1px solid var(--filet);
+    background: radial-gradient(70% 90% at 58% 50%, rgba(16, 185, 129, 0.1), transparent 70%), rgba(6, 15, 12, 0.72); }
+.accueil .archi__col { display: grid; align-content: center; gap: 10px; min-width: 0; }
+.accueil .archi__nom { margin: 0 0 4px; font: 600 0.74rem/1.3 var(--texte); letter-spacing: 0.14em; text-transform: uppercase; color: var(--gris-doux); }
+
+/* Nœuds en briques : coins 8 px, tranche visible, comme les briques de modules */
+.accueil .archi__noeud { display: grid; gap: 2px; padding: 12px 14px; border-radius: 8px; background: linear-gradient(160deg, #10241f, #07120f);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07), inset 0 0 0 1px rgba(52, 211, 153, 0.22), 0 3px 0 #0a1d18, 0 4px 0 #020705; }
+.accueil .archi__noeud b { font: 600 0.98rem/1.25 var(--texte); color: var(--lumiere); }
+.accueil .archi__noeud small { font-size: 0.82rem; line-height: 1.3; color: var(--gris-doux); }
+
+/* Plateforme : bloc central allumé, socle sécurisé dessous */
+.accueil .archi__plateforme { padding: 16px; border-radius: 14px; gap: 10px;
+    background: linear-gradient(180deg, rgba(16, 185, 129, 0.16), rgba(16, 185, 129, 0.04)), #07130f;
+    box-shadow: inset 0 0 0 1px rgba(52, 211, 153, 0.55), 0 0 40px -12px rgba(16, 185, 129, 0.7), 0 5px 0 #0b3a2c, 0 6px 0 #020705; }
+.accueil .archi__plateforme .archi__nom { color: var(--emeraude-clair); }
+.accueil .archi__ia { background: linear-gradient(180deg, #5eeaa8, #10b981); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), 0 3px 0 #065f46, 0 4px 0 #03281d; }
+.accueil .archi__ia b, .accueil .archi__ia small { color: #03140f; }
+.accueil .archi__socle { margin-top: 4px; padding: 10px 14px; border-radius: 8px; border: 1px dashed rgba(52, 211, 153, 0.4); font-size: 0.84rem; color: var(--gris); text-align: center; }
+
+/* Liaisons : pistes horizontales, une impulsion par piste */
+.accueil .archi__lien { display: grid; align-content: center; gap: 22px; padding-inline: 6px; }
+.accueil .archi__piste { position: relative; height: 3px; overflow: hidden; border-radius: 2px; background: rgba(52, 211, 153, 0.38); box-shadow: 0 0 6px rgba(16, 185, 129, 0.35); }
+.accueil .archi__piste i { position: absolute; inset: 0; background: radial-gradient(6px 6px at calc(100% - 6px) 50%, #a7f3d0, rgba(52, 211, 153, 0) 70%),
+    linear-gradient(90deg, rgba(52, 211, 153, 0), rgba(52, 211, 153, 0.75) 92%, rgba(52, 211, 153, 0) 100%) right / 36% 100% no-repeat;
+    transform: translateX(-100%); will-change: transform; animation: archi-flux 2.4s linear infinite paused; }
+.accueil .archi__piste--retour i { transform: scaleX(-1); animation-name: archi-retour; filter: none; opacity: 0.9;
+    background: radial-gradient(6px 6px at calc(100% - 6px) 50%, #ffffff, rgba(236, 253, 245, 0) 70%), linear-gradient(90deg, rgba(236, 253, 245, 0), rgba(236, 253, 245, 0.7) 92%, rgba(236, 253, 245, 0)) right / 36% 100% no-repeat; }
+.accueil .archi__piste:nth-child(2) i { animation-delay: -0.8s; }
+.accueil .archi__piste:nth-child(3) i { animation-delay: -1.6s; }
+.accueil .archi__piste:nth-child(4) i { animation-delay: -0.4s; }
+.accueil .archi.est-actif .archi__piste i { animation-play-state: running; }
+@keyframes archi-flux { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+@keyframes archi-retour { from { transform: scaleX(-1) translateX(-100%); } to { transform: scaleX(-1) translateX(100%); } }
+
+.accueil .archi__legende { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 18px; font-size: 0.86rem; color: var(--gris); }
+.accueil .archi__legende span::before { content: ''; display: inline-block; width: 8px; height: 8px; margin-right: 8px; border-radius: 50%; background: var(--emeraude-clair); box-shadow: 0 0 8px var(--emeraude); }
+.accueil .archi__legende span + span::before { background: var(--lumiere); box-shadow: 0 0 8px rgba(236, 253, 245, 0.7); }
+
+/* Tablette portrait et téléphone : colonnes empilées, pistes verticales */
+@media (max-width: 960px) {
+    .accueil .archi__plan { grid-template-columns: 1fr; }
+    .accueil .archi__col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .accueil .archi__col > .archi__nom, .accueil .archi__col > .archi__socle { grid-column: 1 / -1; }
+    .accueil .archi__lien { grid-auto-flow: column; justify-content: center; gap: 44px; height: 64px; padding: 6px 0; align-content: stretch; }
+    .accueil .archi__plateforme { grid-template-columns: 1fr; }
+    .accueil .archi__piste { width: 3px; height: 100%; }
+    .accueil .archi__piste i { background: radial-gradient(6px 6px at 50% calc(100% - 6px), #a7f3d0, rgba(52, 211, 153, 0) 70%), linear-gradient(180deg, rgba(52, 211, 153, 0), rgba(52, 211, 153, 0.75) 92%, rgba(52, 211, 153, 0)) bottom / 100% 40% no-repeat;
+        transform: translateY(-100%); animation-name: archi-flux-v; }
+    .accueil .archi__piste--retour i { transform: scaleY(-1); animation-name: archi-retour-v;
+        background: radial-gradient(6px 6px at 50% calc(100% - 6px), #ffffff, rgba(236, 253, 245, 0) 70%), linear-gradient(180deg, rgba(236, 253, 245, 0), rgba(236, 253, 245, 0.7) 92%, rgba(236, 253, 245, 0)) bottom / 100% 40% no-repeat; }
+}
+@keyframes archi-flux-v { from { transform: translateY(-100%); } to { transform: translateY(100%); } }
+@keyframes archi-retour-v { from { transform: scaleY(-1) translateY(-100%); } to { transform: scaleY(-1) translateY(100%); } }
+@media (max-width: 420px) { .accueil .archi__noeud { padding: 10px 11px; } .accueil .archi__noeud b { font-size: 0.9rem; } .accueil .archi__noeud small { font-size: 0.76rem; } }
+@media (prefers-reduced-motion: reduce) { .accueil .archi__piste i { animation: none; transform: none; } }

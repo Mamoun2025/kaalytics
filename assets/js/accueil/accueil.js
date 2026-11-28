@@ -43,6 +43,14 @@
         veilleMur.observe(mur);
     }
 
+    // Architecture : impulsions de données animées seulement quand le schéma est à l'écran.
+    var archi = accueil.querySelector('.archi');
+    if (archi) {
+        new IntersectionObserver(function (entrees) {
+            archi.classList.toggle('est-actif', entrees[0].isIntersecting);
+        }).observe(archi);
+    }
+
     // Défilement : sortie du texte du hero (ordinateur) et fil de la démarche.
     var texteHero = document.querySelector('.hero__content');
     var hero = document.querySelector('.hero');
