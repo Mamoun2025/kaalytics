@@ -91,9 +91,60 @@
     }
 }
 
+/* Téléphone en portrait (28/11/2026) : image verticale du Studio (hv8-02 diagonale) en plein écran derrière le titre,
+   lente dérive en attendant la vidéo verticale. Le film 16:9 n'est pas chargé (hero-film.js). */
+@media (orientation: portrait) and (max-width: 600px) {
+    .hero:has(.hero__film) {
+        align-items: center;
+        min-height: 100svh;
+    }
+
+    .hero__film {
+        inset: 0;
+        aspect-ratio: auto;
+        background: #040a08;
+    }
+
+    .hero__film::before {
+        content: "";
+        position: absolute;
+        inset: -4%;
+        background: url("/assets/hero-film/hero-vertical-02-720.webp") center / cover no-repeat;
+        animation: hero-derive 26s ease-in-out infinite alternate;
+        will-change: transform;
+    }
+
+    .hero.hors-ecran .hero__film::before {
+        animation-play-state: paused;
+    }
+
+    .hero__film-video {
+        display: none;
+    }
+
+    .hero__film-voile {
+        background:
+            radial-gradient(ellipse 70% 30% at 50% 50%, rgba(4, 10, 8, 0.55) 0%, rgba(4, 10, 8, 0) 100%),
+            linear-gradient(180deg, rgba(4, 10, 8, 0.7) 0%, rgba(4, 10, 8, 0) 14%, rgba(4, 10, 8, 0) 80%, var(--bg-void, #040a08) 100%);
+    }
+
+    .hero:has(.hero__film) .hero__content {
+        margin-top: 0;
+    }
+}
+
+@keyframes hero-derive {
+    from { transform: scale(1) translate3d(0, 0, 0); }
+    to { transform: scale(1.06) translate3d(-1.5%, 1.5%, 0); }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .hero__film-video {
         display: none;
+    }
+
+    .hero__film::before {
+        animation: none;
     }
 }
 

@@ -13,7 +13,9 @@
 
     var moinsAnime = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var economie = navigator.connection && navigator.connection.saveData;
-    if (moinsAnime || economie) {
+    // Téléphone en portrait : image verticale en CSS à la place du film 16:9 (28/11/2026)
+    var vertical = window.matchMedia('(orientation: portrait) and (max-width: 600px)').matches;
+    if (moinsAnime || economie || vertical) {
         film.removeAttribute('autoplay');
         film.preload = 'none';
         film.pause();
