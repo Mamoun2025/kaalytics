@@ -59,5 +59,14 @@
         if (Math.abs(ecart) > 12) problemes.push({ genre: 'titre-decentre', detail: `h1 décalé de ${ecart} px « ${texte(h1)} »` });
     }
 
+    // Bouton principal du hero : centré et entier, tenon compris (leçon du 28/11/2026 : brique décalée, tenon hors écran)
+    const appel = document.querySelector('.hero__cta-main');
+    if (appel && visible(appel) && L < 900) {
+        const r = appel.getBoundingClientRect();
+        const ecart = Math.round(r.left + r.width / 2 - L / 2);
+        const tenon = parseFloat(getComputedStyle(appel, '::after').right) || 0;
+        if (Math.abs(ecart) > 12 || r.right - Math.min(tenon, 0) > L) problemes.push({ genre: 'appel-decentre', detail: `bouton du hero décalé de ${ecart} px, bord droit à ${Math.round(r.right - Math.min(tenon, 0))} px` });
+    }
+
     return { problemes, largeur: L };
 }
