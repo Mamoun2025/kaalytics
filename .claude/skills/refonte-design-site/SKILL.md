@@ -18,7 +18,9 @@ Méthode rodée le 28/11/2026 (branche `refonte/maquette-accueil`). Rien sur mai
 5. **Tour après** et comparaison des mesures (erreurs, absents, débordements, bords gauches, couleurs).
 6. **Contrôle avant tout lien**, sur l'adresse EN LIGNE : `python3 -m scripts.design.controle <URL> --sortie DIR`
    (404, erreurs, débordement, fluidité processeur x4). Un chemin du dépôt (`index.html`) est servi en local.
-7. Commit par lots, fichiers nommés (`git add -A` bloqué), tests verts, page de suivi republiée.
+7. **Ergonomie** (téléphones 360/390/412, tablette 11 pouces 800x1280 et 1280x800, ordinateur 1440/1920) :
+   `lourd python3 -m scripts.design.ergonomie --sortie DIR` ; corrections à la racine dans `assets/css/theme/ergonomie.css`.
+8. Commit par lots, fichiers nommés (`git add -A` bloqué), tests verts, page de suivi republiée.
 
 ## Règles de performance (leçon de la v1 à 6 images/s)
 
