@@ -114,3 +114,6 @@ a { text-underline-offset: 3px; }
 }
 .btn-secondary:hover, .btn-outline:hover, .btn-ghost:hover { border-color: #34d399; color: #34d399; background: transparent; }
 .btn::before, .btn::after, .hero__cta-main::before, .hero__cta-main::after { display: none; }
+
+/* Fenêtre de sortie fermée : son icône ne s'anime pas en continu (mesure du 28/11) */
+.exit-popup:not(.is-visible) .exit-popup__icon { animation-play-state: paused; }

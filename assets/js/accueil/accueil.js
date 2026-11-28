@@ -45,6 +45,12 @@
 
     // Architecture : impulsions de données animées seulement quand le schéma est à l'écran.
     var archi = accueil.querySelector('.archi');
+    var heroVeille = document.querySelector('.hero');
+    if (heroVeille) {
+        new IntersectionObserver(function (entrees) {
+            heroVeille.classList.toggle('hors-ecran', !entrees[0].isIntersecting);
+        }).observe(heroVeille);
+    }
     if (archi) {
         new IntersectionObserver(function (entrees) {
             archi.classList.toggle('est-actif', entrees[0].isIntersecting);

@@ -23,7 +23,7 @@ BRANCHEMENT = (
     f"    {MARQUE}\n"
     '    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700'
     '&family=Unbounded:wght@400;500;600&display=swap">\n'
-    '    <link rel="stylesheet" href="/assets/css/theme/theme.css?v=4">\n'
+    '    <link rel="stylesheet" href="/assets/css/theme/theme.css?v=5">\n'
     '    <link rel="stylesheet" href="/assets/css/theme/composants.css?v=2">\n'
     '    <link rel="stylesheet" href="/assets/css/theme/visuels.css?v=7">\n'
     '    <link rel="stylesheet" href="/assets/css/theme/boutons.css?v=4">\n'

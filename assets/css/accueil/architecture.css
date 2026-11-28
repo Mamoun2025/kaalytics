@@ -24,16 +24,14 @@
 .accueil .archi__socle { margin-top: 4px; padding: 10px 14px; border-radius: 8px; border: 1px dashed rgba(52, 211, 153, 0.4); font-size: 0.84rem; color: var(--gris); text-align: center; }
 
 /* Liaisons : pistes horizontales, une impulsion par piste */
-.accueil .archi__lien { display: grid; align-content: center; gap: 22px; padding-inline: 6px; }
+.accueil .archi__lien { display: grid; align-content: center; gap: 34px; padding-inline: 6px; }
 .accueil .archi__piste { position: relative; height: 3px; overflow: hidden; border-radius: 2px; background: rgba(52, 211, 153, 0.38); box-shadow: 0 0 6px rgba(16, 185, 129, 0.35); }
 .accueil .archi__piste i { position: absolute; inset: 0; background: radial-gradient(6px 6px at calc(100% - 6px) 50%, #a7f3d0, rgba(52, 211, 153, 0) 70%),
     linear-gradient(90deg, rgba(52, 211, 153, 0), rgba(52, 211, 153, 0.75) 92%, rgba(52, 211, 153, 0) 100%) right / 36% 100% no-repeat;
-    transform: translateX(-100%); will-change: transform; animation: archi-flux 2.4s linear infinite paused; }
+    transform: translateX(-100%); will-change: transform; animation: archi-flux 2.8s linear infinite paused; }
 .accueil .archi__piste--retour i { transform: scaleX(-1); animation-name: archi-retour; filter: none; opacity: 0.9;
     background: radial-gradient(6px 6px at calc(100% - 6px) 50%, #ffffff, rgba(236, 253, 245, 0) 70%), linear-gradient(90deg, rgba(236, 253, 245, 0), rgba(236, 253, 245, 0.7) 92%, rgba(236, 253, 245, 0)) right / 36% 100% no-repeat; }
 .accueil .archi__piste:nth-child(2) i { animation-delay: -0.8s; }
-.accueil .archi__piste:nth-child(3) i { animation-delay: -1.6s; }
-.accueil .archi__piste:nth-child(4) i { animation-delay: -0.4s; }
 .accueil .archi.est-actif .archi__piste i { animation-play-state: running; }
 @keyframes archi-flux { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
 @keyframes archi-retour { from { transform: scaleX(-1) translateX(-100%); } to { transform: scaleX(-1) translateX(100%); } }

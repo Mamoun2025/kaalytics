@@ -155,3 +155,6 @@
     pointer-events: none;
 }
 .accueil .appel .appel__texte { isolation: isolate; }
+
+/* Hero hors de l'écran : reflet du titre et molette en pause (classe posée par accueil.js, mesure du 28/11) */
+.hero.hors-ecran .hero__title-highlight, .hero.hors-ecran .hero__scroll-wheel { animation-play-state: paused; }
