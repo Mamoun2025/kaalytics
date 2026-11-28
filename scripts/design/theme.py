@@ -26,7 +26,7 @@ BRANCHEMENT = (
     '    <link rel="stylesheet" href="/assets/css/theme/theme.css?v=3">\n'
     '    <link rel="stylesheet" href="/assets/css/theme/composants.css?v=2">\n'
     '    <link rel="stylesheet" href="/assets/css/theme/visuels.css?v=2">\n'
-    '    <link rel="stylesheet" href="/assets/css/theme/boutons.css?v=1">\n'
+    '    <link rel="stylesheet" href="/assets/css/theme/boutons.css?v=2">\n'
     '    <link rel="stylesheet" href="/assets/css/theme/navigation.css?v=6">\n'
     '    <script defer src="/assets/js/theme/navigation.js?v=2"></script>\n'
 )

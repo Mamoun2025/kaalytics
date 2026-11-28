@@ -5,19 +5,28 @@
  */
 
 :root {
-    --relief-plein: linear-gradient(180deg, #4ade9f 0%, #1fca8c 38%, #10b981 62%, #0b9e6f 100%);
-    --relief-plein-survol: linear-gradient(180deg, #6ee7b7 0%, #34d399 40%, #10b981 100%);
+    /* D'après les références du Studio (20261128-kaalytics-ui, ui-01, ui-02, ui-06) : verre, reflet haut, lueur portée */
+    --relief-plein:
+        radial-gradient(120% 80% at 50% -20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 55%),
+        linear-gradient(180deg, #4ade9f 0%, #1fca8c 40%, #10b981 65%, #0a9468 100%);
+    --relief-plein-survol:
+        radial-gradient(120% 80% at 50% -20%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 58%),
+        linear-gradient(180deg, #6ee7b7 0%, #34d399 45%, #10b981 100%);
     --relief-ombre:
-        inset 0 1px 0 rgba(255, 255, 255, 0.55),
-        inset 0 -2px 0 rgba(4, 47, 35, 0.35),
-        0 0 0 1px rgba(6, 95, 70, 0.9),
-        0 10px 28px -10px rgba(16, 185, 129, 0.75),
-        0 2px 4px rgba(0, 0, 0, 0.35);
-    --relief-verre: linear-gradient(180deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.02) 100%);
+        inset 0 1px 0 rgba(255, 255, 255, 0.6),
+        inset 0 -3px 6px -2px rgba(4, 47, 35, 0.45),
+        0 0 0 1px rgba(110, 231, 183, 0.55),
+        0 0 22px -4px rgba(52, 211, 153, 0.65),
+        0 14px 30px -14px rgba(16, 185, 129, 0.95);
+    --relief-verre:
+        radial-gradient(120% 90% at 50% -30%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 55%),
+        linear-gradient(180deg, #10241e 0%, #07130f 100%);
     --relief-verre-ombre:
-        inset 0 1px 0 rgba(255, 255, 255, 0.1),
-        inset 0 0 0 1px rgba(52, 211, 153, 0.28),
-        0 8px 22px -12px rgba(0, 0, 0, 0.8);
+        inset 0 1px 0 rgba(255, 255, 255, 0.14),
+        inset 0 0 0 1.5px rgba(52, 211, 153, 0.75),
+        inset 0 -10px 18px -12px rgba(52, 211, 153, 0.6),
+        0 0 16px -4px rgba(16, 185, 129, 0.55),
+        0 12px 26px -16px rgba(0, 0, 0, 0.9);
 }
 
 /* ---------- Bouton plein : émeraude bombée, reflet en haut, ombre portée verte ---------- */
@@ -49,9 +58,9 @@
     box-shadow: var(--relief-verre-ombre);
 }
 .btn-secondary:hover, .btn-outline:hover, .btn-ghost:hover {
-    background: linear-gradient(180deg, rgba(52, 211, 153, 0.16) 0%, rgba(52, 211, 153, 0.04) 100%);
+    background: radial-gradient(120% 90% at 50% -30%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 55%), linear-gradient(180deg, #123a2e 0%, #0a1d17 100%);
     color: #ecfdf5;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), inset 0 0 0 1px rgba(52, 211, 153, 0.6), 0 10px 26px -12px rgba(16, 185, 129, 0.6);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), inset 0 0 0 1.5px #6ee7b7, inset 0 -10px 18px -10px rgba(52, 211, 153, 0.75), 0 0 24px -4px rgba(52, 211, 153, 0.75), 0 12px 26px -16px rgba(0, 0, 0, 0.9);
 }
 
 /* Accueil 2026 (classes .bouton de la maquette) : même relief */
