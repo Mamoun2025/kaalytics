@@ -67,7 +67,9 @@ def controler(adresse: str, sortie: Path) -> list[str]:
             page = contexte.new_page()
             page.on("pageerror", lambda e, n=nom: problemes.append(f"{n} : erreur de script : {e.message}"))
             page.on("response", lambda r, n=nom: r.status >= 400 and problemes.append(f"{n} : {r.status} {r.url}"))
-            page.on("requestfailed", lambda r, n=nom: problemes.append(f"{n} : échec {r.url}"))
+            # Chargement annulé par la page elle-même (vidéo changée, navigation) : pas une panne
+            page.on("requestfailed", lambda r, n=nom: "ERR_ABORTED" not in (r.failure or "")
+                    and problemes.append(f"{n} : échec {r.url} ({r.failure})"))
             page.goto(adresse, wait_until="load", timeout=45000)
             page.wait_for_timeout(3000)
             for etape in range(6):
